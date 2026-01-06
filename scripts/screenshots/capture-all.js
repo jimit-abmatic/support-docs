@@ -97,20 +97,40 @@ class ComprehensiveScreenshotTool {
     if (this.isLoggedIn) return true;
 
     console.log('🔐 Logging in...');
+    console.log(`   Email: ${config.email}`);
 
     try {
       await this.page.goto(`${config.baseUrl}/sign-in`, { waitUntil: 'networkidle' });
       await this.page.waitForSelector('input[type="email"]', { timeout: 10000 });
+
+      // Fill credentials
       await this.page.fill('input[type="email"]', config.email);
       await this.page.fill('input[type="password"]', config.password);
-      await this.page.click('button:has-text("Sign in")');
-      await this.page.waitForFunction(() => !window.location.pathname.includes('/sign-in'), { timeout: 30000 });
+
+      // Click the SIGN IN button (uppercase)
+      await this.page.click('button:has-text("SIGN IN")');
+
+      // Wait for redirect away from sign-in page
+      await this.page.waitForURL((url) => !url.pathname.includes('/sign-in'), { timeout: 30000 });
+
+      // Additional wait for app to load
+      await this.page.waitForTimeout(3000);
+
+      // Verify we're logged in by checking URL
+      const currentUrl = this.page.url();
+      console.log(`   Current URL after login: ${currentUrl}`);
+
+      if (currentUrl.includes('/sign-in')) {
+        throw new Error('Still on sign-in page after login attempt');
+      }
 
       this.isLoggedIn = true;
       console.log('✅ Logged in successfully');
       return true;
     } catch (error) {
       console.error('❌ Login failed:', error.message);
+      // Take screenshot of failed state
+      await this.page.screenshot({ path: path.join(config.outputDir, 'login-failed-debug.png') });
       return false;
     }
   }
