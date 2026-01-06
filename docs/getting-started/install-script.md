@@ -12,28 +12,28 @@ The Abmatic tracking script is essential for identifying companies visiting your
 ## Getting Your Script
 
 1. Log in to [app.abmatic.ai](https://app.abmatic.ai)
-2. Navigate to **Settings** → **Script Installation**
-3. Copy your unique tracking script
+2. Navigate to the **Installation** page (click "Installation" in the left sidebar)
+3. Copy your unique tracking script by clicking on it
 
-![Script Installation Settings](/img/screenshots/settings-script.png)
+![Script Installation Page](/img/screenshots/installation-script.png)
 
-Your script will look similar to this:
+Your script will look like this:
 
 ```html
-<script>
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'abm.start':
-  new Date().getTime(),event:'abm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='abmatic'?'&l='+l:'';j.async=true;j.src=
-  'https://cdn.abmatic.ai/abmatic.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','abmatic','YOUR-ACCOUNT-ID');
-</script>
+<script async src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
 ```
+
+Where `YOUR_UNIQUE_ID` is your account's unique identifier (e.g., `d8r773ra7437`).
+
+:::tip Click to Copy
+Simply click on the script tag in the Installation page to automatically copy it to your clipboard.
+:::
 
 ## Installation Methods
 
-### Method 1: Direct HTML Installation
+### Method 1: Direct HTML Installation (Recommended)
 
-Add the script directly to your website's HTML, ideally in the `<head>` section:
+Add the script directly to your website's HTML in the `<head>` section:
 
 ```html
 <!DOCTYPE html>
@@ -41,9 +41,7 @@ Add the script directly to your website's HTML, ideally in the `<head>` section:
 <head>
   <title>Your Website</title>
   <!-- Abmatic AI Tracking Script -->
-  <script>
-    (function(w,d,s,l,i){/* ... your script ... */})(window,document,'script','abmatic','YOUR-ACCOUNT-ID');
-  </script>
+  <script async src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
 </head>
 <body>
   <!-- Your website content -->
@@ -51,42 +49,65 @@ Add the script directly to your website's HTML, ideally in the `<head>` section:
 </html>
 ```
 
+**Important**: Place the script as high as possible in the `<head>` section for best performance.
+
 ### Method 2: Google Tag Manager
 
 1. Log in to [Google Tag Manager](https://tagmanager.google.com)
 2. Select your container
 3. Click **Tags** → **New**
 4. Click **Tag Configuration** → **Custom HTML**
-5. Paste your Abmatic script
+5. Paste your Abmatic script:
+   ```html
+   <script async src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
+   ```
 6. Under **Triggering**, select **All Pages**
 7. Name your tag (e.g., "Abmatic AI Tracking")
 8. Click **Save**
 9. **Publish** your changes
 
-### Method 3: Segment
+### Method 3: WordPress
 
-If you use Segment as your CDP:
+For WordPress sites:
 
-1. Go to your Segment workspace
-2. Navigate to **Connections** → **Catalog**
-3. Search for "Abmatic" or add as a custom destination
-4. Configure with your Abmatic Account ID
+1. Install a plugin like "Insert Headers and Footers" or use your theme's custom script option
+2. Add the Abmatic script to the header section
+3. Save and clear any caches
+
+### Method 4: React / Next.js / Single Page Apps
+
+For React-based applications, add the script to your `index.html` or use a script loader:
+
+```jsx
+// In your index.html or _document.js (Next.js)
+<script async src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
+```
+
+Or using React Helmet:
+```jsx
+import { Helmet } from 'react-helmet';
+
+<Helmet>
+  <script async src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
+</Helmet>
+```
 
 ## Verify Installation
 
-After installing the script:
+After installing the script, the Installation page shows the status:
+
+- **Active**: We've detected visitors on your site - the script is working!
+- **Inactive**: No visitors detected yet
+
+![Installation Status](/img/screenshots/installation-script.png)
+
+### Manual Verification
 
 1. Visit your website
 2. Open browser Developer Tools (F12 or right-click → Inspect)
 3. Go to the **Network** tab
-4. Filter by "abmatic"
-5. You should see requests to `cdn.abmatic.ai`
-
-Alternatively, in Abmatic:
-1. Go to **Settings** → **Script Installation**
-2. Click **Verify Installation**
-3. Enter your website URL
-4. The system will confirm if the script is detected
+4. Filter by "clients.abmatic"
+5. You should see a request to `clients.abmatic.ai/YOUR_ID.js`
 
 ## Troubleshooting
 
@@ -95,30 +116,33 @@ Alternatively, in Abmatic:
 - Ensure the script is placed in the `<head>` section
 - Check for JavaScript errors in the browser console
 - Verify the script isn't blocked by ad blockers or CSP policies
+- Make sure you're using the correct unique ID from your Installation page
 
 ### No Data Appearing
 
-- Wait up to 30 minutes for initial data to appear
-- Verify the Account ID in your script matches your account
-- Check that visitors are accessing pages where the script is installed
+- Wait a few minutes after installation for the first visitor to be detected
+- Visit your own website to trigger the first detection
+- Check that the script is installed on all pages you want to track
 
 ### Google Tag Manager Issues
 
-- Ensure the tag is published (not just saved)
+- Ensure the tag is **published** (not just saved)
 - Verify the trigger is set to "All Pages"
-- Use GTM's Preview mode to test
+- Use GTM's Preview mode to test before publishing
 
 ## Content Security Policy (CSP)
 
-If your website uses CSP, add these domains:
+If your website uses Content Security Policy, add these domains:
 
 ```
-script-src: https://cdn.abmatic.ai
-connect-src: https://api.abmatic.ai https://cdn.abmatic.ai
+script-src: https://clients.abmatic.ai
+connect-src: https://clients.abmatic.ai https://api.abmatic.ai
 ```
 
 ## Next Steps
 
-- [Create Your First Campaign](/getting-started/first-campaign)
-- [Connect Your CRM](/integrations/overview)
-- [Set Up Conversion Tracking](/conversions/overview)
+Once your script is installed and showing "Active" status:
+
+- [Create Your First Campaign](/getting-started/first-campaign) - Start personalizing your website
+- [Connect Your CRM](/integrations/overview) - Sync with Salesforce, HubSpot, etc.
+- [Set Up Conversion Tracking](/conversions/overview) - Measure campaign performance
