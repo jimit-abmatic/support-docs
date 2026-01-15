@@ -7,178 +7,328 @@ sidebar_position: 1
 
 # Audiences Overview
 
-Audiences are the foundation of account-based marketing. Abmatic AI provides powerful tools to build, manage, and activate target audiences across all your marketing channels.
+Stop wasting budget on the wrong accounts. Abmatic AI helps you build, enrich, and activate precision-targeted audiences that convert - across every marketing channel.
 
-## Audience Types
+## Why Audience Management Matters
 
-### Accounts
-Companies and organizations you want to target.
+| Without Targeted Audiences | With Abmatic Audiences |
+|---------------------------|------------------------|
+| Spray-and-pray campaigns | Laser-focused targeting |
+| Low conversion rates | 2-3x higher engagement |
+| Wasted ad spend | Every dollar reaches decision-makers |
+| Manual list building | AI-powered enrichment |
+| Siloed channel data | Unified view across all touchpoints |
+
+---
+
+## Getting Started
+
+Navigate to **Audiences** in the left sidebar to access:
+
+- **Accounts** - Target companies for ABM campaigns
+- **Contacts** - Target individuals for outreach
 
 ![Accounts List](/img/screenshots/accounts-list.png)
 
-- **Named Accounts** - Specific companies on your target list
-- **Discovered Accounts** - Companies identified visiting your website
-- **CRM Accounts** - Synced from Salesforce, HubSpot, etc.
+*Your audience command center: 260 collections, instant source filtering, and one-click list creation.*
 
-[Learn more about Accounts →](/audiences/accounts)
+---
 
-### Contacts
-Individual people at your target accounts.
+## Understanding the Interface
 
-![Contacts List](/img/screenshots/contacts-list.png)
+### Collections vs All Accounts
 
-- **Known Contacts** - People who have identified themselves
-- **CRM Contacts** - Synced from your CRM
-- **Revealed Contacts** - Identified through email or form submissions
+| Tab | What You See | Best For |
+|-----|--------------|----------|
+| **Collections** | Organized target lists you've built | Running campaigns, syncing to ads |
+| **All Accounts** | Every account in your system | Finding specific companies, bulk actions |
 
-[Learn more about Contacts →](/audiences/contacts)
+### Collection Summary Cards
 
-### Target Groups
-Custom collections of accounts or contacts for specific campaigns.
+The cards at the top give you instant visibility:
 
-![Groups List](/img/screenshots/groups-list.png)
+| Card | What It Shows |
+|------|---------------|
+| **All Collections** | Total number of lists |
+| **Dynamic** | Auto-updating lists based on filters |
+| **Salesforce/HubSpot** | CRM-synced collections |
+| **Auto Generated** | System-created engagement lists |
+| **CSV** | Manually imported lists |
+| **Abmatic** | Lists built with Abmatic filters |
 
-- **Static Lists** - Fixed lists you manually curate
-- **Dynamic Lists** - Auto-updating based on criteria
+### Collection Table
 
-[Learn more about Target Groups →](/audiences/target-groups)
+| Column | Description |
+|--------|-------------|
+| **Name** | Collection name and type (Dynamic, CSV, etc.) |
+| **Total Accounts** | Number of accounts in the list |
+| **Status** | Done, Processing, or Draft |
+| **Last Updated At** | When the list was last refreshed |
 
-## Creating Audiences
+---
 
-### From Filters
+## Creating Your First Collection
 
-Build audiences using powerful filtering criteria:
+Click **+ Account List** in the top right to open the creation modal.
 
-1. Go to **Audiences** → **Accounts** or **Contacts**
-2. Click **Create New**
-3. Select **From Filters**
-4. Add filter conditions:
+![Account Create Modal](/img/screenshots/workflows/audience-02-create-modal.png)
 
-**Company Attributes:**
-- Industry (e.g., Technology, Healthcare, Finance)
-- Employee count (e.g., 100-500, 500-1000)
-- Revenue range
-- Location (country, state, city)
-- Technologies used
+*Four ways to build your target list: import existing data or create new segments.*
 
-**Engagement Attributes:**
-- Website visits
-- Page views
-- Conversion events
-- Campaign interactions
+### Import Options
 
-**CRM Attributes:**
-- Account owner
-- Opportunity stage
-- Custom fields
+| Method | Best For | Time to Complete |
+|--------|----------|------------------|
+| **Upload from CSV** | Existing spreadsheets, event lists, purchased data | Minutes |
+| **Import from CRM** | Leveraging Salesforce, HubSpot, or Pipedrive segments | Minutes |
 
-### From CRM
+### Create Options
 
-Import accounts directly from your connected CRM:
+| Method | Best For | How It Works |
+|--------|----------|--------------|
+| **Static Collection** | Fixed target lists, event attendees, named accounts | Filter once, list stays fixed |
+| **Dynamic Collection** | Always-current segments, engagement-based targeting | Filters auto-refresh the list |
 
-1. Click **Create New** → **From CRM**
-2. Select your CRM (Salesforce, HubSpot, etc.)
-3. Choose import criteria or select specific records
-4. Map fields and import
+---
 
-### From CSV
+## Method 1: Static Collection (Filter Once)
 
-Upload a list of accounts or contacts:
+Best for fixed target lists that won't change.
 
-1. Click **Create New** → **CSV Upload**
-2. Download the template
-3. Fill in your data
-4. Upload the completed file
-5. Map columns to Abmatic fields
-6. Review and import
+### Step 1: Click Static Collection
 
-[Learn more about CSV Import →](/audiences/csv-import)
+Select **Static Collection** from the Create section.
 
-### AI Recommendations
+### Step 2: Build Your Filters
 
-Let AI suggest accounts based on your best customers:
+Add conditions to define your ideal accounts:
 
-1. Click **Create New** → **AI Recommendations**
-2. Select seed accounts (your best customers)
-3. AI will find similar companies
-4. Review and add to your audience
+| Filter Category | Example Conditions | Why Use It |
+|-----------------|-------------------|------------|
+| **Firmographic** | Industry = Technology, Employees > 100 | Match your ICP |
+| **Geographic** | Country = United States, Region = California | Local targeting |
+| **Engagement** | Score = High, Visited last 30 days | Prioritize hot accounts |
+| **CRM Data** | Stage = Prospect, Owner = Your SDR | Align with sales |
 
-## Audience Management
+### Step 3: Preview and Save
 
-### Viewing Audiences
+1. Review matching account count
+2. Enter a descriptive name (e.g., "Enterprise Tech - US - Q1 2026")
+3. Click **Save Collection**
 
-Each audience shows:
-- Name and type
-- Number of accounts/contacts
-- Creation date
-- Associated campaigns
+---
 
-### Enrichment
+## Method 2: Dynamic Collection (Auto-Update)
 
-Enhance your audience data:
-- Company details (industry, size, revenue)
-- Technology stack
-- Social profiles
-- Contact information
+Best for lists that should stay current as data changes.
 
-### Export
+### Step 1: Click Dynamic Collection
 
-Export audiences for external use:
-- CSV download
-- Push to CRM
-- Sync to ad platforms
+Select **Dynamic Collection** from the Create section.
 
-## Activation
+### Step 2: Configure Filter Rules
 
-### LinkedIn DMP
-Push audiences to LinkedIn for advertising:
+Same filter options as static, but results update automatically.
 
-1. Select your audience
-2. Click **Push to LinkedIn**
-3. Create a LinkedIn segment
-4. Use in LinkedIn Campaign Manager
+### Step 3: Set Refresh Frequency
 
-[Learn more →](/audiences/linkedin-dmp)
+| Frequency | Best For | Trade-off |
+|-----------|----------|-----------|
+| **Real-time** | High-priority campaigns | Uses more resources |
+| **Hourly** | Most use cases | Good balance |
+| **Daily** | Large lists, less urgent campaigns | Best performance |
 
-### Google Customer Match
-Activate audiences in Google Ads:
+### Step 4: Save
 
-1. Select contacts with email addresses
-2. Click **Push to Google Ads**
-3. Create a Customer Match audience
-4. Use in Google Ads campaigns
+1. Name your collection
+2. Click **Save Collection**
+3. Watch it update automatically as accounts match your criteria
 
-[Learn more →](/audiences/google-customer-match)
+---
 
-### CRM Sync
-Keep audiences synced with your CRM:
+## Method 3: CSV Import
 
-1. Configure sync settings
-2. Choose sync direction (one-way or two-way)
-3. Set sync frequency
-4. Map fields
+Best for uploading existing lists from spreadsheets or external sources.
 
-[Learn more →](/audiences/crm-sync)
+### Step 1: Click Upload from CSV
+
+Select **Upload from CSV** from the Import section.
+
+### Step 2: Upload Your File
+
+- Maximum file size: 100 MB
+- Maximum records: 1,000 per import
+- Supported format: .csv files
+
+### Step 3: Map Columns
+
+Abmatic AI auto-suggests field mappings:
+
+| Your CSV Column | Maps To |
+|-----------------|---------|
+| Company Name | Account Name |
+| Website | Domain |
+| Industry | Industry |
+| Employee Count | Company Size |
+
+### Step 4: Complete Import
+
+1. Review the preview
+2. Click **Import**
+3. Your new collection appears in the list
+
+---
+
+## Method 4: CRM Import
+
+Best for leveraging your existing CRM segments and lists.
+
+### Step 1: Click Import from CRM
+
+:::info CRM Connection Required
+You'll need a connected CRM. If not set up, visit **Integrations** first.
+:::
+
+### Step 2: Select Source
+
+| CRM | What You Can Import |
+|-----|---------------------|
+| **Salesforce** | Accounts, Contacts, Campaigns, Reports |
+| **HubSpot** | Companies, Contacts, Lists |
+| **Pipedrive** | Organizations, People |
+
+### Step 3: Choose Records
+
+- **All Records** - Import everything
+- **By List/Segment** - Choose specific CRM lists
+- **By Custom Filter** - Apply CRM filters
+
+### Step 4: Start Import
+
+1. Review settings
+2. Click **Import**
+3. Monitor progress in the collection list
+
+---
+
+## Activating Your Audiences
+
+Your collections aren't just for organizing - they power every channel.
+
+### Push to Advertising Platforms
+
+| Platform | How to Activate | Match Rates |
+|----------|-----------------|-------------|
+| **LinkedIn Ads** | Click collection → Push to LinkedIn | 60-80% |
+| **Google Ads** | Click collection → Push to Google | 40-60% |
+
+### Sync to CRM
+
+| Action | What Happens |
+|--------|--------------|
+| **Create Records** | New accounts added to CRM |
+| **Update Existing** | Enrich existing CRM records |
+| **Add to Campaign** | Associate with CRM campaign |
+
+### Use in Campaigns
+
+When creating any Abmatic campaign:
+1. Go to **Campaigns** → **Create Campaign**
+2. In the Audience tab, select your collection
+3. Your personalization reaches exactly those accounts
+
+---
+
+## Managing Contacts
+
+The **Contacts** section works similarly to Accounts, but focuses on individuals.
+
+### Contact-Specific Fields
+
+| Field | Description |
+|-------|-------------|
+| **Name** | Full name |
+| **Email** | Email address |
+| **Title** | Job title |
+| **Company** | Associated account |
+| **LinkedIn** | Profile URL |
+| **Phone** | Phone number |
+
+### Contact Sources
+
+| Source | How They're Added |
+|--------|-------------------|
+| **Form Submissions** | Visitors who fill out tracked forms |
+| **Contact Reveal** | Identified through IP intelligence |
+| **CRM Import** | Synced from your CRM |
+| **CSV Upload** | Manually imported |
+
+---
 
 ## Best Practices
 
 ### Quality Over Quantity
-- Focus on accounts that match your ICP
-- Prioritize accounts showing intent signals
-- Regular clean up and maintenance
+
+:::tip Focus on Your ICP
+A smaller list of high-fit accounts (100-500) often outperforms a large list of generic targets (5,000+). Quality targeting beats volume every time.
+:::
+
+### Naming Conventions
+
+| Good Names | Why They Work |
+|------------|---------------|
+| "Enterprise Tech - US - Q1 2026" | Clear audience, location, timeframe |
+| "Healthcare 500+ Employees" | Clear industry and size |
+| "High Engagement Last 30 Days" | Clear behavioral criteria |
+
+| Avoid | Why |
+|-------|-----|
+| "List 1", "Test", "Accounts" | No context, impossible to manage at scale |
 
 ### Keep Data Fresh
-- Enable regular CRM syncs
-- Remove outdated contacts
-- Update company information
 
-### Segment Strategically
-- Create segments by buyer stage
-- Segment by industry or company size
-- Build segments for specific campaigns
+| Task | Frequency | Why It Matters |
+|------|-----------|----------------|
+| Review engagement scores | Weekly | Prioritize hot accounts |
+| Clean stale records | Monthly | Remove outdated data |
+| Verify CRM sync | Weekly | Ensure data consistency |
+| Review collection performance | After campaigns | Optimize targeting |
+
+---
+
+## Troubleshooting
+
+### Collection Shows 0 Records
+
+| Cause | Solution |
+|-------|----------|
+| Filters too restrictive | Broaden criteria or remove conditions |
+| No matching data | Check if data exists in "All Accounts" view |
+| Still processing | Wait for import to complete |
+
+### Import Failed
+
+| Error | Solution |
+|-------|----------|
+| "File too large" | Reduce CSV to under 100 MB |
+| "Too many records" | Split into batches of 1,000 |
+| "Invalid format" | Ensure file is valid .csv format |
+| "CRM connection error" | Reconnect integration in Settings |
+
+### Records Not Syncing
+
+| Issue | Solution |
+|-------|----------|
+| Sync delayed | Check logs in Integrations settings |
+| Missing fields | Verify field mapping configuration |
+| Duplicates created | Review matching rules |
+
+---
 
 ## Next Steps
 
-- [Build Your First Account List](/audiences/accounts)
-- [Import Contacts](/audiences/contacts)
-- [Create Dynamic Segments](/audiences/filters)
+- **[Create Account Lists](/audiences/accounts)** - Deep dive into account targeting
+- **[Build Contact Lists](/audiences/contacts)** - Target specific people
+- **[Use Filters](/audiences/filters)** - Master audience segmentation
+- **[CSV Import Guide](/audiences/csv-import)** - Detailed import instructions
+- **[CRM Sync Guide](/audiences/crm-sync)** - CRM integration details
