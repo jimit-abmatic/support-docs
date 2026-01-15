@@ -14,7 +14,8 @@
  *   interactive        - Interactive mode with CLI prompts
  */
 
-import { chromium, Browser, Page, BrowserContext } from 'playwright';
+import { chromium } from 'playwright';
+import type { Browser, Page, BrowserContext } from 'playwright';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -421,6 +422,8 @@ export { AbmaticScreenshotTool, ABMATIC_PAGES };
 export type { PageCapture, ScreenshotConfig };
 
 // Run if called directly
-if (require.main === module) {
+import { fileURLToPath } from 'url';
+const isMainModule = process.argv[1] === fileURLToPath(import.meta.url);
+if (isMainModule) {
   main();
 }
