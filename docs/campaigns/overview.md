@@ -7,149 +7,116 @@ sidebar_position: 1
 
 # Campaigns Overview
 
-Campaigns are the core of your Abmatic AI marketing strategy. Create personalized experiences across multiple channels to engage your target accounts and drive conversions.
+**Transform every website visit into a personalized experience.** Abmatic AI campaigns let you show the right message to the right visitor at the right time—turning anonymous traffic into engaged prospects and customers.
 
-## Campaign Types
+## Why Campaigns Matter
 
-Abmatic AI supports several campaign types, each designed for different marketing objectives:
+| Without Campaigns | With Abmatic Campaigns |
+|-------------------|------------------------|
+| Same generic content for everyone | Tailored messaging for each visitor |
+| No way to test what works | Built-in A/B testing with statistical significance |
+| Manual updates for each audience | Rules-based automation that scales |
+| No visibility into impact | Real-time analytics showing ROI |
 
-### Website Personalization
-Dynamically modify your website content based on visitor attributes.
+**Teams using Abmatic campaigns see 2-3x higher conversion rates** compared to static website content.
 
-**Use Cases:**
-- Personalized homepages for target accounts
-- Industry-specific messaging
-- Custom CTAs for different buyer stages
-- Account-based landing pages
+## The Campaigns Dashboard
 
-### Email Campaigns
-Send personalized email sequences to your target contacts.
-
-**Use Cases:**
-- Account-based outreach sequences
-- Personalized nurture campaigns
-- Re-engagement campaigns
-- Event-triggered emails
-
-### LinkedIn Ads
-Target your accounts and contacts on LinkedIn.
-
-**Use Cases:**
-- Account-targeted sponsored content
-- LinkedIn DMP segment activation
-- ABM display campaigns
-- Retargeting known accounts
-
-### Google Ads
-Reach your audiences through Google's advertising network.
-
-**Use Cases:**
-- Customer Match campaigns
-- Display Network targeting
-- Search campaigns for target accounts
-- Remarketing to engaged accounts
-
-### CRM Campaigns
-Trigger actions and updates in your connected CRM.
-
-**Use Cases:**
-- Automated lead scoring updates
-- Account status changes
-- Task creation for sales
-- Campaign attribution tracking
-
-## Campaign Management
+Navigate to **Campaigns** in the left sidebar to see all your personalization and advertising campaigns in one place.
 
 ![Campaigns List](/img/screenshots/campaigns-list.png)
 
-### Viewing Campaigns
+### At a Glance
 
-The Campaigns page shows all your campaigns with:
-- Campaign name and type
-- Status (Draft, Active, Paused, Completed)
-- Target audience
-- Performance metrics
-- Last modified date
+The dashboard gives you complete visibility into your personalization efforts:
 
-### Campaign Statuses
+| Element | Purpose |
+|---------|---------|
+| **+ CAMPAIGN** button | Create a new campaign in seconds |
+| **Summary Cards** | Quick counts by campaign type (click to filter) |
+| **Search & Filters** | Find campaigns instantly |
+| **Campaign Table** | See status, performance, and priority at a glance |
 
-| Status | Description |
-|--------|-------------|
-| **Draft** | Campaign is being configured, not live |
-| **Active** | Campaign is running and targeting visitors |
-| **Paused** | Campaign is temporarily stopped |
-| **Completed** | Campaign has ended (reached end date or manually stopped) |
+### Campaign Types
 
-### Creating a Campaign
+Abmatic AI supports multiple campaign types to match your go-to-market strategy:
 
-1. Click **Create Campaign**
-2. Select your campaign type
-3. Configure settings:
-   - Name and description
-   - Target audience
-   - Content/creative
-   - Conversion goals
-   - Schedule (optional)
-4. Preview and test
-5. Activate
+| Type | Best For | Example Use Case |
+|------|----------|------------------|
+| **Inbound** | Visitors matching firmographic criteria | Show enterprise pricing to Fortune 500 companies |
+| **Outbound** | Specific named accounts (ABM) | Personalize content for your top 100 target accounts |
+| **Agentic Flow** | AI-powered dynamic personalization | Let AI craft the perfect message for each visitor |
+| **LinkedIn Ads** | Retargeting website visitors | Reach engaged prospects on LinkedIn |
+| **Email** | Coordinated multichannel campaigns | Follow up website visits with personalized emails |
+| **Banner & Popup** | Overlay messages | Show targeted offers without changing page content |
+| **CRM Campaigns** | Sync with Salesforce/HubSpot | Keep campaign data consistent across systems |
 
-## Campaign Components
+### Understanding the Campaign Table
 
-### Target Audience
-Define who sees your campaign:
-- **Account Lists** - Specific named accounts
-- **Segments** - Dynamic groups based on attributes
-- **Filters** - Real-time criteria matching
+| Column | What It Tells You |
+|--------|-------------------|
+| **Campaign Name** | Campaign title and type (Inbound/Outbound/etc.) |
+| **Preference** | Priority ranking—when a visitor matches multiple campaigns, highest preference wins |
+| **Status** | Current state: Full personalization, Experiment, or Inactive |
+| **Unique Visitors** | How many people saw personalized content vs. control group |
+| **Created/Updated** | Timeline for tracking changes |
 
-### Content & Creative
-Create personalized experiences:
-- **Visual Page Editor** - Modify website elements
-- **Email Templates** - Design email content
-- **Ad Creative** - Upload ad assets
+### Status Types Explained
 
-### Conversion Goals
-Track campaign success:
-- Form submissions
-- Page visits
-- Button clicks
-- Custom events
+| Status | What It Means | When to Use |
+|--------|---------------|-------------|
+| **100% Full Personalization** | All matching visitors see personalized content | After validating a winning variation |
+| **50% Experiment** | A/B test running—half see personalized, half see original | When testing new messaging |
+| **0% Inactive** | Campaign is paused | During setup or when taking a break |
 
-### Analytics
-Measure performance:
-- Impressions and reach
-- Engagement metrics
-- Conversion rates
-- Lift vs. baseline
+### Reading Visitor Metrics
 
-## Campaign Best Practices
+The **Unique Visitors** column shows your campaign's reach:
 
-### Start with High-Value Accounts
-Focus initial campaigns on:
-- Top-tier target accounts
-- Accounts showing intent signals
-- Accounts already in your pipeline
+- **First number**: Visitors who saw personalized content
+- **"vs X in control"**: Visitors who saw the original page
 
-### Personalize Meaningfully
-Effective personalization:
-- Addresses specific pain points
-- References the visitor's industry or role
-- Offers relevant content or offers
+**Example:** "422 vs 437 in control" means:
+- 422 visitors experienced your personalization
+- 437 visitors served as your control group
+- You can now compare conversion rates to measure true impact
 
-### Test and Iterate
-Improve over time:
-- Run A/B tests on messaging
-- Test different CTAs
-- Experiment with targeting criteria
+### Priority System (Preference)
 
-### Measure What Matters
-Focus on business outcomes:
-- Pipeline generated
-- Conversion rates
-- Account engagement scores
+When a visitor qualifies for multiple campaigns, **Preference** determines what they see:
 
-## Next Steps
+| Preference | Behavior |
+|------------|----------|
+| **#1** | Always wins when matched |
+| **#2** | Shows only if visitor doesn't match #1 |
+| **#3, #4...** | Falls through in order |
 
-- [Create a Website Personalization Campaign](/campaigns/website-personalization)
-- [Set Up Email Campaigns](/campaigns/email-campaigns)
-- [Launch LinkedIn Ads](/campaigns/linkedin-ads)
-- [Master the Visual Editor](/campaigns/page-editor)
+**Pro tip:** Put your highest-value campaigns (like competitor blocking or top accounts) at Preference #1.
+
+## Quick Actions
+
+From the dashboard you can:
+
+- **Click any campaign** to open its editor and settings
+- **Click + CAMPAIGN** to create a new campaign
+- **Click a type card** to filter (e.g., click "9 Outbound" to see only outbound campaigns)
+- **Use checkboxes** to select multiple campaigns for bulk actions
+- **Click column headers** to sort by any field
+
+## Getting Started
+
+Ready to create your first campaign? Here's the fastest path to value:
+
+1. **[Website Personalization](/campaigns/website-personalization)** — Create targeted web experiences in minutes
+2. **[First Campaign Tutorial](/getting-started/first-campaign)** — Step-by-step guide for beginners
+3. **[A/B Testing](/campaigns/ab-testing)** — Learn to run statistically valid experiments
+
+## More Resources
+
+| Topic | What You'll Learn |
+|-------|-------------------|
+| [Page Editor](/campaigns/page-editor) | How to customize any webpage element |
+| [Dynamic Content](/campaigns/dynamic-content) | Insert personalized tokens automatically |
+| [LinkedIn Ads](/campaigns/linkedin-ads) | Retarget visitors on LinkedIn |
+| [Google Ads](/campaigns/google-ads) | Sync audiences to Google Ads |
+| [Troubleshooting](/troubleshooting/campaign-issues) | Fix common campaign issues |

@@ -109,8 +109,9 @@ class AbmaticScreenshotTool {
       await this.page.fill('input[type="email"], input[name="email"]', this.config.email);
       await this.page.fill('input[type="password"], input[name="password"]', this.config.password);
 
-      // Click login button
-      await this.page.click('button[type="submit"]');
+      // Click login button - try multiple selectors
+      const loginButton = this.page.locator('button:has-text("SIGN IN"), button:has-text("Sign In"), button[type="submit"]').first();
+      await loginButton.click();
 
       // Wait for navigation to dashboard
       await this.page.waitForURL('**/home-dashboard**', { timeout: 30000 });
@@ -416,7 +417,8 @@ Examples:
 }
 
 // Export for programmatic use
-export { AbmaticScreenshotTool, PageCapture, ScreenshotConfig, ABMATIC_PAGES };
+export { AbmaticScreenshotTool, ABMATIC_PAGES };
+export type { PageCapture, ScreenshotConfig };
 
 // Run if called directly
 if (require.main === module) {
