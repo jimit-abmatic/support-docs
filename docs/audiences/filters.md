@@ -7,109 +7,134 @@ sidebar_position: 3
 
 # Using Filters to Build Audiences
 
-Filters allow you to create targeted audiences based on company firmographics, visitor behavior, and contact attributes. This guide covers all available filter fields and how to use them effectively.
+Stop wasting ad spend on the wrong visitors. Filters let you laser-target exactly who sees your personalized content, ensuring every impression counts.
+
+## Why Smart Filtering Drives Results
+
+| Without Filters | With Abmatic Filters |
+|-----------------|---------------------|
+| Generic content for everyone | Personalized experiences for target accounts |
+| Wasted ad spend on unqualified visitors | Budget focused on high-value prospects |
+| Low conversion rates | 2-3x higher engagement from relevant audiences |
+| Manual list management | Automatic audience updates in real-time |
 
 ## How Filters Work
 
-Filters use a **field + condition + value** structure:
+Every filter follows a simple **field + condition + value** structure:
 
 1. **Field** - What attribute to filter on (e.g., Industry, Company Size)
-2. **Condition** - How to match (e.g., "is", "contains", "is not")
-3. **Value** - What to match against (e.g., "Technology", "1000+")
+2. **Condition** - How to match (e.g., "is", "contains", "is above")
+3. **Value** - What to match against (e.g., "Technology", "500+")
 
-You can combine multiple filters with AND/OR logic to create complex targeting criteria.
+Combine multiple filters with AND/OR logic to create precise targeting criteria that match your ideal customer profile.
 
-![Accounts List with Filters](/img/screenshots/accounts-list.png)
+![Filter Builder with AND/OR Logic](/img/screenshots/wp-audience-tab.png)
+*The filter builder in the "Inbound Enterprise" campaign showing Country, Account List, Employee Count, and Company Size filters with AND/OR grouping*
 
 ## Filter Categories
 
 ### Geolocation Filters
 
-Target visitors based on their geographic location:
+Target visitors based on their geographic location to deliver region-specific messaging:
 
-| Field | Description | Example Values |
-|-------|-------------|----------------|
-| **Country** | Visitor's country | United States, Canada, United Kingdom |
-| **City** | Visitor's city | San Francisco (US), London (UK), Toronto (CA) |
-| **Region** | State/Province | California (US), Ontario (CA) |
-| **Time Zone** | Visitor's timezone | -08:00, +00:00, +05:30 |
+| Field | What It Does | Example Use Case |
+|-------|--------------|------------------|
+| **Country** | Match by visitor's country | Target North American prospects only |
+| **City** | Match by specific city | Run local event promotions |
+| **Region** | Match by state/province | Comply with regional regulations |
+| **Time Zone** | Match by timezone | Schedule content for business hours |
 
-**Example**: Target visitors from the United States in Pacific timezone
-- Country `is` United States
-- AND Time Zone `is` -08:00
+**Example: Target Enterprise Buyers in North America**
+```
+Country IS ANY OF canada, united states
+AND Time Zone IS BETWEEN -08:00, -05:00
+```
 
 ### Company Firmographics
 
-Filter by company characteristics (requires data enrichment):
+Filter by company characteristics to focus on your ideal customer profile:
 
-| Field | Description | Example Values |
-|-------|-------------|----------------|
-| **Company Name** | Organization name | Free text search |
-| **Domain** | Company website | company.com |
-| **Employee Count** | Company size | 1-10, 11-50, 51-250, 251-1K, 1K-5K, 5K-10K, 10K+ |
-| **Annual Revenue** | Estimated revenue | $0-$1M, $1M-$10M, $10M-$50M, $50M-$100M, $100M+ |
-| **Industry** | Business sector | Technology, Healthcare, Financial Services |
-| **Sub-Industry** | Specific industry vertical | SaaS, Biotechnology, Investment Banking |
-| **Company Type** | Organization type | Private, Public, Nonprofit, Government, Education |
-| **Founded Year** | When company was founded | 2018-2020, 2014-2017, 2010-2013, etc. |
+| Field | What It Does | Best For |
+|-------|--------------|----------|
+| **Company Name** | Match specific companies | Named account targeting |
+| **Domain** | Match by website domain | Account-based campaigns |
+| **Employee Count** | Filter by company size | Segment by market tier |
+| **Annual Revenue** | Filter by revenue range | Qualify by buying power |
+| **Industry** | Filter by business sector | Industry-specific messaging |
+| **Sub-Industry** | Filter by vertical | Niche targeting |
+| **Company Type** | Filter by org type | Public, Private, Nonprofit |
+| **Founded Year** | Filter by company age | Target startups vs. established |
 
-**Example**: Target mid-market SaaS companies
-- Employee Count `is` 51-250
-- AND Industry `is` Information Technology
-- AND Business Classification `is` SAAS
+**Example: Target Mid-Market SaaS Companies**
+```
+Employee Count IS ABOVE 50
+AND Employee Count IS BELOW 500
+AND Industry IS Information Technology
+AND Business Classification IS SAAS
+```
 
-### Behavior Filters
+### Behavioral Filters
 
-Filter based on visitor activity on your website:
+Identify high-intent visitors based on their engagement with your website:
 
-| Field | Description | Conditions |
-|-------|-------------|------------|
-| **Total Page Views** | Number of pages viewed | is above, is below, is between |
-| **Total Sessions** | Number of visit sessions | is above, is below, is between |
-| **Visited Pages** | Specific pages visited | contains, begins with |
-| **Referrer** | Traffic source | contains, begins with, is |
+| Field | What It Does | Why It Matters |
+|-------|--------------|----------------|
+| **Total Page Views** | Pages viewed across all sessions | Higher views = higher interest |
+| **Total Sessions** | Number of visits to your site | Repeat visitors are warmer |
+| **Visited Pages** | Specific URLs they've seen | Shows what topics interest them |
+| **Referrer** | Where traffic came from | Identify quality sources |
 
-**Example**: Target high-intent visitors
-- Total Page Views `is above` 5
-- AND Visited Pages `contains` /pricing
+**Example: Target High-Intent Visitors**
+```
+Total Page Views IS ABOVE 5
+AND Visited Pages CONTAINS /pricing
+```
+
+This filter catches visitors who've explored your site and checked pricing—a strong buying signal.
 
 ### UTM Parameters
 
-Filter by marketing campaign attribution:
+Filter by marketing campaign attribution to coordinate your multi-channel strategy:
 
-| Field | Description | Usage |
-|-------|-------------|-------|
-| **utm_campaign** | Campaign name | Match specific campaigns |
-| **utm_medium** | Traffic medium | email, cpc, social, organic |
-| **utm_source** | Traffic source | google, linkedin, facebook |
-| **utm_term** | Paid keywords | Search terms |
-| **utm_content** | Ad content | A/B test variations |
+| Field | What It Does | Example Values |
+|-------|--------------|----------------|
+| **utm_campaign** | Match specific campaigns | `spring-launch`, `webinar-2024` |
+| **utm_medium** | Match traffic medium | `email`, `cpc`, `social`, `organic` |
+| **utm_source** | Match traffic source | `google`, `linkedin`, `facebook` |
+| **utm_term** | Match paid keywords | Search terms from ads |
+| **utm_content** | Match ad content | A/B test variations |
 
-**Example**: Target visitors from LinkedIn ads
-- utm_source `is` linkedin
-- AND utm_medium `is` cpc
+**Example: Personalize for LinkedIn Campaign Visitors**
+```
+utm_source IS linkedin
+AND utm_medium IS cpc
+```
+
+Show LinkedIn ad visitors messaging that continues the conversation from your ad creative.
 
 ### Language Filters
 
-| Field | Description |
-|-------|-------------|
-| **Preferred Language** | Browser language setting |
+| Field | What It Does |
+|-------|--------------|
+| **Preferred Language** | Browser language setting (en, es, fr, de, ja, zh) |
 
-Common values: English (en), Spanish (es), French (fr), German (de), Japanese (ja), Chinese (zh)
+Use this to show content in your visitor's preferred language or route them to localized pages.
 
 ### Custom Values
 
-| Field | Description |
-|-------|-------------|
-| **Query String** | URL parameters | Match custom tracking parameters |
+| Field | What It Does |
+|-------|--------------|
+| **Query String** | Match custom URL parameters |
 
-## Canonicalized Fields
+Perfect for tracking custom UTM variants or internal routing parameters.
 
-Abmatic AI uses standardized (canonicalized) values for certain fields to ensure consistent filtering:
+## Standardized Fields
+
+Abmatic uses canonicalized (standardized) values to ensure consistent filtering across your data:
 
 ### Job Title Role
 
-Standardized job function categories:
+Standardized job function categories for consistent targeting:
 
 - Executive / C-Suite
 - Vice President
@@ -119,9 +144,19 @@ Standardized job function categories:
 - Consultant
 - Intern
 
-### Job Title Sub-Role
+### Job Title Seniority
 
-More specific job function:
+| Level | Who It Includes |
+|-------|-----------------|
+| **C-Level** | CEO, CTO, CFO, CMO, COO |
+| **VP Level** | VPs and SVPs |
+| **Director Level** | Directors and Sr. Directors |
+| **Manager Level** | Managers and Team Leads |
+| **Senior IC** | Senior Engineers, Senior Analysts |
+| **Individual Contributor** | Engineers, Analysts, Specialists |
+| **Entry Level** | Associates, Assistants, Interns |
+
+### Job Title Function
 
 - Sales / Business Development
 - Marketing
@@ -134,21 +169,9 @@ More specific job function:
 - Legal
 - IT / Security
 
-### Job Title Levels
+### Industry (GICS Classification)
 
-Seniority levels:
-
-- C-Level (CEO, CTO, CFO, etc.)
-- VP Level
-- Director Level
-- Manager Level
-- Senior Individual Contributor
-- Individual Contributor
-- Entry Level
-
-### Industry (Standardized)
-
-Major industry categories following GICS classification:
+Major industry categories following Global Industry Classification Standard:
 
 - Consumer Discretionary
 - Consumer Staples
@@ -174,91 +197,172 @@ Major industry categories following GICS classification:
 
 ## Filter Conditions
 
-Different field types support different conditions:
+Different field types support different matching conditions:
 
 ### Text Fields
 
-| Condition | Description |
-|-----------|-------------|
-| **is** | Exact match |
-| **is not** | Does not match |
-| **contains** | Text appears anywhere |
-| **does not contain** | Text does not appear |
-| **begins with** | Text starts with value |
+| Condition | What It Does | When to Use |
+|-----------|--------------|-------------|
+| **is** | Exact match | Known specific values |
+| **is not** | Excludes exact match | Block specific values |
+| **contains** | Text appears anywhere | Partial matching |
+| **does not contain** | Text doesn't appear | Exclude partial matches |
+| **begins with** | Starts with value | URL path matching |
 
 ### Numeric Fields
 
-| Condition | Description |
-|-----------|-------------|
-| **is** | Equals exact number |
-| **is above** | Greater than |
-| **is below** | Less than |
-| **is between** | Within range (min-max) |
+| Condition | What It Does | When to Use |
+|-----------|--------------|-------------|
+| **is** | Equals exact number | Specific thresholds |
+| **is above** | Greater than | Minimum requirements |
+| **is below** | Less than | Maximum caps |
+| **is between** | Within range | Size or revenue bands |
 
 ### Enum/List Fields
 
-| Condition | Description |
-|-----------|-------------|
-| **is any of** | Matches any selected values |
-| **is not any of** | Does not match any selected values |
+| Condition | What It Does | When to Use |
+|-----------|--------------|-------------|
+| **is any of** | Matches any selected | Include multiple values |
+| **is not any of** | Excludes selected | Block multiple values |
+
+## Using AND/OR Logic
+
+Build sophisticated targeting with logical grouping:
+
+### AND Logic (All Must Match)
+Every condition must be true. Use this to narrow your audience:
+```
+Industry IS Technology
+AND Employee Count IS ABOVE 100
+AND Country IS United States
+```
+Result: Only US tech companies with 100+ employees
+
+### OR Logic (Any Can Match)
+Any condition can be true. Use this to broaden your audience:
+```
+Industry IS Technology
+OR Industry IS Financial Services
+OR Industry IS Healthcare
+```
+Result: Companies in any of these three industries
+
+### Combining AND/OR with Groups
+
+Create complex rules by nesting groups. The screenshot above shows:
+1. **Country** is any of: Canada, US, UK, Germany, France, Spain, Italy
+2. **AND Account List** is none of: Abmatic AI Customer List (exclude existing customers)
+3. **AND** a grouped OR condition:
+   - **Employee Count** is above 501
+   - **OR Company Size** is any of: 501-1000, 1001-5000, 5001-10000, 10001+
+
+This targets enterprise companies in key markets while excluding current customers.
 
 ## Building Effective Audiences
 
-### 1. Start with ICP (Ideal Customer Profile)
+### Step 1: Define Your ICP
 
-Define your target based on:
-- Company size that fits your product
-- Industries you serve
-- Geographic regions you target
+Start with your Ideal Customer Profile:
 
-### 2. Layer Behavioral Signals
+| ICP Element | Filter Approach |
+|-------------|-----------------|
+| Company size | Employee Count or Revenue filters |
+| Industry | Industry + Sub-Industry filters |
+| Geography | Country, Region, or City filters |
+| Job function | Job Title Role + Seniority filters |
 
-Add intent indicators:
-- High page view count
-- Visits to key pages (pricing, demo, case studies)
-- Return visitors
+### Step 2: Layer Behavioral Signals
 
-### 3. Use AND/OR Logic
+Add intent indicators to find engaged visitors:
 
-- **AND** - All conditions must match (narrower audience)
-- **OR** - Any condition can match (broader audience)
+| Behavioral Signal | What It Indicates |
+|-------------------|-------------------|
+| 5+ page views | Active research phase |
+| Pricing page visit | Evaluating options |
+| Return visitor | Continued interest |
+| Multiple sessions | Building familiarity |
 
-### 4. Test and Refine
+### Step 3: Test and Refine
 
-- Start with broader filters
-- Analyze results
-- Add filters to narrow down
-- Monitor conversion rates
+| Action | Why |
+|--------|-----|
+| Start broad | Ensure sufficient audience size |
+| Monitor performance | Track engagement and conversions |
+| Add filters gradually | Narrow based on data |
+| Review quarterly | Update for evolving ICP |
 
 ## Dynamic vs. Static Audiences
 
-### Dynamic Audiences
+| Type | How It Works | Best For |
+|------|--------------|----------|
+| **Dynamic** | Auto-updates as new visitors match | Ongoing campaigns, always-on targeting |
+| **Static** | Fixed membership at creation time | Specific account lists, one-time campaigns |
 
-- Automatically update as new visitors match filters
-- Real-time membership changes
-- Ideal for ongoing campaigns
-
-### Static Audiences
-
-- Fixed membership at time of creation
-- Manual updates required
-- Ideal for specific account lists
+**Pro Tip**: Use dynamic audiences for most campaigns—they automatically include new matching visitors without manual updates.
 
 ## Best Practices
 
-1. **Name filters descriptively** - "Enterprise Tech Companies - West Coast" is better than "Filter 1"
+### Do's
 
-2. **Don't over-filter** - Start broad and narrow down based on results
+| Practice | Why It Works |
+|----------|--------------|
+| Name filters descriptively | "Enterprise Tech - West Coast" beats "Filter 1" |
+| Combine firmographic + behavioral | Company fit + engagement = highest quality |
+| Start broad, then narrow | Ensures you don't miss opportunities |
+| Use Account Lists to exclude customers | Avoid wasting impressions on existing buyers |
 
-3. **Combine firmographic + behavioral** - Best results come from combining company fit with engagement signals
+### Don'ts
 
-4. **Review regularly** - Audit your filter logic quarterly to ensure it matches your evolving ICP
+| Avoid | Why |
+|-------|-----|
+| Over-filtering from the start | May result in zero audience |
+| Ignoring behavioral signals | Misses high-intent visitors |
+| Set-and-forget audiences | ICP evolves, filters should too |
+| Duplicate filters across campaigns | Creates maintenance headaches |
 
-5. **Use saved filters** - Save commonly-used filter combinations for reuse
+## Common Filter Combinations
+
+### Enterprise ABM
+```
+Account List IS ANY OF Target Accounts Q1
+AND Country IS ANY OF United States, Canada, United Kingdom
+AND Employee Count IS ABOVE 1000
+```
+
+### High-Intent SMB
+```
+Employee Count IS BETWEEN 50, 500
+AND Total Page Views IS ABOVE 3
+AND Visited Pages CONTAINS /pricing
+```
+
+### Industry-Specific Campaign
+```
+Industry IS Healthcare
+AND Job Title Role IS ANY OF Executive, Vice President, Director
+AND Country IS United States
+```
+
+### Retargeting Engaged Visitors
+```
+Total Sessions IS ABOVE 2
+AND Total Page Views IS ABOVE 5
+AND Visited Pages DOES NOT CONTAIN /thank-you
+```
+
+## Troubleshooting
+
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| Zero audience matches | Filters too restrictive | Remove filters one by one to identify the blocker |
+| Audience too large | Filters too broad | Add firmographic or behavioral qualifiers |
+| Missing expected companies | Data not enriched | Check if companies have been identified and enriched |
+| Filters not saving | Incomplete filter row | Ensure all fields (selector, condition, value) are filled |
 
 ## Related
 
 - [Audiences Overview](/audiences/overview)
+- [Target Accounts](/audiences/accounts)
 - [Target Groups](/audiences/target-groups)
 - [CSV Import](/audiences/csv-import)
 - [CRM Sync](/audiences/crm-sync)
