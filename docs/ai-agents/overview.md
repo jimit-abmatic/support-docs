@@ -1,138 +1,234 @@
 ---
-id: overview
-title: AI Agents Overview
+id: ai-agents-overview
+title: AI Agents
 sidebar_label: Overview
 sidebar_position: 1
 ---
 
-# AI Agents Overview
+# AI Agents
 
-Abmatic AI provides a team of specialized AI agents, each designed to help you with specific aspects of your account-based marketing strategy. These agents use advanced AI to provide insights, recommendations, and automated actions.
+**Scale your marketing and sales efforts 10x without adding headcount.** Abmatic AI's intelligent agents automate the work that takes your team hours—prospecting, campaign creation, personalization, and outreach—all through simple conversation.
 
-## Meet Your AI Team
+| What AI Agents Replace | Time Saved | Business Impact |
+|----------------------|------------|-----------------|
+| Manual campaign creation | 4-8 hours/campaign | Launch personalized campaigns in minutes |
+| Account research | 30+ min/account | Instant intelligence on any prospect |
+| Outreach drafting | 20+ min/email | Personalized messaging at scale |
+| Performance analysis | Hours of reporting | Real-time insights on demand |
+
+---
+
+## Accessing AI Agents
+
+1. Click **AI Agents** in the left sidebar
+2. Meet your AI partners and start a conversation
 
 ![AI Agents Hub](/img/screenshots/ai-agents-hub.png)
 
-### Clara - Chief Executive Agent
-Your strategic ABM advisor who provides high-level guidance and coordinates across all marketing functions. Clara excels at:
-- Multi-turn strategic planning
-- Cross-functional recommendations
-- Executive-level insights and reporting
+*The AI Agents hub introduces you to your AI partner, ready to help with campaigns and prospecting.*
 
-[Learn more about Clara →](/ai-agents/clara-executive)
+---
 
-### Clara - Insights Director
-Your data-driven analytics expert who discovers trends and patterns in your marketing data.
-- Performance analysis and benchmarking
-- Trend identification
-- Predictive insights
+## Meet Your AI Partners
 
-[Learn more about Clara Insights →](/ai-agents/clara-insights)
+### Clara - AI ABM Agent
 
-### Joey - Content Strategist
-Your website content analyst who evaluates and optimizes your content strategy.
-- Website content analysis
-- Messaging optimization
-- Content gap identification
+**Your 24/7 ABM strategist.** Clara executes personalized campaigns that would take your team weeks—in minutes. She understands your accounts, crafts tailored experiences, and continuously optimizes for conversions.
 
-[Learn more about Joey →](/ai-agents/joey-content)
+| What Clara Does | Business Outcome |
+|-----------------|------------------|
+| **Campaign Execution** | Launch targeted campaigns for any segment instantly |
+| **Personalization at Scale** | Every visitor sees content tailored to their company |
+| **Performance Analytics** | Know exactly what's working and why |
+| **Optimization Recommendations** | AI-driven suggestions to improve results |
 
-### Marcus - Campaign Operations
-Your campaign execution specialist who manages and optimizes campaign performance.
-- Campaign setup and optimization
-- Multi-channel coordination
-- Performance monitoring
+**Results Teams See with Clara:**
+- 2-3x higher conversion rates from personalized experiences
+- 80% reduction in campaign setup time
+- Consistent ABM execution across all target accounts
+- Real-time performance visibility
 
-[Learn more about Marcus →](/ai-agents/marcus-campaigns)
+### Alex - AI SDR Agent
 
-### Sophia - Personalization Manager
-Your personalization expert who creates tailored experiences at scale.
-- Dynamic content recommendations
-- Segment-specific messaging
-- A/B test suggestions
+**Like hiring 10 SDRs overnight.** Alex handles the tedious work of prospecting—research, qualification, outreach—so your team can focus on closing deals. Available 24/7, never takes a day off, and learns your ICP perfectly.
 
-[Learn more about Sophia →](/ai-agents/sophia-personalization)
+| What Alex Does | Business Outcome |
+|-----------------|------------------|
+| **Account Research** | Deep company intelligence in seconds |
+| **ICP Qualification** | Automatically score and prioritize leads |
+| **Personalized Outreach** | Tailored messaging for every prospect |
+| **Multichannel Engagement** | Email, phone, and LinkedIn outreach |
 
-### Alex - Audience Accounts Director
-Your account discovery specialist who identifies and prioritizes target companies.
-- Ideal customer profile matching
-- Account scoring and prioritization
-- Lookalike account discovery
+**Results Teams See with Alex:**
+- 5x more qualified meetings booked
+- 90% reduction in research time per account
+- Consistent follow-up on every lead
+- After-hours engagement captures global opportunities
 
-[Learn more about Alex →](/ai-agents/alex-accounts)
+---
 
-### Jordan - Audience Contacts Director
-Your contact discovery specialist who finds the right people at target accounts.
-- Contact identification
-- Buying committee mapping
-- Contact enrichment
+## Getting Started with AI Agents
 
-[Learn more about Jordan →](/ai-agents/jordan-contacts)
+Getting value from AI Agents takes less than 60 seconds:
 
-### James - Bidding Strategy Expert
-Your advertising optimization specialist who maximizes ROI on paid campaigns.
-- Bid optimization recommendations
-- Budget allocation strategies
-- Performance forecasting
+### Step 1: Open AI Agents
 
-[Learn more about James →](/ai-agents/james-bidding)
+1. Log in to [app.abmatic.ai](https://app.abmatic.ai)
+2. Click **AI Agents** in the left sidebar
 
-## How to Use AI Agents
+### Step 2: Start Talking
 
-### Starting a Conversation
+Just type what you need—like messaging a colleague:
+- "Create a campaign targeting healthcare companies"
+- "Research Acme Corp for me"
+- "What accounts visited our pricing page this week?"
 
-1. Navigate to **AI Agents** from the left sidebar
-2. Select the agent that matches your task
-3. Type your question or request in natural language
-4. The agent will respond with insights, recommendations, or actions
+### Step 3: Watch the Magic
 
-### Example Conversations
+The agent handles the complex work:
+- Creates campaigns with proper targeting
+- Gathers company intelligence instantly
+- Surfaces insights from your data
 
-**With Clara (Executive):**
-> "What should be my top ABM priorities for this quarter based on our current pipeline?"
+---
 
-**With Alex (Accounts):**
-> "Find me 50 companies similar to our best customers in the healthcare industry"
+## Powerful Prompts to Try
 
-**With Marcus (Campaigns):**
-> "Create a website personalization campaign for our enterprise segment"
+AI Agents understand natural language. Just ask for what you need:
 
-### Voice Commands
+### Clara (ABM Agent) - Campaign & Personalization
 
-All agents support voice interaction:
-1. Click the **microphone icon** in the chat
-2. Speak your question
-3. The agent will respond with text and audio
+| Try This Prompt | What Happens |
+|-----------------|--------------|
+| "Create a campaign for enterprise tech companies" | Clara builds a complete campaign with targeting |
+| "Personalize the homepage for healthcare visitors" | Sets up industry-specific website content |
+| "What's my best performing campaign?" | Instant performance analysis |
+| "Show engagement for my target accounts" | Displays account-level engagement data |
 
-[Learn more about Voice Commands →](/ai-agents/voice-commands)
+### Alex (SDR Agent) - Research & Outreach
 
-## Conversation History
+| Try This Prompt | What Happens |
+|-----------------|--------------|
+| "Research Acme Corp for my next call" | Deep company intel in seconds |
+| "Draft an email to their VP of Marketing" | Personalized outreach ready to send |
+| "Who should I prioritize today?" | Ranked list of hot leads |
+| "Find companies matching our ICP" | Qualified prospect list |
 
-All your agent conversations are saved and accessible:
-- View past conversations in the agent sidebar
-- Resume previous conversations
-- Reference insights from earlier discussions
+:::tip Build on Your Conversations
+Agents remember context. Chain requests for powerful workflows:
+1. "Show me high-engagement accounts"
+2. "Which are in healthcare?"
+3. "Create a campaign targeting those accounts"
+:::
 
-## Best Practices
+---
 
-### Be Specific
-The more context you provide, the better the agent can help:
+## Voice Mode
 
-❌ "Help me with campaigns"
-✅ "Help me create a LinkedIn campaign targeting CMOs at fintech companies with 200-500 employees"
+**Talk to your AI agents like a colleague.** Click the microphone icon and speak naturally—perfect for when you're multitasking or want to brainstorm ideas.
 
-### Use the Right Agent
-Match your task to the specialist:
-- Strategy questions → Clara
-- Account research → Alex
-- Campaign execution → Marcus
-- Content optimization → Joey
+| Action | How |
+|--------|-----|
+| Start voice | Click microphone icon |
+| Stop recording | Click again or pause speaking |
+| Switch to text | Click keyboard icon |
 
-### Iterate and Refine
-Agents support multi-turn conversations. Ask follow-up questions to refine recommendations.
+---
+
+## Agent Settings
+
+**The more context you provide, the smarter your agents become.** Configure agents with your company information for responses that sound like they come from your team.
+
+Go to **Settings** → **AI Agents** to configure:
+
+| Setting | Why It Matters |
+|---------|----------------|
+| **Company Context** | Agents reference your products, industry, and positioning |
+| **Pricing Information** | Accurate pricing in outreach and conversations |
+| **Product Details** | Feature-specific responses and recommendations |
+| **Differentiators** | Competitive positioning in prospect communications |
+
+**Example Configuration:**
+```
+Company: Abmatic AI
+Product: Account-based marketing platform
+Primary Customers: B2B SaaS companies, 50-500 employees
+Key Features: Website personalization, visitor identification, AI agents
+Value Prop: Turn anonymous visitors into qualified pipeline
+```
+
+---
+
+## Real-World Workflows
+
+### Launch a Personalized Campaign (5 minutes)
+
+**You:** "Create a campaign for enterprise technology accounts"
+**Clara:** "What pages should I personalize?"
+**You:** "Homepage and pricing page"
+**Clara:** "What personalization do you want?"
+**You:** "Show their company name in the headline and industry-relevant case studies"
+**Clara:** *Creates the campaign with all targeting and personalization rules*
+
+### Research → Outreach (2 minutes)
+
+**You:** "Research TechCorp for my call tomorrow"
+**Alex:** *Provides company overview, recent news, key contacts, tech stack*
+**You:** "Draft an email to their VP of Marketing"
+**Alex:** *Creates personalized email referencing their specific situation*
+
+### Instant Performance Review
+
+**You:** "How are my campaigns performing?"
+**Clara:** *Shows summary with metrics*
+**You:** "Which has the best conversion rate?"
+**Clara:** *Identifies top performer and explains why*
+**You:** "What should I improve on the others?"
+**Clara:** *Provides specific optimization recommendations*
+
+---
+
+## Plan Requirements
+
+AI Agents are available on paid plans:
+
+| Plan | What You Get |
+|------|--------------|
+| **Starter** | Limited agent access |
+| **Growth** | Full access to Clara and Alex |
+| **Enterprise** | Full access + custom configuration |
+
+Contact support@abmatic.ai to upgrade.
+
+---
+
+## Tips for Best Results
+
+| Instead of... | Try... |
+|---------------|--------|
+| "Create a campaign" | "Create an inbound campaign for healthcare accounts targeting our pricing page" |
+| "Show me data" | "Show conversion rates for all campaigns in the last 30 days" |
+| "Help with outreach" | "Draft a follow-up email for accounts who visited pricing but didn't convert" |
+
+**Pro tips:**
+- Mention specific account or campaign names
+- Include timeframes for analytics requests
+- Build on previous messages—agents remember context
+
+---
+
+## Troubleshooting
+
+| Issue | Quick Fix |
+|-------|-----------|
+| Slow response | Large requests take a few seconds—this is normal |
+| Generic responses | Add more context in **Settings** → **AI Agents** |
+| Can't access features | Verify your plan includes AI Agents |
+
+---
 
 ## Next Steps
 
-- [Explore Clara's Strategic Capabilities](/ai-agents/clara-executive)
-- [Discover Accounts with Alex](/ai-agents/alex-accounts)
-- [Optimize Campaigns with Marcus](/ai-agents/marcus-campaigns)
+- **[Configure AI Agents](/ai-agents/ai-agents-configuration)** - Customize agent behavior
+- **[Alex - AI SDR Agent](/ai-agents/sdr-agent)** - Deep dive on prospecting
+- **[Clara - AI ABM Agent](/ai-agents/abm-agent)** - Deep dive on campaigns
