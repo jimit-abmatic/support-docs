@@ -71,10 +71,6 @@ If you can't remember your password:
 
 **First-time users:** After logging in for the first time, you'll see the Welcome page where you need to enter your company details.
 
-![Welcome Page](/img/screenshots/welcome-page.png)
-
-*Enter your company website and name to get started.*
-
 1. Enter your **Website** (e.g., yourcompany.com)
 2. Enter your **Company Name**
 3. Click **Submit**

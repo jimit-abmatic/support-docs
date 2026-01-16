@@ -26,7 +26,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
 {
   "tasks": [
     {"id": 1, "docPath": "docs/intro.md", "appPath": "/home-dashboard", "passes": true},
-    {"id": 2, "docPath": "docs/getting-started/quick-start.md", "appPath": "/home-dashboard", "passes": false},
+    {"id": 2, "docPath": "docs/getting-started/quick-start.md", "appPath": "/home-dashboard", "passes": true},
     {"id": 3, "docPath": "docs/getting-started/install-script.md", "appPath": "/installation", "passes": false},
     {"id": 4, "docPath": "docs/getting-started/first-campaign.md", "appPath": "/campaigns", "passes": false},
     {"id": 5, "docPath": "docs/getting-started/use-cases.md", "appPath": "/home-dashboard", "passes": false},
