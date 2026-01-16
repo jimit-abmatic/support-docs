@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 46 / 78
-- **Current:** Task 67
+- **Completed:** 47 / 78
+- **Current:** Task 68
 
 ---
 
@@ -602,3 +602,15 @@
 1. integrations-hub.png - Settings > Integrations page showing CRM section (Salesforce, HubSpot, ActiveCampaign, Pipedrive) and Communications section (Gmail, Slack). Outreach is in the Automation Tools section which requires scrolling.
 
 **Fixed:** Updated alt text to "Settings > Integrations page with CRM and Communications sections" and improved caption to "*Navigate to Settings > Integrations, then scroll down past CRM and Communications to find the Automation Tools section with Outreach*" to provide clearer navigation instructions.
+
+### Task 67: docs/integrations/crm/activecampaign.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (1 screenshot - appropriate for comprehensive 348-line integration guide with extensive tables for object mapping, field mappings, sync settings, and troubleshooting)
+- INCORRECT: ✅ Pass (screenshot fully loaded with all UI elements visible - CRM cards with logos, Active/Inactive badges, SETTINGS buttons, AUTHORIZE buttons, Communications section)
+- INCOMPLETE: ✅ Pass (shows actual Settings > Integrations page, not login page)
+- NON-CONTEXTUAL: ✅ Pass (screenshot shows ActiveCampaign card with "Inactive" status and "AUTHORIZE" button, matching Step 2 instructions "Click **Authorize**")
+
+**Screenshots verified:**
+1. integrations-hub.png - Settings > Integrations page showing CRM section with ActiveCampaign card displaying logo, "Inactive" badge, SETTINGS button, and AUTHORIZE button. Also shows Salesforce (Active), HubSpot (Active), Pipedrive (Inactive), and Communications section (Gmail, Slack)
+
+**Fixed:** No issues found - all checks passed.
