@@ -35,7 +35,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 10, "docPath": "docs/campaigns/overview.md", "appPath": "/campaigns", "passes": true},
     {"id": 11, "docPath": "docs/campaigns/website-personalization.md", "appPath": "/campaigns", "passes": true},
     {"id": 12, "docPath": "docs/campaigns/page-editor.md", "appPath": "/campaigns", "passes": true},
-    {"id": 13, "docPath": "docs/campaigns/ab-testing.md", "appPath": "/campaigns", "passes": false},
+    {"id": 13, "docPath": "docs/campaigns/ab-testing.md", "appPath": "/campaigns", "passes": true},
     {"id": 14, "docPath": "docs/campaigns/dynamic-content.md", "appPath": "/campaigns", "passes": false},
     {"id": 15, "docPath": "docs/campaigns/linkedin-ads.md", "appPath": "/campaigns", "passes": false},
     {"id": 16, "docPath": "docs/campaigns/google-ads.md", "appPath": "/campaigns", "passes": false},
