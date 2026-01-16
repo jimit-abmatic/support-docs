@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 26 / 78
-- **Current:** Task 36
+- **Completed:** 27 / 78
+- **Current:** Task 37
 
 ---
 
@@ -340,5 +340,18 @@
 1. accounts-list.png - Accounts Collections page showing COLLECTIONS/ALL ACCOUNTS tabs, summary cards with CSV count (35 CSV), collection table with Dynamic/Auto Generated/CSV types
 2. account-create-modal.png - "Target Accounts" modal showing Import section (UPLOAD FROM CSV, IMPORT FROM CRM) and Create section (STATIC COLLECTION, DYNAMIC COLLECTION)
 3. contact-create-modal.png - "Target Contacts" modal showing Import section (UPLOAD FROM CSV, IMPORT FROM CRM) and Create section (STATIC COLLECTION, DYNAMIC COLLECTION) - matches the contacts import workflow
+
+**Fixed:** No issues found - all checks passed.
+
+### Task 36: docs/audiences/crm-sync.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (2 screenshots - appropriate for CRM sync documentation)
+- INCORRECT: ✅ Pass (all screenshots fully loaded with all UI elements)
+- INCOMPLETE: ✅ Pass (all show actual app content, not login pages)
+- NON-CONTEXTUAL: ✅ Pass (all screenshots match their alt text and document context)
+
+**Screenshots verified:**
+1. integrations-hub.png - Settings > Integrations page showing CRM section (Salesforce, HubSpot, ActiveCampaign, Pipedrive) with Active/Inactive status, SETTINGS and AUTHORIZE buttons - matches "Supported CRMs" section
+2. account-create-modal.png - "Target Accounts" modal showing Import section (UPLOAD FROM CSV, IMPORT FROM CRM) and Create section (STATIC COLLECTION, DYNAMIC COLLECTION) - matches Step 2 "Import from CRM" instructions
 
 **Fixed:** No issues found - all checks passed.
