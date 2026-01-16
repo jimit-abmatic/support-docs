@@ -42,8 +42,8 @@ Before connecting Google Analytics 4, ensure you have:
 2. Scroll down to find **Google Analytics 4** in the Conversion Tracking section
 3. Click **Authorize**
 
-![Integrations page](/img/screenshots/integrations-hub.png)
-*The Integrations page shows all available connections. Google Analytics 4 is in the Conversion Tracking section.*
+![Settings > Integrations page](/img/screenshots/integrations-hub.png)
+*Navigate to Settings > Integrations and scroll down past CRM and Communications to find the Conversion Tracking section with Google Analytics 4.*
 
 ### Step 2: Authenticate with Google
 

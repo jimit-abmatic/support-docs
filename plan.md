@@ -74,7 +74,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 67, "docPath": "docs/integrations/crm/activecampaign.md", "appPath": "/integrations", "passes": true},
     {"id": 68, "docPath": "docs/integrations/crm/sync-behavior.md", "appPath": "/integrations", "passes": true},
     {"id": 69, "docPath": "docs/integrations/slack.md", "appPath": "/integrations", "passes": true},
-    {"id": 70, "docPath": "docs/integrations/google-analytics.md", "appPath": "/integrations", "passes": false},
+    {"id": 70, "docPath": "docs/integrations/google-analytics.md", "appPath": "/integrations", "passes": true},
     {"id": 71, "docPath": "docs/integrations/segment.md", "appPath": "/integrations", "passes": false},
     {"id": 72, "docPath": "docs/integrations/advertising/linkedin-ads.md", "appPath": "/integrations", "passes": false},
     {"id": 73, "docPath": "docs/integrations/advertising/google-ads.md", "appPath": "/integrations", "passes": false},
