@@ -81,7 +81,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 80, "docPath": "docs/analytics/overview.md", "appPath": "/analytics/reports", "passes": true},
     {"id": 81, "docPath": "docs/analytics/reports.md", "appPath": "/analytics/reports", "passes": true},
     {"id": 82, "docPath": "docs/analytics/dashboards.md", "appPath": "/analytics/dashboards", "passes": true},
-    {"id": 83, "docPath": "docs/analytics/campaign-performance.md", "appPath": "/analytics/reports", "passes": false},
+    {"id": 83, "docPath": "docs/analytics/campaign-performance.md", "appPath": "/analytics/reports", "passes": true},
     {"id": 84, "docPath": "docs/analytics/audience-insights.md", "appPath": "/analytics/reports", "passes": false},
     {"id": 90, "docPath": "docs/settings/account.md", "appPath": "/settings/account-info", "passes": false},
     {"id": 91, "docPath": "docs/settings/users.md", "appPath": "/settings/users", "passes": false},
