@@ -7,175 +7,159 @@ sidebar_position: 2
 
 # Slack Integration
 
-Get real-time notifications about website visitors, contacts, and engagement directly in your Slack workspace. This guide covers setup, channel configuration, filters, message customization, and best practices.
+Your sales team can't respond to opportunities they don't know about. The Slack integration delivers real-time intelligence about website visitors, identified contacts, and engagement signals directly where your team already works.
 
-## Overview
+## Why Connect Slack?
 
-The Slack integration allows you to:
-- Receive instant notifications when target accounts visit your website
-- Get alerts when identified contacts engage with your content
-- Filter notifications by company attributes, behavior, and campaigns
-- Customize message formats to show the information you need
-- Route different notification types to specific channels
-- Enable individual team members to receive personalized DMs
+| Without Slack Integration | With Slack Integration |
+|---------------------------|------------------------|
+| Check dashboard manually for visitor activity | Get instant alerts when target accounts visit |
+| Miss high-intent visitors during busy periods | Never miss a hot prospect browsing pricing |
+| Delayed response to engaged contacts | Reach out while interest is peak |
+| No visibility into which accounts are active | Real-time awareness across the entire team |
+| Disconnected from sales workflow | Actionable insights in your daily workflow |
+
+## What You Can Do
+
+| Capability | Business Impact |
+|------------|-----------------|
+| **Real-time visitor alerts** | Respond to prospects within minutes, not hours |
+| **Smart filtering** | Only get notified about accounts that matter |
+| **Channel routing** | Send enterprise alerts to sales, form fills to SDRs |
+| **Personal DMs** | Sales reps get alerts for their assigned accounts |
+| **Custom message formats** | See exactly the info you need at a glance |
+| **Engagement summaries** | Leadership gets daily digests without noise |
 
 ![Slack Settings](/img/screenshots/settings-slack.png)
 
-## Setting Up the Integration
+*The Slack settings page showing channel list, filter configuration, and notification settings tabs.*
+
+## Getting Started
+
+### Prerequisites
+
+Before connecting:
+- Slack workspace admin or the ability to approve apps
+- Channels created for your notification routing strategy
+- Understanding of which accounts/visitors are highest priority
 
 ### Step 1: Connect to Slack
 
-1. Navigate to **Settings > Slack** in Abmatic AI
-2. Click **Connect to Slack**
-3. You'll be redirected to Slack's authorization page
-4. Select the workspace you want to connect
-5. Review the permissions and click **Allow**
+1. Navigate to **Settings > Integrations** in Abmatic AI
+2. Find **Slack** under Communications
+3. Click **Connect**
+4. Select your workspace in the Slack authorization page
+5. Review permissions and click **Allow**
 6. You'll be redirected back to Abmatic AI
 
-### Step 2: Initial Configuration
+### Step 2: Initial Setup
 
 After connecting, Abmatic AI will:
 - Sync your Slack channels and users
 - Create default notification settings
-- Set up the bot in your workspace
+- Add the Abmatic bot to your workspace
 
 The integration is now active and ready to configure.
 
-## Channel Management
+## Understanding the Interface
 
-### Viewing Channels
+The Slack settings page has two main areas:
 
-The Slack settings page displays all channels in your workspace. You can:
-- See which channels the Abmatic bot has joined
-- View member counts for each channel
-- Check if filters are configured (indicated by a filter icon)
-- Search for specific channels
+### Left Sidebar
 
-### Joining Channels
+| Section | What It Shows |
+|---------|---------------|
+| **Channels** | All workspace channels with filter indicators |
+| **+ CREATE CHANNEL** | Create new channels directly from Abmatic |
+| **Active Members** | Team members who can receive DM notifications |
 
-For the bot to send notifications to a channel:
+### Channel Detail Panel
 
-1. Find the channel in the list
-2. Click **Join Channel**
-3. The bot will be added to the channel
-4. Configure filters and settings for that channel
+When you select a channel, you'll see tabs for:
 
-### Creating Channels
+| Tab | Purpose |
+|-----|---------|
+| **Filters** | Configure which visitors trigger notifications |
+| **Notification Settings** | Toggle notification types on/off |
+| **Messages** | View notification history for this channel |
+| **Members** | See who's in the channel |
+| **Message Customization** | Choose what info appears in notifications |
 
-You can create new Slack channels directly from Abmatic AI:
+## Configuring Channel Filters
 
-1. Click **Create Channel**
-2. Enter a channel name
-3. Choose public or private
-4. Add a description (optional)
-5. Click **Create**
+Filters determine which visitors trigger notifications. This is where the magic happens—the difference between useful alerts and noise.
 
-The bot is automatically added to channels you create.
-
-## Setting Up Filters
-
-Filters determine which visitors and accounts trigger notifications in each channel. This allows you to route relevant notifications to the right teams.
-
-### Accessing Channel Filters
+### Setting Up Filters
 
 1. Click on a channel name
 2. Select the **Filters** tab
-3. Configure filter rules
+3. Add filter rules using Selector + Operator + Value
+4. Click **Save**
 
-### Filter Categories
+### Available Filter Categories
 
 #### Company Firmographics
 
 Target by company attributes:
 
-| Filter | Description | Conditions |
-|--------|-------------|------------|
-| **Company Name** | Organization name | is, is not, contains, begins with |
-| **Domain** | Company website | is, is not, contains |
-| **Employee Count** | Company size ranges | is, is not |
-| **Annual Revenue** | Revenue ranges | is, is not |
-| **Industry** | Business sector | is any of, is not any of |
-| **Company Type** | Public, Private, etc. | is any of, is not any of |
-
-**Example**: Notify #enterprise-team for large companies
-- Employee Count `is any of` [1K-5K, 5K-10K, 10K+]
-- AND Industry `is any of` [Information Technology, Financial Services]
+| Filter | Best For | Example |
+|--------|----------|---------|
+| **Company Name** | Named accounts | Target specific companies |
+| **Domain** | Known company websites | Filter by domain list |
+| **Employee Count** | Size-based routing | Enterprise: 1K+ employees |
+| **Annual Revenue** | Value-based prioritization | $50M+ revenue accounts |
+| **Industry** | Vertical teams | Healthcare, Finance, Tech |
+| **Company Type** | Segment by structure | Public companies only |
 
 #### Geographic Location
 
-Filter by visitor location:
+Route to regional teams:
 
-| Filter | Description | Conditions |
-|--------|-------------|------------|
-| **Country** | Visitor's country | is any of, is not any of |
-| **Region** | State/Province | is, contains |
-| **City** | Visitor's city | is, contains |
-| **Time Zone** | UTC offset | is any of |
-
-**Example**: Route to regional teams
-- Country `is` United States
-- AND Region `is any of` [California, Washington, Oregon]
+| Filter | Use Case |
+|--------|----------|
+| **Country** | Route US visitors to US sales |
+| **Region** | State-based territory assignment |
+| **City** | Local account management |
+| **Time Zone** | Route by working hours |
 
 #### Behavioral Signals
 
 Filter by engagement:
 
-| Filter | Description | Conditions |
-|--------|-------------|------------|
-| **Total Page Views** | Pages viewed | is above, is below, is between |
-| **Total Sessions** | Visit sessions | is above, is below |
-| **Visited Pages** | Specific URLs | contains, begins with |
-| **Referrer** | Traffic source | contains, is |
-
-**Example**: High-intent visitors only
-- Total Page Views `is above` 3
-- AND Visited Pages `contains` /pricing
+| Filter | Why It Matters |
+|--------|----------------|
+| **Total Page Views** | Higher views = higher interest |
+| **Total Sessions** | Multiple visits = active evaluation |
+| **Visited Pages** | Pricing/demo pages = high intent |
+| **Referrer** | Track traffic source quality |
 
 #### UTM Parameters
 
 Filter by campaign attribution:
 
-| Filter | Description |
-|--------|-------------|
-| **utm_source** | Traffic source (google, linkedin) |
-| **utm_medium** | Channel (cpc, email, social) |
-| **utm_campaign** | Campaign name |
-| **utm_term** | Paid search keywords |
-| **utm_content** | Ad variation |
-
-**Example**: LinkedIn campaign notifications
-- utm_source `is` linkedin
-- utm_medium `is` cpc
+| Parameter | Use Case |
+|-----------|----------|
+| **utm_source** | Alerts for specific traffic sources |
+| **utm_medium** | Paid vs organic notifications |
+| **utm_campaign** | Specific campaign performance |
+| **utm_content** | Ad variation tracking |
 
 #### Contact Attributes
 
 Filter by identified contact properties:
 
-| Filter | Description | Conditions |
-|--------|-------------|------------|
-| **Job Title** | Contact's title | contains, is |
-| **Job Title Role** | Standardized role | is any of |
-| **Job Title Level** | Seniority level | is any of |
-| **Company Name** | Contact's company | is, contains |
+| Filter | Why It Matters |
+|--------|----------------|
+| **Job Title** | Route by role (e.g., "CTO") |
+| **Job Title Level** | C-Level, VP, Director alerts |
+| **Job Title Role** | Engineering, Marketing, Sales |
+| **Company Name** | Contact's employer |
 
-**Example**: Decision maker alerts
-- Job Title Level `is any of` [C-Level, VP Level, Director Level]
+### Combining Filters with AND/OR Logic
 
-#### Campaigns and Segments
+Create precise targeting with filter groups:
 
-| Filter | Description |
-|--------|-------------|
-| **Campaigns** | Active campaign membership |
-| **Associated AE** | Assigned account executive |
-
-### Combining Filters
-
-Use AND/OR logic to create precise targeting:
-
-- **AND** - All conditions must match (narrower)
-- **OR** - Any condition can match (broader)
-
-**Example**: Enterprise + High Intent
+**Example: Enterprise + High Intent**
 ```
 (Employee Count is any of [1K-5K, 5K-10K, 10K+])
 AND
@@ -186,265 +170,211 @@ AND
 )
 ```
 
-### Saving Filters
+This alerts you to large companies looking at key decision pages.
 
-1. Configure your filter rules
-2. Click **Save Filters**
-3. The channel will show a filter indicator
+## Notification Types
 
-Filters are applied in real-time to all incoming notifications.
+Control what triggers alerts in each channel:
 
-## Notification Settings
-
-Control which types of notifications each channel receives.
-
-### Notification Types
-
-| Type | Description |
-|------|-------------|
-| **Account Visitors** | When a target account visits your site |
-| **Contact Visitors** | When an identified contact visits |
-| **Account Engagement** | Significant account engagement activities |
-| **Contact Engagement** | Significant contact engagement |
-| **Form Submissions** | When visitors submit tracked forms |
-| **Summary/Digest** | Periodic summary notifications |
+| Type | When It Fires | Best Channel For |
+|------|---------------|------------------|
+| **Account Visitors** | Target account visits your site | Sales team channels |
+| **Contact Visitors** | Identified contact browses | Account owner DMs |
+| **Account Engagement** | Significant account activity | Leadership summaries |
+| **Contact Engagement** | Individual engagement spikes | SDR follow-up |
+| **Form Submissions** | Visitor submits a tracked form | Inbound lead channel |
+| **Summary/Digest** | Periodic activity roundup | Leadership, marketing |
 
 ### Configuring Notifications
 
 1. Click on a channel
-2. Select the **Notification Settings** tab
+2. Select **Notification Settings** tab
 3. Toggle each notification type on/off
 4. Use **All Notifications** as a master toggle
 
-**Example Setup for Sales Team**:
+### Example Channel Setups
+
+**#sales-hot-leads** (Sales Team):
 - Account Visitors: ON
 - Contact Visitors: ON
 - Form Submissions: ON
-- Summary: OFF (prefer real-time)
+- Summary: OFF
 
-**Example Setup for Leadership**:
+**#leadership-abm** (Leadership):
 - All Notifications: OFF
 - Summary: ON (daily digest only)
 
-### Account-Level Settings
-
-Global settings that apply across all channels:
-
-1. Navigate to **Settings > Slack**
-2. Find **Global Settings**
-3. Configure:
-   - **Disable form notifications**: Turn off form submission alerts globally
-   - **Smart account notifications**: Suppress account notification when contact is revealed in same event (reduces noise)
+**#sdrs-inbound** (SDRs):
+- Account Visitors: OFF
+- Contact Visitors: OFF
+- Form Submissions: ON
+- Summary: OFF
 
 ## Message Customization
 
-Customize what information appears in Slack notifications.
-
-### Accessing Customization
-
-1. Click on a channel
-2. Select the **Message Customization** tab
-3. Configure properties to display
+Customize what information appears in notifications to match how each team works.
 
 ### Contact Properties
 
-Choose which contact details appear in notifications:
-
-| Property | Description |
-|----------|-------------|
-| **Full Name** | Contact's full name |
-| **Job Title** | Position/role |
-| **Company Name** | Current employer |
-| **Company Industry** | Industry sector |
-| **Location** | Geographic location |
-| **LinkedIn URL** | Profile link |
-| **Work Email** | Business email |
-| **Profile Image** | Photo/avatar |
-| **Campaigns** | Campaign membership (text or list format) |
-| **Visited Page** | Current page title |
-| **UTM Parameters** | Campaign attribution |
-| **Confidence** | Identification confidence score |
-| **Associated AE** | Assigned sales rep |
-| **Abmatic Link** | Direct link to record in Abmatic |
+| Property | When to Include |
+|----------|-----------------|
+| **Full Name** | Always—it's who you're reaching out to |
+| **Job Title** | Always—determines conversation approach |
+| **Company Name** | Always—account context |
+| **LinkedIn URL** | For quick research before outreach |
+| **Work Email** | For immediate follow-up |
+| **Visited Page** | Conversation starter context |
+| **Campaigns** | See which campaigns reached them |
+| **Confidence** | Trust the identification |
+| **Abmatic Link** | Quick access to full profile |
 
 ### Account Properties
 
-Choose which company details appear:
+| Property | When to Include |
+|----------|-----------------|
+| **Company Name** | Always—identifies the account |
+| **Website** | Quick access to their site |
+| **Industry** | Conversation context |
+| **Company Size** | Prioritization signal |
+| **Revenue** | Value-based routing |
+| **LinkedIn URL** | Company research |
+| **Technologies** | Technical fit assessment |
+| **Visited Pages** | Intent signals |
+| **Abmatic Link** | Full account details |
 
-| Property | Description |
-|----------|-------------|
-| **Company Name** | Organization name |
-| **Website** | Company URL |
-| **Industry** | Business sector |
-| **Location** | Headquarters location |
-| **Company Size** | Employee count range |
-| **Revenue** | Estimated annual revenue |
-| **LinkedIn URL** | Company page link |
-| **Company Logo** | Organization logo |
-| **Technologies** | Tech stack information |
-| **Campaigns** | Campaign membership |
-| **Visited Pages** | Browsing history |
-| **UTM Parameters** | Attribution data |
-| **Confidence** | Match confidence |
-| **Associated AE** | Assigned rep |
-| **Abmatic Link** | Quick access to Abmatic |
+### Setting Team-Specific Defaults
 
-### Setting Defaults
+**Sales Team Configuration:**
+- Name, Title, Company, LinkedIn, Visited Page, Abmatic Link
+- Enables quick outreach with full context
 
-Set account-wide defaults that apply to all channels:
+**Marketing Team Configuration:**
+- Company, Industry, Size, Campaigns, UTM Parameters
+- Focus on attribution and segmentation insights
 
-1. Go to **Settings > Slack**
-2. Click **Default Message Customization**
-3. Select properties for contacts and accounts
-4. Click **Save**
-
-Individual channels can override these defaults.
-
-### Customization Tips
-
-**For Sales Teams**:
-- Include: Name, Title, Company, LinkedIn, Visited Page, Abmatic Link
-- Enables quick outreach with context
-
-**For Marketing Teams**:
-- Include: Company, Industry, Size, Campaigns, UTM Parameters
-- Focus on attribution and segmentation
-
-**For Leadership**:
-- Include: Company, Size, Revenue, Visited Page
+**Leadership Configuration:**
+- Company, Size, Revenue, Visited Page
 - High-level engagement visibility
 
-## Previewing Messages
+## User-Level DM Notifications
 
-View historical notifications to verify your setup.
+Individual team members can receive personalized notifications via direct messages.
 
-### Channel Message History
-
-1. Click on a channel
-2. Select the **Messages** tab
-3. Browse notification history
-
-Messages are grouped by date:
-- Today
-- Yesterday
-- Specific dates
-
-You can scroll to load older messages.
-
-### User Message History
-
-For direct message notifications:
-
-1. Switch to the **Users** tab
-2. Click on a user
-3. Select **Messages**
-4. View their DM notification history
-
-## User-Level Settings
-
-Configure notifications for individual team members via direct messages.
-
-### Enabling User DMs
+### Setting Up Personal Alerts
 
 1. Go to **Settings > Slack**
-2. Switch to the **Users** tab
-3. Find the team member
-4. Configure their settings
+2. Look at the **Active Members** section in the left sidebar
+3. Click on a team member's name
+4. Configure their personal filters
 
-### User Configuration Options
+### Use Case: Sales Rep Territory Alerts
 
-Each user can have:
+A sales rep wants notifications only for their assigned accounts:
+- Filter: Associated AE `is` [rep name]
+- Result: Only their accounts trigger DMs
 
-**Filters**: Personal filter criteria
-- Useful for sales reps who want alerts for their accounts only
-- Example: Associated AE `is` [their name]
+### Use Case: Executive Alerts
 
-**Message Customization**: Personalized message format
-- Different from channel notifications
-- Tailored to individual preferences
+An exec wants alerts only for enterprise target accounts:
+- Filter: Employee Count `is any of` [5K-10K, 10K+]
+- Filter: Account List `is any of` [Target Accounts Q1]
+- Result: Only high-value targets trigger DMs
 
-**Channels**: View which channels the user belongs to
+## Channel Management
 
-### Syncing Users
+### Creating Channels from Abmatic
 
-To update the user list from Slack:
+You can create new Slack channels directly:
 
-1. Click **Sync Users**
+1. Click **+ CREATE CHANNEL** in the sidebar
+2. Enter a channel name (e.g., #abmatic-enterprise)
+3. Choose public or private
+4. Add description
+5. Click **Create**
+
+The Abmatic bot is automatically added to channels you create.
+
+### Joining Existing Channels
+
+For the bot to post to a channel:
+
+1. Find the channel in the list
+2. Click **Join Channel**
+3. Configure filters and notification settings
+
+### Syncing Channels
+
+If channels are missing after workspace changes:
+
+1. Click **Sync Channels**
 2. Wait for the sync to complete
-3. New team members will appear
+3. New channels will appear in the list
 
-## Channel Members
+## Global Settings
 
-View and manage who receives notifications.
+Account-wide settings that apply to all channels:
 
-### Viewing Members
-
-1. Click on a channel
-2. Select the **Members** tab
-3. See all channel members
-
-### Member Information
-
-For each member you can see:
-- Display name
-- Email address
-- Profile avatar
+| Setting | What It Does | Recommendation |
+|---------|--------------|----------------|
+| **Disable form notifications** | Turn off form alerts globally | Leave ON unless noisy |
+| **Smart account notifications** | Suppress account alert when contact is revealed in same event | Turn ON to reduce duplicates |
 
 ## Best Practices
 
-### Channel Organization
+### Channel Organization Strategy
 
-Create purpose-specific channels:
-
-| Channel | Purpose | Filter Example |
-|---------|---------|----------------|
+| Channel Name | Purpose | Key Filters |
+|--------------|---------|-------------|
 | #abmatic-enterprise | Large accounts | Employee Count: 1K+ |
-| #abmatic-inbound | Form submissions | Notification: Form only |
-| #abmatic-west-coast | Regional team | Region: CA, WA, OR |
-| #abmatic-target-accounts | Key accounts | Account list membership |
-| #abmatic-high-intent | Engaged visitors | Page views > 5 |
+| #abmatic-target-accounts | Strategic accounts | Account list membership |
+| #abmatic-inbound | Form submissions | Notification: Forms only |
+| #abmatic-high-intent | Engaged visitors | Page views > 5, pricing pages |
+| #abmatic-[region] | Regional teams | Country/Region filters |
 
-### Reducing Noise
+### Reducing Notification Noise
 
-1. **Use filters aggressively** - Only notify for relevant visitors
-2. **Enable smart notifications** - Suppress duplicate account/contact alerts
-3. **Separate channels by purpose** - Don't mix all notifications
-4. **Use summaries for leadership** - Digest vs real-time
+| Strategy | How to Implement |
+|----------|------------------|
+| Use aggressive filters | Only notify for ICP-matching visitors |
+| Enable smart notifications | Suppress duplicate account/contact alerts |
+| Separate by purpose | Don't mix all alerts in one channel |
+| Use summaries for leadership | Digest instead of real-time for execs |
+| Filter by page views | Require 2+ page views minimum |
 
-### Maximizing Value
+### Maximizing Sales Response
 
-1. **Include Abmatic Link** - Quick access to full details
-2. **Show visited pages** - Provides conversation context
-3. **Display company size/revenue** - Helps prioritization
-4. **Add UTM parameters** - Track campaign effectiveness
-
-### Team Alignment
-
-1. **Sales**: Real-time contact + account alerts with quick-action links
-2. **Marketing**: Campaign attribution and engagement patterns
-3. **SDRs**: Form submissions and high-intent signals
-4. **Leadership**: Daily/weekly summaries
+| Practice | Why It Matters |
+|----------|----------------|
+| Include Abmatic Link | One click to full details |
+| Show visited pages | Know what they're interested in |
+| Display company size/revenue | Prioritize responses |
+| Add LinkedIn URL | Research before reaching out |
+| Enable contact DMs | Account owners get personal alerts |
 
 ## Troubleshooting
 
 ### Bot Not Posting
 
-1. Verify the bot has joined the channel
-2. Check that filters aren't too restrictive
-3. Ensure notification type is enabled
-4. Confirm the integration is active
+| Symptom | Check This |
+|---------|------------|
+| No messages appearing | Verify bot has joined the channel |
+| Missing some notifications | Check filter rules aren't too restrictive |
+| Only some types work | Ensure notification type is toggled ON |
+| Nothing works | Confirm integration is active |
 
 ### Missing Channels
 
-1. Click **Sync Channels** to refresh
-2. For private channels, invite the bot first
-3. Check channel archival status
+| Issue | Solution |
+|-------|----------|
+| New channels don't appear | Click **Sync Channels** to refresh |
+| Private channel not listed | Invite @abmatic-bot to the channel first |
+| Channel disappeared | Check if it was archived in Slack |
 
 ### Notification Delays
 
-- Notifications are sent in near real-time
-- Large volumes may cause slight delays
-- Check Slack workspace limits
+- Notifications are near real-time (within seconds)
+- High volumes during peak traffic may cause slight delays
+- Check Slack workspace rate limits if persistent
 
 ### Disconnection Issues
 
@@ -463,10 +393,14 @@ To remove the Slack integration:
 2. Click **Disconnect**
 3. Confirm the action
 
-This removes the bot from your workspace but preserves your filter configurations for future reconnection.
+Your filter configurations are preserved for future reconnection.
 
-## Related
+## Related Documentation
 
-- [Filters Guide](/audiences/filters)
-- [Integrations Overview](/integrations/overview)
-- [Notification Settings](/settings/notifications)
+| Topic | Link |
+|-------|------|
+| Building audience filters | [Filters Guide](/audiences/filters) |
+| All integrations | [Integrations Overview](/integrations/overview) |
+| Email notifications | [Notification Settings](/settings/notifications) |
+| Visitor identification | [Company Identification](/visitor-tracking/company-identification) |
+| Contact reveal | [Contact Reveal](/visitor-tracking/contact-reveal) |
