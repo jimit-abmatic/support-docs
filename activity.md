@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 25 / 78
-- **Current:** Task 35
+- **Completed:** 26 / 78
+- **Current:** Task 36
 
 ---
 
@@ -326,5 +326,19 @@
 
 **Screenshots verified:**
 1. wp-audience-tab.png - Campaigns > Inbound Enterprise > AUDIENCE tab showing Campaign rules with "Select Filters" section, Country filter (Is Any canada, united states, united kingdom, germany, france, spain, italy), Account List filter (Is None Abmatic AI Customer List), AND/OR grouped filters (Employee Count Is Above 501 OR Company Size Is Any 501-1000, 5001-10000, 1001-5000, 10001+), + RULE/+ GROUP buttons, and SAVE button
+
+**Fixed:** No issues found - all checks passed.
+
+### Task 35: docs/audiences/csv-import.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (3 screenshots - appropriate for CSV import tutorial)
+- INCORRECT: ✅ Pass (all screenshots fully loaded with all UI elements)
+- INCOMPLETE: ✅ Pass (all show actual app content, not login pages)
+- NON-CONTEXTUAL: ✅ Pass (all screenshots match their alt text and document context)
+
+**Screenshots verified:**
+1. accounts-list.png - Accounts Collections page showing COLLECTIONS/ALL ACCOUNTS tabs, summary cards with CSV count (35 CSV), collection table with Dynamic/Auto Generated/CSV types
+2. account-create-modal.png - "Target Accounts" modal showing Import section (UPLOAD FROM CSV, IMPORT FROM CRM) and Create section (STATIC COLLECTION, DYNAMIC COLLECTION)
+3. contact-create-modal.png - "Target Contacts" modal showing Import section (UPLOAD FROM CSV, IMPORT FROM CRM) and Create section (STATIC COLLECTION, DYNAMIC COLLECTION) - matches the contacts import workflow
 
 **Fixed:** No issues found - all checks passed.
