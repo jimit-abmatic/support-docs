@@ -40,7 +40,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 15, "docPath": "docs/campaigns/linkedin-ads.md", "appPath": "/campaigns", "passes": true},
     {"id": 16, "docPath": "docs/campaigns/google-ads.md", "appPath": "/campaigns", "passes": true},
     {"id": 17, "docPath": "docs/campaigns/crm-campaigns.md", "appPath": "/campaigns", "passes": true},
-    {"id": 18, "docPath": "docs/campaigns/email-campaigns.md", "appPath": "/campaigns", "passes": false},
+    {"id": 18, "docPath": "docs/campaigns/email-campaigns.md", "appPath": "/campaigns", "passes": true},
     {"id": 20, "docPath": "docs/ai-agents/overview.md", "appPath": "/ai-agents", "passes": false},
     {"id": 21, "docPath": "docs/ai-agents/sdr-agent.md", "appPath": "/ai-agents/alex", "passes": false},
     {"id": 22, "docPath": "docs/ai-agents/abm-agent.md", "appPath": "/ai-agents/clara", "passes": false},
