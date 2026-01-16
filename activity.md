@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 28 / 78
-- **Current:** Task 38
+- **Completed:** 29 / 78
+- **Current:** Task 40
 
 ---
 
@@ -368,3 +368,16 @@
 2. accounts-list.png - Accounts Collections page showing COLLECTIONS/ALL ACCOUNTS tabs, summary cards (260 All Collections, 2 Dynamic, 3 Salesforce, etc.), collection table - appropriate for "Creating LinkedIn Matched Audience from collection"
 
 **Fixed:** Replaced linkedin-integration.png reference with integrations-hub.png and updated alt text to "Settings > Integrations page" with caption explaining to scroll to Advertising section for LinkedIn Ads. The original screenshot showed CRM integrations only, not the LinkedIn Ads section.
+
+### Task 38: docs/audiences/google-customer-match.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (2 screenshots - appropriate for Google Customer Match documentation)
+- INCORRECT: ✅ Pass (all screenshots fully loaded with all UI elements)
+- INCOMPLETE: ✅ Pass (all show actual app content, not login pages)
+- NON-CONTEXTUAL: ❌ FIXED - integrations-hub.png shows CRM section, but doc mentions Google Ads in Advertising section
+
+**Screenshots verified:**
+1. integrations-hub.png - Settings > Integrations page showing CRM section (Salesforce, HubSpot, ActiveCampaign, Pipedrive) and Communications section (Gmail, Slack) - added caption to clarify users need to scroll to Advertising section for Google Ads
+2. contacts-list.png - Contacts Collections page showing 367 All Collections, COLLECTIONS/ALL CONTACTS tabs, summary cards with sources (HubSpot, Salesforce, CSV, Abmatic), collection table with Name, Total Contacts, Status, Last Updated At columns - appropriate for "Prepare Your Contact List" step
+
+**Fixed:** Updated alt text from "Integrations page" to "Settings > Integrations page" and added clarifying caption: "*Navigate to Settings > Integrations and scroll down to the Advertising section to find Google Ads*" since the screenshot shows only CRM and Communications sections, not the Advertising section where Google Ads is located.

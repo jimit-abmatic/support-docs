@@ -69,7 +69,8 @@ Go to **Google Ads > Tools > Audience Manager** to see if Customer Match is avai
 
 ### Step 1: Connect Google Ads
 
-![Integrations page](/img/screenshots/integrations-hub.png)
+![Settings > Integrations page](/img/screenshots/integrations-hub.png)
+*Navigate to Settings > Integrations and scroll down to the Advertising section to find Google Ads*
 
 1. Navigate to **Settings > Integrations**
 2. Scroll down to find **Google Ads** in the Advertising section
