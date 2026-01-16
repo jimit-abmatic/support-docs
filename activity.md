@@ -92,6 +92,77 @@ All in `./static/img/screenshots/workflows/` - show loading spinner only:
 - Task 5: Audit remaining docs
 ---
 
+### Session 2 - 2026-01-16
+**Task ID:** 2
+**Task Type:** audit
+**Description:** AUDIT: Check Getting Started docs for screenshot gaps
+
+**Actions Taken:**
+1. Read all 6 files in docs/getting-started/
+2. Counted screenshots per doc file
+3. Identified duplicate screenshots used for different contexts
+4. Analyzed steps without proper visual aids
+
+**Screenshot Counts by File:**
+
+| File | Unique Screenshots | Duplicates | Total Refs | Issues |
+|------|-------------------|------------|------------|--------|
+| quick-start.md | 11 | 12 | 23 | Many duplicates, contextual issues |
+| install-script.md | 2 | 0 | 2 | INSUFFICIENT - needs 5+ |
+| first-campaign.md | 9 | 1 | 10 | Good coverage, some missing editor shots |
+| use-cases.md | 4 | 0 | 4 | Uses verified screenshots - adequate |
+| playbooks.md | 6 | 0 | 6 | Uses verified screenshots - adequate |
+| glossary.md | 0 | 0 | 0 | Text-only by design - OK |
+
+**Critical Findings:**
+
+**INSUFFICIENT - install-script.md:**
+Only 2 screenshots for a multi-step installation guide. Missing:
+- GTM tag configuration screenshot
+- WordPress plugin setup screenshot
+- Browser DevTools network verification screenshot
+- Verification success vs. inactive status comparison
+
+**CONTEXTUAL ISSUES - quick-start.md:**
+Heavy reuse of same screenshots for different contexts:
+- `integrations-hub.png` used 5 times for Salesforce, HubSpot, and verification
+- `installation-script.png` used 3 times for different steps
+- `accounts-list.png` used 3 times for audience and targeting steps
+- `campaigns-list.png` used for both list view and editor context
+
+**MISSING SCREENSHOTS Identified:**
+
+**quick-start.md needs:**
+- Salesforce OAuth approval screen (not just integrations-hub reuse)
+- HubSpot OAuth approval screen (not just integrations-hub reuse)
+- Connected integration status showing green "Connected" badge
+- Visual editor with headline being edited
+- Campaign publish confirmation dialog
+- Live campaign with "Active" status
+
+**install-script.md needs:**
+- Google Tag Manager tag configuration panel
+- WordPress Insert Headers and Footers plugin
+- Browser DevTools Network tab showing abmatic request
+- Installation status: "Active" with green checkmark
+- Installation status: "Inactive" with waiting indicator
+
+**first-campaign.md needs:**
+- Visual editor full view showing page with editing panel
+- Element selection with blue outline
+- Dynamic variable picker ({{ }}) dropdown
+- Preview mode with sample company data
+- Published campaign with Active status badge
+
+**Build Status:** N/A (audit only)
+**Git Commit:** Pending
+
+**Next Steps:**
+- Task 3: Audit Campaigns docs in detail
+- Task 4: Audit Integrations docs in detail
+- Task 5: Audit remaining docs
+---
+
 ### Session Start Template
 ```
 ---
@@ -127,12 +198,12 @@ All in `./static/img/screenshots/workflows/` - show loading spinner only:
 ### Getting Started Docs
 | File | Current Screenshots | Issues | Needed |
 |------|---------------------|--------|--------|
-| quick-start.md | | | |
-| install-script.md | | | |
-| first-campaign.md | | | |
-| playbooks.md | | | |
-| use-cases.md | | | |
-| glossary.md | N/A (text only) | None | None |
+| quick-start.md | 11 unique, 23 refs | CONTEXTUAL - heavy reuse of same imgs | Unique shots for OAuth, editor, publish |
+| install-script.md | 2 | INSUFFICIENT | GTM setup, WP plugin, DevTools, status |
+| first-campaign.md | 9 | MINOR - missing editor details | Editor view, element selection, preview |
+| playbooks.md | 6 (verified) | GOOD | None |
+| use-cases.md | 4 (verified) | GOOD | None |
+| glossary.md | 0 | N/A (text only) | None |
 
 ### Campaigns Docs
 | File | Current Screenshots | Issues | Needed |
