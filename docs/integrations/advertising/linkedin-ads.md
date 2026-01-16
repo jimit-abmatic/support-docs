@@ -48,9 +48,9 @@ Before connecting, ensure you have:
 3. Scroll down to the **Advertising** section (below CRM and Communications)
 4. Find the **LinkedIn** card
 
-![Integrations page showing CRM section - scroll down to find Advertising](/img/screenshots/integrations-hub.png)
+![Settings > Integrations page](/img/screenshots/integrations-hub.png)
 
-The LinkedIn card is in the **Advertising** section alongside Google Ads and Meta.
+*Navigate to Settings > Integrations and scroll down past CRM and Communications to find the Advertising section with LinkedIn, Google Ads, and Meta.*
 
 ### Step 2: Authorize LinkedIn
 

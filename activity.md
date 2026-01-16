@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 51 / 78
-- **Current:** Task 72
+- **Completed:** 52 / 78
+- **Current:** Task 73
 
 ---
 
@@ -664,3 +664,15 @@
 2. conversions-manage.png - Conversions > MANAGE tab showing 5 conversion events (Book a Demo, Banner, Banner2, Demo Page View, Pop Up) with Event Type, Attached To, Main Event, and Visibility columns
 
 **Fixed:** Updated alt text to "Settings > Integrations page" and added caption "*Navigate to Settings > Integrations and scroll down past CRM and Communications to find the Conversion Tracking section with Segment.*" to provide clearer navigation instructions since the screenshot only shows CRM and Communications sections.
+
+### Task 72: docs/integrations/advertising/linkedin-ads.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (1 screenshot - appropriate for comprehensive 238-line integration guide with extensive tables for permissions, capabilities, sync behavior, and troubleshooting)
+- INCORRECT: ✅ Pass (screenshot fully loaded with all UI elements visible - CRM cards with logos, Active/Inactive badges, SETTINGS buttons, Communications section)
+- INCOMPLETE: ✅ Pass (shows actual Settings > Integrations page, not login page)
+- NON-CONTEXTUAL: ❌ FIXED - Screenshot shows CRM and Communications sections, but doc instructs users to find LinkedIn in Advertising section which requires scrolling. Updated alt text and added caption with navigation instructions.
+
+**Screenshots verified:**
+1. integrations-hub.png - Settings > Integrations page showing CRM section (Salesforce Active, HubSpot Active, ActiveCampaign Inactive, Pipedrive Inactive) and Communications section (Gmail, Slack). LinkedIn is in the Advertising section which requires scrolling.
+
+**Fixed:** Updated alt text from "Integrations page showing CRM section - scroll down to find Advertising" to "Settings > Integrations page" and replaced the plain text clarification with an italicized caption "*Navigate to Settings > Integrations and scroll down past CRM and Communications to find the Advertising section with LinkedIn, Google Ads, and Meta.*" for consistency with other integration docs.
