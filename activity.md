@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 3 / 78
-- **Current:** Task 4
+- **Completed:** 4 / 78
+- **Current:** Task 5
 
 ---
 
@@ -38,3 +38,14 @@
 - NON-CONTEXTUAL: ✅ Pass (screenshot shows script tag + "Active" status matching doc context)
 
 **Fixed:** No issues found - all checks passed.
+
+### Task 4: docs/getting-started/first-campaign.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (9 screenshot references - comprehensive coverage for tutorial)
+- INCORRECT: ✅ Pass (all screenshots load properly)
+- INCOMPLETE: ❌ FIXED - 2 screenshots showed login pages instead of app content
+- NON-CONTEXTUAL: ✅ Pass (screenshots match their documented context)
+
+**Fixed:**
+1. Replaced first-campaign-list.png (was login page → now shows Campaigns page with list)
+2. Replaced first-campaign-type-modal.png (was login page → now shows Create Campaign modal with campaign types)
