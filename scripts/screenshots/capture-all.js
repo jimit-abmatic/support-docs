@@ -16,6 +16,7 @@ const config = {
 };
 
 // COMPREHENSIVE list of ALL pages to capture
+// Pages marked with heavyLoad: true use domcontentloaded instead of networkidle
 const ALL_PAGES = [
   // PUBLIC/AUTH PAGES (capture before login)
   { name: 'sign-in', path: '/sign-in', noAuth: true, description: 'Sign in page' },
@@ -34,20 +35,20 @@ const ALL_PAGES = [
 
   // ACCOUNTS/AUDIENCES
   { name: 'accounts-list', path: '/accounts', description: 'Accounts list view' },
-  { name: 'accounts-all', path: '/accounts/all', description: 'All accounts view' },
+  { name: 'accounts-all', path: '/accounts/all', description: 'All accounts view', heavyLoad: true },
   { name: 'contacts-list', path: '/contacts', description: 'Contacts list view' },
-  { name: 'contacts-all', path: '/contacts/all', description: 'All contacts view' },
+  { name: 'contacts-all', path: '/contacts/all', description: 'All contacts view', heavyLoad: true },
 
   // REVEAL
-  { name: 'reveal-accounts', path: '/reveal/accounts', description: 'Company reveal page' },
-  { name: 'reveal-contacts', path: '/reveal/contacts', description: 'Contact reveal page' },
+  { name: 'reveal-accounts', path: '/reveal/accounts', description: 'Company reveal page', heavyLoad: true },
+  { name: 'reveal-contacts', path: '/reveal/contacts', description: 'Contact reveal page', heavyLoad: true },
 
   // CONVERSIONS
   { name: 'conversions-overview', path: '/conversions', description: 'Conversions overview' },
   { name: 'conversions-manage', path: '/conversions/manage', description: 'Manage conversions' },
 
   // ANALYTICS
-  { name: 'analytics-reports', path: '/analytics/reports', description: 'Analytics reports' },
+  { name: 'analytics-reports', path: '/analytics/reports', description: 'Analytics reports', heavyLoad: true },
   { name: 'analytics-dashboards', path: '/analytics/dashboards', description: 'Analytics dashboards' },
 
   // INTEGRATIONS
@@ -58,15 +59,18 @@ const ALL_PAGES = [
   { name: 'settings-usage', path: '/settings/usage', description: 'Usage and billing' },
   { name: 'settings-users', path: '/settings/users', description: 'User management' },
   { name: 'settings-custom-fields', path: '/settings/custom-fields', description: 'Custom fields' },
-  { name: 'settings-export', path: '/settings/export', description: 'Data export' },
+  { name: 'settings-export', path: '/settings/export', description: 'Data export', heavyLoad: true },
   { name: 'settings-notifications', path: '/settings/notifications', description: 'Notification settings' },
   { name: 'settings-ai-agents', path: '/settings/ai-agents', description: 'AI agents settings' },
 
   // INSTALLATION
-  { name: 'installation-script', path: '/installation', description: 'Script installation page' },
+  { name: 'installation-script', path: '/installation', description: 'Script installation page', heavyLoad: true },
 
   // SLACK
-  { name: 'settings-slack', path: '/settings/slack', description: 'Slack integration settings' },
+  { name: 'settings-slack', path: '/settings/slack', description: 'Slack integration settings', heavyLoad: true },
+
+  // TARGET GROUPS
+  { name: 'groups-list', path: '/groups', description: 'Target groups list' },
 ];
 
 class ComprehensiveScreenshotTool {
@@ -136,15 +140,21 @@ class ComprehensiveScreenshotTool {
   }
 
   async capture(pageInfo) {
-    const { name, path: urlPath, noAuth, description } = pageInfo;
-    console.log(`📸 Capturing: ${name} (${urlPath})`);
+    const { name, path: urlPath, noAuth, description, heavyLoad } = pageInfo;
+    console.log(`📸 Capturing: ${name} (${urlPath})${heavyLoad ? ' [heavy]' : ''}`);
 
     try {
       const url = `${config.baseUrl}${urlPath}`;
-      await this.page.goto(url, { waitUntil: 'networkidle', timeout: 30000 });
 
-      // Wait for content to stabilize
-      await this.page.waitForTimeout(2500);
+      // Use domcontentloaded for heavy pages to avoid timeout
+      const waitStrategy = heavyLoad ? 'domcontentloaded' : 'networkidle';
+      const timeout = heavyLoad ? 60000 : 30000;
+
+      await this.page.goto(url, { waitUntil: waitStrategy, timeout });
+
+      // Wait longer for heavy pages to render content
+      const stabilizeTime = heavyLoad ? 5000 : 2500;
+      await this.page.waitForTimeout(stabilizeTime);
 
       // Take screenshot
       const filepath = path.join(config.outputDir, `${name}.png`);
@@ -210,20 +220,28 @@ class ComprehensiveScreenshotTool {
     // Capture modals/popups
     console.log('\n📚 Capturing MODALS and POPUPS...\n');
 
-    // Create Campaign modal
+    // Create Campaign modal - button text is "Create Campaign"
     await this.captureWithClick(
       'campaign-create-modal',
       '/campaigns',
-      'button:has-text("Create"), button:has-text("New"), [data-testid="create-campaign"]',
+      'button:has-text("Create Campaign")',
       'Create campaign modal'
     );
 
-    // Create Account List modal
+    // Create Account List modal - button text includes "Account List"
     await this.captureWithClick(
       'account-create-modal',
       '/accounts',
-      'button:has-text("Create"), button:has-text("New")',
+      'button:has-text("Account List")',
       'Create account list modal'
+    );
+
+    // Create Contact List modal
+    await this.captureWithClick(
+      'contact-create-modal',
+      '/contacts',
+      'button:has-text("Contact List")',
+      'Create contact list modal'
     );
 
     console.log('\n📊 Capture complete!');

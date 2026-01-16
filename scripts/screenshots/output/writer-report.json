@@ -1,0 +1,101 @@
+{
+  "generatedDate": "2026-01-08T14:52:52.947Z",
+  "docsGenerated": [
+    {
+      "path": "getting-started/quick-start",
+      "outputPath": "/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/docs-draft/getting-started-quick-start.md",
+      "title": "Quick Start Guide",
+      "screenshotCount": 4
+    },
+    {
+      "path": "audiences/overview",
+      "outputPath": "/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/docs-draft/audiences-overview.md",
+      "title": "Audiences Overview",
+      "screenshotCount": 7
+    },
+    {
+      "path": "audiences/accounts",
+      "outputPath": "/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/docs-draft/audiences-accounts.md",
+      "title": "Account Management",
+      "screenshotCount": 3
+    },
+    {
+      "path": "audiences/contacts",
+      "outputPath": "/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/docs-draft/audiences-contacts.md",
+      "title": "Contact Management",
+      "screenshotCount": 3
+    },
+    {
+      "path": "audiences/filters",
+      "outputPath": "/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/docs-draft/audiences-filters.md",
+      "title": "Using Filters",
+      "screenshotCount": 2
+    },
+    {
+      "path": "audiences/target-groups",
+      "outputPath": "/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/docs-draft/audiences-target-groups.md",
+      "title": "Target Groups & Lists",
+      "screenshotCount": 5
+    },
+    {
+      "path": "campaigns/website-personalization",
+      "outputPath": "/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/docs-draft/campaigns-website-personalization.md",
+      "title": "Website Personalization",
+      "screenshotCount": 1
+    },
+    {
+      "path": "visitor-tracking/company-identification",
+      "outputPath": "/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/docs-draft/visitor-tracking-company-identification.md",
+      "title": "Company Identification",
+      "screenshotCount": 2
+    },
+    {
+      "path": "analytics/overview",
+      "outputPath": "/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/docs-draft/analytics-overview.md",
+      "title": "Analytics Overview",
+      "screenshotCount": 4
+    },
+    {
+      "path": "integrations/overview",
+      "outputPath": "/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/docs-draft/integrations-overview.md",
+      "title": "Integrations Overview",
+      "screenshotCount": 1
+    },
+    {
+      "path": "integrations/crm/salesforce",
+      "outputPath": "/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/docs-draft/integrations-crm-salesforce.md",
+      "title": "Salesforce Integration",
+      "screenshotCount": 2
+    },
+    {
+      "path": "integrations/crm/hubspot",
+      "outputPath": "/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/docs-draft/integrations-crm-hubspot.md",
+      "title": "HubSpot Integration",
+      "screenshotCount": 2
+    },
+    {
+      "path": "integrations/crm/pipedrive",
+      "outputPath": "/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/docs-draft/integrations-crm-pipedrive.md",
+      "title": "Pipedrive Integration",
+      "screenshotCount": 1
+    },
+    {
+      "path": "ai-agents/overview",
+      "outputPath": "/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/docs-draft/ai-agents-overview.md",
+      "title": "AI Agents Overview",
+      "screenshotCount": 2
+    },
+    {
+      "path": "settings/overview",
+      "outputPath": "/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/docs-draft/settings-overview.md",
+      "title": "Settings Overview",
+      "screenshotCount": 7
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "total": 15,
+    "success": 15,
+    "failed": 0
+  }
+}

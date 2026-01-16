@@ -15,22 +15,9 @@ const sidebars: SidebarsConfig = {
         'getting-started/quick-start',
         'getting-started/install-script',
         'getting-started/first-campaign',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'AI Agents',
-      items: [
-        'ai-agents/overview',
-        'ai-agents/clara-executive',
-        'ai-agents/clara-insights',
-        'ai-agents/joey-content',
-        'ai-agents/marcus-campaigns',
-        'ai-agents/sophia-personalization',
-        'ai-agents/alex-accounts',
-        'ai-agents/jordan-contacts',
-        'ai-agents/james-bidding',
-        'ai-agents/voice-commands',
+        'getting-started/use-cases',
+        'getting-started/playbooks',
+        'getting-started/glossary',
       ],
     },
     {
@@ -87,6 +74,16 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'AI Agents',
+      items: [
+        'ai-agents/ai-agents-overview',
+        'ai-agents/ai-agents-configuration',
+        'ai-agents/sdr-agent',
+        'ai-agents/abm-agent',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Integrations',
       items: [
         'integrations/overview',
@@ -94,11 +91,14 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'CRM',
           items: [
+            'integrations/crm/salesforce-setup',
             'integrations/crm/salesforce',
+            'integrations/crm/hubspot-setup',
             'integrations/crm/hubspot',
             'integrations/crm/pipedrive',
             'integrations/crm/activecampaign',
             'integrations/crm/outreach',
+            'integrations/crm/sync-behavior',
           ],
         },
         {
@@ -139,6 +139,25 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Troubleshooting',
+      items: [
+        'troubleshooting/troubleshooting-overview',
+        'troubleshooting/script-issues',
+        'troubleshooting/crm-sync',
+        'troubleshooting/campaign-issues',
+        'troubleshooting/common-errors',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'API Reference',
+      items: [
+        'api/api-overview',
+        'api/javascript-sdk',
+      ],
+    },
+    {
+      type: 'category',
       label: 'FAQ',
       items: [
         'faq/general',
@@ -146,6 +165,11 @@ const sidebars: SidebarsConfig = {
         'faq/integrations',
         'faq/billing',
       ],
+    },
+    {
+      type: 'doc',
+      id: 'changelog',
+      label: "What's New",
     },
   ],
 };

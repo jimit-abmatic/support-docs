@@ -1,0 +1,1038 @@
+{
+  "verificationDate": "2026-01-08T14:49:46.711Z",
+  "results": [
+    {
+      "id": "sign-in",
+      "filename": "sign-in.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "835KB"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "sign-in",
+          "actual": "https://app.abmatic.ai/sign-in"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/sign-in.png"
+    },
+    {
+      "id": "sign-up",
+      "filename": "sign-up.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "868KB"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "sign-up",
+          "actual": "https://app.abmatic.ai/sign-up"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/sign-up.png"
+    },
+    {
+      "id": "forgot-password",
+      "filename": "forgot-password.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "54KB"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "forgot",
+          "actual": "https://app.abmatic.ai/forgot-password"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/forgot-password.png"
+    },
+    {
+      "id": "home-dashboard",
+      "filename": "home-dashboard.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 150KB",
+          "actual": "281KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/"
+        },
+        {
+          "name": "url_excludes",
+          "passed": true,
+          "excluded": "sign-in",
+          "actual": "https://app.abmatic.ai/"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/home-dashboard.png"
+    },
+    {
+      "id": "home-dashboard-alt",
+      "filename": "home-dashboard-alt.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 100KB",
+          "actual": "229KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/home-dashboard"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/home-dashboard-alt.png"
+    },
+    {
+      "id": "installation-script",
+      "filename": "installation-script.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 100KB",
+          "actual": "207KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/installation"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "installation",
+          "actual": "https://app.abmatic.ai/installation"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/installation-script.png"
+    },
+    {
+      "id": "accounts-list",
+      "filename": "accounts-list.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 100KB",
+          "actual": "312KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/accounts"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "accounts",
+          "actual": "https://app.abmatic.ai/accounts"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/accounts-list.png"
+    },
+    {
+      "id": "accounts-all",
+      "filename": "accounts-all.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "78KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/accounts/all"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "accounts/all",
+          "actual": "https://app.abmatic.ai/accounts/all"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/accounts-all.png"
+    },
+    {
+      "id": "contacts-list",
+      "filename": "contacts-list.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 25KB",
+          "actual": "316KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/contacts"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "contacts",
+          "actual": "https://app.abmatic.ai/contacts"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/contacts-list.png"
+    },
+    {
+      "id": "contacts-all",
+      "filename": "contacts-all.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 25KB",
+          "actual": "78KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/contacts/all"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "contacts/all",
+          "actual": "https://app.abmatic.ai/contacts/all"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/contacts-all.png"
+    },
+    {
+      "id": "groups-list",
+      "filename": "groups-list.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 25KB",
+          "actual": "282KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/"
+        },
+        {
+          "name": "url_matches",
+          "passed": false,
+          "expected": "accounts",
+          "actual": "https://app.abmatic.ai/"
+        }
+      ],
+      "status": "warning",
+      "issues": [
+        "URL mismatch - expected to contain 'accounts'"
+      ],
+      "recommendations": []
+    },
+    {
+      "id": "campaigns-list",
+      "filename": "campaigns-list.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 25KB",
+          "actual": "331KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/campaigns"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "campaigns",
+          "actual": "https://app.abmatic.ai/campaigns"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/campaigns-list.png"
+    },
+    {
+      "id": "conversions-overview",
+      "filename": "conversions-overview.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 25KB",
+          "actual": "246KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/conversions"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "conversions",
+          "actual": "https://app.abmatic.ai/conversions"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/conversions-overview.png"
+    },
+    {
+      "id": "conversions-manage",
+      "filename": "conversions-manage.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "145KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/conversions/manage"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "conversions/manage",
+          "actual": "https://app.abmatic.ai/conversions/manage"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/conversions-manage.png"
+    },
+    {
+      "id": "reveal-accounts",
+      "filename": "reveal-accounts.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "72KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/reveal/accounts"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "reveal",
+          "actual": "https://app.abmatic.ai/reveal/accounts"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/reveal-accounts.png"
+    },
+    {
+      "id": "reveal-contacts",
+      "filename": "reveal-contacts.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "71KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/reveal/contacts"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "reveal",
+          "actual": "https://app.abmatic.ai/reveal/contacts"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/reveal-contacts.png"
+    },
+    {
+      "id": "analytics-reports",
+      "filename": "analytics-reports.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "271KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/analytics/reports"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "analytics",
+          "actual": "https://app.abmatic.ai/analytics/reports"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/analytics-reports.png"
+    },
+    {
+      "id": "analytics-dashboards",
+      "filename": "analytics-dashboards.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "136KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/analytics/dashboards"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "analytics",
+          "actual": "https://app.abmatic.ai/analytics/dashboards"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/analytics-dashboards.png"
+    },
+    {
+      "id": "integrations-hub",
+      "filename": "integrations-hub.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 100KB",
+          "actual": "253KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/integrations"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "integrations",
+          "actual": "https://app.abmatic.ai/integrations"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/integrations-hub.png"
+    },
+    {
+      "id": "ai-agents-hub",
+      "filename": "ai-agents-hub.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 100KB",
+          "actual": "2156KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/ai-agents"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "ai-agents",
+          "actual": "https://app.abmatic.ai/ai-agents"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/ai-agents-hub.png"
+    },
+    {
+      "id": "settings-account",
+      "filename": "settings-account.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 80KB",
+          "actual": "195KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/settings/account"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "settings",
+          "actual": "https://app.abmatic.ai/settings/account"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/settings-account.png"
+    },
+    {
+      "id": "settings-users",
+      "filename": "settings-users.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "64KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/settings/users"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "settings",
+          "actual": "https://app.abmatic.ai/settings/users"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/settings-users.png"
+    },
+    {
+      "id": "settings-usage",
+      "filename": "settings-usage.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "64KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/settings/usage"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "settings",
+          "actual": "https://app.abmatic.ai/settings/usage"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/settings-usage.png"
+    },
+    {
+      "id": "settings-custom-fields",
+      "filename": "settings-custom-fields.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": false,
+          "expected": ">= 50KB",
+          "actual": "47KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/settings/custom-fields"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "settings",
+          "actual": "https://app.abmatic.ai/settings/custom-fields"
+        }
+      ],
+      "status": "warning",
+      "issues": [
+        "File too small (47KB < 50KB) - may be loading state"
+      ],
+      "recommendations": [
+        "Re-capture with longer wait time"
+      ]
+    },
+    {
+      "id": "settings-notifications",
+      "filename": "settings-notifications.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": false,
+          "expected": ">= 50KB",
+          "actual": "47KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/settings/notifications"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "settings",
+          "actual": "https://app.abmatic.ai/settings/notifications"
+        }
+      ],
+      "status": "warning",
+      "issues": [
+        "File too small (47KB < 50KB) - may be loading state"
+      ],
+      "recommendations": [
+        "Re-capture with longer wait time"
+      ]
+    },
+    {
+      "id": "settings-export",
+      "filename": "settings-export.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "214KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/settings/export"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "settings",
+          "actual": "https://app.abmatic.ai/settings/export"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/settings-export.png"
+    },
+    {
+      "id": "settings-ai-agents",
+      "filename": "settings-ai-agents.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": false,
+          "expected": ">= 50KB",
+          "actual": "47KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/settings/ai-agents"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "settings",
+          "actual": "https://app.abmatic.ai/settings/ai-agents"
+        }
+      ],
+      "status": "warning",
+      "issues": [
+        "File too small (47KB < 50KB) - may be loading state"
+      ],
+      "recommendations": [
+        "Re-capture with longer wait time"
+      ]
+    },
+    {
+      "id": "settings-slack",
+      "filename": "settings-slack.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "176KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/settings/slack"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "settings",
+          "actual": "https://app.abmatic.ai/settings/slack"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/settings-slack.png"
+    },
+    {
+      "id": "accounts-all-grid",
+      "filename": "accounts-all-grid.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "78KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/accounts/all"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "accounts/all",
+          "actual": "https://app.abmatic.ai/accounts/all"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/accounts-all-grid.png"
+    },
+    {
+      "id": "contacts-all-grid",
+      "filename": "contacts-all-grid.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "77KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/contacts/all"
+        },
+        {
+          "name": "url_matches",
+          "passed": true,
+          "expected": "contacts/all",
+          "actual": "https://app.abmatic.ai/contacts/all"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/contacts-all-grid.png"
+    },
+    {
+      "id": "integration-salesforce",
+      "filename": "integration-salesforce.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "76KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/"
+        },
+        {
+          "name": "url_matches",
+          "passed": false,
+          "expected": "salesforce",
+          "actual": "https://app.abmatic.ai/"
+        }
+      ],
+      "status": "warning",
+      "issues": [
+        "URL mismatch - expected to contain 'salesforce'"
+      ],
+      "recommendations": []
+    },
+    {
+      "id": "integration-hubspot",
+      "filename": "integration-hubspot.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 50KB",
+          "actual": "279KB"
+        },
+        {
+          "name": "not_login_redirect",
+          "passed": true,
+          "actual": "https://app.abmatic.ai/"
+        },
+        {
+          "name": "url_matches",
+          "passed": false,
+          "expected": "hubspot",
+          "actual": "https://app.abmatic.ai/"
+        }
+      ],
+      "status": "warning",
+      "issues": [
+        "URL mismatch - expected to contain 'hubspot'"
+      ],
+      "recommendations": []
+    },
+    {
+      "id": "account-create-modal",
+      "filename": "account-create-modal.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 150KB",
+          "actual": "355KB"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/account-create-modal.png"
+    },
+    {
+      "id": "contact-create-modal",
+      "filename": "contact-create-modal.png",
+      "checks": [
+        {
+          "name": "file_exists",
+          "passed": true
+        },
+        {
+          "name": "file_size",
+          "passed": true,
+          "expected": ">= 150KB",
+          "actual": "358KB"
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "recommendations": [],
+      "verifiedPath": "/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/verified/contact-create-modal.png"
+    }
+  ],
+  "summary": {
+    "total": 34,
+    "passed": 28,
+    "failed": 0,
+    "warnings": 6,
+    "passRate": 82,
+    "allPassed": true
+  },
+  "failedScreenshots": [],
+  "requiresRecapture": []
+}

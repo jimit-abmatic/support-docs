@@ -1,0 +1,238 @@
+========================================
+AGENT 1: NAVIGATOR/CAPTURE AGENT
+========================================
+
+Initializing browser...
+Browser ready
+
+PHASE 1: Capturing public pages
+
+Flow: New User Onboarding
+  Capturing: sign-in
+    Path: /sign-in
+    Description: Sign in page for returning users
+    SUCCESS: sign-in.png (835KB)
+
+  Capturing: sign-up
+    Path: /sign-up
+    Description: Sign up page for new users
+    SUCCESS: sign-up.png (868KB)
+
+  Capturing: forgot-password
+    Path: /forgot-password
+    Description: Password recovery page
+    SUCCESS: forgot-password.png (54KB)
+
+PHASE 2: Logging in
+
+Logging in as: jimit@abmatic.ai
+Login successful
+
+PHASE 3: Capturing authenticated pages
+
+Flow: Dashboard & Home
+  Capturing: home-dashboard
+    Path: /
+    Description: Main home dashboard with overview metrics
+    Waiting for loading to complete...
+    SUCCESS: home-dashboard.png (269KB)
+
+  Capturing: home-dashboard-alt
+    Path: /home-dashboard
+    Description: Alternative home dashboard route
+    Waiting for loading to complete...
+    SUCCESS: home-dashboard-alt.png (229KB)
+
+Flow: Script Installation
+  Capturing: installation-script
+    Path: /installation
+    Description: Script installation page with tracking code
+    Waiting for loading to complete...
+    SUCCESS: installation-script.png (208KB)
+
+Flow: Account Management
+  Capturing: accounts-list
+    Path: /accounts
+    Description: Target accounts list view
+    Waiting for loading to complete...
+    SUCCESS: accounts-list.png (315KB)
+
+  Capturing: accounts-all
+    Path: /accounts/all
+    Description: All accounts data view
+    Waiting for loading to complete...
+    SUCCESS: accounts-all.png (78KB)
+
+Flow: Contact Management
+  Capturing: contacts-list
+    Path: /contacts
+    Description: Target contacts list view
+    Waiting for content: table, .MuiDataGrid-root, [class*="empty"], [class*="no-data"]
+    Selector not found, continuing...
+    WARNING: Small file size (26KB) - may be loading state
+    SUCCESS: contacts-list.png (26KB)
+
+  Capturing: contacts-all
+    Path: /contacts/all
+    Description: All contacts data view
+    Waiting for content: table, .MuiDataGrid-root, [class*="empty"], [class*="no-data"]
+    Selector not found, continuing...
+    WARNING: Small file size (26KB) - may be loading state
+    SUCCESS: contacts-all.png (26KB)
+
+Flow: Target Groups
+  Capturing: groups-list
+    Path: /accounts/groups
+    Description: Target groups for segmentation
+    WARNING: Small file size (26KB) - may be loading state
+    SUCCESS: groups-list.png (26KB)
+
+Flow: Campaign Management
+  Capturing: campaigns-list
+    Path: /campaigns
+    Description: All campaigns list view
+    WARNING: Small file size (26KB) - may be loading state
+    SUCCESS: campaigns-list.png (26KB)
+
+Flow: Conversion Tracking
+  Capturing: conversions-overview
+    Path: /conversions
+    Description: Conversions overview and metrics
+    WARNING: Small file size (26KB) - may be loading state
+    SUCCESS: conversions-overview.png (26KB)
+
+  Capturing: conversions-manage
+    Path: /conversions/manage
+    Description: Manage conversion definitions
+    Waiting for loading to complete...
+    SUCCESS: conversions-manage.png (145KB)
+
+Flow: Visitor Reveal
+  Capturing: reveal-accounts
+    Path: /reveal/accounts
+    Description: Identified companies from website visitors
+    Waiting for loading to complete...
+    SUCCESS: reveal-accounts.png (268KB)
+
+  Capturing: reveal-contacts
+    Path: /reveal/contacts
+    Description: Identified contacts from website visitors
+    Waiting for loading to complete...
+    SUCCESS: reveal-contacts.png (261KB)
+
+Flow: Analytics & Reporting
+  Capturing: analytics-reports
+    Path: /analytics/reports
+    Description: Analytics reports list
+    Waiting for loading to complete...
+    SUCCESS: analytics-reports.png (271KB)
+
+  Capturing: analytics-dashboards
+    Path: /analytics/dashboards
+    Description: Analytics dashboards list
+    Waiting for loading to complete...
+    SUCCESS: analytics-dashboards.png (136KB)
+
+Flow: Integrations
+  Capturing: integrations-hub
+    Path: /integrations
+    Description: All available integrations (CRM, ads, etc.)
+    Waiting for loading to complete...
+    SUCCESS: integrations-hub.png (253KB)
+
+Flow: AI Agents
+  Capturing: ai-agents-hub
+    Path: /ai-agents
+    Description: AI Agents selection and chat hub
+    Waiting for loading to complete...
+    SUCCESS: ai-agents-hub.png (2156KB)
+
+Flow: Settings
+  Capturing: settings-account
+    Path: /settings/account
+    Description: Account information and settings
+    Waiting for loading to complete...
+    SUCCESS: settings-account.png (195KB)
+
+  Capturing: settings-users
+    Path: /settings/users
+    Description: User management and invitations
+    Waiting for loading to complete...
+    SUCCESS: settings-users.png (192KB)
+
+  Capturing: settings-usage
+    Path: /settings/usage
+    Description: Usage metrics and billing
+    Waiting for loading to complete...
+    SUCCESS: settings-usage.png (132KB)
+
+  Capturing: settings-custom-fields
+    Path: /settings/custom-fields
+    Description: Custom field definitions
+    Waiting for loading to complete...
+    SUCCESS: settings-custom-fields.png (80KB)
+
+  Capturing: settings-notifications
+    Path: /settings/notifications
+    Description: Notification preferences
+    Waiting for loading to complete...
+    SUCCESS: settings-notifications.png (166KB)
+
+  Capturing: settings-export
+    Path: /settings/export
+    Description: Data export options
+    Waiting for loading to complete...
+    SUCCESS: settings-export.png (216KB)
+
+  Capturing: settings-ai-agents
+    Path: /settings/ai-agents
+    Description: AI agents configuration
+    Waiting for loading to complete...
+    SUCCESS: settings-ai-agents.png (361KB)
+
+  Capturing: settings-slack
+    Path: /settings/slack
+    Description: Slack integration settings
+    Waiting for loading to complete...
+    SUCCESS: settings-slack.png (179KB)
+
+PHASE 4: Capturing modals and popups
+
+  Capturing modal: campaign-create-modal
+    Base path: /campaigns
+    Click: button:has-text("Create"), button:has-text("New"), button[aria-label*="create" i], button[aria-label*="new" i]
+    FAILED: page.click: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("Create"), button:has-text("New"), button[aria-label*="create" i], button[aria-label*="new" i]')[22m
+
+
+  Capturing modal: account-create-modal
+    Base path: /accounts
+    Click: button:has-text("Account List"), button:has-text("Create")
+    SUCCESS: account-create-modal.png (358KB)
+
+  Capturing modal: contact-create-modal
+    Base path: /contacts
+    Click: button:has-text("Contact List"), button:has-text("Create")
+    SUCCESS: contact-create-modal.png (358KB)
+
+
+Metadata saved to: /Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/output/capture-metadata.json
+
+========================================
+CAPTURE SUMMARY
+========================================
+Total attempted: 31
+Successful: 30
+Failed: 1
+
+Errors:
+  - campaign-create-modal: page.click: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("Create"), button:has-text("New"), button[aria-label*="create" i], button[aria-label*="new" i]')[22m
+
+
+Next step: Run Agent 2 (Verification)
+Command: node scripts/screenshots/pipeline/agent2-verify.js
+
+Browser closed

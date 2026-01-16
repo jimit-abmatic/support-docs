@@ -1,0 +1,16 @@
+{
+  "startTime": "2026-01-08T00:01:59.565Z",
+  "endTime": "2026-01-08T00:15:23.456Z",
+  "currentAgent": 7,
+  "completedAgents": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "failedAgents": [],
+  "status": "completed"
+}

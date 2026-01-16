@@ -48,6 +48,20 @@ const config: Config = {
     ],
   ],
 
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['en'],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        docsRouteBasePath: '/',
+        indexBlog: false,
+      },
+    ],
+  ],
+
   themeConfig: {
     image: 'img/abmatic-social-card.jpg',
     colorMode: {
@@ -101,8 +115,33 @@ const config: Config = {
               to: '/campaigns/overview',
             },
             {
+              label: 'Integrations',
+              to: '/integrations/overview',
+            },
+            {
               label: 'AI Agents',
-              to: '/ai-agents/overview',
+              to: '/ai-agents/ai-agents-overview',
+            },
+          ],
+        },
+        {
+          title: 'Resources',
+          items: [
+            {
+              label: 'Troubleshooting',
+              to: '/troubleshooting/troubleshooting-overview',
+            },
+            {
+              label: 'API Reference',
+              to: '/api/api-overview',
+            },
+            {
+              label: "What's New",
+              to: '/changelog',
+            },
+            {
+              label: 'FAQ',
+              to: '/faq/general',
             },
           ],
         },
@@ -123,8 +162,12 @@ const config: Config = {
           title: 'Support',
           items: [
             {
-              label: 'Contact Us',
+              label: 'Contact Support',
               href: 'mailto:support@abmatic.ai',
+            },
+            {
+              label: 'Feature Request',
+              href: 'mailto:feedback@abmatic.ai',
             },
           ],
         },

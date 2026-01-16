@@ -1,0 +1,667 @@
+{
+  "verificationDate": "2026-01-08T14:52:59.068Z",
+  "docs": [
+    {
+      "filename": "ai-agents-overview.md",
+      "checks": [
+        {
+          "name": "not_empty",
+          "passed": true,
+          "size": 2376
+        },
+        {
+          "name": "has_frontmatter",
+          "passed": true
+        },
+        {
+          "name": "has_title",
+          "passed": true
+        },
+        {
+          "name": "has_images",
+          "passed": true,
+          "count": 2
+        },
+        {
+          "name": "no_placeholders",
+          "passed": true
+        },
+        {
+          "name": "has_steps",
+          "passed": true,
+          "stepCount": 2
+        },
+        {
+          "name": "no_broken_links",
+          "passed": true
+        },
+        {
+          "name": "has_marketing_tips",
+          "passed": true
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "analytics-overview.md",
+      "checks": [
+        {
+          "name": "not_empty",
+          "passed": true,
+          "size": 4386
+        },
+        {
+          "name": "has_frontmatter",
+          "passed": true
+        },
+        {
+          "name": "has_title",
+          "passed": true
+        },
+        {
+          "name": "has_images",
+          "passed": true,
+          "count": 4
+        },
+        {
+          "name": "no_placeholders",
+          "passed": true
+        },
+        {
+          "name": "has_steps",
+          "passed": true,
+          "stepCount": 4
+        },
+        {
+          "name": "no_broken_links",
+          "passed": true
+        },
+        {
+          "name": "has_marketing_tips",
+          "passed": true
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "audiences-accounts.md",
+      "checks": [
+        {
+          "name": "not_empty",
+          "passed": true,
+          "size": 4779
+        },
+        {
+          "name": "has_frontmatter",
+          "passed": true
+        },
+        {
+          "name": "has_title",
+          "passed": true
+        },
+        {
+          "name": "has_images",
+          "passed": true,
+          "count": 3
+        },
+        {
+          "name": "no_placeholders",
+          "passed": true
+        },
+        {
+          "name": "has_steps",
+          "passed": true,
+          "stepCount": 3
+        },
+        {
+          "name": "no_broken_links",
+          "passed": true
+        },
+        {
+          "name": "has_marketing_tips",
+          "passed": true
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "audiences-contacts.md",
+      "checks": [
+        {
+          "name": "not_empty",
+          "passed": true,
+          "size": 4256
+        },
+        {
+          "name": "has_frontmatter",
+          "passed": true
+        },
+        {
+          "name": "has_title",
+          "passed": true
+        },
+        {
+          "name": "has_images",
+          "passed": true,
+          "count": 3
+        },
+        {
+          "name": "no_placeholders",
+          "passed": true
+        },
+        {
+          "name": "has_steps",
+          "passed": true,
+          "stepCount": 3
+        },
+        {
+          "name": "no_broken_links",
+          "passed": true
+        },
+        {
+          "name": "has_marketing_tips",
+          "passed": true
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "audiences-filters.md",
+      "checks": [
+        {
+          "name": "not_empty",
+          "passed": true,
+          "size": 3683
+        },
+        {
+          "name": "has_frontmatter",
+          "passed": true
+        },
+        {
+          "name": "has_title",
+          "passed": true
+        },
+        {
+          "name": "has_images",
+          "passed": true,
+          "count": 2
+        },
+        {
+          "name": "no_placeholders",
+          "passed": true
+        },
+        {
+          "name": "has_steps",
+          "passed": true,
+          "stepCount": 2
+        },
+        {
+          "name": "no_broken_links",
+          "passed": true
+        },
+        {
+          "name": "has_marketing_tips",
+          "passed": true
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "audiences-overview.md",
+      "checks": [
+        {
+          "name": "not_empty",
+          "passed": true,
+          "size": 8229
+        },
+        {
+          "name": "has_frontmatter",
+          "passed": true
+        },
+        {
+          "name": "has_title",
+          "passed": true
+        },
+        {
+          "name": "has_images",
+          "passed": true,
+          "count": 7
+        },
+        {
+          "name": "no_placeholders",
+          "passed": true
+        },
+        {
+          "name": "has_steps",
+          "passed": true,
+          "stepCount": 7
+        },
+        {
+          "name": "no_broken_links",
+          "passed": true
+        },
+        {
+          "name": "has_marketing_tips",
+          "passed": true
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "audiences-target-groups.md",
+      "checks": [
+        {
+          "name": "not_empty",
+          "passed": true,
+          "size": 6637
+        },
+        {
+          "name": "has_frontmatter",
+          "passed": true
+        },
+        {
+          "name": "has_title",
+          "passed": true
+        },
+        {
+          "name": "has_images",
+          "passed": true,
+          "count": 5
+        },
+        {
+          "name": "no_placeholders",
+          "passed": true
+        },
+        {
+          "name": "has_steps",
+          "passed": true,
+          "stepCount": 5
+        },
+        {
+          "name": "no_broken_links",
+          "passed": true
+        },
+        {
+          "name": "has_marketing_tips",
+          "passed": true
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "campaigns-website-personalization.md",
+      "checks": [
+        {
+          "name": "not_empty",
+          "passed": true,
+          "size": 1700
+        },
+        {
+          "name": "has_frontmatter",
+          "passed": true
+        },
+        {
+          "name": "has_title",
+          "passed": true
+        },
+        {
+          "name": "has_images",
+          "passed": true,
+          "count": 1
+        },
+        {
+          "name": "no_placeholders",
+          "passed": true
+        },
+        {
+          "name": "has_steps",
+          "passed": true,
+          "stepCount": 1
+        },
+        {
+          "name": "no_broken_links",
+          "passed": true
+        },
+        {
+          "name": "has_marketing_tips",
+          "passed": true
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "getting-started-quick-start.md",
+      "checks": [
+        {
+          "name": "not_empty",
+          "passed": true,
+          "size": 5253
+        },
+        {
+          "name": "has_frontmatter",
+          "passed": true
+        },
+        {
+          "name": "has_title",
+          "passed": true
+        },
+        {
+          "name": "has_images",
+          "passed": true,
+          "count": 4
+        },
+        {
+          "name": "no_placeholders",
+          "passed": true
+        },
+        {
+          "name": "has_steps",
+          "passed": true,
+          "stepCount": 4
+        },
+        {
+          "name": "no_broken_links",
+          "passed": true
+        },
+        {
+          "name": "has_marketing_tips",
+          "passed": true
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "integrations-crm-hubspot.md",
+      "checks": [
+        {
+          "name": "not_empty",
+          "passed": true,
+          "size": 2972
+        },
+        {
+          "name": "has_frontmatter",
+          "passed": true
+        },
+        {
+          "name": "has_title",
+          "passed": true
+        },
+        {
+          "name": "has_images",
+          "passed": true,
+          "count": 2
+        },
+        {
+          "name": "no_placeholders",
+          "passed": true
+        },
+        {
+          "name": "has_steps",
+          "passed": true,
+          "stepCount": 2
+        },
+        {
+          "name": "no_broken_links",
+          "passed": true
+        },
+        {
+          "name": "has_marketing_tips",
+          "passed": true
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "integrations-crm-pipedrive.md",
+      "checks": [
+        {
+          "name": "not_empty",
+          "passed": true,
+          "size": 1929
+        },
+        {
+          "name": "has_frontmatter",
+          "passed": true
+        },
+        {
+          "name": "has_title",
+          "passed": true
+        },
+        {
+          "name": "has_images",
+          "passed": true,
+          "count": 1
+        },
+        {
+          "name": "no_placeholders",
+          "passed": true
+        },
+        {
+          "name": "has_steps",
+          "passed": true,
+          "stepCount": 1
+        },
+        {
+          "name": "no_broken_links",
+          "passed": true
+        },
+        {
+          "name": "has_marketing_tips",
+          "passed": true
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "integrations-crm-salesforce.md",
+      "checks": [
+        {
+          "name": "not_empty",
+          "passed": true,
+          "size": 3168
+        },
+        {
+          "name": "has_frontmatter",
+          "passed": true
+        },
+        {
+          "name": "has_title",
+          "passed": true
+        },
+        {
+          "name": "has_images",
+          "passed": true,
+          "count": 2
+        },
+        {
+          "name": "no_placeholders",
+          "passed": true
+        },
+        {
+          "name": "has_steps",
+          "passed": true,
+          "stepCount": 2
+        },
+        {
+          "name": "no_broken_links",
+          "passed": true
+        },
+        {
+          "name": "has_marketing_tips",
+          "passed": true
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "integrations-overview.md",
+      "checks": [
+        {
+          "name": "not_empty",
+          "passed": true,
+          "size": 1837
+        },
+        {
+          "name": "has_frontmatter",
+          "passed": true
+        },
+        {
+          "name": "has_title",
+          "passed": true
+        },
+        {
+          "name": "has_images",
+          "passed": true,
+          "count": 1
+        },
+        {
+          "name": "no_placeholders",
+          "passed": true
+        },
+        {
+          "name": "has_steps",
+          "passed": true,
+          "stepCount": 1
+        },
+        {
+          "name": "no_broken_links",
+          "passed": true
+        },
+        {
+          "name": "has_marketing_tips",
+          "passed": true
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "settings-overview.md",
+      "checks": [
+        {
+          "name": "not_empty",
+          "passed": true,
+          "size": 6698
+        },
+        {
+          "name": "has_frontmatter",
+          "passed": true
+        },
+        {
+          "name": "has_title",
+          "passed": true
+        },
+        {
+          "name": "has_images",
+          "passed": true,
+          "count": 7
+        },
+        {
+          "name": "no_placeholders",
+          "passed": true
+        },
+        {
+          "name": "has_steps",
+          "passed": true,
+          "stepCount": 7
+        },
+        {
+          "name": "no_broken_links",
+          "passed": true
+        },
+        {
+          "name": "has_marketing_tips",
+          "passed": true
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "visitor-tracking-company-identification.md",
+      "checks": [
+        {
+          "name": "not_empty",
+          "passed": true,
+          "size": 3023
+        },
+        {
+          "name": "has_frontmatter",
+          "passed": true
+        },
+        {
+          "name": "has_title",
+          "passed": true
+        },
+        {
+          "name": "has_images",
+          "passed": true,
+          "count": 2
+        },
+        {
+          "name": "no_placeholders",
+          "passed": true
+        },
+        {
+          "name": "has_steps",
+          "passed": true,
+          "stepCount": 2
+        },
+        {
+          "name": "no_broken_links",
+          "passed": true
+        },
+        {
+          "name": "has_marketing_tips",
+          "passed": true
+        }
+      ],
+      "status": "passed",
+      "issues": [],
+      "warnings": []
+    }
+  ],
+  "issues": [],
+  "summary": {
+    "totalDocs": 15,
+    "passed": 15,
+    "failed": 0,
+    "warnings": 0,
+    "totalScreenshots": 46,
+    "screenshotsFound": 46,
+    "screenshotsMissing": 0
+  },
+  "decision": {
+    "status": "approved",
+    "message": "All documentation verified successfully. Ready for final review.",
+    "docPassRate": 100,
+    "screenshotFoundRate": 100,
+    "nextStep": "Proceed to Agent 7 (Final Re-verification)"
+  }
+}
