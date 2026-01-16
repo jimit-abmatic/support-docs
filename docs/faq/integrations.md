@@ -76,8 +76,8 @@ Yes! Custom field mapping is one of Abmatic's most powerful features:
 
 Go to **Integrations > [Your CRM] > Field Mapping** to configure.
 
-![CRM Sync Settings](/img/screenshots/crm-sync-settings.png)
-*Configure exactly which fields sync between Abmatic and your CRM*
+![Settings > Integrations page](/img/screenshots/integrations-hub.png)
+*Navigate to Settings > Integrations, then click SETTINGS on your connected CRM to access field mapping configuration*
 
 ### What's the difference between Fill and Overwrite mode?
 
@@ -120,8 +120,8 @@ Abmatic integrates with the major B2B advertising platforms:
 | **LinkedIn Ads** | Push company lists for targeting | Reach decision-makers at target accounts |
 | **Google Ads** | Customer Match audience sync | Retarget engaged accounts across Google |
 
-![LinkedIn Ads Integration](/img/screenshots/linkedin-ads-integration.png)
-*Connect LinkedIn Ads to target your accounts with precision*
+![Settings > Integrations page](/img/screenshots/integrations-hub.png)
+*Navigate to Settings > Integrations and scroll down to the Advertising section to find LinkedIn Ads*
 
 ### How do I push audiences to LinkedIn?
 
@@ -178,8 +178,8 @@ Push contact emails from Abmatic to Google Ads for cross-platform retargeting:
 Google Customer Match requires your Google Ads account to have good standing, sufficient spend history, and compliance with Google's policies. [Check your eligibility](https://support.google.com/google-ads/answer/6379332) in Google Ads.
 :::
 
-![Google Ads Integration](/img/screenshots/google-ads-integration.png)
-*Connect Google Ads for Customer Match audience syncing*
+![Settings > Integrations page](/img/screenshots/integrations-hub.png)
+*Navigate to Settings > Integrations and scroll down to the Advertising section to find Google Ads*
 
 ---
 

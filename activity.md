@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 74 / 78
-- **Current:** Task 113
+- **Completed:** 75 / 78
+- **Current:** Task 120
 
 ---
 
@@ -954,3 +954,19 @@
 **Fixed:**
 1. Replaced ab-control-settings.png (showed empty "No data to display" page) with ab-control-insights.png (shows actual A/B test data with Personalized vs Control groups)
 2. Replaced dynamic-content-editor.png (showed generic page editor) with dynamic-content-menu.png (shows Insert Personalization Variables modal with variable tokens)
+
+### Task 113: docs/faq/integrations.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (5 screenshots - appropriate for comprehensive integrations FAQ page)
+- INCORRECT: ✅ Pass (all screenshots fully loaded with all UI elements visible)
+- INCOMPLETE: ✅ Pass (all show actual app content, not login pages)
+- NON-CONTEXTUAL: ❌ FIXED - 3 screenshots were identical duplicates of integrations-hub.png with misleading alt text
+
+**Screenshots verified:**
+1. integrations-hub.png - Settings > Integrations page showing CRM section (Salesforce Active, HubSpot Active, ActiveCampaign Inactive, Pipedrive Inactive) and Communications section (Gmail, Slack)
+2. settings-slack.png - Slack integration settings showing Channels list (#general, #all-pings, #enterprise, etc.), Active Members (Jim, Dhruvi), and FILTERS/NOTIFICATION SETTINGS/MESSAGES/MEMBERS/MESSAGE CUSTOMIZATION tabs
+
+**Fixed:**
+1. Replaced crm-sync-settings.png reference with integrations-hub.png - updated caption to explain users need to click SETTINGS on CRM card to access field mapping
+2. Replaced linkedin-ads-integration.png reference with integrations-hub.png - updated caption to explain users need to scroll to Advertising section
+3. Replaced google-ads-integration.png reference with integrations-hub.png - updated caption to explain users need to scroll to Advertising section
