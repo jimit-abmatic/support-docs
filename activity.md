@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 73 / 78
-- **Current:** Task 112
+- **Completed:** 74 / 78
+- **Current:** Task 113
 
 ---
 
@@ -933,3 +933,24 @@
 1. settings-usage.png - Settings > USAGE tab showing Credits section with Apollo Contacts (1245/1000000), Campaigns (404245/1000000000), Open AI (4905524/1500000000), Abmatic Accounts (22196/4000000), Abmatic Contacts (40276/20000000), Abmatic IP Reveal (298035/100000000) - all showing "X/Y Credits Used" format matching documentation
 
 **Fixed:** No issues found - all checks passed.
+
+### Task 112: docs/faq/campaigns.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (8 screenshots - comprehensive coverage for extensive FAQ page)
+- INCORRECT: ✅ Pass (all screenshots fully loaded with data)
+- INCOMPLETE: ✅ Pass (all show actual app content, not login pages)
+- NON-CONTEXTUAL: ❌ FIXED - 2 screenshots didn't match their document context
+
+**Screenshots verified:**
+1. first-campaign-type-modal.png - Create Campaign modal showing Personalization, Advertising, Advanced columns with all campaign types
+2. wp-audience-tab.png - AUDIENCE tab with filter builder (Country, Account List, Employee Count filters)
+3. page-editor-main.png - Visual page editor with Abmatic.ai website and editing panel (Dimensions, Widgets, Hierarchy, Layout, Typography)
+4. dynamic-content-menu.png (was dynamic-content-editor.png) - Insert Personalization Variables modal with ACCOUNT DETAILS, IP REVEAL DETAILS, CUSTOM VARIABLES tabs
+5. ab-control-insights.png (was ab-control-settings.png) - INSIGHTS tab showing 705 Total Visitors with Personalized/Control chart breakdown
+6. wp-insights-tab.png - INSIGHTS tab with visitor chart and metrics
+7. campaigns-list.png - Campaigns page showing 65 campaigns with status indicators (100% Full personalization, 0% Inactive, 50% Experiment)
+8. wp-performance-tab.png - PERFORMANCE tab with 1,306 visitor rows showing Domain, Visitor, Variation, Visited Pages columns
+
+**Fixed:**
+1. Replaced ab-control-settings.png (showed empty "No data to display" page) with ab-control-insights.png (shows actual A/B test data with Personalized vs Control groups)
+2. Replaced dynamic-content-editor.png (showed generic page editor) with dynamic-content-menu.png (shows Insert Personalization Variables modal with variable tokens)

@@ -104,7 +104,7 @@ Use dynamic tokens to automatically insert visitor-specific content:
 - Deal stage and opportunity data
 - Custom properties you've defined
 
-![Dynamic content editor with variable tokens](/img/screenshots/dynamic-content-editor.png)
+![Insert Personalization Variables modal showing account details and custom variables](/img/screenshots/dynamic-content-menu.png)
 
 ### Why isn't my personalization showing?
 
@@ -140,7 +140,7 @@ See [Campaign Issues Troubleshooting](/troubleshooting/campaign-issues) for deta
 | Abmatic tracks conversions for both groups | Measures the actual lift from personalization |
 | Statistical significance is calculated automatically | Know when results are trustworthy |
 
-![Control group settings showing experiment configuration](/img/screenshots/ab-control-settings.png)
+![Campaign insights showing A/B test with Personalized vs Control groups](/img/screenshots/ab-control-insights.png)
 
 :::info Measure Real Impact
 This isn't vanity metrics—you'll see exactly how much personalization improves your conversions compared to showing the same content to everyone.

@@ -98,7 +98,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 104, "docPath": "docs/troubleshooting/common-errors.md", "appPath": "none", "passes": true},
     {"id": 110, "docPath": "docs/faq/general.md", "appPath": "various", "passes": true},
     {"id": 111, "docPath": "docs/faq/billing.md", "appPath": "/settings/usage", "passes": true},
-    {"id": 112, "docPath": "docs/faq/campaigns.md", "appPath": "/campaigns", "passes": false},
+    {"id": 112, "docPath": "docs/faq/campaigns.md", "appPath": "/campaigns", "passes": true},
     {"id": 113, "docPath": "docs/faq/integrations.md", "appPath": "/integrations", "passes": false},
     {"id": 120, "docPath": "docs/api/overview.md", "appPath": "none", "passes": false},
     {"id": 121, "docPath": "docs/api/javascript-sdk.md", "appPath": "none", "passes": false},
