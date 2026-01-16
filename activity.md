@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 47 / 78
-- **Current:** Task 68
+- **Completed:** 48 / 78
+- **Current:** Task 69
 
 ---
 
@@ -614,3 +614,15 @@
 1. integrations-hub.png - Settings > Integrations page showing CRM section with ActiveCampaign card displaying logo, "Inactive" badge, SETTINGS button, and AUTHORIZE button. Also shows Salesforce (Active), HubSpot (Active), Pipedrive (Inactive), and Communications section (Gmail, Slack)
 
 **Fixed:** No issues found - all checks passed.
+
+### Task 68: docs/integrations/crm/sync-behavior.md
+**4-Check Results:**
+- INSUFFICIENT: ❌ FIXED - Page had no screenshots. Added 1 screenshot showing Settings > Integrations with SETTINGS buttons on CRM cards
+- INCORRECT: ✅ N/A (no pre-existing screenshots)
+- INCOMPLETE: ✅ N/A (no pre-existing screenshots)
+- NON-CONTEXTUAL: ✅ Pass (new screenshot matches the "Accessing Sync Settings" section that instructs users to go to Settings > Integrations and click SETTINGS)
+
+**Screenshots added:**
+1. integrations-hub.png - Settings > Integrations page showing CRM section with Salesforce (Active), HubSpot (Active), ActiveCampaign (Inactive), Pipedrive (Inactive), each with SETTINGS buttons. Screenshot placed in "Accessing Sync Settings" section with caption "*Click SETTINGS on any connected CRM to access field-level sync configuration*"
+
+**Fixed:** Added 1 screenshot to support the UI navigation instructions. The document is primarily a conceptual reference page about Fill vs Overwrite sync modes with extensive tables explaining behavior - a single screenshot showing where to access settings is appropriate.

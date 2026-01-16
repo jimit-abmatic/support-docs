@@ -74,6 +74,10 @@ Overwrite mode can clear existing data if the Abmatic field is empty. Only enabl
 
 ### Accessing Sync Settings
 
+![Settings > Integrations showing CRM cards with SETTINGS buttons](/img/screenshots/integrations-hub.png)
+
+*Click SETTINGS on any connected CRM to access field-level sync configuration*
+
 1. Go to **Settings** > **Integrations**
 2. Click **Settings** on your connected CRM (Salesforce, HubSpot, Pipedrive, or ActiveCampaign)
 3. Select the object tab (Accounts, Contacts, Leads, Opportunities)
