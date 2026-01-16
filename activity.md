@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 66 / 78
-- **Current:** Task 100
+- **Completed:** 67 / 78
+- **Current:** Task 101
 
 ---
 
@@ -845,5 +845,17 @@
 
 **Screenshots verified:**
 1. settings-contact-reveal.png - Settings > CONTACT REVEAL tab showing Accuracy section with slider (10%-100%), description "Set an accuracy level for the visitor reveal for contacts. It will affect the volume of the reveals as well, as the greater the accuracy the lesser the volume. The default is 50%.", Filters section with "Select Filters" panel containing Selector/Operator/Value dropdowns, + RULE button, and SAVE button
+
+**Fixed:** No issues found - all checks passed.
+
+### Task 100: docs/troubleshooting/troubleshooting-overview.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (1 screenshot - appropriate for troubleshooting overview page focused on tables, error messages, and text-based guidance)
+- INCORRECT: ✅ Pass (screenshot fully loaded with all UI elements visible - header, 3-step instructions, script code, Status badge, timestamp)
+- INCOMPLETE: ✅ Pass (shows actual Installation page, not login page)
+- NON-CONTEXTUAL: ✅ Pass (screenshot placed after Quick Diagnostics Checklist mentioning "Script verified | Installation page shows green checkmark" - screenshot shows Status: "Active")
+
+**Screenshots verified:**
+1. installation-script.png - Installation page showing "Installation" header, step 1 "Copy the javascript tag" with script code, step 2 "Paste into <head> section", step 3 "Check that the code works", Status: "Active" (purple badge), "Last visitor: 3 minutes ago" link
 
 **Fixed:** No issues found - all checks passed.
