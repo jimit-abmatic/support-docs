@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 71 / 78
-- **Current:** Task 110
+- **Completed:** 72 / 78
+- **Current:** Task 111
 
 ---
 
@@ -905,5 +905,19 @@
 - NON-CONTEXTUAL: ✅ N/A (no screenshots to check)
 
 **Notes:** This is a comprehensive error messages reference page with tables for HTTP errors (400-500), authentication errors, CRM integration errors, Slack integration errors, campaign/editor errors, and data/analytics errors. No screenshots are needed or expected (appPath: "none").
+
+**Fixed:** No issues found - all checks passed.
+
+### Task 110: docs/faq/general.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (3 screenshots - appropriate for comprehensive FAQ page with extensive tables)
+- INCORRECT: ✅ Pass (all screenshots fully loaded with all UI elements visible)
+- INCOMPLETE: ✅ Pass (all show actual app content, not login pages)
+- NON-CONTEXTUAL: ✅ Pass (all screenshots match their alt text and document context)
+
+**Screenshots verified:**
+1. ai-agents-hub.png - AI Agents page showing "Meet Your AI Partner" header with Clara - AI ABM card displaying her image and capabilities (Campaign execution, Personalization at Scale, Performance Analytics) - matches caption about Alex and Clara automating tasks
+2. reveal-accounts.png - Visitor Reveal > ACCOUNTS tab showing 30,458 All Accounts, confidence level cards (High, Very Low, Moderate, Low, Very High), company table with Domain, Name, Industry, LinkedIn URL, Inferred Revenue, Summary columns - matches caption "See exactly which companies are visiting"
+3. reveal-contacts.png - Visitor Reveal > CONTACTS tab showing 943 All Contacts, engagement breakdown cards, contact table with Work Email, Full Name, Temperature, Website Engagement Score, Job Title Role, Job Title, Job Company Name columns - matches caption about identifying individual visitors
 
 **Fixed:** No issues found - all checks passed.
