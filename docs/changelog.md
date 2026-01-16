@@ -78,8 +78,8 @@ Sync your target accounts directly to Google Ads Customer Match for precise ad t
 | **Real-Time Updates** | Changes reflect in Google Ads within hours, not days |
 | **Match Rate Reporting** | See exactly how many accounts Google can match |
 
-![Google Customer Match](/img/screenshots/google-customer-match-integrations.png)
-*Google Customer Match integration status*
+![Settings > Integrations page](/img/screenshots/integrations-hub.png)
+*Navigate to Settings > Integrations and scroll down to the Advertising section to find Google Ads / Customer Match*
 
 :::tip Pro Tip
 Combine Google Customer Match with LinkedIn DMP for comprehensive multi-channel ABM advertising that follows accounts wherever they browse.
@@ -101,8 +101,8 @@ Push your Abmatic audiences directly to LinkedIn for precise B2B advertising. Ta
 | **Segment Analytics** | Track audience size and match rates over time |
 | **Lookalike Support** | Create lookalike audiences from your best customers |
 
-![LinkedIn Ads Integration](/img/screenshots/linkedin-ads-integration.png)
-*LinkedIn Ads integration for audience sync*
+![Settings > Integrations page](/img/screenshots/integrations-hub.png)
+*Navigate to Settings > Integrations and scroll down to the Advertising section to find LinkedIn Ads*
 
 **Learn More:** [LinkedIn DMP](/audiences/linkedin-dmp)
 

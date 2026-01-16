@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 77 / 78
-- **Current:** Task 122
+- **Completed:** 78 / 78
+- **Current:** Task 200 (DEPLOY)
 
 ---
 
@@ -992,3 +992,20 @@
 **Notes:** This is a comprehensive JavaScript SDK documentation page with code examples for core methods (identify, track, page), personalization methods (getVisitor, onReady), conversion tracking, framework integration (React, Vue, Next.js, Angular), and troubleshooting. No screenshots are needed or expected (appPath: "none").
 
 **Fixed:** No issues found - all checks passed.
+
+### Task 122: docs/changelog.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (4 screenshots - appropriate for release notes page highlighting key features)
+- INCORRECT: ✅ Pass (all screenshots fully loaded with all UI elements visible)
+- INCOMPLETE: ✅ Pass (all show actual app content, not login pages)
+- NON-CONTEXTUAL: ❌ FIXED - 2 screenshots showed CRM integrations page instead of specific advertising integrations
+
+**Screenshots verified:**
+1. ai-agents-hub.png - AI Agents page showing "Meet Your AI Partner" with Clara - AI ABM card - matches caption about AI agents
+2. analytics-dashboards.png - Analytics > DASHBOARDS tab showing 6 dashboards - matches caption about custom dashboards
+3. google-customer-match-integrations.png - Was showing CRM integrations page, not Google Customer Match
+4. linkedin-ads-integration.png - Was showing CRM integrations page (identical to #3), not LinkedIn Ads
+
+**Fixed:**
+1. Replaced google-customer-match-integrations.png with integrations-hub.png and updated caption to explain users need to scroll to Advertising section for Google Ads
+2. Replaced linkedin-ads-integration.png with integrations-hub.png and updated caption to explain users need to scroll to Advertising section for LinkedIn Ads

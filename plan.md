@@ -102,7 +102,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 113, "docPath": "docs/faq/integrations.md", "appPath": "/integrations", "passes": true},
     {"id": 120, "docPath": "docs/api/overview.md", "appPath": "none", "passes": true},
     {"id": 121, "docPath": "docs/api/javascript-sdk.md", "appPath": "none", "passes": true},
-    {"id": 122, "docPath": "docs/changelog.md", "appPath": "various", "passes": false},
+    {"id": 122, "docPath": "docs/changelog.md", "appPath": "various", "passes": true},
     {"id": 200, "docPath": "DEPLOY", "appPath": "all", "passes": false}
   ]
 }
