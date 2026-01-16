@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 4 / 78
-- **Current:** Task 5
+- **Completed:** 5 / 78
+- **Current:** Task 6
 
 ---
 
@@ -49,3 +49,18 @@
 **Fixed:**
 1. Replaced first-campaign-list.png (was login page → now shows Campaigns page with list)
 2. Replaced first-campaign-type-modal.png (was login page → now shows Create Campaign modal with campaign types)
+
+### Task 5: docs/getting-started/use-cases.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (4 screenshots - appropriate coverage for overview page)
+- INCORRECT: ✅ Pass (all screenshots load properly, fully rendered)
+- INCOMPLETE: ✅ Pass (all show actual app content, none are login pages)
+- NON-CONTEXTUAL: ✅ Pass (all screenshots match their alt text context)
+
+**Screenshots verified:**
+1. home-dashboard.png - Dashboard with key metrics (Accounts, Contacts, Reports, Campaigns, Collections)
+2. campaigns-list.png - Campaigns table with personalization campaigns and status
+3. integrations-hub.png - Settings > Integrations with CRM connections (Salesforce, HubSpot, etc.)
+4. analytics-reports.png - Analytics Reports page with opportunity and campaign reports
+
+**Fixed:** No issues found - all checks passed.
