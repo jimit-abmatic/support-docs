@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 2 / 78
-- **Current:** Task 3
+- **Completed:** 3 / 78
+- **Current:** Task 4
 
 ---
 
@@ -29,3 +29,12 @@
 **Fixed:**
 1. Replaced settings-script.png with installation-script.png (same page - shows Installation with "Active" status)
 2. Removed welcome-page.png reference from doc (first-time onboarding screen not accessible for existing accounts)
+
+### Task 3: docs/getting-started/install-script.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (2 screenshot references using installation-script.png - appropriate for page)
+- INCORRECT: ✅ Pass (screenshot loads properly, shows full content)
+- INCOMPLETE: ✅ Pass (shows actual Installation page, not login)
+- NON-CONTEXTUAL: ✅ Pass (screenshot shows script tag + "Active" status matching doc context)
+
+**Fixed:** No issues found - all checks passed.
