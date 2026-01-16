@@ -55,7 +55,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 37, "docPath": "docs/audiences/linkedin-dmp.md", "appPath": "/accounts", "passes": true},
     {"id": 38, "docPath": "docs/audiences/google-customer-match.md", "appPath": "/accounts", "passes": true},
     {"id": 40, "docPath": "docs/visitor-tracking/overview.md", "appPath": "/reveal/accounts", "passes": true},
-    {"id": 41, "docPath": "docs/visitor-tracking/company-identification.md", "appPath": "/reveal/accounts", "passes": false},
+    {"id": 41, "docPath": "docs/visitor-tracking/company-identification.md", "appPath": "/reveal/accounts", "passes": true},
     {"id": 42, "docPath": "docs/visitor-tracking/contact-reveal.md", "appPath": "/reveal/contacts", "passes": false},
     {"id": 43, "docPath": "docs/visitor-tracking/page-views.md", "appPath": "/reveal/accounts", "passes": false},
     {"id": 44, "docPath": "docs/visitor-tracking/form-tracking.md", "appPath": "/conversions", "passes": false},
