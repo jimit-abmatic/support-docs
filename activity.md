@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 67 / 78
-- **Current:** Task 101
+- **Completed:** 68 / 78
+- **Current:** Task 102
 
 ---
 
@@ -857,5 +857,17 @@
 
 **Screenshots verified:**
 1. installation-script.png - Installation page showing "Installation" header, step 1 "Copy the javascript tag" with script code, step 2 "Paste into <head> section", step 3 "Check that the code works", Status: "Active" (purple badge), "Last visitor: 3 minutes ago" link
+
+**Fixed:** No issues found - all checks passed.
+
+### Task 101: docs/troubleshooting/script-issues.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (1 screenshot - appropriate for troubleshooting page focused on code examples, tables, and text-based diagnosis steps)
+- INCORRECT: ✅ Pass (screenshot fully loaded - shows complete Installation page with all elements visible: header, 3 steps, script code, Status badge, Last visitor link)
+- INCOMPLETE: ✅ Pass (shows actual Installation page, not login page)
+- NON-CONTEXTUAL: ✅ Pass (screenshot matches alt text "Installation page showing script and status" - shows script tag, "Active" status, "Last visitor: 14 minutes ago")
+
+**Screenshots verified:**
+1. installation-script.png - Installation page showing "Installation" header, step 1 "Copy the javascript tag" with script code in dark box, step 2 "Paste into <head> section of your sites", step 3 "Check that the code works", Status: "Active" (purple badge), "Last visitor: 14 minutes ago" link
 
 **Fixed:** No issues found - all checks passed.
