@@ -4,16 +4,37 @@ Read `plan.md` and `activity.md` first, then complete the NEXT incomplete task.
 
 ## Your Mission
 
-You are fixing 4 critical screenshot quality issues in the Abmatic AI support documentation:
+Fix ALL 4 screenshot quality issues on EACH page before moving to the next:
 
 1. **INSUFFICIENT** - Not enough screenshots to explain features
 2. **INCORRECT** - Screenshots captured too early (blank/loading states)
 3. **INCOMPLETE** - Screenshots show login page instead of actual content
 4. **NON-CONTEXTUAL** - Screenshots don't match surrounding text
 
+---
+
+## CRITICAL: PAGE-BY-PAGE APPROACH
+
+**DO NOT rush. DO NOT skip pages. DO NOT do partial work.**
+
+For EACH documentation page, you MUST:
+
+1. **READ the entire doc file** - Understand what it's teaching
+2. **CHECK all 4 dimensions** for EVERY screenshot on that page:
+   - Is it SUFFICIENT? (enough screenshots for each step?)
+   - Is it CORRECT? (data loaded, no spinners?)
+   - Is it COMPLETE? (not a login page?)
+   - Is it CONTEXTUAL? (matches the text around it?)
+3. **FIX all issues** on that page before moving on
+4. **VERIFY** the page is perfect
+5. **THEN** move to the next page
+
+**ONE PAGE AT A TIME. ALL 4 CHECKS. NO EXCEPTIONS.**
+
+---
+
 ## Environment Setup
 
-**Credentials are exported - use them:**
 ```bash
 export ABMATIC_EMAIL="jimit@abmatic.ai"
 export ABMATIC_PASSWORD="WallyZoey123"
@@ -25,245 +46,323 @@ export ABMATIC_BASE_URL="https://app.abmatic.ai"
 - Screenshots: `/Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/`
 - Scripts: `/Users/jimabmatic.ai/abmatic/support-docs/scripts/screenshots/`
 
-## Task Execution Steps
-
-### For Each Task:
-
-1. **Find next task** - Look for first `"passes": false` in plan.md
-2. **Read the doc** - Read the file at `docPath`
-3. **Analyze screenshots needed** - What screenshots does the text reference or need?
-4. **Execute based on task type** (see below)
-5. **Verify** - Run build: `cd /Users/jimabmatic.ai/abmatic/support-docs && npm run build`
-6. **Update activity.md** - Log what you did with details
-7. **Mark complete** - Set `"passes": true` in plan.md
-8. **Git commit** - Commit changes: `git add -A && git commit -m "docs: [task description]"`
-
 ---
 
-## Task Type Instructions
+## Task Execution: The 4-Dimension Check
 
-### TYPE: "audit" - Screenshot Audit Tasks
+For each page task, follow this EXACT process:
 
-Run the audit tool and document findings:
+### Step 1: Read the Documentation Page
 
 ```bash
-cd /Users/jimabmatic.ai/abmatic/support-docs
-ABMATIC_EMAIL="jimit@abmatic.ai" ABMATIC_PASSWORD="WallyZoey123" npx ts-node scripts/screenshots/multi-capture.ts audit ./static/img/screenshots
+cat /Users/jimabmatic.ai/abmatic/support-docs/docs/[path-to-doc].md
 ```
 
-Document:
-- Files with quality issues
-- Files that are too small (likely blank)
-- Files that need recapture
+Understand:
+- What is this page teaching?
+- What steps does it describe?
+- What UI elements does it mention?
+- What actions should the user take?
 
-### TYPE: "insufficient" - Add More Screenshots
+### Step 2: List All Current Screenshots
 
-For pages that need MORE screenshots:
+Find all image references in the doc:
+```bash
+grep -n "!\[" /Users/jimabmatic.ai/abmatic/support-docs/docs/[path-to-doc].md
+```
 
-1. Read the doc file completely
-2. Identify each step, feature, or section that should have a screenshot
-3. For EACH missing screenshot:
-   - Use multi-capture to get best timing:
-   ```bash
-   cd /Users/jimabmatic.ai/abmatic/support-docs
-   ABMATIC_EMAIL="jimit@abmatic.ai" ABMATIC_PASSWORD="WallyZoey123" npx ts-node scripts/screenshots/multi-capture.ts multi <name> <appPath>
-   ```
-   - This captures at 5s, 10s, 15s, 20s, 30s and picks the best
-   - Review the output scores - use the one with highest score
-4. Add screenshot references to the doc: `![Description](/img/screenshots/name.png)`
-5. Ensure each major step has a visual
+For each screenshot found, note:
+- Line number
+- Alt text
+- File path
+- What it's supposed to show
 
-**Insufficiency Checklist:**
-- [ ] Every "Step N" or "How to" section has a screenshot
-- [ ] Every settings panel mentioned has a visual
-- [ ] Every button/action mentioned is shown
-- [ ] Before/after states are shown where relevant
-- [ ] Error states and success states are documented
+### Step 3: Run the 4-Dimension Check on EACH Screenshot
 
-### TYPE: "incorrect" - Fix Timing Issues
+#### CHECK 1: INSUFFICIENT?
+Ask yourself for EACH section of the doc:
+- Does this step have a screenshot? If not, it's INSUFFICIENT
+- Does the user need to see something to understand? If yes and no screenshot, it's INSUFFICIENT
+- Are there enough screenshots to follow along? If user would be lost, it's INSUFFICIENT
 
-For screenshots that were captured too early (blank/loading):
+**What to look for:**
+- "Step 1", "Step 2", etc. - each needs a screenshot
+- "Click the X button" - needs a screenshot showing the button
+- "You'll see the Y panel" - needs a screenshot of the panel
+- "Configure the settings" - needs a screenshot of settings
+- "The result will look like" - needs a screenshot of result
 
-1. Identify screenshots that show:
-   - Loading spinners
-   - Blank/white content areas
-   - "Loading..." text
-   - Skeleton screens
-2. Re-capture using multi-capture with ALL delays:
-   ```bash
-   ABMATIC_EMAIL="jimit@abmatic.ai" ABMATIC_PASSWORD="WallyZoey123" npx ts-node scripts/screenshots/multi-capture.ts multi <name> <appPath>
-   ```
-3. Review all 5 versions (5s, 10s, 15s, 20s, 30s)
-4. Pick the one with:
-   - Highest score (shown in output)
-   - Actual data visible
-   - No loading indicators
-5. The tool automatically copies the best one to `<name>.png`
-6. Verify the final screenshot manually by opening it
+#### CHECK 2: INCORRECT?
+For EACH existing screenshot, open and verify:
+```bash
+# Check file size (small = likely blank/loading)
+ls -la /Users/jimabmatic.ai/abmatic/support-docs/static/img/screenshots/[name].png
+```
 
-**Timing Quality Checklist:**
-- [ ] No loading spinners visible
-- [ ] Tables have actual data rows
-- [ ] Charts have rendered data
-- [ ] Text content is loaded
-- [ ] Navigation is fully loaded
+**Signs of INCORRECT screenshots:**
+- File size < 50KB (likely blank or loading)
+- Loading spinners visible
+- "Loading..." text
+- Empty tables
+- Blank content areas
+- Skeleton screens
 
-### TYPE: "incomplete" - Fix Login Page Screenshots
+**To fix:** Recapture with multi-delay:
+```bash
+cd /Users/jimabmatic.ai/abmatic/support-docs
+ABMATIC_EMAIL="jimit@abmatic.ai" ABMATIC_PASSWORD="WallyZoey123" npx ts-node scripts/screenshots/multi-capture.ts multi [name] [appPath]
+```
 
-For screenshots that show login page instead of actual content:
+This captures at 5s, 10s, 15s, 20s, 30s and picks the best one.
 
-**This is CRITICAL - login pages are useless to users!**
+#### CHECK 3: INCOMPLETE?
+For EACH existing screenshot, verify it's NOT a login page:
 
-1. The multi-capture tool handles login automatically
-2. If you still get login pages, do this manually:
-   ```typescript
-   // In a script, ensure login first:
-   await page.goto('https://app.abmatic.ai/login');
-   await page.fill('input[type="email"]', process.env.ABMATIC_EMAIL);
-   await page.fill('input[type="password"]', process.env.ABMATIC_PASSWORD);
-   await page.click('button:has-text("SIGN IN")');
-   await page.waitForURL('**/home-dashboard**', { timeout: 60000 });
-   // Now navigate to target page
-   ```
-3. After login, wait 5 seconds before navigating
-4. Check the URL after navigation - if it contains `/login`, session failed
-5. Re-capture with longer initial delay (30s)
+**Signs of INCOMPLETE (login page) screenshots:**
+- "Sign In" or "Log In" button visible
+- Email/password input fields
+- "Forgot password?" link
+- URL shows /login
+- No navigation sidebar
 
-**Login Check Indicators:**
-- URL contains `/login`
-- "Sign In" button visible
-- Email/password input fields visible
-- "Forgot password" link visible
+**To fix:** The multi-capture tool handles login automatically. If still getting login pages:
+1. Session may have expired
+2. Wait longer before capture
+3. Verify login succeeded before navigating
 
-### TYPE: "contextual" - Match Screenshots to Text
+#### CHECK 4: NON-CONTEXTUAL?
+For EACH screenshot, read the text BEFORE and AFTER it:
 
-For screenshots that don't match the surrounding documentation text:
+**Ask yourself:**
+- Does the screenshot show EXACTLY what the text describes?
+- Is the alt text accurate and descriptive?
+- Is the screenshot in the RIGHT place in the doc?
+- Would a user understand the connection between text and image?
 
-1. Read the FULL section around each screenshot
-2. Ask yourself:
-   - Does the screenshot show what the text describes?
-   - Is the screenshot of the correct page/feature?
-   - Does the alt text match what's shown?
-   - Is the screenshot in the right order?
-3. If mismatched:
-   - Identify what the text actually describes
-   - Navigate to that exact screen
-   - Capture the correct content
-   - Update the image reference
-4. Update alt text to be descriptive: `![Creating a new campaign in the wizard](/img/screenshots/campaign-wizard.png)`
+**Signs of NON-CONTEXTUAL:**
+- Text says "click the blue button" but screenshot shows different screen
+- Text describes feature X but screenshot shows feature Y
+- Alt text says "Dashboard" but image shows settings page
+- Screenshot placed after wrong paragraph
 
-**Context Checklist:**
-- [ ] Screenshot shows exactly what text describes
-- [ ] Alt text accurately describes the image
-- [ ] Screenshot is placed right after/before the relevant text
-- [ ] Any UI elements mentioned in text are visible in screenshot
-- [ ] Screenshot shows the same example data mentioned in text
+**To fix:**
+1. Identify what the text ACTUALLY describes
+2. Navigate to that exact screen
+3. Capture the correct content
+4. Update the image reference and alt text
 
-### TYPE: "deploy" - Deploy and Verify
+### Step 4: Make All Fixes for This Page
 
-Final deployment task:
+Do ALL fixes needed:
+1. Add missing screenshots (INSUFFICIENT)
+2. Recapture bad timing screenshots (INCORRECT)
+3. Recapture login page screenshots (INCOMPLETE)
+4. Replace mismatched screenshots (NON-CONTEXTUAL)
+5. Update alt text to be descriptive
 
-1. Build the docs:
+### Step 5: Verify the Page is Perfect
+
+After fixes:
+1. Read through the doc again
+2. Verify EVERY screenshot now passes all 4 checks
+3. Run build to catch broken links:
    ```bash
    cd /Users/jimabmatic.ai/abmatic/support-docs && npm run build
    ```
-2. Deploy to S3:
+
+### Step 6: Update Tracking Files
+
+1. Log everything in activity.md:
+   - What you checked
+   - What issues you found (all 4 dimensions)
+   - What you fixed
+   - Screenshots added/modified
+
+2. Mark task complete in plan.md
+
+3. Git commit:
    ```bash
-   aws s3 sync /Users/jimabmatic.ai/abmatic/support-docs/build s3://support-abmatic-ai --delete
+   git add -A && git commit -m "docs([page-name]): complete 4-dimension screenshot review"
    ```
-3. Invalidate CloudFront:
-   ```bash
-   aws cloudfront create-invalidation --distribution-id EWO3Z3VNLFUQ2 --paths "/*"
-   ```
-4. Wait for invalidation to complete:
-   ```bash
-   aws cloudfront get-invalidation --distribution-id EWO3Z3VNLFUQ2 --id <invalidation-id> --query 'Invalidation.Status' --output text
-   ```
-5. Verify with Playwright:
-   ```bash
-   cd /Users/jimabmatic.ai/abmatic/support-docs
-   npx playwright test --project=chromium || echo "No test file, doing manual verification"
-   ```
-6. Manual verification checklist:
-   - [ ] Homepage loads: https://support.abmatic.ai
-   - [ ] Navigation works
-   - [ ] Images load (check Network tab)
-   - [ ] Search works
+
+### Step 7: Move to Next Page
+
+Only after the current page passes ALL 4 CHECKS do you move on.
 
 ---
 
-## Multi-Capture Output Explanation
+## Screenshot Capture Commands
 
-When you run `multi-capture.ts multi <name> <path>`, you'll see:
-
-```
-Multi-capturing: dashboard
-  URL: https://app.abmatic.ai/home-dashboard
-  Delays: 5s, 10s, 15s, 20s, 30s
-  Waiting 5s...
-  Captured: dashboard_5s.png (score: 45)
-    - Loading indicator found: "Loading..."
-  Waiting 10s...
-  Captured: dashboard_10s.png (score: 65)
-  Waiting 15s...
-  Captured: dashboard_15s.png (score: 85)
-  Waiting 20s...
-  Captured: dashboard_20s.png (score: 85)
-  Waiting 30s...
-  Captured: dashboard_30s.png (score: 85)
-  Best: dashboard_15s.png (score: 85) -> dashboard.png
+### Multi-Capture (Recommended - handles timing automatically)
+```bash
+cd /Users/jimabmatic.ai/abmatic/support-docs
+ABMATIC_EMAIL="jimit@abmatic.ai" ABMATIC_PASSWORD="WallyZoey123" npx ts-node scripts/screenshots/multi-capture.ts multi [name] [appPath]
 ```
 
-**Score Breakdown:**
-- +30: Not on login page
-- +20: Has meaningful content
-- +20: No loading spinners
-- +15: Has tables/charts with data
-- +15: Main content area populated
+This will:
+- Login automatically
+- Navigate to the page
+- Wait 5s → capture
+- Wait 10s → capture
+- Wait 15s → capture
+- Wait 20s → capture
+- Wait 30s → capture
+- Score each capture
+- Pick the best one (highest score)
+- Copy best to final filename
 
-**Minimum acceptable score: 50**
+### App Paths Reference
+
+| Feature | App Path |
+|---------|----------|
+| Dashboard | /home-dashboard |
+| AI Agents Hub | /ai-agents |
+| Alex (SDR Agent) | /ai-agents/alex |
+| Clara (ABM Agent) | /ai-agents/clara |
+| Campaigns List | /campaigns |
+| Accounts | /accounts |
+| Contacts | /contacts |
+| Groups | /groups |
+| Visitor Reveal | /reveal/accounts |
+| Contact Reveal | /reveal/contacts |
+| Conversions | /conversions |
+| Integrations | /integrations |
+| Analytics Reports | /analytics/reports |
+| Analytics Dashboards | /analytics/dashboards |
+| Settings Account | /settings/account-info |
+| Settings Users | /settings/users |
+| Settings Billing | /settings/usage |
+| Installation | /installation |
+
+---
+
+## Quality Scoring
+
+When multi-capture runs, it scores each screenshot:
+
+```
+Score 100 = Perfect screenshot
+  +30: Not on login page
+  +20: Has meaningful content
+  +20: No loading spinners
+  +15: Has tables/charts with data
+  +15: Main content area populated
+
+Minimum acceptable: 50
+```
+
+If best score < 50, there's still an issue. Try:
+- Longer delays
+- Different app path
+- Check if feature requires specific data
+
+---
+
+## Activity Log Format
+
+For EACH page, log in activity.md:
+
+```markdown
+---
+### [Page Name] - [Date]
+**Doc Path:** docs/[category]/[file].md
+**App Path:** /[path]
+
+**4-DIMENSION CHECK RESULTS:**
+
+| Check | Status | Issues Found | Action Taken |
+|-------|--------|--------------|--------------|
+| INSUFFICIENT | [PASS/FAIL] | [details] | [what you did] |
+| INCORRECT | [PASS/FAIL] | [details] | [what you did] |
+| INCOMPLETE | [PASS/FAIL] | [details] | [what you did] |
+| NON-CONTEXTUAL | [PASS/FAIL] | [details] | [what you did] |
+
+**Screenshots Before:** [count]
+**Screenshots After:** [count]
+**Screenshots Added:** [list]
+**Screenshots Recaptured:** [list]
+
+**Build Status:** PASS
+**Git Commit:** [hash]
+---
+```
 
 ---
 
 ## Completion Signals
 
-- **ALL tasks done?** Output: `<promise>COMPLETE</promise>`
-- **More tasks remain?** Just finish normally (loop will restart you)
-- **Cannot proceed?** Output: `<promise>STUCK</promise>` and explain why in activity.md
+- **ALL pages done?** Output: `<promise>COMPLETE</promise>`
+- **More pages remain?** Just finish normally (loop will restart you)
+- **Cannot proceed?** Output: `<promise>STUCK</promise>` and explain why
 
 ---
 
 ## Golden Rules
 
-1. **NEVER commit screenshots of login pages** - These are useless
-2. **ALWAYS wait for data to load** - Use multi-capture to ensure this
-3. **ALWAYS verify screenshots manually** - Open them and check
-4. **ALWAYS update activity.md** - Future iterations need to know what you did
-5. **ALWAYS run build before marking complete** - Catch broken links
-6. **ONE task per iteration** - Don't try to do multiple tasks
-7. **Git commit after EVERY completed task** - Keep history clean
+1. **ONE PAGE AT A TIME** - Do not try to batch multiple pages
+2. **ALL 4 CHECKS** - Every page gets all 4 dimension checks
+3. **NO SKIPPING** - Even if a page looks fine, verify it
+4. **FIX EVERYTHING** - Don't leave partial work
+5. **VERIFY VISUALLY** - Open screenshots and look at them
+6. **DESCRIPTIVE ALT TEXT** - Not "screenshot" but "Campaign list showing active campaigns with engagement metrics"
+7. **BUILD MUST PASS** - Always verify build before marking complete
+8. **COMMIT EACH PAGE** - One commit per page completed
 
 ---
 
-## Quick Reference Commands
+## Example: Reviewing a Page
 
-```bash
-# Multi-capture a screenshot (captures at 5s, 10s, 15s, 20s, 30s)
-cd /Users/jimabmatic.ai/abmatic/support-docs
-ABMATIC_EMAIL="jimit@abmatic.ai" ABMATIC_PASSWORD="WallyZoey123" npx ts-node scripts/screenshots/multi-capture.ts multi <name> <appPath>
+**Task: Review docs/campaigns/overview.md**
 
-# Audit all screenshots
-ABMATIC_EMAIL="jimit@abmatic.ai" ABMATIC_PASSWORD="WallyZoey123" npx ts-node scripts/screenshots/multi-capture.ts audit
+1. **Read the doc** - It's about campaign management, lists features, explains types
 
-# Validate a doc's screenshots
-npx ts-node scripts/screenshots/multi-capture.ts validate docs/campaigns/overview.md
+2. **Find screenshots:**
+   ```
+   Line 15: ![Campaigns list](/img/screenshots/campaigns-list.png)
+   Line 45: ![Create campaign](/img/screenshots/campaign-create.png)
+   ```
 
-# Build docs
-npm run build
+3. **4-Dimension Check:**
 
-# Deploy
-aws s3 sync build s3://support-abmatic-ai --delete
+   **INSUFFICIENT?**
+   - Line 25 says "Click the Create Campaign button" - no screenshot showing button → ADD
+   - Line 60 describes campaign types - no screenshot → ADD
+   - Line 80 explains filters - no screenshot → ADD
 
-# Invalidate cache
-aws cloudfront create-invalidation --distribution-id EWO3Z3VNLFUQ2 --paths "/*"
-```
+   **INCORRECT?**
+   - campaigns-list.png is 45KB - might be loading state → CHECK visually
+   - Open file, see loading spinner → RECAPTURE with multi-delay
+
+   **INCOMPLETE?**
+   - campaign-create.png shows actual modal, not login → OK
+
+   **NON-CONTEXTUAL?**
+   - Text at line 15 talks about "viewing all campaigns" - screenshot shows list → OK
+   - Alt text says "Campaigns list" but should be more descriptive → UPDATE
+
+4. **Fix:**
+   - Recapture campaigns-list with multi-delay
+   - Add 3 new screenshots
+   - Update alt text
+
+5. **Verify:** Build passes, all images load
+
+6. **Log and commit**
+
+---
+
+## Page Order
+
+Work through docs in this order:
+1. getting-started/* (most important for new users)
+2. campaigns/* (core feature)
+3. ai-agents/* (key differentiator)
+4. audiences/* (data management)
+5. visitor-tracking/* (tracking features)
+6. conversions/* (goal tracking)
+7. integrations/* (connections)
+8. analytics/* (reporting)
+9. settings/* (configuration)
+10. troubleshooting/* (support)
+11. faq/* (common questions)
+12. api/* (developer docs)

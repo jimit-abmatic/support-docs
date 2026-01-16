@@ -3,8 +3,8 @@
 ## Current Status
 **Last Updated:** 2026-01-16
 **Phase:** 1 - Audit
-**Tasks Completed:** 3 / 40+
-**Current Task:** Task 3 - Campaigns docs audit (COMPLETE)
+**Tasks Completed:** 4 / 40+
+**Current Task:** Task 4 - Integrations docs audit (COMPLETE)
 
 ## Summary of Issues to Fix
 
@@ -249,6 +249,132 @@ Heavy reuse of same screenshots for different contexts:
 - Task 5: Audit remaining docs
 ---
 
+### Session 4 - 2026-01-16
+**Task ID:** 4
+**Task Type:** audit
+**Description:** AUDIT: Check Integrations docs for screenshot gaps
+
+**Actions Taken:**
+1. Read all 14 files in docs/integrations/ (including crm/ and advertising/ subdirs)
+2. Counted screenshots per doc file
+3. Analyzed content for missing visual aids
+4. Identified heavy reliance on single integrations-hub.png screenshot
+
+**Screenshot Counts by File:**
+
+| File | Screenshots | Images Used | Issues |
+|------|-------------|-------------|--------|
+| overview.md | 1 | integrations-hub.png | INSUFFICIENT - needs status indicators, CRM priority drag, connection flow |
+| crm/hubspot.md | 1 | integrations-hub.png (reused) | INSUFFICIENT - needs OAuth flow, settings panel, field mapping, activity log |
+| crm/hubspot-setup.md | 1 | hubspot-settings.png | INSUFFICIENT - needs OAuth screen, settings tabs, field mapping UI, sync status |
+| crm/salesforce.md | 1 | integrations-hub.png (reused) | INSUFFICIENT - needs OAuth flow, Leads tab, Campaigns tab, activity log |
+| crm/salesforce-setup.md | 1 | integrations-hub.png (reused) | INSUFFICIENT - needs OAuth screen, account selector, field mapping, sync frequency |
+| crm/pipedrive.md | 1 | integrations-hub.png (reused) | INSUFFICIENT - needs OAuth, settings tabs, import flow, push flow |
+| crm/outreach.md | 1 | integrations-hub.png (reused) | INSUFFICIENT - needs OAuth, settings tabs, prospect sync |
+| crm/activecampaign.md | 1 | integrations-hub.png (reused) | INSUFFICIENT - needs API key entry, settings, list import |
+| crm/sync-behavior.md | 0 | None | INSUFFICIENT - needs fill vs overwrite visual, field mapping table UI |
+| slack.md | 1 | settings-slack.png | MODERATE - has good screenshot but needs channel filter config, notification types |
+| google-analytics.md | 2 | integrations-hub.png, conversions-manage.png | MODERATE - needs OAuth flow, property selector, custom dimension setup |
+| segment.md | 2 | integrations-hub.png, conversions-manage.png | MODERATE - needs API key copy UI, Segment destination setup reference |
+| advertising/linkedin-ads.md | 1 | integrations-hub.png (reused) | INSUFFICIENT - needs OAuth, account selector, Matched Audience creation flow |
+| advertising/google-ads.md | 1 | integrations-hub.png (reused) | INSUFFICIENT - needs OAuth, account selector, Customer Match creation flow |
+
+**Critical Findings:**
+
+**MAJOR ISSUE - Excessive Reuse of integrations-hub.png:**
+- This single screenshot is used in 11 different docs
+- It provides ZERO context for specific integration setup steps
+- Each CRM/ad platform has unique OAuth flows and settings panels not shown
+
+**INSUFFICIENT (Needs 3+ More Screenshots per File):**
+
+**overview.md needs:**
+- Connection status indicators (Active/Inactive/Error badges)
+- CRM priority drag-and-drop demonstration
+- OAuth authorization popup example
+- Connected vs disconnected state comparison
+
+**hubspot.md & hubspot-setup.md need:**
+- HubSpot OAuth authorization screen
+- Settings panel with Accounts/Contacts/Opportunities tabs
+- Field mapping table showing Fill/Overwrite options
+- Activity Log tab with sync history
+- "Last Sync" timestamps display
+
+**salesforce.md & salesforce-setup.md need:**
+- Salesforce OAuth login screen
+- Salesforce-specific Leads and Campaigns tabs
+- Account selector dialog for multi-org users
+- Field mapping with Salesforce field names
+- Campaign member status mapping
+
+**pipedrive.md needs:**
+- Pipedrive OAuth screen
+- Organization/Person/Deal sync tabs
+- Import from Pipedrive flow
+- Push to Pipedrive confirmation
+
+**outreach.md needs:**
+- Outreach OAuth screen
+- Account/Prospect sync settings
+- Auto-push configuration
+- Activity log examples
+
+**activecampaign.md needs:**
+- API URL and Key entry fields
+- List/Tag/Segment import selector
+- Contact sync settings panel
+
+**sync-behavior.md needs:**
+- Visual comparison of Fill vs Overwrite behavior
+- Field mapping table with sync direction arrows
+- Two-way sync conflict resolution diagram
+
+**slack.md needs (beyond current screenshot):**
+- Channel filter configuration panel
+- Notification type toggles
+- Message customization options
+- DM notification setup
+
+**google-analytics.md needs:**
+- Google OAuth account selector
+- GA4 property selector
+- Custom dimension configuration
+- Goal import view
+
+**segment.md needs:**
+- API key copy dialog
+- Segment destination setup (reference screenshot)
+- Event import confirmation
+
+**linkedin-ads.md needs:**
+- LinkedIn OAuth authorization
+- Ad account selector
+- Matched Audience creation progress stepper
+- Push confirmation dialog
+
+**google-ads.md needs:**
+- Google Ads OAuth authorization
+- Account selector dialog
+- Customer Match creation progress
+- Processing status indicators
+
+**Summary Statistics:**
+- Total files: 14
+- Files with 1 screenshot: 11
+- Files with 2 screenshots: 2
+- Files with 0 screenshots: 1
+- Files using integrations-hub.png: 11 (heavy reuse)
+- Average screenshots per file: 1.1
+- Minimum recommended per file: 3-5
+
+**Build Status:** N/A (audit only)
+**Git Commit:** Pending
+
+**Next Steps:**
+- Task 5: Audit remaining docs (audiences, analytics, settings, visitor-tracking, conversions)
+---
+
 ### Session Start Template
 ```
 ---
@@ -328,17 +454,20 @@ Heavy reuse of same screenshots for different contexts:
 ### Integrations Docs
 | File | Current Screenshots | Issues | Needed |
 |------|---------------------|--------|--------|
-| overview.md | | | |
-| hubspot.md | | | |
-| salesforce.md | | | |
-| pipedrive.md | | | |
-| outreach.md | | | |
-| activecampaign.md | | | |
-| slack.md | | | |
-| google-analytics.md | | | |
-| segment.md | | | |
-| linkedin-ads.md | | | |
-| google-ads.md | | | |
+| overview.md | 1 (integrations-hub.png) | INSUFFICIENT | Status indicators, CRM priority, OAuth example |
+| crm/hubspot.md | 1 (reused) | INSUFFICIENT | OAuth, settings tabs, field mapping, activity log |
+| crm/hubspot-setup.md | 1 | INSUFFICIENT | OAuth screen, settings tabs, sync status |
+| crm/salesforce.md | 1 (reused) | INSUFFICIENT | OAuth, Leads/Campaigns tabs, activity log |
+| crm/salesforce-setup.md | 1 (reused) | INSUFFICIENT | OAuth, account selector, field mapping |
+| crm/pipedrive.md | 1 (reused) | INSUFFICIENT | OAuth, settings tabs, import/push flows |
+| crm/outreach.md | 1 (reused) | INSUFFICIENT | OAuth, settings, auto-push config |
+| crm/activecampaign.md | 1 (reused) | INSUFFICIENT | API key entry, list import, sync settings |
+| crm/sync-behavior.md | 0 | INSUFFICIENT | Fill vs Overwrite visual, field mapping UI |
+| slack.md | 1 | MODERATE | Channel filter config, notification toggles |
+| google-analytics.md | 2 | MODERATE | OAuth, property selector, dimension setup |
+| segment.md | 2 | MODERATE | API key copy UI, destination setup |
+| advertising/linkedin-ads.md | 1 (reused) | INSUFFICIENT | OAuth, account selector, audience creation |
+| advertising/google-ads.md | 1 (reused) | INSUFFICIENT | OAuth, account selector, Customer Match flow |
 
 ### Analytics Docs
 | File | Current Screenshots | Issues | Needed |
