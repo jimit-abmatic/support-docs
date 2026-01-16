@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 68 / 78
-- **Current:** Task 102
+- **Completed:** 69 / 78
+- **Current:** Task 103
 
 ---
 
@@ -857,6 +857,18 @@
 
 **Screenshots verified:**
 1. installation-script.png - Installation page showing "Installation" header, step 1 "Copy the javascript tag" with script code, step 2 "Paste into <head> section", step 3 "Check that the code works", Status: "Active" (purple badge), "Last visitor: 3 minutes ago" link
+
+**Fixed:** No issues found - all checks passed.
+
+### Task 102: docs/troubleshooting/crm-sync.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (1 screenshot - appropriate for comprehensive troubleshooting page with extensive tables for diagnostics, solutions, and CRM-specific issues)
+- INCORRECT: ✅ Pass (screenshot fully loaded with all UI elements visible - CRM cards with logos, Active/Inactive badges, SETTINGS buttons, AUTHORIZE/DISABLE buttons, Communications section)
+- INCOMPLETE: ✅ Pass (shows actual Settings > Integrations page, not login page)
+- NON-CONTEXTUAL: ✅ Pass (screenshot matches alt text "CRM Integration Status" - shows Salesforce (Active), HubSpot (Active), ActiveCampaign (Inactive), Pipedrive (Inactive) with status badges and action buttons as referenced throughout the troubleshooting steps)
+
+**Screenshots verified:**
+1. integrations-crm-status.png - Settings > Integrations page showing CRM section with 4 CRM cards (Salesforce, HubSpot, ActiveCampaign, Pipedrive), each with logo, description, SETTINGS button, and Active/Inactive status with DISABLE/AUTHORIZE buttons. Also shows Communications section (Gmail, Slack). Matches the doc's instructions for "Go to Integrations" and "Click Disconnect/Connect".
 
 **Fixed:** No issues found - all checks passed.
 
