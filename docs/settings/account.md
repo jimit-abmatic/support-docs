@@ -7,7 +7,7 @@ sidebar_position: 1
 
 # Account Settings
 
-Configure your Abmatic AI account settings and preferences.
+Your Account Settings page is your central hub for managing your Abmatic AI workspace configuration. Here you'll set up your company profile, customize your brand appearance, and control which pages receive personalization—all in one place.
 
 ## Accessing Account Settings
 
@@ -16,91 +16,91 @@ Configure your Abmatic AI account settings and preferences.
 
 ![Account Settings](/img/screenshots/settings-account.png)
 
-## Account Information
+## Account Details
 
-### Company Details
+Keep your account information up-to-date to ensure accurate personalization and reporting across your campaigns.
 
-Update your organization's information:
+| Field | Description |
+|-------|-------------|
+| **Your Email** | The email address associated with your user account (display only) |
+| **Company Name** | Your organization name—used throughout the platform and in reports |
+| **Website URL** | Your primary website URL (e.g., `https://www.abmatic.ai`)—this is where your personalization campaigns run |
 
-- **Company Name** - Your organization name
-- **Website** - Your primary website URL
-- **Industry** - Business sector
-- **Company Size** - Number of employees
+:::tip Admin Privileges
+Only users with **Admin** role can edit Company Name and Website URL. Other team members see these as read-only fields.
+:::
 
-### Contact Information
+## Branding
 
-- **Primary Contact** - Account owner email
-- **Billing Contact** - For billing inquiries
+Make the Abmatic AI chat widget feel like a natural extension of your brand. Customize the appearance so your visitors get a seamless, on-brand experience.
 
-## Account Preferences
+### Company Logo
 
-### Default Settings
+Display your company logo in the chat widget to build trust and brand recognition.
 
-Configure defaults for your account:
+- **Auto-fetch**: Click **Fetch Logo from Website** to automatically pull your logo from your website's domain
+- The logo appears in a circular format in the chat widget header
+- Supported formats: PNG, JPG, SVG
 
-- **Timezone** - Used for scheduling and reporting
-- **Date Format** - How dates are displayed
-- **Currency** - For revenue metrics
+### Primary Color
 
-### Notification Preferences
+Set your brand's primary color for the chat widget interface. This color is used for:
 
-Control what notifications you receive:
+- Chat widget header background
+- Button colors and interactive elements
+- Message styling accents
 
-- Account activity alerts
-- Campaign performance summaries
-- New visitor alerts
-- Weekly digest emails
+Enter a hex color code (e.g., `#6a11cb`) or use the color picker for visual selection.
 
-[Learn more about Notifications →](/settings/notifications)
+## Page Exclude Rules
 
-## Data Settings
+Control exactly which pages receive personalization. Use exclude rules to prevent Abmatic AI from personalizing specific URLs or URL patterns.
 
-### Data Collection
+### When to Use Exclude Rules
 
-Configure what data is collected:
+- **Login/Signup pages**: Exclude authenticated-only sections
+- **Blog content**: Keep editorial content unmodified
+- **Legal pages**: Ensure compliance pages remain unchanged
+- **Internal tools**: Exclude admin or dashboard pages
 
-- **Behavioral tracking** - Page views, clicks, sessions
-- **Form capture** - Automatic form submission tracking
-- **Company identification** - IP-based company reveal
+### How to Configure
 
-### Data Retention
+1. Enter each URL pattern on a separate line
+2. Use `*` as a wildcard to match any characters
+3. Click **Save** to apply your rules
 
-Set how long data is retained:
+**Example patterns:**
 
-- Visitor data retention period
-- Conversion history retention
-- Report data retention
+| Pattern | What It Excludes |
+|---------|------------------|
+| `www.example.com/login` | Exactly the login page |
+| `*/blog/*` | Any page with `/blog/` in the URL |
+| `*/admin/*` | All admin section pages |
+| `*example.com/docs/*` | All documentation pages |
 
-### Excluded URLs
+:::info Wildcard Behavior
+The `*` wildcard matches any sequence of characters. For example, `*/pricing/*` would match both `www.example.com/pricing/enterprise` and `app.example.com/pricing/starter`.
+:::
 
-Prevent tracking on specific pages:
+## Additional Options
 
-1. Go to **Excluded URLs**
-2. Add URLs to exclude
-3. Save changes
+### Flush Cache
 
-## API Access
+Clear cached data to see the latest changes immediately. Useful when:
+- Testing new campaign configurations
+- Troubleshooting display issues
+- Verifying personalization updates
 
-### API Keys
+### Sign Out
 
-Manage API keys for integrations:
+Securely sign out of your Abmatic AI account. Your data and settings are preserved for your next session.
 
-1. Go to **API Keys**
-2. Click **Generate New Key**
-3. Copy and store securely
-4. Use in API requests
+## About
 
-### Webhooks
-
-Configure webhooks for real-time notifications:
-
-1. Go to **Webhooks**
-2. Add webhook URL
-3. Select events to trigger
-4. Test and activate
+View your current Abmatic AI version information. This is helpful when contacting support or checking for platform updates.
 
 ## Related
 
-- [User Management](/settings/users)
-- [Billing Settings](/settings/billing)
-- [Notifications](/settings/notifications)
+- [User Management](/settings/users) - Invite team members and manage roles
+- [Billing Settings](/settings/billing) - View usage and manage your subscription
+- [Notifications](/settings/notifications) - Configure alert preferences
