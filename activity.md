@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 58 / 78
-- **Current:** Task 90
+- **Completed:** 59 / 78
+- **Current:** Task 91
 
 ---
 
@@ -737,6 +737,18 @@
 **Screenshots verified:**
 1. analytics-dashboards.png - Analytics > DASHBOARDS tab showing Rows: 6, Search/FILTERS controls, Sort By dropdown, + CREATE DASHBOARD button, table with Name/Created At/Updated At columns showing dashboards (Home Dashboard, my first dash, Dashboard - this one, new123, First, Dashboard - coxedj6dwz)
 2. dashboard-home.png - Home Dashboard page showing "Last updated at: 1/12/2026 6:09:19 PM", LAST 60 DAYS filter, EDIT DASHBOARD button, Refresh button, and 4 widget charts (Active ABM Opportunities by Stage, Active Opportunities by Close Quarter, Conversion by Campaign Type, Opportunities by Campaign Type) with real data
+
+**Fixed:** No issues found - all checks passed.
+
+### Task 90: docs/settings/account.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (1 screenshot - comprehensive view of entire Account Settings page showing Account Details, Branding, Page exclude rules, About, Flush Cache, and Sign Out sections)
+- INCORRECT: ✅ Pass (screenshot fully loaded with all UI elements visible - no loading spinners, no blank areas)
+- INCOMPLETE: ✅ Pass (shows actual Settings > ACCOUNT page, not login page)
+- NON-CONTEXTUAL: ✅ Pass (screenshot matches all documented elements - Your Email/Company Name/Website URL fields, Branding with Company Logo and Primary Color #6a11cb, Page exclude rules with example URL, Flush Cache and Sign Out buttons, About version info)
+
+**Screenshots verified:**
+1. settings-account.png - Settings > ACCOUNT tab showing Account Details (jimit@abmatic.ai, Abmatic AI, abmatic.ai), Branding section (Company Logo with FETCH LOGO FROM WEBSITE button, Primary Color #6a11cb with SAVE BRANDING button), Page exclude rules textarea, About showing "Abmatic AI Version v6.1", FLUSH CACHE and SIGN OUT buttons
 
 **Fixed:** No issues found - all checks passed.
 
