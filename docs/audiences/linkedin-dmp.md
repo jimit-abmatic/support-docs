@@ -49,7 +49,8 @@ Navigate to **Integrations** and connect your LinkedIn Ads account:
 4. Authorize Abmatic to access your Ad Account
 5. Select which Ad Account to use
 
-![LinkedIn Ads integration setup](/img/screenshots/linkedin-integration.png)
+![Settings > Integrations page](/img/screenshots/integrations-hub.png)
+*Navigate to the Integrations page and scroll to the Advertising section to find LinkedIn Ads.*
 
 > **Prerequisite:** You need admin access to a LinkedIn Campaign Manager account.
 

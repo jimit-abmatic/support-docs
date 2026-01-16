@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 27 / 78
-- **Current:** Task 37
+- **Completed:** 28 / 78
+- **Current:** Task 38
 
 ---
 
@@ -355,3 +355,16 @@
 2. account-create-modal.png - "Target Accounts" modal showing Import section (UPLOAD FROM CSV, IMPORT FROM CRM) and Create section (STATIC COLLECTION, DYNAMIC COLLECTION) - matches Step 2 "Import from CRM" instructions
 
 **Fixed:** No issues found - all checks passed.
+
+### Task 37: docs/audiences/linkedin-dmp.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (2 screenshots - appropriate for LinkedIn Matched Audiences documentation)
+- INCORRECT: ✅ Pass (all screenshots fully loaded with all UI elements)
+- INCOMPLETE: ✅ Pass (all show actual app content, not login pages)
+- NON-CONTEXTUAL: ❌ FIXED - linkedin-integration.png showed CRM integrations instead of LinkedIn Ads integration
+
+**Screenshots verified:**
+1. integrations-hub.png (was linkedin-integration.png) - Settings > Integrations page showing CRM section with note to scroll to Advertising section for LinkedIn Ads
+2. accounts-list.png - Accounts Collections page showing COLLECTIONS/ALL ACCOUNTS tabs, summary cards (260 All Collections, 2 Dynamic, 3 Salesforce, etc.), collection table - appropriate for "Creating LinkedIn Matched Audience from collection"
+
+**Fixed:** Replaced linkedin-integration.png reference with integrations-hub.png and updated alt text to "Settings > Integrations page" with caption explaining to scroll to Advertising section for LinkedIn Ads. The original screenshot showed CRM integrations only, not the LinkedIn Ads section.
