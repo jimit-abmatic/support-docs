@@ -94,7 +94,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 100, "docPath": "docs/troubleshooting/troubleshooting-overview.md", "appPath": "none", "passes": true},
     {"id": 101, "docPath": "docs/troubleshooting/script-issues.md", "appPath": "/installation", "passes": true},
     {"id": 102, "docPath": "docs/troubleshooting/crm-sync.md", "appPath": "/integrations", "passes": true},
-    {"id": 103, "docPath": "docs/troubleshooting/campaign-issues.md", "appPath": "/campaigns", "passes": false},
+    {"id": 103, "docPath": "docs/troubleshooting/campaign-issues.md", "appPath": "/campaigns", "passes": true},
     {"id": 104, "docPath": "docs/troubleshooting/common-errors.md", "appPath": "none", "passes": false},
     {"id": 110, "docPath": "docs/faq/general.md", "appPath": "various", "passes": false},
     {"id": 111, "docPath": "docs/faq/billing.md", "appPath": "/settings/usage", "passes": false},
