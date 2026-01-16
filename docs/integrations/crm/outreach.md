@@ -46,8 +46,8 @@ Before connecting, ensure you have:
 3. Scroll to the **Automation Tools** section
 4. Find the **Outreach** card
 
-![Integrations page showing various integration options](/img/screenshots/integrations-hub.png)
-*The Integrations page - scroll down to the Automation Tools section to find Outreach*
+![Settings > Integrations page with CRM and Communications sections](/img/screenshots/integrations-hub.png)
+*Navigate to Settings > Integrations, then scroll down past CRM and Communications to find the Automation Tools section with Outreach*
 
 ### Step 2: Authorize the Connection
 
