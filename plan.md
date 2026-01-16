@@ -67,7 +67,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 60, "docPath": "docs/integrations/overview.md", "appPath": "/integrations", "passes": true},
     {"id": 61, "docPath": "docs/integrations/crm/hubspot.md", "appPath": "/integrations", "passes": true},
     {"id": 62, "docPath": "docs/integrations/crm/hubspot-setup.md", "appPath": "/integrations", "passes": true},
-    {"id": 63, "docPath": "docs/integrations/crm/salesforce.md", "appPath": "/integrations", "passes": false},
+    {"id": 63, "docPath": "docs/integrations/crm/salesforce.md", "appPath": "/integrations", "passes": true},
     {"id": 64, "docPath": "docs/integrations/crm/salesforce-setup.md", "appPath": "/integrations", "passes": false},
     {"id": 65, "docPath": "docs/integrations/crm/pipedrive.md", "appPath": "/integrations", "passes": false},
     {"id": 66, "docPath": "docs/integrations/crm/outreach.md", "appPath": "/integrations", "passes": false},
