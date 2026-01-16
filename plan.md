@@ -49,7 +49,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 31, "docPath": "docs/audiences/accounts.md", "appPath": "/accounts", "passes": true},
     {"id": 32, "docPath": "docs/audiences/contacts.md", "appPath": "/contacts", "passes": true},
     {"id": 33, "docPath": "docs/audiences/target-groups.md", "appPath": "/accounts", "passes": true},
-    {"id": 34, "docPath": "docs/audiences/filters.md", "appPath": "/accounts", "passes": false},
+    {"id": 34, "docPath": "docs/audiences/filters.md", "appPath": "/accounts", "passes": true},
     {"id": 35, "docPath": "docs/audiences/csv-import.md", "appPath": "/accounts", "passes": false},
     {"id": 36, "docPath": "docs/audiences/crm-sync.md", "appPath": "/accounts", "passes": false},
     {"id": 37, "docPath": "docs/audiences/linkedin-dmp.md", "appPath": "/accounts", "passes": false},
