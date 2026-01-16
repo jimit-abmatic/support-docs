@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 50 / 78
-- **Current:** Task 71
+- **Completed:** 51 / 78
+- **Current:** Task 72
 
 ---
 
@@ -651,3 +651,16 @@
 2. conversions-manage.png - Conversions > MANAGE tab showing 5 conversion events (Book a Demo, Banner, Banner2, Demo Page View, Pop Up) with Event Type, Attached To, Main Event, and Visibility columns
 
 **Fixed:** Updated alt text to "Settings > Integrations page" and improved caption to "*Navigate to Settings > Integrations and scroll down past CRM and Communications to find the Conversion Tracking section with Google Analytics 4.*" to provide clearer navigation instructions since the screenshot doesn't show the GA4 section directly.
+
+### Task 71: docs/integrations/segment.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (2 screenshots - appropriate for comprehensive 237-line Segment integration guide with extensive tables)
+- INCORRECT: ✅ Pass (both screenshots fully loaded with all UI elements visible)
+- INCOMPLETE: ✅ Pass (both show actual app content, not login pages)
+- NON-CONTEXTUAL: ❌ FIXED - integrations-hub.png alt text said "Integrations page showing available integrations" but doc instructs users to find Segment in "Conversion Tracking" section which requires scrolling
+
+**Screenshots verified:**
+1. integrations-hub.png - Settings > Integrations page showing CRM section (Salesforce, HubSpot, ActiveCampaign, Pipedrive) and Communications section (Gmail, Slack). Segment is in Conversion Tracking section which requires scrolling.
+2. conversions-manage.png - Conversions > MANAGE tab showing 5 conversion events (Book a Demo, Banner, Banner2, Demo Page View, Pop Up) with Event Type, Attached To, Main Event, and Visibility columns
+
+**Fixed:** Updated alt text to "Settings > Integrations page" and added caption "*Navigate to Settings > Integrations and scroll down past CRM and Communications to find the Conversion Tracking section with Segment.*" to provide clearer navigation instructions since the screenshot only shows CRM and Communications sections.

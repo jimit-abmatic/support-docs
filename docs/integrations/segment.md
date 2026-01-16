@@ -60,7 +60,9 @@ Before you begin:
 2. Scroll to the **Conversion Tracking** section
 3. Find the **Segment** card
 
-![Integrations page showing available integrations](/img/screenshots/integrations-hub.png)
+![Settings > Integrations page](/img/screenshots/integrations-hub.png)
+
+*Navigate to Settings > Integrations and scroll down past CRM and Communications to find the Conversion Tracking section with Segment.*
 
 ### Step 2: Get Your API Key
 
