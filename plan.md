@@ -31,7 +31,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 4, "docPath": "docs/getting-started/first-campaign.md", "appPath": "/campaigns", "passes": true},
     {"id": 5, "docPath": "docs/getting-started/use-cases.md", "appPath": "/home-dashboard", "passes": true},
     {"id": 6, "docPath": "docs/getting-started/playbooks.md", "appPath": "/campaigns", "passes": true},
-    {"id": 7, "docPath": "docs/getting-started/glossary.md", "appPath": "none", "passes": false},
+    {"id": 7, "docPath": "docs/getting-started/glossary.md", "appPath": "none", "passes": true},
     {"id": 10, "docPath": "docs/campaigns/overview.md", "appPath": "/campaigns", "passes": false},
     {"id": 11, "docPath": "docs/campaigns/website-personalization.md", "appPath": "/campaigns", "passes": false},
     {"id": 12, "docPath": "docs/campaigns/page-editor.md", "appPath": "/campaigns", "passes": false},
