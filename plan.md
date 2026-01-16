@@ -44,7 +44,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 20, "docPath": "docs/ai-agents/overview.md", "appPath": "/ai-agents", "passes": true},
     {"id": 21, "docPath": "docs/ai-agents/sdr-agent.md", "appPath": "/ai-agents/alex", "passes": true},
     {"id": 22, "docPath": "docs/ai-agents/abm-agent.md", "appPath": "/ai-agents/clara", "passes": true},
-    {"id": 23, "docPath": "docs/ai-agents/configuration.md", "appPath": "/settings/ai-agents", "passes": false},
+    {"id": 23, "docPath": "docs/ai-agents/configuration.md", "appPath": "/settings/ai-agents", "passes": true},
     {"id": 30, "docPath": "docs/audiences/overview.md", "appPath": "/accounts", "passes": false},
     {"id": 31, "docPath": "docs/audiences/accounts.md", "appPath": "/accounts", "passes": false},
     {"id": 32, "docPath": "docs/audiences/contacts.md", "appPath": "/contacts", "passes": false},
