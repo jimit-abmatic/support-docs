@@ -90,7 +90,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 94, "docPath": "docs/settings/notifications.md", "appPath": "/settings/notifications", "passes": true},
     {"id": 95, "docPath": "docs/settings/script-installation.md", "appPath": "/installation", "passes": true},
     {"id": 96, "docPath": "docs/settings/contact-reveal.md", "appPath": "/settings/contact-reveal", "passes": true},
-    {"id": 97, "docPath": "docs/settings/data-export.md", "appPath": "/settings/export", "passes": false},
+    {"id": 97, "docPath": "docs/settings/data-export.md", "appPath": "/settings/export", "passes": true},
     {"id": 100, "docPath": "docs/troubleshooting/troubleshooting-overview.md", "appPath": "none", "passes": false},
     {"id": 101, "docPath": "docs/troubleshooting/script-issues.md", "appPath": "/installation", "passes": false},
     {"id": 102, "docPath": "docs/troubleshooting/crm-sync.md", "appPath": "/integrations", "passes": false},
