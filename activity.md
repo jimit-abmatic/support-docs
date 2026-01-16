@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 63 / 78
-- **Current:** Task 95
+- **Completed:** 64 / 78
+- **Current:** Task 96
 
 ---
 
@@ -811,3 +811,15 @@
 1. settings-notifications.png - Settings > NOTIFICATIONS tab showing "Notification Preferences" header, "Update your global notification settings" description, and table with 8 notification categories: Accounts, Campaigns, Credits, CRM, Export, Form Fills, Target Groups, IP Reveal - each with In-App checkbox toggle
 
 **Fixed:** Removed "Other" category from the documentation table since it doesn't exist in the actual app interface shown in the screenshot. The screenshot accurately shows 8 notification categories, not 9.
+
+### Task 95: docs/settings/script-installation.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (1 screenshot - appropriate for page focusing on code examples and platform-specific installation instructions)
+- INCORRECT: ✅ Pass (screenshot fully loaded with all UI elements visible - header, 3-step instructions, script code, status badge, timestamp)
+- INCOMPLETE: ✅ Pass (shows actual Installation page, not login page)
+- NON-CONTEXTUAL: ✅ Pass (screenshot shows "Active" status, "Last visitor: 14 minutes ago", and script code exactly as documented)
+
+**Screenshots verified:**
+1. installation-script.png - Installation page showing "Installation" header, step 1 "Copy the javascript tag" with code box containing script, step 2 "Paste into <head> section", step 3 "Check that code works", Status: "Active" (purple badge), "Last visitor: 14 minutes ago" link
+
+**Fixed:** No issues found - all checks passed.

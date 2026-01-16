@@ -88,7 +88,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 92, "docPath": "docs/settings/billing.md", "appPath": "/settings/usage", "passes": true},
     {"id": 93, "docPath": "docs/settings/custom-fields.md", "appPath": "/settings/custom-fields", "passes": true},
     {"id": 94, "docPath": "docs/settings/notifications.md", "appPath": "/settings/notifications", "passes": true},
-    {"id": 95, "docPath": "docs/settings/script-installation.md", "appPath": "/installation", "passes": false},
+    {"id": 95, "docPath": "docs/settings/script-installation.md", "appPath": "/installation", "passes": true},
     {"id": 96, "docPath": "docs/settings/contact-reveal.md", "appPath": "/settings/contact-reveal", "passes": false},
     {"id": 97, "docPath": "docs/settings/data-export.md", "appPath": "/settings/export", "passes": false},
     {"id": 100, "docPath": "docs/troubleshooting/troubleshooting-overview.md", "appPath": "none", "passes": false},
