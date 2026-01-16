@@ -50,7 +50,9 @@ Go to **Google Ads > Tools > Audience Manager** to verify Customer Match is avai
 
 ### Step 1: Navigate to Integrations
 
-![Integrations page](/img/screenshots/integrations-hub.png)
+![Settings > Integrations page](/img/screenshots/integrations-hub.png)
+
+*Navigate to Settings > Integrations and scroll down past CRM and Communications to find the Advertising section with Google Ads.*
 
 1. Click **Integrations** in the main navigation
 2. Scroll down to the **Advertising** section

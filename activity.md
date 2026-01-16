@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 52 / 78
-- **Current:** Task 73
+- **Completed:** 53 / 78
+- **Current:** Task 80
 
 ---
 
@@ -676,3 +676,15 @@
 1. integrations-hub.png - Settings > Integrations page showing CRM section (Salesforce Active, HubSpot Active, ActiveCampaign Inactive, Pipedrive Inactive) and Communications section (Gmail, Slack). LinkedIn is in the Advertising section which requires scrolling.
 
 **Fixed:** Updated alt text from "Integrations page showing CRM section - scroll down to find Advertising" to "Settings > Integrations page" and replaced the plain text clarification with an italicized caption "*Navigate to Settings > Integrations and scroll down past CRM and Communications to find the Advertising section with LinkedIn, Google Ads, and Meta.*" for consistency with other integration docs.
+
+### Task 73: docs/integrations/advertising/google-ads.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (1 screenshot - appropriate for comprehensive 265-line integration guide with extensive tables for prerequisites, permissions, sync behavior, and troubleshooting)
+- INCORRECT: ✅ Pass (screenshot fully loaded with all UI elements visible - CRM cards with logos, Active/Inactive badges, SETTINGS buttons, Communications section)
+- INCOMPLETE: ✅ Pass (shows actual Settings > Integrations page, not login page)
+- NON-CONTEXTUAL: ❌ FIXED - Screenshot shows CRM and Communications sections, but doc instructs users to "Scroll down to the Advertising section" and "Find the Google Ads card" which requires scrolling past the visible content
+
+**Screenshots verified:**
+1. integrations-hub.png - Settings > Integrations page showing CRM section (Salesforce Active, HubSpot Active, ActiveCampaign Inactive, Pipedrive Inactive) and Communications section (Gmail, Slack). Google Ads is in the Advertising section which requires scrolling.
+
+**Fixed:** Updated alt text from "Integrations page" to "Settings > Integrations page" and added italicized caption "*Navigate to Settings > Integrations and scroll down past CRM and Communications to find the Advertising section with Google Ads.*" to provide clearer navigation instructions since the screenshot doesn't show the Advertising section directly.

@@ -77,7 +77,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 70, "docPath": "docs/integrations/google-analytics.md", "appPath": "/integrations", "passes": true},
     {"id": 71, "docPath": "docs/integrations/segment.md", "appPath": "/integrations", "passes": true},
     {"id": 72, "docPath": "docs/integrations/advertising/linkedin-ads.md", "appPath": "/integrations", "passes": true},
-    {"id": 73, "docPath": "docs/integrations/advertising/google-ads.md", "appPath": "/integrations", "passes": false},
+    {"id": 73, "docPath": "docs/integrations/advertising/google-ads.md", "appPath": "/integrations", "passes": true},
     {"id": 80, "docPath": "docs/analytics/overview.md", "appPath": "/analytics/reports", "passes": false},
     {"id": 81, "docPath": "docs/analytics/reports.md", "appPath": "/analytics/reports", "passes": false},
     {"id": 82, "docPath": "docs/analytics/dashboards.md", "appPath": "/analytics/dashboards", "passes": false},
