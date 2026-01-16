@@ -35,7 +35,6 @@ The settings page displays a table where you can toggle In-App notifications for
 | **CRM** | Activities related to your connected CRM integrations |
 | **Accounts** | New activity and updates on your target accounts |
 | **Credits** | Alerts when your credit balance is running low |
-| **Other** | Miscellaneous system notifications |
 
 ## Managing Your Preferences
 
