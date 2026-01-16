@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 43 / 78
-- **Current:** Task 64
+- **Completed:** 44 / 78
+- **Current:** Task 65
 
 ---
 
@@ -543,6 +543,18 @@
 
 **Fixed:** No issues found - all checks passed.
 
+### Task 62: docs/integrations/crm/hubspot-setup.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (1 screenshot - appropriate for comprehensive setup guide with extensive tables for permissions, mappings, frequencies, and troubleshooting)
+- INCORRECT: ✅ Pass (screenshot fully loaded with all UI elements visible - CRM cards, logos, buttons, statuses)
+- INCOMPLETE: ✅ Pass (shows actual Settings > Integrations page, not login page)
+- NON-CONTEXTUAL: ✅ Pass (screenshot matches document context - shows HubSpot with "Active" status, SETTINGS button, DISABLE button as described in Step 1)
+
+**Screenshots verified:**
+1. hubspot-settings.png - Settings > Integrations page showing INTEGRATIONS tab, CRM section with Salesforce (Active), HubSpot (Active), ActiveCampaign (Inactive), Pipedrive (Inactive), each with SETTINGS buttons and Active/Inactive badges, Communications section with Gmail and Slack
+
+**Fixed:** No issues found - all checks passed.
+
 ### Task 63: docs/integrations/crm/salesforce.md
 **4-Check Results:**
 - INSUFFICIENT: ✅ Pass (1 screenshot - appropriate for comprehensive 415-line integration guide with extensive tables for field mapping, sync settings, campaign integration, and troubleshooting)
@@ -552,5 +564,17 @@
 
 **Screenshots verified:**
 1. integrations-hub.png - Settings > Integrations page showing CRM section with Salesforce (Active with SETTINGS and DISABLE buttons), HubSpot (Active), ActiveCampaign (Inactive), Pipedrive (Inactive), and Communications section (Gmail, Slack)
+
+**Fixed:** No issues found - all checks passed.
+
+### Task 64: docs/integrations/crm/salesforce-setup.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (1 screenshot - appropriate for comprehensive 306-line setup guide with extensive tables for requirements, sync settings, field mapping, troubleshooting)
+- INCORRECT: ✅ Pass (screenshot fully loaded with all UI elements visible - CRM cards with logos, Active/Inactive badges, SETTINGS buttons, DISABLE/AUTHORIZE buttons, Communications section)
+- INCOMPLETE: ✅ Pass (shows actual Settings > Integrations page, not login page)
+- NON-CONTEXTUAL: ✅ Pass (screenshot matches caption "Find Salesforce in the CRM Platforms section and click Authorize to connect" - shows Salesforce card with connection options)
+
+**Screenshots verified:**
+1. integrations-hub.png - Settings > Integrations page showing CRM section with Salesforce (Active with SETTINGS and DISABLE buttons), HubSpot (Active), ActiveCampaign (Inactive with AUTHORIZE button), Pipedrive (Inactive with AUTHORIZE button), and Communications section (Gmail, Slack)
 
 **Fixed:** No issues found - all checks passed.
