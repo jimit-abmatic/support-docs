@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 13 / 78
-- **Current:** Task 16
+- **Completed:** 14 / 78
+- **Current:** Task 17
 
 ---
 
@@ -177,3 +177,16 @@
 5. linkedin-campaign-detail.png - INSIGHTS tab showing CTA Clicks, Conversions, Total Impressions with IMPRESSIONS/CTA/CTR/CONVERSION/CVR tabs
 
 **Fixed:** No issues found - all checks passed.
+
+### Task 16: docs/campaigns/google-ads.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (2 screenshots - appropriate for Google Ads campaigns tutorial)
+- INCORRECT: ✅ Pass (all screenshots load properly, fully rendered)
+- INCOMPLETE: ✅ Pass (all show actual app content, none are login pages)
+- NON-CONTEXTUAL: ❌ FIXED - integrations-google-ads.png showed CRM integrations instead of Google Ads
+
+**Screenshots verified:**
+1. integrations-hub.png (was integrations-google-ads.png) - Integrations page showing CRM and Communications sections where Google Ads would be configured
+2. google-ads-accounts-list.png - Accounts Collections view with account lists, total accounts, status, and last updated timestamps
+
+**Fixed:** Replaced integrations-google-ads.png reference with integrations-hub.png since no specific Google Ads integration screenshot was available. Updated alt text to accurately reflect the Integrations page content.

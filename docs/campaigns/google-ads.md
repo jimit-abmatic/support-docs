@@ -49,7 +49,7 @@ Google Ads campaigns use **Customer Match** to target your specific accounts:
 
 Once connected, you'll see the status change to **Active**.
 
-![Google Ads Integration](/img/screenshots/integrations-google-ads.png)
+![Integrations Page](/img/screenshots/integrations-hub.png)
 
 ### Step 2: Create an Account or Contact List
 
