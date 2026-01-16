@@ -63,7 +63,7 @@ ONE page at a time. ALL 4 checks per page. Fix everything before moving on.
     {"id": 51, "docPath": "docs/conversions/create-goals.md", "appPath": "/conversions", "passes": true},
     {"id": 52, "docPath": "docs/conversions/event-tracking.md", "appPath": "/conversions", "passes": true},
     {"id": 53, "docPath": "docs/conversions/form-tracking.md", "appPath": "/conversions", "passes": true},
-    {"id": 54, "docPath": "docs/conversions/analytics.md", "appPath": "/conversions", "passes": false},
+    {"id": 54, "docPath": "docs/conversions/analytics.md", "appPath": "/conversions", "passes": true},
     {"id": 60, "docPath": "docs/integrations/overview.md", "appPath": "/integrations", "passes": false},
     {"id": 61, "docPath": "docs/integrations/crm/hubspot.md", "appPath": "/integrations", "passes": false},
     {"id": 62, "docPath": "docs/integrations/crm/hubspot-setup.md", "appPath": "/integrations", "passes": false},
