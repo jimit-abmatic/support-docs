@@ -1,8 +1,8 @@
 # Activity Log
 
 ## Progress
-- **Completed:** 72 / 78
-- **Current:** Task 111
+- **Completed:** 73 / 78
+- **Current:** Task 112
 
 ---
 
@@ -919,5 +919,17 @@
 1. ai-agents-hub.png - AI Agents page showing "Meet Your AI Partner" header with Clara - AI ABM card displaying her image and capabilities (Campaign execution, Personalization at Scale, Performance Analytics) - matches caption about Alex and Clara automating tasks
 2. reveal-accounts.png - Visitor Reveal > ACCOUNTS tab showing 30,458 All Accounts, confidence level cards (High, Very Low, Moderate, Low, Very High), company table with Domain, Name, Industry, LinkedIn URL, Inferred Revenue, Summary columns - matches caption "See exactly which companies are visiting"
 3. reveal-contacts.png - Visitor Reveal > CONTACTS tab showing 943 All Contacts, engagement breakdown cards, contact table with Work Email, Full Name, Temperature, Website Engagement Score, Job Title Role, Job Title, Job Company Name columns - matches caption about identifying individual visitors
+
+**Fixed:** No issues found - all checks passed.
+
+### Task 111: docs/faq/billing.md
+**4-Check Results:**
+- INSUFFICIENT: ✅ Pass (1 screenshot - appropriate for comprehensive FAQ page with extensive tables for pricing, billing, plan changes, cancellation, and credits)
+- INCORRECT: ✅ Pass (screenshot fully loaded with all UI elements visible - USAGE tab highlighted, Credits section with all 6 credit types)
+- INCOMPLETE: ✅ Pass (shows actual Settings > USAGE page, not login page)
+- NON-CONTEXTUAL: ✅ Pass (screenshot matches "How do I view my current usage?" section perfectly - shows Apollo Contacts, Campaigns, Open AI, Abmatic Accounts, Abmatic Contacts, Abmatic IP Reveal exactly as documented)
+
+**Screenshots verified:**
+1. settings-usage.png - Settings > USAGE tab showing Credits section with Apollo Contacts (1245/1000000), Campaigns (404245/1000000000), Open AI (4905524/1500000000), Abmatic Accounts (22196/4000000), Abmatic Contacts (40276/20000000), Abmatic IP Reveal (298035/100000000) - all showing "X/Y Credits Used" format matching documentation
 
 **Fixed:** No issues found - all checks passed.
