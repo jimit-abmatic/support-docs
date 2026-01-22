@@ -39,6 +39,15 @@ Transform your AI agents from helpful assistants into expert sales representativ
 
 Give your AI assistant everything it needs to engage website visitors with confidence and convert them into qualified leads.
 
+:::info Settings vs. Campaign Instructions
+The context you configure here provides **default instructions** for all Agentic Chat campaigns. You can override these defaults with campaign-specific instructions in each campaign's **Instructions** tab. Campaign-level instructions take precedence when both exist.
+
+- **Settings context**: Global defaults for all campaigns
+- **Campaign instructions**: Specific overrides for individual campaigns
+
+See [Agentic Chat Campaigns](/campaigns/agentic-chat) for campaign-level configuration.
+:::
+
 ### What to Include
 
 Build comprehensive context around these four pillars:

@@ -65,6 +65,28 @@ sidebar_position: 1
 - Consistent follow-up on every lead
 - After-hours engagement captures global opportunities
 
+### Website AI - Agentic Chat Widget
+
+**Your 24/7 website concierge.** Beyond internal AI partners, Abmatic AI provides customer-facing AI through the [Agentic Chat Widget](/ai-agents/agentic-chat-widget)—an intelligent assistant that lives on your website.
+
+| AI Tool | Where It Lives | Who Uses It |
+|---------|---------------|-------------|
+| **Clara** (ABM Agent) | Abmatic dashboard | Your marketing team |
+| **Alex** (SDR Agent) | Abmatic dashboard | Your sales team |
+| **[Agentic Chat Widget](/ai-agents/agentic-chat-widget)** | Your website | Your website visitors |
+
+**What the Chat Widget Does:**
+- Engages visitors with intelligent, context-aware conversations
+- Answers questions about your products and services 24/7
+- Captures work emails and qualifies leads automatically
+- Supports both text and voice interactions
+
+**Results Teams See with Agentic Chat:**
+- 3x more qualified conversations than traditional chatbots
+- 24/7 lead capture without adding headcount
+- Faster response times improve visitor experience
+- Voice chat increases mobile engagement
+
 ---
 
 ## Getting Started with AI Agents

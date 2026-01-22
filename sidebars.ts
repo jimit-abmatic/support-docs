@@ -26,6 +26,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'campaigns/overview',
         'campaigns/website-personalization',
+        'campaigns/agentic-chat',
         'campaigns/email-campaigns',
         'campaigns/linkedin-ads',
         'campaigns/google-ads',
@@ -78,6 +79,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'ai-agents/ai-agents-overview',
         'ai-agents/ai-agents-configuration',
+        'ai-agents/agentic-chat-widget',
         'ai-agents/sdr-agent',
         'ai-agents/abm-agent',
       ],

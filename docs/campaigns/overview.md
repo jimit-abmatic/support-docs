@@ -45,7 +45,8 @@ Abmatic AI supports multiple campaign types to match your go-to-market strategy:
 |------|----------|------------------|
 | **Inbound** | Visitors matching firmographic criteria | Show enterprise pricing to Fortune 500 companies |
 | **Outbound** | Specific named accounts (ABM) | Personalize content for your top 100 target accounts |
-| **Agentic Flow** | AI-powered dynamic personalization | Let AI craft the perfect message for each visitor |
+| **[Agentic Chat](/campaigns/agentic-chat)** | AI-powered visitor engagement | Add 24/7 AI assistant to qualify leads and answer questions |
+| **Agentic Flow** | AI-powered email sequences | Let AI craft personalized outreach for each prospect |
 | **LinkedIn Ads** | Retargeting website visitors | Reach engaged prospects on LinkedIn |
 | **Email** | Coordinated multichannel campaigns | Follow up website visits with personalized emails |
 | **Banner & Popup** | Overlay messages | Show targeted offers without changing page content |
