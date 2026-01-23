@@ -31,6 +31,10 @@ sidebar_position: 3
 2. Click **+ CAMPAIGN**
 3. Select **Agentic Chat** from the campaign types (found under the **Advanced** category)
 
+![Create Agentic Chat Campaign](/img/screenshots/agentic-chat/ac-create-modal.png)
+
+---
+
 ### Step 2: Configure Your Campaign
 
 Your campaign has several configuration tabs:
@@ -43,6 +47,12 @@ Your campaign has several configuration tabs:
 | **Pages** | Set URL patterns for widget display |
 | **Engagement** | Review individual visitor conversations |
 | **Performance** | Track conversions and ROI |
+
+The widget configuration panel on the right lets you customize the chat experience:
+
+![Widget Configuration Panel](/img/screenshots/agentic-chat/ac-widget-config.png)
+
+---
 
 ### Step 3: Set Up AI Instructions
 
@@ -57,10 +67,14 @@ The **Instructions** tab is where you make the AI yours:
 
 Target the right visitors in the **Audience** tab:
 
+![Audience Tab](/img/screenshots/agentic-chat/ac-audience-tab.png)
+
 - **All visitors**: Show chat to everyone
 - **Firmographic targeting**: Filter by company size, industry, location
 - **Behavioral targeting**: Target based on page views, time on site
 - **Named accounts**: Show to specific target accounts only
+
+---
 
 ### Step 5: Activate Your Campaign
 
@@ -118,22 +132,30 @@ Configure suggested prompts that appear to visitors:
 
 ## Display Modes
 
-The chat widget adapts to different interaction states:
+The chat widget adapts to different interaction states. Configure the initial display mode in the widget settings panel.
 
-### Bubble Mode
+### Minimized Mode
 A minimized floating button in the corner of the page. Visitors click to expand.
 
+![Minimized Mode](/img/screenshots/agentic-chat/ac-preview-minimized.png)
+
 ### Welcome Mode
-A centered welcome card that introduces the AI assistant and invites conversation.
+A welcome card that introduces the AI assistant and invites conversation with a preview message.
 
-### Chat Mode
-The full conversation interface with message history and input field.
+![Welcome Mode](/img/screenshots/agentic-chat/ac-preview-welcome.png)
 
-### Voice Mode
-Audio interaction with visual feedback. Visitors speak naturally and receive voice responses.
+### Sidebar Mode
+A compact chat interface positioned on the side of the page.
+
+![Sidebar Mode](/img/screenshots/agentic-chat/ac-preview-sidebar.png)
 
 ### Expanded Mode
 A larger two-column view for detailed conversations, showing the assistant avatar alongside the chat.
+
+![Expanded Mode](/img/screenshots/agentic-chat/ac-preview-expanded.png)
+
+### Voice Mode
+Audio interaction with visual feedback. Visitors speak naturally and receive voice responses.
 
 ---
 
@@ -194,6 +216,8 @@ Go to **Settings** > **AI Agents** > **Agentic Chat** tab to:
 
 Control where the widget appears using the **Pages** tab:
 
+![Pages Tab](/img/screenshots/agentic-chat/ac-pages-tab.png)
+
 | Pattern | Matches |
 |---------|---------|
 | `*` | All pages |
@@ -239,15 +263,45 @@ Show widget when:
 
 ## Analytics and Reporting
 
-Track Agentic Chat performance in the campaign dashboard:
+Track Agentic Chat performance in the campaign dashboard.
+
+### Insights Tab
+
+View high-level metrics and trends:
+
+![Insights Tab](/img/screenshots/agentic-chat/ac-insights-tab.png)
 
 | Metric | What It Measures |
 |--------|-----------------|
-| **Conversations Started** | Total chat sessions initiated |
-| **Messages Exchanged** | Depth of visitor engagement |
-| **Emails Captured** | Work emails collected from chat |
-| **High Intent Visitors** | Qualified leads identified |
-| **Voice Sessions** | Audio interactions completed |
+| **CTA Clicks** | Engagement with chat CTAs |
+| **Conversions** | Goal completions from chat visitors |
+| **CVRL** | Conversion rate - personalized group |
+| **CTRL** | Conversion rate - control group |
+
+### Engagement Tab
+
+Review individual visitor interactions and page visit data:
+
+![Engagement Tab](/img/screenshots/agentic-chat/ac-engagement-tab.png)
+
+Each visit shows:
+- **Total Form Submissions** - Forms completed
+- **Total Page Views** - Pages visited
+- **Scroll Depth** - How far they scrolled
+- **Time on Page** - Engagement duration
+- **Engagement Score** - 0-100 composite score
+
+### Performance Tab
+
+Dive into visitor-level analytics:
+
+![Performance Tab](/img/screenshots/agentic-chat/ac-performance-tab.png)
+
+Sub-tabs available:
+- **VISITORS** - Individual visitor data with company domain and chat history
+- **CTA CLICKS** - Which CTAs are getting clicks
+- **ACCOUNTS** - Company-level aggregated data
+- **CONVERSIONS** - Conversion event details
 
 ---
 
