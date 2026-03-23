@@ -31,7 +31,7 @@ Include your API key in the `Authorization` header:
 Authorization: Bearer YOUR_API_KEY
 ```
 
-See the [API Keys](/docs/api/api-keys) guide for how to generate and manage your key.
+See the [API Keys](/api/api-keys) guide for how to generate and manage your key.
 
 ### Query Parameters
 

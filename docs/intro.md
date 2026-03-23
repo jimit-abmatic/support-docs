@@ -158,7 +158,7 @@ You'll use visitor data to prioritize outreach:
 You'll handle implementation and custom integrations:
 
 - [Install Tracking Script](/getting-started/install-script)
-- [JavaScript SDK](/api/javascript-sdk)
+- [Accounts API](/api/api-accounts)
 - [API Reference](/api/api-overview)
 - [Script Troubleshooting](/troubleshooting/script-issues)
 

@@ -284,7 +284,7 @@ Yes! Full support for modern JavaScript frameworks:
 | Nuxt | Full | ✓ History API |
 | Custom SPAs | Full | ✓ pushState/popstate |
 
-For advanced implementations, see our [JavaScript SDK](/api/javascript-sdk).
+For advanced implementations, see our [API Reference](/api/api-overview).
 
 ### Can I use Abmatic with Google Tag Manager?
 

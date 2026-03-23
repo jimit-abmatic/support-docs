@@ -26,7 +26,7 @@ curl -X GET "https://api.abmatic.ai/v1/accounts" \
 
 ## Authentication
 
-The Abmatic API uses API keys for secure authentication. See the [API Keys](/docs/api/api-keys) guide for how to generate and manage your key.
+The Abmatic API uses API keys for secure authentication. See the [API Keys](/api/api-keys) guide for how to generate and manage your key.
 
 ### Request Headers
 
@@ -114,7 +114,7 @@ For large exports, use `per_page=100` and iterate through pages. Use the `total_
 |--------|----------|-------------|
 | GET | `/v1/accounts` | List all accounts with pagination, field selection, and sorting |
 
-See the [Accounts API](/docs/api/api-accounts) reference for full details, available fields, and examples.
+See the [Accounts API](/api/api-accounts) reference for full details, available fields, and examples.
 
 ---
 
