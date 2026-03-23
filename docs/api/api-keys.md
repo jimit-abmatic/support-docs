@@ -21,7 +21,7 @@ API access is available on Enterprise plans. Contact support@abmatic.ai to enabl
 
 1. Log in to [Abmatic](https://app.abmatic.ai)
 2. Navigate to **Settings** > **Account**
-3. Scroll to the **API Settings** section
+3. Scroll to the **API Keys** section
 4. Click **Generate API Key**
 5. **Copy your key immediately** — it will only be shown once
 
@@ -113,7 +113,7 @@ If your key is compromised or you need to rotate it, revoke it immediately:
 
 ### Via the Dashboard
 
-1. Navigate to **Settings** > **Account** > **API Settings**
+1. Navigate to **Settings** > **Account** > **API Keys**
 2. Click **Revoke Key**
 3. Confirm the revocation
 
