@@ -155,7 +155,8 @@ const sidebars: SidebarsConfig = {
       label: 'API Reference',
       items: [
         'api/api-overview',
-        'api/javascript-sdk',
+        'api/api-accounts',
+        'api/api-keys',
       ],
     },
     {
