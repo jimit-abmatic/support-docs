@@ -53,6 +53,8 @@ Unlike page personalization campaigns that modify existing content, banners and 
 
 The **Audience** tab controls who sees your banners and popups.
 
+![Banner & Popup campaign Audience tab showing campaign rules and filter builder](/img/screenshots/banner-popup-audience-tab.png)
+
 1. Click the **Audience** tab
 2. Configure targeting rules using filters:
    - **Account List** — Show to specific named accounts
@@ -69,6 +71,8 @@ Combine audience rules with URL patterns for maximum precision. For example: sho
 ### Step 3: Set URL Patterns
 
 The **Pages** tab uses URL patterns to control where overlays appear. Unlike page personalization campaigns that target specific URLs, Banner & Popup campaigns use pattern matching to apply across multiple pages at once.
+
+![Banner & Popup Pages tab showing the pattern grid with Include Patterns, Exclude Patterns, and Sample URL columns](/img/screenshots/banner-popup-pages-tab.png)
 
 1. Click the **Pages** tab
 2. Add **include patterns** — URLs where banners should appear
