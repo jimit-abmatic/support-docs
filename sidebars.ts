@@ -13,6 +13,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'getting-started/quick-start',
+        'getting-started/home-dashboard',
         'getting-started/install-script',
         'getting-started/first-campaign',
         'getting-started/use-cases',
@@ -30,6 +31,7 @@ const sidebars: SidebarsConfig = {
         'campaigns/email-campaigns',
         'campaigns/agentic-flow',
         'campaigns/banner-popup',
+        'campaigns/advertising-campaigns',
         'campaigns/intent',
         'campaigns/linkedin-ads',
         'campaigns/google-ads',
@@ -147,6 +149,7 @@ const sidebars: SidebarsConfig = {
         'settings/custom-fields',
         'settings/notifications',
         'settings/billing',
+        'settings/website-context',
       ],
     },
     {

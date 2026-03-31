@@ -26,7 +26,7 @@ Connect your marketing and sales stack to Abmatic AI and transform disconnected 
 
 ## The Integrations Hub
 
-Access all integrations from **Settings > Integrations**. You'll see every available integration organized by category, with clear status indicators showing what's connected.
+Access all integrations from **Settings > Integrations**. You will see every available integration organized by category, with clear status indicators showing what is connected.
 
 ![Integrations Hub](/img/screenshots/integrations-hub.png)
 
@@ -38,76 +38,102 @@ Access all integrations from **Settings > Integrations**. You'll see every avail
 
 ### CRM Platforms
 
-Sync account and contact data bidirectionally with your CRM—no more CSV exports or manual updates.
+Sync account and contact data bidirectionally with your CRM -- no more CSV exports or manual updates. Drag and drop connected CRM cards to set the priority order Abmatic uses when resolving data conflicts.
+
+![CRM Integrations](/img/screenshots/integrations-crm.png)
 
 | Platform | Key Benefits | Setup Guide |
 |----------|--------------|-------------|
-| **Salesforce** | Two-way sync accounts, contacts, opportunities. Campaign member sync. Real-time updates. | [Setup Guide](/integrations/crm/salesforce-setup) |
+| **Salesforce** | Two-way sync of accounts, contacts, and opportunities. Campaign member sync. Real-time updates. | [Setup Guide](/integrations/crm/salesforce-setup) |
 | **HubSpot** | Company and contact sync. Custom properties. Deal attribution. | [Setup Guide](/integrations/crm/hubspot-setup) |
 | **Pipedrive** | Organization and person sync. Pipeline visibility. | [Learn more](/integrations/crm/pipedrive) |
 | **ActiveCampaign** | Contact sync. Tag mapping. Automation triggers. | [Learn more](/integrations/crm/activecampaign) |
-| **Outreach** | Sequence triggers. Activity logging. Prospect matching. | [Learn more](/integrations/crm/outreach) |
 
 :::tip CRM Priority Order
-Drag and drop connected CRM cards to set the priority order. When syncing data, Abmatic uses this order to resolve conflicts.
+Drag and drop connected CRM cards to set the priority order. When syncing data, Abmatic uses this order to resolve conflicts between platforms.
 :::
 
-### Advertising Platforms
+### Ad Networks
 
-Push your target account lists directly to ad platforms—no manual audience building required.
+Push your target account lists directly to ad platforms -- no manual audience building required.
+
+![Ad Networks Integrations](/img/screenshots/integrations-ad-networks.png)
 
 | Platform | Key Benefits | Setup Guide |
 |----------|--------------|-------------|
 | **LinkedIn Ads** | Matched Audiences from account lists. Company targeting at scale. | [Setup Guide](/integrations/advertising/linkedin-ads) |
-| **Google Ads** | Customer Match audiences. Search, Display, YouTube targeting. | [Setup Guide](/integrations/advertising/google-ads) |
-| **Meta Ads** | Custom audiences. Retargeting. Lookalike expansion. | Coming soon |
+| **Google Ads** | Customer Match audiences. Search, Display, and YouTube targeting using your account and contact lists. | [Setup Guide](/integrations/advertising/google-ads) |
+| **Meta** | Custom audiences. Retargeting. Lookalike expansion. | Coming soon |
 
-### Communication
+### Communications
 
-Get real-time notifications where your team already works.
+Get real-time notifications and email tracking where your team already works.
+
+![Communications Integrations](/img/screenshots/integrations-communications.png)
 
 | Platform | Key Benefits | Setup Guide |
 |----------|--------------|-------------|
-| **Slack** | Instant alerts for account visits, conversions, and high-intent signals. Route to specific channels. | [Setup Guide](/integrations/slack) |
-| **Gmail** | Send emails from AI Sequences using your Gmail account. OAuth connection with full sending control. | [Setup Guide](/integrations/gmail) |
+| **Gmail** | Email tracking integration. Connect your Google account via OAuth for seamless email activity logging. | [Learn more](/integrations/gmail) |
+| **Slack** | Instant alerts for account visits, conversions, and high-intent signals. Route notifications to specific channels. | [Setup Guide](/integrations/slack) |
 
 ### Conversion Tracking
 
-Connect your analytics to understand the full customer journey.
+Connect your analytics to understand the full customer journey. Only one conversion tracking integration can be active at a time to prevent duplicate events.
+
+![Conversion Tracking Integrations](/img/screenshots/integrations-conversion-tracking.png)
 
 | Platform | Key Benefits | Setup Guide |
 |----------|--------------|-------------|
-| **Google Analytics** | Send personalization events. Custom dimensions. | [Setup Guide](/integrations/google-analytics) |
-| **Segment** | Event streaming. Unified customer data. | [Setup Guide](/integrations/segment) |
+| **Google Analytics 4** | Send personalization events. Custom dimensions. Track how campaigns influence on-site behavior. | [Setup Guide](/integrations/google-analytics) |
+| **Segment** | Event streaming. Unified customer data. Feed Abmatic events into your entire analytics stack. | [Setup Guide](/integrations/segment) |
 
 :::note One at a Time
 You can only have one conversion tracking integration active at a time to prevent duplicate events.
 :::
 
-### Company Lookup Providers
+### Abmatic IP Data Providers
 
-Enhance visitor identification with multiple data sources.
+Abmatic uses a proprietary **5-provider waterfall** to maximize visitor identification. When a visitor arrives on your site, Abmatic runs through each data provider in sequence, enriching company data at every step. This layered approach delivers higher match rates and richer firmographic data than any single provider alone.
 
-| Provider | What It Provides |
-|----------|------------------|
-| **Abmatic AI** | Primary identification using IP intelligence and proprietary data |
-| **6sense** | Additional company intelligence (requires separate subscription) |
-| **Clearbit** | Enrichment data (requires separate subscription) |
+![Abmatic IP Data Providers](/img/screenshots/integrations-ip-providers.png)
 
-### Data Sources
+| Provider | Role | What It Does |
+|----------|------|--------------|
+| **Abmatic IP Primary** | First lookup | Primary reverse IP lookup with the highest match rates. This is the first provider queried for every visitor. |
+| **Abmatic IP Enhanced** | Firmographic enrichment | Adds detailed firmographic data such as company size, industry, and revenue to matched records. |
+| **Abmatic IP Extended** | Broader coverage | Extends coverage to smaller and harder-to-identify companies that the primary provider may miss. |
+| **Abmatic AI Enrichment** | AI-powered matching | Uses machine learning to match visitors to companies and enrich records when traditional IP lookup falls short. |
+| **Abmatic IP Fallback** | Maximum coverage | Final fallback provider ensuring the widest possible coverage across all visitor traffic. |
 
-Import and enrich accounts and contacts from additional sources.
+All five providers are managed by Abmatic and require no separate subscriptions or configuration. They activate automatically for every account.
+
+### Accounts & Contacts Data
+
+Import and enrich target accounts and contacts from additional data sources. Drag cards to set the priority order for data fetching.
+
+![Accounts & Contacts Data](/img/screenshots/integrations-data-sources.png)
 
 | Source | What It Provides |
 |--------|------------------|
-| **Apollo.io** | Contact data enrichment. Email discovery. |
-| **ZoomInfo** | Company and contact intelligence. |
+| **Abmatic** | Built-in data source for fetching target accounts and contacts. Always active and requires no additional configuration. |
+| **Apollo.io** | Contact data enrichment and email discovery. Powered by accurate data on 275M+ contacts and 73M+ companies. |
+
+### Marketing & Sales Automation
+
+Connect your outbound and marketing automation platforms to streamline follow-up workflows and keep prospect engagement moving.
+
+![Marketing & Sales Automation](/img/screenshots/integrations-automation.png)
+
+| Platform | Key Benefits | Setup Guide |
+|----------|--------------|-------------|
+| **Outreach** | Sales execution platform. Sequence triggers, activity logging, and prospect matching for go-to-market teams. | [Learn more](/integrations/crm/outreach) |
+| **Marketo** | Marketing automation. Streamline and automate marketing tasks, nurture campaigns, and lead scoring. | Coming soon |
 
 ---
 
 ## Connecting an Integration
 
-Most integrations take under 2 minutes to connect. Here's the typical flow:
+Most integrations take under 2 minutes to connect. Here is the typical flow:
 
 ### Step 1: Click the Integration Card
 
@@ -115,13 +141,13 @@ Navigate to **Settings > Integrations** and click on the integration you want to
 
 ### Step 2: Authorize Access
 
-For OAuth integrations (Salesforce, HubSpot, LinkedIn, etc.):
+For OAuth integrations (Salesforce, HubSpot, LinkedIn, Gmail, etc.):
 
 1. Click **Authorize** or **Connect**
 2. Sign in to the platform with your credentials
 3. Review the requested permissions
 4. Click **Allow** or **Authorize**
-5. You'll be redirected back to Abmatic
+5. You will be redirected back to Abmatic
 
 For API key integrations (ActiveCampaign, Apollo):
 
@@ -130,7 +156,7 @@ For API key integrations (ActiveCampaign, Apollo):
 3. Click **Save** or **Connect**
 
 :::tip Use an Admin Account
-Connect using an account with full API access. Consider creating a dedicated integration user whose credentials won't change frequently.
+Connect using an account with full API access. Consider creating a dedicated integration user whose credentials will not change frequently.
 :::
 
 ### Step 3: Configure Settings
@@ -150,7 +176,7 @@ After connecting, configure sync behavior:
 
 ### What Flows Where
 
-**Abmatic → CRM (Export)**
+**Abmatic to CRM (Export)**
 
 | Data Type | What Gets Synced |
 |-----------|------------------|
@@ -160,7 +186,7 @@ After connecting, configure sync behavior:
 | Campaign attribution | Which campaigns influenced accounts |
 | Custom fields | Any mapped custom data |
 
-**CRM → Abmatic (Import)**
+**CRM to Abmatic (Import)**
 
 | Data Type | What Gets Synced |
 |-----------|------------------|
@@ -206,21 +232,21 @@ Each integration card shows its current status:
 
 ## Common Integration Workflows
 
-### Website Visitors → CRM Leads
+### Website Visitors to CRM Leads
 
 Turn anonymous traffic into actionable CRM records:
 
 ```
 Visitor identified on website
-        ↓
+        |
 Meets engagement threshold (e.g., 3+ pages)
-        ↓
-Abmatic enriches company data
-        ↓
+        |
+Abmatic enriches company data via 5-provider waterfall
+        |
 Auto-pushes to CRM as new lead
-        ↓
+        |
 Sales receives Slack notification
-        ↓
+        |
 Rep follows up while intent is hot
 ```
 
@@ -230,27 +256,27 @@ Rep follows up while intent is hot
 3. Set engagement threshold (recommended: 3+ page views)
 4. Connect Slack for real-time alerts
 
-### Target Accounts → Ad Campaigns
+### Target Accounts to Ad Campaigns
 
 Reach your ideal accounts wherever they browse:
 
 ```
 Import target accounts from CRM
-        ↓
+        |
 Create account collection in Abmatic
-        ↓
-Push to LinkedIn Matched Audiences
-        ↓
+        |
+Push to LinkedIn Matched Audiences or Google Customer Match
+        |
 Run targeted ad campaigns
-        ↓
+        |
 Track engagement in Abmatic
 ```
 
 **How to set up:**
 1. Import accounts from CRM
-2. Connect LinkedIn Ads integration
-3. Select collection → Click "Push to LinkedIn"
-4. Create campaign in LinkedIn Campaign Manager
+2. Connect LinkedIn Ads or Google Ads integration
+3. Select collection and push to the ad platform
+4. Create campaign in the ad platform's campaign manager
 
 ### Real-Time Sales Alerts
 
@@ -258,13 +284,13 @@ Never miss a hot prospect visiting your site:
 
 ```
 Target account visits pricing page
-        ↓
-Abmatic identifies company
-        ↓
+        |
+Abmatic identifies company via IP waterfall
+        |
 Checks against target account list
-        ↓
+        |
 Sends Slack notification instantly
-        ↓
+        |
 Sales engages while prospect is active
 ```
 

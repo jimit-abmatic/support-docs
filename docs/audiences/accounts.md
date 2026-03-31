@@ -393,6 +393,62 @@ Keep your account data in sync across systems:
 
 ---
 
+## Recommend by AI (AI-Powered List Building)
+
+Skip the filter builder entirely and describe the account list you want in plain English. Abmatic's **Recommend by AI** feature uses AI to interpret your request, generate the right filters, and build a targeted list -- all from a single prompt.
+
+![Recommend by AI interface showing sample prompts and chat input](/img/screenshots/recommend-by-ai-interface.png)
+
+### How It Works
+
+1. Navigate to **Audiences > Accounts** and click **+ Account List**
+2. Select **Static Collection** (the AI recommendation feature works on top of a new collection)
+3. From the collection editor, navigate to the **Recommend by AI** view
+4. You will see a chat-like interface with sample prompts and an "Ask the AI..." input field
+5. Type a natural language description of the account list you want -- or click one of the suggested prompts to get started
+6. AI analyzes your request and automatically generates the matching filter conditions
+7. Review the **Estimated Accounts** count and click **Preview** to see the matching companies
+8. Refine your list with follow-up prompts in the same conversation
+
+### Sample Prompts to Try
+
+Recommend by AI shows four starter prompts to help you get going:
+
+| Sample Prompt | What It Does |
+|---------------|--------------|
+| "Create an account list for India-based Electronics companies with 200-2000 employees" | Builds a geo + industry + company size filter in one step |
+| "I want a more focused list with around 100 companies from my SAM list" | Narrows an existing segment to a tighter set |
+| "Based on last year's event, create a target account list for upcoming SaaStr event in San Francisco" | Uses event context to build a geo-targeted list for conference outreach |
+| "AE2 is looking for a target account list. Create a similar one to AE1 but in electronics industry" | Clones the logic from one rep's list and adapts it for another vertical |
+
+You can also type any custom request -- the AI understands firmographic criteria like industry, employee count, geography, revenue range, and more.
+
+### Reading the Results
+
+After you submit a prompt, the AI responds with:
+
+![Recommend by AI results showing estimated accounts and applied filters](/img/screenshots/recommend-by-ai-results.png)
+
+- **Estimated Accounts** -- the number of accounts matching the generated filters
+- **Preview** button -- opens the full account list so you can review individual companies
+- **See Applied Filters** -- expand this accordion to inspect the exact filter rules the AI created (Selector, Operator, Value)
+
+### Refining with Follow-Up Prompts
+
+The conversation is persistent within the session. After the initial results, you can send follow-up messages to narrow or expand the list:
+
+- *"Remove companies with fewer than 50 employees"*
+- *"Also include companies in the UK"*
+- *"Narrow this down to only SaaS companies"*
+
+Each follow-up updates the filters and recalculates the estimated account count in real time.
+
+:::tip When to Use Recommend by AI
+Use Recommend by AI when you know *what* you want but don't want to spend time picking through the filter builder. It is especially useful for complex, multi-condition lists and for teams that prefer describing segments in business language rather than database fields.
+:::
+
+---
+
 ## Related Documentation
 
 - [Contact Lists](/audiences/contacts) -- Manage individual contacts
