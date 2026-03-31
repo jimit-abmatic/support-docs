@@ -157,7 +157,7 @@ Select **Upload from CSV** from the Import section.
 ### Step 2: Upload Your File
 
 - Maximum file size: 100 MB
-- Maximum records: 1,000 per import
+- Maximum records: 10,000 per import
 - Supported format: .csv files
 
 ### Step 3: Map Columns
@@ -311,7 +311,7 @@ A smaller list of high-fit accounts (100-500) often outperforms a large list of 
 | Error | Solution |
 |-------|----------|
 | "File too large" | Reduce CSV to under 100 MB |
-| "Too many records" | Split into batches of 1,000 |
+| "Too many records" | Split into batches of 10,000 |
 | "Invalid format" | Ensure file is valid .csv format |
 | "CRM connection error" | Reconnect integration in Settings |
 

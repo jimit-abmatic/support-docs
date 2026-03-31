@@ -15,7 +15,7 @@ sidebar_position: 5
 
 | Without CSV Import | With Abmatic CSV Import |
 |-------------------|------------------------|
-| Manual data entry for each account | Bulk import 1,000 records at once |
+| Manual data entry for each account | Bulk import 10,000 records at once |
 | No enrichment or verification | Auto-enrichment with 50+ data points |
 | Separate lists across tools | Unified view with all your audiences |
 | Hours of data preparation | Minutes from upload to activation |
@@ -36,7 +36,7 @@ Upload CSV → Map Columns → Handle Duplicates → Auto-Enrich → Ready to Ta
 |-------------|---------------|----------------|
 | Format | .csv (comma-separated) | Universal spreadsheet format |
 | Encoding | UTF-8 | Ensures special characters display correctly |
-| Max Rows | 1,000 per import | Optimal for fast processing |
+| Max Rows | 10,000 per import | Optimal for fast processing |
 | Max Columns | 200 | Room for all your custom fields |
 | Headers | Required in first row | Enables automatic field mapping |
 
@@ -159,7 +159,8 @@ Choose how imported records interact with existing data:
 |-------------|--------------|
 | Under 100 records | Seconds |
 | 100-500 records | 1-2 minutes |
-| 500-1,000 records | 2-5 minutes |
+| 500-5,000 records | 2-10 minutes |
+| 5,000-10,000 records | 10-20 minutes |
 
 ## Auto-Enrichment
 
@@ -239,7 +240,7 @@ bob@enterprise.com,Bob,Johnson,CEO,Enterprise Corp,linkedin.com/in/bobjohnson
 | Test with 10 rows first | Verify mapping before full import |
 | Use clear column names | Better auto-mapping accuracy |
 | Include primary keys | Every row needs website or email |
-| Keep under 1,000 rows | Split large files for reliability |
+| Keep under 10,000 rows | Split large files for reliability |
 
 ### Don'ts
 
@@ -248,7 +249,7 @@ bob@enterprise.com,Bob,Johnson,CEO,Enterprise Corp,linkedin.com/in/bobjohnson
 | Including duplicates | Creates unnecessary deduplication work |
 | Empty primary key rows | These rows get skipped |
 | Special characters in headers | Can cause mapping issues |
-| Files over 1,000 rows | Split into multiple imports |
+| Files over 10,000 rows | Split into multiple imports |
 
 ### Column Naming Tips
 
@@ -265,7 +266,7 @@ bob@enterprise.com,Bob,Johnson,CEO,Enterprise Corp,linkedin.com/in/bobjohnson
 |---------|-------|----------|
 | Import fails | Wrong file format | Ensure file is .csv (not .xlsx) |
 | Encoding errors | Non-UTF-8 encoding | Re-save as UTF-8 in Excel/Sheets |
-| "File too large" | Over 1,000 rows | Split file into smaller chunks |
+| "File too large" | Over 10,000 rows | Split file into smaller chunks |
 | Missing required field | No website/email column | Add the required primary key column |
 
 ### Data Issues

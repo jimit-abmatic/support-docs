@@ -102,8 +102,14 @@ const sidebars: SidebarsConfig = {
             'integrations/crm/hubspot',
             'integrations/crm/pipedrive',
             'integrations/crm/activecampaign',
-            'integrations/crm/outreach',
             'integrations/crm/sync-behavior',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Marketing & Sales Automation',
+          items: [
+            'integrations/crm/outreach',
           ],
         },
         {
@@ -114,6 +120,7 @@ const sidebars: SidebarsConfig = {
             'integrations/advertising/google-ads',
           ],
         },
+        'integrations/gmail',
         'integrations/slack',
         'integrations/google-analytics',
         'integrations/segment',

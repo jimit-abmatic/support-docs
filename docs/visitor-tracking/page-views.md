@@ -47,43 +47,48 @@ Access page view data throughout Abmatic:
 
 ### Company Reveal Dashboard
 
-See which pages each identified company has visited. Navigate to **Visitor Reveal** → **Accounts** and click on any company to see their engagement history including:
+See which pages each identified company has visited. Navigate to **Visitor Reveal** --> **Accounts** and click on any company to see their engagement history including:
 
 - Total page views and unique pages
-- Specific pages visited (with "View" popup)
+- Specific pages visited (with "Visited Pages" link)
 - Time on page and scroll depth
 - Session count and engagement score
 
-![Company engagement showing page views](/img/screenshots/reveal-accounts.png)
-*Company Reveal showing identified visitors with engagement data*
+![Company Reveal Accounts Dashboard showing identified companies with engagement data](/img/screenshots/reveal-accounts-dashboard.png)
+*The Accounts dashboard showing 31,849 identified companies. Click any company name to drill into their page view history.*
 
 ### Engagement History View
 
-Click on any campaign's **Engagement** tab to see detailed page view activity for each visitor session:
+Click on any account and open the **Engagement** tab to see detailed page view activity for each visitor session:
 
-![Page view engagement data](/img/screenshots/wp-engagement-tab.png)
-*Engagement tab showing page views, scroll depth, time on page, and engagement scores for each session*
+![Account engagement tab showing individual page visit sessions with timestamps, locations, and engagement metrics](/img/screenshots/reveal-account-engagement.png)
+*The Engagement tab for Mountainside shows two website page visits: one from Beijing 10 minutes ago and another from California 14 days ago. Each session shows Total Form Submissions, Total Page Views, Total Page Views Unique, Total Scroll Depth Percentage, Total Time On Page, and Engagement Score. Click "Visited Pages" to see the exact URLs viewed in each session.*
 
 This view shows:
-- **Visited Pages** - Click to see exact URLs visited
-- **Total Page Views** - Number of pages viewed in session
-- **Unique Page Views** - Distinct pages visited
+- **Visited Pages** - Click to see exact URLs visited in each session
+- **Total Page Views** - Number of pages viewed in the session
+- **Unique Page Views** - Distinct pages visited (filters out repeat views)
 - **Scroll Depth %** - How far they scrolled on average
 - **Time on Page** - Total engaged time
 - **Engagement Score** - Calculated intent score
+- **Location** - Where the visit originated (city, country)
+- **Timestamp** - When the visit occurred (e.g., "10 minutes ago" or "14 days ago")
 
 ### Contact Reveal Dashboard
 
-For revealed contacts, see individual page view activity. Navigate to **Visitor Reveal** → **Contacts** to view:
+For revealed contacts, see individual page view activity alongside engagement scores. Navigate to **Visitor Reveal** --> **Contacts** to view:
+
+![Contact Reveal Dashboard showing engagement scores for individual contacts](/img/screenshots/reveal-contacts-dashboard.png)
+*Each contact row shows a Website Engagement Score (e.g., 52, 1652, 100, 47) alongside their temperature indicator. Higher scores indicate more page views and deeper engagement.*
 
 - Pages each contact has visited
-- Engagement patterns over time
+- Engagement patterns over time (via the engagement score)
 - Form submissions alongside page views
-- Website engagement score
+- Website engagement score for quick prioritization
 
 ### Analytics Reports
 
-For aggregate page metrics, go to **Analytics** → **Reports** to see:
+For aggregate page metrics, go to **Analytics** --> **Reports** to see:
 
 - Most viewed pages
 - Page performance over time
@@ -92,13 +97,13 @@ For aggregate page metrics, go to **Analytics** → **Reports** to see:
 
 ## Using Page Views for Targeting
 
-Page view data powers precise audience targeting and personalization.
+Page view data powers precise audience targeting and personalization. When you know what someone researched, you can tailor every interaction.
 
 ### Target by Content Interest
 
 Create campaigns that respond to what visitors are researching:
 
-1. Go to **Campaigns** → **Create Campaign**
+1. Go to **Campaigns** --> **Create Campaign**
 2. Add filter: **Pages Viewed Contains** `[page path]`
 3. Personalize content based on their demonstrated interest
 
@@ -106,36 +111,44 @@ Create campaigns that respond to what visitors are researching:
 
 | Page Viewed | What It Signals | Recommended Action |
 |------------|-----------------|-------------------|
-| `/pricing` | Evaluating cost | Show ROI calculator, case studies |
-| `/demo` | Ready to engage | Expedite with direct CTA |
-| `/solutions/enterprise` | Enterprise buyer | Personalize for enterprise needs |
-| `/vs-competitor` | Comparing options | Highlight differentiators |
-| `/case-studies` | Building business case | Show relevant social proof |
+| `/pricing` | Evaluating cost — strong buying signal | Show ROI calculator, case studies, or a "Questions about pricing?" chat prompt |
+| `/demo` | Ready to engage | Expedite with a direct booking CTA and reduce friction |
+| `/solutions/enterprise` | Enterprise buyer | Personalize for enterprise needs, mention dedicated support |
+| `/vs-competitor` | Comparing options | Highlight your differentiators and competitive advantages |
+| `/case-studies` | Building business case | Show relevant social proof for their industry |
+| `/integrations` | Evaluating technical fit | Surface integration guides and compatibility info |
 
 ### Retargeting Engaged Visitors
 
-Target visitors who showed interest but didn't convert:
+Target visitors who showed interest but did not convert:
 
-**Example: Pricing Page Visitors Who Didn't Demo**
+**"See which companies are visiting your pricing page right now"**
+1. Filter: Pages Viewed Contains `/pricing`
+2. Filter: Confidence = High or Very High
+3. Sort by most recent visits
+4. Push matching companies to CRM for immediate sales follow-up
+
+**Pricing Page Visitors Who Did Not Request a Demo**
 1. Filter: Pages Viewed Contains `/pricing`
 2. Filter: Did Not Submit Form (demo request)
-3. Personalize: Show "Questions about pricing? Chat with us"
+3. Personalize: Show "Questions about pricing? Chat with us" banner
 
-**Example: Multiple Page Views Without Action**
+**Multiple Page Views Without Action (High Intent, No Conversion)**
 1. Filter: Page Views > 5
 2. Filter: No Form Submission
-3. Personalize: Surface relevant CTA based on viewed content
+3. Personalize: Surface relevant CTA based on the content they viewed most
 
 ### Scoring by Engagement
 
-Page views contribute to engagement scoring:
+Page views contribute directly to engagement scoring. The more pages a company or contact views — and the more intent-driven those pages are — the higher their score:
 
-| Behavior | Score Impact | Interpretation |
+| Behavior | Score Impact | What It Means for Your Team |
 |----------|-------------|----------------|
-| Pricing page view | High | Strong buying signal |
-| Multiple product pages | Medium-High | Active evaluation |
-| Blog/resource pages | Medium | Research phase |
-| Single page bounce | Low | Minimal interest |
+| Pricing page view | High | Someone is evaluating cost — a strong buying signal |
+| Multiple product pages | Medium-High | Active evaluation across your solution |
+| Blog/resource pages | Medium | Research phase — nurture, do not hard sell |
+| Single page bounce | Low | Minimal interest — monitor for return visits |
+| Return visits to same pages | High | Serious consideration — they keep coming back |
 
 ## Custom Page View Tracking
 
@@ -187,20 +200,29 @@ window.abmatic.page('/pricing', {
 
 | Practice | Benefit |
 |----------|---------|
-| **Focus on high-intent pages** | Pricing, demo, contact pages signal purchase intent |
-| **Create page-based segments** | Build audiences around content themes |
-| **Combine with firmographic data** | "Enterprise companies viewing pricing" is powerful |
-| **Set up page-based alerts** | Get notified when target accounts visit key pages |
-| **Review page analytics weekly** | Identify trending content and engagement patterns |
+| **Focus on high-intent pages** | Pricing, demo, and contact pages signal purchase intent — prioritize these for alerts and outreach |
+| **Create page-based segments** | Build audiences around content themes (e.g., "pricing page visitors" or "integration researchers") |
+| **Combine with firmographic data** | "Enterprise companies viewing pricing" is one of the most powerful audience segments you can build |
+| **Set up page-based alerts** | Get notified via Slack when target accounts visit key pages like pricing or demo |
+| **Review page analytics weekly** | Identify trending content and spot which pages drive the most pipeline |
+| **Use page data in outreach** | Reference what prospects researched: "I noticed you were looking at our enterprise features..." |
 
 ### Don'ts
 
 | Avoid | Why |
 |-------|-----|
-| Tracking every micro-interaction | Creates noise, focus on meaningful pages |
-| Ignoring scroll depth | Page view without scroll = didn't read |
-| Overlooking session context | Single page in long session ≠ bounce |
-| Forgetting referrer data | Knowing how they arrived adds context |
+| Tracking every micro-interaction | Creates noise — focus on pages that signal real buying intent |
+| Ignoring scroll depth | A page view without scroll means they did not actually read the content |
+| Overlooking session context | A single page in a long, multi-page session is not a bounce — it is part of a research journey |
+| Forgetting referrer data | Knowing whether they arrived from LinkedIn, Google, or an email adds critical context |
+
+### Acting on Page View Data: A Weekly Workflow
+
+| Day | Action | Goal |
+|-----|--------|------|
+| **Monday** | Review which companies visited pricing/demo pages over the weekend | Catch early-week buying signals |
+| **Wednesday** | Check engagement trends — which content is driving the most visits? | Optimize content strategy |
+| **Friday** | Build a "hot visitors" list of companies with 5+ page views this week | Give sales a prioritized list for the following week |
 
 ## Page View Metrics Explained
 

@@ -69,7 +69,7 @@ Get real-time notifications where your team already works.
 | Platform | Key Benefits | Setup Guide |
 |----------|--------------|-------------|
 | **Slack** | Instant alerts for account visits, conversions, and high-intent signals. Route to specific channels. | [Setup Guide](/integrations/slack) |
-| **Gmail** | Email tracking integration. | Coming soon |
+| **Gmail** | Send emails from AI Sequences using your Gmail account. OAuth connection with full sending control. | [Setup Guide](/integrations/gmail) |
 
 ### Conversion Tracking
 
@@ -382,6 +382,7 @@ Map your specific fields:
 - [Google Ads](/integrations/advertising/google-ads)
 
 ### Other Integrations
+- [Gmail](/integrations/gmail)
 - [Slack](/integrations/slack)
 - [Google Analytics](/integrations/google-analytics)
 - [Segment](/integrations/segment)

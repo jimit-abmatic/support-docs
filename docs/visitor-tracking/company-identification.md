@@ -59,38 +59,74 @@ Visit logged to company profile
 ### Navigate to Reveal
 
 1. Click **Reveal** in the left sidebar
-2. Select **Accounts** tab
+2. Select the **Accounts** tab
 
-You'll see a list of all companies that have visited your website, complete with firmographic data and engagement metrics.
+You will see a list of all companies that have visited your website, complete with firmographic data and engagement metrics.
 
-![Visitor Reveal - Accounts](/img/screenshots/reveal-accounts.png)
+![Visitor Reveal Accounts Dashboard showing 31,849 identified companies](/img/screenshots/reveal-accounts-dashboard.png)
 
-*The Visitor Reveal Accounts view shows 30,458 identified companies with confidence levels, industry, revenue, and company summaries.*
+*The Visitor Reveal Accounts view shows 31,849 identified companies broken down by confidence: 6,038 Very High, 6,131 High, 8,380 Low, 8,114 Moderate, and 3,186 Very Low. Real companies visible include Mountainside (Mental Health Care, $10M-$25M), Southeastern Grocers (Retail, $1B-$10B), OpenText (Computer Software, ticker OTEX), Quantum Metric (Computer Software, $250M-$500M), and Berkshire Hathaway Specialty (Insurance).*
 
 ### Understanding the Dashboard
 
-The top row shows your identification metrics at a glance:
+The top row shows your identification metrics at a glance. Click any confidence level to filter the list instantly:
 
 | Metric | What It Shows | How to Use It |
 |--------|---------------|---------------|
-| **All Accounts** | Total companies identified | Track growth over time |
-| **Very High** | Highest confidence matches | Prioritize for sales |
-| **High** | Strong matches | Add to target lists |
-| **Moderate** | Good matches | Include in campaigns |
-| **Low** | Possible matches | Verify before acting |
-| **Very Low** | Needs verification | Review manually |
+| **All Accounts** | Total companies identified (e.g., 31,849) | Track growth over time |
+| **Very High** | Highest confidence matches (e.g., 6,038) | Prioritize for direct sales outreach |
+| **High** | Strong matches (e.g., 6,131) | Add to target account lists and sequences |
+| **Moderate** | Good matches (e.g., 8,114) | Include in personalization and ad campaigns |
+| **Low** | Possible matches (e.g., 8,380) | Verify before acting on them |
+| **Very Low** | Needs verification (e.g., 3,186) | Monitor for repeat visits |
 
 ### Account List Columns
 
-| Column | What It Shows | Why It's Useful |
+| Column | What It Shows | Why It Is Useful |
 |--------|---------------|-----------------|
-| **Domain** | Company website URL | Quick identification |
-| **Name** | Company name | Match to CRM records |
-| **Industry** | Business sector | Filter by vertical |
-| **LinkedIn URL** | Company LinkedIn page | Research accounts |
-| **Inferred Revenue** | Estimated annual revenue | Qualify by company size |
-| **Summary** | AI-generated company description | Quick context |
-| **Ticker** | Stock symbol (if public) | Identify enterprise accounts |
+| **Domain** | Company website URL (e.g., opentext.com) | Quick identification and CRM matching |
+| **Name** | Company name (e.g., OpenText) | Match to your CRM records |
+| **Industry** | Business sector (e.g., Computer Software, Retail) | Filter by vertical to find ICP accounts |
+| **LinkedIn URL** | Company LinkedIn page | One-click research on any account |
+| **Inferred Revenue** | Estimated annual revenue (e.g., $250M-$500M) | Qualify by company size at a glance |
+| **Summary** | AI-generated company description | Quick context without leaving the page |
+| **Ticker** | Stock symbol for public companies (e.g., OTEX) | Spot enterprise accounts instantly |
+
+### Account Detail View
+
+Click on any company name to see their complete profile — engagement score, visit history, social links, and associated contacts.
+
+![Account detail view for Quantum Metric showing engagement score of 54](/img/screenshots/reveal-account-quantum.png)
+
+*Clicking on Quantum Metric opens their full profile: a private company with 501-1000 employees in Colorado Springs, Colorado. The engagement score gauge shows 54 (strong engagement). The 90-day trend chart shows increasing website activity. Links to LinkedIn, Facebook, and Twitter are included, along with a direct link to the Salesforce record.*
+
+**What you will find in the account detail:**
+
+| Tab | What It Shows | When to Use It |
+|-----|--------------|----------------|
+| **Overview** | Company profile, engagement score gauge, trend chart, social links | Get a quick read on account health and fit |
+| **Collections** | Which lists and segments include this account | See how you are already targeting them |
+| **Campaigns** | Active campaigns targeting this account | Coordinate your ABM efforts |
+| **Opportunities** | CRM opportunities linked to this account | Connect website activity to pipeline |
+| **Engagement** | Individual page visit sessions with locations | See exactly what they are researching |
+| **Performance** | Detailed visitor analytics over time | Measure engagement depth and trends |
+| **Contacts** | All identified contacts at that company | Map the buying committee |
+
+### Engagement History
+
+The **Engagement** tab reveals the complete story of how a company has interacted with your website.
+
+![Account engagement tab showing website page visits with timestamps, locations, and engagement scores](/img/screenshots/reveal-account-engagement.png)
+
+*The Engagement tab for Mountainside shows individual visit sessions: one from Beijing 10 minutes ago and another from California 14 days ago. Each session displays form submissions, page views, unique pages, scroll depth, time on page, and engagement score. Click "Visited Pages" to see exactly which URLs they viewed.*
+
+### Contacts Within an Account
+
+The **Contacts** tab shows every individual Abmatic has identified at a specific company — your buying committee, mapped automatically.
+
+![Quantum Metric Contacts tab showing 9 contacts across Marketing, Engineering, and Professional Services departments](/img/screenshots/reveal-account-contacts.png)
+
+*Quantum Metric has 9 identified contacts: 6 in Marketing (VP, Director, CMO, Senior Manager), 1 in Engineering (Senior Manager), and 1 in Professional Services (Senior Director). Each row shows work email, full name, job title, LinkedIn URL, and company industry. This gives you a complete view of who to engage at this account.*
 
 ---
 
@@ -245,42 +281,50 @@ Use exclusions for:
 
 ### Daily Review Process
 
+The value of identification data decays fast. A company visiting your pricing page today is far more likely to engage than one that visited two weeks ago. Build a daily habit:
+
 | Time | Action | Goal |
 |------|--------|------|
-| **Morning** | Check High/Very High confidence visitors | Identify hot leads |
+| **Morning** | Check High/Very High confidence visitors from the past 24 hours | Catch active buyers while intent is fresh |
 | **Review** | Look at target accounts that visited | Prioritize sales follow-up |
-| **Action** | Push top accounts to CRM | Enable sales outreach |
-| **Build** | Add good-fit companies to lists | Grow campaign audiences |
+| **Action** | Push top accounts to CRM and alert reps | Enable same-day outreach |
+| **Build** | Add good-fit companies to lists | Grow campaign audiences continuously |
 
 ### Sales Integration Workflows
 
 | Use Case | How to Do It | Impact |
 |----------|--------------|--------|
-| **Real-time alerts** | Set up Slack notifications for target accounts | Instant awareness |
-| **CRM sync** | Auto-push high-engagement companies | Enrich sales data |
-| **Meeting prep** | Check if prospect visited before calls | Informed conversations |
-| **Lead scoring** | Use engagement + fit for prioritization | Better conversion |
+| **Real-time alerts** | Set up Slack notifications for target accounts | Your rep knows within minutes when their prospect visits |
+| **CRM sync** | Auto-push high-engagement companies to Salesforce/HubSpot | Complete account profiles without manual data entry |
+| **Meeting prep** | Check if prospect visited before calls | Walk in knowing what pages they researched |
+| **Lead scoring** | Use engagement + firmographic fit for prioritization | Focus on accounts that are both a good fit AND actively interested |
 
 ### Common Workflows
 
-**"Who visited our pricing page?"**
+**"See which companies are visiting your pricing page right now"**
 1. Open Reveal > Accounts
 2. Click FILTERS
 3. Add filter: Pages Visited contains "/pricing"
-4. Sort by Last Seen
-5. Push High confidence matches to CRM
+4. Sort by Reveal Last Seen (most recent first)
+5. Push High and Very High confidence matches to CRM for immediate follow-up
 
-**"Which target accounts are engaged?"**
+**"Which target accounts are engaged this week?"**
 1. Open Reveal > Accounts
-2. Filter by Confidence = High or Very High
-3. Export or cross-reference with your target account list
-4. Alert sales for follow-up
+2. Click the **Very High** or **High** confidence tab to filter
+3. Sort by Reveal Last Seen to find recent visitors
+4. Click into each account to see their engagement history and contacts
+5. Push to CRM or add to a Slack alert for your sales team
 
 **"Find enterprise companies in my territory"**
 1. Open Reveal > Accounts
-2. Filter: Revenue > $100M
-3. Filter: Location = [your territory]
-4. Add to target list for personalization
+2. Use the search or filter for Revenue > $100M
+3. Filter by Location to match your territory
+4. Add matching companies to a target list for website personalization and ad retargeting
+
+**"Alert your sales team when a target account visits your site"**
+1. Set up Slack integration in Settings > Slack
+2. Configure notifications for high-engagement visits from target accounts
+3. Your sales reps receive real-time alerts and can reach out while the prospect is still in buying mode
 
 ---
 
