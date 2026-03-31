@@ -255,6 +255,132 @@ Coordinate outreach to multiple contacts at the same account:
 | Empty sequence steps | Add at least one step before activating |
 | Missing template content | Ensure each step has a subject and body |
 
+---
+
+## Real-World Use Cases
+
+These three scenarios show how marketing teams use Agentic Flow campaigns to drive pipeline and revenue in practice. Use them as templates and adapt to your business.
+
+### Use Case 1: Enterprise ABM Outreach
+
+**Scenario:** Your company sells a data analytics platform. Sales has identified 50 enterprise accounts (1,000+ employees) in financial services as the top-priority segment for Q2. You need to book meetings with VPs of Data and Analytics at each account, but your team of 3 SDRs cannot personalize outreach at that scale.
+
+**Setup in Abmatic:**
+
+1. **Audience:** Import the 50-account list from Salesforce. Set campaign rules to `Industry = Financial Services` AND `Employee Count > 1000` AND `Job Title Level = VP or Director`.
+2. **AI Context (Settings > AI Agents > Agentic Sequence):**
+   ```
+   Value Propositions:
+   - Financial institutions using our platform reduce reporting cycles by 60%
+   - SOC 2 Type II certified, meets FINRA and SEC audit requirements
+   - Case study: Regional bank cut compliance reporting from 3 weeks to 2 days
+
+   Personalization Rules:
+   - For banks: Lead with compliance and regulatory reporting
+   - For insurance: Lead with claims analytics and fraud detection
+   - For asset management: Lead with portfolio risk modeling
+   ```
+3. **Sequence Steps:**
+
+| Step | Type | Timing | Sample AI-Generated Subject Line |
+|------|------|--------|----------------------------------|
+| 1 | Automatic Email | Day 0 | "How [Bank Name] cut compliance reporting by 60%" |
+| 2 | LinkedIn Connection | Day 3 | "Hi [Name], fellow [City] data leader here" |
+| 3 | Value-Add Email | Day 6 | "[Name], FINRA reporting benchmark for [Company]" |
+| 4 | Call Script | Day 10 | Talking points: their recent 10-K filing, data team size, regulatory burden |
+| 5 | Manual Email | Day 14 | "Quick thought on [Company]'s analytics roadmap" |
+
+**Expected Results:**
+- 15-25% reply rate (vs. 3-5% for generic sequences)
+- 8-12 meetings booked from 50 accounts within 30 days
+- Each message references the prospect's specific regulatory environment, company size, and role
+
+:::tip Why this works
+AI researches each financial institution's specific compliance challenges, recent news, and leadership structure. A VP of Data at JPMorgan Chase gets a completely different message than a VP of Analytics at a regional credit union--even though both are in the same campaign.
+:::
+
+---
+
+### Use Case 2: Product Launch Campaign with Multi-Persona Sequencing
+
+**Scenario:** You are launching a new AI-powered forecasting module. Three personas need to hear about it at each target account: the CMO (budget holder), the Director of Marketing Operations (technical evaluator), and the Demand Gen Manager (daily user). Each persona cares about different things.
+
+**Setup in Abmatic:**
+
+1. **Create three Agentic Flow campaigns**, one per persona, all targeting the same 200 mid-market SaaS accounts:
+   - Campaign A: "Forecasting Launch - CMOs"
+   - Campaign B: "Forecasting Launch - Marketing Ops Directors"
+   - Campaign C: "Forecasting Launch - Demand Gen Managers"
+
+2. **AI Context tailored per campaign:**
+
+| Persona | AI Personalization Focus | Sample Opening Hook |
+|---------|-------------------------|---------------------|
+| **CMO** | Board-level ROI, competitive advantage, revenue predictability | "Your board wants predictable revenue. Here is how [Company] can deliver it next quarter." |
+| **Director of Mktg Ops** | Implementation timeline, integration with existing stack, data accuracy | "[Name], this plugs into your existing HubSpot/Salesforce setup in under a week." |
+| **Demand Gen Manager** | Daily workflow improvement, campaign optimization, time savings | "Imagine knowing which campaigns will hit target before they launch, [Name]." |
+
+3. **Coordinated timing:** Stagger the three campaigns so the CMO receives outreach on Day 0, the Director of Ops on Day 2, and the Demand Gen Manager on Day 4. This creates a surround-sound effect at the account level.
+
+4. **Sequence structure per persona (4 steps each):**
+   - Day 0: AI-personalized intro email highlighting their specific concern
+   - Day 3: LinkedIn message referencing a relevant feature for their role
+   - Day 7: Value-add email with a persona-appropriate asset (ROI calculator for CMO, integration docs for Ops, workflow demo for Demand Gen)
+   - Day 12: Call script with role-specific discovery questions
+
+**Expected Results:**
+- Multi-threaded engagement at 30-40% of target accounts
+- 2x higher meeting conversion than single-persona outreach
+- Shorter sales cycles because the buying committee is already informed
+
+---
+
+### Use Case 3: Competitive Win-Back with Intelligence-Driven Personalization
+
+**Scenario:** 75 accounts in your CRM are marked as "Closed-Lost to Competitor X." Six months have passed, and you have shipped several features that address the exact gaps that caused those losses. You want to re-engage these accounts with outreach that directly addresses what they found lacking.
+
+**Setup in Abmatic:**
+
+1. **Audience:** Import the "Closed-Lost to Competitor X" list from your CRM. Enrich with current data (new contacts, recent funding, leadership changes).
+
+2. **AI Context (Settings > AI Agents > Agentic Sequence):**
+   ```
+   Competitive Intelligence:
+   - Competitor X lacks native Salesforce integration (we launched this in Jan)
+   - Competitor X charges $50/user/month extra for analytics (ours is included)
+   - Competitor X has 2-star G2 reviews for customer support (we have 4.7 stars)
+
+   Win-back positioning:
+   - Do NOT trash the competitor. Acknowledge they are a good product.
+   - Lead with "things have changed since we last spoke"
+   - Reference the specific feature gap that caused the loss (from CRM notes)
+   - Offer a side-by-side comparison, not a hard sell
+
+   Tone: Humble, curious, consultative. We are not desperate--we are confident.
+   ```
+
+3. **Sequence Steps:**
+
+| Step | Type | Timing | Purpose |
+|------|------|--------|---------|
+| 1 | Manual Email | Day 0 | "A lot has changed at [Our Company] since we last spoke, [Name]" -- AI references the specific loss reason |
+| 2 | LinkedIn Message | Day 4 | Casual check-in, share a relevant customer story (AI picks by industry) |
+| 3 | Value-Add Email | Day 8 | Side-by-side feature comparison, personalized to what matters for their role |
+| 4 | Call Script | Day 12 | Discovery questions focused on whether Competitor X is meeting expectations |
+
+**Why Manual Email for Step 1:** These are sensitive re-engagement messages. A rep should review the AI's draft before sending to ensure the competitive messaging is tactful and the loss-reason reference is accurate.
+
+**Expected Results:**
+- 10-15% reply rate (warm leads who already know your product)
+- 5-8 re-opened opportunities from 75 accounts within 45 days
+- Average deal size 20% higher than initial opportunity (they now understand your full value)
+
+:::info Re-engagement timing matters
+The best window for win-back campaigns is 6-12 months after the loss. Earlier feels desperate; later means they are too entrenched with the competitor. If the competitor raised prices or had a major outage, that is your signal to move.
+:::
+
+---
+
 ## Related
 
 - [AI Sequences](/campaigns/email-campaigns) — AI-powered sequences with template-based control

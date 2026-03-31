@@ -131,6 +131,63 @@ Ready to create your first campaign? Here's the fastest path to value:
 3. **[Agentic Flow](/campaigns/agentic-flow)** — Let AI craft personalized outreach at scale
 4. **[A/B Testing](/campaigns/ab-testing)** — Learn to run statistically valid experiments
 
+---
+
+## Campaign Playbook: Which Campaign Type Should I Use?
+
+Not sure where to start? Match your marketing goal to the right campaign type below.
+
+### Awareness and Top-of-Funnel
+
+| Your Goal | Recommended Campaign | Why This Type |
+|-----------|---------------------|---------------|
+| "I want visitors from target accounts to see relevant content when they land on our site" | **[Inbound Personalization](/campaigns/website-personalization)** | Automatically tailors your existing pages based on who is visiting--no new pages needed |
+| "I want to build brand recognition at target accounts before our SDRs reach out" | **[LinkedIn Ads](/campaigns/linkedin-ads)** | Puts your brand in front of decision-makers at specific companies on the platform where they spend the most professional time |
+| "I want to retarget website visitors who didn't convert" | **Retargeting** or **[Google Ads](/campaigns/google-ads)** | Keeps your brand visible across the web after someone visits your site, nudging them back when they are ready |
+| "I want to promote an upcoming webinar or event to target accounts" | **[Banner & Popup](/campaigns/banner-popup)** | Catches attention with time-sensitive messaging without requiring any page redesign |
+
+### Engagement and Mid-Funnel
+
+| Your Goal | Recommended Campaign | Why This Type |
+|-----------|---------------------|---------------|
+| "I want to create personalized landing pages for specific accounts our sales team is pursuing" | **Outbound Personalization** | Lets sales send prospects to a page that says their company name, references their industry, and speaks to their specific pain points |
+| "I want to test whether our new headline converts better than the current one" | **[A/B Testing](/campaigns/ab-testing)** | Splits traffic between versions and measures which one actually drives more conversions--no guessing |
+| "I want visitors to get instant answers to product questions 24/7" | **[Agentic Chat](/campaigns/agentic-chat)** | An AI assistant on your website that knows your product, qualifies leads, and captures emails around the clock |
+| "I want to identify which target accounts are showing buying intent right now" | **Intent Campaign** | Surfaces accounts actively researching your category based on first-party website behavior signals |
+
+### Conversion and Bottom-of-Funnel
+
+| Your Goal | Recommended Campaign | Why This Type |
+|-----------|---------------------|---------------|
+| "I want AI to write truly personalized outreach for each prospect at scale" | **[Agentic Flow](/campaigns/agentic-flow)** | AI generates unique messages for every contact based on their company, role, and behavior--not just mail merge variables |
+| "I want to run a multi-step email and LinkedIn outreach sequence" | **[AI Sequence](/campaigns/email-campaigns)** | Orchestrates emails, calls, and LinkedIn touches with AI personalization on a timed cadence |
+| "I want to sync our campaign engagement data back to Salesforce/HubSpot" | **[CRM Campaigns](/campaigns/crm-campaigns)** | Creates a direct link between Abmatic campaigns and CRM campaigns for attribution and pipeline reporting |
+| "I want to show a targeted discount or demo offer to visitors about to leave the pricing page" | **[Banner & Popup](/campaigns/banner-popup)** | Exit-intent popups catch high-intent visitors at the critical moment and recover otherwise-lost conversions |
+
+### Multi-Channel ABM Programs
+
+For a coordinated ABM program, combine multiple campaign types. Here is a proven sequence:
+
+```
+Week 1-2:  LinkedIn Ads → Build brand awareness at target accounts
+              ↓
+Week 2-4:  Inbound Personalization → Tailor your website for those accounts
+              ↓
+Week 3-5:  Agentic Flow → AI-personalized outreach to key contacts
+              ↓
+Week 4-6:  Banner & Popup → Nudge pricing page visitors toward demos
+              ↓
+Ongoing:   Intent Campaign → Monitor which accounts are heating up
+              ↓
+Ongoing:   CRM Campaigns → Sync all engagement back to Salesforce/HubSpot
+```
+
+:::tip Start with one, then layer
+You do not need to launch all campaign types at once. Start with one that addresses your biggest gap (most teams start with **Inbound Personalization** or **Agentic Flow**), prove the value, then add complementary campaigns.
+:::
+
+---
+
 ## More Resources
 
 | Topic | What You'll Learn |
