@@ -249,6 +249,122 @@ Contact support@abmatic.ai to upgrade.
 
 ---
 
+---
+
+## Copy-Paste Prompt Library for Marketers
+
+These are ready-to-use prompts organized by common marketing tasks. Copy them into Clara or Alex and adjust the bracketed values for your business.
+
+### Account List Building
+
+```
+Create a dynamic account list of [Healthcare] companies in the
+[United States] with more than [500] employees that have visited
+our website in the last [30] days.
+```
+
+```
+Create an account list of companies in the [Technology] sector
+with inferred revenue between [$10M] and [$500M] that are NOT
+in our current customer list.
+```
+
+```
+Create an account list of all companies that visited our
+[pricing page] more than [2] times in the last [14] days
+and have at least [200] employees.
+```
+
+### Contact List Building
+
+```
+Create a contact list of [VP and Director level] contacts in
+[Marketing and Sales] departments at companies in our
+"[Q2 Target Accounts]" account list.
+```
+
+```
+Create a contact list of [C-level executives] at [Financial Services]
+companies with more than [1,000] employees in [North America].
+```
+
+### Campaign Creation
+
+```
+Create an inbound personalization campaign targeting [Enterprise
+Technology] companies in the [United States and Canada] that
+have visited more than [5] pages. Personalize our [homepage]
+and [pricing page] with industry-specific messaging.
+```
+
+```
+Create an outbound campaign for our "[Q2 Strategic Accounts]"
+list. Focus on personalizing the [/demo] page with their
+company name in the headline and [Technology] case studies.
+```
+
+```
+Create a Banner & Popup campaign showing a [webinar promotion]
+to visitors from our target accounts on all pages except
+[/admin] and [/login]. Use exit-intent trigger on the
+[pricing page].
+```
+
+### Performance Analysis
+
+```
+Show me all campaign performance for the last [90] days.
+Which campaigns have the highest conversion rate? Which have
+the most visitors but low conversions?
+```
+
+```
+Compare conversion rates between my [Healthcare] campaigns
+and my [Technology] campaigns for [Q1 2026]. Which industry
+segment is performing better?
+```
+
+```
+Create a report showing which of my target accounts have
+visited the [pricing page] in the last [7] days but have NOT
+submitted a [demo request] form.
+```
+
+### Content Personalization
+
+```
+From the content on our [homepage], suggest [3] headline
+variations for [Enterprise Healthcare] visitors that
+emphasize [HIPAA compliance and patient data security].
+```
+
+```
+Suggest personalized CTA button text for our [pricing page]
+for each of these segments: [Enterprise 1000+ employees],
+[Mid-Market 100-999], and [SMB under 100].
+```
+
+### Competitive Intelligence and Win-Back
+
+```
+Create a contact list of all contacts at accounts marked as
+"[Closed-Lost]" in our CRM from the last [6-12] months.
+Filter for [Director level and above] in [Marketing and IT].
+```
+
+```
+Draft an outreach sequence for accounts that churned to
+[Competitor X] in the last [6] months. Focus on our new
+[Salesforce integration] and [real-time analytics] features
+that address their likely pain points.
+```
+
+:::tip Make your prompts more specific for better results
+The more detail you provide, the better the output. Instead of "create a campaign for tech companies," try "create an inbound campaign targeting SaaS companies with 200-1000 employees in North America that have visited our pricing page at least twice in the last 30 days." Clara and Alex work best when they know exactly what you need.
+:::
+
+---
+
 ## Next Steps
 
 - **[Configure AI Agents](/ai-agents/ai-agents-configuration)** - Customize agent behavior

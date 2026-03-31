@@ -241,4 +241,4 @@ Contact Reveal uses credits from your plan:
 | [Page Views](/visitor-tracking/page-views) | Understand what contacts browsed |
 | [Contact Lists](/audiences/contacts) | Organize revealed contacts |
 | [CRM Sync](/audiences/crm-sync) | Automate contact transfer |
-| [Email Sequences](/campaigns/email-campaigns) | Engage revealed contacts |
+| [AI Sequences](/campaigns/email-campaigns) | Engage revealed contacts |

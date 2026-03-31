@@ -268,7 +268,7 @@ Different campaign types use form tracking differently:
 | **Website Personalization** | Track forms on personalized pages vs. control |
 | **LinkedIn Campaigns** | Track form fills from LinkedIn ad traffic |
 | **Google Ads Campaigns** | Measure form conversions from paid search |
-| **Email Sequences** | Track form fills from email click-through |
+| **AI Sequences** | Track form fills from AI sequence click-through |
 | **CRM Campaigns** | Attribute form fills to CRM campaign members |
 
 ## Viewing Form Conversion Data
@@ -363,4 +363,4 @@ Form tracking respects user consent preferences:
 | [Event Tracking](/conversions/event-tracking) | Track custom events beyond forms |
 | [Conversion Analytics](/conversions/analytics) | Analyze conversion performance |
 | [Contact Reveal](/visitor-tracking/contact-reveal) | Identify form submitters |
-| [Email Sequences](/campaigns/email-campaigns) | Automate form follow-up |
+| [AI Sequences](/campaigns/email-campaigns) | Automate form follow-up |

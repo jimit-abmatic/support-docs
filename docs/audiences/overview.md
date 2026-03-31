@@ -325,6 +325,97 @@ A smaller list of high-fit accounts (100-500) often outperforms a large list of 
 
 ---
 
+---
+
+## Building Your First Audience: A Marketer's Walkthrough
+
+New to Abmatic audiences? This step-by-step walkthrough is designed for marketers (not developers) and will have your first audience ready to power campaigns in about 10 minutes.
+
+### Before You Start
+
+Make sure you have:
+- An Abmatic account with the tracking script installed ([Quick Start Guide](/getting-started/quick-start))
+- An idea of who your ideal customer is (industry, size, geography)
+- Optionally: a CSV of target accounts or a connected CRM
+
+### Step 1: Decide What You Are Trying to Accomplish
+
+Your audience strategy depends on your campaign goal. Use this table to decide which approach to take:
+
+| Your Goal | Audience Type | Method |
+|-----------|--------------|--------|
+| "I want to personalize our website for companies in a specific industry" | Dynamic Account Collection | Build from filters |
+| "I have a list of 200 accounts from our sales team that I need to target" | Static Account Collection | Upload CSV or import from CRM |
+| "I want to send personalized outreach to specific people at target companies" | Contact Collection | Upload CSV with emails or import from CRM |
+| "I want to target companies that have already visited our website" | Dynamic Account Collection | Filter by engagement score or page views |
+| "I want to push an account list to LinkedIn for advertising" | Account Collection (any type) | Build first, then push to LinkedIn DMP |
+
+### Step 2: Create Your First Account Collection
+
+Let's walk through the most common scenario--creating a dynamic collection to target a specific industry segment.
+
+1. Navigate to **Audiences** in the left sidebar, then click **Accounts**
+2. Click the **+ Account List** button in the top right
+3. Select **Dynamic Collection** (this ensures your list stays up to date automatically)
+4. Build your filters. Here is a practical example for a marketing team targeting mid-market technology companies:
+
+**Filter 1:** `Industry` **is** `Information Technology`
+**AND**
+**Filter 2:** `Employee Count` **is above** `100`
+**AND**
+**Filter 3:** `Employee Count` **is below** `1000`
+**AND**
+**Filter 4:** `Country` **is any of** `United States, Canada, United Kingdom`
+
+5. Click **Preview** to see how many accounts match. You should aim for:
+   - **50-500 accounts** for website personalization campaigns (quality over quantity)
+   - **500-5,000 accounts** for advertising campaigns (broader reach)
+   - **10-50 accounts** for 1:1 ABM campaigns (maximum personalization)
+
+6. Name your collection descriptively: `Mid-Market Tech - US/CA/UK - 100-1000 Employees`
+7. Click **Save Collection**
+
+:::tip Naming matters more than you think
+When you have 20+ collections in six months, names like "Test List" or "New Accounts" become impossible to manage. Always include the key criteria in the name: segment, geography, and size. Example: `Enterprise Healthcare - EMEA - 1000+`
+:::
+
+### Step 3: Use Your Audience in a Campaign
+
+Your collection is now ready to power campaigns. Here is how to connect it:
+
+1. Go to **Campaigns** and click **+ Campaign**
+2. Choose your campaign type (e.g., **Inbound** for website personalization)
+3. Click the **Audience** tab
+4. Add a rule: **Account List** → select your new collection
+5. Optionally layer additional rules (e.g., `Visited Pages contains /pricing` to narrow to high-intent visitors)
+6. Click **Save**
+
+Your campaign now targets exactly the accounts in your collection. As new accounts match your dynamic filters, they automatically enter the campaign.
+
+### Step 4: Expand Your Audience Strategy
+
+Once your first collection is working, consider building these complementary audiences:
+
+| Collection Name | Filters | Use Case |
+|----------------|---------|----------|
+| `High-Intent Visitors - Last 30 Days` | `Total Page Views > 5` AND `Total Sessions > 2` | Prioritize for SDR outreach |
+| `Enterprise - Fortune 500` | `Employee Count > 5000` AND `Country = United States` | Premium website personalization with dedicated case studies |
+| `Competitor Customers` | Import from CRM where `Competitor = [Name]` | Competitive displacement campaigns |
+| `Event Attendees - [Event Name]` | CSV upload from event registration | Personalized follow-up campaigns |
+| `Pricing Page Visitors - No Conversion` | `Visited Pages contains /pricing` AND NOT in "Customers" list | Exit-intent popup or retargeting |
+
+### Common Mistakes to Avoid
+
+| Mistake | What Happens | Instead Do This |
+|---------|-------------|-----------------|
+| Starting with filters that are too narrow | Collection has 3 accounts and the campaign has no data | Start broad (industry + country) and narrow after you see engagement data |
+| Creating one huge list for everything | Cannot personalize messaging because the audience is too diverse | Create separate collections for each campaign or segment |
+| Forgetting to exclude current customers | Existing customers see acquisition messaging | Create a "Customers" list and use it as an exclusion filter |
+| Using only firmographic filters | Misses high-intent small companies | Layer behavioral filters (page views, pricing visits) on top of firmographic ones |
+| Never updating static lists | List becomes stale within weeks | Use dynamic collections for ongoing campaigns; static only for fixed lists like event attendees |
+
+---
+
 ## Next Steps
 
 - **[Create Account Lists](/audiences/accounts)** - Deep dive into account targeting

@@ -166,11 +166,11 @@ Push target groups to ad platforms:
 3. Sync to the ad platform
 4. Your audience appears as a matched audience
 
-### Email Sequences
-Target contacts for outreach:
-1. Create a sequence campaign
+### AI Sequences
+Target contacts for AI-personalized outreach:
+1. Create an AI Sequence campaign
 2. Select your contact group
-3. Contacts receive your email sequence
+3. AI dynamically personalizes and sends messages to each contact
 
 ### CRM Sync
 Keep your CRM updated with target accounts:

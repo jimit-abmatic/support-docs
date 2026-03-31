@@ -344,4 +344,4 @@ With auto-push enabled, these records automatically sync:
 | [CRM Sync Behavior](/integrations/crm/sync-behavior) | How sync works across CRMs |
 | [Audiences Overview](/audiences/overview) | Managing your account and contact lists |
 | [Contact Reveal](/visitor-tracking/contact-reveal) | Finding visitor contact information |
-| [Email Campaigns](/campaigns/email-campaigns) | Creating outbound sequences |
+| [AI Sequences](/campaigns/email-campaigns) | Creating AI-powered outbound sequences |

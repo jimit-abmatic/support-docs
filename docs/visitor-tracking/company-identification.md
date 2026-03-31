@@ -156,7 +156,7 @@ Your identification rate depends on your traffic sources. Here's what to expect:
 |----------------|---------------|-----|
 | **Corporate Networks** | 60-80% | Static IP ranges map to companies |
 | **LinkedIn Ad Traffic** | 50-70% | Users typically on corporate networks |
-| **Email Campaigns** | 40-60% | Office hours, corporate devices |
+| **AI Sequences** | 40-60% | Office hours, corporate devices |
 | **Small Business** | 40-60% | May use shared IPs |
 | **Home/Remote** | 10-20% | Residential IPs hard to map |
 | **Mobile** | 5-15% | Carrier IPs are shared |

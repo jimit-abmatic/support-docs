@@ -264,5 +264,5 @@ Form submissions can automatically sync to your CRM:
 | [Contact Reveal](/visitor-tracking/contact-reveal) | Identify contacts before they fill forms |
 | [Company Identification](/visitor-tracking/company-identification) | Match form submitters to accounts |
 | [Conversions Overview](/conversions/overview) | Measure form conversion rates |
-| [Email Sequences](/campaigns/email-campaigns) | Automate follow-up to form fills |
+| [AI Sequences](/campaigns/email-campaigns) | Automate follow-up to form fills |
 | [Slack Integration](/integrations/slack) | Get instant form submission alerts |

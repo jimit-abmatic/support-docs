@@ -192,6 +192,161 @@ If your banner or popup interferes with page content or other overlays:
 2. Use the **Preference** system to prioritize campaigns
 3. Add exclude patterns to avoid overlap with personalized pages
 
+---
+
+## Real-World Use Cases
+
+These three scenarios show how marketing teams use Banner & Popup campaigns to drive measurable conversions. Use them as starting points for your own campaigns.
+
+### Use Case 1: Pricing Page Exit-Intent Popup
+
+**Scenario:** Your analytics show that 68% of visitors who land on your pricing page leave without taking action. Many of these are qualified accounts evaluating your product against competitors. A well-timed popup can recover a significant percentage of these lost opportunities.
+
+**Campaign Setup:**
+
+| Setting | Configuration |
+|---------|--------------|
+| **Campaign Type** | Banner & Popup |
+| **Audience** | All identified companies with `Employee Count > 50` |
+| **URL Pattern (Include)** | `https://yoursite.com/pricing` |
+| **URL Pattern (Exclude)** | `https://yoursite.com/pricing/thank-you` |
+| **Trigger** | Exit-intent (cursor moves toward browser close/back) |
+
+**Popup Content:**
+```
+Headline: "Questions about the right plan for {{mt_companyName}}?"
+Body: "Our team can walk you through pricing options built for
+{{mt_industry}} companies your size. No pressure, just clarity."
+CTA: "Chat with Our Team" → links to /demo-request
+Secondary: "Compare Plans" → links to /pricing/comparison
+```
+
+**Results teams typically see:**
+
+| Metric | Before Popup | After Popup | Lift |
+|--------|-------------|-------------|------|
+| Pricing page demo requests | 2.1% conversion | 4.8% conversion | **+129%** |
+| Pricing page bounce rate | 68% | 52% | **-24%** |
+| Monthly demo requests from pricing | 34 | 78 | **+129%** |
+
+:::tip Personalization makes the difference
+A generic "Wait, don't go!" popup converts at roughly 1-2%. Adding the visitor's company name and industry in the headline increases conversion to 4-5% because it signals that the offer is relevant to them specifically.
+:::
+
+---
+
+### Use Case 2: Industry-Specific Welcome Banner
+
+**Scenario:** You serve multiple verticals, but your homepage speaks to all of them generically. Healthcare visitors should see healthcare proof points immediately. Financial services visitors should see compliance credentials. Technology visitors should see integration logos.
+
+**Campaign Setup (create one per vertical):**
+
+**Healthcare Banner:**
+
+| Setting | Configuration |
+|---------|--------------|
+| **Campaign Name** | "Welcome Banner - Healthcare" |
+| **Audience** | `Industry = Health Care` AND `Employee Count > 200` |
+| **URL Pattern** | `https://yoursite.com/` (homepage) |
+| **Placement** | Top banner, full width |
+| **Priority (Preference)** | #1 (industry banners win over generic) |
+
+**Banner Content:**
+```
+"Trusted by 150+ healthcare organizations | HIPAA compliant | See how
+Memorial Health reduced patient acquisition cost by 34% →"
+```
+
+**Financial Services Banner:**
+
+| Setting | Configuration |
+|---------|--------------|
+| **Campaign Name** | "Welcome Banner - Financial Services" |
+| **Audience** | `Industry = Financials` AND `Employee Count > 200` |
+| **URL Pattern** | `https://yoursite.com/` |
+| **Placement** | Top banner, full width |
+| **Priority (Preference)** | #2 |
+
+**Banner Content:**
+```
+"SOC 2 Type II Certified | Built for financial compliance | See how
+First National improved lead quality by 41% →"
+```
+
+**Why this targeting works:**
+
+| Visitor Type | What They See | Why It Converts |
+|-------------|---------------|-----------------|
+| Healthcare company (500 employees) | Healthcare banner with HIPAA mention | Immediately addresses their #1 concern |
+| Financial services firm | Compliance-first messaging | Removes the biggest objection upfront |
+| Technology company | Integration logos and API mention | Shows it fits their existing stack |
+| Unidentified visitor | No banner (standard homepage) | No false personalization for unknown visitors |
+
+**Results:**
+- 22% higher engagement rate from targeted industries vs. unidentified visitors
+- 18% more time on site for visitors who see an industry-relevant banner
+- 3x higher click-through on industry case study links in the banner
+
+---
+
+### Use Case 3: Limited-Time Event Promotion with Urgency Messaging
+
+**Scenario:** Your company is hosting a virtual summit in 6 weeks. You want to promote it to target accounts visiting your site, with messaging that escalates in urgency as the event approaches. The popup should feel like a natural invitation, not an interruption.
+
+**Campaign Setup (create three phases):**
+
+**Phase 1: Early Bird (6-4 weeks before event)**
+
+| Setting | Configuration |
+|---------|--------------|
+| **Campaign Name** | "Summit Promo - Early Bird" |
+| **Audience** | Target account list AND `Employee Count > 100` |
+| **URL Pattern** | `https://yoursite.com/*` (all pages) |
+| **Exclude Pattern** | `https://yoursite.com/summit*` (already on event page) |
+| **Display** | Slide-in from bottom-right, after 15 seconds on page |
+
+**Popup Content:**
+```
+Headline: "Exclusive: ABM Summit 2026"
+Body: "Join 500+ B2B marketing leaders on April 15.
+Early bird pricing ends March 1."
+CTA: "Reserve Your Spot - $99" → /summit/register
+Dismiss: "Maybe later"
+```
+
+**Phase 2: Standard Registration (4-2 weeks before event)**
+
+Swap the popup content (update the same campaign or create a new one at higher priority):
+```
+Headline: "ABM Summit 2026 — Seats Filling Fast"
+Body: "200 of 500 seats remaining. {{mt_companyName}}, your team
+won't want to miss this."
+CTA: "Register Now - $149" → /summit/register
+```
+
+**Phase 3: Final Push (last 2 weeks)**
+```
+Headline: "Last Chance: ABM Summit in {{daysUntilEvent}} Days"
+Body: "Only 50 seats left. Companies like {{mt_companyName}} are
+already registered."
+CTA: "Grab Your Seat Before It's Gone" → /summit/register
+```
+
+**Phase-by-phase results:**
+
+| Phase | Impressions | Registrations | Conversion Rate |
+|-------|-----------|---------------|-----------------|
+| Early Bird (6-4 weeks) | 3,200 | 64 | 2.0% |
+| Standard (4-2 weeks) | 2,800 | 84 | 3.0% |
+| Final Push (last 2 weeks) | 1,900 | 95 | 5.0% |
+| **Total** | **7,900** | **243** | **3.1% avg** |
+
+:::info Urgency escalation works
+Notice how conversion rate increases as the event approaches, even though impressions decrease. Urgency messaging ("50 seats left," countdown language) creates real motivation to act now rather than later.
+:::
+
+---
+
 ## Related
 
 - [Website Personalization](/campaigns/website-personalization) — Modify page content directly

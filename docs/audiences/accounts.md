@@ -7,9 +7,9 @@ sidebar_position: 2
 
 # Account Lists
 
-Build targeted account lists in minutes—not hours. Abmatic AI helps you identify, organize, and activate your highest-value accounts for ABM campaigns that actually convert.
+Build targeted account lists in minutes -- not hours. Abmatic AI helps you identify, organize, and activate your highest-value accounts for ABM campaigns that actually convert.
 
-![Account Collections](/img/screenshots/accounts-list.png)
+![Account Collections](/img/screenshots/accounts-collections-final.png)
 
 ## Why Account Lists Drive ABM Success
 
@@ -23,32 +23,163 @@ Build targeted account lists in minutes—not hours. Abmatic AI helps you identi
 
 ## Understanding Your Account Views
 
-Abmatic provides two powerful ways to work with accounts:
+Abmatic provides two tabs for working with your accounts:
 
 ### Collections Tab (Recommended Starting Point)
 
-Collections are organized groups of accounts for specific purposes:
+Collections are organized groups of accounts you use for campaigns. The summary cards at the top give you instant visibility into how many lists you have and their types.
 
 | Collection Type | How It Works | Best For |
 |-----------------|--------------|----------|
-| **Dynamic** | Auto-updates based on filter rules | ICP targeting, engagement-based lists |
-| **Static** | Fixed list you manually manage | Named account programs, ABM tiers |
-| **CSV Import** | Uploaded from spreadsheet | Existing prospect lists, event attendees |
-| **CRM Sync** | Pulled from Salesforce/HubSpot | Current pipeline, existing customers |
-| **Auto Generated** | Created by Abmatic (Company Reveal) | Website visitor intelligence |
+| **Dynamic** | Auto-updates based on filter rules you set | ICP targeting, engagement-based lists that stay current |
+| **Static** | Fixed list created from a one-time filter snapshot | Named account programs, ABM tiers, event follow-ups |
+| **CSV** | Uploaded from a spreadsheet file | Existing prospect lists, event attendees, purchased data |
+| **Salesforce / HubSpot** | Pulled from your connected CRM | Current pipeline accounts, existing customers |
+| **Auto Generated** | Created automatically by Abmatic features | Company Reveal visitors, campaign audience groups, inbound segments |
+| **Abmatic Filters** | Built using Abmatic's filter builder | Custom segments based on firmographic or engagement data |
 
 ### All Accounts Tab
 
-The master database of every account in your system:
+The master database of every account in your system. Use this view to:
 
 - **Search** any company by name or domain
-- **Filter** using advanced conditions
-- **Export** to CSV for external analysis
-- **Create** new account records manually
+- **Create** new individual account records manually
+- **Browse** the full enriched database
+
+---
+
+## Static vs. Dynamic Lists: Which Should You Use?
+
+This is the most important decision when creating an account list. Here is a side-by-side comparison:
+
+| Feature | Static List | Dynamic List |
+|---------|-------------|--------------|
+| **How it works** | Takes a snapshot of accounts matching your filters at the moment you save | Continuously monitors for new accounts that match your filter rules |
+| **Updates automatically?** | No -- the list stays fixed after creation | Yes -- new matching accounts are added automatically |
+| **When to use** | One-time campaigns, hand-curated ABM tiers, event follow-up lists | Ongoing campaigns, always-on targeting, growing prospect pools |
+| **Duplicate handling** | You choose: Skip, Overwrite, or Update Missing | Not applicable (managed automatically) |
+| **Can you manually add/remove?** | Yes | No -- membership is controlled by filter rules |
+| **Preview before saving?** | Yes -- see estimated account count | No preview, but filters apply immediately after save |
+| **Best example** | "Q1 2026 ABM Tier-1 Named Accounts" | "All Enterprise Tech Companies in the US with 500+ Employees" |
+
+:::tip When in doubt, go Dynamic
+If you want your list to stay current as new companies visit your website or get enriched, choose Dynamic. Use Static only when you need a fixed, unchanging list.
+:::
+
+---
+
+## Creating Account Lists
+
+Click the **+ Account List** button in the top right corner of the Accounts page to see all your options:
+
+![Account Create Modal](/img/screenshots/account-create-modal.png)
+
+The modal gives you four methods, split into two sections:
+
+**Import** -- bring in existing data:
+- Upload from CSV
+- Import from CRM
+
+**Create** -- build a new list from scratch:
+- Static Collection
+- Dynamic Collection
+
+### Method 1: Static Collection (Filter Once, Fixed List)
+
+A static collection takes a one-time snapshot of accounts that match your filter criteria. The list does not change after you save it.
+
+![Static Collection Builder](/img/screenshots/accounts-static-list.png)
+
+**Step-by-step:**
+
+1. Click **+ Account List** on the Accounts page
+2. Select **Static Collection** under the Create section
+3. Enter a descriptive name in the **Name** field (e.g., "Enterprise Tech - US - Q1 2026")
+4. Build your filter conditions in the **Select Filters** panel:
+   - Choose a **Selector** (the field to filter on, such as Industry or Employee Count)
+   - Choose an **Operator** (how to match, such as "is" or "isAbove")
+   - Enter a **Value** (what to match against, such as "Software" or "500")
+   - Click the checkmark to confirm the rule
+5. Click **+ Rule** to add more conditions (they combine with AND logic by default)
+6. Click **Preview** (top right) to see how many accounts match
+7. Choose your **duplicate handling** option on the right:
+   - **Skip and keep existing fields** -- do not overwrite any existing account data
+   - **Overwrite existing fields** -- replace data with the latest from this import
+   - **Update only missing fields** -- fill in blanks but keep existing values
+8. Click **Save** to create your list
+
+**Example: Build an Enterprise Tech ICP List**
+```
+Selector: Industry    Operator: is       Value: "Software"
+Selector: Employee Count  Operator: isAbove  Value: 500
+Selector: Country     Operator: is       Value: "United States"
+```
+This creates a fixed list of US-based software companies with 500+ employees.
+
+### Method 2: Dynamic Collection (Auto-Updating List)
+
+A dynamic collection uses the same filter builder but keeps the list current. New accounts that match your criteria are automatically added over time.
+
+![Dynamic Collection Builder](/img/screenshots/accounts-dynamic-list.png)
+
+**Step-by-step:**
+
+1. Click **+ Account List** on the Accounts page
+2. Select **Dynamic Collection** under the Create section
+3. Enter a name in the **Name** field (Abmatic auto-generates one, but rename it to something meaningful)
+4. Build your filter conditions in the **Select Filters** panel (same Selector / Operator / Value workflow as Static)
+5. Click **+ Rule** to add more conditions
+6. Click **Save Dynamic Collection** (top right) to activate
+
+:::info How Dynamic Collections Work
+The right panel explains it clearly: "New visitors that match your filters will automatically be added to this collection." This means your list grows organically as Abmatic identifies new companies from website traffic, CRM syncs, or enrichment.
+:::
+
+**Example: Always-Current Mid-Market Prospects**
+```
+Selector: Employee Count  Operator: isAbove    Value: 50
+Selector: Employee Count  Operator: isBelow    Value: 500
+Selector: Country         Operator: is         Value: "United States"
+```
+This dynamic list continuously captures every US mid-market company that Abmatic identifies.
+
+### Method 3: Upload from CSV (Import Existing Data)
+
+Import account lists from spreadsheets, event attendee lists, or purchased data:
+
+1. Click **+ Account List** on the Accounts page
+2. Select **Upload from CSV** under the Import section
+3. Upload your .csv file (max 1,000 rows per import)
+4. Map your CSV columns to Abmatic fields:
+   - **Website** (required) -- the company domain is how Abmatic identifies and enriches accounts
+   - Map additional fields as needed (Company Name, Industry, etc.)
+5. Choose duplicate handling (Skip, Overwrite All, or Overwrite Missing)
+6. Name your collection and click **Import**
+
+:::tip CSV Best Practice
+Always include the website domain column. It is the primary identifier Abmatic uses to match and enrich account data. Use root domains like `company.com` rather than `www.company.com` or subdomains.
+:::
+
+### Method 4: Import from CRM
+
+Pull accounts directly from your connected CRM system:
+
+1. Click **+ Account List** on the Accounts page
+2. Select **Import from CRM** under the Import section
+3. Choose your CRM (Salesforce, HubSpot, or Pipedrive)
+4. Build filters using CRM-native fields to select which accounts to import
+5. Preview the matched accounts
+6. Click **Import**
+
+:::info CRM Connection Required
+You need a connected CRM integration to use this method. Visit **Integrations** in Settings to connect your CRM first.
+:::
+
+---
 
 ## Account Data at Your Fingertips
 
-Every account includes comprehensive firmographic intelligence:
+Every account includes comprehensive firmographic intelligence. Here is what Abmatic enriches for each company:
 
 ### Company Basics
 
@@ -87,97 +218,59 @@ Every account includes comprehensive firmographic intelligence:
 | **Temperature** | Current buying intent (Hot/Warm/Cold) |
 | **Overall Score** | Combined prioritization metric |
 
-## Creating Account Lists
+---
 
-### Method 1: Build from Filters (Dynamic)
+## Real-World Use Cases for Marketers
 
-Create lists that automatically update as new accounts match your criteria:
+Here are practical examples of account lists you can build for common marketing scenarios:
 
-1. Click **+ Account List**
-2. Select **Dynamic Collection**
-3. Build your filter conditions:
+| Marketing Goal | List Type | Filter Setup |
+|----------------|-----------|--------------|
+| **ABM Tier-1 Program** | Static | Hand-pick 50-100 named accounts from your ICP |
+| **Enterprise Pipeline** | Dynamic | Industry is "Software" AND Employee Count > 1,000 AND Country is "United States" |
+| **Competitor Displacement** | Static | Import a CSV of companies using a competitor product |
+| **Event Follow-Up** | Static (CSV) | Upload attendee list from a trade show or webinar |
+| **Website Visitor Retargeting** | Dynamic | Use the auto-generated Company Reveal collection |
+| **Expansion Opportunities** | Dynamic | Industry is "Technology" AND Temperature is "Hot" |
+| **New Market Entry** | Dynamic | Country is "United Kingdom" AND Employee Count > 200 |
 
-**Example: Enterprise Tech ICP**
-```
-Industry is "Software" OR "Technology"
-AND Employee Count isAbove 500
-AND Country is "United States"
-```
-
-4. Preview matching accounts
-5. Name your collection and **Save**
-
-**Available Filter Operators:**
-
-| Operator | Use When |
-|----------|----------|
-| is / isNot | Exact matching |
-| contains / doesNotContain | Partial text matching |
-| isAbove / isBelow | Numeric comparisons |
-| isBetween | Range filtering |
-| isAny / isNone | Multiple value matching |
-
-### Method 2: Upload CSV (Static)
-
-Import existing account lists from spreadsheets:
-
-1. Click **+ Account List**
-2. Select **Upload from CSV**
-3. Upload your file (max 1,000 rows)
-4. Map columns to Abmatic fields:
-   - **Website** (required) — company domain
-   - Map additional fields as needed
-5. Choose duplicate handling:
-   - **Overwrite All** — replace existing data
-   - **Skip** — keep existing records
-   - **Overwrite Missing** — fill empty fields only
-6. Name and **Import**
-
-:::tip CSV Best Practice
-Always include the website domain column—it's how Abmatic identifies and enriches accounts.
-:::
-
-### Method 3: Import from CRM
-
-Pull accounts directly from your connected CRM:
-
-1. Click **+ Account List**
-2. Select **Import from CRM**
-3. Choose your CRM (Salesforce, HubSpot, Pipedrive)
-4. Build filters using CRM fields
-5. Preview and **Import**
-
-![Create Account List](/img/screenshots/account-create-modal.png)
-
-### Method 4: Static Collection
-
-Manually curate a fixed list of named accounts:
-
-1. Click **+ Account List**
-2. Select **Static Collection**
-3. Search and add accounts individually
-4. Or bulk-add from existing collections
+---
 
 ## Managing Your Account Lists
 
-### Editing Collections
+### Collection Status
 
-**Dynamic collections:** Modify filter rules anytime—accounts update automatically.
+After creating or importing a list, it processes in the background:
 
-**Static/CSV collections:** Add or remove individual accounts manually.
+| Status | What It Means |
+|--------|---------------|
+| **Draft** | Created but not yet processed |
+| **Processing** | Currently building the list |
+| **Done** | Complete and ready to use in campaigns |
+| **Error** | Something went wrong -- check the filters or contact support |
 
 ### Quick Actions
 
 | Action | How To |
 |--------|--------|
-| **Rename** | Click collection name, edit inline |
-| **Delete** | Select checkbox, click Delete |
-| **Export** | Open collection, click Export |
-| **Duplicate** | Use as template for new collection |
+| **Search** | Use the search bar above the collections grid |
+| **Filter by type** | Click a summary card (Dynamic, CSV, etc.) to filter the list |
+| **Sort** | Use the Sort By dropdown (Last Updated At, Name, etc.) |
+| **Rename** | Click the collection name to edit inline |
+| **Delete** | Select the checkbox next to a collection and click Delete |
+| **Export** | Open a collection and click the export/download icon |
 
 :::note
-Deleting a collection doesn't delete the underlying accounts—they remain in your All Accounts database.
+Deleting a collection does not delete the underlying accounts. They remain in your All Accounts database and can be added to other collections.
 :::
+
+### Editing Collections
+
+**Dynamic collections:** Modify the filter rules anytime. The account membership updates automatically based on the new criteria.
+
+**Static/CSV collections:** Add or remove individual accounts manually. The list only changes when you make explicit edits.
+
+---
 
 ## Automatic Account Enrichment
 
@@ -185,35 +278,38 @@ Abmatic enriches every account with data from premium providers:
 
 ### What Gets Enriched
 
-- **Firmographics** — employee count, revenue, industry
-- **Technographics** — technology stack detection
-- **Social profiles** — LinkedIn company page
-- **Funding data** — investment rounds, valuations
+- **Firmographics** -- employee count, revenue, industry, company type
+- **Technographics** -- technology stack detection
+- **Social profiles** -- LinkedIn company page
+- **Funding data** -- investment rounds, valuations
 
 ### When Enrichment Happens
 
 - New accounts added via CSV import
 - Companies identified through Company Reveal
+- Accounts synced from your CRM
 - Manual enrichment requests
+
+---
 
 ## Company Reveal Integration
 
-Your website visitors automatically become accounts:
+Your website visitors automatically become accounts through Company Reveal:
 
-### How It Works
-
-1. Anonymous visitor arrives on your website
+1. An anonymous visitor arrives on your website
 2. Abmatic identifies their company in real-time
-3. Account automatically added to "Company Reveal" collection
-4. Full firmographic data enriched instantly
+3. The account is automatically added to the **Company Reveal** collection
+4. Full firmographic data is enriched instantly
 
 ### Accessing Revealed Accounts
 
-Navigate to **Audiences > Accounts** and find the **Company Reveal** collection—it contains every company that's visited your site.
+Navigate to **Audiences > Accounts** and find the **Company Reveal** collection in your list. It contains every company that has visited your site.
 
 :::info
-The Company Reveal collection updates in real-time and cannot be deleted—it's your continuously growing prospect database.
+The Company Reveal collection updates in real-time and cannot be deleted. It is your continuously growing prospect database.
 :::
+
+---
 
 ## CRM Synchronization
 
@@ -222,7 +318,7 @@ Keep your account data in sync across systems:
 | Sync Direction | What Happens |
 |----------------|--------------|
 | **To Abmatic** | Import accounts from your CRM |
-| **From Abmatic** | Push new accounts to CRM |
+| **From Abmatic** | Push new accounts to your CRM |
 | **Two-Way** | Continuous bidirectional sync |
 
 ### Enable Auto-Push
@@ -232,31 +328,40 @@ Keep your account data in sync across systems:
 3. Configure field mappings
 4. New accounts automatically sync on creation
 
+---
+
 ## Best Practices
 
 ### List Organization
 
 | Do | Don't |
 |----|-------|
-| Use descriptive names: "2026-Q1-Enterprise-Tech" | Generic names: "List 1", "New accounts" |
+| Use descriptive names: "2026-Q1-Enterprise-Tech-USA" | Generic names: "List 1", "New accounts" |
 | Create focused segments for specific campaigns | One massive list for everything |
+| Use Dynamic lists for ongoing campaigns | Manually update lists that could be automated |
 | Archive outdated lists regularly | Let inactive lists clutter your workspace |
+| Filter collections by type using the summary cards | Scroll through hundreds of unorganized lists |
 
 ### Data Quality
 
 | Do | Don't |
 |----|-------|
-| Use root domains (company.com) | Include www or subdomains |
+| Use root domains (company.com) in CSV imports | Include www or subdomains |
 | Deduplicate after imports | Let duplicates accumulate |
-| Keep enrichment current | Rely on stale data |
+| Keep enrichment current | Rely on stale data from months ago |
+| Verify domain resolves before importing | Import typo-filled spreadsheets |
 
 ### Targeting Strategy
 
 | Do | Don't |
 |----|-------|
 | Start broad, then narrow based on engagement | Begin with overly restrictive filters |
-| Test targeting with preview before launching | Launch campaigns without verification |
-| Monitor engagement and adjust | Set and forget |
+| Combine firmographic + behavioral filters | Use only one type of filter |
+| Preview results before saving a Static list | Save without checking the estimated count |
+| Test targeting with a small campaign first | Launch to your entire database at once |
+| Monitor engagement and adjust filters over time | Set and forget |
+
+---
 
 ## Troubleshooting
 
@@ -264,29 +369,34 @@ Keep your account data in sync across systems:
 
 | Issue | Solution |
 |-------|----------|
-| CSV not uploading | Check file is UTF-8 encoded, under 1,000 rows |
-| Accounts not appearing | Verify website column is mapped correctly |
-| Import errors | Review error log for specific issues |
+| CSV not uploading | Check the file is UTF-8 encoded and under 1,000 rows |
+| Accounts not appearing after import | Verify the website/domain column is mapped correctly |
+| Import stuck in Processing | Wait a few minutes for large imports; contact support if it stays stuck |
+| Duplicate accounts created | Use "Skip and keep existing fields" for the duplicate handling option |
 
-### Duplicate Accounts
+### Collection Shows 0 Records
 
 | Issue | Solution |
 |-------|----------|
-| Same company appearing twice | Accounts are unique by website + ID—merge manually if needed |
-| Import creating duplicates | Use "Skip" duplicate handling option |
+| Filters too restrictive | Remove filters one by one to find the blocker |
+| No matching data in the system | Check if accounts exist in the All Accounts tab first |
+| Dynamic collection just created | Give it time -- it populates as new matching accounts are identified |
+| Typo in filter value | Double-check spelling in your Selector values |
 
 ### Missing Enrichment Data
 
 | Issue | Solution |
 |-------|----------|
-| Fields showing empty | Domain may not be in enrichment database |
-| Enrichment not running | Verify domain resolves (no typos) |
-| Partial data | Some companies have limited public information |
+| Fields showing empty | The domain may not be in the enrichment database |
+| Enrichment not running | Verify the domain resolves correctly (no typos) |
+| Partial data | Some companies have limited public information available |
+
+---
 
 ## Related Documentation
 
-- [Contact Lists](/audiences/contacts) — Manage individual contacts
-- [Target Groups](/audiences/target-groups) — Combine accounts and contacts
-- [Filters](/audiences/filters) — Advanced filtering guide
-- [CSV Import](/audiences/csv-import) — Detailed import instructions
-- [CRM Sync](/audiences/crm-sync) — Integration setup
+- [Contact Lists](/audiences/contacts) -- Manage individual contacts
+- [Target Groups](/audiences/target-groups) -- Combine accounts and contacts for campaigns
+- [Filters](/audiences/filters) -- Complete guide to all available filters
+- [CSV Import](/audiences/csv-import) -- Detailed import instructions
+- [CRM Sync](/audiences/crm-sync) -- Integration setup guide

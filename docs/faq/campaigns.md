@@ -23,7 +23,7 @@ Abmatic offers five campaign types to reach your target accounts wherever they a
 | Campaign Type | What It Does | Best For |
 |--------------|--------------|----------|
 | **Website Personalization** | Dynamically modify your site content for different visitors | Converting website traffic with tailored experiences |
-| **Email Campaigns** | Send personalized outreach sequences | Warming up target accounts with relevant messaging |
+| **AI Sequences** | AI-personalized multi-channel outreach | Warming up target accounts with dynamically personalized messaging |
 | **LinkedIn Ads** | Target your accounts on LinkedIn | Reaching decision-makers where they research |
 | **Google Ads** | Reach audiences through Google's network | Capturing high-intent search and display traffic |
 | **CRM Campaigns** | Trigger actions in Salesforce/HubSpot | Automating follow-up and routing workflows |

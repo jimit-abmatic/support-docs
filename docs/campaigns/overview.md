@@ -66,8 +66,8 @@ Abmatic AI supports 12 campaign types across three categories to match your go-t
 | Type | Best For | Example Use Case |
 |------|----------|------------------|
 | **[Agentic Flow](/campaigns/agentic-flow)** | AI-crafted 1:1 personalized outreach | Let AI write unique messages for each prospect |
-| **[Sequence](/campaigns/email-campaigns)** | Multi-channel outreach sequences | Coordinate emails, calls, and LinkedIn messages |
-| **Intent** | Finding in-market accounts | Identify hot accounts based on first-party intent signals |
+| **[AI Sequence](/campaigns/email-campaigns)** | AI-powered multi-channel outreach | AI dynamically personalizes emails, calls, and LinkedIn messages |
+| **[Intent](/campaigns/intent)** | Finding in-market accounts | Identify hot accounts based on first-party and third-party intent signals |
 | **[Agentic Chat](/campaigns/agentic-chat)** | AI-powered website chat | Engage visitors with an intelligent chat widget |
 
 ### Understanding the Campaign Table
@@ -137,7 +137,7 @@ Ready to create your first campaign? Here's the fastest path to value:
 |-------|-------------------|
 | [Agentic Flow](/campaigns/agentic-flow) | AI-powered 1:1 personalized sequences |
 | [Banner & Popup](/campaigns/banner-popup) | Targeted overlay messages and offers |
-| [Email Sequences](/campaigns/email-campaigns) | Multi-channel outreach campaigns |
+| [AI Sequences](/campaigns/email-campaigns) | AI-powered multi-channel outreach |
 | [Page Editor](/campaigns/page-editor) | How to customize any webpage element |
 | [Dynamic Content](/campaigns/dynamic-content) | Insert personalized tokens automatically |
 | [LinkedIn Ads](/campaigns/linkedin-ads) | Retarget visitors on LinkedIn |

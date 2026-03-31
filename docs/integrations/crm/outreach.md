@@ -298,5 +298,5 @@ Measure how Outreach engagement correlates with website behavior:
 | Integrations Overview | [View](/integrations/overview) |
 | Target Accounts | [View](/audiences/accounts) |
 | Contacts | [View](/audiences/contacts) |
-| Email Sequences | [View](/campaigns/email-campaigns) |
+| AI Sequences | [View](/campaigns/email-campaigns) |
 | CRM Sync Behavior | [View](/integrations/crm/sync-behavior) |

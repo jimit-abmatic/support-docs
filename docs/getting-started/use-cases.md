@@ -209,6 +209,98 @@ You believe personalization works, but you need quantitative proof before rollin
 
 ---
 
+---
+
+## AI-Powered Outreach
+
+Let AI handle the heavy lifting of personalized prospecting so your team can focus on closing.
+
+### Launch an AI-Personalized Outreach Sequence
+
+**The Challenge:**
+Your SDR team spends 30+ minutes per prospect researching the company, crafting a personalized email, writing LinkedIn messages, and preparing call scripts. At that rate, each rep can only reach 15-20 new prospects per day, and the quality degrades as they get tired.
+
+**The Abmatic Solution:**
+1. Import your target contact list into Abmatic (CSV, CRM sync, or build from filters)
+2. Navigate to **Campaigns** and create an **Agentic Flow** campaign
+3. Configure your AI context in **Settings > AI Agents > Agentic Sequence** with your value props, tone guidelines, and personalization rules
+4. Build a 4-5 step sequence: intro email, LinkedIn connection, value-add email, call script, final email
+5. AI generates unique, personalized content for every contact in the sequence
+
+**What Success Looks Like:**
+- **10x outreach volume** without adding headcount
+- **15-25% reply rate** on AI-personalized messages (vs. 3-5% for templates)
+- **Hours saved daily** that reps can redirect to conversations and closing
+
+### Engage Website Visitors with AI Chat
+
+**The Challenge:**
+Visitors arrive on your website at all hours, but your team can only respond during business hours. By the time someone follows up, the visitor has already moved on to a competitor's site.
+
+**The Abmatic Solution:**
+1. Create an **Agentic Chat** campaign targeting high-value pages (pricing, demo request, product pages)
+2. Configure the AI with your product information, pricing, and common questions in the **Instructions** tab
+3. Set audience rules so the widget appears for target accounts and high-intent visitors
+4. The AI engages visitors 24/7, answers questions, captures work emails, and qualifies leads automatically
+
+**What Success Looks Like:**
+- **3x more qualified conversations** compared to traditional chatbots or contact forms
+- **24/7 lead capture** including evenings, weekends, and holidays
+- **Instant response times** that keep prospects engaged while intent is high
+
+---
+
+## Competitive Displacement
+
+Win accounts away from competitors by showing prospects why your solution is the better fit.
+
+### Target Competitor Customers with Personalized Experiences
+
+**The Challenge:**
+You know that hundreds of companies are using a competitor's product, and many of them would be better served by yours. But generic "switch to us" messaging gets ignored because it does not address why they should make the effort of changing.
+
+**The Abmatic Solution:**
+1. Build an account list of known competitor customers (import from CRM or CSV)
+2. Create an **Outbound Personalization** campaign targeting these accounts
+3. In the page editor, customize your homepage and product pages:
+   - Replace generic hero text with "Switching from [Competitor]? Here's what changes."
+   - Show a side-by-side comparison table highlighting your advantages
+   - Feature case studies from companies that successfully migrated
+4. Optionally launch a complementary **Agentic Flow** campaign to send personalized outreach to contacts at these accounts
+
+**What Success Looks Like:**
+- **Targeted competitive messaging** that speaks directly to what the prospect is missing
+- **Higher engagement** from accounts that see you understand their current situation
+- **Shorter evaluation cycles** because you address migration concerns upfront
+
+---
+
+## Event-Driven Marketing
+
+Maximize the ROI of every conference, webinar, and event with coordinated digital follow-up.
+
+### Turn Conference Leads into Pipeline
+
+**The Challenge:**
+Your team spent $50,000 on a conference booth and collected 400 badge scans. Three weeks later, only 12 of those leads have been contacted. The rest are sitting in a spreadsheet, and the window of relevance is closing fast.
+
+**The Abmatic Solution:**
+1. Upload your event lead list as a CSV to **Audiences > Contacts**
+2. Create a **Website Personalization** campaign targeting these accounts with event-specific messaging: "Great connecting at [Event Name]! Here's the demo we discussed."
+3. Launch an **Agentic Flow** sequence for event contacts with a personalized follow-up cadence:
+   - Day 1: "It was great meeting you at [Event]" intro email
+   - Day 3: LinkedIn connection referencing the event
+   - Day 6: Value-add email with the content asset discussed at the booth
+   - Day 10: Call script referencing specific conversations from the event
+4. Set up a **Banner & Popup** campaign for event attendees visiting your site: "Welcome back from [Event]! Ready for that demo?"
+
+**What Success Looks Like:**
+- **100% of event leads contacted** within the first week (not just the 3% that sales remembered)
+- **Coordinated multi-channel follow-up** that feels personal, not automated
+- **Clear attribution** showing how many meetings and pipeline came from the event investment
+
+---
+
 ## Get Started Today
 
 Ready to implement one of these use cases for your business?
@@ -223,3 +315,6 @@ Ready to implement one of these use cases for your business?
 - [Audiences Overview](/audiences/overview) - Build and manage target lists
 - [Integrations Overview](/integrations/overview) - Connect your marketing stack
 - [Analytics Overview](/analytics/overview) - Measure what matters
+- [AI Agents Overview](/ai-agents/ai-agents-overview) - Meet Clara and Alex
+- [Agentic Flow](/campaigns/agentic-flow) - AI-personalized outreach sequences
+- [ABM Playbooks](/getting-started/playbooks) - Proven step-by-step strategies

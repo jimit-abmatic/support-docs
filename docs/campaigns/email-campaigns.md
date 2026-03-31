@@ -1,27 +1,32 @@
 ---
 id: email-campaigns
-title: Email Campaigns (Sequences)
-sidebar_label: Email Campaigns
+title: AI Sequences
+sidebar_label: AI Sequences
 sidebar_position: 6
 ---
 
-# Email Campaigns (Sequences)
+# AI Sequences
 
-Turn your sales outreach into a competitive advantage. Abmatic AI's Sequence campaigns combine multi-channel touchpoints—emails, calls, and LinkedIn messages—with AI-powered personalization to engage prospects at scale while maintaining the human touch that drives responses.
+Turn your sales outreach into a competitive advantage. Abmatic AI Sequences go far beyond traditional email campaigns—they combine multi-channel touchpoints with **AI that dynamically personalizes every message** for each prospect based on their company, role, behavior, and engagement history. You provide the templates; AI crafts the perfect version for every contact.
 
-## Why Sequence Campaigns Drive Results
+## Why AI Sequences Drive Results
 
-| Traditional Outreach | With Abmatic Sequences |
+| Traditional Outreach | With Abmatic AI Sequences |
 |---------------------|----------------------|
-| Generic templates sent to everyone | AI-personalized messages for each prospect |
+| Generic templates sent to everyone | AI dynamically personalizes messages per prospect |
 | Single-channel approach | Multi-channel orchestration (Email + Call + LinkedIn) |
 | Manual follow-up tracking | Automated sequences with smart timing |
-| Disconnected from website activity | Triggered by visitor behavior |
+| Static templates that never adapt | AI updates messaging based on engagement signals |
+| Disconnected from website activity | Triggered by visitor behavior and intent |
 | Hours per prospect | Minutes to launch, scales infinitely |
 
-## How Sequences Work
+:::tip What makes it an AI Sequence?
+Unlike traditional email sequences, Abmatic AI Sequences **dynamically generate personalized content** for each contact. You write the template framework; AI tailors the subject line, body, talking points, and messaging based on each prospect's company data, role, and behavior—so every touchpoint feels hand-crafted.
+:::
 
-Sequence campaigns orchestrate multi-step outreach that combines different touchpoint types:
+## How AI Sequences Work
+
+AI Sequence campaigns orchestrate multi-step outreach that combines different touchpoint types, with AI personalizing each step for every contact:
 
 ```
 Day 0: Automatic Email (personalized intro)
@@ -35,7 +40,7 @@ Day 9: Call Script (discovery conversation)
 Day 12: Final Email (next steps)
 ```
 
-Each step is customizable with AI-generated personalization based on the prospect's company, role, and behavior.
+Each step is dynamically personalized by AI based on the prospect's company, role, and real-time behavior—turning your templates into unique, relevant messages for every contact.
 
 ![Campaigns list showing various campaign types](/img/screenshots/sequence-campaigns-list.png)
 
@@ -50,16 +55,16 @@ Each step is customizable with AI-generated personalization based on the prospec
 
 ## Getting Started
 
-### Step 1: Create a Sequence Campaign
+### Step 1: Create an AI Sequence Campaign
 
 1. Navigate to **Campaigns**
-2. Click **Create Campaign**
+2. Click **+ Campaign**
 3. Under **Advanced**, select **Sequence**
 
 ![Create Campaign modal showing Sequence option under Advanced](/img/screenshots/sequence-create-modal.png)
 
 4. Choose a **Contact Collection** to target
-5. Click **Create Campaign**
+5. Click **Create** — AI will begin analyzing your contacts for personalization
 
 ### Step 2: Add Sequence Steps
 
@@ -75,7 +80,7 @@ Each step is customizable with AI-generated personalization based on the prospec
 
 ### Step 3: Configure Your Templates
 
-For email steps, create compelling templates:
+Create your template frameworks — AI will dynamically personalize them for each contact:
 
 **Title/Subject Line:**
 ```
@@ -103,7 +108,7 @@ Best,
 
 1. Review all steps in the sequence grid
 2. Click **Activate** to start the campaign
-3. Prospects will begin receiving outreach based on your timing
+3. AI will dynamically personalize each message and begin sending based on your timing
 
 ## Personalization Variables
 
@@ -219,12 +224,16 @@ The sequence editor shows all steps in a table:
 
 ### Clearing Personalizations
 
-If you need to regenerate AI personalizations:
+If you update your templates or AI context and want AI to regenerate all personalized messages:
 
 1. Open the sequence campaign
-2. Click the **menu icon**
+2. Click the **menu icon** (three dots)
 3. Select **Clear Personalizations**
-4. AI will regenerate fresh content for all contacts
+4. AI will regenerate fresh, dynamically personalized content for all contacts based on your updated templates
+
+:::tip When to clear personalizations
+Clear personalizations after changing your value proposition, updating templates, or adding new company data. AI will re-analyze each contact and generate updated personalized messages.
+:::
 
 ## Best Practices
 

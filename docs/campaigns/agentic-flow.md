@@ -20,7 +20,7 @@ Let AI agents craft truly 1:1 personalized outreach for every prospect. Agentic 
 | Hours spent writing variations | Agents generate at scale in seconds |
 
 :::tip When to use Agentic Flow vs. Sequence
-Use **Agentic Flow** when you want AI to generate truly personalized messages for each contact—ideal for high-value target accounts. Use **[Sequence](/campaigns/email-campaigns)** when you want full control over exact templates with variable-based personalization.
+Use **Agentic Flow** when you want AI agents to fully own the personalization—ideal for high-value target accounts where every message should be unique. Use **[AI Sequence](/campaigns/email-campaigns)** when you want AI to dynamically personalize your templates while you maintain control over the base messaging framework.
 :::
 
 ## How Agentic Flow Works
@@ -257,7 +257,7 @@ Coordinate outreach to multiple contacts at the same account:
 
 ## Related
 
-- [Email Campaigns (Sequences)](/campaigns/email-campaigns) — Template-based sequences for full control
+- [AI Sequences](/campaigns/email-campaigns) — AI-powered sequences with template-based control
 - [Configuring AI Agents](/ai-agents/ai-agents-configuration) — Set up AI context for better personalization
 - [AI Agents Overview](/ai-agents/ai-agents-overview) — Meet Clara and Alex
 - [Contacts Management](/audiences/contacts) — Build your target contact lists

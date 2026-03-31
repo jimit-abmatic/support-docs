@@ -101,7 +101,7 @@ A coordinated marketing effort in Abmatic:
 | Campaign Type | Channel | Use Case |
 |---------------|---------|----------|
 | **Website Personalization** | Your website | Tailor content to visitor segments |
-| **Email Campaigns** | Email | Nurture sequences and announcements |
+| **AI Sequences** | Email + Multi-channel | AI-personalized outreach sequences across email, LinkedIn, and calls |
 | **LinkedIn Ads** | LinkedIn | Target decision-makers by account |
 | **Google Ads** | Google Search/Display | Retarget and expand reach |
 | **CRM Campaigns** | Your CRM | Sync data and trigger workflows |

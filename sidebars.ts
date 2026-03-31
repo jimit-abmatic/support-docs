@@ -30,6 +30,7 @@ const sidebars: SidebarsConfig = {
         'campaigns/email-campaigns',
         'campaigns/agentic-flow',
         'campaigns/banner-popup',
+        'campaigns/intent',
         'campaigns/linkedin-ads',
         'campaigns/google-ads',
         'campaigns/crm-campaigns',
