@@ -39,18 +39,36 @@ The dashboard gives you complete visibility into your personalization efforts:
 
 ### Campaign Types
 
-Abmatic AI supports multiple campaign types to match your go-to-market strategy:
+Abmatic AI supports 12 campaign types across three categories to match your go-to-market strategy:
+
+![Campaign creation wizard showing all campaign types organized by category](/img/screenshots/campaign-create-wizard.png)
+
+#### Personalization
 
 | Type | Best For | Example Use Case |
 |------|----------|------------------|
-| **Inbound** | Visitors matching firmographic criteria | Show enterprise pricing to Fortune 500 companies |
-| **Outbound** | Specific named accounts (ABM) | Personalize content for your top 100 target accounts |
-| **[Agentic Chat](/campaigns/agentic-chat)** | AI-powered visitor engagement | Add 24/7 AI assistant to qualify leads and answer questions |
-| **Agentic Flow** | AI-powered email sequences | Let AI craft personalized outreach for each prospect |
-| **LinkedIn Ads** | Retargeting website visitors | Reach engaged prospects on LinkedIn |
-| **Email** | Coordinated multichannel campaigns | Follow up website visits with personalized emails |
-| **Banner & Popup** | Overlay messages | Show targeted offers without changing page content |
-| **CRM Campaigns** | Sync with Salesforce/HubSpot | Keep campaign data consistent across systems |
+| **[Inbound](/campaigns/website-personalization)** | Visitors matching firmographic criteria | Show enterprise pricing to Fortune 500 companies |
+| **Outbound** | Specific named accounts (ABM) | Personalize landing pages for your top 100 target accounts |
+| **[A/B Testing](/campaigns/ab-testing)** | Testing messaging variations | Compare two headlines to find the highest-converting one |
+| **[Banner & Popup](/campaigns/banner-popup)** | Overlay messages and offers | Show targeted promotions without modifying page content |
+
+#### Advertising
+
+| Type | Best For | Example Use Case |
+|------|----------|------------------|
+| **Display Advertising** | Awareness and engagement ads | Run display campaigns against target account lists |
+| **[LinkedIn](/campaigns/linkedin-ads)** | Social ad personalization | Retarget website visitors on LinkedIn |
+| **Meta** | Facebook/Instagram targeting | Match your audience on Meta platforms |
+| **Retargeting** | Re-engaging visitors | Run campaigns against visitors who didn't convert |
+
+#### Advanced
+
+| Type | Best For | Example Use Case |
+|------|----------|------------------|
+| **[Agentic Flow](/campaigns/agentic-flow)** | AI-crafted 1:1 personalized outreach | Let AI write unique messages for each prospect |
+| **[Sequence](/campaigns/email-campaigns)** | Multi-channel outreach sequences | Coordinate emails, calls, and LinkedIn messages |
+| **Intent** | Finding in-market accounts | Identify hot accounts based on first-party intent signals |
+| **[Agentic Chat](/campaigns/agentic-chat)** | AI-powered website chat | Engage visitors with an intelligent chat widget |
 
 ### Understanding the Campaign Table
 
@@ -110,14 +128,19 @@ Ready to create your first campaign? Here's the fastest path to value:
 
 1. **[Website Personalization](/campaigns/website-personalization)** — Create targeted web experiences in minutes
 2. **[First Campaign Tutorial](/getting-started/first-campaign)** — Step-by-step guide for beginners
-3. **[A/B Testing](/campaigns/ab-testing)** — Learn to run statistically valid experiments
+3. **[Agentic Flow](/campaigns/agentic-flow)** — Let AI craft personalized outreach at scale
+4. **[A/B Testing](/campaigns/ab-testing)** — Learn to run statistically valid experiments
 
 ## More Resources
 
 | Topic | What You'll Learn |
 |-------|-------------------|
+| [Agentic Flow](/campaigns/agentic-flow) | AI-powered 1:1 personalized sequences |
+| [Banner & Popup](/campaigns/banner-popup) | Targeted overlay messages and offers |
+| [Email Sequences](/campaigns/email-campaigns) | Multi-channel outreach campaigns |
 | [Page Editor](/campaigns/page-editor) | How to customize any webpage element |
 | [Dynamic Content](/campaigns/dynamic-content) | Insert personalized tokens automatically |
 | [LinkedIn Ads](/campaigns/linkedin-ads) | Retarget visitors on LinkedIn |
 | [Google Ads](/campaigns/google-ads) | Sync audiences to Google Ads |
+| [AI Agents](/ai-agents/ai-agents-overview) | Clara and Alex for automated campaigns |
 | [Troubleshooting](/troubleshooting/campaign-issues) | Fix common campaign issues |

@@ -28,6 +28,8 @@ const sidebars: SidebarsConfig = {
         'campaigns/website-personalization',
         'campaigns/agentic-chat',
         'campaigns/email-campaigns',
+        'campaigns/agentic-flow',
+        'campaigns/banner-popup',
         'campaigns/linkedin-ads',
         'campaigns/google-ads',
         'campaigns/crm-campaigns',
