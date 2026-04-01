@@ -31,7 +31,7 @@ sidebar_position: 3
 2. Click **+ CAMPAIGN**
 3. Select **Agentic Chat** from the campaign types (found under the **Advanced** category)
 
-![Create Agentic Chat Campaign](/img/screenshots/agentic-chat/ac-create-modal.png)
+![Campaign creation wizard showing Agentic Chat under the Advanced category](/img/screenshots/campaign-create-wizard.png)
 
 ---
 
@@ -48,9 +48,9 @@ Your campaign has several configuration tabs:
 | **Engagement** | Review individual visitor conversations |
 | **Performance** | Track conversions and ROI |
 
-The widget configuration panel on the right lets you customize the chat experience:
+The widget configuration panel lets you customize the chat experience — set the display mode, welcome message, page context, and quick prompts:
 
-![Widget Configuration Panel](/img/screenshots/agentic-chat/ac-widget-config.png)
+![Widget Configuration Panel showing Preview Mode (Minimized, Welcome, Sidebar, Expanded), Display setting, Welcome Message, Page Context, and Quick Prompts](/img/screenshots/agentic-chat/ac-create-modal.png)
 
 ---
 
@@ -67,7 +67,7 @@ The **Instructions** tab is where you make the AI yours:
 
 Target the right visitors in the **Audience** tab:
 
-![Audience Tab](/img/screenshots/agentic-chat/ac-audience-tab.png)
+![Audience tab showing campaign rules with Sessions and Country filters](/img/screenshots/agentic-chat/ac-preview-sidebar.png)
 
 - **All visitors**: Show chat to everyone
 - **Firmographic targeting**: Filter by company size, industry, location
@@ -132,30 +132,25 @@ Configure suggested prompts that appear to visitors:
 
 ## Display Modes
 
-The chat widget adapts to different interaction states. Configure the initial display mode in the widget settings panel.
+The chat widget adapts to different interaction states. Configure the initial display mode in the widget settings panel — you can see the four mode buttons (MINIMIZED, WELCOME, SIDEBAR, EXPANDED) in the configuration panel.
 
-### Minimized Mode
-A minimized floating button in the corner of the page. Visitors click to expand.
+![Page editor showing the Agentic Chat widget live on the Abmatic AI website with the widget settings panel on the right showing display mode options](/img/screenshots/agentic-chat/ac-audience-tab.png)
 
-![Minimized Mode](/img/screenshots/agentic-chat/ac-preview-minimized.png)
+| Mode | What Visitors See | Best For |
+|------|------------------|----------|
+| **Minimized** | A floating button in the corner of the page. Visitors click to expand. | Non-intrusive presence on all pages |
+| **Welcome** | A welcome card with preview message that invites conversation | High-intent pages where you want to encourage engagement |
+| **Sidebar** | A compact chat panel positioned on the side of the page | Persistent chat access alongside page content |
+| **Expanded** | A larger two-column view with assistant avatar and full chat | Dedicated support or conversation-focused pages |
+| **Voice** | Audio interaction with visual feedback — visitors speak naturally | Hands-free engagement, accessibility |
 
-### Welcome Mode
-A welcome card that introduces the AI assistant and invites conversation with a preview message.
+The chat widget in action — here you can see the Welcome mode open on the Abmatic AI website with the AI greeting visitors:
 
-![Welcome Mode](/img/screenshots/agentic-chat/ac-preview-welcome.png)
+![Agentic Chat widget open on the Abmatic AI website showing the AI assistant greeting with "Hi! I'm your AI assistant" message](/img/screenshots/agentic-chat/ac-insights-tab.png)
 
-### Sidebar Mode
-A compact chat interface positioned on the side of the page.
-
-![Sidebar Mode](/img/screenshots/agentic-chat/ac-preview-sidebar.png)
-
-### Expanded Mode
-A larger two-column view for detailed conversations, showing the assistant avatar alongside the chat.
-
-![Expanded Mode](/img/screenshots/agentic-chat/ac-preview-expanded.png)
-
-### Voice Mode
-Audio interaction with visual feedback. Visitors speak naturally and receive voice responses.
+:::tip Choosing the right display mode
+Start with **Minimized** or **Welcome** mode on most pages. Use **Expanded** on high-value pages like pricing or demo request where visitors are most likely to have questions. Reserve **Sidebar** for documentation or support pages where ongoing assistance helps.
+:::
 
 ---
 
@@ -216,7 +211,7 @@ Go to **Settings** > **AI Agents** > **Agentic Chat** tab to:
 
 Control where the widget appears using the **Pages** tab:
 
-![Pages Tab](/img/screenshots/agentic-chat/ac-pages-tab.png)
+![Pages tab showing URL patterns with Include Patterns, Exclude Patterns, and Status columns](/img/screenshots/agentic-chat/ac-preview-minimized.png)
 
 | Pattern | Matches |
 |---------|---------|
@@ -269,7 +264,7 @@ Track Agentic Chat performance in the campaign dashboard.
 
 View high-level metrics and trends:
 
-![Insights Tab](/img/screenshots/agentic-chat/ac-insights-tab.png)
+![Insights tab showing CTA Clicks, Conversions, CVRL, CTRL metrics and performance chart](/img/screenshots/agentic-chat/ac-preview-expanded.png)
 
 | Metric | What It Measures |
 |--------|-----------------|
@@ -282,7 +277,7 @@ View high-level metrics and trends:
 
 Review individual visitor interactions and page visit data:
 
-![Engagement Tab](/img/screenshots/agentic-chat/ac-engagement-tab.png)
+![Engagement tab showing website page visits with form submissions, page views, scroll depth, and engagement scores](/img/screenshots/agentic-chat/ac-preview-welcome.png)
 
 Each visit shows:
 - **Total Form Submissions** - Forms completed
