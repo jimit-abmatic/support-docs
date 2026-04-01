@@ -57,7 +57,7 @@ Drag and drop connected CRM cards to set the priority order. When syncing data, 
 
 Get real-time notifications and email tracking where your team already works.
 
-![Communications Integrations](/img/screenshots/integrations-communications.png)
+![Communications Integrations](/img/screenshots/integrations-gmail.png)
 
 | Platform | Key Benefits | Setup Guide |
 |----------|--------------|-------------|
@@ -105,7 +105,7 @@ Push your target account lists directly to ad platforms -- no manual audience bu
 |----------|--------------|-------------|
 | **LinkedIn Ads** | Matched Audiences from account lists. Company targeting at scale. | [Setup Guide](/integrations/advertising/linkedin-ads) |
 | **Google Ads** | Customer Match audiences. Search, Display, and YouTube targeting using your account and contact lists. | [Setup Guide](/integrations/advertising/google-ads) |
-| **Meta** | Custom audiences. Retargeting. Lookalike expansion. | Coming soon |
+| **Meta** | Custom audiences. Retargeting. Lookalike expansion. | Connect via Integrations page |
 
 ### Accounts & Contacts Data
 
@@ -127,7 +127,7 @@ Connect your outbound and marketing automation platforms to streamline follow-up
 | Platform | Key Benefits | Setup Guide |
 |----------|--------------|-------------|
 | **Outreach** | Sales execution platform. Sequence triggers, activity logging, and prospect matching for go-to-market teams. | [Learn more](/integrations/crm/outreach) |
-| **Marketo** | Marketing automation. Streamline and automate marketing tasks, nurture campaigns, and lead scoring. | Coming soon |
+| **Marketo** | Marketing automation. Streamline and automate marketing tasks, nurture campaigns, and lead scoring. | Connect via Integrations page |
 
 ---
 

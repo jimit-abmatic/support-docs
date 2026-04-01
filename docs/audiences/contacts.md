@@ -63,7 +63,7 @@ Just like account lists, you choose between Static and Dynamic when creating a c
 |---------|-------------|--------------|
 | **How it works** | Captures a fixed snapshot of contacts matching your filters | Continuously adds new contacts that match your filter rules |
 | **Updates automatically?** | No -- the list stays frozen after creation | Yes -- new matching contacts are added over time |
-| **When to use** | One-time email campaigns, event follow-ups, hand-curated outreach lists | Ongoing nurture sequences, always-on sales alerts, growing prospect pools |
+| **When to use** | One-time AI Sequences, event follow-ups, hand-curated outreach lists | Ongoing nurture sequences, always-on sales alerts, growing prospect pools |
 | **Duplicate handling** | You choose: Skip, Overwrite, or Update Missing | Managed automatically |
 | **Can you manually add/remove?** | Yes | No -- membership is controlled by filter rules |
 | **Estimated count shown?** | Yes -- see "Estimated Contacts" before saving | No preview (filters apply after save) |

@@ -210,7 +210,7 @@ Your identification rate depends on your traffic sources. Here's what to expect:
 
 :::tip Maximize Identification Rates
 - Traffic from LinkedIn campaigns identifies well (corporate networks)
-- Email campaigns clicking through often identify
+- AI Sequences clicking through often identify
 - Morning/office hours traffic identifies better than evening
 - Paid search traffic from branded terms often identifies
 :::
@@ -342,7 +342,7 @@ The value of identification data decays fast. A company visiting your pricing pa
 
 | Issue | Cause | Solution |
 |-------|-------|----------|
-| Under 20% | Mostly remote traffic | Focus on LinkedIn/email campaigns |
+| Under 20% | Mostly remote traffic | Focus on LinkedIn/AI Sequences |
 | Many "Very Low" | Mixed traffic sources | Filter to High confidence only |
 | Declining rate | Traffic mix changing | Review traffic sources in analytics |
 

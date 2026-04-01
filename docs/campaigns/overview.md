@@ -66,7 +66,7 @@ Abmatic AI supports 12 campaign types across three categories to match your go-t
 | Type | Best For | Example Use Case |
 |------|----------|------------------|
 | **[Agentic Flow](/campaigns/agentic-flow)** | AI-crafted 1:1 personalized outreach | Let AI write unique messages for each prospect |
-| **[AI Sequence](/campaigns/email-campaigns)** | AI-powered multi-channel outreach | AI dynamically personalizes emails, calls, and LinkedIn messages |
+| **[AI Sequences](/campaigns/email-campaigns)** | AI-powered multi-channel outreach | AI dynamically personalizes emails, calls, and LinkedIn messages |
 | **[Intent](/campaigns/intent)** | Finding in-market accounts | Identify hot accounts based on first-party and third-party intent signals |
 | **[Agentic Chat](/campaigns/agentic-chat)** | AI-powered website chat | Engage visitors with an intelligent chat widget |
 
@@ -153,7 +153,7 @@ Not sure where to start? Match your marketing goal to the right campaign type be
 | "I want to create personalized landing pages for specific accounts our sales team is pursuing" | **Outbound Personalization** | Lets sales send prospects to a page that says their company name, references their industry, and speaks to their specific pain points |
 | "I want to test whether our new headline converts better than the current one" | **[A/B Testing](/campaigns/ab-testing)** | Splits traffic between versions and measures which one actually drives more conversions--no guessing |
 | "I want visitors to get instant answers to product questions 24/7" | **[Agentic Chat](/campaigns/agentic-chat)** | An AI assistant on your website that knows your product, qualifies leads, and captures emails around the clock |
-| "I want to identify which target accounts are showing buying intent right now" | **Intent Campaign** | Surfaces accounts actively researching your category based on first-party website behavior signals |
+| "I want to identify which target accounts are showing buying intent right now" | **[Intent Campaign](/campaigns/intent)** | Surfaces accounts actively researching your category based on first-party website behavior signals |
 
 ### Conversion and Bottom-of-Funnel
 

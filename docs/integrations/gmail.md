@@ -210,7 +210,7 @@ Optionally, you can also revoke access from the Google side:
 
 | Topic | Link |
 |-------|------|
-| AI Sequences and email campaigns | [Email Campaigns](/campaigns/email-campaigns) |
+| AI Sequences | [AI Sequences](/campaigns/email-campaigns) |
 | Slack notifications | [Slack Integration](/integrations/slack) |
 | All integrations | [Integrations Overview](/integrations/overview) |
 | SDR Agent | [SDR Agent](/ai-agents/sdr-agent) |

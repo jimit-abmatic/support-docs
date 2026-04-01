@@ -54,6 +54,10 @@ The AI agent uses your configured context—value propositions, tone guidelines,
 4. Choose a **Contact Collection** to target
 5. Click **Create**
 
+The next step asks you to select a contact collection:
+
+![Select a contact collection to target for your Agentic Flow campaign](/img/screenshots/agentic-flow-select-contact.png)
+
 ### Step 2: Define Your Audience
 
 The Audience tab lets you configure targeting rules that determine which contacts from your collection will receive outreach.

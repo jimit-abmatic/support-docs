@@ -272,6 +272,7 @@ View high-level metrics and trends:
 | **Conversions** | Goal completions from chat visitors |
 | **CVRL** | Conversion rate - personalized group |
 | **CTRL** | Conversion rate - control group |
+| **Total Impressions** | Total times the chat widget was displayed to visitors |
 
 ### Engagement Tab
 
@@ -290,7 +291,7 @@ Each visit shows:
 
 Dive into visitor-level analytics:
 
-![Performance Tab](/img/screenshots/agentic-chat/ac-performance-tab.png)
+![Performance tab showing Visitors sub-tab with domain, visitor, chat history, page views, and sessions data](/img/screenshots/agentic-chat/ac-performance-tab.png)
 
 Sub-tabs available:
 - **VISITORS** - Individual visitor data with company domain and chat history

@@ -62,7 +62,6 @@ When you create a First-Party Intent campaign, you configure the weight (0-100) 
 |--------|---------------|-------------|
 | **Form Fill** | 50 | Prospect fills out a form on your website |
 | **Demo Page Visit** | 10 | Prospect visits your demo or request-a-demo page |
-| **New Visitor Score** | 5 | Score for every new visitor that arrives on your website |
 | **Home Page Visit** | 2 | Prospect visits your primary home page |
 | **Outbound** | 1.2 | Prospect opens an outbound personalized campaign link |
 | **Inbound** | 1.1 | Prospect visits one of your inbound personalized pages |
@@ -289,7 +288,7 @@ Intent data does not live in isolation -- it powers your entire go-to-market mot
 
 | Integration | How It Works |
 |-------------|-------------|
-| **Email Sequences** | Trigger a [Sequence campaign](/campaigns/email-campaigns) when an account's intent score crosses a threshold |
+| **AI Sequences** | Trigger an [AI Sequence campaign](/campaigns/email-campaigns) when an account's intent score crosses a threshold |
 | **Website Personalization** | Show [personalized content](/campaigns/website-personalization) based on intent level |
 | **LinkedIn Ads** | Push high-intent accounts to [LinkedIn](/campaigns/linkedin-ads) for targeted advertising |
 | **Agentic Flow** | Feed intent data into [AI-powered sequences](/campaigns/agentic-flow) for personalized outreach |
@@ -366,7 +365,7 @@ Intent data does not live in isolation -- it powers your entire go-to-market mot
 
 - [Campaigns Overview](/campaigns/overview) - All campaign types at a glance
 - [Website Personalization](/campaigns/website-personalization) - Personalize experiences based on intent
-- [Email Campaigns](/campaigns/email-campaigns) - Trigger sequences from intent signals
+- [AI Sequences](/campaigns/email-campaigns) - Trigger sequences from intent signals
 - [Agentic Flow](/campaigns/agentic-flow) - AI-powered outreach using intent data
 - [Agentic Chat](/campaigns/agentic-chat) - Chat with high-intent visitors
 - [Company Identification](/visitor-tracking/company-identification) - See which companies visit your site

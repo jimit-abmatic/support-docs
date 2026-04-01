@@ -16,7 +16,7 @@ Extend your account and contact data with custom fields to capture business-spec
 Every business has unique data points that standard fields don't capture. Custom fields let you:
 
 - **Target with precision** - Filter campaigns by account tier, product interest, customer status, or any custom attribute
-- **Personalize at scale** - Insert custom field values into website content and email campaigns
+- **Personalize at scale** - Insert custom field values into website content and AI Sequences
 - **Sync your CRM data** - Map Salesforce and HubSpot custom fields to Abmatic for a unified view
 - **Build better reports** - Segment and analyze performance by your custom dimensions
 
