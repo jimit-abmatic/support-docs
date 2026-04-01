@@ -53,18 +53,6 @@ Sync account and contact data bidirectionally with your CRM -- no more CSV expor
 Drag and drop connected CRM cards to set the priority order. When syncing data, Abmatic uses this order to resolve conflicts between platforms.
 :::
 
-### Ad Networks
-
-Push your target account lists directly to ad platforms -- no manual audience building required.
-
-![Ad Networks Integrations](/img/screenshots/integrations-ad-networks.png)
-
-| Platform | Key Benefits | Setup Guide |
-|----------|--------------|-------------|
-| **LinkedIn Ads** | Matched Audiences from account lists. Company targeting at scale. | [Setup Guide](/integrations/advertising/linkedin-ads) |
-| **Google Ads** | Customer Match audiences. Search, Display, and YouTube targeting using your account and contact lists. | [Setup Guide](/integrations/advertising/google-ads) |
-| **Meta** | Custom audiences. Retargeting. Lookalike expansion. | Coming soon |
-
 ### Communications
 
 Get real-time notifications and email tracking where your team already works.
@@ -106,6 +94,18 @@ Abmatic uses a proprietary **5-provider waterfall** to maximize visitor identifi
 | **Abmatic IP Fallback** | Maximum coverage | Final fallback provider ensuring the widest possible coverage across all visitor traffic. |
 
 All five providers are managed by Abmatic and require no separate subscriptions or configuration. They activate automatically for every account.
+
+### Ad Networks
+
+Push your target account lists directly to ad platforms -- no manual audience building required.
+
+![Ad Networks Integrations](/img/screenshots/integrations-ad-networks.png)
+
+| Platform | Key Benefits | Setup Guide |
+|----------|--------------|-------------|
+| **LinkedIn Ads** | Matched Audiences from account lists. Company targeting at scale. | [Setup Guide](/integrations/advertising/linkedin-ads) |
+| **Google Ads** | Customer Match audiences. Search, Display, and YouTube targeting using your account and contact lists. | [Setup Guide](/integrations/advertising/google-ads) |
+| **Meta** | Custom audiences. Retargeting. Lookalike expansion. | Coming soon |
 
 ### Accounts & Contacts Data
 
@@ -408,10 +408,10 @@ Map your specific fields:
 - [Google Ads](/integrations/advertising/google-ads)
 
 ### Other Integrations
-- [Gmail](/integrations/gmail)
 - [Slack](/integrations/slack)
 - [Google Analytics](/integrations/google-analytics)
 - [Segment](/integrations/segment)
+- [Outreach](/integrations/crm/outreach)
 
 ### Related Features
 - [CRM Sync for Audiences](/audiences/crm-sync)
