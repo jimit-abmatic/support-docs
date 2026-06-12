@@ -287,6 +287,8 @@ class MultiCaptureScreenshotTool {
     waitFor?: string;
     clickBefore?: string[];
     scrollTo?: string;
+    uploadFile?: { selector: string; path: string };
+    waitForAfter?: string;
   } = {}): Promise<MultiCaptureResult> {
     if (!this.page) throw new Error('Browser not initialized');
 
@@ -313,8 +315,11 @@ class MultiCaptureScreenshotTool {
     console.log(`  Delays: ${CAPTURE_DELAYS.map(d => d/1000 + 's').join(', ')}`);
 
     try {
-      // Navigate to page
-      await this.page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
+      // Navigate to page. Use domcontentloaded (not networkidle) because several
+      // live app pages (reveal, conversions) hold open websockets/long-polls that
+      // never reach networkidle, which would throw before any screenshot is taken.
+      await this.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+      await this.page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
 
       // Check if we got redirected to login
       if (await this.checkForLoginPage()) {
@@ -326,7 +331,8 @@ class MultiCaptureScreenshotTool {
           return result;
         }
         // Navigate again
-        await this.page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
+        await this.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        await this.page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
       }
 
       // Wait for specific element if specified
@@ -347,6 +353,26 @@ class MultiCaptureScreenshotTool {
           } catch {
             console.log(`  Warning: Could not click ${selector}`);
           }
+        }
+      }
+
+      // Upload a file into a (possibly hidden) <input type=file> if specified
+      if (options.uploadFile) {
+        try {
+          const input = this.page.locator(options.uploadFile.selector).first();
+          await input.setInputFiles(options.uploadFile.path);
+          await this.page.waitForTimeout(1000);
+        } catch (e) {
+          console.log(`  Warning: Could not upload file to ${options.uploadFile.selector}: ${String(e)}`);
+        }
+      }
+
+      // Wait for a post-interaction element (runs AFTER clicks/uploads)
+      if (options.waitForAfter) {
+        try {
+          await this.page.waitForSelector(options.waitForAfter, { timeout: 60000 });
+        } catch {
+          console.log(`  Warning: Could not find post-interaction element ${options.waitForAfter}`);
         }
       }
 
@@ -536,6 +562,30 @@ class MultiCaptureScreenshotTool {
     return result;
   }
 
+  async listLinks(urlPath: string): Promise<{href: string; text: string}[]> {
+    if (!this.page) throw new Error('Browser not initialized');
+    if (!this.isLoggedIn) await this.login();
+    await this.page.goto(`${config.baseUrl}${urlPath}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+    await this.page.waitForTimeout(25000);
+    const collected = new Map<string, string>();
+    // AG-grid is virtualized; scroll the viewport to load all rows.
+    for (let i = 0; i < 25; i++) {
+      const rows = await this.page.evaluate(() => {
+        const out: {href: string; text: string}[] = [];
+        document.querySelectorAll('[col-id="name"]').forEach((c: any) => {
+          const a = c.querySelector('a');
+          if (a) out.push({ href: a.getAttribute('href') || '', text: (c.textContent || '').trim().slice(0, 40) });
+        });
+        const vp = document.querySelector('.ag-body-viewport') as any;
+        if (vp) vp.scrollTop += 600;
+        return out;
+      });
+      rows.forEach(r => { if (r.href) collected.set(r.href, r.text); });
+      await this.page.waitForTimeout(400);
+    }
+    return Array.from(collected, ([href, text]) => ({ href, text }));
+  }
+
   async close(): Promise<void> {
     if (this.browser) {
       await this.browser.close();
@@ -579,12 +629,12 @@ async function main() {
           console.log('Usage: batch <jsonFile>  (file = [{name,path},...])');
           break;
         }
-        const items = JSON.parse(fs.readFileSync(listPath, 'utf8')) as { name: string; path: string }[];
+        const items = JSON.parse(fs.readFileSync(listPath, 'utf8')) as { name: string; path: string; clickBefore?: string[]; scrollTo?: string; waitFor?: string; uploadFile?: { selector: string; path: string }; waitForAfter?: string }[];
         await tool.init();
         const summary: { name: string; path: string; best: string | null; score: number | null; issues: string[] }[] = [];
         for (const it of items) {
           try {
-            const r = await tool.multiCapture(it.name, it.path);
+            const r = await tool.multiCapture(it.name, it.path, { clickBefore: it.clickBefore, scrollTo: it.scrollTo, waitFor: it.waitFor, uploadFile: it.uploadFile, waitForAfter: it.waitForAfter });
             const best = r.files.find(f => f.path === r.bestFile);
             summary.push({ name: it.name, path: it.path, best: r.bestFile, score: best ? best.score : null, issues: r.issues });
             console.log(`  [done] ${it.name} -> ${r.bestFile || 'FAILED'} (score ${best ? best.score : 'n/a'})`);
@@ -594,6 +644,13 @@ async function main() {
           }
         }
         console.log('\nBATCH_SUMMARY_JSON:' + JSON.stringify(summary));
+        break;
+      }
+
+      case 'links': {
+        await tool.init();
+        const links = await tool.listLinks(args[1] || '/campaigns');
+        console.log('LINKS_JSON:' + JSON.stringify(links));
         break;
       }
 
@@ -647,4 +704,11 @@ Examples:
 
 export { MultiCaptureScreenshotTool };
 
-main();
+// Only auto-run the CLI when invoked directly, not when imported as a module.
+const invokedDirectly =
+  typeof process !== 'undefined' &&
+  Array.isArray(process.argv) &&
+  /multi-capture\.(ts|js)$/.test(process.argv[1] || '');
+if (invokedDirectly) {
+  main();
+}
