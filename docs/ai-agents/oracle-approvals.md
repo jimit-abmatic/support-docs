@@ -66,9 +66,9 @@ So if your inbox is quiet, that may simply mean Oracle is operating within the l
 
 When there's nothing waiting, the inbox shows: *"No pending approvals. When the Oracle queues a high-impact action, it will show up here."*
 
-![The Oracle Approvals inbox with no pending approvals, showing the empty-state message](/img/screenshots/oracle-inbox-empty.png)
+![The Oracle Approvals inbox showing the "No pending approvals" empty-state message](/img/screenshots/oracle-inbox-empty.png)
 
-*The Oracle Approvals inbox when there is nothing to review.*
+*The Oracle Approvals inbox when there is nothing to review. (On accounts where Oracle isn't enabled, the page may also show a "Failed to load approvals" notice — see the gated message above.)*
 
 ---
 

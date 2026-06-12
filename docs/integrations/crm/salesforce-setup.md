@@ -300,7 +300,7 @@ After setup, explore these features:
 |---------|------|
 | Configure sync behavior details | [Sync Behavior](/integrations/crm/sync-behavior) |
 | Import specific Salesforce views | [CRM Import](/audiences/crm-sync) |
-| Push enriched data back | [Push to CRM](/audiences/crm-sync#pushing-to-crm) |
+| Push enriched data back | [Push to CRM](/audiences/crm-sync#pushing-records-to-crm) |
 | Sync Salesforce Campaigns | [CRM Campaigns](/campaigns/crm-campaigns) |
 
 ---

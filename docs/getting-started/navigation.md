@@ -22,9 +22,7 @@ The sidebar is the main way you move around Abmatic AI. It sits on the far left 
 - **Selected item is highlighted.** Whatever section you are currently in shows a rounded pill behind its icon so you can see where you are at a glance.
 - **The logo goes Home.** The Abmatic AI logo and **ABMATIC AI** wordmark sit at the top. Click the logo at any time to return to the Home page.
 
-![Sidebar expanded on hover, showing the label next to each icon](/img/screenshots/nav-sidebar-expanded.png)
-
-*Hover over the rail to reveal labels for every section.*
+Hover over the rail to reveal the text label next to each icon. The full set of sidebar items is listed below.
 
 ### Sidebar Items (top to bottom)
 
@@ -57,9 +55,9 @@ At the very **bottom** of the rail sits one more item:
 
 The top bar runs across the top of every page. On the **left** it shows the current page title or breadcrumb (for example, "Home" or "Home / Home Dashboard"). On the **right** is a toolbar of quick actions.
 
-![The top-right toolbar: dark mode, search, help, notifications, and settings](/img/screenshots/nav-topbar.png)
+![The Home page, with the top bar running across the top and the quick-action toolbar in the top-right corner](/img/screenshots/nav-topbar.png)
 
-From left to right, the top-right toolbar contains:
+The top-right toolbar contains the following buttons:
 
 | Button | What It Does |
 |--------|--------------|

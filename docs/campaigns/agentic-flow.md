@@ -299,10 +299,10 @@ These three scenarios show how marketing teams use Agentic Flow campaigns to dri
 | 4 | Call Script | Day 10 | Talking points: their recent 10-K filing, data team size, regulatory burden |
 | 5 | Manual Email | Day 14 | "Quick thought on [Company]'s analytics roadmap" |
 
-**Expected Results:**
-- 15-25% reply rate (vs. 3-5% for generic sequences)
-- 8-12 meetings booked from 50 accounts within 30 days
-- Each message references the prospect's specific regulatory environment, company size, and role
+**What this approach aims to do:**
+- Lift reply rates above what a generic, untargeted sequence would earn
+- Book meetings across the target account list without manual one-by-one personalization
+- Make every message reference the prospect's specific regulatory environment, company size, and role
 
 :::tip Why this works
 AI researches each financial institution's specific compliance challenges, recent news, and leadership structure. A VP of Data at JPMorgan Chase gets a completely different message than a VP of Analytics at a regional credit union--even though both are in the same campaign.
@@ -337,10 +337,10 @@ AI researches each financial institution's specific compliance challenges, recen
    - Day 7: Value-add email with a persona-appropriate asset (ROI calculator for CMO, integration docs for Ops, workflow demo for Demand Gen)
    - Day 12: Call script with role-specific discovery questions
 
-**Expected Results:**
-- Multi-threaded engagement at 30-40% of target accounts
-- 2x higher meeting conversion than single-persona outreach
-- Shorter sales cycles because the buying committee is already informed
+**What this approach aims to do:**
+- Reach more than one stakeholder per account, so the buying committee hears a consistent message
+- Improve the odds of a meeting by tailoring each touch to the persona's concerns
+- Shorten sales cycles because the buying committee is already informed
 
 ---
 
@@ -379,10 +379,10 @@ AI researches each financial institution's specific compliance challenges, recen
 
 **Why Manual Email for Step 1:** These are sensitive re-engagement messages. A rep should review the AI's draft before sending to ensure the competitive messaging is tactful and the loss-reason reference is accurate.
 
-**Expected Results:**
-- 10-15% reply rate (warm leads who already know your product)
-- 5-8 re-opened opportunities from 75 accounts within 45 days
-- Average deal size 20% higher than initial opportunity (they now understand your full value)
+**What this approach aims to do:**
+- Re-open conversations with warm leads who already know your product
+- Surface a handful of revived opportunities from accounts that previously went cold
+- Win back deals on stronger footing, because the buyer now understands your full value
 
 :::info Re-engagement timing matters
 The best window for win-back campaigns is 6-12 months after the loss. Earlier feels desperate; later means they are too entrenched with the competitor. If the competitor raised prices or had a major outage, that is your signal to move.

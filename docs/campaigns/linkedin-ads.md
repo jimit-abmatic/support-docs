@@ -63,7 +63,7 @@ Include company website domains (e.g., `acme.com`) rather than email domains. Li
 2. Click **+ Campaign**
 3. Under the **Advertising** category, select **LinkedIn**
 
-![Campaign creation showing the LinkedIn option under Advertising](/img/screenshots/linkedin-create-modal.png)
+![Campaign creation showing the LinkedIn option under Advertising](/img/screenshots/campaigns-create-modal.png)
 
 4. Choose **Account** or **Contact** targeting:
    - **Account**: Target employees at specific companies
