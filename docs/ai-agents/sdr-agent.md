@@ -9,15 +9,6 @@ sidebar_position: 3
 
 Meet Alex, your AI-powered Sales Development Representative that engages prospects with personalized outreach at scale. While your human SDRs focus on high-value conversations, Alex handles the repetitive work of prospecting, qualification, and follow-up—24/7.
 
-<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
-  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/09-alex-sdr.mp4"></video>
-</div>
-
-🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/09-alex-sdr/interactive/index.html)**
-
-> 🎓 **[Browse every video tutorial in the Training Center → training.abmatic.ai](https://training.abmatic.ai)**
-
-
 ## Why Teams Love Alex
 
 | Benefit | Impact |

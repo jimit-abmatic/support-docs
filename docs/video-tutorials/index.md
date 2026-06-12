@@ -201,27 +201,6 @@ Build the reports and dashboards your team cares about, and check them any time.
 
 </details>
 
-## Meet Alex, your AI SDR
-
-<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
-  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/09-alex-sdr.mp4"></video>
-</div>
-
-🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/09-alex-sdr/interactive/index.html)**
-
-<details>
-  <summary>Transcript</summary>
-
-Alongside Clara, Abmatic AI has a second agent: Alex, your AI sales development rep. Alex actually makes calls. Let's meet him.
-
-Open the AI Agent tab and switch to Alex. Alex is an AI sales rep who can call prospects, qualify them, and follow up — in a natural, personalized voice conversation.
-
-Want to hear him in action? Enter your number and Alex will call you with a personalized demo — the same way he'd reach one of your prospects.
-
-That's Alex — qualifying and following up with prospects by voice, so your team can focus on the conversations that matter.
-
-</details>
-
 ## Connect your stack (Integrations)
 
 <div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
