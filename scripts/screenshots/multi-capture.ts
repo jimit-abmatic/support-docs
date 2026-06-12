@@ -122,32 +122,39 @@ class MultiCaptureScreenshotTool {
     console.log('Logging in to Abmatic AI...');
 
     try {
-      await this.page.goto(`${config.baseUrl}/login`, {
-        waitUntil: 'networkidle',
+      // /login now redirects to /sign-in
+      await this.page.goto(`${config.baseUrl}/sign-in`, {
+        waitUntil: 'domcontentloaded',
         timeout: 30000
       });
 
-      // Wait for login form
-      await this.page.waitForSelector('input[type="email"], input[name="email"]', {
-        timeout: 10000
+      // Wait for login form (email field is name="username")
+      await this.page.waitForSelector('input[type="email"], input[name="email"], input[name="username"]', {
+        timeout: 15000
       });
 
       // Fill credentials
-      await this.page.fill('input[type="email"], input[name="email"]', config.email);
+      await this.page.fill('input[type="email"], input[name="email"], input[name="username"]', config.email);
       await this.page.fill('input[type="password"], input[name="password"]', config.password);
 
       // Click login button
-      const loginButton = this.page.locator('button:has-text("SIGN IN"), button:has-text("Sign In"), button[type="submit"]').first();
+      const loginButton = this.page.locator('button:has-text("SIGN IN"), button:has-text("Sign in"), button:has-text("Sign In"), button[type="submit"]').first();
       await loginButton.click();
 
-      // Wait for navigation to dashboard with extended timeout
-      await this.page.waitForURL('**/home-dashboard**', { timeout: 60000 });
+      // App now lands on root "/" after login (no longer /home-dashboard).
+      // Wait until we leave the sign-in page and the authenticated app shell renders.
+      await this.page.waitForFunction(
+        () => !location.pathname.includes('sign-in') && !location.pathname.includes('login'),
+        { timeout: 60000 }
+      );
+      // Wait for the authenticated nav shell to appear
+      await this.page.waitForSelector('text=Notifications', { timeout: 30000 }).catch(() => {});
 
-      // Extra wait to ensure session is established
+      // Extra wait to ensure session/app data is established
       await this.page.waitForTimeout(3000);
 
       this.isLoggedIn = true;
-      console.log('Successfully logged in');
+      console.log('Successfully logged in (landed on ' + this.page.url() + ')');
       return true;
 
     } catch (error) {
