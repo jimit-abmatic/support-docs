@@ -11,9 +11,7 @@ Learn Abmatic AI the fast way. Each short lesson below pairs a guided video with
 
 ## Set up your first campaign
 
-<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
-  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/01-first-campaign.mp4"></video>
-</div>
+<video class="support-video" controls preload="metadata" src="https://cdn.abmatic.ai/training/01-first-campaign.mp4"></video>
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/01-first-campaign/interactive/index.html)**
 
@@ -40,9 +38,7 @@ That's it. Next, try setting up the AI chatbot to engage visitors in real time �
 
 ## Getting started with Abmatic AI
 
-<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
-  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/02-getting-started.mp4"></video>
-</div>
+<video class="support-video" controls preload="metadata" src="https://cdn.abmatic.ai/training/02-getting-started.mp4"></video>
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/02-getting-started/interactive/index.html)**
 
@@ -63,9 +59,7 @@ That's the setup. From here, you're ready to build your first campaign — we'll
 
 ## Set up the AI chatbot (Agentic Chat)
 
-<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
-  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/03-agentic-chat.mp4"></video>
-</div>
+<video class="support-video" controls preload="metadata" src="https://cdn.abmatic.ai/training/03-agentic-chat.mp4"></video>
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/03-agentic-chat/interactive/index.html)**
 
@@ -88,9 +82,7 @@ And that's your AI chatbot. Next, meet Clara — the AI agent who can build camp
 
 ## Using Clara, your AI ABM agent
 
-<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
-  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/04-clara.mp4"></video>
-</div>
+<video class="support-video" controls preload="metadata" src="https://cdn.abmatic.ai/training/04-clara.mp4"></video>
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/04-clara/interactive/index.html)**
 
@@ -113,9 +105,7 @@ That's Clara. Ask in plain English, review what she proposes, and approve — an
 
 ## Build your audiences (Accounts & Contacts)
 
-<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
-  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/05-audiences.mp4"></video>
-</div>
+<video class="support-video" controls preload="metadata" src="https://cdn.abmatic.ai/training/05-audiences.mp4"></video>
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/05-audiences/interactive/index.html)**
 
@@ -136,9 +126,7 @@ That's audiences. Build the right list once, and you can point any campaign at i
 
 ## See who's visiting (Visitor Reveal)
 
-<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
-  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/06-visitor-reveal.mp4"></video>
-</div>
+<video class="support-video" controls preload="metadata" src="https://cdn.abmatic.ai/training/06-visitor-reveal.mp4"></video>
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/06-visitor-reveal/interactive/index.html)**
 
@@ -159,9 +147,7 @@ That's Visitor Reveal — turning anonymous traffic into accounts and people you
 
 ## Track conversions
 
-<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
-  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/07-conversions.mp4"></video>
-</div>
+<video class="support-video" controls preload="metadata" src="https://cdn.abmatic.ai/training/07-conversions.mp4"></video>
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/07-conversions/interactive/index.html)**
 
@@ -180,9 +166,7 @@ Once your conversions are set up, every campaign is measured against real outcom
 
 ## Reports & dashboards (Analytics)
 
-<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
-  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/08-analytics.mp4"></video>
-</div>
+<video class="support-video" controls preload="metadata" src="https://cdn.abmatic.ai/training/08-analytics.mp4"></video>
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/08-analytics/interactive/index.html)**
 
@@ -203,9 +187,7 @@ Build the reports and dashboards your team cares about, and check them any time.
 
 ## Connect your stack (Integrations)
 
-<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
-  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/10-integrations.mp4"></video>
-</div>
+<video class="support-video" controls preload="metadata" src="https://cdn.abmatic.ai/training/10-integrations.mp4"></video>
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/10-integrations/interactive/index.html)**
 
@@ -224,9 +206,7 @@ With your CRM, Slack, and ad accounts connected, data flows both ways and your w
 
 ## Manage your workspace (Settings)
 
-<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
-  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/11-settings.mp4"></video>
-</div>
+<video class="support-video" controls preload="metadata" src="https://cdn.abmatic.ai/training/11-settings.mp4"></video>
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/11-settings/interactive/index.html)**
 

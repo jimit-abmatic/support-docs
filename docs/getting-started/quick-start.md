@@ -9,9 +9,7 @@ sidebar_position: 1
 
 Set up your website as a personalized ABM engine in a single sitting. By the end of this guide, you'll be identifying anonymous visitors, syncing with your CRM, and delivering personalized experiences to your target accounts.
 
-<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
-  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/02-getting-started.mp4"></video>
-</div>
+<video class="support-video" controls preload="metadata" src="https://cdn.abmatic.ai/training/02-getting-started.mp4"></video>
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/02-getting-started/interactive/index.html)**
 

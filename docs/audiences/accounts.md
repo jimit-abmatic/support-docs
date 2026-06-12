@@ -9,9 +9,7 @@ sidebar_position: 2
 
 Account Lists (Collections) are how you organize the companies you want to target. Identify, enrich, and group your highest-value accounts, then activate them in ABM campaigns, ads, and CRM sync.
 
-<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
-  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/05-audiences.mp4"></video>
-</div>
+<video class="support-video" controls preload="metadata" src="https://cdn.abmatic.ai/training/05-audiences.mp4"></video>
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/05-audiences/interactive/index.html)**
 

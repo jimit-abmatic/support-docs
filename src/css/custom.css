@@ -482,3 +482,20 @@ pre:has(code:not([class])) {
     max-width: 100% !important;
   }
 }
+
+/* ── Training video embeds (support articles + Video Tutorials page) ──
+   Plain HTML <video class="support-video"> sized responsively. Uses a CSS
+   class (not inline JSX styles) because docs are .md / CommonMark, where
+   JSX style={{…}} attributes are stripped. aspect-ratio keeps 16:9 with no
+   overflow/overlap. */
+.support-video {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  background: #000;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+}

@@ -9,9 +9,7 @@ sidebar_position: 3
 
 Turn anonymous website visitors into engaged prospects with your first personalization campaign. By showing each visitor content that matches their company, industry, or behavior, you make your website more relevant the moment they arrive.
 
-<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
-  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/01-first-campaign.mp4"></video>
-</div>
+<video class="support-video" controls preload="metadata" src="https://cdn.abmatic.ai/training/01-first-campaign.mp4"></video>
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/01-first-campaign/interactive/index.html)**
 
