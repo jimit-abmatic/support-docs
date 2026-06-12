@@ -571,6 +571,32 @@ async function main() {
         console.log('\nResult:', JSON.stringify(result, null, 2));
         break;
 
+      case 'batch': {
+        // batch <jsonFile>  where jsonFile = [{ "name": "...", "path": "/..." }, ...]
+        // Logs in ONCE and captures the whole list in a single browser session.
+        const listPath = args[1];
+        if (!listPath) {
+          console.log('Usage: batch <jsonFile>  (file = [{name,path},...])');
+          break;
+        }
+        const items = JSON.parse(fs.readFileSync(listPath, 'utf8')) as { name: string; path: string }[];
+        await tool.init();
+        const summary: { name: string; path: string; best: string | null; score: number | null; issues: string[] }[] = [];
+        for (const it of items) {
+          try {
+            const r = await tool.multiCapture(it.name, it.path);
+            const best = r.files.find(f => f.path === r.bestFile);
+            summary.push({ name: it.name, path: it.path, best: r.bestFile, score: best ? best.score : null, issues: r.issues });
+            console.log(`  [done] ${it.name} -> ${r.bestFile || 'FAILED'} (score ${best ? best.score : 'n/a'})`);
+          } catch (e) {
+            summary.push({ name: it.name, path: it.path, best: null, score: null, issues: [String(e)] });
+            console.log(`  [error] ${it.name}: ${String(e)}`);
+          }
+        }
+        console.log('\nBATCH_SUMMARY_JSON:' + JSON.stringify(summary));
+        break;
+      }
+
       case 'audit':
         const dir = args[1];
         await tool.init();
