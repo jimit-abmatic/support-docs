@@ -2,343 +2,329 @@
 id: google-customer-match
 title: Google Customer Match
 sidebar_label: Google Customer Match
+sidebar_position: 8
 ---
 
 # Google Customer Match
 
-Reach your target accounts and contacts across Google's entire advertising ecosystem. Push your Abmatic audiences directly to Google Ads for precision targeting on Search, Display, YouTube, and Gmail.
+Reach your target contacts across Google's advertising ecosystem. Push a contact collection from Abmatic AI straight to Google Ads Customer Match, then target those known people on Search, Display, YouTube, Gmail, and Demand Gen—without manual uploads.
 
-## Why Google Customer Match Drives Results
+## Why use Customer Match
 
-| Traditional Approach | With Abmatic + Customer Match |
-|---------------------|-------------------------------|
-| Manual audience uploads | One-click audience sync |
-| Static lists that decay | Dynamic lists that auto-update |
-| Generic ad targeting | Target known accounts by name |
-| Fragmented campaigns | Unified ABM across all Google properties |
-| Unknown attribution | Track engagement back to accounts |
+| Doing it manually | With Abmatic AI |
+|-------------------|-----------------|
+| Format and upload audience files by hand | Push a contact collection in a few clicks |
+| Lists decay the moment you upload them | Dynamic collections refresh automatically |
+| Generic ad targeting | Target known contacts by their email |
+| Disconnected campaigns | One set of audiences across all Google properties |
 
-## How It Works
+## How it works
 
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│  Build Contact  │ ──► │  Push to Google │ ──► │   Google Ads    │
-│   List in       │     │  Customer Match │     │   Campaigns     │
-│    Abmatic      │     │                 │     │                 │
+│  Build a        │ ──► │  Push to Google │ ──► │   Google Ads    │
+│  Contact List   │     │  Customer Match │     │   Campaigns     │
+│  in Abmatic AI  │     │                 │     │                 │
 └─────────────────┘     └─────────────────┘     └─────────────────┘
         │                       │                       │
-   Add emails &           Automatic hash          Target across
-   phone numbers          & secure upload         Search, Display,
-                                                  YouTube, Gmail
+   Add emails &           Hashed & uploaded        Target across
+   phone numbers          securely                 Search, Display,
+                                                   YouTube, Gmail
 ```
 
-**The process is simple:**
-
-1. **Build your audience** - Create a contact list in Abmatic with emails
-2. **Push to Google** - Select your list and click "Push to Google Ads"
-3. **Google matches** - Google securely hashes and matches your data
-4. **Run targeted ads** - Create campaigns targeting your matched audience
+1. **Build your audience** — Create a contact collection in Abmatic AI with email addresses.
+2. **Push to Google** — Select the collection and choose **Push to Google Ads**.
+3. **Google matches** — Google hashes and matches your data against its users.
+4. **Run targeted ads** — Build campaigns aimed at the matched audience.
 
 ## Requirements
 
-### Google Ads Account Requirements
+### Google Ads account requirements
 
-Customer Match availability depends on your Google Ads account status:
+Customer Match is available to most active Google Ads accounts in good standing. Google's current eligibility checks are based on **account history, payment record, and policy compliance**—not on hitting a fixed spend amount.
 
-| Requirement | Details | How to Check |
-|------------|---------|--------------|
-| Account History | At least 90 days | Account age in Google Ads |
-| Payment History | Good standing | Billing section |
-| Policy Compliance | Clean record | Policy Manager |
-| Total Spend | $50,000+ (varies by region) | Account summary |
+| Requirement | What Google looks for |
+|-------------|-----------------------|
+| Account history | An established account in good standing |
+| Payment history | Billing in good standing |
+| Policy compliance | A clean policy record |
 
-:::tip Check Your Eligibility
-Go to **Google Ads > Tools > Audience Manager** to see if Customer Match is available for your account. If not eligible, contact your Google representative.
+:::tip Check your eligibility
+In Google Ads, go to **Tools > Audience Manager > Your data segments** to confirm Customer Match is available for your account. If it isn't, contact your Google Ads representative—eligibility rules are set and changed by Google, not by Abmatic AI.
 :::
 
-### Data Requirements
+:::note
+Google updates its Customer Match policies from time to time. Treat Google's own documentation as the source of truth for current eligibility and minimum-size rules.
+:::
 
-| Requirement | Minimum | Best Practice |
-|------------|---------|---------------|
-| Email addresses | Required | Use work + personal emails |
-| List size | 1,000 contacts | 5,000+ for best results |
-| Marketing consent | Required | Only sync opted-in contacts |
-| Phone numbers | Optional | Improves match rates |
+### Data requirements
 
-## Getting Started
+| Requirement | Notes |
+|-------------|-------|
+| Email addresses | Required—this is the main matching key |
+| List size | Larger lists produce more matched users |
+| Marketing consent | Only sync contacts who have opted in |
+| Phone numbers | Optional—they can improve match rates |
+
+## Getting started
 
 ### Step 1: Connect Google Ads
 
-![Settings > Integrations page](/img/screenshots/integrations-hub.png)
-*Navigate to Settings > Integrations and scroll down to the Advertising section to find Google Ads*
+1. Go to **Settings > Integrations**.
+2. Scroll to the **Advertising** section and find **Google Ads**.
+3. Click **Connect**.
+4. Sign in with your Google account.
+5. Select your Google Ads account and authorize Abmatic AI.
 
-1. Navigate to **Settings > Integrations**
-2. Scroll down to find **Google Ads** in the Advertising section
-3. Click **Connect**
-4. Sign in with your Google account
-5. Select your Google Ads account
-6. Authorize Abmatic access
+![Settings > Integrations page where you connect advertising integrations](/img/screenshots/integrations-hub.png)
+*Open Settings > Integrations and scroll to the Advertising section to connect Google Ads.*
 
-### Step 2: Prepare Your Contact List
+### Step 2: Prepare your contact collection
 
-![Contact collections with email data](/img/screenshots/contacts-list.png)
+![Contacts Collections list with email-based contact lists](/img/screenshots/contacts-list.png)
+*Customer Match pushes from a contact collection, so it works best on lists rich in email addresses.*
 
-Build a contact list optimized for Customer Match:
+Build a contact collection optimized for Customer Match:
 
-| Field | Impact on Match Rate | Priority |
-|-------|---------------------|----------|
+| Field | Impact on match rate | Priority |
+|-------|----------------------|----------|
 | Email (work) | Medium | Required |
 | Email (personal) | High | Recommended |
-| Phone number | Medium-High | Recommended |
-| First/Last name | Low boost | Optional |
+| Phone number | Medium–High | Recommended |
+| First / last name | Small boost | Optional |
 
-**Best sources for Customer Match lists:**
+**Good sources for Customer Match lists:**
+
 - CRM contacts with email addresses
-- Event registrants with opt-in
+- Event registrants who opted in
 - Newsletter subscribers
 - Form submissions
-- Website visitors (with revealed emails)
+- Revealed website visitors with emails
 
 ### Step 3: Push to Google Ads
 
-1. Go to **Audiences > Contacts**
-2. Select your contact collection
-3. Click the **Actions menu** (three dots)
-4. Select **Push to Google Ads**
-5. Choose your Google Ads account
-6. Name your audience
-7. Click **Create**
+Pushing is done from the **Collections** tab on the Contacts page.
 
-**What happens next:**
+1. Go to **Contacts** and stay on the **Collections** tab.
+2. Tick the checkbox next to the contact collection you want to push.
+3. Click the **kebab menu** (the three-dots `⋮` icon above the table).
+4. Choose **Push to Google Ads**.
+5. Select your Google Ads account, give the audience a name, and click **Create**.
+
+![Contacts Collections list, where you select a collection and use the three-dots menu to push to Google Ads](/img/screenshots/gcm-push-menu.png)
+*Select a contact collection on the Collections tab, then use the three-dots menu to push it to Google Ads.*
+
+**What happens after you push:**
 
 | Step | Timing | Status |
 |------|--------|--------|
 | Data preparation | Immediate | Processing |
-| Secure upload | Within 1 hour | Uploading |
-| Google matching | 24-48 hours | Matching |
+| Enrichment & upload | Within about an hour | Uploading |
+| Google matching | 24–48 hours | Matching |
 | Audience ready | After matching | Ready |
 
-## Understanding Match Rates
+The push dialog also shows an **enrichment step** and a summary of any records that were **skipped** (for example, contacts with no usable email), so you can see exactly what was uploaded.
 
-### Typical Match Rates by List Type
+![Customer Match sync status on the Contacts Collections page](/img/screenshots/gcm-status.png)
+*Track the Customer Match sync status from the Contacts Collections list.*
 
-| List Type | Expected Match Rate | Why |
-|-----------|-------------------|-----|
-| B2C with personal emails | 40-60% | Personal emails linked to Google accounts |
-| B2B with work emails | 20-40% | Work emails often not linked to Google |
-| Mixed list | 30-50% | Depends on email type ratio |
-| With phone numbers | +5-15% boost | Additional matching signal |
+## Understanding match rates
 
-### Why B2B Match Rates Are Lower
+### Typical match rates by list type
 
-Business email addresses (company@company.com) often aren't linked to personal Google accounts. This is normal for B2B audiences and doesn't mean your campaign won't be effective—you're still reaching the contacts who ARE matched.
+| List type | Expected match rate | Why |
+|-----------|---------------------|-----|
+| Personal emails | 40–60% | Personal emails are usually linked to Google accounts |
+| Work emails (B2B) | 20–40% | Work emails are often not linked to a personal Google account |
+| Mixed list | 30–50% | Depends on the ratio of email types |
+| With phone numbers | +5–15% boost | An additional matching signal |
 
-### Improving Your Match Rates
+### Why B2B match rates are lower
 
-| Strategy | Impact | How to Implement |
-|----------|--------|------------------|
-| Include personal emails | High | Add secondary email field to forms |
-| Add phone numbers | Medium-High | Collect phone in registration flows |
+Work email addresses (name@company.com) often aren't tied to a personal Google account. That's normal for B2B audiences—you're still reaching the contacts who *are* matched, so the campaign can still perform well.
+
+### Improving your match rates
+
+| Strategy | Impact | How to do it |
+|----------|--------|--------------|
+| Include personal emails | High | Add a secondary email field to forms |
+| Add phone numbers | Medium–High | Collect phone numbers at registration |
 | Keep emails current | Medium | Remove bounced addresses regularly |
-| Expand list size | Medium | Larger lists = more absolute matches |
-| Use multiple data points | Medium | Combine email + phone + name |
+| Grow the list | Medium | Bigger lists yield more absolute matches |
+| Combine data points | Medium | Use email + phone + name together |
 
-:::tip Focus on Quality Over Quantity
-A 30% match rate on 5,000 engaged contacts (1,500 matches) is often more valuable than a 50% match rate on 10,000 cold contacts. Focus on list quality first.
+:::tip Quality over quantity
+A 30% match on 5,000 engaged contacts (1,500 matches) is usually worth more than a 50% match on 10,000 cold contacts. Focus on list quality first.
 :::
 
-## Audience Sync Behavior
+## Sync behavior
 
-### Sync Schedule
+### Schedule
 
 | Event | Timing |
 |-------|--------|
-| Initial push | Within 1 hour |
-| Google processing | 24-48 hours |
-| Dynamic list updates | Daily |
-| Manual refresh | On-demand |
+| Initial push | Within about an hour |
+| Google processing | 24–48 hours |
+| Dynamic collection updates | Daily |
+| Manual refresh | On demand |
 
-### Sync Status Indicators
+### Sync status
 
-| Status | Meaning | Action Needed |
-|--------|---------|---------------|
-| Processing | Abmatic preparing data | Wait |
+| Status | Meaning | What to do |
+|--------|---------|------------|
+| Processing | Abmatic AI is preparing the data | Wait |
 | Uploading | Sending to Google | Wait |
-| Matching | Google processing | Wait 24-48 hours |
-| Ready | Available for campaigns | Use in Google Ads |
-| Too Small | Below 1,000 matches | Expand your list |
-| Error | Sync failed | Check error message |
+| Matching | Google is processing | Wait 24–48 hours |
+| Ready | Available for campaigns | Use it in Google Ads |
+| Too Small | The matched audience is below Google's minimum | Add contacts or improve match quality |
+| Error | The sync failed | Check the error message |
 
-### Dynamic vs. Static Lists
+### How different collection types stay current
 
-| List Type | Sync Behavior | Best For |
-|-----------|---------------|----------|
+| Collection type | Sync behavior | Best for |
+|-----------------|---------------|----------|
 | Dynamic (filter-based) | Auto-updates daily | Growing audiences |
 | Static | Manual refresh only | Fixed campaigns |
 | CSV import | Manual refresh only | One-time uploads |
 
-## Using Your Customer Match Audiences
+## Using your Customer Match audiences
 
-### In Google Ads Campaign Manager
+Once the audience is **Ready** (24–48 hours after the push):
 
-Once your audience is ready (24-48 hours after push):
+1. Open **Google Ads**.
+2. Go to **Tools > Audience Manager**.
+3. Find your Abmatic AI–synced audience.
+4. Apply it to your campaigns.
 
-1. Open **Google Ads**
-2. Go to **Tools & Settings > Audience Manager**
-3. Find your Abmatic-synced audience
-4. Click **Apply to campaigns**
+### Campaign types and best uses
 
-### Campaign Types & Best Uses
-
-| Campaign Type | Customer Match Use | Best Practice |
-|--------------|-------------------|---------------|
-| **Search** | Targeting or bid adjustments | +50-100% bid for known accounts |
-| **Display** | Primary targeting | Combine with contextual targeting |
-| **YouTube** | Video remarketing | Use for awareness campaigns |
+| Campaign type | Customer Match use | Tip |
+|---------------|--------------------|-----|
+| **Search** | Targeting or bid adjustments | Raise bids for known accounts |
+| **Display** | Primary targeting | Pair with contextual targeting |
+| **YouTube** | Video remarketing | Good for awareness |
 | **Gmail** | Inbox targeting | Personalized promotions |
-| **Discovery** | Cross-platform reach | Brand awareness |
+| **Demand Gen** | Cross-platform reach | Brand awareness across Google surfaces |
 
-### Targeting Strategies
+:::note
+Google retired **Discovery campaigns** and replaced them with **Demand Gen** campaigns. If you're following older guides, use Demand Gen for the equivalent cross-platform reach.
+:::
 
-**Option 1: Observation Mode (Recommended for Search)**
-- Add audience as "Observation"
-- Increase bids for matched users
-- Still reach other searchers
+### Targeting strategies
 
-**Option 2: Targeting Mode (Best for Display/YouTube)**
-- Add audience as "Targeting"
-- Only matched users see ads
-- Maximum precision
+**Observation mode (recommended for Search)**
 
-### Similar Audiences (Lookalikes)
+- Add the audience as "Observation."
+- Raise bids for matched users.
+- Still reach other searchers.
 
-Google can automatically create "Similar Audiences" based on your Customer Match list:
+**Targeting mode (best for Display and YouTube)**
 
-1. After your list is matched, Google analyzes user characteristics
-2. A "Similar to [Your List Name]" audience is created
-3. Use for prospecting campaigns to reach people like your customers
+- Add the audience as "Targeting."
+- Only matched users see the ads.
+- Maximum precision.
 
-| Similar Audience Use | Best Practice |
-|---------------------|---------------|
-| Top-of-funnel | Broad awareness campaigns |
-| Prospecting | New customer acquisition |
-| Expansion | Enter new markets |
+:::caution Similar Audiences are gone
+Google **sunset Similar Audiences (lookalikes)** and no longer creates them from Customer Match lists. For prospecting, use Google's optimized targeting and Demand Gen audience expansion instead.
+:::
 
-## Combining with ABM Campaigns
+## Coordinating with ABM campaigns
 
-### Multi-Touch Account Engagement
-
-Create a coordinated ABM program across channels:
+Use Customer Match as one channel in a coordinated, multi-touch program:
 
 ```
-Week 1: Website Personalization (Abmatic)
+Week 1: Website Personalization (Abmatic AI)
     ↓
 Week 2: LinkedIn Ads (Matched Audiences)
     ↓
 Week 3: Google Display (Customer Match)
     ↓
-Week 4: Google Search (Customer Match + Bid Boost)
+Week 4: Google Search (Customer Match + bid boost)
     ↓
-Week 5: YouTube (Customer Match Retargeting)
+Week 5: YouTube (Customer Match retargeting)
 ```
 
-### Coordinated Messaging
-
-| Channel | Message Type | Goal |
-|---------|-------------|------|
+| Channel | Message type | Goal |
+|---------|--------------|------|
 | Website | Personalized content | Engagement |
 | LinkedIn | Thought leadership | Awareness |
 | Google Display | Brand reinforcement | Recognition |
 | Google Search | Solution-focused | Intent capture |
-| YouTube | Customer stories | Trust building |
+| YouTube | Customer stories | Trust |
 
-## Privacy & Compliance
+## Privacy and compliance
 
-### Data Security
+### Data security
 
 | Protection | Description |
 |------------|-------------|
 | Hashing | Emails are SHA-256 hashed before upload |
 | No plaintext | Google never receives raw email addresses |
-| Secure transmission | Encrypted data transfer |
-| Auto-deletion | Google deletes unmatched records |
+| Secure transmission | Data is sent encrypted |
+| Auto-deletion | Google deletes records it can't match |
 
-### GDPR & Privacy Requirements
+### Consent and privacy
 
-| Requirement | Your Responsibility |
+| Requirement | Your responsibility |
 |-------------|---------------------|
 | Consent | Only sync contacts with marketing opt-in |
-| Privacy policy | Disclose Customer Match usage |
+| Privacy policy | Disclose your use of Customer Match |
 | Opt-out | Honor unsubscribe requests promptly |
-| Data minimization | Only sync necessary data |
+| Data minimization | Only sync the data you need |
 
-:::warning Stay Compliant
-Only push contacts who have explicitly opted in to marketing communications. Remove opted-out contacts from your lists before syncing.
+:::warning Stay compliant
+Only push contacts who have explicitly opted in to marketing communications. Remove opted-out contacts before syncing.
 :::
 
-## Best Practices
+## Best practices
 
-### Do's
-
-| Practice | Why It Matters |
-|----------|----------------|
+| Do | Why it matters |
+|----|----------------|
 | Segment by intent | High-intent for Search, broad for Display |
 | Layer targeting | Combine Customer Match with demographics |
-| Create exclusion lists | Separate customers from prospects |
-| Test Similar Audiences | Good prospecting with minimal effort |
-| Monitor performance | Track by audience segment |
-
-### Don'ts
+| Create exclusion lists | Keep customers separate from prospects |
+| Monitor performance | Track results by audience segment |
+| Keep lists fresh | Remove bounced and opted-out contacts |
 
 | Avoid | Why |
 |-------|-----|
-| Syncing cold lists | Poor match rates, wasted spend |
-| Ignoring opt-outs | Legal and trust issues |
+| Syncing cold lists | Poor match rates and wasted spend |
+| Ignoring opt-outs | Legal and trust problems |
 | Over-frequent ads | Audience fatigue |
-| Broad messaging | Loses personalization advantage |
-| Skipping exclusions | Wastes budget on wrong audiences |
-
-### Campaign Optimization Tips
-
-| Metric | Target | Action if Below |
-|--------|--------|-----------------|
-| Match rate | >25% for B2B | Improve data quality |
-| CTR | >2x account average | Refine messaging |
-| Conversion rate | >1.5x average | Check landing pages |
-| Cost per acquisition | <account average | Tighten targeting |
+| Broad messaging | You lose the personalization advantage |
+| Skipping exclusions | Budget wasted on the wrong audiences |
 
 ## Troubleshooting
 
-### "Not Eligible" Error
+### "Not eligible" message
 
 | Cause | Solution |
 |-------|----------|
-| Account too new | Wait until 90+ days |
-| Spend threshold not met | Increase ad spend or contact Google |
-| Policy violations | Resolve policy issues |
-| Payment issues | Update payment method |
+| Account too new | Let the account mature |
+| Policy violations | Resolve outstanding policy issues |
+| Payment issues | Update your payment method |
 
-**Action:** Contact Google Ads support or your Google representative for eligibility review.
+**Action:** Contact Google Ads support or your Google representative for an eligibility review.
 
-### Low Match Rates
+### Low match rates
 
-| Issue | Possible Cause | Solution |
-|-------|---------------|----------|
-| <10% match rate | All work emails | Add personal emails where available |
-| Declining matches | Stale data | Clean bounced emails |
-| Inconsistent results | Data format issues | Standardize email formatting |
+| Issue | Likely cause | Solution |
+|-------|--------------|----------|
+| Very low match rate | All work emails | Add personal emails where you have them |
+| Declining matches | Stale data | Remove bounced emails |
+| Inconsistent results | Formatting issues | Standardize email formatting |
 
-### Audience Size Too Small
+### Audience too small ("Too Small" status)
 
 | Cause | Solution |
 |-------|----------|
-| Under 1,000 emails | Expand your contact list |
+| Matched audience below Google's minimum | Add more contacts to the collection |
 | Low match rate | Improve data quality |
-| Many duplicates | Dedupe before upload |
+| Many duplicates | Deduplicate before pushing |
 
-**Quick fix:** Combine multiple related lists to meet the minimum threshold.
+**Quick fix:** Combine related collections to clear Google's minimum.
 
-### Sync Failures
+### Sync failures
 
 | Error | Cause | Solution |
 |-------|-------|----------|
@@ -346,23 +332,23 @@ Only push contacts who have explicitly opted in to marketing communications. Rem
 | Upload error | Data format issue | Check email formatting |
 | Timeout | Large list | Wait and retry |
 
-## Comparing Audience Options
+## Comparing your audience options
 
 | Feature | Customer Match | LinkedIn DMP | Retargeting |
-|---------|---------------|--------------|-------------|
+|---------|----------------|--------------|-------------|
 | Data source | Your contact list | Your account list | Website visitors |
-| Match type | Email/phone | Company match | Cookie-based |
-| B2B match rate | 20-40% | 60-80% | N/A |
+| Match type | Email / phone | Company match | Cookie-based |
+| B2B match rate | 20–40% | 60–80% | N/A |
 | Best for | Known contacts | Known accounts | Anonymous visitors |
-| Setup complexity | Medium | Medium | Low |
+| Setup effort | Medium | Medium | Low |
 
-:::tip Use Both for Maximum Coverage
-Customer Match and LinkedIn DMP serve different purposes. Use Customer Match for contact-level targeting and LinkedIn DMP for account-level targeting.
+:::tip Use both for full coverage
+Customer Match and LinkedIn DMP do different jobs. Use Customer Match for contact-level targeting and LinkedIn DMP for account-level targeting.
 :::
 
-## Related Documentation
+## Related documentation
 
-- [Google Ads Campaigns](/campaigns/google-ads) - Creating Google Ads campaigns in Abmatic
-- [Contact Lists](/audiences/contacts) - Building contact collections
-- [LinkedIn DMP](/audiences/linkedin-dmp) - Account-based LinkedIn targeting
-- [Integrations Overview](/integrations/overview) - All available integrations
+- [Google Ads Campaigns](/campaigns/google-ads) — Creating Google Ads campaigns in Abmatic AI
+- [Contact Lists](/audiences/contacts) — Building contact collections
+- [LinkedIn DMP](/audiences/linkedin-dmp) — Account-based LinkedIn targeting
+- [Integrations Overview](/integrations/overview) — All available integrations

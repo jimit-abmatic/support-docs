@@ -9,7 +9,7 @@ sidebar_position: 2
 
 Your Home page is the first thing you see when you log in to Abmatic AI. It gives you an at-a-glance view of your entire ABM operation -- accounts, contacts, campaigns, reports, and collections -- so you can orient yourself and jump straight into the work that matters most.
 
-![Home Overview tab showing summary cards and recently viewed items](/img/screenshots/home-overview-tab.png)
+![Home Overview tab showing five summary cards and recently viewed panels](/img/screenshots/home-overview.png)
 
 ## Two Tabs, Two Perspectives
 
@@ -50,9 +50,13 @@ Below the summary cards, five panels show items you recently interacted with:
 | **Recently Viewed Contacts** | Last 3 contacts you viewed | Name, email, job title, LinkedIn link |
 | **Recently Viewed Reports** | Last 3 reports you checked | Report name, report type |
 | **Recently Viewed Campaigns** | Last 3 campaigns you opened | Campaign name, type, Active/Inactive status |
-| **Recently Viewed Target Groups** | Last 3 collections you visited | Collection name, record count, source type, status |
+| **Recently Viewed Collections** | Last 3 collections you visited | Collection name, record count, source type, status |
 
 Each item is clickable -- click any account, contact, report, campaign, or collection name to jump directly to its detail page.
+
+:::note Collections and Target Groups
+The summary card and most panels use the term **Collections**. You may notice the last panel heading still reads **"Recently Viewed Target Groups"** in the app — these refer to the same thing (a saved list of accounts or contacts). We use **Collections** throughout this documentation.
+:::
 
 :::tip Use Overview as Your Daily Starting Point
 Open Abmatic AI, glance at your summary cards to spot any major changes, then click into whichever recently viewed item needs your attention. No need to navigate through menus for the things you work on most.
@@ -64,12 +68,12 @@ Open Abmatic AI, glance at your summary cards to spot any major changes, then cl
 
 The Dashboard tab turns your Home page into a customizable analytics hub. Pin your most important reports here as charts or tables so you can monitor performance without leaving the Home page.
 
-![Home Dashboard tab with analytics charts and reports](/img/screenshots/home-dashboard-alt.png)
+![Home Dashboard tab with a grid of analytics report widgets](/img/screenshots/home-dashboard-tab.png)
 
 ### What the Dashboard Includes
 
 - **Report widgets** displayed as charts or tables, arranged in a drag-and-drop grid
-- **Date range selector** to control the time period across all widgets at once (Last 7 Days, Last 30 Days, Last 60 Days, Custom Range)
+- **Date range selector** to control the time period across all widgets at once (Last 7 Days, Last 30 Days, Last 60 Days, Last 90 Days, or a Custom range)
 - **Edit Dashboard** button to add, remove, or rearrange widgets
 - **Refresh** button to pull the latest data into all widgets
 - **Last updated** timestamp so you know how fresh the data is
@@ -126,7 +130,7 @@ The Home page connects you to every major area of Abmatic. Here are the fastest 
 |---------------------|----------------|
 | Check a specific account | Click it in **Recently Viewed Accounts** |
 | Review campaign performance | Click a campaign in **Recently Viewed Campaigns**, or switch to **Dashboard** tab |
-| Build a new account list | Click the **Accounts** summary card, then **+ Account List** |
+| Build a new account collection | Click the **Accounts** summary card, then create a new collection |
 | View a report | Click it in **Recently Viewed Reports**, or add it to your **Dashboard** |
 | Check your collections | Click the **Collections** summary card |
 | See contact details | Click a contact in **Recently Viewed Contacts** |
@@ -151,7 +155,11 @@ Once you have campaigns running and reports created:
 2. **Add 3-5 key reports** that matter most to your team (e.g., Campaign Performance, Opportunities by Stage, Conversion by Campaign Type)
 3. **Arrange them by priority** -- put the most critical metrics in the top-left where your eyes go first
 4. **Set the date range** to match your reporting cadence (weekly, monthly, or quarterly)
-5. **Save and share** -- your dashboard is personal to your account, so customize it for your workflow
+5. **Save** -- your Home dashboard is personal to your account, so customize it freely for your own workflow
+
+:::note Your dashboard is personal
+Your Home dashboard configuration is private to your account. For shared, team-wide analytics, use the full dashboards area under **Analytics**.
+:::
 
 :::tip Dashboard Ideas for Marketers
 - **Pipeline dashboard**: Opportunities by Stage + Opportunities by Close Quarter + Campaign Performance
@@ -166,5 +174,5 @@ Once you have campaigns running and reports created:
 - [Quick Start](/getting-started/quick-start) -- Initial setup guide
 - [Analytics Dashboards](/analytics/dashboards) -- Full dashboard documentation
 - [Reports](/analytics/reports) -- Create custom reports to add to your dashboard
-- [Account Lists](/audiences/accounts) -- Build and manage your target accounts
+- [Account Collections](/audiences/accounts) -- Build and manage your target accounts
 - [Campaigns](/campaigns/overview) -- Create and manage your campaigns

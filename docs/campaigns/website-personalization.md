@@ -7,19 +7,19 @@ sidebar_position: 2
 
 # Website Personalization Campaigns
 
-Stop showing the same generic website to every visitor. With website personalization campaigns, you can deliver tailored experiences that speak directly to each account's industry, company size, and buying stage—turning your website into your highest-converting sales asset.
+Stop showing the same generic website to every visitor. Website personalization campaigns let you deliver tailored experiences that speak to each account's industry, company size, and buying stage—turning your website into a stronger conversion asset.
 
-## Why Website Personalization Drives Results
+## Why Website Personalization Helps
 
 | Generic Website | Personalized Website |
 |----------------|----------------------|
 | Same message for everyone | Industry-specific messaging |
 | Generic CTAs ("Get Started") | Relevant CTAs ("See Enterprise Demo") |
 | Static case studies | Case studies from their industry |
-| Average 2% conversion | **3-5x higher conversion rates** |
+| One experience, no measurement | A built-in control group that proves what works |
 
-:::tip Real Results
-Companies using Abmatic AI personalization see an average **2.3x increase** in demo requests from target accounts.
+:::tip Every campaign measures itself
+Each personalization campaign automatically holds back a control group, so you can see the lift personalization adds rather than guessing. See [A/B Testing](/campaigns/ab-testing) for how the split works.
 :::
 
 ---
@@ -28,43 +28,44 @@ Companies using Abmatic AI personalization see an average **2.3x increase** in d
 
 ### Step 1: Navigate to Campaigns
 
-Log into [app.abmatic.ai](https://app.abmatic.ai) and click **Campaigns** in the left sidebar.
+Log into [app.abmatic.ai](https://app.abmatic.ai) and click **Campaigns** in the left icon sidebar.
 
 ![Campaigns List](/img/screenshots/campaigns-list.png)
 
-You'll see your campaign dashboard with:
-- **+ CAMPAIGN** button to create new campaigns
-- Campaign type cards showing counts by category
-- Campaign table with status, visitors, and performance data
+The Campaigns list shows:
+
+- A **+ Campaign** button (top right) to create a new campaign
+- Summary cards with campaign counts by type
+- A table with each campaign's status, unique visitors, and performance
 
 ---
 
 ### Step 2: Create Your Campaign
 
-Click the **+ CAMPAIGN** button to open the campaign type selector.
+Click **+ Campaign** to open the full-screen **Create Campaign** dialog. Campaign types are organized into three columns: **Personalization**, **Advertising**, and **Agentic**.
 
-![Campaign Create Modal](/img/screenshots/wp-create-modal.png)
+![Create Campaign dialog with Personalization, Advertising, and Agentic columns](/img/screenshots/wp-create.png)
 
-**For website personalization, choose:**
+For website personalization, choose one of the **Personalization** types:
 
 | Campaign Type | Best For | Example |
 |--------------|----------|---------|
 | **Inbound** | Personalizing pages visitors already land on | Homepage, pricing, product pages |
-| **Outbound** | Creating personalized landing pages for campaigns | Sales outreach, ABM campaigns |
-| **A/B Testing** | Testing headline and CTA variations | Optimizing conversion rates |
-| **Banner & Popup** | Urgency messages and special offers | Limited-time promotions |
+| **Outbound** | Building personalized landing pages for outreach | Sales and ABM campaigns |
+| **A/B Testing** | Comparing two different page designs | Optimizing conversion rates |
+| **Widget** | Banners, popups, and other nudges layered on a page | Limited-time offers, exit-intent messages |
 
-Select **Inbound** for most website personalization use cases.
+Select **Inbound** for most website personalization use cases. The **Widget** type was previously called "Banner & Popup"; it covers banners, popups, exit-intent modals, and sidebar widgets layered on a page.
 
 ---
 
 ### Step 3: Define Your Audience
 
-After creating your campaign, the **AUDIENCE** tab is where you specify who sees your personalized content.
+After the campaign is created, open the **Audience** tab to choose who sees your personalized content.
 
-![Campaign Audience Tab](/img/screenshots/wp-audience-tab.png)
+![Campaign Audience tab](/img/screenshots/wp-audience-tab.png)
 
-**Build targeting rules to reach the right accounts:**
+Build targeting rules to reach the right accounts:
 
 | Filter Type | Use Case | Example |
 |-------------|----------|---------|
@@ -76,140 +77,153 @@ After creating your campaign, the **AUDIENCE** tab is where you specify who sees
 
 :::tip Targeting Strategy
 Start with your highest-value segments:
-- **Enterprise accounts** → Emphasize security, scale, support
-- **Mid-market** → Focus on ease-of-use, time-to-value
-- **Industry verticals** → Use relevant case studies and terminology
+- **Enterprise accounts** → emphasize security, scale, and support
+- **Mid-market** → focus on ease-of-use and time-to-value
+- **Industry verticals** → use relevant case studies and terminology
 :::
 
-**How to add rules:**
-1. Click **+ RULE**
-2. Select your filter type
-3. Set the condition (Is, Is Not, Contains)
-4. Choose values
-5. Click **SAVE**
+**To add a rule:**
 
-Multiple rules use AND logic—visitors must match all rules to see the campaign.
+1. Click **+ Rule**.
+2. Select the filter type.
+3. Set the condition (**Is**, **Is Not**, **Contains**).
+4. Choose the values.
+5. Click **Save**.
+
+Multiple rules use AND logic—visitors must match every rule to see the campaign.
 
 ---
 
 ### Step 4: Add Pages to Personalize
 
-Click the **PAGES** tab to specify which pages get personalized for this audience.
+Open the **Pages** tab to choose which pages get personalized for this audience.
 
-![Campaign Pages Tab](/img/screenshots/wp-pages-tab.png)
+![Campaign Pages tab](/img/screenshots/wp-pages-tab.png)
 
-**The pages table shows:**
+The pages table shows:
+
 - Page URLs with active/inactive status
 - Visitor counts (personalized vs. control)
-- CTA click data by variation
+- CTA click data by version
 - Last updated timestamps
 
 **To add a page:**
-1. Click **+ PAGE**
-2. Enter the full URL (e.g., `https://yoursite.com/pricing`)
-3. Click Add
-4. Click the page URL to open the **Visual Page Editor**
 
-**What to personalize:**
+1. Click **+ Page**.
+2. Enter the full URL (for example, `https://yoursite.com/pricing`).
+3. Click **Add**.
+4. Click the page URL to open the **Visual Page Editor**.
+
+**Ideas for what to personalize:**
+
 | Element | Personalization Ideas |
 |---------|----------------------|
-| **Headlines** | "Built for Enterprise" vs "Built for Growing Teams" |
-| **CTAs** | "Get Enterprise Demo" vs "Start Free Trial" |
+| **Headlines** | "Built for Enterprise" vs. "Built for Growing Teams" |
+| **CTAs** | "Get Enterprise Demo" vs. "Start Free Trial" |
 | **Images** | Industry-relevant hero images |
-| **Social Proof** | Case studies from their vertical |
-| **Pricing** | Enterprise vs self-serve messaging |
+| **Social Proof** | Case studies from the visitor's vertical |
+| **Pricing** | Enterprise vs. self-serve messaging |
+
+See the [Page Editor](/campaigns/page-editor) guide for the full editing workflow.
 
 ---
 
 ### Step 5: Monitor Performance
 
-The **INSIGHTS** tab shows how your campaign is performing.
+The **Insights** tab shows how the campaign is performing.
 
-![Campaign Insights](/img/screenshots/wp-insights-tab.png)
+![Campaign Insights showing CTA Clicks, Conversions, CVRL, CTRL, and a Total / Personalized / Control trend chart](/img/screenshots/wp-insights.png)
 
-**Key metrics at a glance:**
+The stat cards at the top show:
+
 | Metric | What It Measures |
 |--------|------------------|
 | **CTA Clicks** | Engagement with personalized CTAs |
 | **Conversions** | Goal completions (demos, signups, etc.) |
-| **CVRL** | Conversion rate - personalized group |
-| **CTRL** | Conversion rate - control group |
-| **Total Visitors** | Campaign reach |
+| **CVRL** | Conversion rate of the **personalized** group |
+| **CTRL** | Conversion rate of the **control** group |
+| **Total Visitors** | Combined reach across both groups |
 
-**The chart compares:**
-- **Personalized** (green) vs **Control** (red) performance over time
-- **Lift** = How much better personalized performs
+The chart plots three lines over your selected date range—**Total** (blue), **Personalized** (green), and **Control** (red). Use the sub-tabs (**Visitors**, **CTA**, **CTR**, **Conversion**, **CVR**) to switch which metric the chart displays. When **CVRL** is higher than **CTRL**, personalization is winning.
+
+:::note Compare date ranges
+The date picker in the top right supports comparing two date ranges, so you can see whether performance is improving over time.
+:::
 
 ---
 
 ### Step 6: Analyze Engagement
 
-The **ENGAGEMENT** tab reveals how visitors interact with your personalized content.
+The **Engagement** tab shows how visitors interact with your personalized content.
 
-![Campaign Engagement](/img/screenshots/wp-engagement-tab.png)
+![Campaign Engagement tab](/img/screenshots/wp-engagement-tab.png)
 
-**Each visit shows:**
+Each visit shows:
+
 | Data Point | Why It Matters |
 |------------|----------------|
-| **Time on Page** | Longer = more engaged |
-| **Page Views** | Multiple pages = serious interest |
+| **Time on Page** | Longer means more engaged |
+| **Page Views** | Multiple pages means serious interest |
 | **Scroll Depth** | How far they read |
-| **Engagement Score** | 0-100 composite score |
+| **Engagement Score** | A 0–100 composite score |
 
-High engagement scores (70+) indicate visitors finding value in your personalized content.
+High engagement scores (70+) usually mean visitors are finding value in the personalized content.
 
 ---
 
 ### Step 7: Review Performance Details
 
-The **PERFORMANCE** tab provides visitor-level analytics.
+The **Performance** tab provides visitor-level analytics.
 
-![Campaign Performance](/img/screenshots/wp-performance-tab.png)
+![Campaign Performance tab](/img/screenshots/wp-performance-tab.png)
 
-**Sub-tabs available:**
-- **VISITORS** - Individual visitor data with company domain
-- **CTA CLICKS** - Which CTAs are getting clicks
-- **ACCOUNTS** - Company-level aggregated data
-- **CONVERSIONS** - Conversion event details
+Sub-tabs available:
 
-Use this data to:
-- Identify which accounts are engaging most
-- See exactly what pages visitors viewed
-- Track individual prospect journeys
+- **Visitors** – individual visitor data with company domain
+- **CTA Clicks** – which CTAs are getting clicks
+- **Accounts** – company-level aggregated data
+- **Conversions** – conversion event details
+
+Use this data to spot which accounts are engaging most, see exactly what pages visitors viewed, and track individual prospect journeys.
 
 ---
 
 ## Best Practices
 
-### Do This ✓
+### Do This
 
 | Practice | Why |
 |----------|-----|
-| Start with 1-2 high-traffic pages | Get data quickly, learn what works |
+| Start with 1–2 high-traffic pages | Get data quickly and learn what works |
 | Make meaningful changes | Headlines, CTAs, and images—not just colors |
-| Use a 50/50 control group initially | Prove lift with statistical significance |
+| Run an even split at first | Prove lift with a clean control comparison |
 | Run campaigns for 2+ weeks | Gather enough data for valid conclusions |
-| Track downstream metrics | Demo requests, pipeline, not just clicks |
+| Track downstream metrics | Demo requests and pipeline, not just clicks |
 
-### Avoid This ✗
+### Avoid This
 
 | Mistake | Problem |
 |---------|---------|
-| Personalizing everything at once | Can't tell what's working |
+| Personalizing everything at once | You can't tell what's working |
 | Tiny changes only | Won't move the needle |
-| Skipping the control group | Can't prove ROI |
-| Stopping too early | Results may not be statistically significant |
+| Skipping the control group | Can't prove the impact |
+| Stopping too early | Results may not be reliable yet |
 | Measuring only page views | Doesn't show business impact |
 
 ---
 
 ## Campaign Status Guide
 
+A campaign's status sets the share of matching visitors who see the personalized experience. Change it from the **Status** menu in the Campaigns list.
+
 | Status | Meaning |
 |--------|---------|
-| **100% Full personalization** | All matching visitors see personalized content |
-| **50% Experiment** | Half personalized, half control (A/B test mode) |
-| **0% Inactive** | Campaign is paused—no personalization |
+| **Full personalization** | 100% of matching visitors see personalized content (no live control comparison) |
+| **Ongoing** | 90% personalized, 10% held back as a control |
+| **Experiment** | 50/50 split—the cleanest A/B comparison |
+| **Inactive** | 0%—the campaign is paused and nobody sees personalization |
+
+You may also see **No Active Page** when a campaign has no active personalized page yet.
 
 ---
 
@@ -231,18 +245,18 @@ Use this data to:
 
 | Check | Solution |
 |-------|----------|
-| **AUDIENCE rules** | Does the visitor match ALL targeting rules? |
-| **Page status** | Is the page set to Active in PAGES tab? |
-| **Control group** | Visitor may be randomly in control group |
-| **Script installed** | Verify Abmatic script is on the page |
-| **Campaign status** | Is it 100% active or 0% inactive? |
+| **Audience rules** | Does the visitor match every targeting rule? |
+| **Page status** | Is the page set to Active in the Pages tab? |
+| **Control group** | The visitor may be in the control group |
+| **Script installed** | Verify the Abmatic AI script is on the page |
+| **Campaign status** | Is it active (Full personalization / Ongoing / Experiment) rather than Inactive? |
 
 ### No Data Appearing?
 
-- Data refreshes every few minutes—give it time
-- Verify the date range includes recent activity
-- Check that pages are both Active and Published
-- Ensure you have traffic from the target audience
+- Data refreshes every few minutes—give it time.
+- Verify the date range includes recent activity.
+- Check that pages are both Active and Published.
+- Make sure you have traffic from the target audience.
 
 ---
 

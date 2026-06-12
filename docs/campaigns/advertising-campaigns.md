@@ -7,27 +7,34 @@ sidebar_position: 7
 
 # Advertising Campaigns
 
-Reach your target accounts and contacts across the web, social feeds, and beyond. Abmatic AI advertising campaigns let you serve programmatic display ads, run Facebook and Instagram campaigns via Meta, and retarget visitors who have already engaged with your website -- all from a single platform with unified audience management, creative tools, and AI-powered bidding.
+Reach your target accounts and contacts across the web. Abmatic AI advertising campaigns let you serve programmatic display ads and retarget visitors who have already engaged with your website -- all from a single platform with unified audience management, creative tools, and AI-powered bidding.
+
+:::info Looking for OpenAI Ads or LinkedIn?
+This page covers **Display Advertising** and **Retargeting**, which share the same workflow. Two other advertising types have their own guides: **[OpenAI Ads](/campaigns/openai-ads)** (run ads inside ChatGPT) and **[LinkedIn](/campaigns/linkedin-ads)**.
+:::
+
+:::caution Meta is no longer selectable
+**Meta (Facebook/Instagram)** is shown as **"Coming Soon"** in the Create Campaign dialog and cannot be created. OpenAI Ads now occupies that slot. The sections below cover the live advertising types only.
+:::
 
 ## Campaign Types at a Glance
 
-| | Display Advertising | Meta (Facebook / Instagram) | Retargeting |
-|---|---|---|---|
-| **Best for** | Brand awareness and top-of-funnel reach | High match-rate social campaigns | Re-engaging warm website visitors |
-| **Channels** | Programmatic display network | Facebook & Instagram | Programmatic display network |
-| **Targeting** | Account or Contact collections | Account or Contact collections | Account or Contact collections |
-| **Key strength** | Broad reach across thousands of publisher sites | Best audience match rates via Meta's identity graph | Laser-focused on visitors who already showed intent |
-| **Typical use case** | Warm up target accounts before outreach | Surround decision-makers on social | Bring back pricing-page visitors who did not convert |
+| | Display Advertising | Retargeting |
+|---|---|---|
+| **Best for** | Brand awareness and top-of-funnel reach | Re-engaging warm website visitors |
+| **Channels** | Programmatic display network | Programmatic display network |
+| **Targeting** | Account or Contact collections | Account or Contact collections |
+| **Key strength** | Broad reach across thousands of publisher sites | Laser-focused on visitors who already showed intent |
+| **Typical use case** | Warm up target accounts before outreach | Bring back pricing-page visitors who did not convert |
 
 :::tip When to use which type
 - **Display Advertising** -- You want broad programmatic reach to build awareness with a defined account list.
-- **Meta** -- You want to reach contacts on Facebook and Instagram with the highest possible match rate.
 - **Retargeting** -- You want to re-engage visitors who have already interacted with your website but have not converted.
 :::
 
 ## How Advertising Campaigns Work
 
-All three advertising campaign types share the same workflow and UI. You define your audience, configure budget and bidding, design creatives, and then monitor performance -- all within a consistent set of tabs.
+Display and Retargeting campaigns share the same workflow and UI. You define your audience, configure budget and bidding, design creatives, and then monitor performance -- all within a consistent set of tabs.
 
 ```
 Create Campaign  ->  Select Account or Contact  ->  Choose a Collection
@@ -46,12 +53,11 @@ Create Campaign  ->  Select Account or Contact  ->  Choose a Collection
 
 1. Navigate to **Campaigns**
 2. Click **+ Campaign**
-3. Under **Advertising**, select the campaign type you want:
+3. In the **Advertising** column, select the campaign type you want:
    - **Display Advertising** -- Drive awareness and engagement with ads
-   - **Meta** -- Get best match rate for your audience
-   - **Retargeting** -- Run campaigns against engaged audience
+   - **Retargeting** -- Run campaigns against an engaged audience
 
-![Create Campaign modal showing Advertising options](/img/screenshots/display-ads-type-select.png)
+![Create Campaign dialog showing the Advertising column with Display Advertising, LinkedIn, OpenAI Ads, and Retargeting (Meta is not selectable)](/img/screenshots/adv-create.png)
 
 ### Step 2: Choose Account or Contact Targeting
 
@@ -76,7 +82,9 @@ You will be taken to the campaign detail page where you can configure audience s
 
 ## Audience Configuration
 
-The **Audience** tab is the command center for targeting, budget, and bidding. It is organized into four numbered sections.
+The **Audience** tab is the command center for targeting, budget, and bidding. It is organized into four numbered sections, with a sidebar that estimates your reach and spend.
+
+![Advertising campaign Audience tab with Audience Selection, Budget, and Schedule sections, plus a sidebar showing Potential Audience, Estimated Daily Audience, Impressions, and Spend](/img/screenshots/adv-audience-tab.png)
 
 ### 1. Audience Selection
 
@@ -178,8 +186,12 @@ The **Insights** tab provides a visual overview of campaign performance over tim
 | **Impressions** | Total number of times your ads were shown |
 | **CTA Clicks** | Number of call-to-action clicks, with click-through rate (CTR) |
 | **Conversions** | Number of completed goals, with conversion rate (CVR) |
-| **CVRL** | Conversion rate lift -- measures the incremental impact of personalization |
-| **CTRL** | Click-through rate lift |
+| **CVRL** | Conversion rate for the **personalized** group |
+| **CTRL** | Conversion rate for the **control** group |
+
+:::note CVRL / CTRL
+**CVRL** is the conversion rate of the **personalized** group and **CTRL** is the conversion rate of the **control** group. Compare the two to see the lift personalization is driving.
+:::
 
 ### Chart Views
 
@@ -227,18 +239,7 @@ Display advertising campaigns deliver programmatic ads across a vast network of 
 - **Event promotion** -- Drive registrations from a specific account list
 - **Content syndication** -- Promote gated content to a defined audience
 
-**How it works:** Abmatic syncs your account or contact collection to programmatic ad exchanges. When a user matching your target audience visits a site in the ad network, your creative is served in real time.
-
-### Meta (Facebook / Instagram)
-
-Meta campaigns leverage Facebook and Instagram's massive user base and identity graph to deliver ads with the highest possible match rate. This is ideal for:
-
-- **Social selling support** -- Surround prospects with your message on platforms they use daily
-- **High match rates** -- Meta's identity graph matches your contact list at significantly higher rates than programmatic display
-- **Visual storytelling** -- Facebook and Instagram are optimized for rich visual content
-- **Retargeting on social** -- Re-engage website visitors when they browse social media
-
-**How it works:** Abmatic syncs your account or contact collection to Meta's Custom Audiences. Your creatives are delivered across Facebook and Instagram placements, and performance data flows back into Abmatic for unified reporting.
+**How it works:** Abmatic AI syncs your account or contact collection to programmatic ad exchanges. When a user matching your target audience visits a site in the ad network, your creative is served in real time.
 
 ### Retargeting
 
@@ -249,7 +250,7 @@ Retargeting campaigns focus on visitors who have already engaged with your websi
 - **Demo request abandonment** -- Nudge visitors who started but did not complete a demo request
 - **Cross-sell / upsell** -- Show relevant ads to existing customers visiting specific product pages
 
-**How it works:** Abmatic's tracking script identifies visitors and adds them to your retargeting audience. When those visitors browse other sites in the ad network, your creatives are displayed to bring them back.
+**How it works:** Abmatic AI's tracking script identifies visitors and adds them to your retargeting audience. When those visitors browse other sites in the ad network, your creatives are displayed to bring them back.
 
 ## Use Cases
 
@@ -260,13 +261,6 @@ Retargeting campaigns focus on visitors who have already engaged with your websi
 3. Run awareness ads for 2-3 weeks before your sales team begins outreach
 4. When reps reach out, prospects already recognize your brand
 
-### Surround Decision-Makers on Social
-
-1. Create a **Contact** collection of key decision-makers
-2. Launch a **Meta** campaign targeting that collection
-3. Serve thought-leadership content ads on Facebook and Instagram
-4. Combine with LinkedIn and email sequences for full multi-channel coverage
-
 ### Retarget Pricing Page Visitors
 
 1. Create a dynamic collection that captures visitors to your pricing page
@@ -276,12 +270,13 @@ Retargeting campaigns focus on visitors who have already engaged with your websi
 
 ### Multi-Channel ABM Blitz
 
-Combine all three campaign types for maximum impact:
+Combine advertising types for maximum impact:
 
 1. **Display Advertising** -- Build awareness across the web (weeks 1-2)
-2. **Meta** -- Reinforce messaging on social media (weeks 2-4)
-3. **Retargeting** -- Capture and convert engaged visitors (ongoing)
-4. Pair with [AI Sequences](/campaigns/email-campaigns) for personalized email outreach
+2. **[LinkedIn](/campaigns/linkedin-ads)** -- Reinforce messaging on social (weeks 2-4)
+3. **[OpenAI Ads](/campaigns/openai-ads)** -- Reach buyers researching you inside ChatGPT
+4. **Retargeting** -- Capture and convert engaged visitors (ongoing)
+5. Pair with [AI Sequences](/campaigns/email-campaigns) for personalized email outreach
 
 ## Best Practices
 
@@ -332,7 +327,7 @@ Combine all three campaign types for maximum impact:
 |---|---|
 | Landing page mismatch | Ensure ad creative aligns with landing page content |
 | No conversion goals set | Configure goals in **Conversions** before launching |
-| Audience not ready to convert | Use Display/Meta for awareness first, then Retargeting for conversion |
+| Audience not ready to convert | Use Display for awareness first, then Retargeting for conversion |
 | Bidding strategy not aligned | Switch to Conversions optimization goal |
 
 ### Budget Not Spending
@@ -348,6 +343,7 @@ Combine all three campaign types for maximum impact:
 
 - [Website Personalization](/campaigns/website-personalization) -- Personalize the site experience for ad-driven visitors
 - [LinkedIn Ads](/campaigns/linkedin-ads) -- Advertise on LinkedIn
+- [OpenAI Ads](/campaigns/openai-ads) -- Run ads inside ChatGPT conversations
 - [AI Sequences](/campaigns/email-campaigns) -- Multi-channel outreach campaigns
 - [Accounts](/audiences/accounts) -- Build target account lists
 - [Contacts](/audiences/contacts) -- Build target contact lists

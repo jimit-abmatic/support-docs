@@ -7,95 +7,100 @@ sidebar_position: 4
 
 # A/B Testing
 
-**Make data-driven decisions that boost conversions.** A/B testing removes the guesswork from website optimization by letting you compare different page variations and measure which performs better with real visitor behavior.
+A/B testing lets you compare different versions of a page and measure which one performs better with real visitor behavior—so you can make changes based on evidence instead of opinions.
 
 ## Why A/B Testing Matters
 
-| Without A/B Testing | With Abmatic A/B Testing |
+| Without A/B Testing | With Abmatic AI A/B Testing |
 |---------------------|--------------------------|
 | Guessing what works | Data-driven decisions |
 | Risk of hurting conversions | Safe, controlled experiments |
 | No way to prove ROI | Clear lift metrics and attribution |
 | Changes based on opinions | Evidence-based optimization |
 
-## How Abmatic A/B Testing Works
+## Two Ways to Test
 
-Abmatic offers two powerful testing approaches:
+Abmatic AI offers two testing approaches:
 
 | Type | Best For | How It Works |
 |------|----------|--------------|
-| **Built-in Control Groups** | Testing personalization effectiveness | Every campaign automatically tests against the original page |
-| **URL-based A/B Tests** | Testing entirely different page designs | Compare two different page URLs against each other |
+| **Built-in Control Groups** | Testing whether personalization helps | Every personalization campaign automatically holds back a control group and compares against it |
+| **URL-based A/B Tests** | Testing two entirely different page designs | Compare two distinct page URLs against each other |
 
 ## Built-in Control Groups
 
-Every website personalization campaign includes automatic A/B testing—no extra setup required.
+Every website personalization campaign (Inbound, Outbound, and Widget) includes automatic A/B testing—no extra setup required.
 
-![Campaign insights showing personalized vs control performance](/img/screenshots/ab-control-insights.png)
+When you run a personalization campaign, Abmatic AI automatically:
 
-### The Power of Automatic Testing
-
-When you create a personalization campaign, Abmatic automatically:
-
-1. **Splits traffic** between your personalized version and the original
+1. **Splits traffic** between the personalized version and the original page
 2. **Tracks performance** for both groups separately
-3. **Calculates lift** to show exactly how much personalization improves results
-4. **Ensures statistical validity** with consistent visitor assignment
+3. **Calculates lift** so you can see exactly how much personalization improves results
+4. **Keeps visitors consistent**—a returning visitor always stays in the same group
 
 ### Setting Your Control Group Size
 
-Configure the control group weight to balance testing rigor with personalization coverage:
+The split between personalized visitors and the control group is set by the campaign's **status**, which you change from the **Status** menu in the Campaigns list. Each status maps to the share of matching visitors who see the personalized experience—the rest go into the control group.
 
-| Control Weight | Use Case | Trade-off |
-|----------------|----------|-----------|
-| **10%** | Confident in personalization | Maximize personalized visitors while still measuring |
-| **20%** | Recommended default | Good balance of measurement and coverage |
-| **50%** | Pure testing mode | Equal split for unbiased comparison |
+![A/B test status options control how traffic is split between the personalized version and the control group](/img/screenshots/ab-status-dropdown.png)
 
-**To configure:**
-1. Go to **Campaigns** list
-2. Find your campaign and click the **Status** dropdown
-3. Select your desired personalization weight (100%, 90%, 50%, or 0%)
-4. Changes take effect immediately for new visitors
+| Status | Personalized share | Control group | When to use it |
+|--------|--------------------|---------------|----------------|
+| **Full personalization** | 100% | 0% | You're confident in the experience and want everyone to see it (no live comparison) |
+| **Ongoing** | 90% | 10% | Keep most visitors personalized while still measuring against a small holdout |
+| **Experiment** | 50% | 50% | An even split for the cleanest, fastest A/B comparison |
+| **Inactive** | 0% | 100% | The campaign is paused—nobody sees personalization |
 
-![Campaign status column showing different A/B test configurations](/img/screenshots/campaigns-list.png)
+**To change the split:**
+
+1. Go to the **Campaigns** list.
+2. Find your campaign and open the **Status** menu in its row.
+3. Choose **Full personalization**, **Ongoing**, **Experiment**, or **Inactive**.
+
+Changes take effect immediately for new visitors.
+
+![The Campaigns list, where each campaign's Status controls its personalization-vs-control split](/img/screenshots/campaigns-list.png)
+
+:::tip Pick Experiment to test, Full personalization to ship
+Run **Experiment** (50/50) while you're gathering data and proving lift. Once a campaign is clearly winning, move it to **Full personalization** so every matching visitor benefits.
+:::
 
 ### Consistent Visitor Experience
 
-Abmatic ensures each visitor has a consistent experience:
+Abmatic AI keeps each visitor's experience stable:
 
-- **Persistent assignment** - Returning visitors see the same version
-- **Cookie-based tracking** - Assignment survives browser sessions
-- **Deterministic randomization** - Fair, reproducible assignment
+- **Persistent assignment** – returning visitors see the same version
+- **Cookie-based tracking** – assignment survives across browser sessions
+- **Deterministic assignment** – fair, reproducible group selection
 
 ## URL-based A/B Testing
 
-Test completely different page designs by comparing two distinct URLs.
+Use a URL A/B test when you want to compare two completely different page designs that live at two different URLs.
 
 ### When to Use URL Tests
 
 | Scenario | Example |
 |----------|---------|
-| **Major redesigns** | New pricing page vs current pricing page |
-| **Different approaches** | Long-form landing page vs short-form |
+| **Major redesigns** | New pricing page vs. current pricing page |
+| **Different approaches** | Long-form landing page vs. short-form |
 | **Template testing** | Different page layouts or structures |
-| **Pre-launch validation** | New page vs existing before full rollout |
+| **Pre-launch validation** | New page vs. existing before full rollout |
 
 ### Creating a URL A/B Test
 
-1. Navigate to **Campaigns** → **Create Campaign**
-2. Select **A/B Test** as the campaign type
+1. Go to **Campaigns** and click **+ Campaign**.
+2. In the **Personalization** column, choose **A/B Testing**.
 3. Configure your test pairs:
 
 | Field | Description | Example |
 |-------|-------------|---------|
 | **URL A (Control)** | Your current page | `https://yoursite.com/pricing` |
 | **URL B (Variant)** | The alternative to test | `https://yoursite.com/pricing-new` |
-| **Probability B** | Traffic percentage to variant | `50%` for even split |
+| **Probability B** | Share of traffic sent to the variant | `50` for an even split |
 
 ### Testing Multiple Page Pairs
 
-Run multiple tests in a single campaign:
+You can run several pairs inside a single campaign, each with its own analytics:
 
 ```
 Test 1: /pricing → /pricing-new (50% to variant)
@@ -103,56 +108,61 @@ Test 2: /features → /features-v2 (30% to variant)
 Test 3: /demo → /book-demo (50% to variant)
 ```
 
-Each pair operates independently with its own analytics.
+Each pair operates independently.
 
 ## Measuring Results
 
 ### Key Performance Metrics
 
-Both test types track comprehensive metrics:
+Both test types track the same core metrics:
 
 | Metric | What It Tells You |
 |--------|-------------------|
-| **Visitors** | Sample size per variation |
+| **Visitors** | Sample size for each group |
 | **CTA Clicks** | Engagement with calls-to-action |
-| **CTR (Click-Through Rate)** | Percentage who clicked CTAs |
+| **CTR** | Share of visitors who clicked a CTA |
 | **Conversions** | Goal completions |
-| **CVR (Conversion Rate)** | Percentage who converted |
-| **Lift** | Improvement vs control (your key success metric) |
+| **CVR** | Share of visitors who converted |
+| **Lift** | How much better (or worse) the personalized version did vs. control |
+
+### Reading the Insights Tab
+
+Open your campaign and go to the **Insights** tab to compare the personalized group against the control group side by side. The stat cards at the top show:
+
+- **CTA Clicks** and **Conversions** for the campaign
+- **CVRL** – the conversion rate for the **personalized** group
+- **CTRL** – the conversion rate for the **control** group
+- **Total Visitors** across both groups
+
+![A/B test Insights showing CTA Clicks, Conversions, CVRL (personalized group) and CTRL (control group), with a Total / Personalized / Control trend chart](/img/screenshots/ab-insights.png)
+
+The chart below the cards plots three lines over your selected date range—**Total** (blue), **Personalized** (green), and **Control** (red)—so you can watch the two groups diverge. Use the sub-tabs (**Visitors**, **CTA**, **CTR**, **Conversion**, **CVR**) to switch which metric the chart shows. The table at the bottom breaks the same numbers out by **Variation**, **Personalized**, **Control**, and **Total**.
+
+:::note Comparing CVRL and CTRL
+**CVRL** is the personalized group's conversion rate; **CTRL** is the control group's conversion rate. When CVRL is higher than CTRL, personalization is winning. In the example above, CTRL is higher than CVRL—a signal to revisit the content or keep gathering data before declaring a winner.
+:::
 
 ### Understanding Lift
 
-**Lift** shows how much better (or worse) your variant performs compared to control:
+**Lift** shows how much better (or worse) the personalized version performs compared to control:
 
 ```
-Lift = ((Variant Rate - Control Rate) / Control Rate) × 100
+Lift = ((Personalized Rate - Control Rate) / Control Rate) × 100
 ```
 
 | Lift Value | Meaning |
 |------------|---------|
-| **+25%** | Variant converts 25% better than control 🎉 |
-| **-10%** | Control wins by 10% (revert or iterate) |
-| **~0%** | No significant difference detected |
+| **+25%** | Personalized converts 25% better than control |
+| **-10%** | Control is winning by 10%—iterate or revert |
+| **~0%** | No meaningful difference detected |
 
-### Viewing Analytics
-
-Open your campaign and navigate to **Insights** to see side-by-side comparison:
-
-| Metric | Personalized | Control | Lift |
-|--------|--------------|---------|------|
-| Visitors | 847 | 212 | — |
-| CTA Clicks | 127 | 24 | — |
-| CTR | 15.0% | 11.3% | **+32.7%** |
-| Conversions | 42 | 8 | — |
-| CVR | 4.9% | 3.8% | **+31.2%** |
-
-## Achieving Statistical Significance
+## Reaching a Reliable Result
 
 ### Sample Size Guidelines
 
-For reliable results, gather enough data:
+Gather enough data before you trust a result. These are rules of thumb, not product limits:
 
-| Baseline Conversion Rate | Minimum Detectable Lift | Visitors Needed (per variant) |
+| Baseline Conversion Rate | Minimum Detectable Lift | Approx. Visitors Needed (per group) |
 |-------------------------|------------------------|-------------------------------|
 | 3% | 30% | ~1,200 |
 | 5% | 20% | ~1,500 |
@@ -162,172 +172,118 @@ For reliable results, gather enough data:
 
 | Guideline | Why It Matters |
 |-----------|----------------|
-| **Minimum 2 weeks** | Capture full visitor behavior patterns |
+| **Run at least 2 weeks** | Capture a full cycle of visitor behavior |
 | **Cover weekdays + weekends** | Account for weekly variation |
 | **Avoid holidays** | Atypical behavior skews results |
 | **Don't peek early** | Early results often reverse |
 
 ### When to Declare a Winner
 
-✅ **Call it when:**
-- Minimum sample size reached
-- At least 2 weeks of data collected
-- Results consistent across multiple days
-- Clear lift in your primary metric
+Call it when:
 
-❌ **Don't call it when:**
-- Sample size too small
-- Results fluctuating day-to-day
-- Less than 2 weeks of data
-- Lift is marginal (under 5%)
+- You've reached a reasonable sample size
+- You have at least two weeks of data
+- The result is consistent across multiple days
+- There's a clear lift in your primary metric
 
-## Best Practices for Effective Testing
+Hold off when the sample is small, results swing day to day, you have less than two weeks of data, or the lift is under about 5%.
+
+## Best Practices
 
 ### Start with a Hypothesis
 
-Document before you test:
+Write this down before you test:
 
-1. **What** you're changing (specific element)
-2. **Why** you expect improvement (the reasoning)
-3. **How much** lift you expect (sets success criteria)
-4. **Primary metric** for measuring success
+1. **What** you're changing (a specific element)
+2. **Why** you expect it to help (the reasoning)
+3. **How much** lift you expect (your success bar)
+4. **Which metric** you'll judge it by
 
-**Example hypothesis:**
-> "Changing the CTA from 'Learn More' to 'Start Free Trial' will increase demo requests by 20% because it clearly communicates the offer and creates urgency."
+**Example:**
+> "Changing the CTA from 'Learn More' to 'Start Free Trial' will increase demo requests because it states the offer clearly and adds urgency."
 
 ### Test High-Impact Elements
 
-Focus your tests where they matter most:
-
 | Element | Why It's High-Impact |
 |---------|---------------------|
-| **Headlines** | First thing visitors see, sets expectations |
-| **CTAs** | Direct driver of conversions |
-| **Hero images** | Creates emotional connection |
-| **Value propositions** | Communicates why to choose you |
-| **Social proof** | Builds trust and credibility |
+| **Headlines** | The first thing visitors read |
+| **CTAs** | The direct driver of conversions |
+| **Hero images** | Set the tone and create connection |
+| **Value propositions** | Explain why to choose you |
+| **Social proof** | Builds trust |
 
 ### Avoid Common Mistakes
 
-| Mistake | Problem | Solution |
-|---------|---------|----------|
-| Ending too early | Results may be noise | Wait for statistical significance |
-| Testing too many things | Can't attribute results | One change per test |
-| No hypothesis | Wastes time on random changes | Document expected outcome first |
-| Ignoring segments | Overall winner may lose in key segments | Analyze segment performance |
-| Changing mid-test | Invalidates collected data | Start fresh test instead |
+| Mistake | Problem | Fix |
+|---------|---------|-----|
+| Ending too early | Results may be noise | Wait for a reasonable sample |
+| Testing many things at once | Can't attribute the result | Change one thing per test |
+| No hypothesis | You learn nothing | Write the expected outcome first |
+| Ignoring segments | An overall winner can lose in a key segment | Check segment performance |
+| Changing mid-test | Invalidates your data | Start a fresh test instead |
 
 ## Segment Analysis
 
-### Discovering Hidden Insights
-
 Sometimes the overall winner isn't the winner for every segment:
 
-| Segment | Variant Performance |
-|---------|---------------------|
-| **Overall** | Variant wins (+15% CVR) |
-| **Enterprise** | Variant wins (+22% CVR) ✅ |
-| **SMB** | Control wins (+5% CVR) ⚠️ |
+| Segment | Result |
+|---------|---------|
+| **Overall** | Personalized wins (+15% CVR) |
+| **Enterprise** | Personalized wins (+22% CVR) |
+| **SMB** | Control wins (+5% CVR) |
 
-**Insight:** Create separate personalization campaigns for Enterprise and SMB.
+When that happens, the move is to create separate personalization campaigns—one tuned for Enterprise and one for SMB.
 
-### Analyzing by Segment
-
-1. Open campaign analytics
-2. Filter results by:
-   - Industry
-   - Company size
-   - Location
-   - Traffic source
+To analyze by segment, open the campaign's **Performance** tab and review the **Accounts** and **Visitors** sub-tabs to see how different companies and audiences responded.
 
 ## From Testing to Personalization
 
-### The Optimization Cycle
-
-A/B testing and personalization work together:
+A/B testing and personalization work as a loop:
 
 ```
-1. Run A/B Test → Find winning content
-2. Analyze Segments → Discover who it works best for
-3. Create Personalization → Target winners to right segments
-4. Continue Testing → Iterate on the personalized version
+1. Run a test → find the winning content
+2. Analyze segments → learn who it works best for
+3. Build personalization → target winners to the right segments
+4. Keep testing → iterate on the personalized version
 ```
 
-### Example Workflow
+**Example workflow:**
 
-1. **Test:** "ROI Calculator" vs "Free Demo" CTA
-2. **Result:** ROI Calculator wins overall (+18%)
-3. **Segment insight:** Enterprise loves it (+35%), SMB prefers Free Demo (+8%)
+1. **Test:** "ROI Calculator" CTA vs. "Free Demo" CTA
+2. **Result:** ROI Calculator wins overall
+3. **Segment insight:** Enterprise loves it; SMB prefers Free Demo
 4. **Action:** Personalize Enterprise → ROI Calculator, SMB → Free Demo
 5. **Next test:** Iterate on each segment's winning version
-
-## Example Tests That Drive Results
-
-### Homepage Hero Test
-
-| Version | Headline |
-|---------|----------|
-| **Control** | "Welcome to Acme - Business Solutions" |
-| **Variant** | "Grow Your Revenue 3x with Acme" |
-
-**Result:** Variant +28% CTR
-**Learning:** Benefit-focused messaging outperforms generic statements
-
-### CTA Button Test
-
-| Version | CTA Text | Color |
-|---------|----------|-------|
-| **Control** | "Learn More" | Blue |
-| **Variant** | "Start Free Trial" | Green |
-
-**Result:** Variant +45% conversions
-**Learning:** Action-oriented, specific CTAs drive more action
-
-### Pricing Page Test
-
-| Version | Approach |
-|---------|----------|
-| **Control** | Standard pricing table |
-| **Variant** | Pricing with ROI calculator |
-
-**Result:** Variant +18% demo requests
-**Learning:** Value communication tools increase conversion confidence
 
 ## Troubleshooting
 
 ### Inconclusive Results
 
-**If results are unclear after sufficient traffic:**
-
 | Cause | Solution |
 |-------|----------|
-| Difference too small to detect | Test more dramatic changes |
-| High variance in visitor behavior | Increase sample size |
-| Multiple confounding factors | Simplify the test |
+| Difference too small to detect | Test a more dramatic change |
+| High variance in visitor behavior | Gather more data |
+| Too many factors changing at once | Simplify the test |
 
-Consider it a "no significant difference" result—valuable learning that this change doesn't move the needle.
+A "no significant difference" outcome is still useful—it tells you that change doesn't move the needle.
 
 ### Control Unexpectedly Winning
 
-**If your variant loses:**
-
-1. Check for bugs or display issues in the variant
-2. Analyze by segment—variant might win for some audiences
-3. Review the hypothesis—was the reasoning sound?
-4. Document learnings for future tests
+1. Check the personalized version for bugs or display issues.
+2. Look at it by segment—it may still win for some audiences.
+3. Revisit the hypothesis.
+4. Document what you learned for next time.
 
 ### Traffic Split Not Working
 
-**If traffic distribution seems wrong:**
-
-1. Verify probability settings are correct
-2. Check for caching issues (CDN, browser)
-3. Ensure the test is set to Active
-4. Wait 24-48 hours for distribution to normalize
+1. Confirm the campaign status (Full personalization / Ongoing / Experiment) is set as you intended.
+2. Check for caching issues (CDN or browser).
+3. Make sure the campaign isn't **Inactive**.
+4. Give it 24–48 hours for the split to even out.
 
 ## Related Resources
 
-- [Website Personalization](/campaigns/website-personalization) - Apply winning content to segments
-- [Page Editor](/campaigns/page-editor) - Create variant content easily
-- [Analytics Overview](/analytics/overview) - Deep dive into performance data
-- [Conversions Setup](/conversions/overview) - Set up goal tracking
+- [Website Personalization](/campaigns/website-personalization) – Apply winning content to segments
+- [Page Editor](/campaigns/page-editor) – Build variant content
+- [Analytics Overview](/analytics/overview) – Deeper performance data
+- [Conversions Setup](/conversions/overview) – Set up goal tracking

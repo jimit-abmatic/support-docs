@@ -7,156 +7,83 @@ sidebar_position: 3
 
 # Alex - AI SDR Agent
 
-Meet Alex, your AI-powered Sales Development Representative that engages prospects with personalized outreach at scale. While your human SDRs focus on high-value conversations, Alex handles the repetitive work of prospecting, qualification, and follow-up—24/7.
+Alex is the AI SDR (Sales Development Representative) in Abmatic AI. Alex's job is to reach out to a prospect by **AI voice call** — a phone conversation that introduces your company, qualifies the prospect, and works toward booking a meeting. You give Alex a little context about who you're calling, and Alex places the call.
 
-## Why Teams Love Alex
+Alex is one of the two page-level AI agents in the platform. The other is **[Clara, the AI ABM agent](/ai-agents/abm-agent)**. You'll find both under the **AI Agent** item at the top of the left icon sidebar.
 
-| Benefit | Impact |
-|---------|--------|
-| **10x Outreach Capacity** | Engage hundreds of prospects simultaneously without adding headcount |
-| **Instant Response** | Contact hot leads within seconds, not hours |
-| **Consistent Quality** | Every prospect gets a personalized, on-brand experience |
-| **Always Learning** | Alex adapts based on what messages resonate with your audience |
-
-## What Alex Can Do
-
-Alex automates the most time-consuming parts of sales development:
-
-| Capability | What It Means for You |
-|------------|----------------------|
-| **Voice Calling** | Alex makes personalized calls to prospects, handling objections and booking meetings |
-| **Multi-Channel Outreach** | Reaches prospects via phone, email, and LinkedIn for maximum response rates |
-| **ICP Qualification** | Automatically scores and qualifies leads based on your criteria |
-| **Smart Prioritization** | Focuses on the hottest prospects based on engagement signals |
-| **Automated Follow-Up** | Never lets a lead go cold with consistent, timed follow-ups |
+:::note Voice-first
+Alex is built around the voice call. When you fill in the form below, Alex either calls the prospect directly (if you give a mobile number) or starts a test call inside the app (if you leave it blank). The LinkedIn URL and work email you provide are used to **personalize that call** — they help Alex tailor what it says, not to run a separate email or LinkedIn campaign.
+:::
 
 ## Getting Started with Alex
 
-### Step 1: Access Alex
+### Step 1: Open Alex
 
-1. Navigate to **AI Agents** in the left sidebar
-2. Select **Alex** (AI SDR)
+1. Click **AI Agent** at the top of the left icon sidebar.
+2. Go to the Alex page (the AI SDR). The header reads **"Speak to Alex - Your AI SDR."**
 
-![Alex AI SDR Agent main interface](/img/screenshots/alex-sdr-main.png)
+![Alex, the AI SDR agent, showing the prospect engagement form with Mobile Number, LinkedIn URL, and Work Email fields](/img/screenshots/alex-sdr.png)
 
-### Step 2: Engage a Prospect
+### Step 2: Enter the prospect's details
 
-Enter the prospect's information to initiate personalized outreach:
+Fill in the form on Alex's page:
 
-| Field | Purpose | Tip |
-|-------|---------|-----|
-| **Mobile Number** | Enables direct voice outreach | Use E.164 format (+1234567890) |
-| **LinkedIn URL** | Powers deep personalization | Alex researches their profile automatically |
-| **Work Email** | Enables email outreach | Validates automatically |
+| Field | Purpose | Notes |
+|-------|---------|-------|
+| **Mobile Number** | The number Alex will call | Use country-code format, e.g. `+14155550123`. Leave blank to run a test call in the app instead (see below). |
+| **LinkedIn URL** | Helps Alex personalize the call | Must start with `https://www.linkedin.com/...`. Optional. |
+| **Work Email** | Helps Alex personalize the call | Optional. |
 
-Click **Get in touch with Alex** to start the outreach.
+Below the fields you'll see a consent line:
 
-:::tip Test Alex First
-Leave the mobile number blank to experience Alex's conversation firsthand. The call happens in-app so you can hear exactly how Alex engages prospects and fine-tune the approach before going live.
+> *"By clicking 'Call Me,' you consent to receive automated responses and agree to our Terms of Service and Privacy Policy."*
+
+### Step 3: Start the call
+
+Click **Get in touch with Alex**.
+
+- **If you entered a mobile number:** Alex places an AI voice call to that number. The page confirms with *"Alex will be calling the prospect shortly."* Use **Go Back** to set up another call.
+- **If you left the mobile number blank:** a voice conversation opens **inside the app** so you can hear Alex yourself. This is the easiest way to test how Alex sounds and what it says before calling a real prospect.
+
+:::tip Test Alex before you call a prospect
+Leave **Mobile Number** empty and click **Get in touch with Alex**. The call runs in your browser using your microphone and speakers, so you can experience the conversation firsthand and decide whether the messaging is right.
 :::
 
-## How Voice Calling Works
+## What Alex does on the page
 
-Alex's voice calling is where the magic happens:
+The Alex page summarizes its focus as **Multichannel Outreach, ICP Qualification, and Dynamic Lead Prioritization**. In practice, what you trigger directly from this page today is the **AI voice call**:
 
-**When you provide a mobile number:**
-- Alex calls the prospect directly within minutes
-- The conversation is fully personalized based on LinkedIn and email data
-- Call recordings are logged for your review and training
+- **Personalized voice outreach** — Alex calls the prospect and has a real-time conversation.
+- **Context-aware** — when you supply a LinkedIn URL and work email, Alex uses them to make the call relevant to that person and company.
+- **In-app test calls** — try the experience yourself without dialing a real prospect.
 
-**When you don't provide a mobile number:**
-- The call happens in-app for you to experience
-- Perfect for testing and refining your messaging
-- Hear objection handling in action
+:::caution Get consent before calling
+Automated voice outreach is subject to the laws and regulations that apply to you (for example, calling and consent rules in your region). Make sure you have a lawful basis and any required consent before placing calls to prospects.
+:::
 
-## Configuring Alex for Your Business
+## Best Practices
 
-The more context you provide, the better Alex performs. Configure Alex in **Settings** > **AI Agents** > **Agentic Sequence** tab.
-
-### What to Include
-
-**Your Value Proposition:**
-```
-Value propositions:
-- We help B2B companies increase qualified pipeline by 40%
-- Average customer sees ROI within 60 days
-- Integrates with your existing CRM in minutes
-```
-
-**Communication Style:**
-```
-Tone: Professional but conversational. Avoid jargon.
-Keep responses concise and focused on business outcomes.
-```
-
-**Objection Handling:**
-```
-Objection handling:
-- "We don't have budget" → Focus on ROI and offer to share case studies
-- "We're using a competitor" → Ask about pain points, highlight differentiators
-- "Not the right time" → Offer to schedule a future conversation
-```
-
-**Qualification Criteria:**
-```
-ICP criteria:
-- Company size: 50-500 employees
-- Industry: B2B SaaS, Tech, Professional Services
-- Decision maker: VP Sales or above
-
-Disqualification signals:
-- Already a customer
-- Company too small (< 20 employees)
-- Non-target industry
-```
-
-Click **Save Context** to apply your configuration.
-
-## Best Practices for Maximum Results
-
-### Do's
-
-| Practice | Why It Works |
-|----------|-------------|
-| **Always include LinkedIn URL** | Enables Alex to personalize based on role, company, and recent activity |
-| **Provide work email** | Opens additional outreach channels |
-| **Set detailed context** | Generic messages get ignored; personalized ones get responses |
-| **Review call recordings** | Learn what resonates and refine Alex's approach |
-| **Start with warm leads** | Test with engaged prospects before scaling to cold outreach |
-
-### Don'ts
-
-| Avoid | Why |
-|-------|-----|
-| **Skipping context setup** | Without context, Alex can't differentiate your offering |
-| **Targeting unqualified prospects** | Focus Alex on leads that match your ICP |
-| **Ignoring compliance** | Ensure you have proper consent for outreach |
-
-## Measuring Alex's Impact
-
-Track Alex's performance in **Analytics** to see:
-
-| Metric | What It Shows |
-|--------|--------------|
-| **Outreach Volume** | Total prospects contacted |
-| **Response Rate** | Replies and callbacks received |
-| **Qualification Rate** | Leads that meet your ICP criteria |
-| **Meetings Booked** | Demos and calls scheduled |
-| **Pipeline Influenced** | Revenue opportunities created |
+| Practice | Why it helps |
+|----------|--------------|
+| **Test in-app first** | Hear exactly what Alex says before any real prospect does. |
+| **Add the LinkedIn URL** | Gives Alex the person's role and company so the call feels relevant. |
+| **Add the work email** | Adds another personalization signal for the call. |
+| **Use the correct number format** | Numbers must be in country-code format (e.g. `+1...`) or the call won't start. |
+| **Respect consent rules** | Only call prospects you're permitted to contact. |
 
 ## Common Questions
 
-**Q: How quickly does Alex respond to new leads?**
-A: Alex can engage prospects within seconds of receiving their information.
+**Q: What does Alex actually do when I submit the form?**
+A: Alex starts a voice call. With a mobile number, it calls the prospect. Without one, it runs the call inside the app so you can test it.
 
-**Q: Can Alex handle complex objections?**
-A: Yes! Alex uses the objection handling scripts you provide and adapts based on the conversation.
+**Q: Does Alex also send emails or LinkedIn messages from this page?**
+A: The form on this page initiates a **voice call**. The LinkedIn URL and email are used to personalize that call. For automated AI email sequences, see the **Agentic Sequence** context in Settings and the agentic campaign types.
 
-**Q: Will prospects know they're talking to AI?**
-A: Alex identifies as an AI assistant representing your company. Transparency builds trust.
+**Q: Will the prospect know they're talking to an AI?**
+A: Alex is an automated (AI) caller, and the consent line on the form makes that clear. Be transparent and follow the rules that apply to you.
 
-**Q: How many prospects can Alex handle?**
-A: Alex can engage hundreds of prospects simultaneously—no queue, no wait times.
+**Q: Why won't my call start?**
+A: Check the field formats — the mobile number must be in country-code format and the LinkedIn URL must start with `https://www.linkedin.com/`.
 
 ---
 
@@ -164,4 +91,4 @@ A: Alex can engage hundreds of prospects simultaneously—no queue, no wait time
 
 - [AI Agents Overview](/ai-agents/ai-agents-overview)
 - [Configuring AI Agents](/ai-agents/ai-agents-configuration)
-- [AI ABM Agent (Clara)](/ai-agents/abm-agent)
+- [Clara - AI ABM Agent](/ai-agents/abm-agent)

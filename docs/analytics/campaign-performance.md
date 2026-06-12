@@ -7,15 +7,15 @@ sidebar_position: 4
 
 # Campaign Performance
 
-Transform raw campaign data into actionable insights. Campaign performance analytics show you exactly what's working, what's not, and where to optimize next—so every campaign delivers measurable business impact.
+Every campaign has its own analytics, so you can see what's working, compare your personalized experience against a control group, and drill down to the individual visitors and accounts that engaged.
 
 ## Why Campaign Performance Analytics Matter
 
-| Without Analytics | With Abmatic Analytics |
+| Without Analytics | With Abmatic AI Analytics |
 |-------------------|------------------------|
-| "Our campaigns seem to be working" | "Campaign X delivered 67% conversion lift" |
+| "Our campaigns seem to be working" | A clear personalized vs. control comparison |
 | Guessing which content resonates | Data-driven content decisions |
-| No proof of personalization ROI | Clear before/after comparisons |
+| No proof of personalization impact | Clear before/after comparisons |
 | Reactive optimization | Proactive performance improvement |
 
 ## Accessing Campaign Performance
@@ -26,22 +26,26 @@ Every campaign has a dedicated **Insights** tab that serves as your performance 
 2. Click on any campaign name
 3. Select the **Insights** tab
 
-![Campaign Insights showing visitor trends and metrics](/img/screenshots/wp-insights-tab.png)
-*The Insights tab shows CTA Clicks, Conversions, CVRL, CTRL metrics with trend charts and Personalized vs Control breakdown*
+![The campaign Insights tab showing CTA Clicks, Conversions, CVRL, and CTRL summary cards, a highlighted Total Visitors card, metric tabs (Visitors, CTA, CTR, Conversion, CVR), and a Total/Personalized/Control trend chart](/img/screenshots/cp-insights.png)
+*The Insights tab shows the summary cards, a row of metric tabs, and a trend chart comparing Total, Personalized, and Control visitors over the selected date range.*
 
-## Understanding the Insights Dashboard
+## Understanding the Insights Tab
 
 ### Summary Cards
 
-The top of your Insights tab displays four key performance indicators:
+The top of the Insights tab shows these cards:
 
-| Card | What It Shows | Why It Matters |
-|------|---------------|----------------|
-| **CTA Clicks** | Call-to-action interactions | Measures content engagement |
-| **Conversions** | Goal completions | Your primary success metric |
-| **CVRL** | Conversion Rate Lift | Impact of personalization |
-| **CTRL** | Click-Through Rate Lift | Engagement improvement |
-| **Total Visitors** | Campaign reach (highlighted) | Your sample size |
+| Card | What It Shows |
+|------|---------------|
+| **CTA Clicks** | Call-to-action interactions (with the click-through rate beneath) |
+| **Conversions** | Goal completions (with the conversion rate beneath) |
+| **CVRL** | Conversion Rate Lift — the lift in conversion rate vs. control |
+| **CTRL** | Click-Through Rate Lift — the lift in click-through rate vs. control |
+| **Total Visitors** | Campaign reach, shown in the highlighted card on the right |
+
+:::note On CVRL / CTRL
+**CVRL** = Conversion Rate Lift and **CTRL** = Click-Through Rate Lift. They express the same "lift" idea used elsewhere in analytics — how much better the personalized group did than the control group — applied to conversion rate and click-through rate.
+:::
 
 ### Metric Tabs
 
@@ -83,16 +87,16 @@ Control groups are the foundation of measuring personalization impact. Without t
 
 ### The Comparison Table
 
-Below the chart, a table breaks down performance by variation:
+Below the chart, a table breaks down performance by variation, with Personalized, Control, and Total columns across these rows:
 
-| Variation | Personalized | Control | Total |
-|-----------|--------------|---------|-------|
-| Distribution | 90% | 10% | 100% |
-| Visitors | 634 | 71 | 705 |
-| CTA | 45 | 3 | 48 |
-| CTR | 7.1% | 4.2% | 6.8% |
-| Conversions | 28 | 2 | 30 |
-| CVR | 4.4% | 2.8% | 4.3% |
+- **Distribution** — the share of traffic in each group
+- **Visitors** — visitor count per group
+- **CTA** — call-to-action clicks
+- **CTR** — click-through rate
+- **Conversions** — goal completions
+- **CVR** — conversion rate
+
+Comparing the Personalized and Control columns is how you read whether personalization is helping.
 
 ### Calculating Lift
 
@@ -118,38 +122,55 @@ Lift = (Personalized Rate - Control Rate) / Control Rate × 100
 
 ## Performance Tab: Visitor-Level Detail
 
-The **Performance** tab shows granular visitor data for deep analysis:
+The **Performance** tab shows row-by-row visitor data for deep analysis. Use **Search**, **Filters**, the **Sort By** control (e.g. Last Seen), and the down-arrow to order the grid.
 
-![Performance tab showing visitor-level data with 1,306 rows](/img/screenshots/wp-performance-tab.png)
-*Drill into individual visitor sessions with company identification, variation assignment, and engagement metrics*
+![The campaign Performance tab showing a visitor-level table with Domain, Visitor, Variation, Event Names, Visited Pages, Total Time on Pages, and Total Page Views columns](/img/screenshots/cp-performance.png)
+*The Performance tab. Each row is a visitor session, with the identified company domain, the visitor (email if known), their assigned variation, the events they triggered, and engagement metrics.*
 
 ### Sub-Tabs in Performance
 
-| Tab | Shows | Use Case |
-|-----|-------|----------|
-| **Visitors** | All visitor sessions | Full activity view |
-| **CTA Clicks** | Click events only | Engagement analysis |
-| **Accounts** | Company-level aggregation | ABM reporting |
-| **Conversions** | Goal completions | Success tracking |
+| Tab | Shows |
+|-----|-------|
+| **Visitors** | All visitor sessions |
+| **CTA Clicks** | Click events only |
+| **Accounts** | Company-level aggregation |
+| **Conversions** | Goal completions |
 
 ### Visitor Data Columns
 
-| Column | Description | Why It Matters |
-|--------|-------------|----------------|
-| **Domain** | Identified company | Know who's engaging |
-| **Visitor** | Email if known, "Anonymous" otherwise | Track identified contacts |
-| **Variation** | Personalized or Control | Verify distribution |
-| **Visited Pages** | Pages they viewed | Understand journey |
-| **Total Time on Pages** | Session duration | Gauge interest level |
-| **Total Page Views** | Pages in session | Measure engagement depth |
-| **Total Unique Page Views** | Distinct pages visited | Content breadth |
+| Column | Description |
+|--------|-------------|
+| **Domain** | The identified company |
+| **Visitor** | Email if known, otherwise anonymous |
+| **Variation** | Personalized or Control |
+| **Event Names** | Events the visitor triggered (e.g. a goal/page event) |
+| **Visited Pages** | A link to the pages they viewed |
+| **Total Time on Pages** | Time spent across the session |
+| **Total Page Views** | Pages viewed in the session |
 
-### Filtering and Searching
+### Demo-Booking Columns
 
-- **Search**: Find specific companies or visitors
-- **Filters**: Narrow by variation, domain, or engagement metrics
-- **Sort By**: Order by Last Seen, Page Views, or Time on Page
-- **Export**: Download data for external analysis
+When a campaign books meetings — for example through [Agentic Chat](/campaigns/agentic-chat) — the account- and contact-level Performance tables include demo-booking columns:
+
+| Column | What It Means |
+|--------|---------------|
+| **Demo Booked** | Whether a demo was booked |
+| **Demo Booked At** | When the meeting was **booked** (the moment the visitor scheduled it) |
+| **Demo Scheduled At** / **Demo Time** | The meeting's **scheduled start** time |
+| **Demo AE** | The account executive assigned to the meeting |
+
+:::tip Booked-at vs. scheduled-at
+**Demo Booked At** is when the meeting was created; **Demo Scheduled At / Demo Time** is when the meeting actually takes place. Use Booked At to measure how quickly engagement converts to a meeting, and Scheduled At to plan your calendar.
+:::
+
+These same fields also appear as columns in account and contact [Reports](/analytics/reports), and `demo_booked` is now a mappable field in your CRM sync (Integrations → HubSpot/Salesforce → Add Mapping), so you can push it into your CRM.
+
+### AI Conversation Summary
+
+For campaigns that include an AI chat or personalized-message component (such as Agentic Flow / Agentic Chat), the Performance grid also surfaces what the AI did per visitor — for example **Personalized Subject** and **Personalized Body** columns alongside the events each visitor triggered.
+
+![The Performance tab for an Agentic Flow campaign, showing Domain, Visitor, Personalized Subject, Personalized Body, and Event Names columns](/img/screenshots/cp-conversation-summary.png)
+*For agentic/personalized-message campaigns, the Performance grid shows the personalized content generated for each visitor alongside their domain, identity, and events.*
 
 ## Account-Level Performance
 
@@ -240,11 +261,10 @@ For deeper analysis, build custom reports in Analytics:
 
 Share campaign performance with stakeholders:
 
-1. Create a report with chart visualization
-2. Open the dashboard you want to add it to
-3. Click **Add Widget**
-4. Select your campaign report
-5. Position and resize as needed
+1. Create a campaign report with a chart enabled
+2. Open the dashboard, click **Edit Dashboard**, then **+ Report**
+3. Pick your campaign report and choose **Chart** or **Table**
+4. Click **Add Report**, then position and resize it
 
 ### Exporting Data
 

@@ -7,359 +7,244 @@ sidebar_position: 1
 
 # Integrations Overview
 
-Connect your marketing and sales stack to Abmatic AI and transform disconnected tools into a unified ABM powerhouse. When your systems work together, you spend less time on manual data entry and more time closing deals.
-
----
-
-## Why Integrations Drive ABM Success
-
-| Before Integrations | With Abmatic Integrations |
-|---------------------|---------------------------|
-| Export CSVs between systems daily | Automatic real-time data sync |
-| Miss hot prospects visiting your site | Instant Slack alerts for sales |
-| Duplicate records in CRM | Smart deduplication on sync |
-| Guessing which campaigns work | Full attribution tracking |
-| Manual lead enrichment | Automatic data enrichment |
-| Siloed advertising audiences | One-click audience sync to ads |
+Connect your marketing and sales stack to Abmatic AI so your tools work together. Instead of exporting CSVs and copying data by hand, your CRM, ad networks, calendar, and analytics stay in sync — and your sales team sees buyer-intent signals where they already work.
 
 ---
 
 ## The Integrations Hub
 
-Access all integrations from **Settings > Integrations**. You will see every available integration organized by category, with clear status indicators showing what is connected.
+Access all integrations from **Settings > Integrations**. Each integration appears as a card, grouped into sections, with a clear status chip showing whether it's connected.
 
-![Integrations Hub](/img/screenshots/integrations-hub.png)
+![The Integrations hub showing the CRM and Communications sections with status chips](/img/screenshots/int-hub.png)
+*The Integrations hub. Cards are grouped into sections, each with an Active or Inactive status chip.*
 
-*The Integrations Hub shows all available integrations with their connection status. Drag connected CRMs to set priority order.*
+Each card uses the same simple controls:
+
+| Element | What It Means |
+|---------|---------------|
+| **Active** (green chip) | Connected and working |
+| **Inactive** (grey chip) | Not connected |
+| **Authorize** | Connect the integration |
+| **Disable** | Disconnect the integration |
+| **Settings** (gear) | Open the integration's configuration |
 
 ---
 
-## Available Integrations
+## The Seven Sections
 
-### CRM Platforms
+The Integrations hub is organized into seven sections, in this order:
 
-Sync account and contact data bidirectionally with your CRM -- no more CSV exports or manual updates. Drag and drop connected CRM cards to set the priority order Abmatic uses when resolving data conflicts.
+1. Customer Relationship Management (CRM)
+2. Communications
+3. Conversion tracking
+4. Abmatic IP Data Providers
+5. Ad Networks
+6. Accounts & Contacts Data
+7. Marketing & Sales Automation
 
-![CRM Integrations](/img/screenshots/integrations-crm.png)
+### 1. Customer Relationship Management (CRM)
 
-| Platform | Key Benefits | Setup Guide |
+> *"Set the order of CRMs by moving the integrations."*
+
+Sync accounts and contacts both ways with your CRM. The CRM cards are **draggable** — drag them to set the priority order Abmatic AI uses when resolving data conflicts between connected CRMs.
+
+| Platform | Connect With | Setup Guide |
 |----------|--------------|-------------|
-| **Salesforce** | Two-way sync of accounts, contacts, and opportunities. Campaign member sync. Real-time updates. | [Setup Guide](/integrations/crm/salesforce-setup) |
-| **HubSpot** | Company and contact sync. Custom properties. Deal attribution. | [Setup Guide](/integrations/crm/hubspot-setup) |
-| **Pipedrive** | Organization and person sync. Pipeline visibility. | [Learn more](/integrations/crm/pipedrive) |
-| **ActiveCampaign** | Contact sync. Tag mapping. Automation triggers. | [Learn more](/integrations/crm/activecampaign) |
+| **Salesforce** | OAuth | [Setup Guide](/integrations/crm/salesforce-setup) |
+| **HubSpot** | OAuth | [Setup Guide](/integrations/crm/hubspot-setup) |
+| **Pipedrive** | OAuth | [Learn more](/integrations/crm/pipedrive) |
+| **ActiveCampaign** | API URL + key | [Learn more](/integrations/crm/activecampaign) |
 
 :::tip CRM Priority Order
-Drag and drop connected CRM cards to set the priority order. When syncing data, Abmatic uses this order to resolve conflicts between platforms.
+When more than one CRM is connected, drag the cards to set priority. The first CRM in the order wins when the same field has conflicting values.
 :::
 
-### Communications
+### 2. Communications
 
-Get real-time notifications and email tracking where your team already works.
+> *"Connect all your communication sources and alert mechanisms."*
 
-![Communications Integrations](/img/screenshots/integrations-gmail.png)
+Get alerts and book meetings where your team already works.
 
-| Platform | Key Benefits | Setup Guide |
+![Communications section with Gmail, Slack, Google Calendar, and Zoom cards](/img/screenshots/int-communications.png)
+*The Communications section now includes Gmail, Slack, Google Calendar, and Zoom.*
+
+| Platform | What It Does | Learn More |
+|----------|--------------|------------|
+| **Gmail** | Send AI Sequence emails from your real Gmail | [Learn more](/integrations/gmail) |
+| **Slack** | Real-time alerts for visits, conversions, and high-intent signals | [Setup Guide](/integrations/slack) |
+| **Google Calendar** | Meeting booking and availability for Agentic Chat | [Learn more](/integrations/calendar) |
+| **Zoom** | Generate Zoom meeting links | [Learn more](/integrations/zoom) |
+
+### 3. Conversion tracking
+
+> *"With conversion tracking, you can only integrate to one service at a time."*
+
+Connect your analytics so Abmatic AI can measure conversions and personalization performance.
+
+| Platform | What It Does | Setup Guide |
 |----------|--------------|-------------|
-| **Gmail** | Email tracking integration. Connect your Google account via OAuth for seamless email activity logging. | [Learn more](/integrations/gmail) |
-| **Slack** | Instant alerts for account visits, conversions, and high-intent signals. Route notifications to specific channels. | [Setup Guide](/integrations/slack) |
-
-### Conversion Tracking
-
-Connect your analytics to understand the full customer journey. Only one conversion tracking integration can be active at a time to prevent duplicate events.
-
-![Conversion Tracking Integrations](/img/screenshots/integrations-conversion-tracking.png)
-
-| Platform | Key Benefits | Setup Guide |
-|----------|--------------|-------------|
-| **Google Analytics 4** | Send personalization events. Custom dimensions. Track how campaigns influence on-site behavior. | [Setup Guide](/integrations/google-analytics) |
-| **Segment** | Event streaming. Unified customer data. Feed Abmatic events into your entire analytics stack. | [Setup Guide](/integrations/segment) |
+| **Google Analytics** (GA4) | Import conversion goals and measure lift | [Setup Guide](/integrations/google-analytics) |
+| **Segment** | Stream events into Abmatic AI as conversion goals | [Setup Guide](/integrations/segment) |
 
 :::note One at a Time
-You can only have one conversion tracking integration active at a time to prevent duplicate events.
+You can have only **one** conversion tracking integration active at a time. Disable one before activating the other.
 :::
 
-### Abmatic IP Data Providers
+### 4. Abmatic IP Data Providers
 
-Abmatic uses a proprietary **5-provider waterfall** to maximize visitor identification. When a visitor arrives on your site, Abmatic runs through each data provider in sequence, enriching company data at every step. This layered approach delivers higher match rates and richer firmographic data than any single provider alone.
+> *"5 integrated data providers working in a waterfall to maximize visitor identification."*
 
-![Abmatic IP Data Providers](/img/screenshots/integrations-ip-providers.png)
+Abmatic AI identifies website visitors using a fixed **5-provider waterfall**. When a visitor arrives, Abmatic AI runs through each provider in order, enriching company data at every step. You don't configure individual providers — the whole pool is managed by Abmatic AI and turned on or off with a single switch.
 
-| Provider | Role | What It Does |
-|----------|------|--------------|
-| **Abmatic IP Primary** | First lookup | Primary reverse IP lookup with the highest match rates. This is the first provider queried for every visitor. |
-| **Abmatic IP Enhanced** | Firmographic enrichment | Adds detailed firmographic data such as company size, industry, and revenue to matched records. |
-| **Abmatic IP Extended** | Broader coverage | Extends coverage to smaller and harder-to-identify companies that the primary provider may miss. |
-| **Abmatic AI Enrichment** | AI-powered matching | Uses machine learning to match visitors to companies and enrich records when traditional IP lookup falls short. |
-| **Abmatic IP Fallback** | Maximum coverage | Final fallback provider ensuring the widest possible coverage across all visitor traffic. |
+![Abmatic IP Data Providers — five Abmatic-branded waterfall providers, all Active](/img/screenshots/int-ip-providers.png)
+*The five fixed providers in the Abmatic IP waterfall, each shown with an Active status.*
 
-All five providers are managed by Abmatic and require no separate subscriptions or configuration. They activate automatically for every account.
+| Provider | What It Does |
+|----------|--------------|
+| **Abmatic IP Primary** | Primary reverse IP lookup with the highest match rates |
+| **Abmatic IP Enhanced** | Enhanced firmographic data with company details |
+| **Abmatic IP Extended** | Extended coverage for smaller companies |
+| **Abmatic AI Enrichment** | AI-powered company matching and enrichment |
+| **Abmatic IP Fallback** | Fallback provider for maximum coverage |
 
-### Ad Networks
+:::info No separate setup
+These five providers are built in and require no separate subscriptions or per-provider configuration. There is a single on/off control for the whole waterfall.
+:::
 
-Push your target account lists directly to ad platforms -- no manual audience building required.
+### 5. Ad Networks
 
-![Ad Networks Integrations](/img/screenshots/integrations-ad-networks.png)
+Push your target account and contact lists to ad platforms.
 
-| Platform | Key Benefits | Setup Guide |
-|----------|--------------|-------------|
-| **LinkedIn Ads** | Matched Audiences from account lists. Company targeting at scale. | [Setup Guide](/integrations/advertising/linkedin-ads) |
-| **Google Ads** | Customer Match audiences. Search, Display, and YouTube targeting using your account and contact lists. | [Setup Guide](/integrations/advertising/google-ads) |
-| **Meta** | Custom audiences. Retargeting. Lookalike expansion. | Connect via Integrations page |
+![Ad Networks section with LinkedIn, Google Ads, OpenAI, and Meta (Coming Soon)](/img/screenshots/int-ad-networks.png)
+*The Ad Networks section. OpenAI Ads connects with an API key; Meta is shown as Coming Soon (its Authorize button is disabled).*
 
-### Accounts & Contacts Data
+| Platform | Connect With | Status | Learn More |
+|----------|--------------|--------|------------|
+| **LinkedIn** | OAuth | Live | [Setup Guide](/integrations/advertising/linkedin-ads) |
+| **Google Ads** | OAuth | Live | [Setup Guide](/integrations/advertising/google-ads) |
+| **OpenAI** | API key | Live | [Learn more](/integrations/openai-ads-integration) |
+| **Meta** | — | **Coming Soon** (disabled) | — |
 
-Import and enrich target accounts and contacts from additional data sources. Drag cards to set the priority order for data fetching.
+:::note Meta is not yet available
+The Meta card appears in the Ad Networks section but is currently **Coming Soon** — the Authorize button is disabled. Don't plan workflows around Meta ads until it's live.
+:::
 
-![Accounts & Contacts Data](/img/screenshots/integrations-data-sources.png)
+### 6. Accounts & Contacts Data
+
+> *"Set the order of fetching target data by moving the sources."*
+
+Import and enrich target accounts and contacts. These cards are **draggable** — drag them to set the order Abmatic AI uses when fetching data.
 
 | Source | What It Provides |
 |--------|------------------|
-| **Abmatic** | Built-in data source for fetching target accounts and contacts. Always active and requires no additional configuration. |
-| **Apollo.io** | Contact data enrichment and email discovery. Powered by accurate data on 275M+ contacts and 73M+ companies. |
+| **Abmatic** | Built-in data source for fetching target accounts and contacts. Always available. |
+| **Apollo.io** | Contact data enrichment and email discovery |
 
-### Marketing & Sales Automation
+### 7. Marketing & Sales Automation
 
-Connect your outbound and marketing automation platforms to streamline follow-up workflows and keep prospect engagement moving.
+> *"Integrate your automation tools for increased productivity."*
 
-![Marketing & Sales Automation](/img/screenshots/integrations-automation.png)
+| Platform | What It Does | Status | Learn More |
+|----------|--------------|--------|------------|
+| **Outreach** | Sync accounts and prospects for go-to-market teams | Live | [Learn more](/integrations/crm/outreach) |
+| **Marketo** | Marketing automation | **Not yet functional** (placeholder) | — |
 
-| Platform | Key Benefits | Setup Guide |
-|----------|--------------|-------------|
-| **Outreach** | Sales execution platform. Sequence triggers, activity logging, and prospect matching for go-to-market teams. | [Learn more](/integrations/crm/outreach) |
-| **Marketo** | Marketing automation. Streamline and automate marketing tasks, nurture campaigns, and lead scoring. | Connect via Integrations page |
+:::caution Marketo is a placeholder
+The Marketo card is present but its connect action does nothing yet. It is not a working integration today.
+:::
 
 ---
 
 ## Connecting an Integration
 
-Most integrations take under 2 minutes to connect. Here is the typical flow:
+Most integrations take a couple of minutes to connect. The flow depends on how the integration authenticates:
 
-### Step 1: Click the Integration Card
+### OAuth integrations
 
-Navigate to **Settings > Integrations** and click on the integration you want to connect.
+Salesforce, HubSpot, Pipedrive, Gmail, Google Calendar, Zoom, Google Analytics, LinkedIn, and Google Ads use OAuth:
 
-### Step 2: Authorize Access
+1. Click **Authorize** on the card.
+2. Sign in to the platform in the popup.
+3. Review the requested permissions and click **Allow**.
+4. The card returns to **Active**.
 
-For OAuth integrations (Salesforce, HubSpot, LinkedIn, Gmail, etc.):
+### API-key integrations
 
-1. Click **Authorize** or **Connect**
-2. Sign in to the platform with your credentials
-3. Review the requested permissions
-4. Click **Allow** or **Authorize**
-5. You will be redirected back to Abmatic
+ActiveCampaign and OpenAI Ads use a key instead of a sign-in popup:
 
-For API key integrations (ActiveCampaign, Apollo):
+1. Click **Authorize** (or the **Settings** gear) on the card.
+2. Enter the API key (ActiveCampaign also needs the API URL).
+3. Save. The card shows **Active**.
 
-1. Click **Settings** on the integration card
-2. Enter your API key and any required credentials
-3. Click **Save** or **Connect**
-
-:::tip Use an Admin Account
-Connect using an account with full API access. Consider creating a dedicated integration user whose credentials will not change frequently.
+:::tip Use a dedicated integration account
+For CRMs, connect with an admin account whose credentials won't change. A dedicated "Abmatic Integration" user keeps the sync running even if a team member leaves.
 :::
-
-### Step 3: Configure Settings
-
-After connecting, configure sync behavior:
-
-| Setting | Description | Recommendation |
-|---------|-------------|----------------|
-| **Sync Direction** | Import only, Export only, or Two-way | Two-way for CRMs |
-| **Duplicate Handling** | Create new, Update existing, or Skip | Update existing |
-| **Field Mapping** | Match fields between systems | Map all critical fields |
-| **Auto-Push** | Automatically sync new records | Enable for revealed companies |
 
 ---
 
-## Understanding Sync Behavior
+## CRM Sync Settings
 
-### What Flows Where
+For CRM integrations, click the **Settings** gear on the card to open the sync configuration. It has tabs for each object type (Accounts, Contacts, Opportunities, and — for Salesforce — Leads and Campaigns), plus an Activity Log.
 
-**Abmatic to CRM (Export)**
+### Object syncing
 
-| Data Type | What Gets Synced |
-|-----------|------------------|
-| Revealed companies | New accounts visiting your site |
-| Engagement data | Page views, session counts, scores |
-| Revealed contacts | Identified individuals with emails |
-| Campaign attribution | Which campaigns influenced accounts |
-| Custom fields | Any mapped custom data |
+For each object, choose what syncs in each direction with **Create** and **Update** checkboxes. A directional chip summarizes the result:
 
-**CRM to Abmatic (Import)**
+| Chip | Meaning |
+|------|---------|
+| **Sync both ways** | Records sync to and from the CRM |
+| **Sync into [CRM]** | Abmatic AI pushes to the CRM only |
+| **Sync into Abmatic** | Abmatic AI pulls from the CRM only |
+| **Not syncing** | This object is not synced |
 
-| Data Type | What Gets Synced |
-|-----------|------------------|
-| Account lists | Target accounts for campaigns |
-| Contact lists | Contacts for personalization |
-| Custom fields | CRM fields for filtering |
-| Opportunity data | Pipeline stage for targeting |
-| Owner assignment | For routing and notifications |
+### Field mapping modes
 
-### Sync Modes
+Each mapped field has a **Sync to CRM** mode and a **Sync to Abmatic** checkbox:
 
 | Mode | Behavior | Best For |
 |------|----------|----------|
-| **Fill** | Only updates empty fields | Preserving manual data entry |
-| **Overwrite** | Always updates with latest value | Keeping data current |
+| **Don't sync** | The field is not pushed to the CRM | Read-only or sensitive fields |
+| **Fill** | Only fills the field when it's empty in the CRM | Enriching without overwriting work your team did |
+| **Overwrite** | Always updates the field with the Abmatic AI value | Keeping Abmatic AI as the source of truth |
 
-:::warning Be Careful with Overwrite
-"Overwrite" mode replaces existing values. If your sales team manually updates fields, use "Fill" for those fields to avoid losing their work.
+Click **Add Mapping** to map additional or custom fields.
+
+:::warning Be careful with Overwrite
+"Overwrite" replaces existing CRM values. If your sales team edits a field by hand, use **Fill** for that field so their work isn't lost.
 :::
 
-### Sync Frequency
+### Push filters
 
-| Frequency | Updates | Best For |
-|-----------|---------|----------|
-| **Real-time** | Within seconds | Hot lead alerts, urgent data |
-| **Hourly** | Every 60 minutes | Most standard use cases |
-| **Daily** | Once per day | Large datasets, historical sync |
+Each Accounts and Contacts tab has a **"Set up filters for pushing records"** section. Only records that match these filters are pushed to the CRM. Leave the filters empty to push all records. An active filter shows a "*N* filter(s) active" chip.
 
----
+### Sync frequency
 
-## Integration Status Indicators
+| Setting | Options |
+|---------|---------|
+| **Polling** (pulling from the CRM) | **Only when synced manually**, or **Automatically** every *N* hours |
+| **Pushing** (sending to the CRM) | Turn on **Automatically push changes to [CRM]** |
 
-Each integration card shows its current status:
-
-| Status | Indicator | What It Means |
-|--------|-----------|---------------|
-| **Active** | Green badge | Connected and syncing correctly |
-| **Inactive** | Gray badge | Not connected or disabled |
-| **Syncing** | Blue spinner | Currently processing data |
-| **Error** | Red indicator | Connection issue (check settings) |
+Each object tab also has a **Sync [Object]s Manually** button and shows **Last Sync with [CRM]** and **Last Sync with Abmatic** timestamps.
 
 ---
 
-## Common Integration Workflows
+## Pushing and Importing Records
 
-### Website Visitors to CRM Leads
-
-Turn anonymous traffic into actionable CRM records:
-
-```
-Visitor identified on website
-        |
-Meets engagement threshold (e.g., 3+ pages)
-        |
-Abmatic enriches company data via 5-provider waterfall
-        |
-Auto-pushes to CRM as new lead
-        |
-Sales receives Slack notification
-        |
-Rep follows up while intent is hot
-```
-
-**How to set up:**
-1. Connect your CRM (Salesforce or HubSpot)
-2. Enable "Auto-Push to CRM" in Company Reveal settings
-3. Set engagement threshold (recommended: 3+ page views)
-4. Connect Slack for real-time alerts
-
-### Target Accounts to Ad Campaigns
-
-Reach your ideal accounts wherever they browse:
-
-```
-Import target accounts from CRM
-        |
-Create account collection in Abmatic
-        |
-Push to LinkedIn Matched Audiences or Google Customer Match
-        |
-Run targeted ad campaigns
-        |
-Track engagement in Abmatic
-```
-
-**How to set up:**
-1. Import accounts from CRM
-2. Connect LinkedIn Ads or Google Ads integration
-3. Select collection and push to the ad platform
-4. Create campaign in the ad platform's campaign manager
-
-### Real-Time Sales Alerts
-
-Never miss a hot prospect visiting your site:
-
-```
-Target account visits pricing page
-        |
-Abmatic identifies company via IP waterfall
-        |
-Checks against target account list
-        |
-Sends Slack notification instantly
-        |
-Sales engages while prospect is active
-```
-
-**How to set up:**
-1. Connect Slack integration
-2. Create target account list
-3. Configure notification rules (which accounts, which pages)
-4. Set destination channel
+| Action | Where | What It Does |
+|--------|-------|--------------|
+| **Push to CRM** | The **Push to [CRM]** dialog, or the **Push to CRM** action on an account/contact Overview page | Sends selected accounts/contacts to the CRM |
+| **Import from CRM** | **Audiences > Accounts/Contacts > Create > Import from CRM** | Pulls accounts/contacts from the CRM into a list |
 
 ---
 
-## Field Mapping
+## Integration Status
 
-Field mapping ensures your data transfers correctly between systems.
+Every card shows one of two states:
 
-### Default Mappings
-
-Standard fields map automatically:
-
-| Abmatic Field | Salesforce | HubSpot |
-|---------------|------------|---------|
-| Company Name | Account Name | Company Name |
-| Domain | Website | Website |
-| Industry | Industry | Industry |
-| Employee Count | Employees | Number of Employees |
-| Country | Billing Country | Country/Region |
-| Revenue | Annual Revenue | Annual Revenue |
-
-### Custom Field Mapping
-
-Map your specific fields:
-
-1. Go to **Settings > Custom Fields**
-2. Click **Add Field Mapping**
-3. Select the Abmatic field (source)
-4. Select the CRM field (destination)
-5. Choose sync mode (Fill or Overwrite)
-6. Click **Save**
-
----
-
-## Best Practices
-
-### Before Connecting
-
-| Step | Why It Matters |
-|------|----------------|
-| Clean CRM data | Prevents duplicates and sync errors |
-| Document field mapping plan | Ensures consistency |
-| Create integration user | Avoids password expiration issues |
-| Test in sandbox first | Prevents production data issues |
-
-### After Connecting
-
-| Step | Why It Matters |
-|------|----------------|
-| Verify sample records | Confirms data flows correctly |
-| Check field mappings | Ensures all critical fields sync |
-| Monitor first sync | Catches issues early |
-| Enable key automations | Gets immediate value |
-
-### Ongoing Maintenance
-
-| Task | Frequency |
-|------|-----------|
-| Review sync logs | Weekly |
-| Check for auth errors | Weekly |
-| Update field mappings | As needed |
-| Audit data quality | Quarterly |
+| Status | Chip | What It Means |
+|--------|------|---------------|
+| **Active** | Green | Connected and working |
+| **Inactive** | Grey | Not connected |
 
 ---
 
@@ -369,51 +254,42 @@ Map your specific fields:
 
 | Problem | Solution |
 |---------|----------|
-| "Invalid credentials" | Re-authenticate with correct account |
-| "Insufficient permissions" | Use admin account or add API permissions |
-| "Token expired" | Disconnect and reconnect the integration |
-| "API not enabled" | Enable API access in the platform settings |
+| Card stays Inactive after Authorize | Re-open the card and Authorize again; allow popups for OAuth |
+| "Invalid credentials" / "Token expired" | Disconnect and reconnect the integration |
+| "Insufficient permissions" | Connect with an admin account that has API access |
 
 ### Sync Issues
 
 | Problem | Solution |
 |---------|----------|
-| Sync stuck on "Processing" | Wait 30 minutes, then contact support |
-| "Sync failed" error | Check sync logs for specific error message |
-| No data appearing | Verify field mapping is configured |
-| Partial data synced | Check if filters are too restrictive |
-
-### Data Issues
-
-| Problem | Solution |
-|---------|----------|
-| Duplicate records | Review matching rules (use domain for accounts, email for contacts) |
-| Missing fields | Ensure field is mapped and has "Read" permission |
-| Wrong values | Verify field types match (text to text, number to number) |
-| Stale data | Check sync frequency settings |
+| Records not syncing | Check the object's Create/Update settings and the directional chip |
+| No data appearing | Confirm field mapping is set and push filters aren't too restrictive |
+| Stale data | Check Polling frequency, or click **Sync [Object]s Manually** |
 
 ---
 
 ## Related Documentation
 
-### CRM Setup Guides
+### CRM
 - [Salesforce Setup](/integrations/crm/salesforce-setup)
 - [HubSpot Setup](/integrations/crm/hubspot-setup)
 - [Pipedrive](/integrations/crm/pipedrive)
 - [ActiveCampaign](/integrations/crm/activecampaign)
 - [Sync Behavior Guide](/integrations/crm/sync-behavior)
 
-### Advertising
-- [LinkedIn Ads](/integrations/advertising/linkedin-ads)
-- [Google Ads](/integrations/advertising/google-ads)
-
-### Other Integrations
+### Communications
 - [Slack](/integrations/slack)
+- [Google Calendar](/integrations/calendar)
+- [Zoom](/integrations/zoom)
+
+### Conversion Tracking
 - [Google Analytics](/integrations/google-analytics)
 - [Segment](/integrations/segment)
-- [Outreach](/integrations/crm/outreach)
 
-### Related Features
-- [CRM Sync for Audiences](/audiences/crm-sync)
-- [LinkedIn DMP](/audiences/linkedin-dmp)
-- [Google Customer Match](/audiences/google-customer-match)
+### Ad Networks
+- [LinkedIn Ads](/integrations/advertising/linkedin-ads)
+- [Google Ads](/integrations/advertising/google-ads)
+- [OpenAI Ads](/integrations/openai-ads-integration)
+
+### Automation
+- [Outreach](/integrations/crm/outreach)

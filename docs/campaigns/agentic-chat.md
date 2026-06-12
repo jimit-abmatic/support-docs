@@ -7,19 +7,17 @@ sidebar_position: 3
 
 # Agentic Chat Campaigns
 
-**Turn every website visitor into a conversation.** Agentic Chat embeds an AI-powered assistant directly on your website, engaging visitors 24/7 with personalized, context-aware responses that qualify leads and capture contact information automatically.
+**Turn every website visitor into a conversation.** Agentic Chat embeds an AI-powered assistant directly on your website. It greets visitors automatically, answers questions in your brand's voice, captures work emails, and can even hand a visitor off to book a meeting — all without a human in the loop.
 
 ## Why Agentic Chat Matters
 
 | Without Agentic Chat | With Agentic Chat |
-|---------------------|-------------------|
-| Visitors leave with unanswered questions | AI answers questions instantly, any time |
-| Generic chatbots with scripted responses | Context-aware AI that knows your business |
-| Manual lead qualification takes hours | Automatic email capture and intent scoring |
+|----------------------|-------------------|
+| Visitors leave with unanswered questions | The AI answers instantly, any time |
+| Generic chatbots with scripted replies | Context-aware AI that knows your business |
+| Manual lead qualification | Automatic email capture and topic clustering |
 | Miss after-hours opportunities | 24/7 engagement captures global visitors |
 | Text-only interaction | Voice and text chat for natural conversations |
-
-**Teams using Agentic Chat see 3x more qualified conversations** compared to traditional chatbots or contact forms.
 
 ---
 
@@ -27,191 +25,96 @@ sidebar_position: 3
 
 ### Step 1: Create an Agentic Chat Campaign
 
-1. Navigate to **Campaigns** in the left sidebar
-2. Click **+ CAMPAIGN**
-3. Select **Agentic Chat** from the campaign types (found under the **Advanced** category)
+1. Navigate to **Campaigns** in the left sidebar.
+2. Click **+ Campaign**.
+3. In the **Agentic** column of the Create Campaign dialog, select **Agentic Chat** ("AI-powered chat widget for visitor engagement").
 
-![Campaign creation wizard showing Agentic Chat under the Advanced category](/img/screenshots/campaign-create-wizard.png)
+![Create Campaign dialog with Agentic Chat in the Agentic column](/img/screenshots/campaigns-create-modal.png)
+
+:::info "Agentic" was previously "Advanced"
+Agentic Chat now lives under the **Agentic** category (the column was renamed from "Advanced").
+:::
+
+The campaign is created and opens to its detail view.
 
 ---
 
 ### Step 2: Configure Your Campaign
 
-Your campaign has several configuration tabs:
+An Agentic Chat campaign has these tabs:
 
 | Tab | Purpose |
 |-----|---------|
-| **Insights** | View conversation analytics and performance metrics |
+| **Insights** | Conversation analytics and performance metrics |
 | **Audience** | Define which visitors see the chat widget |
-| **Instructions** | Customize AI behavior and context |
-| **Pages** | Set URL patterns for widget display |
-| **Engagement** | Review individual visitor conversations |
-| **Performance** | Track conversions and ROI |
-
-The widget configuration panel lets you customize the chat experience — set the display mode, welcome message, page context, and quick prompts:
-
-![Widget Configuration Panel showing Preview Mode (Minimized, Welcome, Sidebar, Expanded), Display setting, Welcome Message, Page Context, and Quick Prompts](/img/screenshots/agentic-chat/ac-create-modal.png)
+| **Instructions** | Give the AI context and set the email-handoff behavior |
+| **Pages** | Set URL patterns for where the widget appears |
+| **Engagement** | Review individual visitor activity |
+| **Performance** | Visitor-level results, demo bookings, and the AI Conversation Summary |
 
 ---
 
 ### Step 3: Set Up AI Instructions
 
-The **Instructions** tab is where you make the AI yours:
+The **Instructions** tab is where you make the AI yours. It has two parts: the **AI Instructions** context and the **email-handoff mode**.
 
-1. Click the **Instructions** tab
-2. Add your company context, product information, and conversation guidelines
-3. Configure quick prompts for common visitor questions
-4. Click **Save**
+![Instructions tab showing the AI Instructions context box and a Save button](/img/screenshots/ac-widget-preview.png)
 
-### Step 4: Define Your Audience
+#### AI Instructions (context)
 
-Target the right visitors in the **Audience** tab:
+The **AI Instructions** box is a free-text field where you describe your company, product, and how the assistant should behave. The richer the context, the better the conversations.
 
-![Audience tab showing campaign rules with Sessions and Country filters](/img/screenshots/agentic-chat/ac-preview-sidebar.png)
-
-- **All visitors**: Show chat to everyone
-- **Firmographic targeting**: Filter by company size, industry, location
-- **Behavioral targeting**: Target based on page views, time on site
-- **Named accounts**: Show to specific target accounts only
-
----
-
-### Step 5: Activate Your Campaign
-
-1. Set the campaign status to **Active**
-2. The widget will appear on matching pages for qualifying visitors
-
----
-
-## AI Instructions
-
-The AI Instructions define how your chat assistant behaves. Provide rich context for better conversations.
-
-### What to Include
-
-#### Company Context
 ```
 Company: Acme Analytics
 Industry: B2B Marketing Technology
 What we do: Multi-touch attribution for marketing teams
 
-Key products:
-- Starter ($199/mo): Basic attribution for small teams
-- Professional ($499/mo): Advanced analytics with CRM integration
-- Enterprise (Custom): Unlimited usage with dedicated support
-```
-
-#### Conversation Guidelines
-```
 Tone: Professional but friendly. Never pushy.
-Goal: Answer questions, qualify interest, capture work email
+Goal: Answer questions, qualify interest, and capture a work email.
 
 Always:
 - Reference specific features when relevant
-- Offer to schedule a demo for interested visitors
-- Ask for work email to send helpful resources
-
+- Offer to book a demo for interested visitors
 Never:
 - Discuss competitor pricing
 - Make promises about custom features
-- Share internal roadmap details
 ```
 
-#### Quick Prompts
+Click **Save** to apply your instructions.
 
-Configure suggested prompts that appear to visitors:
+#### Email-Handoff Modes
 
-| Prompt | Purpose |
-|--------|---------|
-| "What does your product do?" | Product overview |
-| "How much does it cost?" | Pricing conversation |
-| "Can I see a demo?" | Sales qualification |
-| "How do you integrate with Salesforce?" | Technical questions |
+Below the instructions, the section **"When the visitor shares their work email"** lets you choose what the assistant does once it captures a work email. Pick one mode:
 
----
+| Mode | What Happens |
+|------|--------------|
+| **Book a meeting** | The chat shows live calendar slots from the routed account executive's Google Calendar so the visitor can book a demo right there |
+| **Send a thank-you** | The assistant sends a thank-you message; you can customize the thank-you line |
+| **Show a HubSpot form** | The assistant embeds a HubSpot form in the chat, and Abmatic AI sends a Slack notification when it's submitted |
 
-## Display Modes
+Choose the mode, fill in the optional fields (custom thank-you message or the HubSpot form to embed), and click **Save**.
 
-The chat widget adapts to different interaction states. Configure the initial display mode in the widget settings panel — you can see the four mode buttons (MINIMIZED, WELCOME, SIDEBAR, EXPANDED) in the configuration panel.
-
-![Page editor showing the Agentic Chat widget live on the Abmatic AI website with the widget settings panel on the right showing display mode options](/img/screenshots/agentic-chat/ac-audience-tab.png)
-
-| Mode | What Visitors See | Best For |
-|------|------------------|----------|
-| **Minimized** | A floating button in the corner of the page. Visitors click to expand. | Non-intrusive presence on all pages |
-| **Welcome** | A welcome card with preview message that invites conversation | High-intent pages where you want to encourage engagement |
-| **Sidebar** | A compact chat panel positioned on the side of the page | Persistent chat access alongside page content |
-| **Expanded** | A larger two-column view with assistant avatar and full chat | Dedicated support or conversation-focused pages |
-| **Voice** | Audio interaction with visual feedback — visitors speak naturally | Hands-free engagement, accessibility |
-
-The chat widget in action — here you can see the Welcome mode open on the Abmatic AI website with the AI greeting visitors:
-
-![Agentic Chat widget open on the Abmatic AI website showing the AI assistant greeting with "Hi! I'm your AI assistant" message](/img/screenshots/agentic-chat/ac-insights-tab.png)
-
-:::tip Choosing the right display mode
-Start with **Minimized** or **Welcome** mode on most pages. Use **Expanded** on high-value pages like pricing or demo request where visitors are most likely to have questions. Reserve **Sidebar** for documentation or support pages where ongoing assistance helps.
+:::tip Book-a-meeting needs Google Calendar
+"Book a meeting" pulls slots from the routed AE's **Google Calendar**. Connect Google Calendar and set up meeting types / a default AE so the assistant has slots to offer. "Show a HubSpot form" needs a connected HubSpot account.
 :::
 
 ---
 
-## Features
+### Step 4: Define Your Audience
 
-### Text Chat
-Real-time messaging with streaming responses. The AI processes context from:
-- Your website content (automatically scraped)
-- Custom instructions you provide
-- Visitor's company and behavioral data
-- Current page content
+Use the **Audience** tab to target the right visitors:
 
-### Voice Chat
-WebRTC-powered voice interaction:
-- Click the microphone icon to speak
-- AI responds with natural voice
-- Supports six voice options (configure in settings)
-- Transcripts saved for review
-
-### Email Capture
-The AI naturally captures contact information:
-- Extracts work emails from conversation
-- Filters personal email domains (Gmail, Yahoo, etc.)
-- Requests work email when personal provided
-- Triggers Slack notification on capture
-
-### Lead Qualification
-Automatic intent scoring:
-
-| Intent Level | Meaning |
-|--------------|---------|
-| **High** | Strong buying signals, requested demo or pricing |
-| **Medium** | Engaged with product questions |
-| **Low** | General browsing, basic questions |
+- **All visitors** — show the chat to everyone
+- **Firmographic targeting** — filter by company size, industry, or location
+- **Behavioral targeting** — target by page views or time on site
+- **AI Conversations** — segment by the number of AI chat conversations a visitor has had (is above / is below a number)
+- **Named accounts** — show only to specific target accounts
 
 ---
 
-## Website Context
+### Step 5: Set Where the Widget Appears
 
-Agentic Chat automatically learns about your website:
-
-1. **Page Scraping**: Reads content from key pages (homepage, pricing, about, features)
-2. **AI Summarization**: Creates concise summaries for quick reference
-3. **Contextual Answers**: Uses page content to answer visitor questions accurately
-
-### Managing Website Context
-
-Go to **Settings** > **AI Agents** > **Agentic Chat** tab to:
-- View scraped pages and summaries
-- Manually refresh website content
-- Add custom context beyond what's scraped
-
----
-
-## Targeting and Placement
-
-### URL Patterns
-
-Control where the widget appears using the **Pages** tab:
-
-![Pages tab showing URL patterns with Include Patterns, Exclude Patterns, and Status columns](/img/screenshots/agentic-chat/ac-preview-minimized.png)
+Use the **Pages** tab to control which URLs show the widget with include/exclude patterns:
 
 | Pattern | Matches |
 |---------|---------|
@@ -220,16 +123,131 @@ Control where the widget appears using the **Pages** tab:
 | `/blog/*` | All blog posts |
 | `!/admin/*` | Exclude admin pages |
 
-### Audience Rules
+---
 
-Combine targeting conditions:
+### Step 6: Activate Your Campaign
 
-```
-Show widget when:
-- Company size > 100 employees
-- AND Industry = Technology
-- AND Has visited pricing page
-```
+Set the campaign status to active and the widget appears on matching pages for qualifying visitors, greeting them automatically.
+
+---
+
+## The Chat Widget
+
+The widget adapts to different display states. The assistant greets visitors automatically, shows a thinking/tool-step indicator while it works, and presents a **Book demo** action alongside a **talk** (voice) button.
+
+### Display Modes
+
+| Mode | What Visitors See | Best For |
+|------|-------------------|----------|
+| **Minimized** | A floating button in the corner; click to expand | Non-intrusive presence on all pages |
+| **Welcome** | A welcome card with a preview message inviting conversation | High-intent pages where you want engagement |
+| **Sidebar** | A compact chat panel on the side of the page | Persistent access alongside page content |
+| **Expanded** | A larger view with the full conversation | Dedicated support or conversation pages |
+| **Voice** | Audio interaction — visitors speak naturally | Hands-free engagement, accessibility |
+
+:::tip Choosing a display mode
+Start with **Minimized** or **Welcome** on most pages. Use **Expanded** on high-value pages like pricing or demo request where visitors are most likely to have questions.
+:::
+
+### Text Chat
+
+Real-time messaging with streaming responses. The AI draws on your website content (automatically scraped), your AI Instructions, the visitor's company and behavior data, and the current page.
+
+### Voice Chat
+
+The widget includes a voice mode:
+
+- Click the **talk** button (or open the widget in voice mode) to speak.
+- The AI responds with a natural voice.
+- Choose from **six voice options** in settings.
+- Transcripts are saved for review.
+
+### Email Capture
+
+The AI captures contact details naturally during the conversation:
+
+- Pulls work emails from the conversation
+- Filters out personal domains (Gmail, Yahoo, etc.) and asks for a work email instead
+- Triggers a Slack notification on capture
+- Kicks off your chosen email-handoff mode (book a meeting / thank-you / HubSpot form)
+
+---
+
+## Website Context
+
+Agentic Chat learns about your site automatically:
+
+1. **Page scraping** — reads content from key pages (homepage, pricing, about, features)
+2. **AI summarization** — builds concise summaries for quick reference
+3. **Contextual answers** — uses page content to answer accurately
+
+### Managing Website Context
+
+Go to **Settings > AI Agents** and open the Agentic Chat configuration to review scraped pages, refresh content, or add context beyond what's scraped. You can also add company/product context directly in the campaign's **Instructions** tab.
+
+---
+
+## Analytics and Reporting
+
+### Insights Tab
+
+The **Insights** tab shows high-level metrics and trends over time, with a date-range selector and Compare Date Ranges:
+
+| Metric | What It Measures |
+|--------|------------------|
+| **CTA Clicks** | Engagement with chat CTAs |
+| **Conversions** | Goal completions from chat visitors |
+| **CVRL** | Conversion rate for the **personalized** group |
+| **CTRL** | Conversion rate for the **control** group |
+| **Total Impressions** | Times the chat widget was displayed |
+
+:::note CVRL / CTRL
+Across Abmatic AI personalization campaigns, **CVRL** is the conversion rate of the **personalized** group and **CTRL** is the conversion rate of the **control** group. Compare the two to see the lift personalization is driving.
+:::
+
+### Engagement Tab
+
+The **Engagement** tab shows individual visitor activity — form submissions, page views, scroll depth, time on page, and an engagement score (0–100).
+
+### Performance Tab
+
+The **Performance** tab gives you visitor-level detail. It has these sub-tabs:
+
+- **Visitors** — individual visitor records with domain, variation, chat history, and demo-booking columns
+- **CTA Clicks** — which CTAs are getting clicks
+- **Accounts** — company-level aggregated data
+- **Conversions** — conversion event details
+- **AI Conversation Summary** — topic clustering across conversations (see below)
+
+#### Demo-Booking Columns
+
+The **Visitors** sub-tab includes demo-booking columns so you can see who booked from chat:
+
+![Performance Visitors sub-tab showing Domain, Visitor, Variation, Chat History, and Demo Booked / Demo AE / Demo Time columns](/img/screenshots/ac-demo-columns.png)
+
+| Column | What It Shows |
+|--------|---------------|
+| **Chat History** | A "View (N messages)" link to read the conversation |
+| **Demo Booked** | Whether a demo was booked from this conversation |
+| **Demo AE** | The account executive the demo was booked with |
+| **Demo Time** | The scheduled demo time |
+
+#### AI Conversation Summary
+
+The **AI Conversation Summary** sub-tab automatically clusters visitor conversations into topics so you can see, at a glance, what people are asking about and whether those conversations convert:
+
+![AI Conversation Summary table with Topic, Description, Visitors with Chat, Converted, and Sentiment columns, plus Show Visitors backlinks](/img/screenshots/ac-conversation-summary.png)
+
+| Column | What It Shows |
+|--------|---------------|
+| **Topic** | The auto-detected topic (e.g. Product features, Demo scheduling, Pricing) |
+| **Description** | A short summary of what visitors in this topic want |
+| **Visitors with Chat** | How many visitors had a conversation on this topic |
+| **Converted** | How many of them converted |
+| **Sentiment** | A Positive or Negative pill for the topic |
+| **Visitors** | A **Show visitors (N)** link that jumps to the Visitors sub-tab filtered to that topic |
+
+Use the refresh control to regenerate the topic insights as new conversations come in.
 
 ---
 
@@ -238,66 +256,21 @@ Show widget when:
 ### Do's
 
 | Practice | Why It Works |
-|----------|-------------|
-| **Provide detailed AI instructions** | Better context = more relevant responses |
-| **Include pricing information** | Visitors frequently ask about cost |
-| **Set up quick prompts** | Guides visitors to valuable conversations |
-| **Review conversations regularly** | Learn what visitors actually ask |
-| **Target high-intent pages** | Pricing and demo pages convert best |
+|----------|--------------|
+| Provide detailed AI Instructions | Better context = more relevant responses |
+| Pick the right email-handoff mode | Book-a-meeting converts high-intent chats into demos automatically |
+| Include pricing context | Visitors frequently ask about cost |
+| Review the AI Conversation Summary | Learn what visitors actually ask, and which topics convert |
+| Target high-intent pages | Pricing and demo pages convert best |
 
 ### Don'ts
 
 | Avoid | Why |
 |-------|-----|
-| **Vague instructions** | AI won't know how to represent your brand |
-| **Showing to all pages** | May overwhelm visitors on informational content |
-| **Ignoring captured emails** | Follow up while interest is hot |
-| **Skipping voice setup** | Many visitors prefer speaking to typing |
-
----
-
-## Analytics and Reporting
-
-Track Agentic Chat performance in the campaign dashboard.
-
-### Insights Tab
-
-View high-level metrics and trends:
-
-![Insights tab showing CTA Clicks, Conversions, CVRL, CTRL metrics and performance chart](/img/screenshots/agentic-chat/ac-preview-expanded.png)
-
-| Metric | What It Measures |
-|--------|-----------------|
-| **CTA Clicks** | Engagement with chat CTAs |
-| **Conversions** | Goal completions from chat visitors |
-| **CVRL** | Conversion rate - personalized group |
-| **CTRL** | Conversion rate - control group |
-| **Total Impressions** | Total times the chat widget was displayed to visitors |
-
-### Engagement Tab
-
-Review individual visitor interactions and page visit data:
-
-![Engagement tab showing website page visits with form submissions, page views, scroll depth, and engagement scores](/img/screenshots/agentic-chat/ac-preview-welcome.png)
-
-Each visit shows:
-- **Total Form Submissions** - Forms completed
-- **Total Page Views** - Pages visited
-- **Scroll Depth** - How far they scrolled
-- **Time on Page** - Engagement duration
-- **Engagement Score** - 0-100 composite score
-
-### Performance Tab
-
-Dive into visitor-level analytics:
-
-![Performance tab showing Visitors sub-tab with domain, visitor, chat history, page views, and sessions data](/img/screenshots/agentic-chat/ac-performance-tab.png)
-
-Sub-tabs available:
-- **VISITORS** - Individual visitor data with company domain and chat history
-- **CTA CLICKS** - Which CTAs are getting clicks
-- **ACCOUNTS** - Company-level aggregated data
-- **CONVERSIONS** - Conversion event details
+| Vague instructions | The AI won't know how to represent your brand |
+| Showing on every informational page | May overwhelm visitors browsing content |
+| Ignoring captured emails | Follow up while interest is hot |
+| Leaving handoff mode unconfigured | You miss the chance to book demos straight from chat |
 
 ---
 
@@ -307,18 +280,25 @@ Sub-tabs available:
 
 | Check | Solution |
 |-------|----------|
-| Campaign status | Must be **Active** |
-| Page patterns | URL must match configured patterns |
-| Audience rules | Visitor must match targeting criteria |
-| Script installed | Abmatic script must be on the page |
+| Campaign status | Must be active |
+| Page patterns | The URL must match your configured patterns |
+| Audience rules | The visitor must match your targeting criteria |
+| Script installed | The Abmatic AI script must be on the page |
 
 ### AI Not Responding
 
 | Issue | Fix |
 |-------|-----|
-| Empty instructions | Add context in Instructions tab |
-| Website not scraped | Check Settings > AI Agents > Agentic Chat |
+| Empty instructions | Add context in the Instructions tab |
+| Website not scraped | Check the Agentic Chat config in Settings > AI Agents |
 | Rate limiting | Wait a moment and retry |
+
+### Book-a-Meeting Shows No Slots
+
+| Issue | Fix |
+|-------|-----|
+| No Google Calendar connected | Connect Google Calendar and set up meeting types |
+| No default AE / routing | Set a default account executive so the assistant has a calendar to read |
 
 ### Voice Chat Issues
 
@@ -326,7 +306,7 @@ Sub-tabs available:
 |-------|-----|
 | Microphone not working | Grant browser microphone permission |
 | No audio response | Check volume and speaker settings |
-| Connection failed | Verify stable internet connection |
+| Connection failed | Verify a stable internet connection |
 
 ---
 
@@ -334,19 +314,16 @@ Sub-tabs available:
 
 Get notified when visitors engage:
 
-1. Connect Slack in **Settings** > **Integrations** > **Slack**
-2. Enable Agentic Chat notifications
-3. Receive alerts for:
-   - New conversations started
-   - Work emails captured
-   - High intent conversations
+1. Connect Slack in **Settings > Integrations > Slack**.
+2. Enable Agentic Chat notifications.
+3. Receive alerts for new conversations, captured work emails, and HubSpot-form submissions from the handoff flow.
 
 ---
 
 ## Related Resources
 
-- [AI Agents Overview](/ai-agents/ai-agents-overview) - Learn about all AI capabilities
-- [AI Agents Configuration](/ai-agents/ai-agents-configuration) - Set up default AI context
-- [Agentic Chat Widget](/ai-agents/agentic-chat-widget) - Technical widget details
-- [Website Personalization](/campaigns/website-personalization) - Combine with personalization
-- [Visitor Tracking](/visitor-tracking/overview) - How visitors are identified
+- [AI Agents Overview](/ai-agents/ai-agents-overview) — Learn about Clara and Alex
+- [AI Agents Configuration](/ai-agents/ai-agents-configuration) — Set up default AI context
+- [Agentic Chat Widget](/ai-agents/agentic-chat-widget) — Technical widget details
+- [Widget Campaigns](/campaigns/widget) — Other on-page widget types
+- [Website Personalization](/campaigns/website-personalization) — Combine with personalization

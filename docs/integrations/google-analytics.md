@@ -2,6 +2,7 @@
 id: google-analytics
 title: Google Analytics 4 Integration
 sidebar_label: Google Analytics 4
+sidebar_position: 5
 ---
 
 # Google Analytics 4 Integration
@@ -38,12 +39,16 @@ Before connecting Google Analytics 4, ensure you have:
 
 ### Step 1: Navigate to Integrations
 
-1. Go to **Settings** > **Integrations**
-2. Scroll down to find **Google Analytics 4** in the Conversion Tracking section
+1. Open **Settings** from the top bar, then click the **INTEGRATIONS** tab
+2. Scroll down to the **Conversion tracking** section and find the **Google Analytics 4** card
 3. Click **Authorize**
 
-![Settings > Integrations page](/img/screenshots/integrations-hub.png)
-*Navigate to Settings > Integrations and scroll down past CRM and Communications to find the Conversion Tracking section with Google Analytics 4.*
+![Google Analytics 4 card in the Conversion tracking section](/img/screenshots/ga-card.png)
+*The Conversion tracking section of the Integrations tab. Google Analytics 4 and Segment each have a **SETTINGS** gear and an **AUTHORIZE** button. Both show **Inactive** until connected.*
+
+:::note Only one conversion source at a time
+You can have only one conversion-tracking integration active at a time. If Segment is already connected, disable it before authorizing Google Analytics 4.
+:::
 
 ### Step 2: Authenticate with Google
 
@@ -114,11 +119,11 @@ This enables the lift calculations you see in Campaign Insights.
 After connecting:
 
 1. Go to **Conversions** > **Manage**
-2. Your GA4 conversion events appear with a Google Analytics icon
+2. Your imported GA4 conversion events appear in the events list alongside any goals you created manually
 3. Set any GA4 goal as your **Main Event** for primary tracking
 
-![Conversions Manage tab](/img/screenshots/conversions-manage.png)
-*The Manage tab shows all conversion events. GA4 events appear alongside manually created goals.*
+![Conversions Manage tab listing imported events](/img/screenshots/ga-events.png)
+*The Manage tab lists every conversion event. Each row shows the **Event** name, its **Event Type** (Click Event or Page View), how many page elements it is **Attached To**, a **Main Event** selector, and a **Visibility** toggle. Imported GA4 events appear in this same list.*
 
 ### Setting a Main Conversion Goal
 
@@ -219,9 +224,9 @@ The Google Analytics 4 integration:
 
 To remove the Google Analytics 4 connection:
 
-1. Go to **Settings** > **Integrations**
-2. Find Google Analytics 4
-3. Click **Settings** > **Disable**
+1. Open **Settings** and click the **INTEGRATIONS** tab
+2. Find the **Google Analytics 4** card in the **Conversion tracking** section
+3. Click **Disable**
 
 This will:
 - Stop syncing new conversion data

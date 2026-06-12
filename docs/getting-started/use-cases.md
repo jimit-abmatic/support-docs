@@ -9,7 +9,7 @@ sidebar_position: 4
 
 Discover how leading B2B marketing teams use Abmatic AI to transform anonymous website traffic into pipeline and revenue. Each use case walks you through the problem, solution, and results you can expect.
 
-![Abmatic AI Dashboard showing key metrics](/img/screenshots/verified/home-dashboard.png)
+![Abmatic AI Home Overview showing accounts, contacts, campaigns, and collections](/img/screenshots/intro-home.png)
 
 ---
 
@@ -29,9 +29,9 @@ Your website uses generic messaging that fails to resonate with different indust
 4. Create additional variations for your other key verticals (technology, financial services, manufacturing, etc.)
 
 **What Success Looks Like:**
-- **15-30% increase** in engagement from targeted industries
-- **Higher conversion rates** as visitors see relevant content immediately
-- **Faster sales cycles** when prospects already understand your industry expertise
+- **Higher engagement** from targeted industries who see relevant content immediately
+- **Better conversion** as visitors recognize your industry expertise right away
+- **Faster sales cycles** when prospects already understand how you help their sector
 
 ### Personalize for Named Accounts
 
@@ -44,29 +44,36 @@ Your sales team is pursuing 50 high-value enterprise accounts, but when decision
 3. Customize messaging by account tier—enterprise accounts see different content than mid-market
 4. Include company name tokens, relevant case studies, and personalized CTAs
 
-![Campaigns list showing personalization campaigns](/img/screenshots/verified/campaigns-list.png)
+![Campaigns table showing personalization, advertising, and agentic campaigns](/img/screenshots/uc-campaigns.png)
+
+*The Campaigns table lists every campaign with its type, status, and visitor counts.*
 
 **What Success Looks Like:**
-- **VIP experience** for your most valuable prospects
+- A **VIP experience** for your most valuable prospects
 - **Sales enablement** through custom landing pages that support outreach
 - **Higher engagement** from accounts that feel personally addressed
 
 ---
 
-## Company Identification (Reveal)
+## Visitor Reveal
 
-Stop guessing who's visiting your website. Reveal turns anonymous traffic into actionable sales intelligence.
+Stop guessing who's visiting your website. **Visitor Reveal** turns anonymous traffic into actionable sales intelligence.
+
+![Visitor Reveal Accounts with confidence buckets, industry, and visited pages](/img/screenshots/uc-reveal.png)
+
+*Visitor Reveal lists identified companies along with a Reveal Confidence level so you can prioritize the strongest matches.*
 
 ### See Who's Visiting Your Website
 
 **The Challenge:**
-Google Analytics tells you 1,000 companies visited your website last month, but you have no idea which ones. Your sales team is essentially flying blind.
+Your analytics tells you many companies visited your website last month, but you have no idea which ones. Your sales team is essentially flying blind.
 
 **The Abmatic Solution:**
-1. Install the Abmatic tracking script (one-time, 5-minute setup)
-2. Navigate to **Reveal** > **Accounts** to see identified companies in real-time
+1. Install the Abmatic AI tracking script (a one-time setup that takes a few minutes)
+2. Click **Visitor Reveal** in the left sidebar and use the **Accounts** tab to see identified companies
 3. Filter by industry, company size, location, or pages visited
-4. Prioritize outreach to high-fit companies showing genuine interest
+4. Use the **Reveal Confidence** level (Very High down to Very Low) to focus on the strongest matches
+5. Prioritize outreach to high-fit companies showing genuine interest
 
 **What Success Looks Like:**
 - **Complete visibility** into your anonymous website traffic
@@ -221,16 +228,16 @@ Let AI handle the heavy lifting of personalized prospecting so your team can foc
 Your SDR team spends 30+ minutes per prospect researching the company, crafting a personalized email, writing LinkedIn messages, and preparing call scripts. At that rate, each rep can only reach 15-20 new prospects per day, and the quality degrades as they get tired.
 
 **The Abmatic Solution:**
-1. Import your target contact list into Abmatic (CSV, CRM sync, or build from filters)
-2. Navigate to **Campaigns** and create an **Agentic Flow** campaign
-3. Configure your AI context in **Settings > AI Agents > Agentic Sequence** with your value props, tone guidelines, and personalization rules
-4. Build a 4-5 step sequence: intro email, LinkedIn connection, value-add email, call script, final email
-5. AI generates unique, personalized content for every contact in the sequence
+1. Import your target contact list into Abmatic AI (CSV, CRM sync, or build from filters)
+2. Navigate to **Campaigns** and create a **Sequence** (or **Agentic Flow**) campaign
+3. Configure your AI context in **Settings > AI Agents** with your value props, tone guidelines, and personalization rules
+4. Build a multi-step sequence: intro email, LinkedIn connection, value-add email, call script, final email
+5. The AI generates unique, personalized content for every contact in the sequence
 
 **What Success Looks Like:**
-- **10x outreach volume** without adding headcount
-- **15-25% reply rate** on AI-personalized messages (vs. 3-5% for templates)
-- **Hours saved daily** that reps can redirect to conversations and closing
+- **More outreach volume** without adding headcount
+- **Personalized messages** instead of generic templates
+- **Hours saved** that reps can redirect to live conversations and closing
 
 ### Engage Website Visitors with AI Chat
 
@@ -240,13 +247,14 @@ Visitors arrive on your website at all hours, but your team can only respond dur
 **The Abmatic Solution:**
 1. Create an **Agentic Chat** campaign targeting high-value pages (pricing, demo request, product pages)
 2. Configure the AI with your product information, pricing, and common questions in the **Instructions** tab
-3. Set audience rules so the widget appears for target accounts and high-intent visitors
-4. The AI engages visitors 24/7, answers questions, captures work emails, and qualifies leads automatically
+3. Choose how the chat hands off when a visitor is ready — it can **book a meeting**, **send a thank-you email**, or **show a HubSpot form**
+4. Set audience rules so the widget appears for target accounts and high-intent visitors
+5. The AI engages visitors around the clock, answers questions, captures work emails, and qualifies leads automatically
 
 **What Success Looks Like:**
-- **3x more qualified conversations** compared to traditional chatbots or contact forms
-- **24/7 lead capture** including evenings, weekends, and holidays
-- **Instant response times** that keep prospects engaged while intent is high
+- **Around-the-clock lead capture**, including evenings, weekends, and holidays
+- **Instant responses** that keep prospects engaged while intent is high
+- **Qualified handoffs** — booked meetings and captured emails sent straight to your team
 
 ---
 
@@ -292,12 +300,63 @@ Your team spent $50,000 on a conference booth and collected 400 badge scans. Thr
    - Day 3: LinkedIn connection referencing the event
    - Day 6: Value-add email with the content asset discussed at the booth
    - Day 10: Call script referencing specific conversations from the event
-4. Set up a **Banner & Popup** campaign for event attendees visiting your site: "Welcome back from [Event]! Ready for that demo?"
+4. Set up a **Widget** campaign for event attendees visiting your site: "Welcome back from [Event]! Ready for that demo?"
 
 **What Success Looks Like:**
-- **100% of event leads contacted** within the first week (not just the 3% that sales remembered)
+- **Every event lead contacted** within the first week, not just the ones sales remembered
 - **Coordinated multi-channel follow-up** that feels personal, not automated
-- **Clear attribution** showing how many meetings and pipeline came from the event investment
+- **Clear attribution** showing which meetings and pipeline came from the event investment
+
+---
+
+## Booking Meetings from Your Website
+
+Turn high-intent visitors into booked meetings without making them wait for a reply.
+
+### Let Visitors Book a Demo on the Spot
+
+**The Challenge:**
+A visitor reaches your pricing page, is clearly interested, but the only option is a contact form. By the time someone follows up, the moment has passed.
+
+**The Abmatic Solution:**
+1. Connect **Google Calendar** in your integrations and set up meeting types and a default AE
+2. Create an **Agentic Chat** campaign on your high-intent pages
+3. Set the chat's handoff mode to **book a meeting**, so qualified visitors can pick a time then and there
+4. Track outcomes with the **Demo Booked** columns in Analytics — see Demo Booked, Demo Booked At, Demo Scheduled At, Demo AE, and Demo Time
+
+**What Success Looks Like:**
+- **Meetings booked while intent is high**, instead of after a delayed follow-up
+- **A clear record** of which campaigns and accounts produced booked demos
+- **Less manual scheduling** back-and-forth for your team
+
+---
+
+## Hands-Off Growth with Oracle
+
+Set goals and let Abmatic AI's autonomous agent propose and run the work toward them — with your approval on anything high-impact.
+
+:::info Oracle is enabled per account
+Oracle is an advanced, autonomous-agent product that is turned on per account. If you don't see **Goals** or **Oracle Inbox** in your sidebar, it isn't enabled yet. To explore it, contact your Abmatic AI representative or email [support@abmatic.ai](mailto:support@abmatic.ai).
+:::
+
+### Run Toward a Goal with Oversight
+
+**The Challenge:**
+You know what you want — more demos booked next quarter — but coordinating the campaigns, audiences, and outreach to get there is a lot of ongoing work.
+
+**The Abmatic Solution:**
+1. In **Oracle Goals**, create a goal (for example, a target number of demos booked by a date)
+2. Oracle works toward the goal and reports progress in **weekly checkpoints** with notes on the actions it took
+3. When Oracle proposes a high-impact action, it appears in the **Oracle Inbox** with a risk level, estimated spend, and rationale
+4. **Approve or deny** each proposed action, with optional notes — you stay in control
+5. Choose a trust tier (supervised, standard, or autonomous) to set how much Oracle can do on its own
+
+**What Success Looks Like:**
+- **Progress toward a clear goal** without managing every step yourself
+- **Approval checkpoints** so nothing high-impact happens without your sign-off
+- **A weekly record** of what the agent did and why
+
+Learn more in the [Oracle Overview](/ai-agents/oracle-overview).
 
 ---
 

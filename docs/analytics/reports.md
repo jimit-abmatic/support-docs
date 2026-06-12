@@ -9,8 +9,8 @@ sidebar_position: 3
 
 Transform your ABM data into actionable insights with custom reports. Build the exact views you need to answer critical business questions—no SQL required.
 
-![Analytics Reports](/img/screenshots/analytics-reports.png)
-*Reports list showing 351 reports organized by type with quick filter blocks*
+![The Reports list with per-type quick-filter blocks (All Reports, User, Contact, Campaign, Unique Visitor, Opportunity) above a table of saved reports](/img/screenshots/rep-list.png)
+*The Reports list. The blocks across the top are quick filters showing the count of reports of each type; the table below lists your saved reports with their type, created date, and updated date. (Counts reflect your own account.)*
 
 ## Why Custom Reports Matter
 
@@ -36,27 +36,35 @@ Reports let you:
 
 ## Report Types
 
-Create reports on any entity in your Abmatic data:
+There are **seven report types**:
 
 | Report Type | What It Analyzes | Best For |
 |-------------|------------------|----------|
-| **Account** | Company-level data and engagement | ABM performance, target account health |
+| **Account** | Company-level data and engagement | Target-account health, ABM performance |
 | **Contact** | Person-level information | Contact quality, persona analysis |
-| **Campaign** | Campaign performance metrics | ROI analysis, optimization |
-| **Opportunity** | Pipeline and deal data | Revenue attribution, forecasting |
-| **User** | Team member analytics | Activity tracking, productivity |
-| **Unique Visitor** | Website visitor sessions | Traffic analysis, engagement patterns |
-| **LinkedIn Session** | LinkedIn visitor data | Social engagement tracking |
+| **Opportunity** | Pipeline and deal data | Pipeline reporting, trends |
+| **Campaign** | Campaign performance metrics | Comparing and optimizing campaigns |
+| **User** | Team-member activity | Adoption and usage tracking |
+| **Unique Visitor** | Website visitor sessions | Traffic and engagement patterns |
+| **LinkedIn Visitor Session** | LinkedIn visitor data | LinkedIn visitor/ad tracking |
+
+:::note On labels
+Report-type labels are auto-formatted from their underlying names, so the last one appears in the app as **"Linkedin Visitor Session"**. It's the report for LinkedIn visitor data.
+:::
 
 ## Getting Started
 
 ### Creating Your First Report
 
 1. Navigate to **Analytics > Reports**
-2. Click **Create Report**
-3. Select your report type
-4. Name your report descriptively
-5. Click **Create** to open the editor
+2. Click **Create Report** (top-right)
+3. In the **Create Report** dialog, choose a **Report Type**
+4. Abmatic AI creates a report named `Report - <random>` and opens it in the editor
+5. Rename it (the name field auto-saves) and start building
+
+:::tip Use descriptive names
+Rename `Report - <random>` to something like "Enterprise Accounts by Industry" or "Quarterly Opportunity Amount" so it's easy to find and reuse.
+:::
 
 ### Report Naming Best Practices
 
@@ -73,28 +81,23 @@ Create reports on any entity in your Abmatic data:
 | "New report" | Not searchable |
 | "Test" | Clutters your report list |
 
-## The Report Interface
+## The Report Editor
 
-### Edit Mode
+The editor is a full pivot-and-chart surface. You add columns, group rows, set aggregations, optionally turn on pivot mode, and chart the result.
 
-Full configuration access for building your report:
+![The report editor showing a line chart at the top, a pivoted table below grouped by quarter with a sum aggregation, the Columns panel open on the right with Pivot Mode on, a Total Rows card, and Show Chart and Save & View Full Report buttons](/img/screenshots/rep-editor.png)
+*The report editor. The breadcrumb shows **Reports › `<Report Type>`**. The right-hand **Columns** panel lets you choose fields and toggle **Pivot Mode**; the **Total Rows** card and the **"This preview shows only a maximum of 500 rows."** banner sit at the top, alongside **Show Chart** and **Save & View Full Report**.*
 
-- **Columns Panel** - Choose which fields to display
-- **Filters** - Narrow down your data
-- **Grouping** - Organize rows by field values
-- **Aggregations** - Calculate sums, averages, counts
-- **Chart Toggle** - Visualize your data
+### Editor vs. Full Report View
 
-**Preview Limit:** Edit mode shows up to 500 rows for fast performance.
+| Mode | What it is | Row behavior |
+|------|------------|--------------|
+| **Editor** (`…/edit`) | Build and configure the report | Preview is capped at **500 rows** for speed |
+| **Full report view** (`…/<id>`) | Read-only chart + table | Loads the **full dataset**, paginated 500 rows at a time |
 
-### View Mode
+In the editor you'll see a **Total Rows** card and the banner **"This preview shows only a maximum of 500 rows."** When you open the full report view, Abmatic AI loads every row page by page and shows a **"Loading rows: X of Y"** progress indicator while it fetches. Click **Save & View Full Report** to jump to that view, or **Edit Report** in the view to return.
 
-Read-only presentation for consuming reports:
-
-- Charts display prominently
-- Full data grid below
-- No accidental configuration changes
-- Share-ready format
+If a report isn't grouped/aggregated/pivoted enough to display, the full view shows: *"This report is not in a viewable state. Edit the report to add a grouping, an aggregation and turn on the pivot mode with an optional chart."*
 
 ## Building Your Report
 
@@ -105,32 +108,18 @@ Read-only presentation for consuming reports:
 3. Check the columns you want to include
 4. Drag to reorder as needed
 
-### Available Column Types
+### Available Columns
 
-**Account Reports:**
-| Category | Fields |
-|----------|--------|
-| **Identity** | Website, Name, Industry |
-| **Firmographics** | Employee Count, Revenue, Company Type |
-| **Location** | Country, Region, City |
-| **Engagement** | Engagement Score, Temperature, Page Views |
-| **CRM** | Salesforce ID, HubSpot ID, Last Sync |
+The columns available in a report are **driven by the report type and returned by Abmatic AI** — the list you see depends on which type you chose (Account, Contact, Campaign, and so on). The frontend doesn't hardcode a per-type column list. Open the **Columns** panel on the right to show or hide fields.
 
-**Contact Reports:**
-| Category | Fields |
-|----------|--------|
-| **Identity** | Email, Name, Job Title |
-| **Professional** | Seniority Level, Department |
-| **Company** | Company Name, Industry, Size |
-| **Engagement** | Engagement Score, Last Active |
-| **CRM** | CRM ID, Lead Status |
+Account and contact reports include the newer **demo-booking** fields described in [Campaign Performance](/analytics/campaign-performance):
 
-**Campaign Reports:**
-| Category | Fields |
-|----------|--------|
-| **Identity** | Campaign Name, Type, Status |
-| **Performance** | Visitors, CTR, Conversions |
-| **Attribution** | Revenue Attributed, Influenced Pipeline |
+- **Demo Booked** — whether a demo was booked
+- **Demo Booked At** — when the meeting was booked
+- **Demo Scheduled At** — the meeting's scheduled start time
+- **Demo AE** — the account executive on the meeting
+
+These are populated by the agentic-chat meeting-booking flow.
 
 ### Column Operations
 
@@ -156,19 +145,17 @@ Apply filters directly on any column:
    - **Set filter** - Select specific values
 3. Enter your criteria
 
-### Advanced Filter Builder
+### Advanced Filtering
 
-For complex multi-condition filters:
+For complex multi-condition logic, turn on advanced filtering from the report's overflow (`⋮`) menu. The option is labeled **"Enable Advance Filtering"** (and **"Disable Advance Filtering"** to turn it off).
 
-1. Click the **menu icon** > **Enable Advance Filtering**
-2. Build your filter logic:
-   - Select column
-   - Choose operator
-   - Enter value
-3. Add conditions with AND/OR logic
-4. Filters apply automatically
+:::note
+The on-screen label reads **"Advance Filtering"** (not "Advanced") — that's the literal UI string.
+:::
 
-**Note:** Switching between standard and advanced filtering clears existing filters.
+:::warning Switching clears existing filters
+A confirmation dialog warns you that enabling or disabling advance filtering removes your existing filters. It also notes that removing a column does not remove its advance filter. Turn on advanced filtering before you've built a lot of column filters you care about.
+:::
 
 ### High-Impact Filter Examples
 
@@ -222,18 +209,15 @@ Transform your data into a pivot table:
 
 ### Chart Requirements
 
-To enable chart visualization:
-
-1. **Pivot mode** must be ON
-2. **Row grouping** must be applied
-3. **Aggregation** must be configured on at least one column
+The **Show Chart** button is only enabled when **a row group and an aggregation are set, and pivot mode is on**. The button's tooltip states this directly.
 
 ### Building a Chart
 
-1. Configure your pivot table with grouping and aggregations
-2. Toggle the **Chart** view
-3. Chart renders automatically based on your data
-4. Default chart type: Grouped Column
+1. Set up a row group and at least one aggregation, and turn on **Pivot Mode**.
+2. Click **Show Chart**.
+3. The chart renders from your pivot data. The default chart type is **Grouped Column**.
+
+Only reports with a chart enabled can be added to a dashboard as a widget, so chart-enable a report before trying to add it. See [Dashboards](/analytics/dashboards).
 
 ### Chart Features
 
@@ -246,15 +230,7 @@ To enable chart visualization:
 
 ### Auto-Save
 
-Your report saves automatically as you make changes:
-- Column configuration
-- Filter settings
-- Grouping and aggregations
-- Chart settings
-
-### Manual Save
-
-Click **Save** to ensure all changes are persisted before navigating away.
+Your report configuration saves automatically as you work — columns, filters, sort, grouping, aggregations, pivot, and chart. There's no separate save step for these changes. Use **Save & View Full Report** when you want to save the chart configuration and open the read-only full report.
 
 ### Adding to Dashboards
 
@@ -271,15 +247,14 @@ Reports with charts can be added to dashboards:
 
 | Context | Limit | Why |
 |---------|-------|-----|
-| Edit mode | 500 rows | Fast iteration while building |
-| View mode | No limit | Full data access |
-| Export | No limit | Complete data download |
+| Editor preview | 500 rows | Fast iteration while building |
+| Full report view | Full dataset (loaded 500 rows per page) | Complete data, fetched page by page with a progress indicator |
+| Export | Full dataset | Complete data download |
 
 ### Data Freshness
 
-- **Reports** query live data (no caching)
-- **Dashboard widgets** may be cached
-- **Refresh** the page for the absolute latest data
+- **Reports** query your current data
+- **Dashboard widgets** are served from a cache for speed; use the dashboard **Refresh** icon to clear it (see [Dashboards](/analytics/dashboards))
 
 ## Advanced Features
 
@@ -296,10 +271,10 @@ Break down date columns for time-based analysis:
 
 ### Custom Fields
 
-Reports support your custom field definitions:
+Custom fields you configure for an entity type are available as columns in that report type:
 
-- Up to 10 custom fields per entity type
-- Available in the column list
+- Account and contact entities support up to **30 custom fields** (`field_01` through `field_30`)
+- Available in the **Columns** panel
 - Fully filterable and groupable
 - Map to your specific business attributes
 
@@ -341,17 +316,17 @@ Assess your contact database:
 | **Filter** | Is Enriched = true |
 | **Chart** | Contacts by seniority |
 
-### Pipeline Attribution Report
+### Opportunity Pipeline Report
 
-Show ABM's impact on revenue:
+Summarize pipeline from your CRM-synced opportunities:
 
 | Configuration | Setting |
 |---------------|---------|
 | **Report Type** | Opportunity |
-| **Columns** | Name, Amount, Stage, Campaign Source |
-| **Group By** | Campaign Source |
+| **Columns** | Name, Amount, Stage |
+| **Group By** | Quarter (via date decomposition) or Stage |
 | **Aggregation** | Sum of Amount |
-| **Chart** | Pipeline by source |
+| **Chart** | Pipeline by quarter or stage |
 
 ## Best Practices
 

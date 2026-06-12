@@ -2,6 +2,7 @@
 id: google-ads
 title: Google Ads Integration
 sidebar_label: Google Ads
+sidebar_position: 2
 ---
 
 # Google Ads Integration
@@ -34,28 +35,30 @@ Once connected, you can:
 
 ### Prerequisites
 
-Before connecting, ensure your Google Ads account meets these requirements:
+Before connecting, ensure your Google Ads account meets Google's current Customer Match requirements:
 
 | Requirement | Details |
 |-------------|---------|
-| Account history | At least 90 days old |
-| Payment history | Good standing, no unpaid balances |
-| Policy compliance | No active policy violations |
-| Total spend | $50,000+ lifetime (varies by region) |
-| Admin access | You can authorize third-party integrations |
+| Policy compliance | A good history of compliance with Google Ads policies, with no active policy violations |
+| Payment standing | An account in good standing with no unpaid balances |
+| Admin access | You can authorize third-party integrations on the account |
+
+:::info Customer Match eligibility changed
+Customer Match eligibility is based on your account's **policy-compliance history and payment standing** — not a fixed lifetime-spend figure. Google has dropped the old "$50,000+ lifetime spend" threshold that some older guides still mention. Some features may still consider account spend history, but there is no published dollar minimum. Always confirm in your own Google Ads account.
+:::
 
 :::tip Check Customer Match Eligibility
-Go to **Google Ads > Tools > Audience Manager** to verify Customer Match is available for your account. If not eligible, contact your Google representative.
+In Google Ads, go to **Tools > Audience Manager** to confirm Customer Match is available for your account. If it is not available, contact your Google representative.
 :::
 
 ### Step 1: Navigate to Integrations
 
-![Settings > Integrations page](/img/screenshots/integrations-hub.png)
+![Google Ads card in the Ad Networks section](/img/screenshots/li-int-card.png)
 
-*Navigate to Settings > Integrations and scroll down past CRM and Communications to find the Advertising section with Google Ads.*
+*The Ad Networks section of the Integrations tab. Google Ads sits between LinkedIn and OpenAI. Click **Authorize** to connect; it becomes **Disable** once the account is active.*
 
-1. Click **Integrations** in the main navigation
-2. Scroll down to the **Advertising** section
+1. Open **Settings** from the top bar, then click the **INTEGRATIONS** tab
+2. Scroll down to the **Ad Networks** section
 3. Find the **Google Ads** card
 
 ### Step 2: Authorize Abmatic
@@ -75,17 +78,17 @@ Go to **Google Ads > Tools > Audience Manager** to verify Customer Match is avai
 
 ### Step 3: Select Your Ad Account
 
-If you have multiple Google Ads accounts:
+If you have access to multiple Google Ads accounts:
 
-1. A dialog will appear with your available accounts
+1. A **Select Google Ads Account** dialog appears listing your available accounts
 2. Each account shows:
    - Account name
    - Account ID
    - Currency
-3. Click on the account you want to connect
-4. Abmatic will complete the connection
+3. Click the account you want to connect
+4. Abmatic completes the connection
 
-If you have only one account, it will be selected automatically.
+If you have access to only one account, it is selected automatically.
 
 ### Step 4: Verify the Connection
 
@@ -130,19 +133,22 @@ This process typically takes 1-5 minutes depending on list size. Google then tak
 
 ## Using the Integration
 
-Once connected, you can create Customer Match audiences from:
+Once connected, you can create Customer Match audiences from your account and contact collections.
 
 ### Account Collections
 
-1. Go to **Accounts** > **Collections**
+1. Go to **Accounts** in the left sidebar, then open the **Collections** tab
 2. Select the collection you want to sync
 3. Click the **more menu** (three dots)
 4. Select **Create Google Ads Customer Match**
 5. Monitor the progress stepper
 
+![Accounts Collections tab](/img/screenshots/google-ads-accounts-list.png)
+*The **Collections** tab under **Accounts**. Pick a collection here, then use its more menu (three dots) to push it to Google Ads as a Customer Match audience.*
+
 ### Contact Collections
 
-1. Go to **Contacts** > **Collections**
+1. Go to **Contacts** in the left sidebar, then open the **Collections** tab
 2. Select the collection with email data
 3. Click the **more menu** (three dots)
 4. Select **Create Google Ads Customer Match**
@@ -164,10 +170,10 @@ The integration card shows:
 
 If you need to disconnect:
 
-1. Go to **Integrations**
-2. Find the **Google Ads** card
+1. Open **Settings** and click the **INTEGRATIONS** tab
+2. Find the **Google Ads** card under **Ad Networks**
 3. Click **Disable**
-4. Confirm the disconnection
+4. Confirm in the popup that appears
 
 :::warning What Happens When You Disconnect
 - No new audiences can be pushed to Google Ads
@@ -200,7 +206,7 @@ To connect a different account or reconnect:
 
 | Avoid | Why |
 |-------|-----|
-| Syncing lists under 1,000 contacts | Won't meet Google's minimum threshold |
+| Syncing very small lists | Few matched users means the audience may not be targetable |
 | Using only work emails | Lower match rates vs. mixed data |
 | Expecting immediate results | Google processing takes 24-48 hours |
 | Sharing accounts across organizations | May cause policy issues |
@@ -229,10 +235,14 @@ To connect a different account or reconnect:
 
 | Problem | Cause | Solution |
 |---------|-------|----------|
-| Audience not appearing | Under 1,000 matches | Add more contacts to list |
+| Audience not appearing | Too few matched users | Add more contacts to the list |
 | Very low match rate | Work emails only | Add personal emails and phone numbers |
-| "Not eligible" message | Account doesn't qualify | Contact Google about eligibility |
-| Audience shows as "Too small" | Insufficient matches | Expand your source list |
+| "Not eligible" message | Account doesn't qualify | Check policy compliance and payment standing, then contact Google about eligibility |
+| Audience shows as "Too small" | Insufficient matched users | Expand your source list |
+
+:::note Minimum audience size
+Google needs a minimum number of matched, recently active users before a Customer Match list is targetable. Google has lowered these minimums over time (as low as 100 users in some Search campaigns), but a larger, well-matched list still performs better. Build healthy-sized lists rather than aiming for the bare minimum.
+:::
 
 ## Privacy and Security
 

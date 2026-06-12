@@ -9,11 +9,11 @@ sidebar_position: 2
 
 Install the Abmatic AI tracking script on your website to unlock the full power of account-based marketing: identify anonymous visitors, personalize their experience, and track conversions in real-time.
 
-![Installation page showing script code and active status](/img/screenshots/installation-script.png)
+![Installation page with three steps — copy the javascript tag, paste it into the head section, and check that the code works — plus a Status pill showing "Active" and a "Last visitor" timestamp](/img/screenshots/set-install.png)
 
 ## Why Install the Script?
 
-The Abmatic script is the foundation of your ABM strategy. Once installed, you'll immediately start:
+The Abmatic AI script is the foundation of your ABM strategy. Once installed, you'll immediately start:
 
 - **Identifying companies** visiting your website (even anonymous visitors)
 - **Personalizing content** based on company, industry, or account lists
@@ -29,19 +29,23 @@ Most customers see their first identified companies within minutes of installati
 
 ### Find Your Installation Code
 
-1. Navigate to **Settings > Installation** in Abmatic
-2. Click on the script code box to copy it to your clipboard
-3. The script is unique to your account and ready to use
+1. Open the **Installation** page (the Installation item is pinned at the bottom of the left icon sidebar)
+2. Under **1. Copy the javascript tag**, click the script code box to copy it to your clipboard
+3. The snippet already contains your account's unique script ID — nothing to fill in
 
 ### Script Format
 
-Your script will look like this:
+Your snippet is a single line that looks like this (your account's real ID is filled in for you):
 
 ```html
 <script async src="https://clients.abmatic.ai/YOUR_SCRIPT_ID.js"></script>
 ```
 
-That's it - a single line of code that unlocks powerful ABM capabilities.
+That's it — one line of code that unlocks personalization and visitor identification.
+
+:::tip Copy from the app, don't retype
+Always copy the exact snippet from the Installation page rather than typing it by hand. The script ID is specific to your account, and a typo means the script won't load.
+:::
 
 ## Installation Methods
 
@@ -54,7 +58,7 @@ Add the script to your website's `<head>` section for fastest loading:
 <html>
 <head>
   <title>Your Website</title>
-  <!-- Add Abmatic script as high as possible in head -->
+  <!-- Add Abmatic AI script as high as possible in head -->
   <script async src="https://clients.abmatic.ai/YOUR_SCRIPT_ID.js"></script>
 </head>
 <body>
@@ -73,7 +77,7 @@ Install via GTM for easier management:
 
 1. Open **Google Tag Manager**
 2. Create a new **Custom HTML** tag
-3. Paste your Abmatic script
+3. Paste your Abmatic AI script
 4. Set trigger to **All Pages** (Page View)
 5. Save and **Publish**
 
@@ -88,7 +92,7 @@ Install via GTM for easier management:
 
 **Using a Plugin (Easiest):**
 1. Install a header/footer script plugin (e.g., "Insert Headers and Footers")
-2. Add your Abmatic script to the header section
+2. Add your Abmatic AI script to the header section
 3. Save changes
 
 **Using Theme Editor:**
@@ -156,16 +160,20 @@ export default {
 
 ### Real-Time Status Check
 
-Once installed, Abmatic shows you immediately when it's working:
+Once installed, the Installation page shows you when the script is working. This matches **step 3 on the page — "Check that the code works."**
 
-1. Visit **Settings > Installation** in Abmatic
-2. Check the **Status** indicator:
-   - **Active** (green) = Script is working and tracking visitors
-   - **Inactive** (gray) = Waiting for first visitor
-3. The **Last visitor** timestamp shows recent activity
+1. Open the **Installation** page in Abmatic AI
+2. Look at the **Status** pill near the bottom of the card:
+   - **Active** = the script has been detected and is tracking visitors
+   - **Inactive** = Abmatic AI is still waiting to detect the first visit
+3. The **Last visitor** label shows how recently activity was seen (for example, "Last visitor: in 3 hours")
 
 :::tip
-Visit your own website after installation - you'll see the status turn "Active" within seconds as Abmatic detects your visit.
+Visit your own website after installing, then return to the Installation page — the Status should turn **Active** once Abmatic AI detects your visit.
+:::
+
+:::note Just browsing?
+You can skip installation if you're only exploring the product. The script is only needed once you want to run live personalizations and visitor identification on your website.
 :::
 
 ### Browser Console Verification
@@ -175,7 +183,7 @@ For technical verification:
 1. Visit your website
 2. Open browser Developer Tools (F12 or Cmd+Option+I)
 3. Go to the **Console** tab
-4. Look for any Abmatic-related errors
+4. Look for any Abmatic AI-related errors
 
 ### Network Tab Check
 
@@ -200,7 +208,7 @@ The script automatically captures valuable engagement data:
 
 ### Company Identification
 
-Abmatic identifies visiting companies through multiple methods:
+Abmatic AI identifies visiting companies through multiple methods:
 
 - **IP Intelligence** - Enterprise-grade reverse IP lookup
 - **Form Submissions** - Email domain matching
@@ -218,7 +226,7 @@ When a visitor submits a form:
 
 ### Built for Privacy
 
-Abmatic is designed with privacy-first principles:
+Abmatic AI is designed with privacy-first principles:
 
 - **First-party cookies only** - No third-party tracking
 - **GDPR compliant** - Data processed per your privacy policy
@@ -247,16 +255,15 @@ if (window.hasConsent && window.hasConsent('analytics')) {
 
 ### Minimal Impact
 
-The Abmatic script is optimized for performance:
+The Abmatic AI script is built to stay out of your page's way:
 
-| Metric | Value |
-|--------|-------|
-| **Size** | ~15KB gzipped |
-| **Loading** | Async (non-blocking) |
-| **Delivery** | Global CDN |
-| **Render Impact** | Zero blocking |
+| Property | Behavior |
+|----------|----------|
+| **Loading** | Loaded with `async`, so it never blocks page rendering |
+| **Delivery** | Served from a CDN (`clients.abmatic.ai`) |
+| **Placement** | Designed to sit in the `<head>` without delaying your content |
 
-Your pages load just as fast with Abmatic as without it.
+Because the snippet loads asynchronously, your pages render the same with the script in place as without it.
 
 ## Troubleshooting
 
@@ -269,9 +276,9 @@ Your pages load just as fast with Abmatic as without it.
 
 ### Status Still "Inactive"
 
-1. **Wait a moment** - Visit your site, then check Abmatic in 10-30 seconds
+1. **Wait a moment** - Visit your site, then re-open the Installation page after a short delay
 2. **Clear cache** - Hard refresh your website (Cmd+Shift+R)
-3. **Check domain** - Verify your domain matches in Settings > Account
+3. **Check domain** - Verify your website URL is correct under **Settings → Account**
 
 ### Company Not Identified
 
@@ -283,31 +290,11 @@ Your pages load just as fast with Abmatic as without it.
 
 ### Exclude Internal Traffic
 
-Keep your analytics clean by excluding your own team:
-
-```javascript
-// In Account Settings > Page Exclude Rules
-// Add paths or patterns to exclude
-```
+Keep your data clean by excluding your own team. Add URL paths or wildcard patterns under **Settings → Account → Page Exclude Rules** to suppress tracking and personalization on those pages.
 
 ### Custom Event Tracking
 
-Send custom events for deeper insights:
-
-```javascript
-abmatic('track', 'demo_requested', {
-  plan: 'enterprise',
-  source: 'pricing_page'
-});
-```
-
-### Debug Mode
-
-Enable console logging for troubleshooting:
-
-```javascript
-abmatic('debug', true);
-```
+To track custom conversion events (such as a demo request or a signup), use the conversion and event-tracking features rather than wiring up events by hand. See the [Event Tracking](/conversions/event-tracking) guide for the current, supported way to capture custom events.
 
 ## Related Documentation
 

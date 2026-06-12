@@ -7,9 +7,9 @@ sidebar_position: 3
 
 # Create Your First Campaign
 
-Transform anonymous website visitors into engaged prospects with your first personalization campaign. Companies using personalized experiences see **2-3x higher conversion rates** compared to generic pages.
+Turn anonymous website visitors into engaged prospects with your first personalization campaign. By showing each visitor content that matches their company, industry, or behavior, you make your website more relevant the moment they arrive.
 
-Follow this step-by-step guide to launch a website personalization campaign in Abmatic AI. In just 15 minutes, you'll have a live campaign delivering tailored content to your target accounts—no coding required.
+Follow this step-by-step guide to launch a website personalization campaign in Abmatic AI. You'll have a live campaign delivering tailored content to your target accounts — no coding required.
 
 | What You'll Achieve | Business Impact |
 |---------------------|-----------------|
@@ -51,47 +51,51 @@ You'll see your campaigns dashboard—the command center for all your personaliz
 
 ## Step 2: Start Creating a Campaign
 
-Click the **Create Campaign** button in the top-right corner to launch the campaign wizard.
+Click the **+ CAMPAIGN** button in the top-right corner to open the create dialog.
 
-![Create Campaign Button](/img/screenshots/first-campaign-create-button.png)
+![The + CAMPAIGN button opens the create dialog](/img/screenshots/first-campaign-create-button.png)
 
-*The Create Campaign button opens a wizard that guides you through setup.*
+*The + CAMPAIGN button opens a full-screen dialog where you pick a campaign type.*
 
 ---
 
 ## Step 3: Choose Your Campaign Type
 
-You'll see a grid of campaign types organized by channel. For your first campaign, focus on **Website Personalization**:
+The create dialog lists every campaign type, organized into three columns:
 
-![Campaign Create Modal](/img/screenshots/first-campaign-type-modal.png)
+| Column | Campaign Types |
+|--------|----------------|
+| **Personalization** | Inbound, Outbound, A/B Testing, Widget |
+| **Advertising** | Display Advertising, LinkedIn, OpenAI Ads, Retargeting |
+| **Agentic** | Agentic Flow, Sequence, Intent, Agentic Chat |
 
-*Select your campaign type—Website Personalization delivers the fastest time-to-value.*
+![The Create Campaign dialog with Personalization, Advertising, and Agentic columns](/img/screenshots/fc-create-type.png)
 
-### Recommended: Website Personalization (Inbound)
+*Choose a type from one of the three columns. For website personalization, use the Personalization column.*
 
-| Campaign Type | Best For | Example Use Case |
-|---------------|----------|------------------|
-| **Inbound** | Any visitor matching criteria | "Show enterprise messaging to visitors from 1000+ employee companies" |
-| **Outbound** | Specific named accounts | "Personalize for our top 50 target accounts by name" |
+### Recommended: Inbound (Website Personalization)
 
-**For your first campaign, choose Inbound.** It requires no pre-existing account lists and immediately personalizes for any visitor matching your criteria—so you see results faster.
+| Personalization Type | Best For | Example Use Case |
+|----------------------|----------|------------------|
+| **Inbound** | Any visitor matching your rules | "Show enterprise messaging to visitors from 1000+ employee companies" |
+| **Outbound** | Specific named accounts you've collected | "Personalize for our top 50 target accounts by name" |
 
-Click **Inbound** under Website Personalization.
+**For your first campaign, choose Inbound.** It requires no pre-existing collections and immediately personalizes for any visitor matching your criteria — so you see results faster.
+
+Click **Inbound** under **Personalization**.
 
 ---
 
 ## Step 4: Select Your Audience (Outbound Only)
 
-If you chose **Outbound**, you'll select specific accounts to target:
+If you chose **Outbound**, you'll select the specific accounts to target:
 
-1. Select **Account** or **Contact** targeting
-2. Choose a **Target Group** from the dropdown (these are lists you've created in [Audiences](/audiences/overview))
+1. Choose **Account** or **Contact** targeting
+2. Pick a **Collection** from the dropdown — these are the saved lists you've built in [Audiences](/audiences/overview)
 
-![Outbound Audience Selection](/img/screenshots/accounts-list.png)
+Outbound campaigns personalize for the named accounts in your chosen collection, so make sure you've created one first.
 
-*For Outbound campaigns, select a pre-built target group containing your high-value accounts.*
-
-If you chose **Inbound**, skip to Step 5—you'll configure dynamic targeting rules after the campaign is created.
+If you chose **Inbound**, skip to Step 5 — you'll configure dynamic targeting rules after the campaign is created.
 
 ---
 
@@ -208,6 +212,10 @@ Insert real-time visitor data using variables. Click **{{ }}** or type `{{` to a
 | `{{mt_city}}` | Visitor's city | "San Francisco" |
 | `{{mt_employee_count}}` | Company size | "1,000-5,000" |
 
+:::tip Always write a fallback
+A variable only fills in when Abmatic AI has that data for the visitor. Write your copy so it still reads naturally if a value is missing, and use the **Preview** step (next) to check how it looks with and without data.
+:::
+
 ### Recommended First-Campaign Changes
 
 For maximum impact with minimum complexity, focus on these high-value edits:
@@ -304,12 +312,12 @@ Check back in 24-48 hours to see your campaign's impact. The Insights tab provid
 
 ### High-Impact First Campaign Ideas
 
-| Page | Personalization Strategy | Expected Impact |
-|------|--------------------------|-----------------|
-| **Homepage** | Industry-specific headline + CTA | 15-30% engagement lift—high traffic amplifies results |
-| **Pricing** | Company size messaging ("Enterprise pricing for teams like yours") | Improved qualification—visitors self-select |
-| **Demo page** | Company name in headline | 20-40% form conversion lift—personal touch at decision moment |
-| **Solutions** | Industry-specific use cases | Faster time-to-value understanding |
+| Page | Personalization Strategy | Why It Works |
+|------|--------------------------|--------------|
+| **Homepage** | Industry-specific headline + CTA | High traffic means you gather data quickly |
+| **Pricing** | Company size messaging ("Enterprise pricing for teams like yours") | Helps visitors self-qualify |
+| **Demo page** | Company name in headline | A personal touch at the decision moment |
+| **Solutions** | Industry-specific use cases | Faster understanding of how you can help |
 
 ### Common Mistakes to Avoid
 

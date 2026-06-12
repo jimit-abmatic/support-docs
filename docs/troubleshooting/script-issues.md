@@ -7,13 +7,16 @@ sidebar_position: 2
 
 # Script & Tracking Troubleshooting
 
-Get your Abmatic tracking script working correctly to unlock visitor identification, company reveal, and personalization capabilities.
+Get your Abmatic AI tracking script working correctly to unlock visitor identification, Visitor Reveal, and personalization.
 
 :::tip Quick Check
-Most script issues are resolved in under 5 minutes. Start with the [Troubleshooting Checklist](#troubleshooting-checklist) at the bottom of this page for a fast diagnosis.
+Most script issues are resolved quickly. Start with the [Troubleshooting Checklist](#troubleshooting-checklist) at the bottom of this page for a fast diagnosis.
 :::
 
-![Installation page showing script and status](/img/screenshots/installation-script.png)
+You'll find your script on the **Installation** page. It shows the exact JavaScript snippet to paste, plus a live **Status** that turns to **Active** once we detect the first visitor on your site.
+
+![Installation page showing the JavaScript snippet, the steps to install it, and a Status badge set to Active with the time of the last visitor](/img/screenshots/ts-install.png)
+*The Installation page: copy the snippet, paste it as high as possible in your `<head>`, then watch the **Status** turn to **Active**.*
 
 ## Script Not Loading
 
@@ -21,9 +24,9 @@ Most script issues are resolved in under 5 minutes. Start with the [Troubleshoot
 
 | Symptom | What It Means |
 |---------|---------------|
-| Installation page shows "Inactive" | Script hasn't detected any visitors yet |
+| Installation page Status is **not** Active | Script hasn't detected any visitors yet |
 | No network requests to `clients.abmatic.ai` | Script isn't loading on your pages |
-| Empty Reveal section | Either script isn't working or no visitors yet |
+| Empty **Visitor Reveal → Accounts** | Either the script isn't working or no visitors yet |
 
 ### Step-by-Step Diagnosis
 
@@ -91,7 +94,7 @@ connect-src: https://clients.abmatic.ai https://api.abmatic.ai
 
 ### What's Happening
 
-Your script is loading (network request succeeds, status shows "Active"), but Reveal > Accounts shows no data.
+Your script is loading (network request succeeds, Status shows **Active**), but **Visitor Reveal → Accounts** shows no data.
 
 ### Possible Causes
 
@@ -108,11 +111,11 @@ Your script is loading (network request succeeds, status shows "Active"), but Re
 
 1. Visit your website from mobile data (disconnect from WiFi)
 2. Browse several pages
-3. Check Reveal after 5-10 minutes
+3. Check **Visitor Reveal → Accounts** after 5–10 minutes
 
 **Check account filters:**
 
-1. Go to **Settings** > **Account**
+1. Go to **Settings → Account**
 2. Review any excluded domains or IPs
 3. Ensure your test traffic isn't accidentally filtered
 
@@ -122,14 +125,18 @@ Your script is loading (network request succeeds, status shows "Active"), but Re
 
 ### Understanding Identification Rates
 
-Not all visitors can be identified - this is normal. Here's what to expect:
+Not all visitors can be identified — this is normal. The identification rate depends heavily on the visitor's network. Corporate office traffic resolves to a company far more often than home or mobile traffic, so your overall rate will reflect the mix of traffic you get.
 
 | Visitor Type | Typical Identification Rate | Why |
 |--------------|---------------------------|-----|
-| **Corporate networks** | 60-80% | Companies register IP ranges with identifiable info |
-| **Small businesses** | 40-60% | Smaller IP footprint, less registration data |
-| **Home/residential** | 10-20% | ISPs don't associate IPs with individuals |
-| **Mobile/VPN** | 5-15% | IPs are shared or masked |
+| **Corporate networks** | Highest | Companies register IP ranges with identifiable info |
+| **Small businesses** | Moderate | Smaller IP footprint, less registration data |
+| **Home/residential** | Low | ISPs don't associate IPs with individuals |
+| **Mobile/VPN** | Lowest | IPs are shared or masked |
+
+:::info About identification rates
+Your blended identification rate across *all* traffic is usually lower than the corporate-only rate, because real websites get a mix of office, home, and mobile visitors. Focus on identifying high-intent accounts rather than chasing a single percentage.
+:::
 
 ### Why Some Visitors Can't Be Identified
 
@@ -142,12 +149,12 @@ Not all visitors can be identified - this is normal. Here's what to expect:
 
 | Method | Benefit |
 |--------|---------|
-| **Enable Form Tracking** | Capture email addresses to identify contacts directly |
-| **Enable Contact Reveal** | Identify specific people visiting your site (uses credits) |
-| **Connect CRM Integration** | Match visitors against your existing contacts database |
+| **Enable Form Tracking** | Capture email addresses to identify people directly |
+| **Enable Contact Reveal** | Reveal specific people at identified companies (uses credits) |
+| **Connect a CRM Integration** | Match visitors against your existing contacts database |
 
 :::tip Pro Tip
-Combining company identification with form tracking typically increases your identified visitor rate by 30-50%. When someone fills out a form, you capture their email even if their company couldn't be identified by IP.
+Form tracking complements company identification. When someone fills out a form, you capture their email even if their company couldn't be identified by IP — so you still know who visited.
 :::
 
 ---

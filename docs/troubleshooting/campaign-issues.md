@@ -40,19 +40,19 @@ Your campaign must be **Active** to show personalization.
 
 | Status | What It Means | Action Needed |
 |--------|---------------|---------------|
-| **100% Full personalization** | Campaign is live and serving personalized content | None - campaign is running |
-| **50% Experiment** | Campaign is running an A/B test | None - this is expected for tests |
-| **0% Inactive** | Campaign is paused or draft | Activate the campaign |
+| **100% Full personalization** | Campaign is live and 100% of matching visitors see personalized content | None — the campaign is running |
+| **50% Experiment** | Campaign is running an A/B test; the percentage is the share of visitors who see the personalized version (the rest are the control) | None — this is expected for tests |
+| **0% Inactive** | Campaign is paused or draft; 0% of visitors see personalization | Activate the campaign |
 
-![Campaign list showing status column](/img/screenshots/campaigns-list.png)
-*The Status column shows whether each campaign is active and what percentage of visitors see personalization*
+![Campaigns list showing the Preference column with #1, #2 ordering and the Status column with values like 100% Full personalization, 50% Experiment, and 0% Inactive](/img/screenshots/ts-campaign-status.png)
+*The **Status** column shows whether each campaign is active and what percentage of visitors see personalization. The **Preference** column (#1, #2, …) sets priority when campaigns overlap.*
 
 ### Step 2: Verify Page Status
 
 Each page within a campaign has its own status. Even if the campaign is active, individual pages must be published.
 
 1. Open your campaign
-2. Click the **Pages** tab
+2. Click the **PAGES** tab
 3. Check each page shows **Active** status with a green checkmark
 
 | Page Status | What It Means | Action Needed |
@@ -61,8 +61,8 @@ Each page within a campaign has its own status. Even if the campaign is active, 
 | **Draft** | Page has unpublished changes | Click **Publish** |
 | **Inactive** | Page is disabled | Toggle the page status on |
 
-![Campaign pages tab showing active pages](/img/screenshots/wp-pages-tab.png)
-*The Pages tab shows status and visitor counts for personalized vs control groups*
+![Campaign PAGES tab listing each personalized page with an Active status, an Updated At date, and Unique Visitors columns split into Personalized, Control, and Total](/img/screenshots/campaign-pages-tab.png)
+*The **PAGES** tab shows each page's **Status** plus visitor counts split into **Personalized**, **Control**, and **Total**. Use the **+ PAGE** button to add another page to the campaign.*
 
 ### Step 3: Check Targeting Rules
 
@@ -107,7 +107,7 @@ If you're in the **control group**, you'll see the original page with no changes
 
 ### Step 5: Verify Script Installation
 
-Personalization requires the Abmatic tracking script to be properly installed.
+Personalization requires the Abmatic AI tracking script to be properly installed.
 
 1. Open your website in a browser
 2. Open DevTools (press **F12** or right-click → Inspect)
@@ -189,8 +189,12 @@ When multiple active campaigns target the same page, **priority determines which
 
 1. Go to **Campaigns**
 2. Look at the **Preference** column (shown as #1, #2, etc.)
-3. Drag campaigns to reorder, or click to edit priority number
-4. Campaigns at the top (lower numbers) take precedence
+3. Reorder campaigns to change priority — the list is sorted by **Preference**, and you can sort it ascending or descending
+4. Campaigns with a lower preference number take precedence
+
+:::tip Sort by Preference
+The campaigns list has a **Sort By** control set to **Preference** by default, with arrows to sort the list ascending or descending. The lower the preference number, the higher the priority when two campaigns target the same page.
+:::
 
 **Best practice:** Ensure campaigns targeting the same page have distinct audiences, or intentionally set priority so the most specific campaign wins.
 
@@ -281,13 +285,16 @@ Place the Abmatic script as high as possible in your `<head>` section:
 </head>
 ```
 
-**2. Use anti-flicker snippet:**
+**2. Add an optional anti-flicker snippet (do-it-yourself):**
 
-For critical above-the-fold personalizations, an anti-flicker snippet hides content until personalization is ready:
+Loading the Abmatic AI script as high in the `<head>` as possible (step 1) is the recommended fix and resolves flickering for most sites. If you still see flicker on critical above-the-fold personalizations, you can add your own anti-flicker snippet that briefly hides the page until personalization is ready.
+
+This is a manual, DIY pattern you add to your own site — it is not a built-in toggle in Abmatic AI:
 
 ```html
 <script>
-  // Anti-flicker: hide body until Abmatic loads (max 2 seconds)
+  // Optional DIY anti-flicker: hide the page until Abmatic AI applies
+  // changes, with a safety timeout so content always becomes visible.
   document.documentElement.style.opacity = '0';
   setTimeout(function() {
     document.documentElement.style.opacity = '1';
@@ -295,7 +302,9 @@ For critical above-the-fold personalizations, an anti-flicker snippet hides cont
 </script>
 ```
 
-Contact support@abmatic.ai for implementation guidance tailored to your site.
+:::caution Use with care
+An anti-flicker snippet hides your page until the timeout elapses, which can make the page feel slower. Always keep the safety timeout so visitors never get stuck on a blank page. Email support@abmatic.ai if you'd like guidance tailored to your site.
+:::
 
 **3. Reduce personalization scope:**
 
@@ -391,10 +400,10 @@ Audience sync campaigns push your target accounts to ad platforms. Here's how to
 ### Audience Not Syncing
 
 **Step 1: Check connection status**
-1. Go to **Integrations**
-2. Find LinkedIn Ads or Google Ads
-3. Verify it shows "Active" (green status)
-4. If disconnected, click to reconnect
+1. Go to **Settings → Integrations**
+2. Find LinkedIn Ads or Google Ads in the Advertising section
+3. Verify the card shows **Active**
+4. If it's Inactive, open **SETTINGS** to re-authorize
 
 **Step 2: Verify campaign sync settings**
 1. Open your ads campaign

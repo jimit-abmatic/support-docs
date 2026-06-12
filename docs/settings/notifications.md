@@ -17,42 +17,56 @@ Stay informed about important events across your Abmatic AI account with customi
 
 ## Accessing Notification Settings
 
-Navigate to **Settings > Notifications** from the sidebar to manage your preferences.
+1. Open **Settings** from the left icon sidebar
+2. Click the **Notifications** tab in the top navigation
 
-![Notification Preferences](/img/screenshots/settings-notifications.png)
+The page is titled **Notification Preferences** ("Update your global notification settings").
+
+![Notification Preferences table with a Notification Type column and a single In-App checkbox column; each category row has a title and a short description](/img/screenshots/set-notifications.png)
+
+:::info Powered by Knock
+Abmatic AI's notification feed is powered by **Knock**. Right now the only delivery channel is the **In-App** feed (the bell icon). Email and Slack channels are not yet enabled, so you'll see a single **In-App** column rather than per-channel toggles.
+:::
 
 ## Notification Categories
 
-The settings page displays a table where you can toggle In-App notifications for each category:
+The page shows a **Notification Type** table. Each row has a category, a short description, and an **In-App** checkbox you can turn on or off. The categories are:
 
 | Category | What You'll Be Notified About |
 |----------|-------------------------------|
-| **Export** | When CSV exports of your accounts or contacts complete successfully |
-| **Target Groups** | Activity related to your account and contact target groups |
-| **Form Fills** | When visitors complete forms tracked by your campaigns |
-| **Campaigns** | New activity and updates related to your personalization campaigns |
-| **IP Reveal** | When a new visitor company is identified on your website |
-| **CRM** | Activities related to your connected CRM integrations |
-| **Accounts** | New activity and updates on your target accounts |
-| **Credits** | Alerts when your credit balance is running low |
+| **Accounts** | New activity related to your accounts |
+| **Campaigns** | New activity related to your campaigns |
+| **Credits** | Alerts related to your remaining credits |
+| **CRM** | Activities related to your connected CRM |
+| **Export** | When records are exported as CSV |
+| **Form Fills** | When a new form is filled in on your campaigns |
+| **Target Groups** | New activity related to your account and contact target groups |
+| **IP Reveal** | When a new visitor company is revealed |
+| **Other** | Other account notifications that don't fit the categories above |
+
+:::note
+The list is alphabetical in the app. Some categories (for example **IP Reveal**) may start out unchecked — turn on the ones you want to receive in the feed.
+:::
 
 ## Managing Your Preferences
 
 ### Enabling/Disabling Notifications
 
-1. Go to **Settings > Notifications**
+1. Open **Settings → Notifications**
 2. Find the notification category you want to adjust
-3. Check or uncheck the **In-App** checkbox to enable or disable notifications
+3. Check or uncheck its **In-App** checkbox
 
-Changes take effect immediately - no save button required.
+Changes take effect immediately — there's no save button.
 
 ### Viewing Notifications
 
-Access your notifications by clicking the **bell icon** in the top navigation bar. This opens the notification center where you can:
+Click the **bell icon** in the top bar (top right) to open your in-app notification feed. From there you can:
 
-- View recent notifications
+- See recent notifications
 - Mark notifications as read
-- Click through to related items (accounts, campaigns, etc.)
+- Click through to the related item (an account, campaign, export, and so on)
+
+A small badge on the bell shows how many unread notifications you have.
 
 ## Best Practices
 
@@ -79,5 +93,6 @@ Enable notifications for:
 
 ## Related
 
-- [Slack Integration](/integrations/slack) - Set up Slack notifications for team-wide alerts
+- [Slack Integration](/integrations/slack) - Connect Slack to your workspace (Slack delivery for these preferences is not yet enabled)
 - [Account Settings](/settings/account) - Manage your account profile
+- [Usage](/settings/usage) - Monitor credit consumption

@@ -9,7 +9,7 @@ sidebar_position: 4
 
 Extend your account and contact data with custom fields to capture business-specific information that matters to your organization. Use custom fields for precise targeting, personalized messaging, and detailed reporting.
 
-![Custom Fields Settings](/img/screenshots/settings-custom-fields.png)
+![Custom Fields settings showing the Accounts and Contacts accordions with the subtitle "Configure the custom fields for Accounts and Contacts"](/img/screenshots/set-custom-fields.png)
 
 ## Why Use Custom Fields?
 
@@ -17,24 +17,27 @@ Every business has unique data points that standard fields don't capture. Custom
 
 - **Target with precision** - Filter campaigns by account tier, product interest, customer status, or any custom attribute
 - **Personalize at scale** - Insert custom field values into website content and AI Sequences
-- **Sync your CRM data** - Map Salesforce and HubSpot custom fields to Abmatic for a unified view
+- **Sync your CRM data** - Map Salesforce and HubSpot custom fields to Abmatic AI for a unified view
 - **Build better reports** - Segment and analyze performance by your custom dimensions
 
 ## Getting Started
 
 ### Access Custom Fields
 
-1. Navigate to **Settings > Custom Fields**
-2. You'll see two expandable sections:
+1. Open **Settings** from the left icon sidebar
+2. Click the **Custom Fields** tab in the top navigation
+3. You'll see two expandable sections (accordions):
    - **Accounts** - Custom fields for company-level data
    - **Contacts** - Custom fields for person-level data
 
+The page header reads "Configure the custom fields for Accounts and Contacts."
+
 ### Configure a Custom Field
 
-1. Click the **Accounts** or **Contacts** section to expand it
-2. Find the custom field slot you want to configure (Custom Field 1, 2, 3, etc.)
-3. Enter a descriptive name for the field (e.g., "Account Tier", "Product Interest")
-4. Changes save automatically
+1. Click the **Accounts** or **Contacts** accordion to expand it
+2. Find the custom field slot you want to name (Custom Field 1, 2, 3, etc.)
+3. Type a descriptive name for the field (e.g., "Account Tier", "Product Interest")
+4. Changes save automatically as you type — there's no separate Save button
 
 You can configure up to **30 custom fields** for accounts and **30 custom fields** for contacts.
 
@@ -98,19 +101,19 @@ This displays "Solutions for Enterprise Companies" when an Enterprise account vi
 
 ### Map CRM Custom Fields
 
-Connect your CRM custom fields to Abmatic for automatic synchronization:
+Connect your CRM custom fields to Abmatic AI for automatic synchronization:
 
 **Salesforce:**
-1. Go to **Settings > Integrations**
-2. Click **Salesforce** settings
-3. Navigate to field mapping
-4. Map your Salesforce custom fields (e.g., `Account.Customer_Tier__c`) to Abmatic field slots
+1. Open the **Integrations** tab in Settings
+2. Open your **Salesforce** integration settings
+3. Go to field mapping
+4. Map your Salesforce custom fields (e.g., `Account.Customer_Tier__c`) to Abmatic AI field slots
 
 **HubSpot:**
-1. Go to **Settings > Integrations**
-2. Click **HubSpot** settings
-3. Navigate to property mapping
-4. Map your HubSpot custom properties to Abmatic field slots
+1. Open the **Integrations** tab in Settings
+2. Open your **HubSpot** integration settings
+3. Go to property mapping
+4. Map your HubSpot custom properties to Abmatic AI field slots
 
 ### Sync Direction
 
@@ -118,8 +121,8 @@ Configure how data flows between systems:
 
 | Direction | What Happens |
 |-----------|--------------|
-| CRM → Abmatic | Import values from your CRM to Abmatic |
-| Abmatic → CRM | Push Abmatic values back to your CRM |
+| CRM → Abmatic AI | Import values from your CRM into Abmatic AI |
+| Abmatic AI → CRM | Push Abmatic AI values back to your CRM |
 | Two-way | Keep both systems in sync |
 
 ## Importing Custom Field Data

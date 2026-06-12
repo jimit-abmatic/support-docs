@@ -7,10 +7,10 @@ sidebar_position: 1
 
 # Salesforce Integration
 
-Turn anonymous website visitors into pipeline opportunities by connecting Abmatic AI with Salesforce. Enable bi-directional sync of accounts, contacts, leads, opportunities, and campaigns—giving your sales team instant access to buyer intent signals.
+Turn anonymous website visitors into pipeline opportunities by connecting Abmatic AI with Salesforce. Enable bi-directional sync of accounts, contacts, leads, opportunities, and campaigns — giving your sales team instant access to buyer-intent signals.
 
-![Salesforce Integration](/img/screenshots/integrations-hub.png)
-*Salesforce shows Active status when connected*
+![Salesforce CRM Settings showing the object tabs and sync configuration](/img/screenshots/sf-settings.png)
+*The Salesforce settings dialog. Object tabs run across the top (Accounts, Contacts, Opportunities, Leads, Campaigns, Activity Log), with the object-syncing matrix and field mapping below.*
 
 ## Why Connect Salesforce?
 
@@ -48,21 +48,22 @@ Before connecting, ensure you have:
 
 ### Step 1: Connect Salesforce
 
-1. Navigate to **Integrations** in Abmatic AI
-2. Find **Salesforce** under CRM and click **Connect**
+1. Go to **Settings > Integrations** in Abmatic AI
+2. Find the **Salesforce** card in the CRM section and click **Authorize**
 3. Log in to your Salesforce org when prompted
-4. Authorize Abmatic to access your data
-5. You'll be redirected back to Abmatic with Active status
+4. Authorize Abmatic AI to access your data
+5. You'll be redirected back to Abmatic AI and the card shows **Active**
 
 ### Step 2: Configure Sync Settings
 
-After connecting, click **Settings** to configure how data syncs:
+After connecting, click the **Settings** gear to configure how data syncs:
 
-1. Select the object type (Accounts, Contacts, Leads, Opportunities, Campaigns)
-2. Configure sync direction for each object
-3. Set up field mappings
-4. Choose sync frequency
-5. Click **Save**
+1. Select the object tab (Accounts, Contacts, Opportunities, Leads, Campaigns)
+2. Set the object-syncing matrix (Create/Update in each direction)
+3. Set up field mappings (Don't sync / Fill / Overwrite per field)
+4. Optionally add push filters
+5. Choose sync frequency
+6. Click **Save**
 
 ## Understanding What Syncs
 
@@ -135,26 +136,34 @@ For each object, configure how data flows:
 | **Abmatic → Salesforce** | Push enriched data to Salesforce | Creating leads, updating accounts |
 | **Two-way Sync** | Sync in both directions | Keep both systems in sync |
 
-### Sync Operations
+### Object Syncing Matrix
 
-For each direction, enable:
+Each object tab has a **Set object syncing** matrix. You enable **Create** and **Update** checkboxes on each side — Salesforce on the left, Abmatic on the right — and a directional chip in the middle summarizes the result:
 
-| Option | Effect |
-|--------|--------|
-| **Create** | Create new records that don't exist |
-| **Update** | Update existing matched records |
+| Chip | Meaning |
+|------|---------|
+| **Sync both ways** | Records sync to and from Salesforce |
+| **Sync into Salesforce** | Abmatic AI pushes to Salesforce only |
+| **Sync into Abmatic** | Abmatic AI pulls from Salesforce only |
+| **Not syncing** | This object is not synced |
 
 **Tip:** Start with Salesforce → Abmatic only, review the data, then enable two-way sync.
 
 ### Field Mapping Options
 
-For each field, choose how it syncs to Salesforce:
+In the **Set field mapping** section, each mapped field has a **Sync to CRM** mode and a **Sync to Abmatic** checkbox:
 
-| Mode | Behavior | Best For |
-|------|----------|----------|
-| **Don't Sync** | Field not synced to CRM | Read-only fields |
-| **Fill** | Only fills empty fields | Enrichment without overwriting |
-| **Overwrite** | Always updates the field | Keeping Abmatic as source of truth |
+| Sync to CRM Mode | Behavior | Best For |
+|------------------|----------|----------|
+| **Don't sync** | Field not pushed to Salesforce | Read-only fields |
+| **Fill** | Only fills the Salesforce field when it's empty | Enrichment without overwriting |
+| **Overwrite** | Always updates the Salesforce field | Keeping Abmatic AI as source of truth |
+
+Check **Sync to Abmatic** on a field to pull that field's value from Salesforce into Abmatic AI. Click **Add Mapping** to map additional or custom fields, including **demo_booked** (whether the contact has booked a demo), which is available in the field selector.
+
+### Push Filters
+
+Each Accounts and Contacts tab has a **"Set up filters for pushing records"** section. Only records that match these filters are pushed to Salesforce. Leave the filters empty to push all records. When filters are set, the section shows a "*N* filter(s) active" chip.
 
 ### Sync Frequency
 
@@ -204,16 +213,13 @@ Import Salesforce campaigns to track attribution:
 4. Choose campaigns to import
 5. Campaign members sync automatically
 
-### Campaign Member Status Mapping
+### Campaign Member Status
 
-When visitors engage, their status updates in Salesforce:
+When you import a Salesforce campaign, its members sync into Abmatic AI. Campaign member status is mapped between the two systems so engagement is reflected in your Salesforce campaign reporting. The exact status values depend on how your Salesforce campaigns are configured.
 
-| Visitor Action | Salesforce Status | When It Updates |
-|----------------|-------------------|-----------------|
-| Added to campaign | Sent | Upon creation |
-| Viewed personalized page | Responded | First engagement |
-| Submitted form | Converted | Form completion |
-| Requested demo | Qualified | Based on form type |
+:::note Confirm your status values
+Salesforce campaign member statuses are customizable per org. Check your campaign's member-status picklist in Salesforce so it matches how you expect engagement to be recorded.
+:::
 
 ### Campaign Influence
 
@@ -292,22 +298,14 @@ To update records already in Salesforce:
 
 ### What Gets Logged
 
-Abmatic logs visitor activities to Salesforce:
-
-| Activity | Salesforce Object | Details Included |
-|----------|-------------------|------------------|
-| Website visit | Task | Pages viewed, time on site |
-| Personalization shown | Task | Campaign name, variation |
-| Form submission | Task | Form fields, submission time |
-| Campaign engagement | Campaign Member | Status, dates, metrics |
+When activity logging is enabled, Abmatic AI can record visitor activity — such as website visits, personalization shown, and form submissions — against the matched Salesforce account or contact, and update campaign membership where a Salesforce campaign is synced.
 
 ### Viewing in Salesforce
 
-Activities appear in:
-- Account Activity Timeline
-- Contact Activity History
-- Lead Activity History
-- Campaign Member Details
+Logged activity appears on the related Salesforce records, including:
+- Account activity timeline
+- Contact and lead activity history
+- Campaign member details (for synced campaigns)
 
 ## Sync Logs and Monitoring
 
@@ -353,7 +351,7 @@ When duplicates are detected:
 
 | Issue | Cause | Solution |
 |-------|-------|----------|
-| Authorization expired | Token refresh failed | Click Reconnect, re-authorize |
+| Authorization expired | Token refresh failed | Click **Disable**, then **Authorize** to re-connect |
 | Insufficient permissions | User lacks API access | Verify API enabled for profile |
 | Sandbox vs Production | Connected to wrong org | Disconnect, reconnect to correct org |
 

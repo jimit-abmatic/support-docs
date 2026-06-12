@@ -7,7 +7,11 @@ sidebar_position: 1
 
 # Quick Start Guide
 
-Transform your website into a personalized ABM engine in under 20 minutes. By the end of this guide, you'll be identifying anonymous visitors, syncing with your CRM, and delivering personalized experiences to your target accounts.
+Set up your website as a personalized ABM engine in a single sitting. By the end of this guide, you'll be identifying anonymous visitors, syncing with your CRM, and delivering personalized experiences to your target accounts.
+
+:::tip New to the app?
+If you'd like a quick tour of the sidebar, top bar, search, and dark mode first, see [Navigating Abmatic AI](/getting-started/navigation).
+:::
 
 **What you'll achieve:**
 - Identify the companies visiting your website in real-time
@@ -93,12 +97,11 @@ The tracking script is what powers Abmatic AI's core capabilities:
 
 ### Navigate to Installation
 
-1. Click **Settings** in the left sidebar
-2. Click **Installation** or **Script Installation**
+Click the **Installation** icon at the **bottom** of the left icon sidebar.
 
-![Installation Script](/img/screenshots/installation-script.png)
+![The Installation page with your script and a live status indicator](/img/screenshots/qs-installation.png)
 
-*Your unique tracking script is displayed here.*
+*The Installation page shows your unique tracking script and its current status.*
 
 ### Copy Your Script
 
@@ -108,12 +111,7 @@ Your script looks like this:
 <script async src="https://clients.abmatic.ai/YOUR_ID.js"></script>
 ```
 
-1. Click **Copy Script** or select and copy
-2. Save it somewhere - you'll add it to your site next
-
-![Installation Script](/img/screenshots/installation-script.png)
-
-*Click Copy Script to copy your unique tracking code.*
+Click directly on the script code to copy it to your clipboard, then save it somewhere — you'll add it to your site next.
 
 ### Add to Your Website
 
@@ -140,25 +138,21 @@ Add the script to every page's `<head>` section:
 1. Open Google Tag Manager
 2. Click **New Tag**
 3. Choose **Custom HTML**
-4. Paste your Abmatic script
+4. Paste your Abmatic AI script
 5. Set trigger to **All Pages**
 6. Publish
-
-![Installation Script](/img/screenshots/installation-script.png)
-
-*Add the script as a Custom HTML tag in Google Tag Manager.*
 
 ### Verify Installation
 
 After adding the script:
 
-1. Return to **Settings** > **Installation**
-2. Look for the green **Verified** status
-3. Takes up to 5 minutes to detect
+1. Return to the **Installation** page (bottom of the left sidebar)
+2. Look at the **Status** indicator near the bottom of the page — it turns **Active** once Abmatic AI detects the script and your first visitor
+3. It can take a few minutes for the first visitor to register
 
-![Settings Script](/img/screenshots/settings-script.png)
+![Installation page showing an Active status indicator](/img/screenshots/install-status-verified.png)
 
-*A green checkmark confirms your script is working.*
+*An "Active" status confirms your script is working and visitor data is flowing.*
 
 :::tip Verification Not Working?
 - Check script is in `<head>`, not `<body>`
@@ -169,22 +163,34 @@ After adding the script:
 
 ---
 
-## Step 5: Explore the Home Dashboard
+## Step 5: Explore the Home Page
 
-Now that your script is installed, take a moment to explore the home dashboard.
+Now that your script is installed, take a moment to explore your Home page. It's the first thing you see when you log in (click the Abmatic AI logo at any time to return to it).
 
-![Home Dashboard](/img/screenshots/home-dashboard.png)
+The Home page has **two tabs**:
 
-*The home dashboard shows your account overview and key metrics.*
+| Tab | What It Shows |
+|-----|---------------|
+| **Overview** | Five summary cards (Accounts, Contacts, Reports, Campaigns, Collections) plus "Recently Viewed" panels for quick access |
+| **Dashboard** | A customizable grid of analytics report widgets you can build for yourself |
 
-### Dashboard Sections
+The **Overview** tab loads by default.
 
-| Section | What It Shows |
-|---------|---------------|
-| **Visitors Overview** | Total visitors, identified companies |
-| **Recent Activity** | Latest visitor activity |
-| **Campaign Performance** | Active campaign metrics |
-| **Quick Actions** | Shortcuts to common tasks |
+![Home page Overview tab with five summary cards and recently viewed panels](/img/screenshots/qs-home-overview.png)
+
+*The Overview tab gives you live counts and quick links to your recent work.*
+
+| Summary Card | Counts | Clicking It Goes To |
+|--------------|--------|---------------------|
+| **Accounts** | Total accounts in your database | All Accounts |
+| **Contacts** | Total contacts | All Contacts |
+| **Reports** | Saved analytics reports | Analytics Reports |
+| **Campaigns** | All campaigns (active + inactive) | Campaigns list |
+| **Collections** | Saved account and contact collections | Accounts |
+
+:::tip Learn more
+For a full tour of the Home page, including building your own Dashboard tab, see [Home Dashboard](/getting-started/home-dashboard).
+:::
 
 ---
 
@@ -199,47 +205,25 @@ Connecting your CRM creates a powerful two-way data flow that supercharges your 
 | **Visitor enrichment** | See CRM context when anonymous visitors are identified on your site |
 | **Campaign attribution** | Track which personalization campaigns influence pipeline and revenue |
 
-### Navigate to Integrations
+### Open Integrations
 
-1. Click **Integrations** in the left sidebar
+1. Click the **Settings / account** icon in the top-right toolbar
+2. Open the **Integrations** section
 
-![Integrations Hub](/img/screenshots/integrations-hub.png)
+![The Integrations hub showing all available connections](/img/screenshots/integrations-hub.png)
 
-*The Integrations Hub shows all available connections.*
+*The Integrations hub shows every connection you can set up — CRMs, ad networks, calendars, and more.*
 
-### Connect Salesforce
+### Connect Salesforce or HubSpot
 
-1. Find **Salesforce** and click it
+1. Find **Salesforce** or **HubSpot** in the hub and click it
 2. Click **Connect**
-3. Log in with your Salesforce credentials
-4. Approve the permissions
+3. Log in with your CRM credentials
+4. Approve the requested permissions
 
-![Integrations Hub](/img/screenshots/integrations-hub.png)
+### Verify the Connection
 
-*Approve the permissions to allow Abmatic to connect to Salesforce.*
-
-### Connect HubSpot
-
-1. Find **HubSpot** and click it
-2. Click **Connect**
-3. Log in with your HubSpot credentials
-4. Approve the permissions
-
-![Integrations Hub](/img/screenshots/integrations-hub.png)
-
-*Approve the permissions to allow Abmatic to connect to HubSpot.*
-
-### Verify Connection
-
-After connecting, you'll see:
-
-- Green **Connected** status
-- Last sync time
-- Option to configure settings
-
-![Integrations Hub](/img/screenshots/integrations-hub.png)
-
-*A green status indicates your CRM is connected and syncing.*
+After connecting, you'll see a **Connected** status, the last sync time, and an option to configure field mapping and sync settings.
 
 **Full setup guides:**
 - [Salesforce Setup](/integrations/crm/salesforce-setup)
@@ -251,72 +235,65 @@ After connecting, you'll see:
 
 This is where the magic happens. Within minutes of installing the script, you'll start seeing which companies are visiting your website—even if they never fill out a form.
 
-### Check Reveal > Accounts
+### Check Visitor Reveal
 
-1. Click **Reveal** in the left sidebar
-2. Click **Accounts**
+1. Click **Visitor Reveal** in the left icon sidebar
+2. Use the **Accounts** and **Contacts** tabs at the top to switch between identified companies and identified people
 
-![Reveal Accounts](/img/screenshots/reveal-accounts.png)
+![Visitor Reveal with the Accounts and Contacts tabs](/img/screenshots/qs-reveal-accounts.png)
 
-*Identified companies appear here within minutes of your first visitor.*
+*Identified companies and contacts appear here as visitors arrive. Until your first visitor is detected, you'll see a friendly "no visiting companies yet" message.*
 
 ### What You'll See
 
-| Column | Description |
-|--------|-------------|
-| **Company** | Company name and logo |
-| **Industry** | Business sector |
-| **Size** | Employee count |
-| **Location** | Headquarters |
-| **Last Visit** | Most recent visit |
-| **Page Views** | Total pages viewed |
+For each identified account, Visitor Reveal shows firmographic details (such as industry, company size, and location), recent visit activity, and a **Reveal Confidence** level (from Very High down to Very Low) so you can judge how certain the match is.
 
 :::info No Visitors Yet?
 - Visit your own site to test
-- Data appears within 5 minutes
-- Check script installation if nothing shows
+- It can take a few minutes for the first visitor to register
+- If nothing shows after a while, re-check your script installation
 :::
 
 ---
 
-## Step 8: Create Your First Audience
+## Step 8: Create Your First Collection
 
-Target the right accounts with precision. Abmatic AI lets you build dynamic audiences that automatically update as accounts meet your criteria—no manual list management required.
+A **Collection** is a saved list of accounts (or contacts) you want to target. Collections come in two flavors:
 
-### Navigate to Audiences
+- **Dynamic Collection** — built from filters; it updates automatically as accounts start or stop matching your criteria.
+- **Static Collection** — a fixed list you build by uploading a CSV or importing from your CRM.
 
-1. Click **Audiences** in the left sidebar
-2. Click **Accounts**
+### Open Accounts
 
-![Accounts List](/img/screenshots/accounts-list.png)
+1. Click **Accounts** in the left icon sidebar
+2. Open the **Collections** view
 
-*View and manage your target account lists here.*
+![The Accounts area where you create and manage collections](/img/screenshots/accounts-list.png)
 
-### Create a New List
+*View and manage your account collections here.*
 
-1. Click **Create Collection**
-2. Choose a method:
+### Create a New Collection
 
-| Method | Best For |
-|--------|----------|
-| **Build from Filters** | Dynamic lists that auto-update |
-| **Upload CSV** | Existing spreadsheet lists |
-| **Import from CRM** | CRM account lists |
+When you create a collection, you choose how to build it:
 
-![Account Create Modal](/img/screenshots/account-create-modal.png)
+| Method | Creates | Best For |
+|--------|---------|----------|
+| **Build from Filters** | A Dynamic Collection | Lists that auto-update as accounts match |
+| **Upload CSV** | A Static Collection | Existing spreadsheet lists |
+| **Import from CRM** | A Static Collection | Lists already in your CRM |
 
-*The collection creation modal shows options for building your audience.*
+![Choosing how to build a new collection](/img/screenshots/account-create-modal.png)
 
-### Example: Create Industry-Based List
+*The create dialog lets you pick filters, a CSV upload, or a CRM import.*
+
+### Example: Industry-Based Dynamic Collection
 
 1. Choose **Build from Filters**
-2. Add condition: **Industry** is **Technology**
-3. Name: "Technology Companies"
+2. Add the condition: **Industry** is **Technology**
+3. Name it "Technology Companies"
 4. Click **Save**
 
-![Accounts List](/img/screenshots/accounts-list.png)
-
-*Add filter conditions to define your target audience.*
+Your new collection appears in the Collections list and keeps itself up to date as new technology accounts are identified.
 
 ---
 
@@ -326,56 +303,46 @@ Here's where ABM gets real. You're about to create a personalized experience tha
 
 ### Navigate to Campaigns
 
-1. Click **Campaigns** in the left sidebar
+1. Click **Campaigns** in the left icon sidebar
+2. Click **+ CAMPAIGN** to open the create dialog
 
-![Campaigns List](/img/screenshots/campaigns-list.png)
+### Choose a Campaign Type
 
-*Your campaigns will appear here.*
+The create dialog shows every campaign type, organized into three columns:
 
-### Create a Campaign
+| Column | Campaign Types |
+|--------|----------------|
+| **Personalization** | Inbound, Outbound, A/B Testing, Widget |
+| **Advertising** | Display Advertising, LinkedIn, OpenAI Ads, Retargeting |
+| **Agentic** | Agentic Flow, Sequence, Intent, Agentic Chat |
 
-1. Click **Create Campaign**
-2. Select **Inbound** (Website Personalization)
+For your first campaign, choose **Inbound** under **Personalization** — it personalizes your website for any visitor who matches your rules.
 
-![Campaign Create](/img/screenshots/campaign-create.png)
+![The Create Campaign dialog with Personalization, Advertising, and Agentic columns](/img/screenshots/qs-create-campaign.png)
 
-*Choose Inbound to personalize for visitors matching criteria.*
-
-![Campaign Create Modal](/img/screenshots/campaign-create-modal.png)
-
-*Select your campaign type from the available options.*
+*Pick a type from one of the three columns. Inbound is the quickest way to see personalization in action.*
 
 ### Set Up Targeting
 
-1. Click the **Audience** tab
-2. Add a filter: **Industry** is **Technology**
-3. Click **Save**
-
-![Accounts List](/img/screenshots/accounts-list.png)
-
-*Set up targeting rules to define who sees your personalization.*
+1. Open your new campaign and click the **Audience** tab
+2. Add a filter, such as **Industry** is **Technology**
+3. Save your rule
 
 ### Add a Page to Personalize
 
 1. Click the **Pages** tab
 2. Click **Add Page**
-3. Enter your homepage URL
-4. Click **Add**
-
-![Campaign Create Modal](/img/screenshots/campaign-create-modal.png)
-
-*Enter your page URL to add it to the campaign.*
+3. Enter your homepage URL (wildcards like `/products/*` are supported)
+4. Add the page
 
 ### Edit in the Visual Editor
 
-1. Click on your page to open the editor
-2. Click on your headline
-3. Change it to: `Welcome, {{mt_industry}} leader!`
+1. Click your page to open the **Visual Editor** — your live page loads with an editing panel on the right
+2. Click your headline to select it
+3. Insert a personalization variable, e.g. `Welcome, {{mt_industry}} leader!`
 4. Click **Publish**
 
-![Campaigns List](/img/screenshots/campaigns-list.png)
-
-*Edit your headline in the visual editor and publish when ready.*
+Your campaign goes live immediately, and matching visitors see your personalized content right away.
 
 ### Your Campaign is Live!
 
@@ -395,7 +362,7 @@ You've laid the foundation for account-based marketing success. Here's how to am
 | Set up conversion tracking | Measure results | [Conversions Overview](/conversions/overview) |
 | Create more audiences | Better targeting | [Audiences Guide](/audiences/overview) |
 
-### Coming Soon
+### As Your Data Grows
 
 | Task | When | Guide |
 |------|------|-------|
@@ -450,10 +417,10 @@ If you're stuck:
 
 - [ ] Account created and verified
 - [ ] Script installed on website
-- [ ] Script status shows "Verified"
+- [ ] Installation status shows **Active**
 - [ ] (Optional) CRM connected
-- [ ] Can see visitors in Reveal
-- [ ] First audience created
+- [ ] Can see visitors in **Visitor Reveal**
+- [ ] First collection created
 - [ ] First campaign launched
 
 **Congratulations!** You're now running account-based marketing with Abmatic AI. Your website is no longer a static brochure—it's a dynamic, personalized experience engine that identifies, engages, and converts your target accounts.

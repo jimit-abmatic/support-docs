@@ -30,7 +30,7 @@ You will see two sub-tabs:
 - **Pages Scraped** -- View and manage all scraped pages
 - **Settings** -- Build context, add URLs, and configure URL filters
 
-![Website Context - Pages Scraped](/img/screenshots/settings-website-context-pages.png)
+![Website Context Pages Scraped tab showing the grid of scraped pages with Summary, FAQs, Preview, Rescrape, and Delete actions per row](/img/screenshots/wc-pages.png)
 
 ---
 
@@ -51,13 +51,13 @@ The **Pages Scraped** tab shows every page that has been scraped and is availabl
 
 Click the **Summary** button on any row to see a concise, AI-generated summary of what that page covers. This is the information your Agentic Chat uses to understand the page at a glance.
 
-![Page Summary Dialog](/img/screenshots/settings-website-context-summary-dialog.png)
+![Page Summary dialog showing the AI-generated summary of a single scraped page](/img/screenshots/wc-summary-dialog.png)
 
 ### Viewing Page FAQs
 
 Click the **FAQs** button to see the question-and-answer pairs that were automatically extracted from the page. These FAQs help your AI assistant handle common visitor questions with precise, page-specific answers.
 
-![Page FAQs Dialog](/img/screenshots/settings-website-context-faqs-dialog.png)
+![Page FAQs dialog showing the question-and-answer pairs automatically extracted from a scraped page](/img/screenshots/wc-faqs-dialog.png)
 
 ### Previewing Scraped Content
 
@@ -84,7 +84,7 @@ Deleting pages removes them from your AI assistant's knowledge base immediately.
 
 Switch to the **Settings** tab to build your website context, add individual URLs, and configure URL filtering rules.
 
-![Website Context Settings](/img/screenshots/settings-website-context-settings.png)
+![Website Context Settings tab with the Build Website Context button, the Add URL field, and the Include URL Prefixes and Exclude URL Prefixes accordions](/img/screenshots/wc-settings.png)
 
 ### Building Website Context
 
@@ -164,7 +164,7 @@ Website content changes over time. There are two ways to keep your context up to
 
 ### Rescrape a Single Page
 
-Click the **refresh icon** on any row in the Pages Scraped grid. The page will be re-fetched and its summary and FAQs will be regenerated. This takes about 15 seconds.
+Click the **refresh icon** on any row in the Pages Scraped grid. The page will be re-fetched and its summary and FAQs will be regenerated. This usually takes only a few moments.
 
 Use this when:
 - A specific page has been updated

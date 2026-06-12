@@ -7,338 +7,217 @@ sidebar_position: 6
 
 # CRM Sync
 
-Keep your CRM and Abmatic AI perfectly aligned with bidirectional synchronization. Import your best accounts, push enriched data back, and ensure every team works from the same source of truth.
+Keep your CRM and Abmatic AI aligned with bidirectional synchronization. Import your best accounts, push enriched data back, and ensure every team works from the same source of truth.
 
 ## Why CRM Sync Matters
 
-| Without CRM Sync | With Abmatic CRM Sync |
+| Without CRM Sync | With Abmatic AI CRM Sync |
 |------------------|----------------------|
-| Manual data exports and imports | Automatic bidirectional sync |
+| Manual exports and imports | Automatic bidirectional sync |
 | Stale data in campaigns | Always-fresh account data |
-| Siloed enrichment data | Enrichment flows back to CRM |
-| Missed opportunities | Complete visibility across teams |
+| Siloed enrichment | Enrichment flows back to the CRM |
 | Hours of data hygiene | Set it and forget it |
-
-## How It Works
-
-```
-┌─────────────────┐         ┌─────────────────┐
-│                 │  Import │                 │
-│    Your CRM     │ ─────── │   Abmatic AI    │
-│                 │         │                 │
-│  • Accounts     │  Push   │  • Enrichment   │
-│  • Contacts     │ ─────── │  • Scoring      │
-│  • Leads        │         │  • Campaigns    │
-└─────────────────┘         └─────────────────┘
-        ↕ Bidirectional Sync ↕
-```
-
-1. **Connect** your CRM with one-click OAuth
-2. **Import** accounts and contacts using CRM filters
-3. **Enrich** with Abmatic's company and contact data
-4. **Push** enhanced records back to your CRM
-5. **Sync** automatically to keep everything updated
 
 ## Supported CRMs
 
-Abmatic AI integrates with the leading CRM platforms:
-
-![CRM Integrations Hub](/img/screenshots/integrations-hub.png)
-
-| CRM | Accounts | Contacts | Leads | Opportunities |
+| CRM | Accounts | Contacts | Leads | Opportunities / Deals |
 |-----|----------|----------|-------|---------------|
 | **Salesforce** | Yes | Yes | Yes | Yes |
-| **HubSpot** | Yes (Companies) | Yes | N/A | Yes (Deals) |
-| **Pipedrive** | Yes (Organizations) | Yes (Persons) | N/A | Yes (Deals) |
-| **ActiveCampaign** | Yes | Yes | N/A | Yes (Deals) |
+| **HubSpot** | Yes (Companies) | Yes | — | Yes (Deals) |
+| **Pipedrive** | Yes (Organizations) | Yes (Persons) | — | Yes (Deals) |
+| **ActiveCampaign** | Yes | Yes | — | Yes (Deals) |
+
+For provider-specific setup, see [Salesforce](/integrations/crm/salesforce), [HubSpot](/integrations/crm/hubspot), [Pipedrive](/integrations/crm/pipedrive), and [ActiveCampaign](/integrations/crm/activecampaign).
+
+## How It Works
+
+1. **Connect** your CRM with OAuth.
+2. **Import** accounts and contacts using CRM filters.
+3. **Enrich** them with Abmatic AI's company and contact data.
+4. **Push** enriched records back to your CRM.
+5. **Sync** automatically to keep everything updated.
+
+---
 
 ## Getting Started
 
 ### Step 1: Connect Your CRM
 
-1. Go to **Settings > Integrations**
-2. Find your CRM card
-3. Click **Authorize**
-4. Complete the OAuth flow
-5. Your CRM shows as **Active**
+1. Go to **Settings → Integrations**.
+2. Find your CRM card.
+3. Click **Connect** / **Authorize** and complete the OAuth flow.
+4. The CRM shows as **Active**.
 
 ### Step 2: Import from CRM
 
-Import accounts or contacts directly from your CRM:
+Pull accounts or contacts directly from your CRM.
 
-![Import from CRM](/img/screenshots/account-create-modal.png)
+![The Accounts page create dialog with the Import from CRM option](/img/screenshots/crm-import.png)
 
-1. Go to **Accounts** or **Contacts**
-2. Click **+ Account List** or **+ Contact List**
-3. Select **Import from CRM**
-4. Build filter criteria (optional)
-5. Preview matching records
-6. Click **Pull** to import
+1. Go to **Accounts** or **Contacts**.
+2. Click **+ Account List** or **+ Contact List**.
+3. Select **Import from CRM**.
+4. Build filter criteria using CRM-native fields (optional).
+5. Preview the matching records.
+6. Pull them in to create a new collection.
+
+:::info Connection required
+If no CRM is connected, the Import from CRM flow sends you to **Integrations** to set one up first.
+:::
 
 ### Step 3: Configure Sync Settings
 
-Fine-tune how data flows between systems:
+Fine-tune how data flows between systems in **Settings → Integrations → [Your CRM] → Settings**.
 
-1. Go to **Settings > Integrations > [Your CRM]**
-2. Click **Settings**
-3. Configure sync direction and frequency
+![The Salesforce CRM Settings modal showing object-syncing toggles, push filters, and field mapping across Accounts, Contacts, Opportunities, Leads, and Campaigns tabs](/img/screenshots/crm-sync-settings.png)
+
+The Settings modal has a tab per object (Accounts, Contacts, Opportunities, Leads, Campaigns, and an Activity Log) and three sections per tab:
+
+- **Set object syncing** — control **Create** and **Update** in each direction. The **Sync** chip in the middle shows the resulting direction (for example, **Sync both ways**).
+- **Set up filters for pushing records** — only records matching these filters are pushed to the CRM. Leave the filters empty to push all records.
+- **Set field mapping** — control how each field maps and syncs (see below).
+
+You can also push everything immediately with **Sync Accounts Manually** (or the equivalent for the active object).
+
+---
 
 ## Sync Directions
 
-### Import (CRM → Abmatic)
+| Direction | What It Does |
+|-----------|--------------|
+| **Import (CRM → Abmatic AI)** | Create new records from the CRM and/or update existing ones |
+| **Export (Abmatic AI → CRM)** | Create new CRM records (e.g. revealed companies) and/or update them with enrichment |
+| **Sync both ways** | Bidirectional sync; the most recent update wins |
 
-Pull data from your CRM into Abmatic:
+Set these per object using the **Create** and **Update** checkboxes in **Set object syncing**.
 
-| Setting | What It Does | Best For |
-|---------|--------------|----------|
-| **Create** | Creates new Abmatic records from CRM | Initial import |
-| **Update** | Updates existing records with CRM changes | Keeping data fresh |
+---
 
-### Export (Abmatic → CRM)
+## Field Mapping: Don't sync / Fill / Overwrite
 
-Push enriched data back to your CRM:
+Field mapping is configured per field in the **Set field mapping** table. Each field has a mode that controls how Abmatic AI writes to the CRM:
 
-| Setting | What It Does | Best For |
-|---------|--------------|----------|
-| **Create** | Creates new CRM records from Abmatic | Revealed companies |
-| **Update** | Updates CRM records with enrichment | Adding missing data |
+| Mode | What It Does | Best For |
+|------|--------------|----------|
+| **Don't sync** | The field is never pushed to the CRM | Protected, manual-only fields |
+| **Fill** | Only fills the CRM field when it's empty | Enrichment without overwriting |
+| **Overwrite** | Always updates the CRM field | Keeping Abmatic AI as the source of truth |
 
-### Two-Way Sync
+Each row also has:
 
-Enable bidirectional synchronization for real-time alignment:
+- A **Sync** direction chip (Sync both ways / Sync into [CRM] / Sync into Abmatic / Not syncing).
+- A **Sync to Abmatic** checkbox to pull the CRM value back into Abmatic AI.
+- An **Add Mapping** action to map additional or custom fields.
 
-- Changes in either system sync automatically
-- Most recent update wins
-- Conflict resolution based on timestamp
-- Perfect for sales-marketing alignment
+:::tip Map demo_booked
+**demo_booked** (whether the record has booked a demo) is available in the field selector. Map it so demo activity flows to your CRM alongside your enrichment data. For the full mapping reference, see [Fill vs Overwrite](/integrations/crm/sync-behavior).
+:::
 
-## Importing from CRM
+### Default mappings
 
-### Using CRM Filters
+Standard fields map automatically. A few examples:
 
-Build precise imports using native CRM fields:
+**Account Fields**
 
-**Salesforce Example:**
-```
-Type = "Customer"
-Industry = "Technology"
-AnnualRevenue > 1000000
-```
+| Abmatic AI | Salesforce | HubSpot | Pipedrive |
+|---------|------------|---------|-----------|
+| name | Name | name | name |
+| website | Website | domain | — |
+| industry | Industry | industry | — |
+| employee_count | NumberOfEmployees | numberofemployees | — |
 
-**HubSpot Example:**
-```
-lifecyclestage = "customer"
-industry = "SOFTWARE"
-hs_is_target_account = true
-```
+**Contact Fields**
 
-### Import Options
+| Abmatic AI | Salesforce | HubSpot | Pipedrive |
+|---------|------------|---------|-----------|
+| work_email | Email | email | email |
+| first_name | FirstName | firstname | first_name |
+| last_name | LastName | lastname | last_name |
+| job_title | Title | jobtitle | — |
 
-| Option | Description | When to Use |
-|--------|-------------|-------------|
-| **All Records** | Import entire object | Small CRM, full sync |
-| **Filtered** | Import matching criteria | Targeted campaigns |
-| **List/View** | Import from saved list | Existing segments |
+Custom fields (`field_01` through `field_30`) can be mapped to any CRM field.
 
-### Duplicate Handling
+---
 
-When importing, choose how to handle existing records:
-
-| Option | Behavior | Best For |
-|--------|----------|----------|
-| **Skip** | Keep existing data unchanged | Preserving manual edits |
-| **Overwrite All** | Replace all fields with CRM data | CRM as source of truth |
-| **Update Missing** | Only fill empty fields | Adding enrichment |
-
-## Pushing to CRM
+## Pushing Records to CRM
 
 ### Manual Push
 
-Push selected records on demand:
+1. Select accounts or contacts (in a grid or open one record).
+2. Click **Push to CRM**.
+3. For contacts, choose the destination: **Create as Contact** or **Create as Lead**.
+4. Review the field mappings.
+5. Push.
 
-1. Select accounts or contacts in Abmatic
-2. Click **Push to CRM**
-3. Choose destination (Contact or Lead for contacts)
-4. Review field mappings
-5. Click **Push**
+You can push from the grid's bulk-actions menu or from an individual record's **Overview** tab `...` menu. If the **Outreach** integration is active, **Push to Outreach** is also available.
 
 ### Auto-Push
 
-Automatically push new records as they're created:
-
-1. Enable auto-push in sync settings
-2. New records (imports, reveals) push automatically
-3. Works great with Contact Reveal
+Turn on auto-push in the sync settings so new records (imports, reveals) push automatically. This pairs well with [Contact Reveal](/visitor-tracking/contact-reveal).
 
 ### Required Fields
 
-Ensure these fields have values before pushing:
+**Salesforce**
 
-**Salesforce:**
 | Object | Required | Recommended |
 |--------|----------|-------------|
 | Contact | LastName | AccountId, Email |
 | Lead | LastName, Company | Email, Phone |
 | Account | Name | Website, Industry |
 
-**HubSpot:**
+**HubSpot**
+
 | Object | Required | Recommended |
 |--------|----------|-------------|
-| Contact | None | email |
-| Company | None | domain |
+| Contact | — | email |
+| Company | — | domain |
 
-## Field Mapping
-
-### Default Mappings
-
-Standard fields map automatically:
-
-**Account Fields:**
-| Abmatic | Salesforce | HubSpot | Pipedrive |
-|---------|------------|---------|-----------|
-| name | Name | name | name |
-| website | Website | domain | - |
-| industry | Industry | industry | - |
-| employee_count | NumberOfEmployees | numberofemployees | - |
-
-**Contact Fields:**
-| Abmatic | Salesforce | HubSpot | Pipedrive |
-|---------|------------|---------|-----------|
-| work_email | Email | email | email |
-| first_name | FirstName | firstname | first_name |
-| last_name | LastName | lastname | last_name |
-| job_title | Title | jobtitle | - |
-
-### Custom Field Mapping
-
-Map your custom fields:
-
-1. Go to **Settings > Integrations > [CRM] > Settings**
-2. Navigate to field mapping section
-3. Select Abmatic field (field_01 through field_30)
-4. Select corresponding CRM field
-5. Set sync direction
-6. Save mapping
+---
 
 ## Record Matching
 
-### How Abmatic Matches Records
+**Accounts:** match by CRM ID (if previously synced) → match by domain/website → create new if no match.
 
-**Accounts:**
-1. Match by CRM ID (if previously synced)
-2. Match by domain/website
-3. Create new if no match found
+**Contacts:** match by CRM ID → match by email → create new if no match.
 
-**Contacts:**
-1. Match by CRM ID (if previously synced)
-2. Match by email address
-3. Create new if no match found
+To avoid duplicates: standardize domains (remove `www.` / `http://`), validate emails, and keep CRM ID links intact.
 
-### Avoiding Duplicates
-
-| Strategy | Implementation |
-|----------|----------------|
-| Standardize domains | Clean `www.` and `http://` variations |
-| Validate emails | Ensure valid email formats |
-| Use CRM IDs | Maintain ID links when possible |
-| Regular cleanup | Deduplicate monthly |
+---
 
 ## Sync Logs and Monitoring
 
-### Viewing Sync Activity
-
-1. Go to **Settings > Integrations > [CRM]**
-2. View recent sync operations
-3. Check for errors or warnings
-
-### Log Information
+Each CRM's **Settings** modal includes an **Activity Log** tab. The log shows:
 
 | Field | What It Shows |
 |-------|---------------|
 | **Resource Type** | Account, Contact, or Lead |
 | **Status** | Created, Updated, Failed, or Skipped |
-| **Direction** | To Abmatic or From Abmatic |
-| **Timestamp** | When the operation occurred |
+| **Direction** | To Abmatic AI or From the CRM |
+| **Timestamp** | When the operation ran |
 | **Message** | Details or error information |
 
-### Common Sync Errors
+### Common Errors
 
 | Error | Cause | Solution |
 |-------|-------|----------|
-| REQUIRED_FIELD_MISSING | Missing required CRM field | Add required data before push |
-| INVALID_FIELD | Field mapping doesn't exist | Update field mapping |
+| REQUIRED_FIELD_MISSING | Missing required CRM field | Add the data before pushing |
+| INVALID_FIELD | Field mapping doesn't exist | Update the field mapping |
 | INSUFFICIENT_ACCESS | No API permission | Check CRM user permissions |
-| DUPLICATE_VALUE | Record already exists | Handle duplicate or merge |
+| DUPLICATE_VALUE | Record already exists | Handle the duplicate or merge |
+
+---
 
 ## Best Practices
 
-### Do's
+| Do | Don't |
+|----|-------|
+| Start with import to build your audience | Sync everything (creates noise) |
+| Map required fields before pushing | Ignore sync errors |
+| Use **push filters** to sync only relevant records | Map incompatible field types |
+| Enable auto-push for reveals | Skip deduplication |
+| Review the Activity Log weekly | Overwrite good CRM data — use **Fill** for those fields |
 
-| Practice | Why It Matters |
-|----------|----------------|
-| Start with import | Build your audience from existing CRM data |
-| Map required fields | Prevent push failures |
-| Enable auto-push for reveals | Capture new accounts automatically |
-| Monitor sync logs weekly | Catch issues early |
-| Use CRM filters | Import only relevant records |
-
-### Don'ts
-
-| Avoid | Why |
-|-------|-----|
-| Syncing everything | Creates noise and slows sync |
-| Ignoring errors | Failed syncs mean missing data |
-| Mapping incompatible types | Causes data corruption |
-| Skipping deduplication | Creates confusion and extra costs |
-
-### Data Quality Tips
-
-1. **Standardize before sync**: Clean domains (remove www, http)
-2. **Validate emails**: Ensure proper format
-3. **Match data types**: Text to text, number to number
-4. **Set clear ownership**: Decide which system is source of truth per field
-
-## Use Cases
-
-### 1. Import Target Accounts for ABM
-
-Pull your strategic accounts from CRM:
-
-```
-Salesforce Filter:
-Type = "Strategic"
-AnnualRevenue > 10000000
-Industry IN ("Technology", "Finance")
-```
-
-Then activate in Abmatic campaigns with full enrichment.
-
-### 2. Push Revealed Companies
-
-Capture website visitors and add to CRM:
-
-1. Enable Contact Reveal
-2. Turn on auto-push
-3. New companies automatically create CRM records
-4. Sales sees hot leads immediately
-
-### 3. Enrich Existing Contacts
-
-Import contacts, let Abmatic enrich, push back:
-
-1. Import contacts from CRM
-2. Abmatic adds company data, job titles, social profiles
-3. Push enriched data back
-4. CRM contacts now have complete profiles
-
-### 4. Sync Campaign Engagement
-
-Keep CRM updated with marketing activity:
-
-1. Create campaigns in Abmatic
-2. Track engagement and conversions
-3. Sync activity back to CRM
-4. Sales has full engagement history
+---
 
 ## Troubleshooting
 
@@ -346,38 +225,36 @@ Keep CRM updated with marketing activity:
 
 | Check | Solution |
 |-------|----------|
-| Sync enabled? | Toggle sync on in settings |
-| Direction correct? | Verify import/export settings |
-| Field mappings set? | Map required fields |
-| Check sync logs | Review for specific errors |
+| Is syncing enabled for the object? | Turn on Create/Update in **Set object syncing** |
+| Is the direction correct? | Verify import/export settings |
+| Are required fields mapped? | Map them in **Set field mapping** |
+| Any errors? | Review the Activity Log |
 
 ### Wrong Data Syncing
 
 | Issue | Fix |
 |-------|-----|
-| Wrong field values | Review field mappings |
-| Overwriting good data | Change to "Update Missing" |
-| Missing enrichment | Ensure push is enabled |
+| Wrong field values | Review the field mappings |
+| Overwriting good CRM data | Switch that field to **Fill** |
+| Missing enrichment | Ensure the field is set to push (Fill or Overwrite) |
 
 ### Sync Delays
 
 | Cause | Resolution |
 |-------|------------|
-| Large dataset | Normal - allow time to complete |
-| API rate limits | Sync will resume automatically |
-| Manual trigger needed | Click sync button to force |
+| Large dataset | Normal — allow time to complete |
+| API rate limits | Sync resumes automatically |
+| Need it now | Use **Sync Manually** |
 
-### Permission Errors
-
-1. Verify CRM API access is enabled
-2. Check user has correct permissions
-3. Try reconnecting the integration
-4. Review object-level permissions in CRM
+---
 
 ## Related Documentation
 
 - [Salesforce Integration](/integrations/crm/salesforce)
 - [HubSpot Integration](/integrations/crm/hubspot)
+- [Pipedrive Integration](/integrations/crm/pipedrive)
+- [ActiveCampaign Integration](/integrations/crm/activecampaign)
+- [CRM Sync Behavior: Fill vs Overwrite](/integrations/crm/sync-behavior)
 - [Account Lists](/audiences/accounts)
 - [Contact Lists](/audiences/contacts)
 - [CSV Import](/audiences/csv-import)

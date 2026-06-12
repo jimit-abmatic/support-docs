@@ -7,31 +7,41 @@ sidebar_position: 2
 
 # Configuring AI Agents
 
-Transform your AI agents from helpful assistants into expert sales representatives who know your business inside and out. With the right context, your AI agents deliver responses that feel custom-built for your company.
+This guide is about the **strategy** of giving your AI agents context: what to write, how to structure it, and how settings-level context interacts with campaign-level instructions. With the right context, your agents answer visitor questions accurately, sound on-brand, and qualify leads the way your team would.
 
-## Why Configuration Matters
+:::note Where this fits
+This page focuses on *what to put in your agent context and why*. For a walkthrough of the **Settings → AI Agents** screen itself (the tabs and buttons), see the **AI Agents** page under **Settings**.
+:::
 
-| Without Context | With Context |
+## Why context matters
+
+| Without context | With context |
 |-----------------|--------------|
 | Generic responses | On-brand messaging that matches your voice |
 | Basic product info | Accurate pricing, features, and differentiators |
 | Missed opportunities | Intelligent qualification and next steps |
 | Inconsistent answers | Approved responses to common questions |
 
-**The difference is dramatic**: AI agents with proper context achieve 40% higher engagement rates and more qualified conversations.
+The more your agents know about your business, the better they represent it.
 
-## Accessing AI Agent Settings
+## Where to set agent context
 
-1. Go to **Settings** in the left sidebar
-2. Click **AI Agents**
-3. Choose your configuration tab:
+Go to **Settings** in the left sidebar, then **AI Agents**. There are two context tabs:
 
 | Tab | Purpose |
 |-----|---------|
-| **Agentic Chat** | Context for website visitor conversations |
-| **Agentic Sequence** | Context for AI-powered email outreach |
+| **Agentic Chat** | Context for the website visitor chat assistant — company overview, products, pricing, FAQs. |
+| **Agentic Sequence** | Context for AI-powered email outreach — value props, tone, and follow-up cadence. |
 
-![AI Agents Settings](/img/screenshots/settings-ai-agents.png)
+Each tab has a large context text box, a **Refresh Context** button (regenerates a draft context from your scraped website pages using AI — a useful starting point you can then edit), and a **Save Context** button. Always click **Save Context** after making changes.
+
+![The Settings AI Agents screen with the Agentic Chat and Agentic Sequence tabs, a Refresh Context button, and a large assistant context document](/img/screenshots/cfg-settings-ai.png)
+
+*Settings → AI Agents. Switch between the **Agentic Chat** and **Agentic Sequence** tabs, edit the context, and click **Save Context**. Use **Refresh Context** to generate a draft from your website.*
+
+:::tip Start with Refresh Context, then edit
+Click **Refresh Context** to have the AI draft context from your scraped website pages, then tighten it up — fix pricing, add FAQs, and remove anything inaccurate. It's faster than starting from a blank box.
+:::
 
 ---
 
@@ -39,11 +49,11 @@ Transform your AI agents from helpful assistants into expert sales representativ
 
 Give your AI assistant everything it needs to engage website visitors with confidence and convert them into qualified leads.
 
-:::info Settings vs. Campaign Instructions
-The context you configure here provides **default instructions** for all Agentic Chat campaigns. You can override these defaults with campaign-specific instructions in each campaign's **Instructions** tab. Campaign-level instructions take precedence when both exist.
+:::info Settings vs. campaign Instructions
+The context you configure here provides **default instructions** for all Agentic Chat campaigns. You can override these defaults with campaign-specific instructions in each campaign's **Instructions** tab. **Campaign-level instructions take precedence** when both exist.
 
-- **Settings context**: Global defaults for all campaigns
-- **Campaign instructions**: Specific overrides for individual campaigns
+- **Settings context**: global defaults for all campaigns
+- **Campaign Instructions**: specific overrides for individual campaigns
 
 See [Agentic Chat Campaigns](/campaigns/agentic-chat) for campaign-level configuration.
 :::
@@ -268,6 +278,7 @@ Keep a running document of questions that stumped the AI. Add answers to your co
 
 ## Related
 
-- [AI Agents Overview](/ai-agents/ai-agents-overview) - Learn about Clara and Alex
-- [AI SDR Agent (Alex)](/ai-agents/sdr-agent) - Configure prospect research
-- [AI ABM Agent (Clara)](/ai-agents/abm-agent) - Configure campaign assistance
+- [AI Agents Overview](/ai-agents/ai-agents-overview) — learn about Clara and Alex
+- [Agentic Chat Widget](/ai-agents/agentic-chat-widget) — the website chat assistant your Agentic Chat context powers
+- [Agentic Chat Campaigns](/campaigns/agentic-chat) — campaign-level **Instructions** and handoff settings
+- The **AI Agents** page under **Settings** — the screen where you save Agentic Chat / Agentic Sequence context

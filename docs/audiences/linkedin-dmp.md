@@ -2,249 +2,243 @@
 id: linkedin-dmp
 title: LinkedIn Matched Audiences
 sidebar_label: LinkedIn DMP
+sidebar_position: 7
 ---
 
 # LinkedIn Matched Audiences
 
-Turn your carefully curated account lists into LinkedIn advertising audiences—without manual CSV exports or messy uploads.
+Turn the account and contact collections you build in Abmatic AI into LinkedIn advertising audiences—without exporting CSVs or uploading files by hand. Pick a collection, push it to LinkedIn, and Abmatic AI handles the formatting and upload for you.
 
-## Why LinkedIn Matched Audiences Drive Results
+## Why use Matched Audiences
 
-| Without Abmatic | With Abmatic |
-|-----------------|--------------|
-| Export CSVs, format for LinkedIn, upload manually | One-click push from any account collection |
-| Static lists that go stale | Automatic sync keeps audiences current |
-| No connection to website behavior | Target accounts showing buying signals |
-| Separate systems, fragmented data | Unified ABM across web and ads |
+| Doing it manually | With Abmatic AI |
+|-------------------|-----------------|
+| Export a CSV, reformat it for LinkedIn, upload it | Push a collection to LinkedIn in a few clicks |
+| Lists go stale the moment you upload them | Dynamic collections keep the audience current |
+| Ads are disconnected from website behavior | Target the same accounts showing buying signals on your site |
+| Data spread across separate tools | One set of audiences powering web and ads together |
 
-**The result:** Your LinkedIn ads reach the exact accounts you've identified as high-value—and stay synchronized as your target lists evolve.
-
-## How It Works
+## How it works
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌────────────────────┐
-│  Abmatic        │───▸│  LinkedIn DMP    │───▸│  Campaign Manager  │
-│  Account List   │    │  Matched Upload  │    │  Matched Audience  │
+│  Abmatic AI     │───▸│  LinkedIn        │───▸│  Campaign Manager  │
+│  Collection     │    │  Matched Upload  │    │  Matched Audience  │
 └─────────────────┘    └──────────────────┘    └────────────────────┘
          │                     │                        │
-    Your target           Company data              Ready to use
-    accounts              matched to                in LinkedIn
-                          LinkedIn members          ad campaigns
+   Your target           Company data              Ready to use
+   accounts              matched to                in LinkedIn
+                         LinkedIn members          ad campaigns
 ```
 
-1. **Select your collection** — Any account or contact list in Abmatic
-2. **Create Matched Audience** — Abmatic formats and uploads to LinkedIn
-3. **LinkedIn processes** — Matches companies to their member database (24-48 hours)
-4. **Target in campaigns** — Use the audience in Campaign Manager
+1. **Select a collection** — Any account or contact list in Abmatic AI.
+2. **Create a Matched Audience** — Abmatic AI formats the records and uploads them to LinkedIn.
+3. **LinkedIn matches and processes** — LinkedIn matches your companies to its member database (this takes 24–48 hours).
+4. **Target in campaigns** — Use the audience in LinkedIn Campaign Manager.
 
-## Getting Started
+## Before you start
 
-### Step 1: Connect LinkedIn Ads
+You need:
 
-Navigate to **Integrations** and connect your LinkedIn Ads account:
+- **Admin access to a LinkedIn Campaign Manager account.**
+- The **LinkedIn Ads integration connected** in Abmatic AI.
 
-1. Go to **Integrations > LinkedIn Ads**
-2. Click **Connect**
-3. Sign in with your LinkedIn credentials
-4. Authorize Abmatic to access your Ad Account
-5. Select which Ad Account to use
+### Connect LinkedIn Ads
 
-![Settings > Integrations page](/img/screenshots/integrations-hub.png)
-*Navigate to the Integrations page and scroll to the Advertising section to find LinkedIn Ads.*
+1. Go to **Settings > Integrations**.
+2. Scroll to the **Advertising** section and find **LinkedIn Ads**.
+3. Click **Connect** (or **Authorize**).
+4. Sign in with your LinkedIn credentials and authorize Abmatic AI.
+5. Select which LinkedIn Ad Account to use.
 
-> **Prerequisite:** You need admin access to a LinkedIn Campaign Manager account.
+![Settings > Integrations page where you connect advertising integrations](/img/screenshots/integrations-hub.png)
+*Open Settings > Integrations and scroll to the Advertising section to connect LinkedIn Ads.*
 
-### Step 2: Prepare Your Account List
+## Prepare your collection
 
-Before pushing to LinkedIn, ensure your collection has quality data:
+Match quality depends on the data in your collection. The more identifying information each account has, the more companies LinkedIn can match.
 
-| Data Element | Impact on Match Rate |
-|-------------|---------------------|
-| **Company Name** | Essential — use official names, not abbreviations |
-| **Website Domain** | High — significantly improves matching |
-| **Employee Emails** | High — known contacts boost match accuracy |
-| **Company Size** | Medium — helps LinkedIn identify the right entity |
+| Data element | Impact on match rate |
+|--------------|----------------------|
+| **Company name** | Essential — use official names, not abbreviations |
+| **Website domain** | High — the single biggest factor for matching |
+| **Employee emails** | High — known contacts boost match accuracy |
+| **Company size** | Medium — helps LinkedIn pick the right company |
 
-**Pro Tip:** Collections with website domains typically see 20-30% higher match rates than those with company names alone.
+:::tip
+Run **Enrich** on a collection before pushing it. Filling in missing domains and company details usually lifts the match rate.
+:::
 
-### Step 3: Create Matched Audience
+## Create a Matched Audience
 
-From your account or contact collection:
+Pushing to LinkedIn is done from the **Collections** list on the Accounts or Contacts page.
 
-1. Go to **Audiences > Accounts** (or **Contacts**)
-2. Select the collection(s) you want to push
-3. Click the **More Actions** menu (three dots)
-4. Select **Create LinkedIn Matched Audience**
-5. Confirm the creation
+1. Go to **Accounts** (or **Contacts**) and stay on the **Collections** tab.
+2. Tick the checkbox next to the collection you want to push.
+3. Click the **kebab menu** (the three-dots `⋮` icon above the table, next to the refresh/sort controls).
+4. Choose **Create LinkedIn Matched Audience**.
 
-![Creating LinkedIn Matched Audience from collection](/img/screenshots/accounts-list.png)
+![Accounts Collections list with a collection selected and the kebab menu open, showing Create LinkedIn Matched Audience](/img/screenshots/ldmp-push-menu.png)
+*Select a collection, then open the three-dots menu and choose **Create LinkedIn Matched Audience**.*
 
-The sync process has three steps:
-- **Preparing data** — Formatting your records for LinkedIn
-- **Uploading CSV** — Sending data securely to LinkedIn
-- **Creating Matched Audience** — LinkedIn processes and creates the audience
+A dialog opens and walks through three steps automatically:
 
-## Understanding Match Rates
+1. **Preparing data** — Abmatic AI formats your records for LinkedIn.
+2. **Uploading CSV** — The data is sent securely to LinkedIn.
+3. **Creating Matched Audience** — LinkedIn receives the upload and starts building the audience.
 
-LinkedIn matches your company data against their member database. Not every company will match—here's what to expect:
+Click **Create** to start, or **Cancel** to back out.
 
-| Match Rate | Quality | Action |
-|-----------|---------|--------|
+![Create LinkedIn Matched Audience dialog showing the three steps: Preparing data, Uploading CSV, Creating Matched Audience](/img/screenshots/ldmp-status.png)
+*The Create LinkedIn Matched Audience dialog runs through Preparing data, Uploading CSV, and Creating Matched Audience.*
+
+After the upload finishes, LinkedIn still needs **24–48 hours** to match and process the audience before you can use it in a campaign.
+
+## Understanding match rates
+
+LinkedIn matches your company data against its member database. Not every company will match—here's what to expect:
+
+| Match rate | Quality | What to do |
+|------------|---------|------------|
 | **70%+** | Excellent | Ready to launch campaigns |
-| **50-70%** | Good | Usable, consider enriching low-match records |
-| **Below 50%** | Needs attention | Review data quality, add domains/emails |
+| **50–70%** | Good | Usable; consider enriching the records that didn't match |
+| **Below 50%** | Needs attention | Review data quality, add domains and emails |
 
-### Improving Your Match Rate
+### Improving your match rate
 
-1. **Clean company names** — Use "Microsoft Corporation" not "MSFT" or "Microsoft Inc"
-2. **Add website domains** — The single biggest improvement you can make
-3. **Include employee contacts** — Known emails help LinkedIn match
-4. **Target larger companies** — LinkedIn has better coverage for enterprises
-5. **Enrich your data** — Use Abmatic's auto-enrichment to fill gaps
+1. **Clean up company names** — Use "Microsoft Corporation," not "MSFT" or "Microsoft Inc."
+2. **Add website domains** — The single biggest improvement you can make.
+3. **Include employee contacts** — Known emails help LinkedIn match.
+4. **Lean toward larger companies** — LinkedIn has better coverage for enterprises.
+5. **Enrich your data** — Use Abmatic AI's enrichment to fill in gaps before pushing.
 
-## Audience Sync Behavior
+## Sync behavior
 
-### Sync Timing
+### Timing
 
 | Event | Timing |
 |-------|--------|
-| **Initial push** | Immediate upload to LinkedIn |
-| **LinkedIn processing** | 24-48 hours to become usable |
-| **Automatic updates** | Every 24 hours for dynamic lists |
+| **Initial push** | Uploaded to LinkedIn right away |
+| **LinkedIn processing** | 24–48 hours before the audience is usable |
+| **Automatic updates** | About every 24 hours for dynamic collections |
 
-### Sync Status
+### How different collection types stay current
 
-Check your audience status in the collection details:
-
-| Status | Meaning |
-|--------|---------|
-| **Syncing** | Upload in progress |
-| **Active** | Available in LinkedIn Campaign Manager |
-| **Error** | Check the error message for details |
-
-### Dynamic vs. Static Lists
-
-| List Type | Sync Behavior |
-|-----------|--------------|
+| Collection type | Sync behavior |
+|-----------------|---------------|
 | **Dynamic (filter-based)** | Auto-updates as matching accounts change |
-| **Static (manual)** | Updates only when you modify the list |
-| **CSV imports** | Requires manual re-push after updates |
-| **CRM synced** | Updates when CRM sync runs |
+| **Static** | Updates only when you edit the collection |
+| **CSV imports** | Re-push manually after you update the data |
+| **CRM-synced** | Updates when the CRM sync runs |
 
-## Using Your Matched Audiences
+## Using your audience in LinkedIn
 
-### In LinkedIn Campaign Manager
+Once the audience is active (24–48 hours after the push):
 
-Once your audience is active (24-48 hours after push):
+1. Open **LinkedIn Campaign Manager**.
+2. Create or edit a campaign.
+3. Under **Audience**, choose **Matched Audiences**.
+4. Pick your Abmatic AI–synced audience.
+5. Layer on additional LinkedIn targeting as needed.
 
-1. Open LinkedIn Campaign Manager
-2. Create or edit a campaign
-3. Under **Audience**, select **Matched Audiences**
-4. Choose your Abmatic-synced audience
-5. Layer additional targeting as needed
+### Campaign ideas
 
-### Campaign Strategies
-
-| Objective | Recommended Format | Why It Works |
-|-----------|-------------------|--------------|
+| Objective | Recommended format | Why it works |
+|-----------|--------------------|--------------|
 | **Awareness** | Sponsored Content | Reach decision-makers in target accounts |
-| **Engagement** | Video Ads | Educate on solutions, build brand recall |
-| **Direct Outreach** | Message Ads | Personal inbox delivery to key contacts |
-| **Lead Capture** | Lead Gen Forms | Frictionless conversion within LinkedIn |
+| **Engagement** | Video Ads | Educate and build brand recall |
+| **Direct outreach** | Message Ads | Land in the inbox of key contacts |
+| **Lead capture** | Lead Gen Forms | Convert without leaving LinkedIn |
 | **Retargeting** | Dynamic Ads | Re-engage website visitors on LinkedIn |
 
-### Combining with Website Personalization
+### Coordinating ads with website personalization
 
-The real power comes from coordinating LinkedIn ads with website personalization:
+The real value comes from running LinkedIn ads alongside website personalization for the same accounts:
 
 ```
 Day 1-7:   LinkedIn awareness ads to target accounts
            ↓
-Day 7+:    Account visits your website
+Day 7+:    An account visits your website
            ↓
-           Abmatic detects the company, shows personalized content
+           Abmatic AI detects the company and shows personalized content
            ↓
-Day 14+:   LinkedIn retargeting with case study/demo offer
+Day 14+:   LinkedIn retargeting with a case study or demo offer
            ↓
-           Website shows "Schedule a Demo" personalization
+           Website shows a "Schedule a Demo" personalization
 ```
 
-This multi-touch approach ensures consistent messaging across channels.
+## Audience size requirements
 
-## Best Practices
+LinkedIn enforces a minimum audience size for advertising. After matching, your audience must have at least **300 members**:
 
-### Do's
-
-| Practice | Why It Matters |
-|----------|---------------|
-| Start with your best accounts | Higher match rates, clearer ROI |
-| Use enriched data | Domains and emails improve matching |
-| Segment for different messages | "Enterprise" vs "Mid-Market" need different ads |
-| Coordinate with web personalization | Consistent experience across touchpoints |
-| Monitor match rates | Low rates signal data quality issues |
-
-### Don'ts
-
-| Avoid | Why |
-|-------|-----|
-| Pushing incomplete data | Wastes budget on low match rates |
-| One giant audience | Limits personalization and optimization |
-| Forgetting minimum size | LinkedIn requires 300+ members |
-| Ignoring processing time | Plan 48 hours before campaign launch |
-| Stale lists | Outdated data = wasted ad spend |
-
-## Audience Size Requirements
-
-LinkedIn has minimum audience requirements for advertising:
-
-| Campaign Type | Minimum Audience |
-|--------------|------------------|
+| Campaign type | Minimum audience |
+|---------------|------------------|
 | Sponsored Content | 300 members |
 | Message Ads | 300 members |
 | Dynamic Ads | 300 members |
 | Lead Gen Forms | 300 members |
 
-**Note:** After matching, your audience must meet these minimums. If your Abmatic list has 500 companies but only 40% match, you'll have ~200 matched members—below the threshold.
+:::note
+The 300-member minimum applies to *matched* members, not the size of your Abmatic AI collection. If a collection has 500 companies but only 40% match, you'll have roughly 200 matched members—below the threshold. Add more accounts or improve match quality.
+:::
+
+## Best practices
+
+| Do | Why it matters |
+|----|----------------|
+| Start with your best accounts | Higher match rates and clearer results |
+| Push enriched data | Domains and emails improve matching |
+| Segment for different messages | Enterprise and mid-market need different ads |
+| Coordinate with website personalization | A consistent experience across touchpoints |
+| Watch your match rates | Low rates usually signal a data-quality problem |
+
+| Avoid | Why |
+|-------|-----|
+| Pushing incomplete data | Low match rates waste ad budget |
+| One giant audience | Limits personalization and optimization |
+| Forgetting the minimum size | LinkedIn requires 300+ matched members |
+| Ignoring processing time | Plan for 48 hours before launch |
+| Stale lists | Outdated data means wasted spend |
 
 ## Troubleshooting
 
-### Audience Not Appearing in Campaign Manager
+### Audience not appearing in Campaign Manager
 
 | Cause | Solution |
 |-------|----------|
-| Processing in progress | Wait 24-48 hours after push |
-| Below minimum size | Add more accounts or improve match rate |
-| Wrong Ad Account | Verify you selected the correct account during setup |
-| Sync error | Check Abmatic for error messages |
+| Still processing | Wait 24–48 hours after the push |
+| Below the minimum size | Add more accounts or improve match rate |
+| Wrong Ad Account | Confirm you selected the right account when connecting |
+| Sync error | Check Abmatic AI for an error message |
 
-### Low Match Rate
+### Low match rate
 
 | Cause | Solution |
 |-------|----------|
 | Company name variations | Standardize to official names |
 | Missing domains | Add website URLs to your records |
-| Small/private companies | LinkedIn has limited coverage—consider supplementing with other channels |
-| Outdated company data | Re-enrich through Abmatic |
+| Small or private companies | LinkedIn has limited coverage—supplement with other channels |
+| Outdated company data | Re-enrich through Abmatic AI |
 
-### Sync Errors
+### Sync errors
 
-| Error Type | Resolution |
-|-----------|------------|
-| Authentication failed | Reconnect LinkedIn in Integrations |
-| Rate limit exceeded | Wait and retry—large lists may need multiple batches |
+| Error type | Resolution |
+|------------|------------|
+| Authentication failed | Reconnect LinkedIn in Settings > Integrations |
+| Rate limit exceeded | Wait and retry—large lists may upload in batches |
 | Invalid data format | Check for special characters in company names |
-| Permission denied | Verify admin access to LinkedIn Ad Account |
+| Permission denied | Verify admin access to your LinkedIn Ad Account |
 
-## Privacy and Compliance
+## Privacy and compliance
 
-- **Data handling:** Company data is uploaded securely to LinkedIn's DMP
-- **No PII exposure:** LinkedIn matches against their database—you don't see member data
-- **Consent:** Ensure your data collection practices comply with applicable regulations
-- **LinkedIn Terms:** Usage subject to LinkedIn's Matched Audiences terms of service
+- **Data handling:** Company data is uploaded securely to LinkedIn for matching.
+- **No member data exposed:** LinkedIn matches against its own database—you never see member-level data.
+- **Consent:** Make sure your data practices comply with applicable regulations.
+- **LinkedIn terms:** Usage is subject to LinkedIn's Matched Audiences terms of service.
 
-## Related Resources
+## Related resources
 
 - [LinkedIn Ads Campaigns](/campaigns/linkedin-ads) — Running campaigns with Matched Audiences
-- [Audiences Overview](/audiences/overview) — Building and managing account lists
+- [Audiences Overview](/audiences/overview) — Building and managing collections
 - [Google Customer Match](/audiences/google-customer-match) — Similar functionality for Google Ads
 - [Integrations Overview](/integrations/overview) — All available integrations

@@ -18,70 +18,82 @@ Use **Ctrl+F** (Windows) or **Cmd+F** (Mac) to search this page for specific top
 
 ### What is Abmatic AI?
 
-Abmatic AI is a complete account-based marketing (ABM) platform that helps B2B companies convert more of their website visitors into customers:
+Abmatic AI is an account-based marketing (ABM) platform that helps B2B teams identify the companies visiting their website, personalize the experience for target accounts, and automate outreach with AI agents:
 
-| Capability | What You Get | Business Impact |
-|------------|--------------|-----------------|
-| **Identify** | See which companies visit your website | Never miss a potential customer |
-| **Personalize** | Tailor web experiences for target accounts | 2-3x higher conversion rates |
-| **Automate** | AI agents handle research and outreach | Save 10+ hours per week |
-| **Integrate** | Connect with CRMs and ad platforms | Unified data, no silos |
-| **Measure** | Track marketing's impact on pipeline | Prove ROI to leadership |
+| Capability | What You Get |
+|------------|--------------|
+| **Identify** | See which companies (and, with reveal, which people) visit your website |
+| **Personalize** | Tailor your website and ads for specific accounts and segments |
+| **Automate** | AI agents help research accounts, draft outreach, and recommend campaigns |
+| **Integrate** | Connect your CRM, ad platforms, calendar, and other tools |
+| **Measure** | Track engagement and conversions by account |
 
 ### Who is Abmatic AI for?
 
-Abmatic is designed for B2B marketing and sales teams running account-based programs. You'll see the best results if you have:
+Abmatic AI is built for B2B marketing and sales teams running account-based programs. You'll get the most value if you have:
 
-| Your Situation | How Abmatic Helps |
+| Your Situation | How Abmatic AI Helps |
 |---------------|-------------------|
-| Defined target account list | Focus resources on best-fit accounts first |
+| A defined target account list | Focus on your best-fit accounts first |
 | Longer sales cycles (30+ days) | Track multi-touch engagement over time |
-| Higher deal values ($10K+) | Justify personalized, high-touch marketing |
-| Sales + Marketing alignment goals | Give both teams shared visibility into accounts |
+| Higher deal values | Justify personalized, account-based marketing |
+| Sales + marketing alignment goals | Give both teams shared visibility into accounts |
 | Growing website traffic | Convert more visitors without more ad spend |
 
-:::info Real Results
-Customers typically see **40-60% improvement** in engagement rates within the first 30 days of personalizing their website.
+### How is Abmatic AI different from other ABM tools?
+
+Abmatic AI brings the core pieces of an ABM program into one platform:
+
+| What's Different | Why It Matters |
+|------------------|----------------|
+| **Built-in AI agents** | Help with account research, outreach drafts, and campaign ideas |
+| **Visual page editor** | Personalize your website without writing code |
+| **Real-time personalization** | Matching visitors see tailored content as the page loads |
+| **One platform** | Identification, personalization, ads, and analytics in a single place |
+
+### What AI agents does Abmatic AI have?
+
+Abmatic AI has a few different AI helpers. It's worth keeping them straight:
+
+| Agent | Role |
+|-------|------|
+| **Clara (AI ABM)** | The account-based marketing persona — helps with account strategy, campaigns, and analysis |
+| **Alex (AI SDR)** | The sales-development persona — focuses on outreach and prospecting tasks |
+| **Co-Pilot** | A separate in-app assistant roster that helps you get things done across the app |
+| **Oracle** | The autonomous-agent product that can carry out work and check in for approvals (see below) |
+
+The **AI Agent** chat lives at the top of the left sidebar. You can ask it about your accounts, campaigns, and recent visitor activity in plain language.
+
+![The AI Agent chat in Abmatic AI, with the Clara persona summarizing recent campaign and visitor activity](/img/screenshots/faq-ai-hub.png)
+*The AI Agent chat helps you review campaigns and spot active accounts.*
+
+:::note Oracle is an advanced, opt-in product
+**Oracle** lets AI agents act more autonomously, with weekly goals (**Oracle Goals**) and an approvals inbox (**Oracle Inbox**) where you approve or deny higher-impact actions. It runs at one of three trust tiers — supervised, standard, or autonomous. Oracle is gated and may not be turned on for your account. If you'd like access, contact your Abmatic AI rep or email [support@abmatic.ai](mailto:support@abmatic.ai).
 :::
 
-### How is Abmatic different from other ABM tools?
+### Do I need technical skills to use Abmatic AI?
 
-Abmatic is the only platform that combines all four pillars of modern ABM:
-
-| What Makes Us Different | Why It Matters |
-|------------------------|----------------|
-| **AI-powered agents** | Automate research, outreach, and campaign recommendations |
-| **Visual page editor** | Create personalized experiences without developers |
-| **Real-time personalization** | No page flicker—instant, seamless experiences |
-| **Unified platform** | One tool for identification, personalization, and analytics |
-
-![Abmatic AI Agents Hub](/img/screenshots/ai-agents-hub.png)
-*AI agents like Alex (SDR) and Clara (ABM) automate time-consuming tasks*
-
-### Do I need technical skills to use Abmatic?
-
-No technical skills required for 95% of features. Here's what each capability requires:
+No technical skills are required for most features. Here's what each one needs:
 
 | Feature | Skill Level | Details |
 |---------|-------------|---------|
 | Script installation | One-time copy/paste | Or use Google Tag Manager |
 | Campaign creation | None | Point-and-click visual editor |
 | CRM integration | None | One-click OAuth connection |
-| Audience building | None | Visual filters and drag-drop |
-| Website personalization | None | WYSIWYG editor—no code |
-| Custom event tracking | Basic JS (optional) | Only for advanced use cases |
+| Audience building | None | Visual filters |
+| Website personalization | None | Visual editor — no code |
+| Custom event tracking | Basic JavaScript (optional) | Only for advanced use cases |
 
 ### How long does setup take?
 
-Most teams are seeing their first visitors within an hour. Full implementation typically takes less than a day:
+Most teams start seeing identified visitors within an hour of installing the script. A fuller setup usually takes less than a day:
 
-| Setup Task | Time Required | Complexity |
-|------------|---------------|------------|
-| Install tracking script | 15-30 minutes | Copy/paste one code snippet |
-| Connect CRM | 10-15 minutes | OAuth flow—just click and authorize |
-| Import target accounts | 15-30 minutes | CSV upload or CRM sync |
-| Create first campaign | 30-45 minutes | Visual editor, no coding |
-| **Total time to value** | **< 2 hours** | Start seeing visitors immediately |
+| Setup Task | Roughly |
+|------------|---------|
+| Install tracking script | 15-30 minutes |
+| Connect your CRM | 10-15 minutes |
+| Import target accounts | 15-30 minutes |
+| Create your first campaign | 30-45 minutes |
 
 ---
 
@@ -89,117 +101,114 @@ Most teams are seeing their first visitors within an hour. Full implementation t
 
 ### How does visitor identification work?
 
-The moment someone visits your website, Abmatic goes to work:
+When someone visits your website, Abmatic AI works through these steps:
 
-1. **Capture**: Our lightweight script (< 50KB) records the visit
-2. **Match**: We cross-reference the visitor's IP against our database of 300M+ companies
-3. **Enrich**: Company details are returned (name, industry, size, revenue, tech stack)
-4. **Associate**: The visit is linked to the company's engagement history
+1. **Capture**: A lightweight script records the visit
+2. **Match**: The visitor's IP is matched to a company
+3. **Enrich**: Company details are returned (name, industry, size, location, technologies)
+4. **Associate**: The visit is linked to that company's engagement history
 
-![Reveal Accounts Dashboard](/img/screenshots/reveal-accounts.png)
-*See exactly which companies are visiting your website in real-time*
+You see the results in **Visitor Reveal** under **Accounts** and **Contacts**.
+
+![The Visitor Reveal accounts view showing identified companies](/img/screenshots/reveal-accounts.png)
+*Visitor Reveal shows which companies are visiting your website.*
+
+:::info About the reveal source and confidence
+The match source shown to you is **Abmatic** with an internal confidence rating. Each identified account also carries a **Reveal Confidence** bucket — from **Very High** down to **Very Low** — so you can judge how sure a match is before acting on it.
+:::
 
 ### What's the identification rate?
 
-Identification rates depend on your traffic mix. Here's what to expect:
+Identification depends heavily on your traffic mix. As a rough guide:
 
-| Traffic Source | Identification Rate | Why |
+| Traffic Source | Typically Identified | Why |
 |----------------|---------------------|-----|
-| Corporate networks | 60-80% | Office IPs map directly to companies |
-| Small business | 40-60% | Many have registered business IPs |
-| Work-from-home | 20-40% | Some use corporate VPNs |
-| Mobile networks | 5-15% | Carrier IPs are shared |
-| Consumer VPNs | < 5% | Intentionally anonymized |
+| Corporate networks | Higher | Office IPs map cleanly to companies |
+| Small business | Moderate | Many have registered business IPs |
+| Work-from-home | Lower | Some use corporate VPNs, many don't |
+| Mobile networks | Low | Carrier IPs are shared |
+| Consumer VPNs | Very low | Intentionally anonymized |
 
-:::tip Boost Your Identification Rate
-Enable **Form Tracking** and **Contact Reveal** to identify visitors that IP-based matching can't catch. Most customers increase their identification rate by 30-50% with these features.
+:::tip Identify more visitors
+Pair IP-based identification with **Form Tracking** and **Contact Reveal** to catch visitors that IP matching alone can't.
 :::
 
 ### Why can't all visitors be identified?
 
-Some traffic can't be matched for technical reasons:
+Some traffic can't be matched to a company for technical reasons:
 
 | Traffic Type | Why It's Unidentifiable | What You Can Do |
 |--------------|------------------------|-----------------|
 | Residential IPs | Home internet doesn't map to companies | Use form tracking to capture email |
-| VPN users | VPNs mask the actual origin | Incentivize form fills with gated content |
-| Mobile carriers | Shared carrier IPs | Contact Reveal credits for high-value pages |
-| Very small businesses | No registered IP ranges | CRM matching against existing contacts |
+| VPN users | VPNs mask the actual origin | Offer gated content to encourage form fills |
+| Mobile carriers | Shared carrier IPs | Use Contact Reveal on high-value pages |
+| Very small businesses | No registered IP ranges | Match against your CRM contacts |
 
 ### Can I identify specific people, not just companies?
 
-Yes! Abmatic offers three ways to identify individuals:
+Yes. Abmatic AI offers three ways to identify individuals:
 
 | Method | How It Works | Best For |
 |--------|--------------|----------|
-| **Form tracking** | Automatically captures form submissions | Free, works with any form |
-| **Contact Reveal** | Credits-based service identifies individuals | High-value pages, no form needed |
-| **CRM matching** | Match visitors against your contact database | Existing prospects and customers |
+| **Form tracking** | Captures form submissions automatically | Free, works with any form |
+| **Contact Reveal** | Credit-based service that identifies individuals | High-value pages, no form needed |
+| **CRM matching** | Matches visitors against your contact database | Existing prospects and customers |
 
-![Contact Reveal](/img/screenshots/reveal-contacts.png)
-*Contact Reveal identifies individual visitors, not just their companies*
+![The Visitor Reveal contacts view](/img/screenshots/reveal-contacts.png)
+*Visitor Reveal can identify individual contacts, not just their companies.*
 
 ---
 
 ## Data & Privacy
 
-### What data does Abmatic collect?
+### What data does Abmatic AI collect?
 
-We collect only what's necessary to help you identify and engage target accounts:
+Abmatic AI collects what's needed to identify and engage target accounts:
 
 | Data Category | What's Collected | Your Control |
 |---------------|-----------------|--------------|
-| **Company data** | Name, industry, size, location (from IP) | Automatic—no PII involved |
+| **Company data** | Name, industry, size, location (from IP) | Automatic — no personal data involved |
 | **Behavioral data** | Page views, sessions, time on site | Configure tracking scope |
-| **Form data** | Submitted form fields | Only when form tracking enabled |
+| **Form data** | Submitted form fields | Only when form tracking is enabled |
 | **CRM data** | Synced from your connected CRM | You control what syncs |
-| **Contact Reveal** | Business email, title, LinkedIn | Only when you spend credits |
+| **Contact Reveal** | Business email, title, profile | Only when you spend credits |
 
-:::info Privacy-First Approach
-We do **not** collect personal information unless:
-- Visitor submits a form (their choice)
-- You sync data from your CRM (your data)
-- You use Contact Reveal credits (explicit action)
+:::info Privacy-first approach
+Abmatic AI does **not** collect personal information unless a visitor submits a form, you sync it from your CRM, or you spend Contact Reveal credits.
 :::
 
-### Is Abmatic GDPR compliant?
+### Is Abmatic AI GDPR compliant?
 
-Yes. Our compliance approach protects both you and your visitors:
+Yes. Highlights of how data is handled:
 
-| Compliance Area | How We Handle It |
+| Compliance Area | How It's Handled |
 |-----------------|------------------|
-| Data basis | IP-based identification is B2B/company-level, not personal data |
-| Legal agreements | Data Processing Agreements (DPAs) available |
-| Data control | You control what data is collected and how it's used |
-| Data subject rights | We support access and deletion requests |
-| Data sales | We **never** sell personal data to third parties |
+| Data basis | IP-based identification is company-level, not personal data |
+| Legal agreements | Data Processing Agreements (DPAs) are available |
+| Data control | You control what's collected and how it's used |
+| Data subject rights | Access and deletion requests are supported |
+| Data sales | Personal data is **never** sold to third parties |
 
-### Is Abmatic SOC 2 compliant?
+### Is Abmatic AI SOC 2 compliant?
 
-Yes. Contact [sales@abmatic.ai](mailto:sales@abmatic.ai) for:
-- SOC 2 Type II audit reports
-- Security questionnaire responses
-- Penetration test summaries
-- Custom security documentation
+Yes. Contact [sales@abmatic.ai](mailto:sales@abmatic.ai) for SOC 2 reports, security questionnaire responses, and related documentation.
 
 ### Where is data stored?
 
 | Region | Infrastructure | Notes |
 |--------|---------------|-------|
-| United States | AWS (us-east-1, us-west-2) | Standard for all plans |
-| European Union | Available on request | Enterprise plans, contact sales |
+| United States | AWS (us-east-1, us-west-2) | Standard for all accounts |
+| European Union | Available on request | Contact sales |
 
-All data is encrypted at rest (AES-256) and in transit (TLS 1.3).
+Data is encrypted at rest (AES-256) and in transit (TLS 1.3).
 
 ### How long is data retained?
 
-| Data Type | Default Retention | Notes |
-|-----------|------------------|-------|
-| Visitor/session data | 24 months | Rolling window |
-| Campaign data | 36 months | For historical analysis |
-| Account/contact records | Until deleted | You control deletion |
+Detailed visitor and session activity is kept in the live analytics views for a rolling window of about **90 days**. Older activity is moved to long-term archive storage and can still be retrieved for historical reporting. Your account and contact records are kept until you delete them.
 
-Custom retention periods available on Enterprise plans.
+:::note
+If you need data from more than ~90 days ago, it's available through archived/historical reporting rather than the live dashboards. Contact [support@abmatic.ai](mailto:support@abmatic.ai) if you need help pulling an older date range, and ask your rep about custom retention arrangements.
+:::
 
 ---
 
@@ -207,109 +216,83 @@ Custom retention periods available on Enterprise plans.
 
 ### What plans are available?
 
-Abmatic offers plans for teams of all sizes:
+Abmatic AI plans are packaged around the volume of accounts and contacts you identify, the features you need, and your team size. Plans are sold on an annual basis. For current packaging and pricing tailored to your traffic, contact [sales@abmatic.ai](mailto:sales@abmatic.ai).
 
-| Plan | Best For | Key Features |
-|------|----------|--------------|
-| **Starter** | Getting started with ABM | Identification, basic personalization |
-| **Professional** | Growing marketing teams | Full features, AI agents, advanced analytics |
-| **Enterprise** | Large organizations | Custom limits, SSO, dedicated support, SLAs |
-
-Contact [sales@abmatic.ai](mailto:sales@abmatic.ai) for detailed pricing.
+You can always see exactly how much of each credit type you've used in **Settings → Usage**. See the [Billing FAQ](/faq/billing) for details on credits and usage.
 
 ### Is there a free trial?
 
-Yes! Start with a **14-day free trial** that includes:
-- Full feature access (no restrictions)
-- AI agent access
-- CRM integrations
-- No credit card required
+Yes — you can start with a free trial that includes full feature access. [Get started →](https://app.abmatic.ai/signup)
 
-[Start your free trial →](https://app.abmatic.ai/signup)
-
-### What counts toward my visitor limit?
+### What counts toward my limits?
 
 Your plan counts **unique identified companies**, not total page views:
 
 | What Counts | What Doesn't Count |
 |-------------|-------------------|
-| Unique identified companies per month | Repeat visits from same company |
+| Each unique identified company | Repeat visits from the same company |
 | | Page views (unlimited) |
 | | Unidentified visitors |
 | | Your own team's visits |
 
-:::tip Most teams have more headroom than they think
-If you identify 1,000 unique companies per month, that could represent 50,000+ page views—all included in your plan.
+:::tip More headroom than you'd think
+A single identified company can represent dozens of visits and hundreds of page views — all counted as one company.
 :::
-
-### Can I upgrade or downgrade my plan?
-
-Yes, you have full flexibility:
-
-| Change Type | When It Takes Effect | Billing |
-|-------------|---------------------|---------|
-| Upgrade | Immediately | Prorated charge |
-| Downgrade | Next billing cycle | No refund for current period |
-| Add-ons | Immediately | Prorated or per-use |
-
-Contact [support@abmatic.ai](mailto:support@abmatic.ai) for plan changes.
 
 ---
 
 ## Technical Questions
 
-### Does Abmatic slow down my website?
+### Does Abmatic AI slow down my website?
 
-No. We've optimized for zero impact on user experience:
+No. The script is built to stay out of the way:
 
 | Optimization | Details |
 |--------------|---------|
-| Async loading | Script loads after page content—never blocks |
-| Tiny footprint | < 50KB (smaller than most analytics scripts) |
+| Async loading | The script loads after page content and never blocks rendering |
+| Small footprint | Lightweight compared with most analytics scripts |
 | CDN delivered | Served from edge locations worldwide |
-| Browser cached | Fast subsequent page loads |
+| Browser cached | Fast on repeat page loads |
 
-Typical load time impact: **< 50ms** (imperceptible to users).
+### Does Abmatic AI work with single-page applications (SPAs)?
 
-### Does Abmatic work with single-page applications (SPAs)?
+Yes. It supports modern JavaScript frameworks via the History API:
 
-Yes! Full support for modern JavaScript frameworks:
+| Framework | Support | Detection |
+|-----------|---------|-----------|
+| React | Full | History API |
+| Vue | Full | History API |
+| Angular | Full | History API |
+| Next.js | Full | History API |
+| Nuxt | Full | History API |
+| Custom SPAs | Full | pushState / popstate |
 
-| Framework | Support Level | Auto-Detection |
-|-----------|---------------|----------------|
-| React | Full | ✓ History API |
-| Vue | Full | ✓ History API |
-| Angular | Full | ✓ History API |
-| Next.js | Full | ✓ History API |
-| Nuxt | Full | ✓ History API |
-| Custom SPAs | Full | ✓ pushState/popstate |
+For advanced implementations, see the [API Reference](/api/api-overview).
 
-For advanced implementations, see our [API Reference](/api/api-overview).
+### Can I use Abmatic AI with Google Tag Manager?
 
-### Can I use Abmatic with Google Tag Manager?
-
-Yes! GTM is one of our recommended installation methods:
+Yes — GTM is a recommended install method:
 
 1. Create a new **Custom HTML** tag
-2. Paste your Abmatic script
-3. Set trigger to **All Pages**
+2. Paste your Abmatic AI script
+3. Set the trigger to **All Pages**
 4. Publish your container
 
-See [Script Installation Guide](/getting-started/install-script) for detailed instructions.
+See the [Script Installation Guide](/getting-started/install-script) for details.
 
-### Does Abmatic work behind a CDN or load balancer?
+### Does Abmatic AI work behind a CDN or load balancer?
 
-Yes. We automatically handle:
+Yes. The following are supported with no special configuration:
 
-| Service | Support | Configuration Needed |
-|---------|---------|---------------------|
-| Cloudflare | ✓ | None |
-| AWS CloudFront | ✓ | None |
-| Fastly | ✓ | None |
-| Akamai | ✓ | None |
-| nginx/HAProxy | ✓ | None |
+| Service | Support |
+|---------|---------|
+| Cloudflare | Yes |
+| AWS CloudFront | Yes |
+| Fastly | Yes |
+| Akamai | Yes |
+| nginx / HAProxy | Yes |
 
-We use standard X-Forwarded-For headers to identify real visitor IPs.
+Standard X-Forwarded-For headers are used to identify the real visitor IP.
 
 ---
 
@@ -317,43 +300,26 @@ We use standard X-Forwarded-For headers to identify real visitor IPs.
 
 ### How do I get help?
 
-Multiple support channels to fit your needs:
-
-| Channel | Best For | Response Time |
-|---------|----------|---------------|
-| **Documentation** | Self-service answers | Instant |
-| **Email**: support@abmatic.ai | General questions, issues | < 24 hours |
-| **Chat** (in-app) | Quick questions | Business hours |
-| **Slack** (Enterprise) | Dedicated channel | < 4 hours |
-| **CSM** (Enterprise) | Strategic guidance | Scheduled calls |
-
-### What are support hours?
-
-| Plan | Support Hours | Critical Issue Response |
-|------|---------------|------------------------|
-| Starter/Professional | Mon-Fri, 9am-6pm ET | Next business day |
-| Enterprise | 24/7 for critical issues | < 1 hour |
+| Channel | Best For |
+|---------|----------|
+| **Documentation** | Self-service answers |
+| **Email**: support@abmatic.ai | General questions and issues |
+| **In-app chat** | Quick questions |
+| **Your rep / CSM** | Strategic guidance (where applicable) |
 
 ### How do I report a bug?
 
 Email [support@abmatic.ai](mailto:support@abmatic.ai) with:
 
-| Include This | Why It Helps |
-|--------------|--------------|
-| Description of the issue | Understand the problem |
-| Steps to reproduce | Replicate on our end |
-| Screenshots or screen recording | Visual context |
-| Browser + device info | Environment-specific issues |
-| Account email | Look up your configuration |
+- A description of the issue
+- Steps to reproduce it
+- Screenshots or a screen recording
+- Your browser and device
+- Your account email
 
 ### How do I request a feature?
 
-We love hearing from customers! Submit feature requests to:
-- **Email**: feedback@abmatic.ai
-- **In-app**: Use the feedback widget
-- **Your CSM**: If you have a dedicated contact
-
-All requests are reviewed quarterly by our product team.
+Email feedback to [feedback@abmatic.ai](mailto:feedback@abmatic.ai), or mention it to your rep. Product feedback is reviewed regularly.
 
 ---
 
@@ -361,8 +327,8 @@ All requests are reviewed quarterly by our product team.
 
 | Resource | What You'll Learn |
 |----------|-------------------|
-| [Quick Start Guide](/getting-started/quick-start) | Get up and running in under an hour |
-| [Use Cases](/getting-started/use-cases) | See how other teams use Abmatic |
+| [Quick Start Guide](/getting-started/quick-start) | Get up and running |
+| [Use Cases](/getting-started/use-cases) | How other teams use Abmatic AI |
 | [Troubleshooting](/troubleshooting/troubleshooting-overview) | Fix common issues yourself |
-| [Billing FAQ](/faq/billing) | Understand your plan and billing |
+| [Billing FAQ](/faq/billing) | Understand credits, usage, and billing |
 | [Contact Support](mailto:support@abmatic.ai) | Get personalized help |

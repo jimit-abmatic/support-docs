@@ -119,7 +119,7 @@ curl -X GET "https://api.abmatic.ai/v1/accounts?fields=website,name,display_name
       "location.name": "San Francisco, California, United States",
       "location.country": "United States",
       "linkedin_url": "https://linkedin.com/company/acme",
-      "logo": "https://logo.clearbit.com/acme.com",
+      "logo": "https://cdn.abmatic.ai/logos/acme.com.png",
       "engagement_score": 85,
       "fit_score": 72,
       "overall_score": 78,
@@ -135,7 +135,7 @@ curl -X GET "https://api.abmatic.ai/v1/accounts?fields=website,name,display_name
       "location.name": "New York, New York, United States",
       "location.country": "United States",
       "linkedin_url": "https://linkedin.com/company/globex",
-      "logo": "https://logo.clearbit.com/globex.io",
+      "logo": "https://cdn.abmatic.ai/logos/globex.io.png",
       "engagement_score": 62,
       "fit_score": 88,
       "overall_score": 75,
@@ -178,7 +178,7 @@ Firmographic data from third-party enrichment.
 | `summary` | string | Enriched | Longer company description, max 1000 characters. |
 | `founded` | integer | Enriched | Founding year of the company (e.g., `2015`). |
 | `ticker` | string | Enriched | Stock ticker symbol, uppercase. Only present for publicly traded companies. |
-| `logo` | string | Abmatic | URL to the company's logo image. |
+| `logo` | string | Abmatic | URL to the company's logo image, served from Abmatic AI's CDN (`cdn.abmatic.ai`). |
 
 ### Scoring & Engagement
 
@@ -189,7 +189,7 @@ Scores computed by Abmatic based on visitor behavior, ad engagement, and AI inte
 | `engagement_score` | float | Abmatic | Overall engagement score (0–100) combining website visits, ad clicks, form fills, and chat interactions. |
 | `website_engagement_score` | float | Abmatic | Engagement score based solely on website activity (sessions, page views, time on site, scroll depth). |
 | `linkedin_engagement_score` | float | Abmatic | Engagement score based on LinkedIn ad interactions (impressions, clicks, conversions). |
-| `agentic_chat_engagement_score` | float | Abmatic | Engagement score from AI chat widget interactions. |
+| `agentic_chat_engagement_score` | float | Abmatic | Engagement score from the account's interactions with your **Agentic Chat** widget. |
 | `third_party_intent_score` | float | Abmatic | Intent signals aggregated from third-party data sources. |
 | `fit_score` | float | Abmatic | Ideal Customer Profile (ICP) fit score based on firmographic match (industry, size, revenue, location). |
 | `overall_score` | float | Abmatic | Combined score blending engagement and fit scores. |
@@ -341,15 +341,19 @@ UTM tracking parameters captured from the most recent visit by this account.
 | `utm_params.utm_campaign` | string | Abmatic | Campaign name or identifier. |
 | `utm_params.utm_term` | string | Abmatic | Paid search keyword or term. |
 
-### AI Chat Engagement
+### Agentic Chat Engagement
 
-Data from Abmatic's AI chat widget (Clara) interactions with visitors from this account.
+Data from your website's **Agentic Chat** widget interactions with visitors from this account.
+
+:::note Clara vs. Agentic Chat
+**Clara** is Abmatic AI's page-level **AI ABM agent** — it is not the website chat widget. The on-site chat that talks to visitors is the **Agentic Chat** widget. These chat fields come from Agentic Chat conversations.
+:::
 
 | Field | Type | Source | Description |
 |-------|------|--------|-------------|
-| `chat_last_interaction_at` | datetime | Abmatic | Timestamp of the most recent AI chat interaction with someone from this account. |
-| `chat_has_high_intent` | boolean | Abmatic | Whether the AI detected high purchase intent during chat conversations (e.g., pricing questions, demo requests). |
-| `chat_summary` | string | Abmatic | AI-generated summary of all chat conversations with visitors from this account. |
+| `chat_last_interaction_at` | datetime | Abmatic | Timestamp of the most recent Agentic Chat interaction with someone from this account. |
+| `chat_has_high_intent` | boolean | Abmatic | Whether Agentic Chat detected high purchase intent during conversations (e.g., pricing questions, demo requests). |
+| `chat_summary` | string | Abmatic | AI-generated summary of all Agentic Chat conversations with visitors from this account. |
 
 ### Conversions
 
@@ -362,6 +366,22 @@ Conversion goal tracking from Abmatic's conversion events (form fills, button cl
 | `last_90_days_conversions` | integer | Abmatic | Total conversion events attributed to this account in the last 90 days. |
 | `conversion_events` | array | Abmatic | List of individual conversion events with event name, timestamp, and page URL. |
 | `last_conversion_at` | datetime | Abmatic | Timestamp of the most recent conversion event from this account. |
+
+### Demo Booking
+
+Meeting/demo data sourced from the Agentic Chat meeting-booking flow (when a visitor from this account books a meeting through the chat widget or a connected calendar).
+
+| Field | Type | Source | Description |
+|-------|------|--------|-------------|
+| `demo_booked` | boolean | Abmatic | Whether someone from this account has booked a demo or meeting. |
+| `demo_booked_at` | datetime | Abmatic | When the meeting was **booked** (the moment the visitor scheduled it). |
+| `demo_scheduled_at` | datetime | Abmatic | The meeting's **scheduled start time** (when the demo is set to take place). |
+| `demo_time` | datetime | Abmatic | The meeting's scheduled start time (same as `demo_scheduled_at`; surfaced as "Demo Time" in reports). |
+| `demo_ae` | string | Abmatic | The account executive (AE) assigned to the booked meeting. |
+
+:::tip Booked-at vs. scheduled-at
+`demo_booked_at` is **when the meeting was created**; `demo_scheduled_at` / `demo_time` is **when the meeting happens**. The gap between the two tells you how far out a prospect booked. The `demo_booked` field can also be mapped to your CRM under **Integrations > HubSpot / Salesforce > Add Mapping**.
+:::
 
 ### Enrichment & Metadata
 
@@ -391,7 +411,7 @@ Industry classification codes and corporate hierarchy from third-party enrichmen
 
 ### Custom Fields
 
-Custom fields `field_01` through `field_30` are available. These correspond to the custom field labels configured in your account settings under **Settings > Custom Fields**. Values can be set manually, via CSV import, or via CRM sync.
+Up to **30 custom fields** (`field_01` through `field_30`) are available per account. These correspond to the custom field labels configured in your account settings under **Settings > Custom Fields**. Values can be set manually, via CSV import, or via CRM sync.
 
 | Field | Type | Source | Description |
 |-------|------|--------|-------------|

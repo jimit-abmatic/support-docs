@@ -2,7 +2,7 @@
 id: gmail
 title: Gmail Integration
 sidebar_label: Gmail
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Gmail Integration
@@ -28,9 +28,9 @@ AI Sequences in Abmatic AI can draft and send personalized emails on your behalf
 | **OAuth security** | No passwords stored in Abmatic -- Google handles authentication |
 | **Revoke anytime** | Disconnect from Abmatic or revoke access in your Google account settings |
 
-![Gmail on the Integrations page](/img/screenshots/integrations-gmail.png)
+![Gmail card in the Communications section of the Integrations tab](/img/screenshots/gmail-card.png)
 
-*The Communications section of the Integrations page showing Gmail and Slack cards with their connection status.*
+*The Communications section of the Integrations tab. Gmail sits alongside Slack, Google Calendar, and Zoom. Each card has an **Authorize** button (or **Disable** once connected).*
 
 ## Getting Started
 
@@ -43,7 +43,7 @@ Before connecting:
 
 ### Step 1: Connect Your Gmail Account
 
-1. Navigate to **Settings > Integrations** in Abmatic AI
+1. Open **Settings** from the top bar (the avatar/gear at the top right), then click the **INTEGRATIONS** tab
 2. Find **Gmail** under the **Communications** section
 3. Click **Authorize**
 4. Google's consent screen opens in the same tab
@@ -158,7 +158,7 @@ If your sequences exceed Google's daily sending limit, remaining tasks will fail
 
 If the **Send Email** button in the Tasks grid is grayed out:
 
-1. Go to **Settings > Integrations**
+1. Open **Settings** and click the **INTEGRATIONS** tab
 2. Confirm the Gmail card shows **Active**
 3. If it shows **Inactive**, click **Authorize** and complete the OAuth flow
 4. Return to the campaign Tasks tab -- the button should now be enabled
@@ -181,7 +181,7 @@ Google refresh tokens can expire if:
 
 To reconnect:
 
-1. Go to **Settings > Integrations**
+1. Open **Settings** and click the **INTEGRATIONS** tab
 2. Click **Disable** on the Gmail card to clear the stale token
 3. Click **Authorize** to start a fresh OAuth flow
 4. Complete the Google consent flow
@@ -191,7 +191,7 @@ To reconnect:
 
 To remove the Gmail integration:
 
-1. Go to **Settings > Integrations**
+1. Open **Settings** and click the **INTEGRATIONS** tab
 2. Click **Disable** on the Gmail card
 3. Confirm the action in the dialog
 

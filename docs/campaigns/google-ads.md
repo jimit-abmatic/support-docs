@@ -1,296 +1,125 @@
 ---
 id: google-ads
-title: Google Ads Campaigns
+title: Google Ads (Customer Match)
 sidebar_label: Google Ads
-sidebar_position: 8
+sidebar_position: 10
 ---
 
-# Google Ads Campaigns
+# Google Ads (Customer Match)
 
-Stop wasting ad spend on companies that will never buy. Google Ads campaigns in Abmatic AI let you target your ideal accounts across Search, Display, YouTube, and Gmail—ensuring every impression reaches the companies that matter most to your business.
+Reach your target accounts on Google Search, Display, YouTube, and Gmail by syncing your Abmatic AI account and contact lists to Google Ads as **Customer Match** audiences.
 
-## Why Google Ads Campaigns Drive Results
+:::info Not a campaign tile — it's an audience sync
+Google Ads is **not** created from a tile in the **Create Campaign** dialog (the Google tile is currently hidden there). Instead, you push an account or contact collection to Google Ads as a **Customer Match** audience using the collection's menu. You then build and run the actual ad campaigns inside Google Ads, targeting the audience Abmatic AI created.
+:::
 
-| Without Abmatic | With Abmatic |
-|----------------|--------------|
-| Broad targeting wastes budget on unqualified traffic | Target only accounts in your ICP |
-| No visibility into which companies see your ads | Track engagement by account and company |
-| Generic messaging for everyone | Personalized ads for your target accounts |
-| Difficult to measure account-level ROI | Clear attribution from impression to pipeline |
-| Limited retargeting options | Retarget website visitors from target accounts |
+## How it works
 
-## How It Works
+1. **Connect** — Authorize Google Ads in **Integrations**.
+2. **Build** — Create an account or contact collection with your target criteria.
+3. **Upload** — Push the collection to Google Ads as a Customer Match audience from its menu.
+4. **Advertise** — Target that audience in your Google Ads campaigns (Search, Display, YouTube, Remarketing).
 
-Google Ads campaigns use **Customer Match** to target your specific accounts:
-
-1. **Connect** - Link your Google Ads account to Abmatic
-2. **Build** - Create account or contact lists with your target criteria
-3. **Sync** - Push lists to Google Ads as Customer Match audiences
-4. **Advertise** - Run targeted campaigns across Google properties
-5. **Measure** - Track engagement and attribute to accounts
-
-## Getting Started
+## Getting started
 
 ### Step 1: Connect Google Ads
 
 **Prerequisites:**
-- Google Ads account with Customer Match access
-- Account in good standing with Google
-- Admin access to authorize the integration
+- A Google Ads account with Customer Match access.
+- Admin access to authorize the integration.
 
 **Connect your account:**
 
-1. Navigate to **Integrations** in the main menu
-2. Find the **Google Ads** card
-3. Click **Authorize**
-4. Sign in with your Google account
-5. Select which Google Ads account to connect (if you have multiple)
-6. Confirm the permissions
+1. Open **Integrations** from the sidebar.
+2. Find the **Google Ads** card.
+3. Click **Authorize** and sign in with your Google account.
+4. Select which Google Ads account to connect (if you have more than one) and confirm the permissions.
 
-Once connected, you'll see the status change to **Active**.
+Once connected, the card status shows **Active**.
 
-![Integrations Page](/img/screenshots/integrations-hub.png)
+### Step 2: Build an account or contact collection
 
-### Step 2: Create an Account or Contact List
+Create a list of the companies or people you want to reach:
 
-Build a list of companies or contacts you want to target:
+1. Go to **Accounts** or **Contacts**.
+2. Create a collection and define your criteria (for example industry, company size, revenue, technologies, or CRM properties).
+3. Save the collection.
 
-1. Go to **Accounts** or **Contacts**
-2. Click **Create Collection**
-3. Define your criteria:
-   - Industry (e.g., "Technology" or "Healthcare")
-   - Company size (e.g., "500-1000 employees")
-   - Revenue range
-   - Technology stack
-   - CRM properties
-4. Preview and save your list
+### Step 3: Create a Customer Match audience
 
-![Account Collections](/img/screenshots/google-ads-accounts-list.png)
+Push the collection to Google Ads:
 
-### Step 3: Create Customer Match Audience
+1. In **Accounts** or **Contacts**, open the collection you want to sync.
+2. Click the collection's **menu** (three dots).
+3. Select **Create Google Ads Customer Match**.
 
-Push your list to Google Ads:
+Abmatic AI then runs a short upload, shown in a **three-step popup**:
 
-1. Go to **Accounts** or **Contacts**
-2. Select the collection you want to sync
-3. Click the **more menu** (three dots)
-4. Select **Create Google Ads Customer Match**
-5. Abmatic will:
-   - Prepare your data
-   - Create the user list in Google Ads
-   - Upload the contact data
-6. Your audience is ready to use in Google Ads
+| Step | What happens |
+|------|--------------|
+| **Preparing** | Abmatic AI assembles and enriches the records in your collection |
+| **Creating** | A new Customer Match user list is created in Google Ads |
+| **Uploading** | The matched records are uploaded to that list |
 
-:::tip Audience Size
-Google Customer Match requires a minimum of 1,000 matched users. Build lists with enough contacts to meet this threshold.
+When it finishes, the popup confirms how many records were sent — for example **"Uploaded N of M contacts."** If some records couldn't be uploaded (for example, they were missing the data Google needs), the popup shows a **skipped-records summary** so you know exactly what was left out.
+
+:::tip Audience processing
+After the upload, Google needs time to match your records against its user base and make the audience available for targeting. The matched audience won't be usable in Google Ads immediately — allow time for Google to process it before you launch a campaign against it.
 :::
 
-## Campaign Types
+## Using the audience in Google Ads
 
-### Search Campaigns
+Once your Customer Match list is processed inside Google Ads, you can target it across Google's properties. These are standard Google Ads campaign types — you build and manage them in Google Ads, not in Abmatic AI:
 
-Reach target accounts when they're actively searching for solutions:
+| Google Ads campaign type | Good for |
+|--------------------------|----------|
+| **Search** | Capturing target accounts who are actively searching |
+| **Display** | Building awareness across the Google Display Network |
+| **YouTube** | Reaching target accounts with video |
+| **Remarketing** | Re-engaging visitors from your target accounts |
 
-| Use Case | Example Keywords | Why It Works |
-|----------|-----------------|--------------|
-| Competitive conquesting | "[Competitor] alternatives" | Capture accounts evaluating options |
-| Problem-aware | "enterprise CRM software" | Reach accounts with clear intent |
-| Category searches | "marketing automation platform" | Target high-intent research |
+**Tips that apply to any of them:**
+- Create separate ad groups or campaigns for your target-account audience so you can measure them cleanly.
+- Pair the Customer Match audience with Google's own in-market or intent segments for tighter targeting.
+- Send clicks to a personalized landing page (see [Website Personalization](/campaigns/website-personalization)).
 
-**Best practices:**
-- Create separate campaigns for target accounts
-- Use broader match types with audience targeting
-- Bid 2-3x higher for target accounts
-- Link to personalized landing pages
+## Match rates
 
-### Display Campaigns
+Google matches the contact data you upload against its own user base, so not every record results in a reachable user. Match rates vary with the quality and completeness of your data — including more and cleaner identifiers (such as email addresses) generally improves the match.
 
-Build awareness and stay top-of-mind across the Google Display Network:
-
-| Use Case | When to Use |
-|----------|-------------|
-| Brand awareness | Early in buying cycle |
-| Retargeting | After website visits |
-| Account-based display | Warming up cold accounts |
-| Event promotion | Before conferences or launches |
-
-**Best practices:**
-- Use compelling, professional creative
-- Include customer logos and social proof
-- Test multiple ad sizes (responsive is recommended)
-- Set frequency caps (3-5 impressions per day)
-
-### YouTube Campaigns
-
-Engage target accounts with video content:
-
-| Format | Best For |
-|--------|----------|
-| In-stream (skippable) | Longer product demos, thought leadership |
-| In-stream (non-skippable) | Short, punchy brand messages |
-| Discovery | Educational content, how-to videos |
-| Bumper ads | Brand recall, event awareness |
-
-**Best practices:**
-- Hook viewers in the first 5 seconds
-- Include clear calls-to-action
-- Create videos for different buyer stages
-- Use captions for silent viewing
-
-### Remarketing
-
-Re-engage website visitors from your target accounts:
-
-1. Abmatic tracking identifies companies visiting your site
-2. Visitors from target accounts are tagged automatically
-3. Create remarketing audiences in Google Ads
-4. Serve personalized ads based on pages viewed
-
-## Understanding Match Rates
-
-Google matches your contact data against their user database:
-
-| Data Type | Typical Match Rate | Recommendation |
-|-----------|-------------------|----------------|
-| Work emails | 30-50% | Always include |
-| Personal emails | 60-80% | Add when available |
-| Phone numbers | 40-60% | Include for higher match |
-| Combined data | 50-70% | Best results |
-
-:::note Improving Match Rates
-- Include both work and personal emails when available
-- Add phone numbers to contact records
-- Keep contact data clean and up-to-date
-- Wait 24-48 hours for Google to process matches
+:::note Improving match rates
+- Keep contact data clean and current.
+- Include as many usable identifiers as your records have.
+- Allow time for Google to finish processing after each upload.
 :::
 
-## Audience Strategies
+## Privacy and compliance
 
-### Layered Targeting
+Customer Match requires that you handle contact data appropriately:
 
-Combine audiences for precision targeting:
+- **Consent** — Make sure you have the right to use the contact data for advertising.
+- **First-party data** — Use data you collected directly.
+- **Opt-outs** — Honor opt-out and unsubscribe requests.
 
-```
-Target Accounts (Customer Match)
-+ In-Market: Business Software
-+ Intent: CRM Solutions
-= High-Intent Target Accounts
-```
-
-This ensures you reach the right people at the right companies at the right time.
-
-### Smart Exclusions
-
-Optimize spend by excluding:
-- Current customers (unless upsell campaign)
-- Accounts marked as unqualified in CRM
-- Recent converters (30-day window)
-- Competitors
-
-### Similar Audiences
-
-Expand reach to accounts like your best customers:
-
-1. Create an audience of closed-won accounts
-2. Enable Similar Audiences in Google Ads
-3. Test with conservative budgets first
-4. Monitor quality metrics closely
-
-## Budget Allocation
-
-| Campaign Type | Suggested Allocation | Goal |
-|--------------|---------------------|------|
-| Target Account Search | 40% | Capture high-intent demand |
-| Target Account Display | 25% | Build awareness in key accounts |
-| Remarketing | 25% | Convert engaged visitors |
-| Similar Audiences | 10% | Expand qualified reach |
-
-## Tracking Performance
-
-### Account-Level Metrics
-
-Track campaign impact on your target accounts:
-
-| Metric | What It Tells You |
-|--------|------------------|
-| Accounts reached | How many target companies saw your ads |
-| Cost per account | Efficiency of targeting |
-| Engagement rate | Quality of ad creative |
-| Conversions | Demo requests, form fills, downloads |
-| Pipeline influence | Revenue impact of ad exposure |
-
-### Attribution
-
-Understand the full customer journey:
-- View-through conversions (saw ad, converted later)
-- Click-through conversions (clicked ad, converted)
-- Multi-touch attribution across channels
-- Integration with Google Analytics for complete picture
-
-## Best Practices
-
-### Do's
-
-| Practice | Impact |
-|----------|--------|
-| Segment by buyer stage | Higher relevance, better performance |
-| Test ad creative regularly | 20-30% improvement over time |
-| Use negative keywords | Reduce wasted spend |
-| Create account-specific landing pages | 2-3x conversion improvement |
-| Monitor and optimize weekly | Continuous performance gains |
-
-### Don'ts
-
-| Avoid | Why |
-|-------|-----|
-| Targeting too broadly | Dilutes ABM impact |
-| Ignoring frequency caps | Ad fatigue hurts brand |
-| Same messaging for all accounts | Missed personalization opportunity |
-| Set-and-forget campaigns | Performance degrades without optimization |
+Google enforces its own Customer Match policies and eligibility requirements, and these can change. Check the current Google Ads Customer Match policy requirements in Google's own documentation before you rely on this audience.
 
 ## Troubleshooting
 
-### Low Match Rates
+### The upload reported skipped records
+
+The skipped-records summary in the upload popup tells you how many records were left out. Usually this is because those records were missing the identifiers Google needs to match a user. Add the missing data to those records and re-run **Create Google Ads Customer Match**.
+
+### The audience isn't showing in Google Ads
 
 | Issue | Solution |
 |-------|----------|
-| Work emails only | Add personal emails when available |
-| Poor email quality | Clean data, remove bounced addresses |
-| Small list size | Expand targeting criteria |
-| Recently created list | Wait 24-48 hours for processing |
+| Still processing | Wait for Google to finish matching after the upload |
+| Below Google's minimum | Google requires an audience to reach a minimum matched size before it can be targeted; add more records |
+| Authorization issue | Re-check the Google Ads connection in **Integrations** |
+| Policy / eligibility | Review Google's current Customer Match policy requirements |
 
-### Audience Not Appearing in Google Ads
+## Related
 
-| Issue | Solution |
-|-------|----------|
-| Under minimum size | Need 1,000+ matched users |
-| Processing delay | Allow 24-48 hours |
-| Account permissions | Verify authorization in Integrations |
-| Policy compliance | Review Google Customer Match policies |
-
-### Poor Campaign Performance
-
-| Issue | Solution |
-|-------|----------|
-| Low CTR | Refresh creative, test new messaging |
-| High CPA | Tighten targeting, adjust bids |
-| No conversions | Check landing page, verify tracking |
-| Impression share low | Increase budget or bids |
-
-## Privacy and Compliance
-
-Customer Match requires proper data handling:
-
-- **Consent**: Ensure you have permission to use contact data for advertising
-- **Data sources**: Only use first-party data you've collected directly
-- **Opt-outs**: Provide clear mechanisms for contacts to opt out
-- **Documentation**: Keep records of consent and data sources
-
-## Next Steps
-
-| Resource | Description |
-|----------|-------------|
-| [Google Customer Match](/audiences/google-customer-match) | Detailed audience sync guide |
-| [Account Lists](/audiences/accounts) | Creating target account lists |
-| [Google Analytics Integration](/integrations/google-analytics) | Cross-channel attribution |
-| [Conversions](/conversions/overview) | Tracking campaign results |
+- [Google Customer Match](/audiences/google-customer-match) — detailed audience-sync guide
+- [Account Lists](/audiences/accounts) — building target account collections
+- [Conversions](/conversions/overview) — tracking campaign results

@@ -2,6 +2,7 @@
 id: linkedin-ads
 title: LinkedIn Ads Integration
 sidebar_label: LinkedIn Ads
+sidebar_position: 1
 ---
 
 # LinkedIn Ads Integration
@@ -44,13 +45,17 @@ Before connecting, ensure you have:
 ### Step 1: Navigate to Integrations
 
 1. Log in to Abmatic AI
-2. Click **Integrations** in the left sidebar
-3. Scroll down to the **Advertising** section (below CRM and Communications)
+2. Open **Settings** from the top bar, then click the **INTEGRATIONS** tab
+3. Scroll down to the **Ad Networks** section (below CRM, Communications, and Conversion tracking)
 4. Find the **LinkedIn** card
 
-![Settings > Integrations page](/img/screenshots/integrations-hub.png)
+![LinkedIn card in the Ad Networks section](/img/screenshots/li-int-card.png)
 
-*Navigate to Settings > Integrations and scroll down past CRM and Communications to find the Advertising section with LinkedIn, Google Ads, and Meta.*
+*The Ad Networks section of the Integrations tab. LinkedIn sits alongside Google Ads, OpenAI, and Meta. The card is labeled **LinkedIn**; click **Authorize** to connect (it becomes **Disable** once active).*
+
+:::note Card label
+The LinkedIn card is labeled simply **LinkedIn** in the app (under **Ad Networks**), even though it powers LinkedIn Ads. Meta appears in the same row but is currently **Coming Soon** and cannot be connected.
+:::
 
 ### Step 2: Authorize LinkedIn
 
@@ -84,9 +89,10 @@ The integration will activate and show "Active" status.
 
 | Status | Meaning | Action |
 |--------|---------|--------|
-| **Active** | Connected and ready to use | Push audiences, create campaigns |
-| **Inactive** | Not connected | Click Authorize to connect |
-| **Error** | Connection issue | Check error message, reconnect if needed |
+| **Active** (green) | Connected and ready to use | Push audiences, create campaigns |
+| **Inactive** (grey) | Not connected | Click Authorize to connect |
+
+If a sync or authorization stops working, the card stays **Active** but pushes will fail. In that case, disable and re-authorize the card to refresh the connection.
 
 ### What Gets Synced
 
@@ -108,9 +114,9 @@ Match rates depend on your data quality and target company size. Enterprise acco
 
 Once connected, you can push account lists to LinkedIn:
 
-1. Go to **Audiences > Accounts**
-2. Select the collection(s) you want to push
-3. Click **More Actions** (three dots menu)
+1. Go to **Accounts** in the left sidebar, then open the **Collections** tab
+2. Select the collection you want to push (or open it)
+3. Click the **more menu** (three dots)
 4. Select **Create LinkedIn Matched Audience**
 5. Confirm to start the sync
 
@@ -123,8 +129,8 @@ For detailed instructions, see: [LinkedIn Matched Audiences Guide](/audiences/li
 You can also create full LinkedIn campaigns from Abmatic:
 
 1. Go to **Campaigns**
-2. Click **Create Campaign**
-3. Select **LinkedIn** under Advertising
+2. Click **+ CAMPAIGN** to open the campaign create dialog
+3. Under the **Advertising** column, select **LinkedIn**
 4. Choose Account or Contact targeting
 5. Select your collection and configure the campaign
 
@@ -136,17 +142,17 @@ For detailed instructions, see: [LinkedIn Campaigns Guide](/campaigns/linkedin-a
 
 To see your connection details:
 
-1. Go to **Integrations**
-2. Find the LinkedIn card
-3. Click **Settings** (if available)
+1. Open **Settings** and click the **INTEGRATIONS** tab
+2. Scroll to **Ad Networks** and find the LinkedIn card
+3. The card shows its status (**Active** / **Inactive**) and the connected ad account
 
 ### Disconnecting LinkedIn
 
 If you need to disconnect:
 
-1. Go to **Integrations**
-2. Find the LinkedIn card
-3. Click **Disable** or **Disconnect**
+1. Open **Settings** and click the **INTEGRATIONS** tab
+2. Find the LinkedIn card under **Ad Networks**
+3. Click **Disable**
 4. Confirm the disconnection
 
 :::warning Before Disconnecting
@@ -160,8 +166,8 @@ Disconnecting will:
 
 If your connection expires or you need to reconnect:
 
-1. Go to **Integrations**
-2. Click **Authorize** on the LinkedIn card
+1. Open **Settings** and click the **INTEGRATIONS** tab
+2. Click **Authorize** on the LinkedIn card under **Ad Networks**
 3. Complete the authorization flow again
 
 ## Best Practices

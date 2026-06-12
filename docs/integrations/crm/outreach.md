@@ -27,7 +27,7 @@ Outreach is the leading sales execution platform trusted by thousands of revenue
 | **Sync prospects and accounts** | Keep your sales data aligned across platforms |
 | **Push engaged visitors** | Alert reps when target accounts show buying intent |
 | **Enrich prospect data** | Add firmographic and engagement data to Outreach records |
-| **Import target lists** | Build Outreach sequences from Abmatic account lists |
+| **Import target lists** | Build Outreach sequences from Abmatic AI account lists |
 | **Track engagement** | See Outreach activity alongside website behavior |
 
 ## Getting Started
@@ -36,26 +36,26 @@ Outreach is the leading sales execution platform trusted by thousands of revenue
 
 Before connecting, ensure you have:
 - An Outreach account with API access
-- Admin permissions in both Outreach and Abmatic
-- At least one account list in Abmatic ready to sync
+- Admin permissions in both Outreach and Abmatic AI
+- At least one account list in Abmatic AI ready to sync
 
 ### Step 1: Navigate to Integrations
 
 1. Click **Settings** in the left sidebar
 2. Select the **Integrations** tab
-3. Scroll to the **Automation Tools** section
+3. Scroll to the **Marketing & Sales Automation** section
 4. Find the **Outreach** card
 
-![Settings > Integrations page showing Marketing & Sales Automation section](/img/screenshots/integrations-hub.png)
-*Navigate to Settings > Integrations, then scroll to the Marketing & Sales Automation section to find Outreach*
+![Marketing & Sales Automation section of the Integrations tab showing the Outreach card](/img/screenshots/or-card.png)
+*Outreach lives in the Marketing & Sales Automation section (not the CRM grid). When connected it shows a green "Active" badge with a "Disable" button; otherwise it shows an "Authorize" button.*
 
 ### Step 2: Authorize the Connection
 
-1. Click **AUTHORIZE** on the Outreach card
+1. Click **Authorize** on the Outreach card
 2. You'll be redirected to Outreach's login page
 3. Sign in with your Outreach credentials
 4. Review and approve the requested permissions
-5. You'll be redirected back to Abmatic
+5. You'll be redirected back to Abmatic AI
 
 The connection is now active and ready to configure.
 
@@ -63,7 +63,7 @@ The connection is now active and ready to configure.
 
 ### Object Mapping
 
-| Outreach Object | Abmatic Object | Match Key |
+| Outreach Object | Abmatic AI Object | Match Key |
 |-----------------|----------------|-----------|
 | Accounts | Accounts | Domain |
 | Prospects | Contacts | Email |
@@ -91,9 +91,11 @@ The connection is now active and ready to configure.
 
 ## Configuring Sync Settings
 
-After connecting, click **SETTINGS** on the Outreach card to configure sync behavior.
+After connecting, click the **Settings** gear on the Outreach card to configure sync behavior.
 
 ### Sync Tabs
+
+Outreach syncs accounts and prospects only — there is no Opportunities tab, since Outreach deals are not synced.
 
 | Tab | What It Controls |
 |-----|------------------|
@@ -101,20 +103,24 @@ After connecting, click **SETTINGS** on the Outreach card to configure sync beha
 | **Contacts** | Prospect sync settings and field mappings |
 | **Activity Log** | View sync history and troubleshoot issues |
 
-### Sync Direction Options
+### Field Sync Modes
 
-| Direction | What It Does | Best For |
-|-----------|--------------|----------|
-| Don't sync | Field not synchronized | Sensitive data you want to keep separate |
-| Fill | Only populate empty fields | Preserving existing Outreach data |
-| Overwrite | Always update with Abmatic data | Keeping Abmatic as source of truth |
+Each mapped field has a per-field **Sync to CRM** mode that controls how data flows into Outreach:
+
+| Mode | What It Does | Best For |
+|------|--------------|----------|
+| Don't sync | Field is not pushed to Outreach | Sensitive data you want to keep separate |
+| Fill | Only populate empty Outreach fields | Preserving existing Outreach data |
+| Overwrite | Always update with the Abmatic AI value | Keeping Abmatic AI as the source of truth |
+
+A separate **Sync to Abmatic** checkbox pulls the same field from Outreach into Abmatic AI. See [CRM Sync Behavior](/integrations/crm/sync-behavior) for the shared model.
 
 ### Sync Operations
 
 | Operation | Description |
 |-----------|-------------|
-| **Create new records** | Create Outreach records for new Abmatic contacts/accounts |
-| **Update existing records** | Update Outreach records when Abmatic data changes |
+| **Create new records** | Create Outreach records for new Abmatic AI contacts/accounts |
+| **Update existing records** | Update Outreach records when Abmatic AI data changes |
 
 ### Sync Frequency
 
@@ -127,7 +133,7 @@ After connecting, click **SETTINGS** on the Outreach card to configure sync beha
 
 ## Importing from Outreach
 
-Pull your existing Outreach data into Abmatic:
+Pull your existing Outreach data into Abmatic AI:
 
 ### Import Sources
 
@@ -147,11 +153,11 @@ Pull your existing Outreach data into Abmatic:
 5. Apply filters if needed
 6. Click **Import**
 
-Your imported records will be enriched with Abmatic's firmographic data.
+Your imported records will be enriched with Abmatic AI's firmographic data.
 
 ## Pushing to Outreach
 
-Send Abmatic audiences to Outreach for sales engagement:
+Send Abmatic AI audiences to Outreach for sales engagement:
 
 ### Manual Push
 
@@ -172,8 +178,8 @@ Enable auto-push to automatically send records to Outreach:
 
 | Auto-Push Option | What It Does |
 |------------------|--------------|
-| Push all new accounts | Every new Abmatic account goes to Outreach |
-| Push all new contacts | Every new Abmatic contact goes to Outreach |
+| Push all new accounts | Every new Abmatic AI account goes to Outreach |
+| Push all new contacts | Every new Abmatic AI contact goes to Outreach |
 | Push on engagement | Push when engagement score exceeds threshold |
 
 ### Required Fields for Push

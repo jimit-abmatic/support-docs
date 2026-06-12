@@ -25,8 +25,12 @@ Connect HubSpot to Abmatic AI and unlock powerful ABM capabilities. This step-by
 | Requirement | Details |
 |-------------|---------|
 | **HubSpot Account** | Any tier (Free CRM, Starter, Professional, or Enterprise) |
-| **Admin Access** | Super Admin or Admin with "App Marketplace Access" permission |
-| **Abmatic Account** | Active account with script installed |
+| **Admin Access** | Super Admin, or an Admin who is allowed to install marketplace/connected apps in your HubSpot account |
+| **Abmatic AI Account** | Active account with the tracking script installed |
+
+:::note Permission naming
+HubSpot controls who can install third-party apps through the **App Marketplace Access** permission set. If you can browse and install apps from the HubSpot App Marketplace, you have what you need to connect Abmatic AI. If you are unsure, a Super Admin can always complete the connection for you.
+:::
 
 ### Feature Availability by HubSpot Tier
 
@@ -47,13 +51,13 @@ In HubSpot: **Settings** (gear icon) > **Account & Billing** > **Products & Add-
 
 ## Step 1: Start the Connection
 
-1. In Abmatic, click **Settings** in the left sidebar
+1. In Abmatic AI, click **Settings** in the left sidebar
 2. Click the **Integrations** tab
-3. Find **HubSpot** in the CRM Platforms section
-4. Click **Authorize** (or **Settings** if already connected)
+3. Find the **HubSpot** card in the **Customer Relationship Management (CRM)** section
+4. Click **Authorize** (or the **Settings** gear if HubSpot is already connected)
 
-![Integrations Hub](/img/screenshots/hubspot-settings.png)
-*The Integrations page shows all available CRM connections. HubSpot displays "Active" status when connected.*
+![Integrations page with the HubSpot card in the CRM section](/img/screenshots/pd-settings.png)
+*The Integrations tab under Settings. HubSpot sits in the Customer Relationship Management (CRM) row and shows a green "Active" badge once connected, with a red "Disable" button to disconnect.*
 
 ---
 
@@ -63,7 +67,7 @@ When you click Authorize, a new window opens:
 
 1. **Sign in** to your HubSpot account (if not already logged in)
 2. **Select your portal** if you have multiple HubSpot accounts
-3. **Review the permissions** Abmatic requests
+3. **Review the permissions** Abmatic AI requests
 4. Click **Connect app** to authorize
 
 ### Permissions Requested
@@ -74,7 +78,7 @@ When you click Authorize, a new window opens:
 | Read/write contacts | Sync contact records bidirectionally |
 | Read/write deals | Sync opportunity data for pipeline visibility |
 | Read/write lists | Create and manage HubSpot lists from Abmatic |
-| Timeline activities | Log Abmatic engagement as HubSpot activities |
+| Timeline activities | Log Abmatic AI engagement as HubSpot activities |
 
 :::warning Multiple Portals?
 If you have both sandbox and production HubSpot accounts, make sure to select the correct portal. You can always disconnect and reconnect to switch portals.
@@ -84,31 +88,44 @@ If you have both sandbox and production HubSpot accounts, make sure to select th
 
 ## Step 3: Configure Sync Settings
 
-After authorization, you'll see the HubSpot settings panel with tabs for each object type.
+After authorization, the HubSpot **Settings** dialog opens with a tab for each object type along the top.
+
+![HubSpot CRM Settings dialog showing the object tabs and the object-syncing matrix](/img/screenshots/hs-setup-tabs.png)
+*The HubSpot Settings dialog. The Accounts, Contacts, Opportunities and Activity Log tabs run across the top. Each object tab has a "Set object syncing" matrix with Create/Update checkboxes on both sides, a "Set up filters for pushing records" section, and a "Set field mapping" table further down.*
 
 ### Understanding the Settings Interface
 
-The settings panel includes tabs for:
+The settings dialog includes these tabs:
 
 | Tab | What You Configure |
 |-----|-------------------|
 | **Accounts** | Company sync rules and field mappings |
 | **Contacts** | Contact sync rules and field mappings |
-| **Opportunities** | Deal sync (read-only in Abmatic) |
+| **Opportunities** | Deal sync (imported from HubSpot; read-only in Abmatic AI) |
 | **Activity Log** | View sync history and troubleshoot issues |
+
+:::note Opportunities are read-only
+The **Opportunities** tab imports your HubSpot deals into Abmatic AI so you can see and segment on pipeline data, but Abmatic AI does not create or edit deals in HubSpot. Sync for Opportunities flows HubSpot → Abmatic AI only.
+:::
 
 ### Object Sync Options
 
-For each object type, you configure:
+Each object tab shows a **Set object syncing** matrix. For each object you turn on the operations you want, in each direction:
 
-| Setting | Options | Recommendation |
-|---------|---------|----------------|
-| **Create in HubSpot** | New records push to HubSpot | Enable for revealed companies |
-| **Update in HubSpot** | Changes sync to HubSpot | Enable to keep data fresh |
-| **Create in Abmatic** | New CRM records import | Enable for target account lists |
-| **Update in Abmatic** | CRM changes sync to Abmatic | Enable for bidirectional sync |
+| Setting | What It Does | Recommendation |
+|---------|--------------|----------------|
+| **Create** (HubSpot side) | New Abmatic AI records are created in HubSpot | Enable for revealed companies |
+| **Update** (HubSpot side) | Abmatic AI changes update existing HubSpot records | Enable to keep HubSpot fresh |
+| **Create** (Abmatic side) | New HubSpot records are imported into Abmatic AI | Enable for target account lists |
+| **Update** (Abmatic side) | HubSpot changes update existing Abmatic AI records | Enable for two-way sync |
 
-**First-time setup tip:** Start with importing from HubSpot only. Add export after reviewing the data quality.
+The **Sync** chip in the middle of the matrix updates to show the resulting direction: **Sync both ways**, **Sync into HubSpot**, **Sync into Abmatic**, or **Not syncing**.
+
+**First-time setup tip:** Start by importing from HubSpot only (turn on the Abmatic-side Create/Update). Add the HubSpot-side operations after you have reviewed the data quality.
+
+### Filter Which Records Push to HubSpot
+
+Below the object-syncing matrix, the **Set up filters for pushing records** section lets you limit which accounts or contacts are pushed to HubSpot. Only records matching your filters are pushed; leave it empty to push all records. A "N filter(s) active" chip shows when a filter is in place. This is useful when, for example, you only want to push companies above a certain employee count or revenue.
 
 ---
 
@@ -165,7 +182,7 @@ Map your most important custom HubSpot properties (like `icp_tier`, `buying_stag
 
 ## Step 5: Set Sync Frequency
 
-Configure how often Abmatic checks for changes.
+Configure how often Abmatic AI checks for changes.
 
 ### Polling Options
 
@@ -206,7 +223,7 @@ Enable **"Automatically push changes to HubSpot"** to:
 | 10,000-50,000 | 30-60 minutes |
 | 50,000+ | 1-2 hours |
 
-You can continue using Abmatic while the sync runs in the background.
+You can continue using Abmatic AI while the sync runs in the background.
 
 ---
 
@@ -281,7 +298,7 @@ HubSpot lifecycle stages sync automatically and can be used for:
 
 ### Company Domain Matching
 
-Abmatic uses the HubSpot `domain` property as the primary matching key. Best practices:
+Abmatic AI uses the HubSpot `domain` property as the primary matching key. Best practices:
 
 - Ensure all HubSpot companies have accurate domains
 - Use the root domain (e.g., `acme.com` not `www.acme.com`)
@@ -289,12 +306,29 @@ Abmatic uses the HubSpot `domain` property as the primary matching key. Best pra
 
 ### Timeline Activities
 
-When enabled, Abmatic logs activities to HubSpot including:
+When enabled, Abmatic AI logs activities to HubSpot including:
 
 - Page views on your website
 - Campaign interactions
 - Engagement score changes
 - Form submissions
+
+### Import HubSpot Users (Owners)
+
+Once HubSpot is connected, you can import your HubSpot users so their ownership carries into Abmatic AI:
+
+1. Go to the **Users** page in Settings
+2. Open the menu and choose **Import from HubSpot** (this appears alongside **Import from Salesforce** when each CRM is active)
+
+This adds a **HubSpot Owner** value to records and lets you segment and route by HubSpot owner, the same way Salesforce owners work.
+
+:::caution Reconnect to enable owner sync
+HubSpot owner import relies on an owners-read permission that was added to the integration. If you connected HubSpot before this feature shipped, **disconnect and reconnect** HubSpot so Abmatic AI can request the owner permission. Without reconnecting, owner import and owner-based meeting routing will not work.
+:::
+
+### Use HubSpot Forms in Campaigns
+
+After connecting HubSpot, you can drop your existing HubSpot forms into Abmatic AI experiences. A HubSpot form picker is available in the popup and exit-intent Widget editors and in Agentic Chat, so visitors can submit a native HubSpot form without leaving your personalized experience.
 
 ---
 

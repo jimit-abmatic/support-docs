@@ -7,222 +7,198 @@ sidebar_position: 1
 
 # Conversions Overview
 
-Every marketing dollar should be accountable. Abmatic AI's conversion tracking shows you exactly which campaigns drive results—from demo requests to pricing page visits—so you can double down on what works and optimize what doesn't.
-
----
-
-## Why Conversion Tracking Matters
-
-| Without Conversion Tracking | With Abmatic Conversions |
-|-----------------------------|--------------------------|
-| "Our campaigns are running" | "Campaign X drove 47 demo requests" |
-| Guessing which content works | Data showing 68% lift from personalization |
-| No ROI visibility | Clear attribution to pipeline |
-| Optimization by gut feel | A/B tested decisions |
+Conversion tracking in Abmatic AI shows you which campaigns actually drive results — demo requests, button clicks, pricing-page visits, and more. You set up the actions you care about as conversion events, and Abmatic AI measures how often personalized visitors complete them compared to a control group.
 
 ---
 
 ## What You Can Track
 
-Abmatic captures the actions that matter most to your business:
+You can track two native conversion event types, plus events that come in from a connected analytics tool:
 
-| Conversion Type | Examples | Best For |
-|-----------------|----------|----------|
-| **Click Events** | CTA buttons, download links, video plays | Measuring engagement with specific elements |
-| **Page Views** | Pricing page, thank you pages, case studies | Tracking intent signals and funnel progression |
-| **Form Submissions** | Demo requests, contact forms, newsletter signups | Capturing lead generation metrics |
-| **Custom Events** | Calculator completions, interactive tools | Tracking unique conversion actions |
+| Conversion Type | What It Is | Best For |
+|-----------------|-----------|----------|
+| **Click Event** | A click on a specific element you pick in the visual editor (button, link, or form submit) | CTA buttons, demo links, form submits |
+| **Page View** | A visit to a specific page URL | Thank-you pages, confirmation pages, pricing views |
+| **Integration events** | Events synced from Segment or Google Analytics | Reusing conversion definitions you already maintain elsewhere |
 
----
-
-## Accessing the Conversions Dashboard
-
-1. Click **Conversions** in the left sidebar
-2. View your conversion performance across all campaigns
-
-![Conversions Dashboard](/img/screenshots/conversions-overview.png)
-
-*The Conversions dashboard showing 64 campaigns with conversion data for Book a Demo, Banner, and other events.*
+:::note
+Click and Page View are the two event types you create inside Abmatic AI. Segment and Google Analytics events show up automatically once those integrations are connected — see [Event Tracking](/conversions/event-tracking).
+:::
 
 ---
 
-## Understanding the Interface
+## Opening the Conversions Dashboard
 
-### Two Views for Complete Control
+Click **Conversions** in the left icon sidebar (the funnel icon). The page opens on the **Conversions (last 60 days)** tab.
+
+![The Conversions dashboard, showing each campaign with its unique visitors and a conversion column for every active event](/img/screenshots/conv-overview.png)
+
+*The Conversions dashboard. Each row is a campaign; the first row is the **Non-personalized** control baseline.*
+
+---
+
+## The Two Tabs
+
+The Conversions page has two tabs:
 
 | Tab | Purpose | When to Use |
 |-----|---------|-------------|
-| **Conversions (last 60 days)** | See conversion performance by campaign | Daily monitoring, campaign optimization |
-| **Manage** | Create, edit, and configure conversion goals | Setting up new tracking, adjusting existing goals |
+| **Conversions (last 60 days)** | See conversion performance by campaign over the last 60 days | Daily monitoring, comparing campaigns |
+| **Manage** | Create, rename, activate, and configure conversion events | Setting up tracking, adjusting goals |
 
-### The Conversions Tab
+The **Manage** tab is disabled until you have at least one conversion event.
 
-The main view shows how each campaign contributes to your goals:
+### The Conversions (last 60 days) tab
 
-![Conversions Overview](/img/screenshots/conversions-overview.png)
+This view shows how each campaign contributes to your conversion events.
 
-*Each row shows a campaign with its unique visitors and conversion rates for each tracked event.*
+| Column | What It Shows |
+|--------|---------------|
+| **Campaigns** | Campaign name. Click the arrow (`>`) to expand a detailed breakdown. |
+| **Unique Visitors** | Unique visitors for the campaign, with a "vs N in control" note showing the size of the control group. |
+| **[Event name]** | One column per active conversion event, showing the conversion lift for that event. |
 
-| Column | What It Shows | Why It Matters |
-|--------|---------------|----------------|
-| **Campaigns** | Campaign name (expandable for details) | Identify which campaigns to analyze |
-| **Unique Visitors** | Personalized vs. control visitor counts | Understand traffic distribution |
-| **[Event Name]** | Conversion rate with lift percentage | See which campaigns drive results |
+A control row called **Non-personalized** sits at the top of the table — this is the baseline that every campaign's lift is measured against.
 
-**Pro tip:** Click the expand arrow (>) on any campaign row to see detailed conversion counts, rates, and lift for both personalized and control groups.
+Above the table you'll find a **Search** box, a **FILTERS** menu, and a live **Rows** count of how many campaigns are listed.
 
-### The Manage Tab
+:::tip
+Click the expand arrow (`>`) on any campaign row to see the underlying conversion counts, conversion rates, and lift for both the personalized and control groups. See [Conversion Analytics](/conversions/analytics).
+:::
 
-Configure your conversion tracking from one central location:
+### The Manage tab
 
-![Conversions Manage](/img/screenshots/conversions-manage.png)
+The Manage tab is where you create and configure your conversion events.
 
-*The Manage tab showing 5 configured conversion events with their types and settings.*
+![The Manage tab listing conversion events with their type, what they are attached to, the Main Event radio, and a Visibility toggle](/img/screenshots/conv-manage.png)
 
-| Column | What It Shows | Action |
-|--------|---------------|--------|
-| **Event** | Conversion goal name | Click to edit settings |
-| **Event Type** | Click Event or Page View | Indicates tracking method |
-| **Attached To** | Elements or URLs being tracked | Shows tracking scope |
-| **Main Event** | Primary conversion indicator | Mark your most important goal |
-| **Visibility** | Active/inactive toggle | Control whether event is tracked |
+*The Manage tab. Each event shows its type, what it is attached to, whether it is the main event, and whether it is visible (active).*
+
+| Column | What It Shows |
+|--------|---------------|
+| **Event** | The conversion event name. |
+| **Event Type** | **Click Event** or **Page View**. |
+| **Attached To** | For Click Events, the number of elements attached (e.g. "2 Elements"). For Page Views, the page URL. |
+| **Main Event** | A radio button — select it to make this event your main conversion metric. Only one event can be the main event. |
+| **Visibility** | A toggle that turns tracking for the event on or off. |
+| **⋮** | A row menu with **Rename event**, **Attach to a new element** (Click Events only), and **Delete event**. |
+
+There's also a **Sort By** control and **FILTERS** above the table.
 
 ---
 
-## Creating Conversion Goals
+## Creating Conversion Events
 
 ### Step 1: Click + Conversion
 
-From either tab, click the **+ Conversion** button in the top right corner.
+Click the **+ Conversion** button in the top-right corner of either tab.
 
-### Step 2: Choose Your Tracking Method
+### Step 2: Choose an event type
 
-| Method | How It Works | Best For |
-|--------|--------------|----------|
-| **Click Event** | Track clicks on specific elements using the visual editor | CTA buttons, links, form submits |
-| **Page View** | Track visits to specific URLs | Thank you pages, pricing views |
+A dialog titled **Add a new conversion event** appears with two cards:
 
-### Click Event Setup
+| Card | Button | What It Does |
+|------|--------|--------------|
+| **Track Click Event** | **Click Event** | Opens the visual editor so you can click the exact element to track — a button, link, or form submit. |
+| **Track Page View Event** | **Page View** | Tracks a conversion when a visitor reaches a specific page. Works best with "Thank you" pages after a form submission. |
 
-1. Enter the **page URL** where the element exists
-2. Click **Click Event** to open the visual editor
-3. Click on the element you want to track
-4. Name your conversion goal
-5. Save
+Both flows start with a short two-step form: name the event, then add the page URL (the URL must be on your account's website domain).
 
-### Page View Setup
-
-1. Click **Page View**
-2. Enter the **URL pattern** to track (supports wildcards)
-3. Name your conversion goal
-4. Save
+For the full step-by-step, see [Creating Conversion Goals](/conversions/create-goals).
 
 ---
 
-## Understanding Your Metrics
+## How URL Matching Works (Page View events)
 
-### Key Performance Indicators
+A Page View event is tied to the page URL you enter, which must be on your account's domain (`https://` or `https://www.`). If you include a query parameter, that parameter is part of the match.
 
-| Metric | What It Measures | Good Performance |
-|--------|------------------|------------------|
-| **Conversion Rate (CVR)** | % of visitors who convert | Depends on goal type (demos: 2-5%, pricing views: 10-20%) |
-| **Lift** | Improvement from personalization | Positive lift indicates personalization is working |
-| **Personalized** | Conversions from personalized visitors | Higher than control = success |
-| **Control** | Conversions from non-personalized visitors | Baseline for comparison |
+| URL You Enter | What It Tracks |
+|---------------|----------------|
+| `https://site.com/thank-you` | Visits to that page |
+| `https://site.com/thank-you?source=demo` | Visits to that page with that query parameter |
 
-### Understanding Lift
+:::tip
+For a thank-you or confirmation page, use the clean base URL so every visitor who lands there is counted, regardless of the parameters carried over from a form.
+:::
 
-Lift shows the impact of your personalization:
+---
+
+## Understanding Lift
+
+For each event, Abmatic AI compares the conversion rate of personalized visitors against the **Non-personalized** control group.
 
 ```
-Lift = ((Personalized CVR - Control CVR) / Control CVR) × 100
+Lift = (Personalized CVR - Control CVR) / Control CVR × 100
 ```
 
-| Lift Value | What It Means | Action |
-|------------|---------------|--------|
-| **+20% or higher** | Strong personalization impact | Scale this campaign |
-| **+5% to +20%** | Positive impact | Continue and optimize |
-| **0% to +5%** | Marginal improvement | Test new variations |
-| **Negative** | Control outperforming | Review personalization strategy |
+| Lift Value | What It Means | Suggested Action |
+|------------|---------------|------------------|
+| **Positive** | Personalized visitors convert at a higher rate than control | Keep running; consider expanding |
+| **Around zero** | Little measurable difference | Test a new variation |
+| **Negative** | Control is outperforming personalization | Review the personalization |
+
+In the table, a positive lift is shown as a purple chip; neutral or negative values appear as gray chips. Lift is capped at 999% to keep tiny control groups from distorting the display.
+
+For the full breakdown of how lift, significance, and the personalized-vs-control split are calculated, see [Conversion Analytics](/conversions/analytics).
 
 ---
 
 ## Best Practices
 
-### Choose High-Value Conversions
+### Pick high-value conversions
 
 | Track These | Why |
 |-------------|-----|
-| Demo request forms | Direct pipeline indicator |
-| Pricing page visits | Shows purchase intent |
-| Free trial signups | Revenue potential |
+| Demo request forms | Direct pipeline signal |
+| Pricing page visits | Shows buying intent |
+| Free trial / signup clicks | Revenue potential |
 | Contact form submissions | Sales opportunities |
 
-| Avoid These | Why |
-|-------------|-----|
-| Homepage visits | Too common, low signal |
-| Generic page views | Not specific enough |
-| Scroll events | Doesn't indicate intent |
+Avoid tracking generic actions like homepage visits or every link click — they add noise without telling you much.
 
-### Set Up Before Launch
+### Set up before you launch
 
-Conversions only track from when they're created forward:
-
-- **Do:** Create goals BEFORE launching campaigns
-- **Do:** Test that goals fire correctly
-- **Do:** Verify data appears in the dashboard
-- **Don't:** Expect historical data to backfill
-
-### Track Your Funnel
-
-Set up conversions at each stage:
-
-| Funnel Stage | Example Goal | Measures |
-|--------------|--------------|----------|
-| **Awareness** | Case study page view | Content engagement |
-| **Consideration** | Pricing page visit | Purchase intent |
-| **Decision** | Demo request submit | Pipeline creation |
+Conversion events only count actions that happen after the event is created. Create your events **before** launching the campaigns you want to measure, and trigger each one yourself to confirm it records.
 
 ---
 
-## Integration with Campaign Insights
+## Campaigns Excluded From This Table
 
-Every campaign's **Insights** tab shows conversions attributed to that specific campaign:
+Some campaign rows are not shown in the Conversions table:
 
-1. Go to **Campaigns** → Select a campaign
-2. Click the **Insights** tab
-3. View conversions in the performance metrics
+- **LinkedIn** and **Salesforce** campaign rows are filtered out of this view.
 
-This helps you understand which campaigns drive the most valuable actions.
+Everything else — website personalization, widgets, sequences, and so on — appears as a row you can expand.
+
+---
+
+## Integration With Campaign Insights
+
+Every campaign's **Insights** tab also shows conversions attributed to that specific campaign:
+
+1. Go to **Campaigns** and select a campaign.
+2. Open the **Insights** tab.
+3. Review the conversion metrics for that campaign.
 
 ---
 
 ## Troubleshooting
 
-### No Conversions Appearing
+### No conversions appearing
 
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| Goal just created | Historical data not backfilled | Wait for new conversions to occur |
-| Zero conversions showing | Element selector incorrect | Test selector in browser dev tools |
-| Wrong count | URL pattern mismatch | Verify URL pattern matches correctly |
-| Nothing tracking | Script not loaded | Check Abmatic script is on conversion page |
+| Issue | Likely Cause | What to Do |
+|-------|--------------|-----------|
+| Event just created | Past actions are not backfilled | Wait for new conversions to occur |
+| Zero conversions on a Click Event | Element no longer matches | Re-attach the element in the visual editor |
+| Wrong count on a Page View | URL doesn't match | Confirm the URL (including `https://`) matches the live page |
+| Nothing tracking at all | Script not on the page | Confirm the Abmatic AI script is installed on the conversion page |
 
-### Conversions Not Attributing to Campaign
+### Conversions not attributing to a campaign
 
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| Conversion shows in total but not campaign | Visitor not in campaign audience | Check targeting rules |
-| Attribution missing | Conversion on different domain | Ensure script is on conversion page |
-| Multiple campaigns claiming | Priority conflict | Check campaign priority settings |
-
-### Unexpected Lift Numbers
-
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| Lift fluctuating wildly | Small sample size | Wait for more traffic (500+ visitors minimum) |
-| Negative lift | Control outperforming | Review personalization—may be hurting experience |
-| Very high lift (999%+) | Tiny control group | Increase control percentage |
+| Issue | Likely Cause | What to Do |
+|-------|--------------|-----------|
+| Conversion shows in totals but not for a campaign | Visitor wasn't in that campaign's audience | Check the campaign's targeting rules |
+| Attribution missing | Conversion happened on a page without the script | Make sure the script is on the conversion page |
 
 ---
 
@@ -230,7 +206,7 @@ This helps you understand which campaigns drive the most valuable actions.
 
 | Goal | Resource |
 |------|----------|
-| Set up detailed conversion goals | [Create Conversion Goals](/conversions/create-goals) |
+| Set up conversion events step by step | [Creating Conversion Goals](/conversions/create-goals) |
 | Track form submissions | [Form Tracking](/conversions/form-tracking) |
-| Implement custom events | [Event Tracking](/conversions/event-tracking) |
-| Analyze conversion data | [Conversion Analytics](/conversions/analytics) |
+| Learn the event data model | [Event Tracking](/conversions/event-tracking) |
+| Analyze conversion lift | [Conversion Analytics](/conversions/analytics) |

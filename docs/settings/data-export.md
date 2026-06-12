@@ -1,10 +1,13 @@
 ---
+id: data-export
+title: Data Export
+sidebar_label: Exports
 sidebar_position: 7
 ---
 
 # Data Export
 
-Export your Abmatic AI data to CSV files for offline analysis, reporting, or integration with other tools. The Data Export page provides a centralized view of all your exports and easy access to download completed files.
+Export your Abmatic AI data to CSV files for offline analysis, reporting, or integration with other tools. The **Exports** page provides a centralized view of all your exports and easy access to download completed files.
 
 ## Why Export Your Data?
 
@@ -18,26 +21,29 @@ Exporting data from Abmatic AI enables you to:
 
 ## Accessing Data Export
 
-Navigate to **Settings > Data Export** to view all your export history.
+1. Open **Settings** from the left icon sidebar
+2. Click the **Exports** tab in the top navigation (`/settings/export`)
 
-![Data Export page showing export history](/img/screenshots/settings-data-export.png)
+![Exports page showing the export history table with File Name, No. of Records, Exported At, and Action columns, plus a Search box, Filters dropdown, and Sort By control](/img/screenshots/set-export.png)
 
 ## Understanding the Export History
 
-The Data Export page displays a table with all your exports:
+The Exports page shows a table of all your past exports. Above the table you'll find a **Search** box, a **Filters** dropdown, a row-count selector (for example, "Rows: 25"), and a **Sort By** control with a refresh button.
 
 | Column | Description |
 |--------|-------------|
 | **File Name** | The name you assigned when creating the export |
 | **No. of Records** | Total number of accounts or contacts included |
 | **Exported At** | Date and time when the export was created |
-| **Action** | Download link or processing status |
+| **Action** | A **Download** link, or the export's current status |
 
 ### Export Statuses
 
-- **Download** - Export is complete and ready to download
-- **Processing** - Export is being generated (usually takes a few minutes)
-- **Pushed** - Data was exported directly to Salesforce
+The **Action** column reflects where each export is in its lifecycle:
+
+- **Download** - The export is complete and ready to download
+- **Processing** - The export is still being generated (usually takes a few minutes)
+- **Pushed** - The data was sent directly to Salesforce instead of producing a downloadable file (only appears when you export straight to a connected Salesforce org)
 
 ## How to Export Data
 
@@ -70,10 +76,10 @@ When viewing a specific target group:
 
 Once processing is complete:
 
-1. Go to **Settings > Data Export**
+1. Open **Settings → Exports**
 2. Find your export in the table
-3. Click the **Download** button
-4. The CSV file will open in a new tab for download
+3. Click the **Download** link in the **Action** column
+4. The CSV file downloads (it may open in a new browser tab first)
 
 You'll also receive an email with a download link when your export is ready.
 
@@ -120,9 +126,9 @@ You'll also receive an email with a download link when your export is ready.
 ## Troubleshooting
 
 ### Export stuck on "Processing"
-- Large exports may take several minutes
+- Large exports (tens of thousands of records) can take several minutes
 - Refresh the page to check for updates
-- Contact support if processing exceeds 30 minutes
+- If a large export has been processing for a long time, contact support
 
 ### Download link not working
 - Links may expire after extended periods

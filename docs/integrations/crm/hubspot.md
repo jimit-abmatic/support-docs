@@ -32,8 +32,8 @@ The HubSpot integration enables powerful ABM workflows:
 | **Timeline activities** | See website engagement directly in HubSpot |
 | **Target account sync** | Keep ABM lists in perfect alignment |
 
-![HubSpot Integration](/img/screenshots/integrations-hub.png)
-*HubSpot appears in the CRM integrations section with Active status when connected*
+![HubSpot CRM Settings showing the object tabs and sync configuration](/img/screenshots/hs-settings.png)
+*The HubSpot settings dialog. Object tabs run across the top (Accounts, Contacts, Opportunities, Activity Log), with the object-syncing matrix and field mapping below.*
 
 ## Getting Started
 
@@ -55,7 +55,7 @@ Go to **Settings > Integrations** in Abmatic AI and find the HubSpot card in the
 
 **Step 2: Authorize Connection**
 
-Click **Authorize** and log in to HubSpot when prompted. Grant Abmatic the requested permissions to access your CRM data.
+Click **Authorize** and log in to HubSpot when prompted. Grant Abmatic AI the requested permissions to access your CRM data.
 
 **Step 3: Configure Sync Settings**
 
@@ -165,29 +165,41 @@ Enable **"Automatically push changes to HubSpot"** to send updates in real-time 
 - Contact engagement scores change
 - New contacts are identified
 
+## Object Tabs
+
+The HubSpot settings dialog has tabs for **Accounts**, **Contacts**, **Opportunities**, and **Activity Log**. (HubSpot doesn't have separate Lead and Campaign objects the way Salesforce does, so there are no Leads or Campaigns tabs here.)
+
+Each object tab has a **Set object syncing** matrix: tick **Create** and **Update** on each side — HubSpot on the left, Abmatic on the right — and the chip in the middle summarizes the direction (**Sync both ways** / **Sync into HubSpot** / **Sync into Abmatic** / **Not syncing**).
+
 ## Property Mapping
 
 ### Accessing Field Mapping
 
-1. Go to **Integrations > HubSpot > Settings**
+1. Go to **Settings > Integrations** and click **Settings** on the HubSpot card
 2. Select the object tab (Accounts, Contacts, Opportunities)
-3. View the field mapping table
+3. View the field mapping table under **Set field mapping**
 4. Click **Add Mapping** to create new mappings
 
 ### Mapping Options
 
-Each field mapping has sync direction controls:
+Each field mapping has a **Sync to CRM** mode and a **Sync to Abmatic** checkbox:
 
 | Sync to CRM Option | Behavior |
 |-------------------|----------|
 | **Don't sync** | Field won't update in HubSpot |
-| **Fill** | Only update if HubSpot field is empty |
-| **Overwrite** | Always update with Abmatic value |
+| **Fill** | Only update if the HubSpot field is empty |
+| **Overwrite** | Always update with the Abmatic AI value |
 
 | Sync to Abmatic | Behavior |
 |-----------------|----------|
 | **Checked** | Import this field from HubSpot |
 | **Unchecked** | Don't import this field |
+
+The field selector includes **demo_booked** (whether the contact has booked a demo), which you can map like any other field.
+
+### Push Filters
+
+On the Accounts and Contacts tabs, the **"Set up filters for pushing records"** section pushes only matching records to HubSpot. Leave it empty to push all records; an active filter shows a "*N* filter(s) active" chip.
 
 ### Read-Only Properties
 
@@ -345,18 +357,31 @@ Activities appear in:
 
 ## Target Account Sync
 
-### How It Works
+Keep your ABM target lists aligned between HubSpot and Abmatic AI. HubSpot's target-account properties (such as `hs_is_target_account`) can sync so that accounts flagged as targets in one system are reflected in the other. Map these properties in the Accounts field mapping if you use HubSpot's ABM features.
 
-Keep your ABM target lists aligned:
+:::note Confirm your HubSpot ABM properties
+HubSpot's target-account properties are part of its ABM tooling and may not exist on every portal. Confirm the property exists in HubSpot before mapping it, then set the **Sync to CRM** mode and **Sync to Abmatic** checkbox to match the direction you want.
+:::
 
-**HubSpot → Abmatic:**
-- Accounts marked as `hs_is_target_account = true` sync to Abmatic
-- The `hs_target_account` property provides account tier/segment
+## Importing HubSpot Users and Owners
 
-**Abmatic → HubSpot:**
-- Push Abmatic target lists to HubSpot
-- Automatically sets `hs_is_target_account = true`
-- Enables HubSpot ABM features for those accounts
+Beyond CRM records, you can import your **HubSpot users** so HubSpot owners are available in Abmatic AI for routing and segmentation — mirroring how Salesforce owners work.
+
+- On the **Users** page (**Settings > Users**), use **Import from HubSpot** (next to "Import from Salesforce"). This option is available when HubSpot is connected and active.
+- Imported owners add a **HubSpot owner** column and a HubSpot owner selector in segmentation, so you can filter and route by owner.
+
+:::warning Reconnect required for owner sync
+Owner sync uses a HubSpot permission (`crm.objects.owners.read`) that was added recently. If you connected HubSpot **before** owner sync was available, you must **Disable** and re-**Authorize** the HubSpot integration to grant the new permission. Without reconnecting, owners (and owner-based meeting routing) won't sync.
+:::
+
+## HubSpot Forms in Campaigns
+
+If you build your forms in HubSpot, you can reuse them inside Abmatic AI instead of rebuilding them:
+
+- **Popups and exit-intent widgets:** the widget editor includes a **HubSpot form picker** so you can drop a HubSpot form straight into the popup.
+- **Agentic Chat:** you can show a HubSpot form as one of the chat's email-handoff options, so visitors fill out your real HubSpot form in the conversation.
+
+Submissions flow into HubSpot as usual, keeping your existing form logic and workflows intact.
 
 ## Sync Logs and Monitoring
 
@@ -418,7 +443,7 @@ Track these metrics:
 
 | Problem | Solution |
 |---------|----------|
-| Authorization expired | Go to HubSpot card and click **Reconnect**, then re-authorize |
+| Authorization expired | On the HubSpot card, click **Disable**, then **Authorize** to re-connect |
 | Insufficient permissions | Verify you have admin access and API is enabled |
 | Connection timeout | Check HubSpot service status; retry in a few minutes |
 

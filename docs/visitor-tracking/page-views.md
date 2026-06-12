@@ -43,26 +43,26 @@ Abmatic captures page views across all scenarios:
 
 ## Viewing Page Analytics
 
-Access page view data throughout Abmatic:
+Access page view data throughout Abmatic AI:
 
-### Company Reveal Dashboard
+### Visitor Reveal — Accounts
 
-See which pages each identified company has visited. Navigate to **Visitor Reveal** --> **Accounts** and click on any company to see their engagement history including:
+See which pages each identified company has visited. Open **Visitor Reveal → Accounts** and click any company to see its engagement history, including:
 
 - Total page views and unique pages
-- Specific pages visited (with "Visited Pages" link)
+- The specific pages visited (via the **Visited Pages** link)
 - Time on page and scroll depth
 - Session count and engagement score
 
-![Company Reveal Accounts Dashboard showing identified companies with engagement data](/img/screenshots/reveal-accounts-dashboard.png)
-*The Accounts dashboard showing 31,849 identified companies. Click any company name to drill into their page view history.*
+![Visitor Reveal Accounts tab listing identified companies with a Visited Pages column](/img/screenshots/pv-engagement.png)
+*The Accounts tab. Each row has a **Visited Pages** "View (N)" link, and clicking a company name drills into its full page-view history on the Engagement tab.*
 
 ### Engagement History View
 
 Click on any account and open the **Engagement** tab to see detailed page view activity for each visitor session:
 
-![Account engagement tab showing individual page visit sessions with timestamps, locations, and engagement metrics](/img/screenshots/reveal-account-engagement.png)
-*The Engagement tab for Mountainside shows two website page visits: one from Beijing 10 minutes ago and another from California 14 days ago. Each session shows Total Form Submissions, Total Page Views, Total Page Views Unique, Total Scroll Depth Percentage, Total Time On Page, and Engagement Score. Click "Visited Pages" to see the exact URLs viewed in each session.*
+![Account Engagement tab showing individual page-visit sessions with timestamps, locations, and engagement metrics](/img/screenshots/reveal-account-engagement.png)
+*The Engagement tab lists individual website-visit sessions, each with a timestamp and location. Every session shows **Total Form Submission**, **Total Page Views**, **Total Page Views Unique**, **Total Scroll Depth Percentage**, **Total Time On Page**, and an **Engagement Score**. Click "Visited Pages" to see the exact URLs viewed in that session.*
 
 This view shows:
 - **Visited Pages** - Click to see exact URLs visited in each session
@@ -74,12 +74,12 @@ This view shows:
 - **Location** - Where the visit originated (city, country)
 - **Timestamp** - When the visit occurred (e.g., "10 minutes ago" or "14 days ago")
 
-### Contact Reveal Dashboard
+### Visitor Reveal — Contacts
 
-For revealed contacts, see individual page view activity alongside engagement scores. Navigate to **Visitor Reveal** --> **Contacts** to view:
+For revealed contacts, see individual page-view activity alongside engagement scores. Open **Visitor Reveal → Contacts** to view:
 
-![Contact Reveal Dashboard showing engagement scores for individual contacts](/img/screenshots/reveal-contacts-dashboard.png)
-*Each contact row shows a Website Engagement Score (e.g., 52, 1652, 100, 47) alongside their temperature indicator. Higher scores indicate more page views and deeper engagement.*
+![Visitor Reveal Contacts tab showing a Website Engagement Score for each contact](/img/screenshots/cr-contacts.png)
+*Each contact row shows a **Website Engagement Score** alongside a temperature indicator. Higher scores indicate more page views and deeper engagement.*
 
 - Pages each contact has visited
 - Engagement patterns over time (via the engagement score)

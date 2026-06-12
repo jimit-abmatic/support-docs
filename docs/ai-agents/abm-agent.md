@@ -7,236 +7,115 @@ sidebar_position: 4
 
 # Clara - AI ABM Agent
 
-**Your AI-powered ABM strategist that builds audiences, creates campaigns, and delivers insights—all through natural conversation.**
+Clara is the AI ABM (account-based marketing) agent in Abmatic AI. Instead of clicking through filters and setup screens, you tell Clara what you want in plain language and she does the work — building account lists, building contact lists, launching campaigns, and pulling reports.
 
-Clara eliminates the tedious work of account-based marketing. Instead of clicking through multiple screens and building complex filters manually, simply tell Clara what you need and watch her do the work in seconds.
+Clara is one of the two page-level AI agents in the platform. The other is **[Alex, the AI SDR agent](/ai-agents/sdr-agent)**. Both live under the **AI Agent** item at the top of the left icon sidebar.
 
-## Why Teams Love Clara
-
-| Benefit | What It Means |
-|---------|---------------|
-| **Minutes, Not Hours** | Build targeted account lists in seconds with natural language |
-| **Zero Learning Curve** | No training needed—just describe what you want |
-| **Smarter Segmentation** | AI understands your intent and creates precise audience criteria |
-| **Instant Insights** | Get campaign analysis and recommendations on demand |
-| **Always Available** | 24/7 access to ABM expertise without waiting for analyst support |
-
-## What Clara Can Do
-
-Clara handles five core ABM functions through simple conversation:
-
-### Build Account Lists
-Create precisely targeted account lists by describing your ideal customers:
-
-> *"Create an account list of technology companies with over 500 employees in the United States"*
-
-Clara translates your description into the right filters and creates the list instantly.
-
-### Create Contact Lists
-Build contact lists based on company and contact criteria:
-
-> *"Create a contact list targeting VP and C-level executives at healthcare companies in the UK"*
-
-### Launch Campaigns
-Set up personalization campaigns without navigating complex setup flows:
-
-> *"Create an inbound campaign targeting enterprise accounts in Germany and France who have viewed more than 10 pages"*
-
-### Generate Reports
-Get campaign performance analysis and business insights:
-
-> *"Create a report of my campaigns based on performance and summarize what's working"*
-
-### Suggest Personalization
-Receive AI-powered content recommendations for your website:
-
-> *"From my website content, suggest 3 headlines for personalizing our pricing page for enterprise visitors"*
+:::info Clara also appears in the in-app Co-Pilot
+The Clara on this page is the **page-level ABM agent** you chat with directly. Separately, Abmatic AI has an in-app **Co-Pilot** — a roster of specialist assistants the conversation can route to (for example a Campaign Operations specialist, a Personalization Strategy Manager, and a Website Content Strategist). Within that Co-Pilot roster, Clara appears as the **Insights & Analytics Director**. Same name, two surfaces — both are about ABM, just in different parts of the app.
+:::
 
 ## Getting Started
 
-### 1. Access Clara
+### 1. Open Clara
 
-Navigate to **AI Agents** in the left sidebar and select **Clara** (AI ABM).
+Click **AI Agent** at the top of the left icon sidebar and go to the Clara page (the AI ABM agent). The top bar reads **"AI Agent."**
 
-![Clara AI ABM Agent main interface](/img/screenshots/clara-abm-main.png)
+When you arrive, Clara greets you automatically — you'll briefly see **"Starting your AI Agent…"** and then a friendly opening message from Clara with a quick status update on your account.
 
-### 2. Choose a Starting Point
+![Clara, the AI ABM agent, with an auto-greeting message and the chat input at the bottom](/img/screenshots/clara-abm.png)
 
-Clara offers quick-start buttons for common tasks:
-- **Accounts** - Build account lists
-- **Contacts** - Create contact lists
-- **Campaigns** - Launch campaigns
-- **Reports** - Generate analytics
-- **Personalization** - Get content suggestions
+### 2. Tell Clara what you need
 
-Or simply type your request in natural language.
+Type your request into the box at the bottom. The placeholder hints at what Clara can do:
 
-### 3. Describe What You Need
+> *"Tell me what to do — create campaigns, analyze data, manage audiences…"*
 
-Be specific about your criteria. Clara works best when you include:
-- **Industry or sector** - "technology", "healthcare", "financial services"
-- **Company size** - "over 500 employees", "enterprise", "SMB"
-- **Geography** - "United States", "EMEA", "United Kingdom"
-- **Engagement criteria** - "high engagement", "viewed pricing page"
+To start a fresh conversation at any time, click **New Chat** in the top right.
 
-## Powerful Prompts to Try
+### 3. Use the quick-start categories
 
-### Account Building
-```
-Create an account list where targeting companies are in the
-technology sector with over 500 employees in United States.
-```
+Clara offers quick-start prompt categories so you don't have to think of the wording yourself. Pick a category, then choose a ready-made prompt to run (or use it as a starting point and edit it):
 
-```
-Create an account list of firms with size more than 1000
-and with inferred revenue between $1 to $100 Million.
-```
+| Category | Example prompts |
+|----------|-----------------|
+| **Accounts** | "Create an account list of technology companies with over 500 employees in the United States." · "Show me a platform overview — how many accounts, contacts, and campaigns do I have?" |
+| **Contacts** | "Create a contact list of VP and Director level marketing leaders at SaaS companies." · "Search for contacts at companies in the healthcare industry." |
+| **Campaigns** | "Create an inbound campaign targeting enterprise accounts from the US with 1000+ employees." · "Show me all my active campaigns and analyze which ones are performing best." |
+| **Reports** | "Create a report showing campaign performance by type with visitor and conversion metrics." · "Analyze my campaign analytics — what's working and what needs improvement?" |
+| **Strategy** | "Build me a full ABM campaign: create a target account list, then an outbound campaign for it." · "Check my integrations status and give me a summary of my platform health." |
 
-### Contact Building
-```
-Create a contact list where targeting companies are in the
-technology sector with over 10,000 employees in the United Kingdom.
-```
+:::note Label note
+The fifth category is labeled **Strategy** in the current app. Earlier versions called it "Personalization."
+:::
 
-```
-Create a contact list of all the companies from the
-computer networking sector.
-```
+## What Clara Can Do
 
-### Campaign Creation
-```
-Create an inbound campaign where target audience is large
-enterprise accounts based in USA.
-```
+Clara handles common ABM tasks through conversation:
 
-```
-Create an inbound campaign targeting users from Germany and
-France who have viewed more than 10 pages on the website.
-```
+### Build account lists
+Describe your ideal accounts and Clara turns the description into the right filters and creates the list.
 
-### Reporting & Analysis
-```
-Create a report of the amount of opportunities by quarter
-and analyze it—let me know if it's going up or down.
-```
+> *"Create an account list of technology companies with over 500 employees in the United States."*
 
-```
-Create a report of my campaigns based on their performance
-and summarize the results.
-```
+### Build contact lists
+Target people by role, seniority, industry, and company criteria.
 
-### Content Personalization
-```
-From the content of my website suggest changes for a marketing
-campaign targeting large firms in USA.
-```
+> *"Create a contact list of VP and Director level marketing leaders at SaaS companies."*
 
-```
-From my website's content suggest 3 headlines for website
-personalization.
-```
+### Launch campaigns
+Spin up campaigns without walking through the full setup flow.
+
+> *"Create an inbound campaign targeting enterprise accounts from the US with 1000+ employees."*
+
+### Generate reports and analysis
+Ask for performance breakdowns and have Clara summarize what's working.
+
+> *"Create a report showing campaign performance by type with visitor and conversion metrics."*
+
+### Plan and check your setup
+Clara can chain steps into a plan and check the health of your account.
+
+> *"Build me a full ABM campaign: create a target account list, then an outbound campaign for it."*
+
+As Clara works, the chat shows her **thinking** and the **steps/tools** she runs inline, so you can follow what she's doing.
 
 ## Voice Mode
 
-Clara supports voice interaction for hands-free operation. Click the voice mode button to speak your requests instead of typing.
+Clara supports voice — you can speak your requests instead of typing. Start voice mode from the microphone control next to the chat input. It's handy for hands-free use, quick questions while you're reviewing other work, or accessibility preferences. You can switch back to typing at any time.
 
-**Best for:**
-- Brainstorming campaign ideas while reviewing other work
-- Quick questions while in meetings
-- Accessibility preferences
+## Tips for Better Results
+
+| Do | Why it helps |
+|----|--------------|
+| **Be specific** | "Technology companies with 500+ employees in the US" works better than "big tech companies." |
+| **Include geography** | Naming a region (e.g. "United Kingdom", "US") lets Clara target precisely. |
+| **Mention engagement** | Phrases like "viewed the pricing page" or "high engagement" add behavioral targeting. |
+| **One task at a time** | Focused requests get cleaner results than several unrelated asks at once. |
+| **Always review output** | Check the list or campaign Clara built before you activate it. |
 
 ## Configuration
 
-### Customize Clara's Context
+Clara works better when she understands your business. To give the AI agents company context, go to **Settings → AI Agents**. That page has two context tabs — **Agentic Chat** (context the AI uses to answer questions) and **Agentic Sequence** (context for AI email sequences) — each with a **Refresh Context** button (to regenerate context from your scraped website pages) and a **Save Context** button.
 
-Help Clara understand your business by providing context in Settings:
-
-1. Go to **Settings** > **AI Agents**
-2. Select the **Agentic Chat** tab
-3. Add your ABM context:
-
-```
-Target Segments:
-- Enterprise: 1000+ employees, $100M+ revenue
-- Mid-Market: 200-999 employees, $10M-$100M revenue
-
-Key Industries: Technology, Healthcare, Financial Services
-
-Campaign Goals: Demo requests, Content downloads, Pricing page visits
-
-Value Propositions:
-- For Enterprise: "Reduce time-to-value by 60%"
-- For Mid-Market: "Enterprise features at SMB pricing"
-```
-
-4. Click **Save Context**
-
-This context helps Clara make smarter recommendations and create more relevant campaigns.
-
-## Best Practices
-
-### Do's
-
-| Practice | Why It Works |
-|----------|--------------|
-| **Be specific with criteria** | "Technology companies with 500+ employees" gets better results than "big tech companies" |
-| **Include geography** | Clara can target precisely when you specify regions |
-| **Mention engagement levels** | "High engagement" or "viewed pricing page" adds behavioral targeting |
-| **Ask for analysis** | Clara can explain trends and recommend actions |
-
-### Don'ts
-
-| Avoid | Why |
-|-------|-----|
-| Vague requests | "Get me some leads" is too broad for Clara to act on |
-| Multiple unrelated tasks | Focus on one request at a time for best results |
-| Skipping review | Always review Clara's output before activating campaigns |
-
-## Real-World Workflows
-
-**Marketing Manager:** "I need to target our Q1 pipeline accounts who haven't engaged in 30 days"
-
-**Clara:** Creates an account list filtering for Q1 opportunities with no recent page views, then suggests a re-engagement campaign with personalized messaging based on their last interaction.
-
----
-
-**Demand Gen Lead:** "What's working in our enterprise campaigns this quarter?"
-
-**Clara:** Pulls performance data across all enterprise-targeted campaigns, identifies top performers, and recommends reallocating budget to highest-converting segments.
-
----
-
-**ABM Specialist:** "Create a nurture campaign for accounts that downloaded our ROI guide"
-
-**Clara:** Builds an audience of guide downloaders, creates a campaign with relevant follow-up content, and suggests personalization rules based on their industry.
-
-## Metrics to Track
-
-Monitor Clara's impact with these KPIs:
-
-| Metric | What to Measure |
-|--------|-----------------|
-| **Time Saved** | Hours saved vs. manual audience building |
-| **List Quality** | Match rate of Clara-built lists vs. target ICP |
-| **Campaign Velocity** | Time from request to live campaign |
-| **Engagement Lift** | Performance of Clara-suggested personalization |
+:::caution "Agentic Chat" tab ≠ the website chat widget
+The **Agentic Chat** tab in **Settings → AI Agents** stores company context for the AI assistant. That's different from the **Agentic Chat campaign** (the live chat **widget** that talks to visitors on your website). Clara is your internal ABM agent; the website widget is a separate, customer-facing feature configured per campaign. See [Configuring AI Agents](/ai-agents/ai-agents-configuration) for details on the settings tabs.
+:::
 
 ## Troubleshooting
 
 **Clara doesn't understand my request**
-- Break complex requests into simpler steps
-- Use specific criteria (industry, size, location)
-- Try the quick-start buttons first, then refine
+- Break a complex ask into smaller steps.
+- Add specific criteria (industry, size, location).
+- Start from a quick-start category, then edit the prompt.
 
-**Results don't match expectations**
-- Review the filters Clara applied
-- Adjust criteria and try again
-- Check that your data has the attributes you're filtering on
+**Results don't match what I expected**
+- Review the filters Clara applied and adjust your wording.
+- Make sure your data actually has the attributes you're filtering on.
 
-**Campaign not created**
-- Ensure you have campaign creation permissions
-- Verify the target audience has accounts
-- Check that required fields are specified
+**A campaign or list wasn't created**
+- Confirm you have permission to create campaigns/lists.
+- Check that the target audience actually contains accounts or contacts.
 
 ---
 
@@ -244,5 +123,5 @@ Monitor Clara's impact with these KPIs:
 
 - [AI Agents Overview](/ai-agents/ai-agents-overview)
 - [Configuring AI Agents](/ai-agents/ai-agents-configuration)
-- [AI SDR Agent (Alex)](/ai-agents/sdr-agent)
+- [Alex - AI SDR Agent](/ai-agents/sdr-agent)
 - [Website Personalization](/campaigns/website-personalization)

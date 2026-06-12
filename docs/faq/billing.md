@@ -6,7 +6,7 @@ sidebar_label: Billing
 
 # Billing FAQ
 
-Everything you need to know about Abmatic AI pricing, plans, and billing. We've designed our pricing to scale with your success—you only pay for what you use.
+Everything you need to know about Abmatic AI pricing, plans, credits, and billing. Pricing is built around the volume of accounts and contacts you identify, the features you use, and your team size.
 
 :::tip Quick Navigation
 Press **Ctrl+F** (Windows) or **Cmd+F** (Mac) to search for specific billing topics.
@@ -16,67 +16,53 @@ Press **Ctrl+F** (Windows) or **Cmd+F** (Mac) to search for specific billing top
 
 ## Plans & Pricing
 
-### How is Abmatic priced?
+### How is Abmatic AI priced?
 
-Abmatic uses transparent, usage-based pricing that grows with your business:
+Abmatic AI pricing is built around a few factors:
 
-| Pricing Factor | What It Means | Why It Matters |
-|----------------|---------------|----------------|
-| **Identified Companies** | Unique companies identified on your site each month | Pay only for valuable B2B visitors, not all traffic |
-| **Features** | Capabilities included in your plan tier | Choose the features that match your needs |
-| **Users** | Team members with platform access | Collaborate without per-seat surprises |
-| **Contact Reveal Credits** | Credits for identifying individual contacts | Control your contact acquisition costs |
+| Pricing Factor | What It Means |
+|----------------|---------------|
+| **Identified accounts & contacts** | The volume of companies and people you identify and reveal |
+| **Features** | The capabilities included in your plan |
+| **Users** | Team members with access to the platform |
+| **Credits** | Allocations for things like account/contact reveal, IP reveal, and AI usage |
 
-:::info Predictable Pricing
-Most customers find their costs are 60-80% lower than expected because we only count identified companies, not raw page views.
+Plans are sold on an **annual** basis. For current packaging and pricing tailored to your traffic volume, contact [sales@abmatic.ai](mailto:sales@abmatic.ai).
+
+:::tip You only pay for identified companies
+Your usage is measured against identified companies and contacts — not raw page views. A company that visits many times in a month still counts once.
 :::
-
-**Contact sales@abmatic.ai for custom pricing tailored to your traffic volume.**
 
 ### What plans are available?
 
-| Plan | Best For | Key Features | Typical Company Size |
-|------|----------|--------------|---------------------|
-| **Starter** | Teams testing ABM | Company identification, basic personalization, 1 CRM integration | 1-50 employees |
-| **Professional** | Growing marketing teams | Full personalization, all CRM integrations, analytics, A/B testing | 50-500 employees |
-| **Enterprise** | Large organizations | AI Agents (Alex & Clara), custom limits, dedicated support, SLAs, SSO | 500+ employees |
+Plan packaging is tailored to your account, so the exact tier names and limits depend on your agreement. In general, higher tiers include more identification volume, more credits, advanced features, and enterprise extras like SSO, SLAs, and dedicated support.
+
+The best way to see your own limits and consumption is **Settings → Usage**, which shows every credit allocation for your account (see [How do I view my current usage?](#how-do-i-view-my-current-usage) below). Contact [sales@abmatic.ai](mailto:sales@abmatic.ai) for plan details.
 
 ### Is there a free trial?
 
-**Yes!** Start with a 14-day free trial with full feature access—no credit card required.
+Yes — you can start with a free trial that includes full feature access.
 
-[Start your free trial →](https://app.abmatic.ai/signup)
+[Get started →](https://app.abmatic.ai/signup)
 
-| After Your Trial | What Happens |
-|------------------|--------------|
-| **Continue** | Choose a paid plan and keep all your data |
-| **Need more time?** | Request an extension to evaluate further |
-| **Not ready?** | Export your data—no pressure, no hard feelings |
+### What counts toward my limits?
 
-### What counts toward my visitor limit?
+Your usage is measured against **unique identified companies and contacts**, not page views:
 
-Your plan counts **unique identified companies per month**—a fair metric that rewards quality over quantity:
+| What Counts | What Doesn't Count |
+|-------------|-------------------|
+| Each unique company identified | Unidentified/anonymous visitors |
+| Each contact revealed | Page views from identified companies |
+| | Return visits from the same company |
 
-| What Counts | What Doesn't Count | Why This Benefits You |
-|-------------|-------------------|----------------------|
-| Each unique company identified | Unidentified/anonymous visitors | You don't pay for consumer traffic |
-| First visit from a company per month | Page views from identified companies | 100 page views = still 1 company |
-| | Return visits from same company | Engaged companies don't cost extra |
-
-**Example:** Acme Corp visits your site 47 times in January, viewing 156 pages. **That's 1 identified company**—not 47 visits or 156 page views.
+**Example:** Acme Corp visits your site 47 times in a month, viewing 156 pages. That's **1 identified company** — not 47 visits or 156 page views.
 
 ### What are Contact Reveal credits?
 
-Contact Reveal identifies specific people (not just companies) visiting your site—turning anonymous visitors into actionable leads.
+Contact Reveal identifies specific people (not just companies) visiting your site, turning anonymous visitors into actionable leads. Each successful reveal uses a credit. Your included allocation depends on your plan — check **Settings → Usage** to see your current count under **Abmatic Contacts**.
 
-| Plan | Included Credits | Additional Credits |
-|------|-----------------|-------------------|
-| **Starter** | 100/month | Available for purchase |
-| **Professional** | 500/month | Discounted bulk packages |
-| **Enterprise** | Custom allocation | Volume pricing available |
-
-:::tip Maximize Your Credits
-Contact Reveal works best when combined with [Form Tracking](/conversions/form-tracking)—you get contact info for free when visitors fill out forms, saving your credits for anonymous high-value visitors.
+:::tip Make your credits go further
+Contact Reveal works best alongside [Form Tracking](/conversions/form-tracking) — you capture contact info for free when visitors fill out forms, saving your reveal credits for anonymous high-value visitors.
 :::
 
 ---
@@ -85,20 +71,22 @@ Contact Reveal works best when combined with [Form Tracking](/conversions/form-t
 
 ### How do I view my current usage?
 
-Monitor your usage anytime in the Settings:
+You can check your usage anytime in Settings:
 
-1. Go to **Settings** → **Usage**
-2. View all your credit allocations and usage:
-   - Apollo Contacts credits
-   - Campaign credits
-   - AI (OpenAI) credits
-   - Abmatic Accounts identified
-   - Abmatic Contacts revealed
-   - IP Reveal credits
+1. Go to **Settings → Usage**
+2. The **Credits** section shows how much of each allocation you've used (for example, `24,171/4,000,000 credits used`):
 
-![Usage dashboard showing credit allocations and current usage](/img/screenshots/settings-usage.png)
+| Credit Line | What It Tracks |
+|-------------|----------------|
+| **Apollo Contacts** | Contact enrichment credits |
+| **Campaigns** | Visitors used by your campaigns |
+| **OpenAI Tokens** | AI usage (tokens) consumed by AI features |
+| **Abmatic Accounts** | Accounts (companies) identified |
+| **Abmatic Contacts** | Contacts revealed |
+| **Abmatic IP Reveal** | IP-reveal lookups used |
 
-*The Usage tab shows your current credit consumption across all features.*
+![The Settings → Usage page in Abmatic AI, showing the Credits section with used-vs-allocated counts for each line](/img/screenshots/faq-usage.png)
+*The Usage tab shows your current consumption against your allocation for each credit type.*
 
 ### How do I update my payment method?
 
@@ -124,10 +112,7 @@ All invoices are also sent via email after each billing cycle.
 
 ### When am I billed?
 
-| Billing Type | When Charged | Notification |
-|--------------|--------------|--------------|
-| **Monthly** | Same day each month (e.g., always the 15th) | 7 days before renewal |
-| **Annual** | Same date each year | 30 days before renewal |
+Plans renew on the same date each year. You'll receive a renewal notification ahead of your annual renewal date.
 
 ### What payment methods are accepted?
 
@@ -189,10 +174,7 @@ If you're consistently near your limit, upgrading is usually more cost-effective
 
 ### Can I change billing frequency?
 
-| Switch | How | Benefit |
-|--------|-----|---------|
-| **Monthly → Annual** | Contact sales | Save 15-20% |
-| **Annual → Monthly** | Takes effect at renewal | More flexibility |
+Abmatic AI plans are billed annually. If you have questions about your billing term or want to discuss options, contact [sales@abmatic.ai](mailto:sales@abmatic.ai).
 
 ---
 
@@ -225,14 +207,10 @@ Your data is preserved for a reasonable period:
 
 **Absolutely.** We believe your data belongs to you.
 
-1. Go to **Settings** → **Export**
-2. Export any or all of:
-   - Accounts and companies
-   - Contacts and leads
-   - Campaign performance data
-   - Analytics and reports
+1. Go to **Settings → Exports**
+2. Export your accounts, contacts, campaign performance, and analytics data
 
-Need everything in one package? Contact support for a complete data export.
+Need everything in one package? Contact support for a complete data export. See [Data Export](/settings/data-export) for details.
 
 ### Can I pause my subscription?
 
@@ -272,31 +250,16 @@ Credits are only used for successful reveals:
 | **No match found** | 0 credits | You don't pay for unsuccessful attempts |
 | **Duplicate contact** | 0 credits | Already in your system |
 
-### How do I buy more Contact Reveal credits?
+### How do I get more Contact Reveal credits?
 
-1. Go to **Settings** → **Usage**
-2. Click **Buy More Credits**
-3. Select a credit package
-4. Complete purchase
-
-| Package Size | Best For |
-|--------------|----------|
-| **Small bundles** | Testing or low-volume needs |
-| **Medium bundles** | Regular prospecting |
-| **Custom bundles** | High-volume or enterprise needs |
-
-Contact sales for custom credit packages with volume discounts.
+Check your current usage in **Settings → Usage** under **Abmatic Contacts**. To add credits or raise your allocation, contact [sales@abmatic.ai](mailto:sales@abmatic.ai) — they can put together a package sized to your needs, with volume discounts for higher volumes.
 
 ### Do unused credits roll over?
 
-| Plan Type | Rollover Policy |
-|-----------|-----------------|
-| **Monthly plans** | Credits reset each month (no rollover) |
-| **Annual plans** | Credits reset annually |
-| **Enterprise** | Custom rollover terms available |
+Credit allocations reset on your renewal cycle. For custom rollover terms, contact [sales@abmatic.ai](mailto:sales@abmatic.ai).
 
-:::tip Use Credits Strategically
-Prioritize Contact Reveal for high-intent visitors (multiple page views, pricing page visits) to maximize ROI on your credits.
+:::tip Use credits strategically
+Prioritize Contact Reveal for high-intent visitors (multiple page views, pricing-page visits) to get the most out of your credits.
 :::
 
 ---
@@ -336,5 +299,6 @@ Future invoices will be sent to the updated email address.
 
 - [Account Settings](/settings/account) - Manage your account details
 - [User Management](/settings/users) - Add and manage team members
-- [Usage & Credits](/settings/billing) - Monitor your usage
+- [Usage & Credits](/settings/usage) - Monitor your credit usage
 - [Data Export](/settings/data-export) - Export your data
+- [General FAQ](/faq/general) - Plans, identification, and data questions

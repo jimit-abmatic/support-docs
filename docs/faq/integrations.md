@@ -16,24 +16,23 @@ Use **Ctrl+F** (Windows) or **Cmd+F** (Mac) to search this page for specific top
 
 ## CRM Integrations
 
-### Which CRMs does Abmatic support?
+### Which CRMs does Abmatic AI support?
 
-Abmatic connects with the most popular CRM platforms through native, one-click integrations:
+Abmatic AI connects with these CRM platforms through native integrations. Open **Settings → Integrations** and click **AUTHORIZE** (or **SETTINGS**) on the one you want under the **Customer Relationship Management (CRM)** section:
 
-| CRM | Connection Type | What You Get |
-|-----|-----------------|--------------|
-| **Salesforce** | Native OAuth | Full bi-directional sync, custom objects support |
-| **HubSpot** | Native OAuth | Two-way sync with workflows and lists |
-| **Pipedrive** | Native OAuth | Deal and contact sync |
-| **Outreach** | Native OAuth | Sequence enrollment, activity sync |
-| **ActiveCampaign** | Native OAuth | Contact sync, automation triggers |
+| CRM | What You Get |
+|-----|--------------|
+| **Salesforce** | Use CRM data such as pipeline stages for personalization; bi-directional sync |
+| **HubSpot** | Two-way sync with CRM data, lists, and pipeline stages |
+| **ActiveCampaign** | Use CRM data for personalization; contact sync |
+| **Pipedrive** | Use deal and contact data for personalization |
 
-:::info Unified Data, No Manual Work
-Once connected, your CRM stays in sync automatically. No more exporting CSVs or manually updating records.
+:::info Sync once, stay in sync
+Once you connect a CRM, data syncs automatically — no exporting CSVs or manually updating records.
 :::
 
-![Integrations Hub](/img/screenshots/integrations-hub.png)
-*Connect all your tools from the central Integrations hub*
+![The Settings → Integrations hub in Abmatic AI, showing the CRM section with Salesforce, HubSpot, ActiveCampaign, and Pipedrive](/img/screenshots/faq-int-hub.png)
+*Connect your tools from Settings → Integrations. Each card shows its status (Active / Inactive) with an Authorize or Disable button.*
 
 ### How often does data sync with my CRM?
 
@@ -69,15 +68,12 @@ Yes! Custom field mapping is one of Abmatic's most powerful features:
 
 | Capability | What You Can Do | Business Value |
 |------------|-----------------|----------------|
-| **Map up to 30 fields** | Per object type (Account, Contact) | Bring all your important data |
-| **Bi-directional sync** | Push Abmatic data to CRM or pull CRM data | Single source of truth |
-| **Enrichment fields** | Firmographics, intent signals, engagement scores | Enhance CRM with Abmatic insights |
-| **Trigger automation** | CRM workflows based on Abmatic data | Automate follow-up actions |
+| **Map fields per object** | Map fields for each object type (Account, Contact) | Bring your important data into Abmatic AI |
+| **Bi-directional sync** | Push Abmatic AI data to your CRM or pull CRM data | Single source of truth |
+| **Enrichment fields** | Firmographics, engagement, and other signals | Enhance your CRM with Abmatic AI insights |
+| **Trigger automation** | CRM workflows based on Abmatic AI data | Automate follow-up actions |
 
-Go to **Integrations > [Your CRM] > Field Mapping** to configure.
-
-![Settings > Integrations page](/img/screenshots/integrations-hub.png)
-*Navigate to Settings > Integrations, then click SETTINGS on your connected CRM to access field mapping configuration*
+Go to **Settings → Integrations**, click **SETTINGS** on your connected CRM, and open **Field Mapping** to configure.
 
 ### What's the difference between Fill and Overwrite mode?
 
@@ -113,15 +109,17 @@ This prevents CRM clutter and ensures you're only working with relevant accounts
 
 ### Which ad platforms can I connect?
 
-Abmatic integrates with the major B2B advertising platforms:
+Abmatic AI integrates with these advertising platforms. You'll find them in **Settings → Integrations** under the ad-network section:
 
-| Platform | What You Can Do | Why It Matters |
-|----------|-----------------|----------------|
-| **LinkedIn Ads** | Push company lists for targeting | Reach decision-makers at target accounts |
-| **Google Ads** | Customer Match audience sync | Retarget engaged accounts across Google |
+| Platform | What You Can Do |
+|----------|-----------------|
+| **LinkedIn Ads** | Push company lists for account targeting |
+| **Google Ads** | Sync audiences with Customer Match for retargeting |
+| **OpenAI Ads** | Run campaigns that reach buyers inside ChatGPT conversations |
 
-![Settings > Integrations page](/img/screenshots/integrations-hub.png)
-*Navigate to Settings > Integrations and scroll down to the Advertising section to find LinkedIn Ads*
+:::note Meta/Facebook ads
+Meta (Facebook) ads are currently marked **Coming Soon** and are not yet a live integration.
+:::
 
 ### How do I push audiences to LinkedIn?
 
@@ -178,8 +176,20 @@ Push contact emails from Abmatic to Google Ads for cross-platform retargeting:
 Google Customer Match requires your Google Ads account to have good standing, sufficient spend history, and compliance with Google's policies. [Check your eligibility](https://support.google.com/google-ads/answer/6379332) in Google Ads.
 :::
 
-![Settings > Integrations page](/img/screenshots/integrations-hub.png)
-*Navigate to Settings > Integrations and scroll down to the Advertising section to find Google Ads*
+---
+
+## Calendar & Meeting Integrations
+
+### Can Abmatic AI book meetings on my calendar?
+
+Yes. Connect **Google Calendar** under **Settings → Integrations** (in the Communications section) to enable meeting booking. Once connected, you can define **meeting types** and set a **default AE** so the **Agentic Chat** widget can book demos directly with the right person.
+
+You can also connect **Zoom** to automatically create Zoom meeting links for those bookings.
+
+| Integration | What It Does |
+|-------------|--------------|
+| **Google Calendar** | Enables meeting booking; configure meeting types and a default AE |
+| **Zoom** | Generates meeting links for booked demos |
 
 ---
 
@@ -196,8 +206,8 @@ Get instant alerts for the engagement signals that matter most:
 | **Form submission** | Any tracked form completed | Respond to leads instantly |
 | **Campaign goal achieved** | Conversion or engagement milestone | Celebrate wins, optimize further |
 
-![Slack Integration](/img/screenshots/settings-slack.png)
-*Configure real-time alerts for your sales team*
+![The Slack integration configuration in Abmatic AI](/img/screenshots/settings-slack.png)
+*Configure real-time Slack alerts for your sales team. Slack lives under Settings → Integrations, in the Communications section.*
 
 ### Can I customize which accounts trigger notifications?
 
@@ -216,9 +226,9 @@ Start with notifications for your **top 50-100 accounts only**. You can expand o
 
 ### How do I set up Slack notifications?
 
-1. Go to **Settings > Slack**
-2. Click **Connect to Slack**
-3. Authorize Abmatic in your workspace
+1. Go to **Settings → Integrations**
+2. Find **Slack** in the Communications section and click **Connect to Slack**
+3. Authorize Abmatic AI in your workspace
 4. Select the channel for notifications
 5. Configure which events trigger alerts
 

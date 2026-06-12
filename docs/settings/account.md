@@ -14,7 +14,7 @@ Your Account Settings page is your central hub for managing your Abmatic AI work
 1. Click **Settings** in the left sidebar
 2. Select **Account**
 
-![Account Settings](/img/screenshots/settings-account.png)
+![Account Settings page showing Account Details, the Branding section with Fetch Logo from Website and Primary Color, Page exclude rules, the version line, and the Flush Cache and Sign Out actions](/img/screenshots/set-account.png)
 
 ## Account Details
 
@@ -32,25 +32,20 @@ Only users with **Admin** role can edit Company Name and Website URL. Other team
 
 ## Branding
 
-Make the Abmatic AI chat widget feel like a natural extension of your brand. Customize the appearance so your visitors get a seamless, on-brand experience.
+The **Branding** section controls how the Abmatic AI chat widget looks so it feels like a natural extension of your brand. These settings are admin-facing.
 
 ### Company Logo
 
 Display your company logo in the chat widget to build trust and brand recognition.
 
-- **Auto-fetch**: Click **Fetch Logo from Website** to automatically pull your logo from your website's domain
-- The logo appears in a circular format in the chat widget header
-- Supported formats: PNG, JPG, SVG
+- Click **Fetch Logo from Website** to automatically pull your logo from your website domain. Abmatic AI fetches it for you — no manual upload needed.
+- The current logo is shown next to the button (circular preview).
 
 ### Primary Color
 
-Set your brand's primary color for the chat widget interface. This color is used for:
+Set your brand's primary color for the chat widget. The on-page note states: "This color will be used throughout the chat widget." It defaults to `#6a11cb`.
 
-- Chat widget header background
-- Button colors and interactive elements
-- Message styling accents
-
-Enter a hex color code (e.g., `#6a11cb`) or use the color picker for visual selection.
+Enter a hex color code (e.g., `#6a11cb`) or use the color picker, then click **Save Branding** to apply it.
 
 ## Page Exclude Rules
 
@@ -82,25 +77,31 @@ Control exactly which pages receive personalization. Use exclude rules to preven
 The `*` wildcard matches any sequence of characters. For example, `*/pricing/*` would match both `www.example.com/pricing/enterprise` and `app.example.com/pricing/starter`.
 :::
 
+## About
+
+The **About** section shows your current Abmatic AI version — currently **Abmatic AI Version v6.1**. This is helpful when contacting support or checking which release you're on.
+
 ## Additional Options
+
+At the bottom of the page you'll find these utility actions:
 
 ### Flush Cache
 
-Clear cached data to see the latest changes immediately. Useful when:
+Click **Flush Cache** to clear cached data so the latest changes appear immediately. Useful when:
 - Testing new campaign configurations
 - Troubleshooting display issues
 - Verifying personalization updates
 
+### Reset Demo Account
+
+On demo accounts, a **Reset Demo Account** action lets you clear demo data and start fresh. This appears for demo/sandbox accounts and won't be present on a standard production account.
+
 ### Sign Out
 
-Securely sign out of your Abmatic AI account. Your data and settings are preserved for your next session.
-
-## About
-
-View your current Abmatic AI version information. This is helpful when contacting support or checking for platform updates.
+Click **Sign Out** to securely sign out of your Abmatic AI account. Your data and settings are preserved for your next session.
 
 ## Related
 
 - [User Management](/settings/users) - Invite team members and manage roles
-- [Billing Settings](/settings/billing) - View usage and manage your subscription
+- [Usage](/settings/usage) - Monitor credit consumption across Abmatic AI services
 - [Notifications](/settings/notifications) - Configure alert preferences

@@ -24,8 +24,8 @@ Connect Salesforce to Abmatic AI in under 20 minutes and unlock the full power o
 
 | Requirement | Details |
 |-------------|---------|
-| **Salesforce Edition** | Enterprise, Unlimited, Developer, or Performance (API access required) |
-| **User Permissions** | System Administrator profile OR custom profile with API Enabled + Modify All Data |
+| **Salesforce Edition** | Enterprise, Unlimited, or Developer (any edition with API access). Performance edition also includes API access. |
+| **User Permissions** | System Administrator profile, or a profile with **API Enabled** and read/write access to the objects you sync |
 | **Setup Time** | 15-20 minutes for initial configuration |
 | **Admin Access** | Ability to authorize OAuth connections |
 
@@ -39,12 +39,14 @@ In Salesforce: **Setup** → **Company Information** → Look for "Organization 
 
 ## Step 1: Start the Connection
 
-1. In Abmatic, navigate to **Settings** → **Integrations**
-2. Find **Salesforce** in the CRM section
+1. In Abmatic AI, go to **Settings > Integrations**
+2. Find the **Salesforce** card in the CRM section
 3. Click **Authorize** to begin
 
-![Integrations page showing Salesforce card](/img/screenshots/integrations-hub.png)
-*Find Salesforce in the CRM Platforms section and click Authorize to connect.*
+After connecting, the Salesforce settings dialog opens with a tab for each object type.
+
+![Salesforce settings dialog with object tabs across the top](/img/screenshots/sf-setup-tabs.png)
+*The Salesforce settings dialog. Object tabs run across the top: Accounts, Contacts, Opportunities, Leads, Campaigns, and Activity Log.*
 
 ---
 
@@ -92,30 +94,32 @@ After authorization, the Settings dialog opens with tabs for each object type:
 
 ### Object-Level Sync Settings
 
-For each object, configure the sync direction:
+Each object tab has a **Set object syncing** matrix. You tick **Create** and **Update** on each side — Salesforce on the left, Abmatic on the right — and a chip in the middle summarizes the direction:
 
-| Setting | What It Does | Recommendation |
-|---------|--------------|----------------|
-| **Create in Salesforce** | Push new records from Abmatic to Salesforce | Enable for revealed companies |
-| **Update in Salesforce** | Update existing Salesforce records | Enable for enrichment data |
-| **Create in Abmatic** | Pull new records from Salesforce | Enable for initial import |
-| **Update in Abmatic** | Keep Abmatic updated with Salesforce changes | Enable for ongoing sync |
+| Checkbox | What It Does | Recommendation |
+|----------|--------------|----------------|
+| **Create** (Salesforce side) | Push new records from Abmatic AI to Salesforce | Enable for revealed companies |
+| **Update** (Salesforce side) | Update existing Salesforce records | Enable for enrichment data |
+| **Create** (Abmatic side) | Pull new records from Salesforce | Enable for initial import |
+| **Update** (Abmatic side) | Keep Abmatic AI updated with Salesforce changes | Enable for ongoing sync |
 
-**First-time setup recommendation:** Start with "Create in Abmatic" and "Update in Abmatic" only. Add export capabilities after reviewing the initial data sync.
+The chip reads **Sync both ways**, **Sync into Salesforce**, **Sync into Abmatic**, or **Not syncing** depending on what you enable.
+
+**First-time setup recommendation:** Start with the Abmatic-side **Create** and **Update** only (pull from Salesforce). Add the push side after reviewing the initial data sync.
 
 ---
 
 ## Step 5: Configure Field Mapping
 
-Map Salesforce fields to Abmatic fields to control how data flows:
+In the **Set field mapping** section, map Salesforce fields to Abmatic AI fields. Each field has a **Sync to CRM** mode and a **Sync to Abmatic** checkbox.
 
-### Sync Direction Options
+### Field Mapping Modes (Sync to CRM)
 
-| Option | Behavior | Use When |
-|--------|----------|----------|
-| **Don't sync** | Field is not transferred | Field is irrelevant or sensitive |
-| **Fill** | Only sync if destination is empty | Preserve existing data |
-| **Overwrite** | Always sync, replacing existing values | Abmatic data is authoritative |
+| Mode | Behavior | Use When |
+|------|----------|----------|
+| **Don't sync** | Field is not pushed to Salesforce | Field is irrelevant or sensitive |
+| **Fill** | Only updates Salesforce when its field is empty | Preserve existing CRM data |
+| **Overwrite** | Always updates Salesforce, replacing existing values | Abmatic AI data is authoritative |
 
 ### Default Account Field Mappings
 
@@ -143,13 +147,17 @@ Map Salesforce fields to Abmatic fields to control how data flows:
 
 1. Click **Add Mapping** at the bottom of the field list
 2. Select the Salesforce field from the dropdown
-3. Select the corresponding Abmatic field
-4. Choose sync direction (Don't sync / Fill / Overwrite)
-5. Check "Sync to Abmatic" if data should flow into Abmatic
+3. Select the corresponding Abmatic AI field (this includes **demo_booked**, which records whether the contact has booked a demo)
+4. Choose the **Sync to CRM** mode (Don't sync / Fill / Overwrite)
+5. Check **Sync to Abmatic** if data should flow into Abmatic AI
 
 :::info Primary Keys
 **Website** (for Accounts) and **Work Email** (for Contacts/Leads) are required mappings that cannot be removed. These are used to match records between systems.
 :::
+
+### Push Filters (Optional)
+
+On the Accounts and Contacts tabs, the **"Set up filters for pushing records"** section lets you push only the records that match your filters to Salesforce. Leave it empty to push all records. When filters are set, you'll see a "*N* filter(s) active" chip.
 
 ---
 

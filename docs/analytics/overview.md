@@ -7,32 +7,38 @@ sidebar_position: 1
 
 # Analytics Overview
 
-Stop guessing what's working. Abmatic AI's analytics give you clear visibility into your ABM performance, showing exactly which campaigns drive engagement, which accounts are ready to buy, and how personalization impacts your bottom line.
+Abmatic AI's analytics give you clear visibility into your ABM performance. You can see which campaigns drive engagement, which accounts are active, and how personalization compares to your control group — all without exporting data to spreadsheets.
 
-## Why Analytics Matter for ABM Success
+Analytics is a paid-plan feature. If you're on a free plan, you'll see a prompt to upgrade before you can open Reports or Dashboards.
 
-| Without Analytics | With Abmatic Analytics |
+## Why Analytics Matter for ABM
+
+| Without Analytics | With Abmatic AI Analytics |
 |-------------------|------------------------|
-| "I think this campaign is working" | "This campaign drives 47% higher conversions" |
-| Manual report building in spreadsheets | Pre-built reports with one click |
-| Scattered data across tools | Unified view of all ABM metrics |
-| Monthly performance reviews | Real-time insights for faster decisions |
-| Guessing which accounts to prioritize | Engagement scores show who's ready to buy |
+| "I think this campaign is working" | A side-by-side personalized vs. control comparison |
+| Manual report building in spreadsheets | Pre-built, reusable reports |
+| Scattered data across tools | One place for accounts, contacts, campaigns, and visitors |
+| Monthly performance reviews | Up-to-date data whenever you open it |
+| Guessing which accounts to prioritize | Engagement scores and reveal confidence to focus on |
 
 ---
 
 ## Accessing Analytics
 
-Navigate to **Analytics** in the left sidebar to access two powerful views:
+Click **Analytics** in the left icon sidebar. The page opens with two tabs at the top:
 
-| View | Purpose | Best For |
+| Tab | Purpose | Best For |
 |------|---------|----------|
-| **Reports** | Detailed data tables with filtering and export | Deep analysis, team sharing, executive reporting |
-| **Dashboards** | Visual overview with customizable widgets | Daily monitoring, quick insights, presentations |
+| **Reports** | Detailed data tables with grouping, filtering, pivot, and charts | Deep analysis, team sharing, executive reporting |
+| **Dashboards** | Visual overview built from your saved reports | Daily monitoring, quick insights, presentations |
 
-![Analytics Reports](/img/screenshots/analytics-reports.png)
+![The Analytics Reports tab listing saved reports with per-type quick-filter blocks across the top](/img/screenshots/an-reports.png)
 
-*The Reports tab shows 351 reports organized by type, with search, filters, and sorting options.*
+*The Reports tab lists your saved reports. The blocks across the top (All Reports, User, Contact, Campaign, Unique Visitor, Opportunity, and more) are quick filters that show the count of reports of each type.*
+
+:::note
+The report count shown in the quick-filter blocks reflects how many reports exist in your account, so it will differ from what you see here.
+:::
 
 ---
 
@@ -40,43 +46,47 @@ Navigate to **Analytics** in the left sidebar to access two powerful views:
 
 ### Reports: Your Analysis Powerhouse
 
-Reports let you slice and dice your ABM data any way you need:
-
-**Report Types Available:**
+Reports let you slice and group your ABM data any way you need. There are **seven report types**:
 
 | Report Type | What It Shows | Common Use Cases |
 |-------------|---------------|------------------|
-| **Account** | Company-level engagement and firmographics | Track target account activity, identify hot accounts |
-| **Contact** | Individual engagement and profile data | Sales outreach prioritization, lead scoring |
-| **Opportunity** | Pipeline data synced from CRM | Revenue attribution, deal acceleration insights |
-| **Campaign** | Performance by campaign | Compare campaigns, identify top performers |
+| **Account** | Company-level engagement and firmographics | Track target-account activity, find active accounts |
+| **Contact** | Individual engagement and profile data | Sales outreach prioritization, persona analysis |
+| **Opportunity** | Pipeline data synced from your CRM | Pipeline reporting, deal trends |
+| **Campaign** | Performance by campaign | Compare campaigns, find top performers |
 | **User** | Team activity and usage | Admin oversight, adoption tracking |
-| **Unique Visitor** | Individual visitor sessions | Understand buyer journeys, content effectiveness |
-| **Visitor Session** | LinkedIn visitor data | ABM ad performance, audience insights |
+| **Unique Visitor** | Individual website visitor sessions | Buyer journeys, content effectiveness |
+| **LinkedIn Visitor Session** | LinkedIn visitor data | LinkedIn ad/visitor performance |
+
+:::note On the report-type label
+The last type appears in the app as **"Linkedin Visitor Session"** (labels are auto-formatted from the underlying type name). It's the report for LinkedIn visitor data.
+:::
 
 **Creating a Report:**
 
-1. Click **Create Report** button
-2. Select your report type from the dropdown
-3. Configure columns, filters, and date range
-4. Save and share with your team
+1. Click **Create Report** (top-right).
+2. Pick a **Report Type** in the dialog.
+3. Abmatic AI creates a report named `Report - <random>` and opens the editor.
+4. Configure columns, filters, grouping, and aggregations, then rename and save.
+
+See [Reports](/analytics/reports) for the full walkthrough.
 
 ### Dashboards: Your Visual Command Center
 
-Dashboards provide at-a-glance visibility into what matters most.
+Dashboards bring widgets from your saved reports together in one view.
 
-![Analytics Dashboards](/img/screenshots/analytics-dashboards.png)
+![The Analytics Dashboards tab listing saved dashboards, including the non-deletable Home Dashboard, with created and updated timestamps](/img/screenshots/an-dashboards.png)
 
-*The Dashboards tab shows your saved dashboards with Home Dashboard as the default landing page.*
-
-**Dashboard Capabilities:**
+*The Dashboards tab lists your saved dashboards. The **Home Dashboard** is your default landing view and can't be deleted.*
 
 | Feature | Description |
 |---------|-------------|
-| **Custom Widgets** | Add charts, tables, and KPIs |
+| **Widgets** | Add chart or table widgets built from saved reports |
 | **Multiple Dashboards** | Create role-specific views (Sales, Marketing, Executive) |
-| **Home Dashboard** | Set your default landing page |
-| **Shareable** | Team members see the same data |
+| **Home Dashboard** | Your default landing view, always available |
+| **Date filtering** | One date range applies to every widget |
+
+See [Dashboards](/analytics/dashboards) for details.
 
 ---
 
@@ -84,85 +94,79 @@ Dashboards provide at-a-glance visibility into what matters most.
 
 ### Visitor & Traffic Metrics
 
-| Metric | What It Means | Why It Matters |
-|--------|---------------|----------------|
-| **Visitors** | Unique people who visited your site | Shows reach and audience size |
-| **Sessions** | Total visit instances | Multiple sessions = active evaluation |
-| **Page Views** | Total pages viewed | Indicates depth of engagement |
-| **Identified Companies** | Companies matched to IP data | Your addressable ABM audience |
-
-**Benchmark:** 40-70% company identification rate is typical for B2B traffic.
+| Metric | What It Means |
+|--------|---------------|
+| **Visitors** | Unique people who visited your site |
+| **Sessions** | Total visit instances |
+| **Page Views** | Total pages viewed |
+| **Identified Companies** | Companies matched from visitor data (see Visitor Reveal) |
 
 ### Engagement Metrics
 
-| Metric | What It Means | Good Benchmark |
-|--------|---------------|----------------|
-| **Time on Site** | Average session duration | 2-3+ minutes |
-| **Pages per Session** | Pages viewed per visit | 3-5 pages |
-| **Return Visitors** | % who came back | 20-30% |
-| **Engagement Score** | Composite activity score | Higher = hotter lead |
+| Metric | What It Means |
+|--------|---------------|
+| **Time on Site** | Average session duration |
+| **Pages per Session** | Pages viewed per visit |
+| **Return Visitors** | Share of people who came back |
+| **Engagement Score** | Composite activity score — higher means more active |
 
 ### Campaign Performance Metrics
 
-| Metric | Formula | Target |
-|--------|---------|--------|
-| **Impressions** | Visitors who saw personalization | More = better reach |
-| **CTA Clicks** | Clicks on call-to-action | Track trend upward |
-| **CTR** | Clicks / Impressions × 100 | 2-5% for B2B |
-| **Conversions** | Goal completions | Depends on goal |
-| **CVR** | Conversions / Visitors × 100 | 1-3% for B2B |
-| **Lift** | (Personalized - Control) / Control × 100 | Any positive |
+| Metric | Formula |
+|--------|---------|
+| **Impressions** | Visitors who saw a personalization |
+| **CTA Clicks** | Clicks on a call-to-action |
+| **CTR** | Clicks / Impressions × 100 |
+| **Conversions** | Goal completions |
+| **CVR** | Conversions / Visitors × 100 |
+| **Lift** | (Personalized − Control) / Control × 100 |
+
+:::info Benchmarks are guidance, not guarantees
+Any "typical" ranges you read for B2B traffic (company identification rate, CTR, CVR, time on site) are rough industry guidance. Your numbers depend on your traffic, industry, and offer. Use your own control group as the baseline, not an external benchmark.
+:::
 
 ---
 
 ## Understanding Lift
 
-Lift is the most important metric for proving personalization ROI. It measures the improvement from your personalized experience compared to the control group.
+Lift measures how much better your personalized experience performed compared to the control group.
 
 **Formula:**
+
 ```
-Lift = ((Personalized CVR - Control CVR) / Control CVR) × 100
+Lift = ((Personalized CVR − Control CVR) / Control CVR) × 100
 ```
 
 **Example:**
+
 - Personalized CVR: 4.0%
 - Control CVR: 3.0%
-- Lift = ((4.0 - 3.0) / 3.0) × 100 = **+33% lift**
+- Lift = ((4.0 − 3.0) / 3.0) × 100 = **+33% lift**
 
 **Interpreting Lift:**
 
 | Lift Value | Meaning | Action |
 |------------|---------|--------|
-| **+20% or higher** | Strong win | Roll out to 100%, replicate approach |
-| **+5% to +20%** | Moderate improvement | Continue testing, optimize further |
-| **-5% to +5%** | No significant difference | Try different personalization |
-| **Below -5%** | Control is winning | Pause and rethink approach |
+| **+20% or higher** | Strong win | Roll out broadly, replicate the approach |
+| **+5% to +20%** | Moderate improvement | Keep testing, optimize further |
+| **−5% to +5%** | No clear difference | Try different personalization |
+| **Below −5%** | Control is winning | Pause and rethink the approach |
 
-:::tip Statistical Significance
-Wait until you have 100+ visitors in each group before drawing conclusions. Small sample sizes can show misleading lift numbers.
+:::tip Wait for enough data
+Don't draw conclusions from a handful of visitors. Give each group time to accumulate visitors before reading the lift number. For a sample-size guide, see [Campaign Performance](/analytics/campaign-performance).
 :::
 
 ---
 
-## Engagement Score Deep Dive
+## Engagement Score
 
-Engagement Score is a composite metric that shows how "hot" an account is:
-
-| Factor | Weight | Impact |
-|--------|--------|--------|
-| Page views | High | More pages = more interest |
-| Sessions | High | Multiple visits = active evaluation |
-| Recency | Medium | Recent activity weighted higher |
-| Key page visits | Medium | Pricing/demo pages boost score |
-| Time on site | Low | Longer stays = deeper engagement |
-
-**Score Levels:**
+Engagement Score is a composite metric that summarizes how active an account is, based on activity such as page views, sessions, recency, and key-page visits. A higher score means a more active account.
 
 | Level | What It Means | Recommended Action |
 |-------|---------------|-------------------|
-| **High** | Actively evaluating | Alert sales immediately, prioritize outreach |
+| **High** | Actively engaging | Alert sales, prioritize outreach |
 | **Medium** | Interested but not ready | Nurture with targeted content |
-| **Low** | Early stage or casual | Keep tracking, add to campaigns |
+| **Low** | Early-stage or casual | Keep tracking, add to campaigns |
 
 ---
 
@@ -170,61 +174,50 @@ Engagement Score is a composite metric that shows how "hot" an account is:
 
 ### "Which campaign is performing best?"
 
-1. Go to **Analytics** > **Reports**
-2. Create or open a Campaign report
-3. Add columns: Campaign Name, Visitors, Conversions, CVR, Lift
-4. Sort by Lift or CVR to find top performers
+1. Go to **Analytics > Reports**.
+2. Create or open a **Campaign** report.
+3. Add columns such as Campaign Name, Visitors, Conversions, and CVR.
+4. Sort to find your top performers.
 
-### "Which accounts should sales call today?"
+### "Which accounts should sales follow up on?"
 
-1. Go to **Reveal** > **Accounts**
-2. Filter by Engagement = High
-3. Sort by Last Visit (most recent first)
-4. Export or push hot accounts to CRM
+1. Open **Visitor Reveal** in the left sidebar and go to **Accounts**.
+2. Sort or filter by engagement and reveal confidence.
+3. Export or push the most active accounts to your CRM.
 
-### "How do I prove ABM ROI to leadership?"
+### "How do I show ABM impact to leadership?"
 
-1. Track conversions (demo requests, form fills)
-2. Create a report showing Personalized vs Control performance
-3. Calculate lift and translate to revenue impact:
-   - Example: 33% lift × 100 conversions/month × $10K ACV = **$330K incremental pipeline**
-
-### "Why is my campaign showing negative lift?"
-
-| Possible Cause | Solution |
-|----------------|----------|
-| Not enough data | Wait for 100+ visitors per group |
-| Personalization too aggressive | Try subtler changes |
-| Wrong audience targeting | Review targeting rules |
-| Control content was actually better | A/B test different approaches |
+1. Make sure your conversion goals are tracking (demo requests, form fills).
+2. Open a campaign's **Insights** tab to see personalized vs. control performance.
+3. Read the lift and translate it into pipeline terms for your team.
 
 ---
 
 ## Best Practices
 
-### Daily Review
+### Daily
 
 | Check | What to Look For |
 |-------|------------------|
-| Traffic | Any sudden drops indicating script issues? |
-| Hot accounts | New high-engagement companies to alert sales? |
+| Traffic | Any sudden drops that could mean a script issue? |
+| Active accounts | New high-engagement companies to alert sales? |
 | Campaign status | Any errors or paused campaigns? |
 
-### Weekly Review
+### Weekly
 
 | Check | What to Look For |
 |-------|------------------|
-| Campaign performance | Lift trends improving? |
-| Conversion trends | CVR moving in right direction? |
+| Campaign performance | Are lift trends improving? |
+| Conversion trends | Is CVR moving in the right direction? |
 | Audience growth | New accounts being identified? |
 
-### Monthly Review
+### Monthly
 
 | Check | What to Look For |
 |-------|------------------|
-| Overall performance | Meeting conversion goals? |
+| Overall performance | Meeting your conversion goals? |
 | Campaign comparison | Which types work best for your audience? |
-| Audience insights | Any patterns in who engages most? |
+| Audience patterns | Any patterns in who engages most? |
 
 ---
 
@@ -232,7 +225,7 @@ Engagement Score is a composite metric that shows how "hot" an account is:
 
 | Topic | Description | Link |
 |-------|-------------|------|
-| **Reports** | Create detailed data tables | [Build Reports](/analytics/reports) |
+| **Reports** | Build detailed data tables | [Build Reports](/analytics/reports) |
 | **Dashboards** | Build visual overviews | [Create Dashboards](/analytics/dashboards) |
 | **Campaign Performance** | Understand campaign metrics | [Campaign Analytics](/analytics/campaign-performance) |
 | **Audience Insights** | Learn about your visitors | [Audience Analytics](/analytics/audience-insights) |

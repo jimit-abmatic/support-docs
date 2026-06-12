@@ -185,9 +185,9 @@ Click **"Forgot Password"** on the login page—you'll receive a reset link with
 
 **Resolution steps:**
 
-1. Go to **Integrations** in Abmatic
-2. Find your CRM and click **Disconnect**
-3. Click **Connect** and complete the authorization flow
+1. Go to **Settings → Integrations** in Abmatic AI
+2. Open your CRM's **SETTINGS** and re-authorize (or disable, then authorize again)
+3. Complete the authorization flow
 4. Your data and settings will remain intact
 
 :::tip Stability Best Practice
@@ -247,7 +247,7 @@ Use a dedicated "integration user" account rather than a personal account. This 
 
 | Solution | Details |
 |----------|---------|
-| Review matching rules | Go to **Integrations** > **Sync Settings** > **Matching Rules** |
+| Review matching rules | Open your CRM's **SETTINGS** under **Settings → Integrations**, then **Sync Settings → Matching Rules** |
 | Clean up CRM duplicates | Merge or delete duplicate records in your CRM |
 | Adjust deduplication | Configure stricter matching (domain, email, company name) |
 
@@ -264,9 +264,9 @@ This error prevents unwanted duplicates—your data stays clean!
 **What it means:** The Abmatic Slack app doesn't have all required permissions.
 
 **Resolution:**
-1. Go to **Integrations** > **Slack**
-2. Click **Disconnect**
-3. Click **Connect** and **approve all requested permissions**
+1. Go to **Settings → Integrations** and find **Slack** in the **Communications** section
+2. Open Slack's **SETTINGS** and disconnect
+3. Reconnect and **approve all requested permissions**
 4. Select your notification channel
 
 Can't grant permissions? Your Slack workspace may require admin approval for apps.
@@ -425,11 +425,7 @@ If your error isn't listed here or you need additional assistance:
 
 **Response times:**
 
-| Plan | Response Time |
-|------|---------------|
-| Standard | Within 24 business hours |
-| Professional | Within 8 business hours |
-| Enterprise | Within 4 business hours |
+We aim to respond within 24 hours on business days. Higher plan tiers and Enterprise agreements include faster response targets — your exact support SLA depends on your plan. Check your agreement or ask your Abmatic AI representative for specifics.
 
 ---
 

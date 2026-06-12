@@ -2,7 +2,7 @@
 id: sync-behavior
 title: "CRM Sync Behavior: Fill vs Overwrite"
 sidebar_label: Fill vs Overwrite
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # CRM Sync Behavior: Fill vs Overwrite
@@ -26,7 +26,7 @@ This is the most common question from RevOps teams. The answer depends on your *
 
 ## Sync Modes Explained
 
-Abmatic offers three sync modes for each field, letting you control exactly how data flows:
+Abmatic AI offers three sync modes for each field, letting you control exactly how data flows:
 
 | Mode | What It Does | Best For |
 |------|--------------|----------|
@@ -61,7 +61,7 @@ Abmatic offers three sync modes for each field, letting you control exactly how 
 | CRM has data, Abmatic empty | "Technology" | (empty) | (empty) (cleared!) |
 
 **When to use Overwrite mode:**
-- Abmatic is your source of truth for specific fields (like enrichment data)
+- Abmatic AI is your source of truth for specific fields (like enrichment data)
 - You have automated data pipelines that should take precedence
 - You're doing bulk data cleanup or standardization
 - You need always-fresh firmographic data
@@ -74,26 +74,25 @@ Overwrite mode can clear existing data if the Abmatic field is empty. Only enabl
 
 ### Accessing Sync Settings
 
-![Settings > Integrations showing CRM cards with SETTINGS buttons](/img/screenshots/integrations-hub.png)
-
-*Click SETTINGS on any connected CRM to access field-level sync configuration*
-
 1. Go to **Settings** > **Integrations**
-2. Click **Settings** on your connected CRM (Salesforce, HubSpot, Pipedrive, or ActiveCampaign)
-3. Select the object tab (Accounts, Contacts, Leads, Opportunities)
-4. Configure field-level sync modes in the mapping table
+2. Click the **Settings** gear on your connected CRM (Salesforce, HubSpot, Pipedrive, ActiveCampaign, or Outreach)
+3. Select the object tab (Accounts, Contacts, and — for Salesforce — Leads, plus Opportunities where available)
+4. Scroll to the **Set field mapping** table and configure each field's sync mode
 
 ### Per-Field Configuration
 
-Each mapped field has its own sync settings:
+![CRM field mapping table with the Sync to CRM dropdown open showing Don't sync, Fill, and Overwrite](/img/screenshots/sb-field-modes.png)
+*The Set field mapping table. The "Sync to CRM" dropdown sets each field's mode (Don't sync / Fill / Overwrite). The "Sync" chip shows the resulting direction, and the "Sync to Abmatic" checkbox pulls the CRM value back into Abmatic AI.*
+
+Each mapped field has its own sync settings, shown as columns in the table:
 
 | Column | Description |
 |--------|-------------|
-| **CRM Field** | The field in your CRM to map |
-| **Sync to CRM** | Choose Don't sync, Fill, or Overwrite |
-| **Sync Direction** | Visual indicator of data flow |
-| **Sync to Abmatic** | Checkbox to sync CRM data into Abmatic |
-| **Abmatic Field** | The corresponding Abmatic field |
+| **CRM Field** | The field in your CRM to map (left column) |
+| **Sync to CRM** | The per-field mode dropdown: Don't sync, Fill, or Overwrite |
+| **Sync** | A chip showing the resulting direction (Sync both ways / Sync into [CRM] / Sync into Abmatic / Not syncing) |
+| **Sync to Abmatic** | Checkbox to pull the CRM value into Abmatic AI |
+| **Abmatic Field** | The corresponding Abmatic AI field (right column) |
 
 ### Recommended Settings by Field Type
 
@@ -115,29 +114,24 @@ The sync direction and fill/overwrite setting combine to determine behavior:
 
 | Direction | Mode | What Happens |
 |-----------|------|--------------|
-| CRM → Abmatic | Fill | CRM data fills empty Abmatic fields |
-| CRM → Abmatic | Overwrite | CRM data always wins |
-| Abmatic → CRM | Fill | Abmatic fills empty CRM fields |
-| Abmatic → CRM | Overwrite | Abmatic data always wins |
-| Two-way | Fill | Most recent non-empty value wins |
-| Two-way | Overwrite | Most recent timestamp wins |
+| CRM → Abmatic AI | Fill | CRM data fills empty Abmatic AI fields |
+| CRM → Abmatic AI | Overwrite | CRM data always overwrites the Abmatic AI value |
+| Abmatic AI → CRM | Fill | Abmatic AI fills empty CRM fields |
+| Abmatic AI → CRM | Overwrite | Abmatic AI overwrites the CRM value |
+| Two-way | Fill | Each side only fills the other's empty fields |
+| Two-way | Overwrite | Each side overwrites the other for that field |
 
-## Two-Way Sync Conflict Resolution
+## Two-Way Sync
 
-When two-way sync is enabled and both systems have data:
+When you enable both directions for a field (the **Sync both ways** chip), the mode you choose applies in each direction:
 
-1. **Timestamp comparison** - The more recently modified record wins
-2. **Per-field granularity** - Each field is evaluated independently
-3. **Audit trail** - All changes are logged in Activity Log
+1. **Per-field granularity** - Each mapped field is evaluated independently, so you can keep some fields two-way and others one-way.
+2. **Fill keeps things safe** - With Fill on both sides, neither system overwrites a value the other already has; only empty fields get populated.
+3. **Audit trail** - Sync activity is recorded in the **Activity Log** tab so you can see what changed.
 
-### Example Two-Way Scenario
-
-```
-Monday 9:00 AM - Sales rep updates Industry to "Fintech" in Salesforce
-Monday 2:00 PM - Abmatic identifies company as "Financial Services"
-
-Result: Salesforce keeps "Fintech" (more recent human edit)
-```
+:::tip Avoid tug-of-war
+If both sides are set to **Overwrite** and both systems change the same field between syncs, the result can flip back and forth on each sync run. For fields that humans edit (like Industry or Notes), use **Fill**, or pick a single source of truth and sync that field one direction only.
+:::
 
 ## Object-Level Sync Settings
 
@@ -147,8 +141,8 @@ Beyond field-level settings, you can control sync at the object level:
 
 | Setting | Description |
 |---------|-------------|
-| **Create (to CRM)** | Abmatic can create new records in CRM |
-| **Update (to CRM)** | Abmatic can update existing CRM records |
+| **Create (to CRM)** | Abmatic AI can create new records in CRM |
+| **Update (to CRM)** | Abmatic AI can update existing CRM records |
 | **Create (to Abmatic)** | CRM can create new records in Abmatic |
 | **Update (to Abmatic)** | CRM can update existing Abmatic records |
 
@@ -161,7 +155,7 @@ Beyond field-level settings, you can control sync at the object level:
 
 ### Auto-Push Setting
 
-Enable **Automatically push changes to [CRM]** to have Abmatic push updates immediately when:
+Enable **Automatically push changes to [CRM]** to have Abmatic AI push updates immediately when:
 - New accounts/contacts are created in Abmatic
 - Existing records are updated
 - Revealed companies or contacts are enriched
@@ -204,13 +198,13 @@ Check **Settings** > **Integrations** > **Activity Log** regularly for:
 
 ### Scenario 1: Sales Rep Corrections
 
-**Problem:** Sales reps manually correct industry data, but Abmatic keeps changing it back.
+**Problem:** Sales reps manually correct industry data, but Abmatic AI keeps changing it back.
 
-**Solution:** Set the Industry field to **Fill mode** so Abmatic only fills empty values.
+**Solution:** Set the Industry field to **Fill mode** so Abmatic AI only fills empty values.
 
 ### Scenario 2: Stale Enrichment Data
 
-**Problem:** Abmatic has fresher employee count data than your CRM.
+**Problem:** Abmatic AI has fresher employee count data than your CRM.
 
 **Solution:** Set Employee Count to **Overwrite mode** for Abmatic → CRM direction.
 
@@ -222,7 +216,7 @@ Check **Settings** > **Integrations** > **Activity Log** regularly for:
 
 ### Scenario 4: New Enrichment Field
 
-**Problem:** You want Abmatic to own a new enrichment field entirely.
+**Problem:** You want Abmatic AI to own a new enrichment field entirely.
 
 **Solution:** Create the field in your CRM, map it in Abmatic, and set to **Overwrite** mode.
 
@@ -236,11 +230,11 @@ Yes! You can set Fill mode for CRM → Abmatic and Overwrite for Abmatic → CRM
 
 ### What if I accidentally overwrote important data?
 
-Check the **Activity Log** for the specific record's sync history. If within 30 days, contact [support@abmatic.ai](mailto:support@abmatic.ai) for potential recovery from backups.
+Check the **Activity Log** for the specific record's sync history to see what changed and when. If you need help recovering data, contact [support@abmatic.ai](mailto:support@abmatic.ai) as soon as possible — the sooner you reach out, the more options are available. This is also why we recommend starting in **Fill** mode.
 
 ### Does Fill mode work with picklists?
 
-Yes, but ensure the Abmatic value matches a valid picklist option in your CRM, or the sync will fail. Check Activity Log for mapping errors.
+Yes, but ensure the Abmatic AI value matches a valid picklist option in your CRM, or the sync will fail. Check Activity Log for mapping errors.
 
 ### How do I completely prevent a field from syncing?
 

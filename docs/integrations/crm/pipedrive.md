@@ -11,7 +11,7 @@ Connect Pipedrive with Abmatic AI to synchronize your sales pipeline with your A
 
 ## Why Connect Pipedrive?
 
-| Without Integration | With Pipedrive + Abmatic |
+| Without Integration | With Pipedrive + Abmatic AI |
 |---------------------|--------------------------|
 | Manual data entry between systems | Automatic two-way sync keeps data fresh |
 | Sales misses website engagement signals | Deals enriched with visitor activity |
@@ -38,30 +38,32 @@ Before connecting, ensure you have:
 
 ### Step 1: Connect Your Pipedrive Account
 
-1. Navigate to **Settings** → **Integrations** in the left sidebar
-2. Find the **Pipedrive** card in the CRM section
+1. Click **Settings** in the left sidebar, then open the **Integrations** tab
+2. Find the **Pipedrive** card in the **Customer Relationship Management (CRM)** section
 3. Click **Authorize**
 4. Sign in to Pipedrive when prompted
-5. Grant Abmatic the requested permissions
-6. You'll be redirected back to Abmatic with the connection active
+5. Grant Abmatic AI the requested permissions
+6. You'll be redirected back to Abmatic AI with the connection active
 
-![Pipedrive integration card](/img/screenshots/integrations-hub.png)
-*The Integrations page showing available CRM connections including Pipedrive*
+![Integrations tab showing the Pipedrive card in the CRM section](/img/screenshots/pd-settings.png)
+*The Integrations tab under Settings. Pipedrive sits in the Customer Relationship Management (CRM) row with an "Authorize" button; once connected it shows a green "Active" badge and a "Settings" gear.*
 
 ### Step 2: Configure Sync Settings
 
-After connecting, click **Settings** on the Pipedrive card to configure:
+After connecting, click the **Settings** gear on the Pipedrive card to open the Pipedrive Settings dialog. It has a tab for each object type:
 
 1. **Accounts tab**: Configure organization sync
 2. **Contacts tab**: Configure person sync
-3. **Opportunities tab**: Configure deal sync
+3. **Opportunities tab**: Configure deal sync (imported from Pipedrive)
 4. **Activity Log tab**: View sync history and errors
+
+Each object tab shows a **Set object syncing** matrix (Create/Update checkboxes on both sides), a **Set up filters for pushing records** section, and a **Set field mapping** table.
 
 ## Understanding What Syncs
 
 ### Object Mapping
 
-| Pipedrive Object | Abmatic Object | Match Key |
+| Pipedrive Object | Abmatic AI Object | Match Key |
 |------------------|----------------|-----------|
 | Organizations | Accounts | Website domain |
 | Persons | Contacts | Email address |
@@ -106,15 +108,16 @@ Default mappings for opportunity sync:
 
 ## Configuring Sync Settings
 
-### Sync Directions
+### Object Syncing (Direction)
 
-Configure how data flows between Pipedrive and Abmatic:
+In the **Set object syncing** matrix you turn on the operations you want in each direction. The combination of checkboxes determines the overall direction, shown by the **Sync** chip in the middle:
 
-| Direction | What It Does | When to Use |
-|-----------|--------------|-------------|
-| **Pipedrive → Abmatic** | Imports data from Pipedrive | Keep Abmatic updated with CRM changes |
-| **Abmatic → Pipedrive** | Pushes data to Pipedrive | Send enriched data and revealed companies |
-| **Both Ways** | Bidirectional sync | Full synchronization between systems |
+| What you enable | Resulting Sync chip |
+|-----------------|---------------------|
+| Both Pipedrive-side and Abmatic-side operations | **Sync both ways** |
+| Only Pipedrive-side (Create/Update in Pipedrive) | **Sync into Pipedrive** |
+| Only Abmatic-side (Create/Update in Abmatic AI) | **Sync into Abmatic** |
+| Nothing enabled | **Not syncing** |
 
 ### Sync Operations
 
@@ -133,11 +136,11 @@ For each field, choose how sync behaves:
 |------|----------|----------|
 | **Don't sync** | Field is not synchronized | Fields you want to manage manually |
 | **Fill** | Only fills empty fields, won't overwrite | Preserving existing Pipedrive data |
-| **Overwrite** | Always updates with Abmatic value | Fields where Abmatic has better data |
+| **Overwrite** | Always updates with the Abmatic AI value | Fields where Abmatic AI has better data |
 
 ### Sync Frequency
 
-Choose when Abmatic checks for updates:
+Choose when Abmatic AI checks for updates:
 
 | Frequency | Best For | API Impact |
 |-----------|----------|------------|
@@ -152,7 +155,7 @@ Start with less frequent syncs and adjust based on your needs. More frequent pol
 
 ### Auto-Push Settings
 
-Enable automatic pushing to have Abmatic send updates to Pipedrive whenever:
+Enable automatic pushing to have Abmatic AI send updates to Pipedrive whenever:
 - New companies are revealed on your website
 - Contact information is enriched
 - Engagement scores change significantly
@@ -176,11 +179,15 @@ Import your existing Pipedrive data into Abmatic to build target account lists.
 3. Select **Import from CRM**
 4. Choose **Pipedrive**
 5. Apply any filters to narrow results
-6. Select **Duplicate Handling** preference:
-   - Skip duplicates
-   - Update existing records
-   - Create duplicates
+6. Select a **Duplicate Handling** preference:
+   - **Skip** — ignore records that already exist in Abmatic AI
+   - **Update existing** — refresh existing records with the imported data
+   - **Create duplicates** — import as new records even if a match exists
 7. Click **Import**
+
+:::tip
+**Update existing** is the safest default. Use **Create duplicates** only when you intentionally want separate copies, since it can introduce duplicate organizations or persons.
+:::
 
 ### Example Import Filters
 
@@ -198,7 +205,7 @@ Filter: Add Time > last 30 days
 
 ## Pushing to Pipedrive
 
-Send Abmatic data to Pipedrive to keep your sales team informed.
+Send Abmatic AI data to Pipedrive to keep your sales team informed.
 
 ### Manual Push
 
@@ -219,13 +226,13 @@ Enable automatic pushing in integration settings:
 
 ### What Gets Pushed
 
-| Data Type | Pushed Automatically | Requires Manual Push |
-|-----------|---------------------|---------------------|
-| Revealed companies | ✅ (if enabled) | ✅ |
-| Enriched contacts | ✅ (if enabled) | ✅ |
-| Engagement scores | ✅ (if enabled) | ✅ |
-| Custom fields | ❌ | ✅ |
-| Account lists | ❌ | ✅ |
+| Data Type | Pushed Automatically | Available via Manual Push |
+|-----------|---------------------|---------------------------|
+| Revealed companies | Yes (if auto-push enabled) | Yes |
+| Enriched contacts | Yes (if auto-push enabled) | Yes |
+| Engagement scores | Yes (if auto-push enabled) | Yes |
+| Custom fields | No | Yes |
+| Account lists | No | Yes |
 
 ### Required Fields
 

@@ -7,19 +7,19 @@ sidebar_position: 2
 
 # Company Identification
 
-**Turn anonymous website traffic into actionable account intelligence.** Abmatic AI identifies which companies are visiting your website—even when visitors don't fill out a form—giving you the foundation for effective account-based marketing.
+**Turn anonymous website traffic into actionable account intelligence.** Abmatic AI identifies which companies are visiting your website — even when visitors never fill out a form — giving you the foundation for effective account-based marketing.
 
 :::tip Why This Matters
-98% of your website visitors leave without identifying themselves. Company identification reveals who they are, so your sales team can prioritize outreach based on real intent signals rather than guesswork.
+Most of your website visitors leave without identifying themselves. Company identification reveals who they are, so your sales team can prioritize outreach based on real intent signals rather than guesswork.
 :::
 
 ---
 
 ## The Business Impact
 
-| Before Abmatic | With Abmatic |
-|----------------|--------------|
-| "Someone visited our site" | "ServiceNow visited our pricing page 3 times this week" |
+| Before Abmatic AI | With Abmatic AI |
+|-------------------|-----------------|
+| "Someone visited our site" | "A target account visited our pricing page three times this week" |
 | React to form fills only | Proactively engage high-intent accounts |
 | Unknown visitor intent | Clear buying signals by company |
 | Spray-and-pray outreach | Targeted sales follow-up |
@@ -28,87 +28,108 @@ sidebar_position: 2
 
 ## How Company Identification Works
 
-When someone visits your website, Abmatic runs a sophisticated identification process in milliseconds:
+When someone visits your website, Abmatic AI runs an identification process in milliseconds:
 
 ```
 Visitor lands on your site
         ↓
-Abmatic script captures visit data
+Abmatic AI script captures visit data
         ↓
 IP address matched against company database
         ↓
 Company enriched with firmographic data
         ↓
-Visit logged to company profile
+Visit logged to the company profile
 ```
 
 ### What Gets Captured
 
 | Data Type | Examples | Why It Matters |
 |-----------|----------|----------------|
-| **Company Identity** | Name, domain, logo | Know exactly who's visiting |
+| **Company identity** | Name, domain, logo | Know exactly who is visiting |
 | **Firmographics** | Industry, size, revenue | Qualify fit instantly |
-| **Location** | Country, city, timezone | Target by geography |
-| **Visit Behavior** | Pages, time, sessions | Gauge buying intent |
-| **Confidence Level** | Very High to Very Low | Prioritize reliable data |
+| **Location** | Country, city, time zone | Target by geography |
+| **Visit behavior** | Pages, time, sessions | Gauge buying intent |
+| **Reveal Confidence** | Very High → None | Prioritize reliable data |
 
 ---
 
 ## Viewing Identified Companies
 
-### Navigate to Reveal
+### Open Visitor Reveal
 
-1. Click **Reveal** in the left sidebar
-2. Select the **Accounts** tab
+1. Click **Visitor Reveal** in the left sidebar.
+2. Select the **Accounts** tab (it opens here by default).
 
-You will see a list of all companies that have visited your website, complete with firmographic data and engagement metrics.
+You will see every company that has visited your website, with firmographic data and engagement metrics.
 
-![Visitor Reveal Accounts Dashboard showing 31,849 identified companies](/img/screenshots/reveal-accounts-dashboard.png)
+![Visitor Reveal Accounts tab with confidence tiles and a grid of identified companies](/img/screenshots/ci-accounts.png)
 
-*The Visitor Reveal Accounts view shows 31,849 identified companies broken down by confidence: 6,038 Very High, 6,131 High, 8,380 Low, 8,114 Moderate, and 3,186 Very Low. Real companies visible include Mountainside (Mental Health Care, $10M-$25M), Southeastern Grocers (Retail, $1B-$10B), OpenText (Computer Software, ticker OTEX), Quantum Metric (Computer Software, $250M-$500M), and Berkshire Hathaway Specialty (Insurance).*
+*The Accounts tab. The tiles across the top break your identified companies down by Reveal Confidence and act as one-click filters. The grid shows Domain, Name, Industry, LinkedIn URL, Inferred Revenue, a Visited Pages link, and an AI-generated Summary.*
 
-### Understanding the Dashboard
+### The Confidence Tiles
 
-The top row shows your identification metrics at a glance. Click any confidence level to filter the list instantly:
+The row of tiles at the top of the page shows your identification metrics at a glance. Click any tile to filter the list to that confidence bucket instantly.
 
-| Metric | What It Shows | How to Use It |
-|--------|---------------|---------------|
-| **All Accounts** | Total companies identified (e.g., 31,849) | Track growth over time |
-| **Very High** | Highest confidence matches (e.g., 6,038) | Prioritize for direct sales outreach |
-| **High** | Strong matches (e.g., 6,131) | Add to target account lists and sequences |
-| **Moderate** | Good matches (e.g., 8,114) | Include in personalization and ad campaigns |
-| **Low** | Possible matches (e.g., 8,380) | Verify before acting on them |
-| **Very Low** | Needs verification (e.g., 3,186) | Monitor for repeat visits |
+![Reveal Confidence tiles across the top of the Accounts tab acting as filters](/img/screenshots/ci-confidence-tiles.png)
+
+*The tiles — All Accounts, Very High, High, Moderate, Low, Very Low — show how many companies fall into each Reveal Confidence bucket. Clicking a tile filters the grid to just those accounts.*
+
+| Tile | What It Shows | How to Use It |
+|------|---------------|---------------|
+| **All Accounts** | Total companies identified | Track growth over time |
+| **Very High** | Highest-confidence matches | Prioritize for direct sales outreach |
+| **High** | Strong matches | Add to target account lists and sequences |
+| **Moderate** | Good matches | Include in personalization and ad campaigns |
+| **Low** | Possible matches | Verify before acting |
+| **Very Low** | Needs verification | Monitor for repeat visits |
 
 ### Account List Columns
 
 | Column | What It Shows | Why It Is Useful |
-|--------|---------------|-----------------|
-| **Domain** | Company website URL (e.g., opentext.com) | Quick identification and CRM matching |
-| **Name** | Company name (e.g., OpenText) | Match to your CRM records |
-| **Industry** | Business sector (e.g., Computer Software, Retail) | Filter by vertical to find ICP accounts |
-| **LinkedIn URL** | Company LinkedIn page | One-click research on any account |
-| **Inferred Revenue** | Estimated annual revenue (e.g., $250M-$500M) | Qualify by company size at a glance |
+|--------|---------------|------------------|
+| **Domain** | Company website URL | Quick identification and CRM matching |
+| **Name** | Company name | Match to your CRM records |
+| **Industry** | Business sector | Filter by vertical to find ICP accounts |
+| **LinkedIn URL** | Company LinkedIn page | One-click research |
+| **Inferred Revenue** | Estimated annual revenue range | Qualify by company size at a glance |
+| **Visited Pages** | A "View (N)" link to every URL the company hit | See exactly what they researched |
 | **Summary** | AI-generated company description | Quick context without leaving the page |
-| **Ticker** | Stock symbol for public companies (e.g., OTEX) | Spot enterprise accounts instantly |
+| **Reveal Confidence** | Very High → None bucket (colored chip) | Prioritize reliable matches |
+| **Reveal Source** | Internal source label, **Abmatic 1–4** | Understand how the match was made |
+| **Reveal Last Seen** | Date of the most recent visit | Find recent visitors and sort by recency |
+| **Total Sessions** | Distinct visit sessions | Gauge repeat engagement |
+
+:::info Reveal Source — what "Abmatic 1–4" means
+The **Reveal Source** column tells you how a company was identified, shown as an internal label rather than a raw provider name. The labels run **Abmatic 1** through **Abmatic 4** (Abmatic 1 is the strongest, first-party signal). Abmatic 2 is a legacy source kept only for older historical rows. You will never see an external data-provider name in this column.
+:::
+
+### Reveal Source labels
+
+| Label | Roughly means |
+|-------|---------------|
+| **Abmatic 1** | First-party signal (strongest) |
+| **Abmatic 2** | Legacy source — historical rows only (deprecated) |
+| **Abmatic 3** | Standard enrichment match |
+| **Abmatic 4** | Additional enrichment match |
 
 ### Account Detail View
 
-Click on any company name to see their complete profile — engagement score, visit history, social links, and associated contacts.
+Click any company name to open its full profile — engagement score, visit history, social links, and associated contacts.
 
-![Account detail view for Quantum Metric showing engagement score of 54](/img/screenshots/reveal-account-quantum.png)
+![Account detail Overview tab with an engagement-score gauge and a 90-day trend chart](/img/screenshots/reveal-account-quantum.png)
 
-*Clicking on Quantum Metric opens their full profile: a private company with 501-1000 employees in Colorado Springs, Colorado. The engagement score gauge shows 54 (strong engagement). The 90-day trend chart shows increasing website activity. Links to LinkedIn, Facebook, and Twitter are included, along with a direct link to the Salesforce record.*
+*An account Overview tab shows firmographics (company type, employee range, headquarters), an engagement-score gauge, a 90-day engagement trend, and links to LinkedIn, Facebook, X, and the linked CRM record.*
 
-**What you will find in the account detail:**
+The account detail page has **seven tabs**:
 
 | Tab | What It Shows | When to Use It |
 |-----|--------------|----------------|
-| **Overview** | Company profile, engagement score gauge, trend chart, social links | Get a quick read on account health and fit |
+| **Overview** | Company profile, engagement-score gauge, trend chart, social links | Get a quick read on account health and fit |
 | **Collections** | Which lists and segments include this account | See how you are already targeting them |
 | **Campaigns** | Active campaigns targeting this account | Coordinate your ABM efforts |
 | **Opportunities** | CRM opportunities linked to this account | Connect website activity to pipeline |
-| **Engagement** | Individual page visit sessions with locations | See exactly what they are researching |
+| **Engagement** | Individual page-visit sessions with locations | See exactly what they are researching |
 | **Performance** | Detailed visitor analytics over time | Measure engagement depth and trends |
 | **Contacts** | All identified contacts at that company | Map the buying committee |
 
@@ -116,31 +137,40 @@ Click on any company name to see their complete profile — engagement score, vi
 
 The **Engagement** tab reveals the complete story of how a company has interacted with your website.
 
-![Account engagement tab showing website page visits with timestamps, locations, and engagement scores](/img/screenshots/reveal-account-engagement.png)
+![Account Engagement tab showing visit sessions with per-session page-view and engagement metrics](/img/screenshots/reveal-account-engagement.png)
 
-*The Engagement tab for Mountainside shows individual visit sessions: one from Beijing 10 minutes ago and another from California 14 days ago. Each session displays form submissions, page views, unique pages, scroll depth, time on page, and engagement score. Click "Visited Pages" to see exactly which URLs they viewed.*
+*The Engagement tab lists individual visit sessions with timestamps and locations. Each session shows Total Form Submission, Total Page Views, Total Page Views Unique, Total Scroll Depth Percentage, Total Time On Page, and an Engagement Score. Click "Visited Pages" to see exactly which URLs they viewed.*
+
+### Visited Pages
+
+In the grid and on the Engagement tab, the **Visited Pages** link opens a popup listing every URL the visitor hit. The dialog is titled **"Visited Pages (N)"** and the links are clickable.
+
+![Visited Pages popup listing every URL a visitor viewed](/img/screenshots/ci-visited-pages.png)
+
+*The Visited Pages dialog: "These are all the pages visited by this visitor," followed by a clickable list of every URL. It shows "No Pages" when a visitor has no recorded page views.*
 
 ### Contacts Within an Account
 
-The **Contacts** tab shows every individual Abmatic has identified at a specific company — your buying committee, mapped automatically.
+The **Contacts** tab shows every individual Abmatic AI has identified at a company — your buying committee, mapped automatically.
 
-![Quantum Metric Contacts tab showing 9 contacts across Marketing, Engineering, and Professional Services departments](/img/screenshots/reveal-account-contacts.png)
+![Account Contacts tab listing revealed contacts grouped by department](/img/screenshots/reveal-account-contacts.png)
 
-*Quantum Metric has 9 identified contacts: 6 in Marketing (VP, Director, CMO, Senior Manager), 1 in Engineering (Senior Manager), and 1 in Professional Services (Senior Director). Each row shows work email, full name, job title, LinkedIn URL, and company industry. This gives you a complete view of who to engage at this account.*
+*The Contacts tab groups revealed people by department and shows each person's work email, full name, job title, LinkedIn URL, and company industry.*
 
 ---
 
-## Confidence Levels Explained
+## Reveal Confidence Explained
 
-Not all identifications are equal. Abmatic provides confidence scores so you can prioritize reliable data:
+Each company gets a numeric confidence value that maps to one of six buckets, shown as a colored chip:
 
-| Confidence Level | Score Range | What It Means | Recommended Action |
-|------------------|-------------|---------------|-------------------|
-| **Very High** | 71-100% | Highly reliable identification | Prioritize for immediate sales outreach |
-| **High** | 51-70% | Strong identification | Add to target account lists |
-| **Moderate** | 31-50% | Good match, some uncertainty | Include in personalization campaigns |
-| **Low** | 21-30% | Possible match | Verify before sales contact |
-| **Very Low** | 6-20% | Needs verification | Review manually or monitor |
+| Reveal Confidence | Score Range | What It Means | Recommended Action |
+|-------------------|-------------|---------------|--------------------|
+| **Very High** | 71–100 | Highly reliable identification | Prioritize for immediate sales outreach |
+| **High** | 51–70 | Strong identification | Add to target account lists |
+| **Moderate** | 31–50 | Good match, some uncertainty | Include in personalization campaigns |
+| **Low** | 21–30 | Possible match | Verify before sales contact |
+| **Very Low** | 6–20 | Needs verification | Review manually or monitor |
+| **None** | 0–5 | No reliable signal yet | Wait for more activity |
 
 :::tip Focus on Quality
 Start with High and Very High confidence companies for sales outreach. Use Moderate confidence for broader marketing campaigns where false positives matter less.
@@ -148,140 +178,99 @@ Start with High and Very High confidence companies for sales outreach. Use Moder
 
 ---
 
-## Filtering and Searching
+## Filtering, Sorting, and Searching
 
-### Quick Filters
+The Accounts grid loads data from the server as you scroll, so filters and sorts apply to your entire list of identified companies — not just the rows on screen.
 
-Use the filter bar to narrow down results instantly:
+### Search and quick filters
 
-| Filter | Options | Best Use Case |
-|--------|---------|---------------|
-| **Industry** | Dropdown of industries | Find healthcare or tech companies |
-| **Revenue** | Revenue ranges | Target enterprise ($1B+) or mid-market |
-| **Location** | Country/region | Focus on specific territories |
-| **Confidence** | Very High to Very Low | Prioritize reliable data |
-| **Last Seen** | Date range | Find recent visitors |
+- **Search** by company name, domain, or industry keyword.
+- Use the **confidence tiles** for a one-click confidence filter.
+- Sort any column, including **Reveal Last Seen**, to surface the most recent visitors first.
 
-### Search
+### Advanced filtering
 
-Type in the search box to find specific companies:
-- Search by company name ("ServiceNow")
-- Search by domain ("servicenow.com")
-- Search by industry keyword ("software")
+Click **FILTERS** for column- and field-level criteria, including:
 
-### Advanced Filtering
+| Filter | Example |
+|--------|---------|
+| **Industry / Revenue / Location** | Healthcare companies, $1B+ revenue, US-based |
+| **Reveal Confidence** | Very High and High only |
+| **Reveal Last Seen** | Visited in the last 7 days |
+| **Pages Visited** | Companies who visited `/pricing` |
+| **Total Sessions / Total Page Views** | Companies with 3+ visits or 10+ page views |
 
-Click **FILTERS** for additional criteria:
-
-| Advanced Filter | Description | Example |
-|-----------------|-------------|---------|
-| **Pages Visited** | Filter by specific URLs | Companies who visited /pricing |
-| **Total Visits** | Visit count threshold | Companies with 3+ visits |
-| **Total Page Views** | Engagement depth | Companies viewing 10+ pages |
-| **First Visit Date** | New vs returning | New visitors this week |
+:::note Saved filters and infinite scroll
+Your filter and column choices persist between visits — reopen the page and your view comes back. As you scroll, more rows load automatically (infinite scroll), and a live count tells you how many companies match your current filter.
+:::
 
 ---
 
 ## Understanding Identification Rates
 
-Your identification rate depends on your traffic sources. Here's what to expect:
+Your identification rate depends on your traffic sources. Corporate-network traffic (for example, visitors arriving from LinkedIn campaigns, or browsing during office hours on company devices) tends to identify well, because those visitors use IP ranges that map cleanly to a company.
 
-### Typical Rates by Traffic Source
+| Traffic Source | Tends to identify | Why |
+|----------------|-------------------|-----|
+| **Corporate networks** | Well | Static IP ranges map to companies |
+| **LinkedIn ad traffic** | Well | Users are typically on corporate networks |
+| **Small business** | Moderately | May use shared IPs |
+| **Home / remote** | Poorly | Residential IPs are hard to map |
+| **Mobile** | Poorly | Carrier IPs are shared |
+| **VPN traffic** | Poorly | Masks the original IP |
 
-| Traffic Source | Expected Rate | Why |
-|----------------|---------------|-----|
-| **Corporate Networks** | 60-80% | Static IP ranges map to companies |
-| **LinkedIn Ad Traffic** | 50-70% | Users typically on corporate networks |
-| **AI Sequences** | 40-60% | Office hours, corporate devices |
-| **Small Business** | 40-60% | May use shared IPs |
-| **Home/Remote** | 10-20% | Residential IPs hard to map |
-| **Mobile** | 5-15% | Carrier IPs are shared |
-| **VPN Traffic** | 5-10% | Masks original IP |
-
-### Why Some Visitors Can't Be Identified
+### Why some visitors can't be identified
 
 | Reason | Explanation | Workaround |
 |--------|-------------|------------|
 | **Residential IP** | Working from home on personal internet | Use Contact Reveal for known visitors |
-| **VPN/Proxy** | Company VPN or privacy tools | Identify via form fills |
-| **Mobile Network** | Cellular data uses carrier IPs | Focus on desktop traffic |
-| **Small Company** | May not have registered IP space | Enrich via CRM data |
-| **Bot Traffic** | Search engines, monitoring tools | Auto-filtered by Abmatic |
-
-:::tip Maximize Identification Rates
-- Traffic from LinkedIn campaigns identifies well (corporate networks)
-- AI Sequences clicking through often identify
-- Morning/office hours traffic identifies better than evening
-- Paid search traffic from branded terms often identifies
-:::
+| **VPN / proxy** | Company VPN or privacy tools | Identify via form fills |
+| **Mobile network** | Cellular data uses carrier IPs | Focus on desktop traffic |
+| **Small company** | May not have registered IP space | Enrich via CRM data |
+| **Bot traffic** | Search engines, monitoring tools | Auto-filtered by Abmatic AI |
 
 ---
 
 ## Taking Action on Identified Companies
 
-### Add to Target Lists
+Select companies with the row checkboxes (or select everything that matches your current filter, then deselect a few with select-all-except), then use the bulk actions.
 
-Build campaign audiences from identified companies:
+### Add to a list
 
-1. **Select** companies using checkboxes
-2. Click **Add to List** (or use bulk actions)
-3. Choose an existing list or create new
+1. **Select** companies using checkboxes.
+2. Click **Add to List**.
+3. Choose an existing list or create a new one.
 
-These lists power your:
-- Website personalization campaigns
-- LinkedIn Matched Audiences
-- Google Customer Match
-- CRM campaigns
+These lists power website personalization, LinkedIn Matched Audiences, Google Customer Match, and CRM campaigns.
 
 ### Push to CRM
 
-Send company data to Salesforce or HubSpot:
+1. **Select** companies to push.
+2. Click **Push to CRM**.
+3. Choose to create new account records, update existing ones, or add to a campaign (Salesforce or HubSpot).
 
-1. **Select** companies to push
-2. Click **Push to CRM**
-3. Choose options:
-   - Create new Account records
-   - Update existing records
-   - Add to specific campaign
+The sync includes company name and domain, industry and revenue, location, first/last visit dates, and page-view counts.
 
-The sync includes:
-- Company name and domain
-- Industry and revenue
-- Location data
-- First/last visit dates
-- Page view count
+### Export
 
-### Export Data
+1. **Select** companies (or select all that match the filter).
+2. Click **Export**.
+3. Download a CSV with all visible columns plus additional firmographic data.
 
-Download company data for offline analysis:
+### Exclude
 
-1. **Select** companies (or select all)
-2. Click **Export**
-3. Choose format (CSV)
+1. **Select** companies to exclude.
+2. Click **Exclude** and confirm.
 
-Export includes all visible columns plus additional firmographic data.
-
-### Exclude Companies
-
-Remove companies you don't want to track:
-
-1. **Select** companies to exclude
-2. Click **Exclude**
-3. Confirm exclusion
-
-Use exclusions for:
-- **Competitors** - Don't reveal your hand
-- **Existing customers** - Focus on new business
-- **Partners** - Keep relationships separate
-- **Internal traffic** - Your own employees
+Use exclusions for competitors, existing customers, partners, and internal traffic.
 
 ---
 
 ## Best Practices
 
-### Daily Review Process
+### Daily review process
 
-The value of identification data decays fast. A company visiting your pricing page today is far more likely to engage than one that visited two weeks ago. Build a daily habit:
+Identification data decays fast. A company visiting your pricing page today is far more likely to engage than one that visited two weeks ago. Build a daily habit:
 
 | Time | Action | Goal |
 |------|--------|------|
@@ -290,68 +279,50 @@ The value of identification data decays fast. A company visiting your pricing pa
 | **Action** | Push top accounts to CRM and alert reps | Enable same-day outreach |
 | **Build** | Add good-fit companies to lists | Grow campaign audiences continuously |
 
-### Sales Integration Workflows
-
-| Use Case | How to Do It | Impact |
-|----------|--------------|--------|
-| **Real-time alerts** | Set up Slack notifications for target accounts | Your rep knows within minutes when their prospect visits |
-| **CRM sync** | Auto-push high-engagement companies to Salesforce/HubSpot | Complete account profiles without manual data entry |
-| **Meeting prep** | Check if prospect visited before calls | Walk in knowing what pages they researched |
-| **Lead scoring** | Use engagement + firmographic fit for prioritization | Focus on accounts that are both a good fit AND actively interested |
-
-### Common Workflows
+### Common workflows
 
 **"See which companies are visiting your pricing page right now"**
-1. Open Reveal > Accounts
-2. Click FILTERS
-3. Add filter: Pages Visited contains "/pricing"
-4. Sort by Reveal Last Seen (most recent first)
-5. Push High and Very High confidence matches to CRM for immediate follow-up
+1. Open Visitor Reveal → Accounts.
+2. Click **FILTERS** and add: Pages Visited contains `/pricing`.
+3. Sort by **Reveal Last Seen** (most recent first).
+4. Push High and Very High matches to CRM for immediate follow-up.
 
 **"Which target accounts are engaged this week?"**
-1. Open Reveal > Accounts
-2. Click the **Very High** or **High** confidence tab to filter
-3. Sort by Reveal Last Seen to find recent visitors
-4. Click into each account to see their engagement history and contacts
-5. Push to CRM or add to a Slack alert for your sales team
+1. Open Visitor Reveal → Accounts.
+2. Click the **Very High** or **High** confidence tile.
+3. Sort by **Reveal Last Seen** to find recent visitors.
+4. Click into each account to see engagement history and contacts.
 
 **"Find enterprise companies in my territory"**
-1. Open Reveal > Accounts
-2. Use the search or filter for Revenue > $100M
-3. Filter by Location to match your territory
-4. Add matching companies to a target list for website personalization and ad retargeting
-
-**"Alert your sales team when a target account visits your site"**
-1. Set up Slack integration in Settings > Slack
-2. Configure notifications for high-engagement visits from target accounts
-3. Your sales reps receive real-time alerts and can reach out while the prospect is still in buying mode
+1. Open Visitor Reveal → Accounts.
+2. Filter by Revenue and Location to match your territory.
+3. Add matching companies to a target list for personalization and retargeting.
 
 ---
 
 ## Troubleshooting
 
-### No Companies Appearing
+### No companies appearing
 
 | Issue | Cause | Solution |
 |-------|-------|----------|
-| Empty list | Script not installed | Check [Install Script guide](/getting-started/install-script) |
-| No new data | Low traffic volume | Allow 24-48 hours for data |
+| Empty list | Script not installed | Check the [Install Script guide](/getting-started/install-script) |
+| No new data | Low traffic volume | Allow 24–48 hours for data |
 | All filtered out | Filters too restrictive | Clear filters and try again |
 
-### Low Identification Rate
+### Low identification rate
 
 | Issue | Cause | Solution |
 |-------|-------|----------|
-| Under 20% | Mostly remote traffic | Focus on LinkedIn/AI Sequences |
-| Many "Very Low" | Mixed traffic sources | Filter to High confidence only |
-| Declining rate | Traffic mix changing | Review traffic sources in analytics |
+| Mostly low confidence | Mixed traffic sources | Filter to High confidence only |
+| Declining rate | Traffic mix changing | Review your traffic sources |
 
-### Wrong Company Showing
+### Wrong company showing
 
 | Issue | Cause | Solution |
 |-------|-------|----------|
-| Incorrect match | IP database error | Click "Report Incorrect" to flag |
-| Old company name | Company rebranded | Will update in next data refresh |
+| Incorrect match | IP database limitation | Use the report/flag option to mark it incorrect |
+| Old company name | Company rebranded | Updates on the next data refresh |
 | ISP showing | Shared IP address | Filter by confidence level |
 
 ---

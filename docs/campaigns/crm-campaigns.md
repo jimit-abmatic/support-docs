@@ -2,7 +2,7 @@
 id: crm-campaigns
 title: CRM Campaigns
 sidebar_label: CRM Campaigns
-sidebar_position: 9
+sidebar_position: 13
 ---
 
 # CRM Campaigns
@@ -21,14 +21,16 @@ sidebar_position: 9
 
 ## How It Works
 
-CRM campaign sync creates a two-way connection between Abmatic and your CRM:
+CRM campaign sync creates a two-way connection between Abmatic AI and your CRM:
 
-1. **Campaign Link** - Connect an Abmatic campaign to a new or existing CRM campaign
+1. **Campaign Link** - Connect an Abmatic AI campaign to a new or existing CRM campaign
 2. **Automatic Membership** - Contacts matching your targeting are added as campaign members
 3. **Engagement Sync** - Website visits, personalizations, and conversions flow to your CRM
 4. **Revenue Attribution** - Track pipeline and closed-won revenue influenced by your campaigns
 
-![Campaigns list showing Salesforce Campaigns filter](/img/screenshots/crm-campaign-overview.png)
+On the Campaigns list, click the **Salesforce Campaigns** summary card to filter to just your CRM-synced campaigns. Each row shows its CRM status (for example **Planned** or **Completed**) alongside the rest of your campaign data.
+
+![Campaigns list filtered to Salesforce Campaigns, showing two synced campaigns with Planned and Completed statuses](/img/screenshots/crm-camp-sync.png)
 
 ## Getting Started
 
@@ -42,36 +44,42 @@ Before setting up CRM sync, ensure you have:
 | Campaign creation permissions | Needed to create/link CRM campaigns |
 | Contacts/leads in your CRM | Members must exist to be synced |
 
-![CRM integrations available in Abmatic](/img/screenshots/integrations-hub.png)
+![CRM integrations available in Abmatic AI](/img/screenshots/integrations-hub.png)
 
 ### Creating a Synced Campaign
 
-**Step 1: Open Campaign Settings**
+CRM campaign sync is configured per campaign once your CRM integration is connected.
 
-Navigate to your Abmatic campaign and click **Settings > CRM Sync**.
+**Step 1: Open your campaign's CRM Sync settings**
 
-**Step 2: Choose Your CRM**
+Open the Abmatic AI campaign you want to sync and find its **CRM Sync** settings.
 
-Select either **Salesforce** or **HubSpot** based on your integration.
+**Step 2: Choose your CRM**
 
-**Step 3: Link or Create**
+Select **Salesforce** or **HubSpot**, depending on which CRM you've connected.
 
-- **Create New**: Abmatic automatically creates a matching campaign in your CRM
-- **Link Existing**: Connect to a campaign you've already created
+**Step 3: Link or create**
 
-**Step 4: Configure Sync Settings**
+- **Create New**: Abmatic AI creates a matching campaign in your CRM.
+- **Link Existing**: Connect to a campaign you've already created in your CRM.
+
+**Step 4: Configure sync settings**
 
 Choose which engagement events should update member status and how often to sync.
 
-**Step 5: Enable Sync**
+**Step 5: Enable sync**
 
-Click **Enable Sync** to start the connection. Members begin syncing immediately.
+Turn the sync on. Matching members begin syncing.
+
+:::note Availability varies
+The exact location and wording of the CRM Sync settings depend on your integration and account configuration. If you don't see CRM Sync on a campaign, confirm your Salesforce or HubSpot integration is connected under **Settings > Integrations**, or check with your Abmatic AI rep.
+:::
 
 ## Salesforce Campaign Sync
 
 ### Synced Fields
 
-Abmatic keeps your Salesforce campaign in sync with these fields:
+Abmatic AI keeps your Salesforce campaign in sync with these fields:
 
 | Abmatic Field | Salesforce Field | Description |
 |---------------|------------------|-------------|
@@ -84,7 +92,7 @@ Abmatic keeps your Salesforce campaign in sync with these fields:
 
 ### Member Status Mapping
 
-Configure how Abmatic engagement translates to Salesforce campaign member status:
+Configure how Abmatic AI engagement translates to Salesforce campaign member status:
 
 | Abmatic Event | Suggested Status | What It Means |
 |---------------|------------------|---------------|
@@ -124,7 +132,7 @@ HubSpot campaigns track marketing activities and their impact:
 1. **Campaign Creation** - Create or link to a HubSpot marketing campaign
 2. **Timeline Activities** - Engagement logged on contact timelines
 3. **Attribution Tracking** - Revenue credit flows through HubSpot reporting
-4. **Unified Analytics** - View Abmatic performance alongside other channels
+4. **Unified Analytics** - View Abmatic AI performance alongside other channels
 
 ### Synced Properties
 
@@ -138,11 +146,11 @@ HubSpot campaigns track marketing activities and their impact:
 
 ### Activity Tracking
 
-HubSpot contact timelines show Abmatic activities:
+HubSpot contact timelines show Abmatic AI activities:
 
 - **Page Personalization Events** - When a contact sees personalized content
 - **Website Visits** - Pages viewed during the campaign
-- **Form Submissions** - Conversions tracked by Abmatic
+- **Form Submissions** - Conversions tracked by Abmatic AI
 - **Conversion Events** - Goal completions and key actions
 
 ## Campaign Member Management
@@ -158,13 +166,17 @@ Contacts are automatically added to CRM campaigns based on:
 | **Website Visits** | Visited a page personalized by the campaign |
 | **Engagement** | Interacted with campaign content |
 
+From the Campaigns list you can filter to **Salesforce Campaigns** to see only your synced campaigns and their members' progress.
+
+![Campaigns list with the Salesforce Campaigns summary card, used to filter to CRM-synced campaigns](/img/screenshots/crm-camp-members.png)
+
 ### Manual Additions
 
 For targeted outreach, add specific contacts manually:
 
 1. Open your campaign
-2. Navigate to **Members**
-3. Click **Add Members**
+2. Find its **Members**
+3. Use **Add Members**
 4. Search for contacts or upload a list
 5. Assign the appropriate member status
 
@@ -207,7 +219,7 @@ Measure return on your campaign investment:
 ROI = (Revenue Attributed - Campaign Cost) / Campaign Cost × 100
 ```
 
-Access this data in both Abmatic analytics and your CRM's native reporting.
+Access this data in both Abmatic AI analytics and your CRM's native reporting.
 
 ## Best Practices
 
@@ -239,9 +251,9 @@ Use a consistent format for easy filtering and reporting:
 ```
 
 Examples:
-- `2024-Q1-ABM-Enterprise-Tech`
-- `2024-Q2-Nurture-Mid-Market`
-- `2024-Q3-Event-Dreamforce`
+- `2026-Q1-ABM-Enterprise-Tech`
+- `2026-Q2-Nurture-Mid-Market`
+- `2026-Q3-Event-Dreamforce`
 
 ### Status Progression
 
@@ -273,7 +285,7 @@ Measure account-based marketing effectiveness:
 
 Coordinate post-event outreach seamlessly:
 
-1. Import event attendees to Abmatic
+1. Import event attendees to Abmatic AI
 2. Create a personalized follow-up campaign
 3. Sync to your CRM campaign
 4. Personalize website for attendees

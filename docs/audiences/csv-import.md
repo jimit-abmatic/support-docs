@@ -7,68 +7,69 @@ sidebar_position: 5
 
 # CSV Import
 
-**Import your existing account and contact lists in minutes, not hours.** Upload any spreadsheet, map your columns to Abmatic fields, and watch your data automatically enrich with company intelligence, engagement scores, and CRM links.
+Import your existing account and contact lists in minutes. Upload a spreadsheet, let Abmatic AI map your columns automatically, and your data enriches in the background with company intelligence and engagement scores.
 
-![Account Collections showing CSV imports](/img/screenshots/accounts-list.png)
+![The Accounts page create dialog with the Upload from CSV option](/img/screenshots/csv-upload.png)
 
 ## Why CSV Import Accelerates Your ABM
 
-| Without CSV Import | With Abmatic CSV Import |
+| Without CSV Import | With Abmatic AI CSV Import |
 |-------------------|------------------------|
-| Manual data entry for each account | Bulk import 10,000 records at once |
-| No enrichment or verification | Auto-enrichment with 50+ data points |
-| Separate lists across tools | Unified view with all your audiences |
-| Hours of data preparation | Minutes from upload to activation |
+| Manual data entry per account | Bulk import up to 10,000 records at once |
+| No enrichment | Auto-enrichment after upload |
+| Separate lists across tools | One unified view of your audiences |
+| Hours of data prep | Minutes from upload to activation |
 
 ## How It Works
 
 ```
-Upload CSV → Map Columns → Handle Duplicates → Auto-Enrich → Ready to Target
-     ↓            ↓              ↓                 ↓              ↓
-   5 secs      2 mins        Set & forget     Background      Campaigns
+Upload CSV → Map Columns (AI-assisted) → Handle Duplicates → Auto-Enrich → Ready to Target
 ```
 
 ## Getting Started
 
 ### Step 1: Prepare Your File
 
-| Requirement | Specification | Why It Matters |
-|-------------|---------------|----------------|
-| Format | .csv (comma-separated) | Universal spreadsheet format |
-| Encoding | UTF-8 | Ensures special characters display correctly |
-| Max Rows | 10,000 per import | Optimal for fast processing |
-| Max Columns | 200 | Room for all your custom fields |
-| Headers | Required in first row | Enables automatic field mapping |
+| Requirement | Specification |
+|-------------|---------------|
+| Format | `.csv` (comma-separated) |
+| Encoding | UTF-8 |
+| Max file size | **100 MB** |
+| Max records | **10,000 per import** |
+| Headers | Required in the first row |
 
 ### Step 2: Navigate to Upload
 
-1. Go to **Audiences → Accounts** (or **Contacts**)
-2. Click the **+ Account List** (or **+ Contact List**) button
-3. Select **Upload from CSV**
-
-![Create account list modal with CSV option](/img/screenshots/account-create-modal.png)
+1. Go to **Accounts** (or **Contacts**).
+2. Click **+ Account List** (or **+ Contact List**).
+3. Select **Upload from CSV**.
 
 ### Step 3: Upload and Map
 
-1. Select your CSV file
-2. Review the auto-detected column mappings
-3. Adjust any mappings that need correction
-4. Name your new collection
-5. Choose duplicate handling
-6. Click **Create Mapping**
+After you choose your file, Abmatic AI takes you to the **Map Fields** screen, where it has already **auto-mapped your columns using AI**.
+
+![The Map Fields screen showing Your Field Name mapped to Abmatic Field Name, with duplicate-handling options](/img/screenshots/csv-column-map.png)
+
+1. Review the suggested mappings — your CSV column (**Your Field Name**) on the left, the **Abmatic Field Name** on the right.
+2. Adjust any mapping that needs correcting (or leave a column unmapped).
+3. Name your new collection in the **Name** field.
+4. Choose how to handle duplicates (see below).
+5. Click **CREATE MAPPING** to start the import.
+
+:::tip AI column mapping
+You don't have to map columns by hand. Abmatic AI reads your headers and sample rows and proposes the best match for each field — you just confirm or tweak.
+:::
 
 ## Required Fields
-
-To successfully import records, your CSV must include:
 
 ### For Accounts
 
 | Required Field | Accepts | Example |
 |---------------|---------|---------|
-| Website/Domain | `website` or `domain` column | `acme.com`, `https://www.techco.io` |
+| Website / Domain | `website` or `domain` column | `acme.com`, `https://www.techco.io` |
 
 :::tip Domain Cleaning
-Abmatic automatically normalizes domains. `https://www.EXAMPLE.com/page` becomes `example.com`.
+Abmatic AI normalizes domains automatically. `https://www.EXAMPLE.com/page` becomes `example.com`.
 :::
 
 ### For Contacts
@@ -82,181 +83,111 @@ Abmatic automatically normalizes domains. `https://www.EXAMPLE.com/page` becomes
 
 ### Account Fields
 
-| Your CSV Column | Maps To | What Gets Enriched |
-|----------------|---------|-------------------|
-| `domain`, `website` | Website | Full company profile |
-| `company`, `name` | Company Name | Logo, description |
-| `industry` | Industry | Industry classification |
-| `employees`, `employee_count` | Employee Count | Company size tier |
-| `revenue` | Inferred Revenue | Revenue range |
-| `city` | Location City | Full address data |
-| `country` | Location Country | Region, timezone |
+| Your CSV Column | Maps To |
+|----------------|---------|
+| `domain`, `website` | Domain |
+| `company`, `name` | Display Name |
+| `industry` | Industry / Summary |
+| `employees`, `employee_count` | Employee Count |
+| `revenue` | Inferred Revenue |
+| `city` | Location City |
+| `country` | Location Country |
+| `linkedin`, `linkedin_url` | LinkedIn URL |
 
 ### Contact Fields
 
-| Your CSV Column | Maps To | What Gets Enriched |
-|----------------|---------|-------------------|
-| `email`, `work_email` | Work Email | Email verification |
-| `first`, `first_name` | First Name | Full name formatting |
-| `last`, `last_name` | Last Name | — |
-| `title`, `job_title` | Job Title | Seniority level |
-| `company` | Company Name | Account linking |
-| `linkedin`, `linkedin_url` | LinkedIn URL | Professional profile |
-| `phone` | Phone | Phone formatting |
+| Your CSV Column | Maps To |
+|----------------|---------|
+| `email`, `work_email` | Work Email |
+| `first`, `first_name` | First Name |
+| `last`, `last_name` | Last Name |
+| `title`, `job_title` | Job Title |
+| `company` | Company Name |
+| `linkedin`, `linkedin_url` | LinkedIn URL |
+| `phone` | Phone |
 
 ### Custom Fields
 
-Map to custom fields for data unique to your business:
+Map columns to custom fields for data unique to your business:
 
 | Custom Field | Use For |
 |-------------|---------|
 | `field_01` through `field_30` | Any custom data |
 
 :::note
-Define custom field names in **Settings → Custom Fields** before importing.
+Define custom field names in **[Settings → Custom Fields](/settings/custom-fields)** before importing.
 :::
 
 ## Duplicate Handling
 
-Choose how imported records interact with existing data:
+On the Map Fields screen, choose how imported records interact with existing data. These are the three options shown:
 
 | Option | What Happens | Best For |
 |--------|--------------|----------|
-| **Skip** | Keep existing records unchanged | Preserving manual updates |
-| **Overwrite All** | Replace all fields with CSV values | Complete data refresh |
-| **Overwrite Missing** | Only fill in empty fields | Enrichment imports |
+| **Skip and keep existing fields** | Leave existing records unchanged | Preserving manual updates |
+| **Overwrite existing fields** | Replace fields with the CSV values | A complete data refresh |
+| **Update only missing fields** | Only fill in empty fields | Enrichment imports |
 
 ### Recommendations
 
-- **First import?** Use **Overwrite All** to establish your baseline
-- **Updating records?** Use **Overwrite Missing** to add new data without losing existing work
-- **Preserving edits?** Use **Skip** to protect manual corrections
+- **First import?** Use **Overwrite existing fields** to set your baseline.
+- **Updating records?** Use **Update only missing fields** to add data without losing existing work.
+- **Protecting edits?** Use **Skip and keep existing fields**.
 
 ## What Happens After Upload
 
-### Automatic Processing
-
-1. **Validation** — File format and size verified
-2. **Mapping** — Your columns matched to Abmatic fields
-3. **Cleaning** — Domains normalized, emails validated
-4. **Deduplication** — Handled per your settings
-5. **Storage** — Records saved to your collection
-6. **Enrichment** — Company and contact data enriched automatically
-7. **Notification** — Email sent when complete
+1. **Validation** — format and size checked
+2. **Mapping** — your columns matched to Abmatic AI fields
+3. **Cleaning** — domains normalized, emails validated
+4. **Deduplication** — handled per your setting
+5. **Storage** — records saved to your collection
+6. **Enrichment** — company and contact data enriched in the background
+7. **Notification** — an email is sent when the import completes
 
 ### Processing Status
 
 | Status | Meaning |
 |--------|---------|
-| **IN_QUEUE** | Waiting to process |
-| **PROCESSING** | Import in progress |
-| **DONE** | Complete and ready to use |
-| **ERROR** | Issue found—check the error message |
+| **In Queue** | Waiting to process |
+| **Processing** | Import in progress |
+| **Done** | Complete and ready to use |
+| **Error** | Issue found — check the message |
 
-### Processing Time
-
-| Import Size | Typical Time |
-|-------------|--------------|
-| Under 100 records | Seconds |
-| 100-500 records | 1-2 minutes |
-| 500-5,000 records | 2-10 minutes |
-| 5,000-10,000 records | 10-20 minutes |
-
-## Auto-Enrichment
-
-After import, Abmatic automatically enriches your records with additional intelligence:
-
-### Account Enrichment
-
-| Data Added | Source |
-|------------|--------|
-| Company description | Web scraping |
-| Employee count | Public data |
-| Industry classification | ML classification |
-| Technologies used | Technographics |
-| Social profiles | LinkedIn, Twitter |
-| Funding information | Public records |
-
-### Contact Enrichment
-
-| Data Added | Source |
-|------------|--------|
-| Full name formatting | Data normalization |
-| Job title standardization | ML classification |
-| Seniority level | Title analysis |
-| Company linking | Domain matching |
-| LinkedIn profile | Email/name matching |
-
-:::info Enrichment Timing
-Enrichment runs in the background and may take several hours for large imports. Records are immediately available for targeting—enrichment adds data as it completes.
+:::info Enrichment timing
+Records are available for targeting as soon as the import finishes. Enrichment continues in the background and may take longer for large imports.
 :::
 
 ## CRM Auto-Push
 
-Automatically push imported records to your connected CRM:
-
-### Enabling Auto-Push
-
-1. Go to **Integrations → [Your CRM]**
-2. Enable **Auto-push new records**
-3. Configure field mappings
-
-### Push Workflow
-
-```
-CSV Import Complete → Check Sync Settings → Push to CRM → Store CRM IDs
-```
-
-This creates a two-way sync: your imported records appear in your CRM, and CRM IDs are stored back in Abmatic for future syncing.
+If a CRM is connected, you can automatically push imported records to it. Enable auto-push in **Integrations → [Your CRM]** sync settings. See [CRM Sync](/audiences/crm-sync).
 
 ## Example CSV Files
 
-### Account Import Example
+### Account Import
 
 ```csv
 website,name,industry,employee_count,country
 acme.com,Acme Inc,Software,500,United States
 techco.io,TechCo,Technology,150,Canada
 enterprise.com,Enterprise Corp,Financial Services,5000,United Kingdom
-startup.ai,Startup AI,Artificial Intelligence,50,Germany
 ```
 
-### Contact Import Example
+### Contact Import
 
 ```csv
-work_email,first_name,last_name,job_title,job_company_name,linkedin_url
+work_email,first_name,last_name,job_title,company,linkedin_url
 john@acme.com,John,Smith,VP Marketing,Acme Inc,linkedin.com/in/johnsmith
 jane@techco.io,Jane,Doe,Director of Sales,TechCo,linkedin.com/in/janedoe
-bob@enterprise.com,Bob,Johnson,CEO,Enterprise Corp,linkedin.com/in/bobjohnson
 ```
 
 ## Best Practices
 
-### Do's
-
-| Practice | Why It Works |
-|----------|--------------|
-| Clean data before upload | Fewer errors, faster processing |
-| Test with 10 rows first | Verify mapping before full import |
-| Use clear column names | Better auto-mapping accuracy |
-| Include primary keys | Every row needs website or email |
-| Keep under 10,000 rows | Split large files for reliability |
-
-### Don'ts
-
-| Avoid | Why |
-|-------|-----|
-| Including duplicates | Creates unnecessary deduplication work |
-| Empty primary key rows | These rows get skipped |
-| Special characters in headers | Can cause mapping issues |
-| Files over 10,000 rows | Split into multiple imports |
-
-### Column Naming Tips
-
-```
-✅ Good: website, email, first_name, company, industry
-❌ Bad: col1, col2, data, field, misc
-```
+| Do | Don't |
+|----|-------|
+| Clean data before upload | Include duplicates |
+| Test with a small file first | Leave primary-key (website/email) cells empty |
+| Use clear column names | Use special characters in headers |
+| Keep imports under 10,000 rows | Exceed the 100 MB / 10,000-record limits |
 
 ## Troubleshooting
 
@@ -264,40 +195,27 @@ bob@enterprise.com,Bob,Johnson,CEO,Enterprise Corp,linkedin.com/in/bobjohnson
 
 | Problem | Cause | Solution |
 |---------|-------|----------|
-| Import fails | Wrong file format | Ensure file is .csv (not .xlsx) |
-| Encoding errors | Non-UTF-8 encoding | Re-save as UTF-8 in Excel/Sheets |
-| "File too large" | Over 10,000 rows | Split file into smaller chunks |
-| Missing required field | No website/email column | Add the required primary key column |
+| Import fails | Wrong file format | Use `.csv`, not `.xlsx` |
+| Encoding errors | Non-UTF-8 file | Re-save as UTF-8 |
+| "File too large" | Over 100 MB or 10,000 rows | Split into smaller files |
+| Missing required field | No website/email column | Add the required primary key |
 
 ### Data Issues
 
 | Problem | Cause | Solution |
 |---------|-------|----------|
-| Missing data after import | Column not mapped | Check mapping screen for unmapped columns |
+| Missing data after import | Column not mapped | Check the Map Fields screen |
 | Wrong data in fields | Incorrect mapping | Re-import with corrected mappings |
-| Duplicates created | Wrong duplicate handling | Re-import with "Overwrite All" option |
+| Duplicates created | Wrong duplicate setting | Re-import with "Overwrite existing fields" |
 
-### Enrichment Issues
+## Importing Contacts
 
-| Problem | Cause | Solution |
-|---------|-------|----------|
-| No enrichment data | Still processing | Wait 1-2 hours for background enrichment |
-| Missing company info | Invalid domain | Verify domain is correct and accessible |
-| No LinkedIn match | Insufficient data | Provide more contact details for matching |
-
-## Importing for Contacts
-
-The process for contacts is identical—just navigate to **Audiences → Contacts** instead:
-
-![Create contact list modal with CSV option](/img/screenshots/contact-create-modal.png)
+The process for contacts is identical — start from **Contacts** instead of Accounts, then **+ Contact List → Upload from CSV**. The only difference is the required field: contacts need a **Work Email** or **LinkedIn URL**.
 
 ## Next Steps
 
-After importing your lists:
-
-| Next Action | Where | What You'll Achieve |
-|-------------|-------|---------------------|
-| [Create a Campaign](/campaigns/overview) | Campaigns | Target your imported accounts with personalization |
-| [Set Up CRM Sync](/audiences/crm-sync) | Integrations | Keep your CRM in sync automatically |
-| [Build Dynamic Lists](/audiences/target-groups) | Audiences | Create auto-updating segments from your imports |
-| [Push to Ad Platforms](/audiences/linkedin-dmp) | Audiences | Target your accounts on LinkedIn and Google |
+| Next Action | Where | Goal |
+|-------------|-------|------|
+| [Create a Campaign](/campaigns/overview) | Campaigns | Target your imported accounts |
+| [Set Up CRM Sync](/audiences/crm-sync) | Integrations | Keep your CRM in sync |
+| [Build Dynamic Lists](/audiences/target-groups) | Audiences | Auto-updating segments |

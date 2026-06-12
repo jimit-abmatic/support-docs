@@ -2,7 +2,7 @@
 id: intent
 title: Intent Campaigns
 sidebar_label: Intent
-sidebar_position: 7
+sidebar_position: 12
 ---
 
 # Intent Campaigns
@@ -13,7 +13,7 @@ sidebar_position: 7
 
 Most B2B teams waste time chasing cold accounts while hot prospects slip away unnoticed. Intent scoring fixes that by surfacing the accounts actively researching solutions like yours.
 
-| Without Intent Scoring | With Abmatic Intent Scoring |
+| Without Intent Scoring | With Abmatic AI Intent Scoring |
 |------------------------|----------------------------|
 | Sales works every lead equally | Sales focuses on accounts showing buying behavior |
 | No way to know who is "in-market" | Clear scoring reveals which accounts are actively evaluating |
@@ -21,13 +21,13 @@ Most B2B teams waste time chasing cold accounts while hot prospects slip away un
 | Outreach feels random | Outreach is timed to buying windows |
 | Pipeline feels unpredictable | Pipeline builds on real demand signals |
 
-**Teams using Abmatic Intent campaigns close deals faster** because they engage accounts at the moment of highest interest -- not weeks later.
+Intent campaigns help your team engage accounts at the moment of highest interest, instead of weeks later.
 
 ---
 
-## How Abmatic Intent Works
+## How Abmatic AI Intent Works
 
-Abmatic offers two types of intent campaigns that work together to give you the most complete picture of buying activity:
+Abmatic AI offers two types of intent campaigns that work together to give you the most complete picture of buying activity:
 
 | Intent Type | What It Tracks | Best For |
 |-------------|----------------|----------|
@@ -36,7 +36,7 @@ Abmatic offers two types of intent campaigns that work together to give you the 
 
 ### Multi-Channel Signal Collection
 
-What makes Abmatic's approach uniquely powerful is that it does not just track one channel. It aggregates intent signals from every touchpoint where accounts interact with your brand:
+What makes Abmatic AI's approach uniquely powerful is that it does not just track one channel. It aggregates intent signals from every touchpoint where accounts interact with your brand:
 
 | Channel | Signals Tracked | Why It Matters |
 |---------|----------------|----------------|
@@ -46,7 +46,7 @@ What makes Abmatic's approach uniquely powerful is that it does not just track o
 | **Email Activity** | Opens, clicks, replies | Email engagement shows active interest in your outreach |
 | **Outreach Mailings** | Open count, click count, reply status | Sales touchpoint engagement reveals warm accounts |
 
-Each channel contributes its own engagement score, and Abmatic combines them into a unified intent picture for every account.
+Each channel contributes its own engagement score, and Abmatic AI combines them into a unified intent picture for every account.
 
 ---
 
@@ -96,7 +96,7 @@ Third-Party Intent campaigns track whether your target accounts are researching 
 
 1. You define the **keywords and topics** relevant to your solution (e.g., "account-based marketing," "website personalization," "B2B intent data")
 2. You assign a **weight** (0-100) to each keyword based on its relevance to buying intent
-3. Abmatic monitors research activity and calculates an **intent score** for each account
+3. Abmatic AI monitors research activity and calculates an **intent score** for each account
 4. Accounts are ranked and tagged with a **trend indicator** showing whether intent is increasing or decreasing
 
 ### Third-Party Intent Signals
@@ -128,13 +128,17 @@ Each account gets a trend label based on how its intent is changing over time:
 ### Step 1: Create the Campaign
 
 1. Navigate to **Campaigns** in the left sidebar
-2. Click **+ CAMPAIGN**
-3. Under **Advanced**, select **Intent**
-4. Choose your intent type:
+2. Click **+ Campaign**
+3. Under the **Agentic** category, select **Intent**
+4. On the **Select Intent Type** step, choose:
    - **First Party** -- Track intent from your own website visitors
    - **Third Party** -- Track intent from third-party data sources
 
-![Campaign creation wizard showing Intent option under Advanced](/img/screenshots/campaign-create-wizard.png)
+![Campaign create dialog showing the Intent option under the Agentic category](/img/screenshots/campaign-create-wizard.png)
+
+:::note First Party vs Third Party
+**First Party** scores accounts using behavioral signals you already collect on your own website (page views, time on page, form fills, and more). **Third Party** tracks whether accounts are researching topics and keywords you define across the web, even when they are not on your site. You can run both side by side.
+:::
 
 ### Step 2: Configure Your Intent Campaign
 
@@ -151,22 +155,26 @@ Each account gets a trend label based on how its intent is changing over time:
 - Set **Scroll Depth** higher if your pages contain important conversion content below the fold
 - Set any action to **0** to exclude it from scoring entirely
 
-![First-party intent scoring weights configuration](/img/screenshots/intent-scoring-weights.png)
+![First-party intent scoring weights: each action (Demo Page Visit, Form Fill, Home Page Visit, and more) has a slider and a 0-100 weight field, with a Save button](/img/screenshots/intent-fp-weights.png)
 
 #### For Third-Party Intent
 
-1. Give your campaign a descriptive name (e.g., "Third Party - ABM Keywords")
-2. Click **Add Keyword** to add topics and keywords to track
-3. Enter each keyword and set its weight (0-100)
-4. Click **Save & Show Insights** to see results
+The Third-Party builder is a keyword table with two columns — **Keyword** and **Weightage** — plus an **Add Keyword** button and a **Save & Show Insights** button at the top right.
+
+1. Give your campaign a descriptive name (the **Name** field is at the top).
+2. Click **+ Add Keyword** to add a row.
+3. Type the topic or keyword in the **Keyword** field (for example "account-based marketing").
+4. Set its **Weightage** (0-100) using the slider or the **Weight (0-100)** field next to it. Each row also has a trash icon to remove the keyword.
+5. Repeat for each keyword you want to track.
+6. Click **Save & Show Insights** to save the keywords and open the Insights view.
+
+![Third-party intent keyword configuration: a table with Keyword and Weightage columns, an Enter keyword field, a 0-100 weight slider and field, plus Add Keyword and Save & Show Insights buttons](/img/screenshots/intent-tp-keywords.png)
 
 **Keyword strategy tips:**
 - Start with your core product category (e.g., "website personalization")
 - Add competitor brand names (e.g., "Demandbase alternative")
 - Include pain-point keywords (e.g., "increase B2B conversion rates")
 - Weight branded/competitor keywords higher -- they signal stronger purchase intent
-
-<!-- Screenshot: Third-party intent keyword configuration will be added when the feature UI is captured -->
 
 ### Step 3: Review Intent Insights
 
@@ -183,7 +191,7 @@ Once your campaign is active, the Insights tab shows scored accounts ranked by i
 
 ### The Engagement History Timeline
 
-Every account in Abmatic has an engagement history that shows a timeline of all interactions across channels. Each entry includes:
+Every account in Abmatic AI has an engagement history that shows a timeline of all interactions across channels. Each entry includes:
 
 | Data Point | What You See |
 |------------|-------------|
@@ -348,7 +356,7 @@ Intent data does not live in isolation -- it powers your entire go-to-market mot
 | Issue | Cause | Solution |
 |-------|-------|----------|
 | Known hot account has low score | They use VPN or work remotely | Combine with Contact Reveal and CRM data |
-| Unknown accounts score high | Bot traffic inflating scores | Abmatic auto-filters most bots; check for crawlers |
+| Unknown accounts score high | Bot traffic inflating scores | Abmatic AI auto-filters most bots; check for crawlers |
 | Scores change unexpectedly | Weight configuration changed | Review your campaign's weight settings |
 
 ### Not Seeing Expected Accounts

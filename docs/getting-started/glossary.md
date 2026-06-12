@@ -13,6 +13,10 @@ Master the language of account-based marketing. This glossary covers key terms y
 Use your browser's search (Ctrl/Cmd + F) to find specific terms instantly.
 :::
 
+:::note Navigation has changed
+Abmatic AI uses a left **icon sidebar** (collapsed, hover to expand). Top to bottom: **AI Agent**, **Home**, **Accounts**, **Contacts**, **Campaigns**, **Conversions**, **Visitor Reveal**, **Analytics**, with **Installation** pinned at the bottom. Some items (**Goals**, **Oracle Inbox**) only appear when those features are enabled for your account. The "Find it" hints below use these names.
+:::
+
 ---
 
 ## A
@@ -20,45 +24,57 @@ Use your browser's search (Ctrl/Cmd + F) to find specific terms instantly.
 ### ABM (Account-Based Marketing)
 A B2B marketing strategy that focuses resources on specific high-value target accounts rather than casting a wide net. Instead of generating leads and hoping some become customers, ABM identifies ideal companies first and markets directly to decision-makers.
 
-**Why it matters:** Companies using ABM see 208% higher revenue from marketing efforts (ITSMA).
-
-**In Abmatic:** The entire platform is built for ABM—from visitor identification to personalization to attribution.
+**In Abmatic AI:** The entire platform is built for ABM—from visitor identification to personalization to attribution.
 
 ---
 
 ### Account
 A company or organization you're targeting or tracking. Each account can have multiple contacts (people) associated with it.
 
-**Find it:** Reveal > Accounts, or Audiences > Accounts
-
----
-
-### Account List / Target Group
-A saved collection of accounts for campaign targeting. Create lists manually, import from CSV, sync from your CRM, or build dynamically with filters.
-
-**Find it:** Audiences > Target Groups
+**Find it:** Accounts in the sidebar, or Visitor Reveal > Accounts
 
 ---
 
 ### AI Agent
-An AI-powered assistant that automates marketing and sales tasks:
+A page-level AI persona that helps run marketing and sales work. There are two:
 
 | Agent | Purpose | Best For |
 |-------|---------|----------|
-| **Alex (AI SDR)** | Automated prospecting and outreach | Sales teams needing research and email sequences |
 | **Clara (AI ABM)** | Campaign execution and personalization | Marketers optimizing campaign performance |
+| **Alex (AI SDR)** | Prospecting and outreach | Sales teams needing research and email drafts |
 
-**Find it:** AI Agents in the sidebar
+**Find it:** AI Agent at the top of the sidebar (Clara is the default; switch to Alex inside the agent).
+
+:::note Not the same as Co-Pilot
+The AI Agent personas (Clara and Alex) are separate from the in-app **Co-Pilot** assistants. Don't confuse either with a website chat widget.
+:::
+
+---
+
+### Agentic
+The create-campaign category for autonomous and conversational campaign types. It includes **Agentic Flow**, **Sequence**, **Intent**, and **Agentic Chat**. (This category was previously called "Advanced".)
 
 ---
 
 ### Agentic Chat
-AI-powered website chat that answers visitor questions using your company and product knowledge. Engages prospects 24/7 without human intervention.
+An AI website chat widget that answers visitor questions using your company and product knowledge, 24/7. It includes:
+
+- An **Instructions** tab to set what the agent knows and how it talks.
+- **Email handoff modes**: book a meeting, send a thank-you, or show a HubSpot form.
+- An **AI Conversation Summary** view (Topic / Sentiment / Converted, with a "Show visitors" link).
+- **Demo Booked** tracking and a voice mode.
+
+**Find it:** Campaigns > + CAMPAIGN > Agentic > Agentic Chat
+
+---
+
+### Agentic Chat Handoff Mode
+What the chat agent does once a visitor shares their email. Options: **book a meeting**, **send a thank-you**, or **show a HubSpot form**.
 
 ---
 
 ### Agentic Sequence
-AI-generated email sequences for prospect outreach, personalized based on visitor attributes and behavior signals.
+AI-generated outreach sequences for prospects, personalized from visitor attributes and behavior signals.
 
 ---
 
@@ -96,24 +112,38 @@ Total cost to acquire a customer, including marketing and sales expenses.
 ---
 
 ### Campaign
-A coordinated marketing effort in Abmatic:
+A coordinated marketing effort in Abmatic AI. When you click **+ CAMPAIGN**, the create dialog groups types into three columns:
 
-| Campaign Type | Channel | Use Case |
-|---------------|---------|----------|
-| **Website Personalization** | Your website | Tailor content to visitor segments |
-| **AI Sequences** | Email + Multi-channel | AI-personalized outreach sequences across email, LinkedIn, and calls |
-| **LinkedIn Ads** | LinkedIn | Target decision-makers by account |
-| **Google Ads** | Google Search/Display | Retarget and expand reach |
-| **CRM Campaigns** | Your CRM | Sync data and trigger workflows |
+| Column | Types |
+|--------|-------|
+| **Personalization** | Inbound, Outbound, A/B, **Widget** |
+| **Advertising** | Display, LinkedIn, **OpenAI Ads**, Retargeting |
+| **Agentic** | Agentic Flow, Sequence, Intent, Agentic Chat |
 
-**Find it:** Campaigns in the sidebar
+**Find it:** Campaigns in the sidebar > **+ CAMPAIGN**
+
+:::note
+Meta/Facebook ads show as "Coming Soon" and are not currently available. The **Agentic** column was previously called "Advanced".
+:::
+
+---
+
+### Collection
+A saved group of accounts (and/or contacts) used for campaign targeting. Build one manually, import from CSV, sync from your CRM, or define it with filters so it updates automatically (a dynamic Collection). Collections were previously called "Account Lists" or "Target Groups".
+
+**Find it:** Accounts in the sidebar (the Home overview also has a **Collections** card and a "Recently Viewed Collections" list).
 
 ---
 
 ### Contact
 An individual person at a target account. Contacts have attributes like name, email, job title, and company.
 
-**Find it:** Reveal > Contacts
+**Find it:** Contacts in the sidebar, or Visitor Reveal > Contacts
+
+---
+
+### Co-Pilot
+A separate roster of in-app AI assistants that help you work inside specific areas of Abmatic AI. The Co-Pilot roster is distinct from the page-level **AI Agent** personas (Clara and Alex).
 
 ---
 
@@ -140,21 +170,21 @@ A desired action taken by a visitor—form submission, demo request, purchase, o
 ---
 
 ### CRM (Customer Relationship Management)
-Software for managing customer and prospect data. Abmatic integrates with:
-- Salesforce
-- HubSpot
-- Pipedrive
-- ActiveCampaign
-- Outreach
+Software for managing customer and prospect data. Abmatic AI integrates with **Salesforce** and **HubSpot** for two-way sync of accounts, contacts, and conversions. Check the Integrations area in **Settings** for the current list of supported connectors.
 
 ---
 
 ## D
 
 ### Dashboard
-A visual display of key metrics and KPIs. Create custom dashboards with drag-and-drop widgets to monitor what matters most.
+A visual display of key metrics and KPIs. Create custom dashboards with drag-and-drop widgets to monitor what matters most. The **Dashboard** tab also appears on the **Home** page next to **Overview**.
 
-**Find it:** Analytics > Dashboards
+**Find it:** Analytics > Dashboards (or Home > Dashboard)
+
+---
+
+### Demo Booked
+A signal that a visitor scheduled a demo or meeting—often directly through **Agentic Chat**. Demos booked are tracked across the product. **Analytics** reports include **Demo Booked**, **Demo Booked At**, **Demo Scheduled At**, **Demo AE**, and **Demo Time** columns so you can connect chat conversations to scheduled meetings.
 
 ---
 
@@ -171,7 +201,7 @@ Website content that changes based on who's viewing it. Show different headlines
 ---
 
 ### Dynamic Collection
-An audience that automatically updates based on filter criteria. New visitors matching the criteria are added automatically—no manual list management required.
+A **Collection** that updates automatically based on filter criteria. New accounts matching the criteria are added without any manual list management.
 
 ---
 
@@ -199,7 +229,7 @@ Adding data to your records automatically:
 ### Field Mapping
 Configuration that connects Abmatic fields to your CRM fields. Ensures data syncs correctly between systems.
 
-**Find it:** Integrations > [CRM] > Field Mapping
+**Find it:** Settings > Integrations > [CRM] > Field Mapping
 
 ---
 
@@ -258,9 +288,7 @@ Signals indicating a company is actively researching solutions like yours:
 ---
 
 ### IP Identification
-Matching a website visitor's IP address to a company. This is how Abmatic identifies which businesses visit your site.
-
-**Identification rate:** 40-80% depending on traffic type (office IPs identify better than remote workers)
+Matching a website visitor's IP address to a company. This is one of the ways Abmatic AI identifies which businesses visit your site. Office traffic identifies more reliably than remote or mobile traffic.
 
 ---
 
@@ -279,9 +307,7 @@ The improvement in performance from personalization compared to the control grou
 ---
 
 ### LinkedIn DMP
-LinkedIn's Data Management Platform for advertising. Push account lists from Abmatic to LinkedIn DMP for matched audience targeting.
-
-**Typical match rate:** 60-80%
+LinkedIn's Data Management Platform for advertising. Push account lists (Collections) from Abmatic AI to LinkedIn for matched audience targeting.
 
 ---
 
@@ -302,6 +328,26 @@ A lead that meets marketing's criteria and is ready to pass to sales. Criteria v
 ---
 
 ## O
+
+### OpenAI Ads
+An advertising channel and integration available when creating a campaign. Choose it from the **Advertising** column of the **+ CAMPAIGN** dialog to run ads through OpenAI's ad inventory alongside your other channels.
+
+---
+
+### Oracle
+Abmatic AI's autonomous-agent product. Oracle can pursue goals and take actions on your behalf, with you approving the high-impact ones. It has three parts:
+
+| Part | What It Does | Find It |
+|------|--------------|---------|
+| **Oracle Goals** | Set goals (e.g. demos booked) and track weekly checkpoints | `/oracle/goals` (Goals in the sidebar) |
+| **Oracle Approvals / Inbox** | Review and approve or deny high-impact proposed actions | `/oracle/inbox` (Oracle Inbox in the sidebar) |
+| **Trust Tiers** | How much the agent can do on its own | See Trust Tiers |
+
+:::info Oracle is feature-gated
+Oracle is enabled per account, so the **Goals** and **Oracle Inbox** sidebar items may not appear for you. If you see a "not enabled for your account" message, that's expected. To request access, contact your Abmatic AI representative or email [support@abmatic.ai](mailto:support@abmatic.ai).
+:::
+
+---
 
 ### Overwrite Mode
 A sync setting where Abmatic always updates fields with its data, even if the CRM field has a value.
@@ -340,6 +386,9 @@ A placeholder replaced with visitor-specific data at runtime.
 | `{{mt_company}}` | Visitor's company name |
 | `{{mt_industry}}` | Visitor's industry |
 | `{{mt_city}}` | Visitor's city |
+| `{{mt_employee_count}}` | Visitor's company size (employee count) |
+
+Type `{{` in the page editor to see the full list of available variables.
 
 ---
 
@@ -356,9 +405,7 @@ Making personalization changes live on your website. Until published, changes re
 ## R
 
 ### Rate Limit
-A restriction on API requests per time period. Abmatic enforces rate limits to ensure system stability.
-
-**Default limits:** 100 requests/minute for most endpoints
+A restriction on API requests per time period. Abmatic AI enforces rate limits to keep the system stable. For the current per-endpoint limits and your plan's quota, see your **API Keys** page in **Settings** or the API reference—limits can vary by endpoint and plan.
 
 ---
 
@@ -369,15 +416,25 @@ A saved query of your Abmatic data for analysis. Include metrics, dimensions, fi
 
 ---
 
-### Reveal
-Abmatic's visitor identification feature:
+### Reveal Confidence
+How confident Abmatic AI is that a revealed company or contact is correct, shown as a bucket: **Very High**, **High**, **Medium**, **Low**, or **Very Low**. Use it to prioritize the visitors most worth acting on. Reveal Confidence is also available as an **Analytics** column.
 
-| Feature | What It Shows | Requirements |
-|---------|---------------|--------------|
-| **Company Reveal** | Which businesses visit your site | Tracking script installed |
-| **Contact Reveal** | Specific people (name, email, title) | Contact Reveal credits |
+---
 
-**Find it:** Reveal in the sidebar
+### Reveal Source
+Where a revealed match came from. In Abmatic AI the source is shown as **"Abmatic"** with an internal confidence level (1–4). You don't need to manage data providers yourself.
+
+---
+
+### Visitor Reveal
+Abmatic AI's visitor identification feature (formerly "Company Reveal"):
+
+| View | What It Shows | Requirements |
+|------|---------------|--------------|
+| **Accounts** | Which businesses visit your site | Tracking script installed |
+| **Contacts** | Specific people (name, email, title) | Contact Reveal credits |
+
+**Find it:** Visitor Reveal in the sidebar (`/reveal/accounts`, `/reveal/contacts`). Each revealed record shows a **Reveal Confidence** bucket and a **Reveal Source**.
 
 ---
 
@@ -417,7 +474,7 @@ A high-priority company you've identified as a prospect. Target accounts match y
 ---
 
 ### Target Group
-A collection of accounts and/or contacts bundled together for campaign targeting. Can be static or dynamic.
+The older name for a **Collection**—a group of accounts and/or contacts bundled for campaign targeting. See **Collection**.
 
 ---
 
@@ -430,6 +487,19 @@ A JavaScript snippet installed on your website that enables visitor identificati
 
 **Installation time:** Under 5 minutes
 **Impact:** Minimal—async loading doesn't slow your site
+
+---
+
+### Trust Tiers
+How much an **Oracle** agent is allowed to do on its own:
+
+| Tier | Behavior |
+|------|----------|
+| **Supervised** | The agent proposes actions; you approve each one before it runs |
+| **Standard** | The agent acts on routine work and asks approval for high-impact actions |
+| **Autonomous** | The agent acts on its own within your goals and guardrails |
+
+High-impact actions surface in the **Oracle Approvals / Inbox** for review.
 
 ---
 
@@ -477,7 +547,22 @@ An automated message sent from Abmatic to your systems when events occur:
 
 ---
 
-### Widget
+### Widget (Campaign)
+A **Personalization** campaign type (formerly "Banner & Popup") for on-site engagement components. There are five widget types:
+
+- **Banner**
+- **Popup**
+- **Exit-intent modal**
+- **Sidebar widget** (new)
+- **Agentic chat**
+
+The widget setup also includes a **HubSpot form** picker so you can capture leads directly.
+
+**Find it:** Campaigns > + CAMPAIGN > Personalization > Widget
+
+---
+
+### Widget (Dashboard)
 A component on a dashboard displaying a specific metric, chart, or data table. Drag and drop to customize your view.
 
 ---

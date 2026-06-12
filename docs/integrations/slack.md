@@ -2,7 +2,7 @@
 id: slack
 title: Slack Integration
 sidebar_label: Slack
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Slack Integration
@@ -30,9 +30,9 @@ Your sales team can't respond to opportunities they don't know about. The Slack 
 | **Custom message formats** | See exactly the info you need at a glance |
 | **Engagement summaries** | Leadership gets daily digests without noise |
 
-![Slack Settings](/img/screenshots/settings-slack.png)
+![Slack workspace settings page](/img/screenshots/slack-page.png)
 
-*The Slack settings page showing channel list, filter configuration, and notification settings tabs.*
+*The Slack settings page (Settings > Integrations > Slack). The left rail lists your channels and Active Members; the right panel shows the selected channel's tabs: Filters, Notification Settings, Messages, Members, and Message Customization.*
 
 ## Getting Started
 
@@ -46,20 +46,26 @@ Before connecting:
 ### Step 1: Connect to Slack
 
 1. Navigate to **Settings > Integrations** in Abmatic AI
-2. Find **Slack** under Communications
-3. Click **Connect**
-4. Select your workspace in the Slack authorization page
+2. Find the **Slack** card under the **Communications** section
+3. Click **Authorize**
+4. Select your workspace on the Slack authorization page
 5. Review permissions and click **Allow**
 6. You'll be redirected back to Abmatic AI
+
+Once connected, click the Slack card (or its **Settings** gear) to open the full Slack workspace page at **Settings > Slack**.
 
 ### Step 2: Initial Setup
 
 After connecting, Abmatic AI will:
-- Sync your Slack channels and users
+- Sync the Slack channels the bot can see
 - Create default notification settings
-- Add the Abmatic bot to your workspace
+- Add the Abmatic AI bot to your workspace
 
 The integration is now active and ready to configure.
+
+:::note Members sync automatically
+Your workspace members are synced automatically each time you open the Slack settings page, so the **Active Members** list stays current without a manual step. You can also click **Sync Users** to refresh on demand.
+:::
 
 ## Understanding the Interface
 
@@ -70,12 +76,12 @@ The Slack settings page has two main areas:
 | Section | What It Shows |
 |---------|---------------|
 | **Channels** | All workspace channels with filter indicators |
-| **+ CREATE CHANNEL** | Create new channels directly from Abmatic |
+| **Create Channel** / **Browse Channel** | Create a new Slack channel, or browse and join an existing one, directly from Abmatic AI |
 | **Active Members** | Team members who can receive DM notifications |
 
 ### Channel Detail Panel
 
-When you select a channel, you'll see tabs for:
+When you select a channel, you'll see these tabs across the top, in order:
 
 | Tab | Purpose |
 |-----|---------|
@@ -84,6 +90,10 @@ When you select a channel, you'll see tabs for:
 | **Messages** | View notification history for this channel |
 | **Members** | See who's in the channel |
 | **Message Customization** | Choose what info appears in notifications |
+
+:::note Per-user tabs differ slightly
+When you select a team member under **Active Members** instead of a channel, the tabs are **Filters, Message Customization, Channels, Messages** — there is no Notification Settings or Members tab for individual users.
+:::
 
 ## Configuring Channel Filters
 
@@ -174,30 +184,34 @@ This alerts you to large companies looking at key decision pages.
 
 ## Notification Types
 
-Control what triggers alerts in each channel:
+Control what triggers alerts in each channel. On the **Notification Settings** tab you'll find these toggles:
 
-| Type | When It Fires | Best Channel For |
-|------|---------------|------------------|
+| Toggle | When It Fires | Best Channel For |
+|--------|---------------|------------------|
+| **All Notifications** | Master on/off switch for the channel | — |
 | **Account Visitors** | Target account visits your site | Sales team channels |
 | **Contact Visitors** | Identified contact browses | Account owner DMs |
 | **Account Engagement** | Significant account activity | Leadership summaries |
 | **Contact Engagement** | Individual engagement spikes | SDR follow-up |
-| **Form Submissions** | Visitor submits a tracked form | Inbound lead channel |
-| **Summary/Digest** | Periodic activity roundup | Leadership, marketing |
+| **Form Filled** | Visitor submits a tracked form | Inbound lead channel |
+| **Summary Info** | Periodic summary and digest notifications | Leadership, marketing |
 
 ### Configuring Notifications
 
 1. Click on a channel
-2. Select **Notification Settings** tab
-3. Toggle each notification type on/off
-4. Use **All Notifications** as a master toggle
+2. Select the **Notification Settings** tab
+3. Toggle each notification type on or off
+4. Use **All Notifications** as the master toggle
+
+![Notification Settings tab with toggles for All Notifications, Account Visitors, Contact Visitors, Account Engagement, Contact Engagement, Form Filled, and Summary Info](/img/screenshots/slack-notif-settings.png)
+*The Notification Settings tab. Each notification type has its own toggle, with All Notifications acting as a master switch for the channel.*
 
 ### Example Channel Setups
 
 **#sales-hot-leads** (Sales Team):
 - Account Visitors: ON
 - Contact Visitors: ON
-- Form Submissions: ON
+- Form Filled: ON
 - Summary: OFF
 
 **#leadership-abm** (Leadership):
@@ -207,32 +221,40 @@ Control what triggers alerts in each channel:
 **#sdrs-inbound** (SDRs):
 - Account Visitors: OFF
 - Contact Visitors: OFF
-- Form Submissions: ON
+- Form Filled: ON
 - Summary: OFF
 
 ## Message Customization
 
-Customize what information appears in notifications to match how each team works.
+On the **Message Customization** tab you choose exactly which properties appear in your Slack notifications, so each team sees only what it needs. Toggle properties on or off, or click **Reset to Defaults** to start over. There are two groups: a **Contact Notification Message** list and an **Account Notification Message** list.
 
-### Contact Properties
+![Message Customization tab listing the contact and account properties that can be toggled into notifications](/img/screenshots/slack-msg-custom.png)
+*The Message Customization tab. Each contact and account property has a toggle; "Reset to Defaults" restores the standard set.*
+
+### Contact Notification Properties
 
 | Property | When to Include |
 |----------|-----------------|
-| **Full Name** | Always—it's who you're reaching out to |
-| **Job Title** | Always—determines conversation approach |
-| **Company Name** | Always—account context |
+| **Full Name** | Always — it's who you're reaching out to |
+| **Job Title** | Always — determines conversation approach |
+| **Company Name** | Always — account context |
+| **Company Industry** | Conversation context |
+| **Location** | Regional context |
 | **LinkedIn URL** | For quick research before outreach |
+| **Profile Image** | Visual context |
 | **Work Email** | For immediate follow-up |
-| **Visited Page** | Conversation starter context |
-| **Campaigns** | See which campaigns reached them |
-| **Confidence** | Trust the identification |
-| **Abmatic Link** | Quick access to full profile |
+| **Campaigns (Text)** / **Campaigns (List)** | See which campaigns reached them |
+| **Visited Page** / **Visited Pages (Legacy)** | Conversation starter context |
+| **UTM Parameters** | Attribution context |
+| **Confidence** | The reveal confidence for this contact |
+| **Associated AE** | The account executive assigned to the account |
+| **Abmatic Link** | Quick access to the full profile in Abmatic AI |
 
-### Account Properties
+### Account Notification Properties
 
 | Property | When to Include |
 |----------|-----------------|
-| **Company Name** | Always—identifies the account |
+| **Company Name** | Always — identifies the account |
 | **Website** | Quick access to their site |
 | **Industry** | Conversation context |
 | **Company Size** | Prioritization signal |
@@ -240,7 +262,7 @@ Customize what information appears in notifications to match how each team works
 | **LinkedIn URL** | Company research |
 | **Technologies** | Technical fit assessment |
 | **Visited Pages** | Intent signals |
-| **Abmatic Link** | Full account details |
+| **Abmatic Link** | Full account details in Abmatic AI |
 
 ### Setting Team-Specific Defaults
 
@@ -286,13 +308,13 @@ An exec wants alerts only for enterprise target accounts:
 
 You can create new Slack channels directly:
 
-1. Click **+ CREATE CHANNEL** in the sidebar
+1. Click **Create Channel** in the sidebar
 2. Enter a channel name (e.g., #abmatic-enterprise)
 3. Choose public or private
 4. Add description
 5. Click **Create**
 
-The Abmatic bot is automatically added to channels you create.
+The Abmatic AI bot is automatically added to channels you create.
 
 ### Joining Existing Channels
 
@@ -312,12 +334,11 @@ If channels are missing after workspace changes:
 
 ## Global Settings
 
-Account-wide settings that apply to all channels:
+Open the **Settings** gear at the top of the Slack page for account-wide options that apply to all channels:
 
 | Setting | What It Does | Recommendation |
 |---------|--------------|----------------|
-| **Disable form notifications** | Turn off form alerts globally | Leave ON unless noisy |
-| **Smart account notifications** | Suppress account alert when contact is revealed in same event | Turn ON to reduce duplicates |
+| **Suppress Account Notifications When Contact Revealed** | When a contact is revealed in the same event, skip the duplicate account-level alert | Turn ON to reduce duplicate alerts |
 
 ## Best Practices
 
@@ -336,7 +357,7 @@ Account-wide settings that apply to all channels:
 | Strategy | How to Implement |
 |----------|------------------|
 | Use aggressive filters | Only notify for ICP-matching visitors |
-| Enable smart notifications | Suppress duplicate account/contact alerts |
+| Enable the suppress-duplicate setting | Suppress duplicate account/contact alerts |
 | Separate by purpose | Don't mix all alerts in one channel |
 | Use summaries for leadership | Digest instead of real-time for execs |
 | Filter by page views | Require 2+ page views minimum |
@@ -367,7 +388,7 @@ Account-wide settings that apply to all channels:
 | Issue | Solution |
 |-------|----------|
 | New channels don't appear | Click **Sync Channels** to refresh |
-| Private channel not listed | Invite @abmatic-bot to the channel first |
+| Private channel not listed | Invite the Abmatic AI bot to the channel first |
 | Channel disappeared | Check if it was archived in Slack |
 
 ### Notification Delays
@@ -378,22 +399,21 @@ Account-wide settings that apply to all channels:
 
 ### Disconnection Issues
 
-If the integration disconnects:
+If the integration disconnects, reconnect it from the Slack card:
 
-1. Go to **Settings > Slack**
-2. Click **Reconnect**
-3. Re-authorize in Slack
-4. Previous settings are preserved
+1. Go to **Settings > Integrations** and find the **Slack** card under Communications
+2. Click **Authorize** and re-authorize in Slack
+3. Your previous channel and notification settings are preserved
 
 ## Disconnecting
 
 To remove the Slack integration:
 
-1. Go to **Settings > Slack**
-2. Click **Disconnect**
+1. Go to **Settings > Integrations** and find the **Slack** card under Communications
+2. Click **Disable**
 3. Confirm the action
 
-Your filter configurations are preserved for future reconnection.
+Your filter and notification configurations are preserved in case you reconnect later.
 
 ## Related Documentation
 

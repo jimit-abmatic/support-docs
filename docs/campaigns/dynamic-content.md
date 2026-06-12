@@ -11,12 +11,12 @@ Transform your static website into a personalized experience that speaks directl
 
 ## Why Dynamic Content Drives Results
 
-| Traditional Approach | With Abmatic Dynamic Content |
+| Traditional Approach | With Abmatic AI Dynamic Content |
 |---------------------|------------------------------|
 | Generic "Welcome to our site" messaging | "Welcome back, Acme! See why Technology leaders choose us" |
 | Same content for everyone | Industry-specific value propositions |
 | Manual copy variations | Automatic personalization at scale |
-| Low engagement rates | 2-3x higher conversion rates |
+| Low engagement rates | More relevant messaging per visitor |
 
 ## How It Works
 
@@ -24,7 +24,7 @@ Dynamic content uses **personalization variables**—simple placeholders that au
 
 **What you write:**
 ```
-Welcome back, {{mt_company}}! See why {{mt_industry}} leaders choose us.
+Welcome back, {{mt_companyName}}! See why {{mt_industry}} leaders choose us.
 ```
 
 **What a visitor from Acme (Technology) sees:**
@@ -32,7 +32,16 @@ Welcome back, {{mt_company}}! See why {{mt_industry}} leaders choose us.
 Welcome back, Acme! See why Technology leaders choose us.
 ```
 
-No coding required. No complex logic. Just wrap any variable in double curly braces and Abmatic handles the rest.
+No coding required. No complex logic. Just wrap any variable in double curly braces and Abmatic AI handles the rest.
+
+:::info Which syntax to use where (important)
+Abmatic AI uses **two** personalization-variable syntaxes, depending on the surface:
+
+- **Website personalization** (the [Visual Page Editor](/campaigns/page-editor), banners, popups, and widgets) uses the **`{{mt_*}}` syntax** documented on this page. CRM fields use the `{{mt_hubspot_*}}` and `{{mt_salesforce_*}}` forms.
+- **AI Sequences and Agentic Flow** (email/call/LinkedIn outreach) use **bare field names** like `{{firstName}}` and `{{company}}` — no `mt_` prefix. See [AI Sequences](/campaigns/email-campaigns).
+
+This page is the canonical catalog for the **website-personalization** (`mt_*`) variables. Don't mix the two syntaxes on the same surface.
+:::
 
 ## Available Variables
 
@@ -50,7 +59,7 @@ Personalize based on where your visitors are browsing from:
 
 ### Company Variables
 
-Leverage Abmatic's IP-based company identification:
+Leverage Abmatic AI's IP-based company identification:
 
 | Variable | Description | Example | Best For |
 |----------|-------------|---------|----------|
@@ -161,7 +170,7 @@ The #1 Platform for {{mt_industry}} Companies
 ```
 {{mt_companyName}}, here's your personalized demo
 
-Discover how we help {{mt_industry}} companies like yours achieve 3x growth.
+Discover how we help {{mt_industry}} companies like yours grow.
 ```
 
 ### Location-Based Social Proof
@@ -260,16 +269,17 @@ the importance of [value proposition].
 
 | Cause | Solution |
 |-------|----------|
-| Typo in variable name | Check spelling: `{{mt_company}}` not `{{mt_compny}}` |
+| Typo in variable name | Check spelling: `{{mt_companyName}}` not `{{mt_compny}}` |
+| Wrong syntax for the surface | On web pages use `{{mt_*}}`; in sequences use bare `{{field}}` (see the callout above) |
 | Visitor doesn't match targeting | Verify campaign rules match the visitor |
-| Data not available | Add a fallback: `{{mt_company|there}}` |
+| Data not available | Add a fallback: `{{mt_companyName|there}}` |
 | Campaign not published | Publish the campaign to go live |
 
 ### Wrong Data Displaying
 
 | Cause | Solution |
 |-------|----------|
-| IP detection inaccuracy | IP data is 80-90% accurate—use as supplement, not sole source |
+| IP detection inaccuracy | IP-based company detection isn't perfect—treat it as a strong supplement, not the sole source, and set fallbacks |
 | Stale CRM data | Check last sync time in Integrations |
 | Wrong variable selected | Verify you're using the right CRM prefix (hubspot vs salesforce) |
 

@@ -100,9 +100,13 @@ Dynamic variables make your content personal to each visitor. Instead of "Welcom
 ### Inserting Variables
 
 1. Select a text element
-2. Click the **{ }** personalization button (or press `{`)
-3. Browse available variables
-4. Click to insert at your cursor position
+2. Click the **Personalize** button (the **{ }** personalization button, or press `{`)
+3. Browse available variables, grouped into tabs — **Account Details**, **IP Reveal Details**, and **Custom Variables**
+4. Click a variable to insert it at your cursor position
+
+:::note Use the `{{mt_*}}` syntax here
+The page editor personalizes website content using the **`{{mt_*}}`** variable syntax. This is the same catalog documented on the [Dynamic Content](/campaigns/dynamic-content) page. It is **different** from the bare `{{firstName}}`/`{{company}}` syntax used in AI Sequences.
+:::
 
 ### Available Variables
 
@@ -116,15 +120,17 @@ Dynamic variables make your content personal to each visitor. Instead of "Welcom
 **Company Data:**
 | Variable | Output Example |
 |----------|---------------|
-| `{{mt_company}}` | Acme Corporation |
+| `{{mt_companyName}}` | Acme Corporation |
 | `{{mt_industry}}` | Technology |
 
 **CRM Fields** (when integrated):
 | Variable | Description |
 |----------|-------------|
-| `{{sf_*}}` | Salesforce fields (owner, stage, etc.) |
-| `{{hs_*}}` | HubSpot properties |
-| Custom fields | Your mapped CRM fields |
+| `{{mt_salesforce_*}}` | Salesforce fields (e.g. `{{mt_salesforce_account_Name}}`) |
+| `{{mt_hubspot_*}}` | HubSpot properties (e.g. `{{mt_hubspot_company_name}}`) |
+| `{{mt_csv_*}}` | Columns from a CSV import |
+
+See [Dynamic Content](/campaigns/dynamic-content) for the full variable catalog and exact CRM field names.
 
 ### Testing Variables
 
@@ -261,7 +267,7 @@ Test how your changes look on different devices:
 
 **Try these:**
 1. Verify the URL is accessible in a normal browser
-2. Check that the Abmatic script is installed on that page
+2. Check that the Abmatic AI script is installed on that page
 3. Try a different browser
 4. Check for CORS restrictions on your site
 

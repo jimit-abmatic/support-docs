@@ -7,142 +7,122 @@ sidebar_position: 1
 
 # Audiences Overview
 
-Stop wasting budget on the wrong accounts. Abmatic AI helps you build, enrich, and activate precision-targeted audiences that convert - across every marketing channel.
+Audiences are how you decide *who* every Abmatic AI campaign reaches. You build, enrich, and organize your target companies and people into **Collections**, then point your campaigns, ads, and CRM sync at those Collections.
 
 ## Why Audience Management Matters
 
-| Without Targeted Audiences | With Abmatic Audiences |
+Targeting the right accounts means your website personalization, ads, and outreach all reach the companies and people who actually fit your ideal customer profile (ICP) — instead of spending budget on everyone.
+
+| Without Targeted Audiences | With Abmatic AI Audiences |
 |---------------------------|------------------------|
-| Spray-and-pray campaigns | Laser-focused targeting |
-| Low conversion rates | 2-3x higher engagement |
-| Wasted ad spend | Every dollar reaches decision-makers |
-| Manual list building | AI-powered enrichment |
-| Siloed channel data | Unified view across all touchpoints |
+| Spray-and-pray campaigns | Focused, ICP-based targeting |
+| Manual list building in spreadsheets | AI-assisted enrichment and list building |
+| Lists that go stale | Dynamic Collections that auto-update |
+| Siloed channel data | One unified view across web, ads, and CRM |
 
 ---
 
 ## Getting Started
 
-Navigate to **Audiences** in the left sidebar to access:
+Open the left icon sidebar and choose **Accounts** or **Contacts**:
 
-- **Accounts** - Target companies for ABM campaigns
-- **Contacts** - Target individuals for outreach
+- **Accounts** — target companies for ABM campaigns.
+- **Contacts** — target individuals (people) for outreach and personalization.
 
-![Accounts List](/img/screenshots/accounts-list.png)
+![The Accounts page showing the Collections tab with summary cards and the collection table](/img/screenshots/aud-collections.png)
 
-*Your audience command center: 260 collections, instant source filtering, and one-click list creation.*
+*Your audience command center: summary cards by source, a searchable collection table, and one-click list creation with the **+ Account List** button.*
 
 ---
 
 ## Understanding the Interface
 
-### Collections vs All Accounts
+### Collections vs All Accounts / All Contacts
+
+Each page has two tabs:
 
 | Tab | What You See | Best For |
 |-----|--------------|----------|
-| **Collections** | Organized target lists you've built | Running campaigns, syncing to ads |
-| **All Accounts** | Every account in your system | Finding specific companies, bulk actions |
+| **Collections** | The organized target lists you've built or imported | Running campaigns, syncing to ads, CRM push |
+| **All Accounts** / **All Contacts** | Every account or contact in your database | Searching specific companies/people, bulk actions |
 
 ### Collection Summary Cards
 
-The cards at the top give you instant visibility:
+The cards across the top of the Collections tab let you see — and filter — your lists by source. Click a card to filter the table to that type:
 
 | Card | What It Shows |
 |------|---------------|
 | **All Collections** | Total number of lists |
-| **Dynamic** | Auto-updating lists based on filters |
-| **Salesforce/HubSpot** | CRM-synced collections |
-| **Auto Generated** | System-created engagement lists |
-| **CSV** | Manually imported lists |
+| **Dynamic** | Auto-updating lists built from filters |
+| **Salesforce / HubSpot** | Lists synced from your connected CRM |
+| **CSV** | Lists imported from a spreadsheet |
 | **Abmatic** | Lists built with Abmatic filters |
+| **Auto Generated** | System-created lists (e.g. Visitor Reveal, campaign audiences, form submissions) |
+
+:::note
+The exact set of cards depends on which sources you use. For example, you'll only see a **HubSpot** card if you have HubSpot connected and lists imported from it.
+:::
 
 ### Collection Table
 
 | Column | Description |
 |--------|-------------|
-| **Name** | Collection name and type (Dynamic, CSV, etc.) |
-| **Total Accounts** | Number of accounts in the list |
-| **Status** | Done, Processing, or Draft |
-| **Last Updated At** | When the list was last refreshed |
+| **Name** | The collection name, with its type shown underneath (Dynamic, CSV, Salesforce, Abmatic Filters, etc.) |
+| **Total Accounts** / **Total Contacts** | How many records are in the list |
+| **Status** | Draft, Processing, Preview, or Done |
+| **Last Updated At** | When the list last changed |
+
+Each row has a `...` menu for per-list actions, plus search and a **Sort By** control (default: Last Updated At).
 
 ---
 
 ## Creating Your First Collection
 
-Click **+ Account List** in the top right to open the creation modal.
+Click **+ Account List** (or **+ Contact List**) in the top right to open the creation dialog.
 
-![Account Create Modal](/img/screenshots/workflows/audience-02-create-modal.png)
+![The Target Accounts dialog with Import options (Upload from CSV, Import from CRM) and Create options (Static Collection, Dynamic Collection)](/img/screenshots/aud-create-modal.png)
 
-*Four ways to build your target list: import existing data or create new segments.*
+*The dialog has two sections — Import existing data, or Create a new list from filters.*
 
 ### Import Options
 
-| Method | Best For | Time to Complete |
-|--------|----------|------------------|
-| **Upload from CSV** | Existing spreadsheets, event lists, purchased data | Minutes |
-| **Import from CRM** | Leveraging Salesforce, HubSpot, or Pipedrive segments | Minutes |
+| Method | Best For |
+|--------|----------|
+| **Upload from CSV** | Existing spreadsheets, event lists, purchased data |
+| **Import from CRM** | Pulling segments from Salesforce, HubSpot, Pipedrive, or ActiveCampaign |
 
 ### Create Options
 
 | Method | Best For | How It Works |
 |--------|----------|--------------|
-| **Static Collection** | Fixed target lists, event attendees, named accounts | Filter once, list stays fixed |
-| **Dynamic Collection** | Always-current segments, engagement-based targeting | Filters auto-refresh the list |
+| **Static Collection** | Fixed target lists, event attendees, named accounts | Filter once; the list stays fixed |
+| **Dynamic Collection** | Always-current segments, engagement-based targeting | New matching records are added automatically over time |
 
 ---
 
 ## Method 1: Static Collection (Filter Once)
 
-Best for fixed target lists that won't change.
+Best for fixed target lists that shouldn't change after you build them.
 
-### Step 1: Click Static Collection
-
-Select **Static Collection** from the Create section.
-
-### Step 2: Build Your Filters
-
-Add conditions to define your ideal accounts:
-
-| Filter Category | Example Conditions | Why Use It |
-|-----------------|-------------------|------------|
-| **Firmographic** | Industry = Technology, Employees > 100 | Match your ICP |
-| **Geographic** | Country = United States, Region = California | Local targeting |
-| **Engagement** | Score = High, Visited last 30 days | Prioritize hot accounts |
-| **CRM Data** | Stage = Prospect, Owner = Your SDR | Align with sales |
-
-### Step 3: Preview and Save
-
-1. Review matching account count
-2. Enter a descriptive name (e.g., "Enterprise Tech - US - Q1 2026")
-3. Click **Save Collection**
+1. Click **+ Account List** → **Static Collection**.
+2. Build your filter conditions (Selector → Operator → Value). See the [Filters guide](/audiences/filters) for the full reference.
+3. Click **Preview** (top right) to check the **Estimated Accounts** count.
+4. Choose how to handle duplicates (Skip and keep existing fields / Overwrite existing fields / Update only missing fields).
+5. Click **Save**.
 
 ---
 
 ## Method 2: Dynamic Collection (Auto-Update)
 
-Best for lists that should stay current as data changes.
+Best for lists that should stay current as new companies and people are identified.
 
-### Step 1: Click Dynamic Collection
+1. Click **+ Account List** → **Dynamic Collection**.
+2. Build the same kind of filter conditions as a Static Collection.
+3. Click **Save Dynamic Collection**.
 
-Select **Dynamic Collection** from the Create section.
-
-### Step 2: Configure Filter Rules
-
-Same filter options as static, but results update automatically.
-
-### Step 3: Set Refresh Frequency
-
-| Frequency | Best For | Trade-off |
-|-----------|----------|-----------|
-| **Real-time** | High-priority campaigns | Uses more resources |
-| **Hourly** | Most use cases | Good balance |
-| **Daily** | Large lists, less urgent campaigns | Best performance |
-
-### Step 4: Save
-
-1. Name your collection
-2. Click **Save Collection**
-3. Watch it update automatically as accounts match your criteria
+:::info How Dynamic Collections stay current
+A Dynamic Collection re-runs its filters automatically. As the helper panel explains: *"New visitors that match your filters will automatically be added to this collection."* There is no manual "refresh frequency" setting — Abmatic AI keeps the list up to date for you.
+:::
 
 ---
 
@@ -150,32 +130,12 @@ Same filter options as static, but results update automatically.
 
 Best for uploading existing lists from spreadsheets or external sources.
 
-### Step 1: Click Upload from CSV
+1. Click **+ Account List** → **Upload from CSV**.
+2. Upload your `.csv` file. Limits: **100 MB** and **10,000 records** per import.
+3. Abmatic AI auto-maps your columns to its fields (you can adjust any mapping).
+4. Choose duplicate handling, name your list, and click **Create Mapping**.
 
-Select **Upload from CSV** from the Import section.
-
-### Step 2: Upload Your File
-
-- Maximum file size: 100 MB
-- Maximum records: 10,000 per import
-- Supported format: .csv files
-
-### Step 3: Map Columns
-
-Abmatic AI auto-suggests field mappings:
-
-| Your CSV Column | Maps To |
-|-----------------|---------|
-| Company Name | Account Name |
-| Website | Domain |
-| Industry | Industry |
-| Employee Count | Company Size |
-
-### Step 4: Complete Import
-
-1. Review the preview
-2. Click **Import**
-3. Your new collection appears in the list
+See the full [CSV Import guide](/audiences/csv-import) for column mapping details.
 
 ---
 
@@ -183,94 +143,68 @@ Abmatic AI auto-suggests field mappings:
 
 Best for leveraging your existing CRM segments and lists.
 
-### Step 1: Click Import from CRM
-
-:::info CRM Connection Required
-You'll need a connected CRM. If not set up, visit **Integrations** first.
-:::
-
-### Step 2: Select Source
+1. Click **+ Account List** → **Import from CRM**.
+2. Choose your connected CRM and build filters using CRM-native fields.
+3. Preview the matched records, then pull them in.
 
 | CRM | What You Can Import |
 |-----|---------------------|
-| **Salesforce** | Accounts, Contacts, Campaigns, Reports |
-| **HubSpot** | Companies, Contacts, Lists |
-| **Pipedrive** | Organizations, People |
+| **Salesforce** | Accounts, Contacts, Leads, Opportunities |
+| **HubSpot** | Companies, Contacts, Deals |
+| **Pipedrive** | Organizations, Persons, Deals |
+| **ActiveCampaign** | Accounts, Contacts, Deals |
 
-### Step 3: Choose Records
-
-- **All Records** - Import everything
-- **By List/Segment** - Choose specific CRM lists
-- **By Custom Filter** - Apply CRM filters
-
-### Step 4: Start Import
-
-1. Review settings
-2. Click **Import**
-3. Monitor progress in the collection list
+:::info CRM Connection Required
+You need a connected CRM first. If none is connected, the **Import from CRM** flow sends you to **Integrations** to set one up. See the [CRM Sync guide](/audiences/crm-sync).
+:::
 
 ---
 
 ## Activating Your Audiences
 
-Your collections aren't just for organizing - they power every channel.
-
-### Push to Advertising Platforms
-
-| Platform | How to Activate | Match Rates |
-|----------|-----------------|-------------|
-| **LinkedIn Ads** | Click collection → Push to LinkedIn | 60-80% |
-| **Google Ads** | Click collection → Push to Google | 40-60% |
-
-### Sync to CRM
-
-| Action | What Happens |
-|--------|--------------|
-| **Create Records** | New accounts added to CRM |
-| **Update Existing** | Enrich existing CRM records |
-| **Add to Campaign** | Associate with CRM campaign |
+Collections aren't just for organizing — they power every channel.
 
 ### Use in Campaigns
 
-When creating any Abmatic campaign:
-1. Go to **Campaigns** → **Create Campaign**
-2. In the Audience tab, select your collection
-3. Your personalization reaches exactly those accounts
+When you create any Abmatic AI campaign:
+
+1. Go to **Campaigns** and click **+ CAMPAIGN**.
+2. Pick a campaign type.
+3. In the **Audience** tab, add an **Account List** (or **Contact List**) condition and choose your Collection.
+
+Your personalization, ads, or sequence now reaches exactly the accounts in that list.
+
+### Push to Advertising Platforms
+
+You can push Collections to advertising audiences such as **LinkedIn Matched Audiences** and **Google Customer Match**, directly from a collection's `...` menu. Actual match rates are controlled by each ad platform.
+
+### Sync to CRM
+
+Push enriched accounts and contacts back to your CRM, or set up auto-push so new records flow automatically. See [CRM Sync](/audiences/crm-sync).
 
 ---
 
 ## Managing Contacts
 
-The **Contacts** section works similarly to Accounts, but focuses on individuals.
-
-### Contact-Specific Fields
-
-| Field | Description |
-|-------|-------------|
-| **Name** | Full name |
-| **Email** | Email address |
-| **Title** | Job title |
-| **Company** | Associated account |
-| **LinkedIn** | Profile URL |
-| **Phone** | Phone number |
+The **Contacts** section works just like Accounts, but focuses on individuals.
 
 ### Contact Sources
 
 | Source | How They're Added |
 |--------|-------------------|
 | **Form Submissions** | Visitors who fill out tracked forms |
-| **Contact Reveal** | Identified through IP intelligence |
+| **Visitor Reveal** | People identified from website visits |
 | **CRM Import** | Synced from your CRM |
 | **CSV Upload** | Manually imported |
+
+For details on identifying website visitors, see [Contact Reveal](/visitor-tracking/contact-reveal).
 
 ---
 
 ## Best Practices
 
-### Quality Over Quantity
-
 :::tip Focus on Your ICP
-A smaller list of high-fit accounts (100-500) often outperforms a large list of generic targets (5,000+). Quality targeting beats volume every time.
+A smaller list of high-fit accounts often outperforms a large, generic one. Quality targeting beats raw volume.
 :::
 
 ### Naming Conventions
@@ -281,18 +215,74 @@ A smaller list of high-fit accounts (100-500) often outperforms a large list of 
 | "Healthcare 500+ Employees" | Clear industry and size |
 | "High Engagement Last 30 Days" | Clear behavioral criteria |
 
-| Avoid | Why |
-|-------|-----|
-| "List 1", "Test", "Accounts" | No context, impossible to manage at scale |
+Avoid vague names like "List 1", "Test", or "Accounts" — they become impossible to manage once you have dozens of collections.
 
 ### Keep Data Fresh
 
 | Task | Frequency | Why It Matters |
 |------|-----------|----------------|
 | Review engagement scores | Weekly | Prioritize hot accounts |
-| Clean stale records | Monthly | Remove outdated data |
-| Verify CRM sync | Weekly | Ensure data consistency |
-| Review collection performance | After campaigns | Optimize targeting |
+| Use Dynamic Collections for ongoing campaigns | — | They update themselves; no manual refresh |
+| Verify CRM sync | Weekly | Keep data consistent across systems |
+
+---
+
+## Building Your First Audience: A Walkthrough
+
+New to Abmatic AI audiences? This gets your first audience ready to power campaigns in about 10 minutes.
+
+### Before You Start
+
+Make sure you have:
+- An Abmatic AI account with the tracking script installed ([Quick Start Guide](/getting-started/quick-start))
+- A sense of who your ideal customer is (industry, size, geography)
+- Optionally: a CSV of target accounts or a connected CRM
+
+### Step 1: Decide what you're trying to accomplish
+
+| Your Goal | Audience Type | Method |
+|-----------|--------------|--------|
+| Personalize the website for a specific industry | Dynamic Account Collection | Build from filters |
+| Target a fixed list of accounts from sales | Static Account Collection | Upload CSV or import from CRM |
+| Send personalized outreach to specific people | Contact Collection | Upload CSV with emails or import from CRM |
+| Target companies that already visited your site | Dynamic Account Collection | Filter by engagement score or page views |
+| Push an account list to LinkedIn for ads | Account Collection (any type) | Build it first, then push to LinkedIn |
+
+### Step 2: Create a Dynamic Account Collection
+
+1. Open **Accounts** from the left sidebar.
+2. Click **+ Account List** → **Dynamic Collection**.
+3. Build filters, for example:
+
+```
+Industry        is        Information Technology
+Employee Count  is above  100
+Employee Count  is below  1000
+Country         is any of United States, Canada, United Kingdom
+```
+
+4. Click **Preview** to see how many accounts match.
+5. Name it descriptively (e.g. `Mid-Market Tech - US/CA/UK - 100-1000 Employees`).
+6. Click **Save Dynamic Collection**.
+
+### Step 3: Use Your Audience in a Campaign
+
+1. Go to **Campaigns** and click **+ CAMPAIGN**.
+2. Choose a campaign type.
+3. Open the **Audience** tab and add an **Account List** rule pointing at your new collection.
+4. Optionally layer more rules (e.g. `Visited Pages contains /pricing` for higher intent).
+5. Save.
+
+As new accounts match your dynamic filters, they automatically enter the campaign.
+
+### Common Mistakes to Avoid
+
+| Mistake | What Happens | Instead |
+|---------|-------------|---------|
+| Filters too narrow | Collection has only a handful of accounts | Start broad (industry + country), then narrow |
+| One huge list for everything | Can't personalize messaging | Separate collections per campaign or segment |
+| Forgetting to exclude customers | Customers see acquisition messaging | Keep a "Customers" list and use it as an exclusion |
+| Never updating static lists | Lists go stale within weeks | Use Dynamic Collections for ongoing campaigns |
 
 ---
 
@@ -303,123 +293,24 @@ A smaller list of high-fit accounts (100-500) often outperforms a large list of 
 | Cause | Solution |
 |-------|----------|
 | Filters too restrictive | Broaden criteria or remove conditions |
-| No matching data | Check if data exists in "All Accounts" view |
-| Still processing | Wait for import to complete |
+| No matching data | Check the All Accounts / All Contacts tab |
+| Still processing | Wait for the import or build to finish |
 
 ### Import Failed
 
 | Error | Solution |
 |-------|----------|
-| "File too large" | Reduce CSV to under 100 MB |
+| "File too large" | Reduce the CSV to under 100 MB |
 | "Too many records" | Split into batches of 10,000 |
-| "Invalid format" | Ensure file is valid .csv format |
-| "CRM connection error" | Reconnect integration in Settings |
-
-### Records Not Syncing
-
-| Issue | Solution |
-|-------|----------|
-| Sync delayed | Check logs in Integrations settings |
-| Missing fields | Verify field mapping configuration |
-| Duplicates created | Review matching rules |
-
----
-
----
-
-## Building Your First Audience: A Marketer's Walkthrough
-
-New to Abmatic audiences? This step-by-step walkthrough is designed for marketers (not developers) and will have your first audience ready to power campaigns in about 10 minutes.
-
-### Before You Start
-
-Make sure you have:
-- An Abmatic account with the tracking script installed ([Quick Start Guide](/getting-started/quick-start))
-- An idea of who your ideal customer is (industry, size, geography)
-- Optionally: a CSV of target accounts or a connected CRM
-
-### Step 1: Decide What You Are Trying to Accomplish
-
-Your audience strategy depends on your campaign goal. Use this table to decide which approach to take:
-
-| Your Goal | Audience Type | Method |
-|-----------|--------------|--------|
-| "I want to personalize our website for companies in a specific industry" | Dynamic Account Collection | Build from filters |
-| "I have a list of 200 accounts from our sales team that I need to target" | Static Account Collection | Upload CSV or import from CRM |
-| "I want to send personalized outreach to specific people at target companies" | Contact Collection | Upload CSV with emails or import from CRM |
-| "I want to target companies that have already visited our website" | Dynamic Account Collection | Filter by engagement score or page views |
-| "I want to push an account list to LinkedIn for advertising" | Account Collection (any type) | Build first, then push to LinkedIn DMP |
-
-### Step 2: Create Your First Account Collection
-
-Let's walk through the most common scenario--creating a dynamic collection to target a specific industry segment.
-
-1. Navigate to **Audiences** in the left sidebar, then click **Accounts**
-2. Click the **+ Account List** button in the top right
-3. Select **Dynamic Collection** (this ensures your list stays up to date automatically)
-4. Build your filters. Here is a practical example for a marketing team targeting mid-market technology companies:
-
-**Filter 1:** `Industry` **is** `Information Technology`
-**AND**
-**Filter 2:** `Employee Count` **is above** `100`
-**AND**
-**Filter 3:** `Employee Count` **is below** `1000`
-**AND**
-**Filter 4:** `Country` **is any of** `United States, Canada, United Kingdom`
-
-5. Click **Preview** to see how many accounts match. You should aim for:
-   - **50-500 accounts** for website personalization campaigns (quality over quantity)
-   - **500-5,000 accounts** for advertising campaigns (broader reach)
-   - **10-50 accounts** for 1:1 ABM campaigns (maximum personalization)
-
-6. Name your collection descriptively: `Mid-Market Tech - US/CA/UK - 100-1000 Employees`
-7. Click **Save Collection**
-
-:::tip Naming matters more than you think
-When you have 20+ collections in six months, names like "Test List" or "New Accounts" become impossible to manage. Always include the key criteria in the name: segment, geography, and size. Example: `Enterprise Healthcare - EMEA - 1000+`
-:::
-
-### Step 3: Use Your Audience in a Campaign
-
-Your collection is now ready to power campaigns. Here is how to connect it:
-
-1. Go to **Campaigns** and click **+ Campaign**
-2. Choose your campaign type (e.g., **Inbound** for website personalization)
-3. Click the **Audience** tab
-4. Add a rule: **Account List** → select your new collection
-5. Optionally layer additional rules (e.g., `Visited Pages contains /pricing` to narrow to high-intent visitors)
-6. Click **Save**
-
-Your campaign now targets exactly the accounts in your collection. As new accounts match your dynamic filters, they automatically enter the campaign.
-
-### Step 4: Expand Your Audience Strategy
-
-Once your first collection is working, consider building these complementary audiences:
-
-| Collection Name | Filters | Use Case |
-|----------------|---------|----------|
-| `High-Intent Visitors - Last 30 Days` | `Total Page Views > 5` AND `Total Sessions > 2` | Prioritize for SDR outreach |
-| `Enterprise - Fortune 500` | `Employee Count > 5000` AND `Country = United States` | Premium website personalization with dedicated case studies |
-| `Competitor Customers` | Import from CRM where `Competitor = [Name]` | Competitive displacement campaigns |
-| `Event Attendees - [Event Name]` | CSV upload from event registration | Personalized follow-up campaigns |
-| `Pricing Page Visitors - No Conversion` | `Visited Pages contains /pricing` AND NOT in "Customers" list | Exit-intent popup or retargeting |
-
-### Common Mistakes to Avoid
-
-| Mistake | What Happens | Instead Do This |
-|---------|-------------|-----------------|
-| Starting with filters that are too narrow | Collection has 3 accounts and the campaign has no data | Start broad (industry + country) and narrow after you see engagement data |
-| Creating one huge list for everything | Cannot personalize messaging because the audience is too diverse | Create separate collections for each campaign or segment |
-| Forgetting to exclude current customers | Existing customers see acquisition messaging | Create a "Customers" list and use it as an exclusion filter |
-| Using only firmographic filters | Misses high-intent small companies | Layer behavioral filters (page views, pricing visits) on top of firmographic ones |
-| Never updating static lists | List becomes stale within weeks | Use dynamic collections for ongoing campaigns; static only for fixed lists like event attendees |
+| "Invalid format" | Make sure the file is a valid `.csv` |
+| "CRM connection error" | Reconnect the integration in Settings |
 
 ---
 
 ## Next Steps
 
-- **[Create Account Lists](/audiences/accounts)** - Deep dive into account targeting
-- **[Build Contact Lists](/audiences/contacts)** - Target specific people
-- **[Use Filters](/audiences/filters)** - Master audience segmentation
-- **[CSV Import Guide](/audiences/csv-import)** - Detailed import instructions
-- **[CRM Sync Guide](/audiences/crm-sync)** - CRM integration details
+- **[Account Lists](/audiences/accounts)** — Deep dive into account targeting
+- **[Contact Lists](/audiences/contacts)** — Target specific people
+- **[Filters](/audiences/filters)** — Master audience segmentation
+- **[CSV Import](/audiences/csv-import)** — Detailed import instructions
+- **[CRM Sync](/audiences/crm-sync)** — CRM integration details

@@ -18,20 +18,23 @@ Press **Ctrl+F** (Windows) or **Cmd+F** (Mac) to search for specific campaign to
 
 ### What types of campaigns can I create?
 
-Abmatic offers five campaign types to reach your target accounts wherever they are:
+Click **+ CAMPAIGN** to open the **Create Campaign** dialog. It groups every campaign type into three columns — **Personalization**, **Advertising**, and **Agentic**:
 
-| Campaign Type | What It Does | Best For |
-|--------------|--------------|----------|
-| **Website Personalization** | Dynamically modify your site content for different visitors | Converting website traffic with tailored experiences |
-| **AI Sequences** | AI-personalized multi-channel outreach | Warming up target accounts with dynamically personalized messaging |
-| **LinkedIn Ads** | Target your accounts on LinkedIn | Reaching decision-makers where they research |
-| **Google Ads** | Reach audiences through Google's network | Capturing high-intent search and display traffic |
-| **CRM Campaigns** | Trigger actions in Salesforce/HubSpot | Automating follow-up and routing workflows |
+| Column | Campaign Types | What They Do |
+|--------|----------------|--------------|
+| **Personalization** | Inbound · Outbound · A/B Testing · **Widget** | Personalize your website experience — for any matching visitor (Inbound), for named accounts (Outbound), as an experiment (A/B Testing), or with an on-page Widget |
+| **Advertising** | Display Advertising · LinkedIn · **OpenAI Ads** · Retargeting | Reach accounts off-site through display, LinkedIn, OpenAI Ads (ChatGPT conversations), and retargeting |
+| **Agentic** | **Agentic Flow** · **Sequence** · **Intent** · **Agentic Chat** | AI-driven plays: agent-crafted message flows, multi-step sequences, in-market intent detection, and the AI chat widget |
 
-![Campaign type selection showing all available campaign types](/img/screenshots/first-campaign-type-modal.png)
+![The Create Campaign dialog in Abmatic AI, showing the Personalization, Advertising, and Agentic columns](/img/screenshots/faq-campaign-types.png)
+*The Create Campaign dialog groups every type under Personalization, Advertising, and Agentic.*
 
-:::info Multi-Channel Power
-The most successful ABM programs use 3+ campaign types together. Start with Website Personalization to capture existing traffic, then expand to ads and email.
+:::note A few naming notes
+The **Widget** campaign covers five on-page widget types — banner, popup, exit-intent modal, sidebar widget, and agentic chat. The third column used to be called "Advanced" and is now **Agentic**. **OpenAI Ads** is a live ad type; Meta/Facebook ads are currently **Coming Soon**.
+:::
+
+:::info Use channels together
+The strongest ABM programs combine types — for example, start with website personalization to capture existing traffic, then add ads and agentic plays.
 :::
 
 ### What's the difference between Inbound and Outbound campaigns?
@@ -87,7 +90,7 @@ The visual editor lets marketers make changes without developer help. Just click
 
 ### What personalization variables are available?
 
-Use dynamic tokens to automatically insert visitor-specific content:
+Use dynamic tokens to automatically insert visitor-specific content. Personalization variables all use the `{{mt_*}}` prefix:
 
 | Variable | What It Inserts | Example Output |
 |----------|----------------|----------------|
@@ -263,6 +266,16 @@ Campaigns can be:
 
 For complex scheduling needs, contact support for advanced automation options.
 
+### Can AI run campaigns for me?
+
+To a degree, yes. The built-in **AI Agent** chat (Clara/Alex) can help you plan campaigns, draft personalized content, and recommend what to focus on next.
+
+If your account has **Oracle** enabled, AI agents can go further and carry out work more autonomously. Oracle sets weekly **goals** and routes higher-impact actions to an **approvals inbox** (**Oracle Inbox**) where you approve or deny them before they happen. Oracle runs at a trust tier you choose — supervised, standard, or autonomous.
+
+:::note Oracle is opt-in and may be gated
+Oracle is an advanced product and may not be turned on for your account. If you see a "not enabled for your account" message, that's expected — contact your Abmatic AI rep or email [support@abmatic.ai](mailto:support@abmatic.ai) to request access.
+:::
+
 ### How do I archive old campaigns?
 
 Keep your campaign list clean while preserving historical data:
@@ -304,6 +317,12 @@ Each campaign has multiple analytics views:
 | **Insights** | A/B test results with statistical significance |
 | **Engagement** | Which accounts visited and their activity |
 | **Audience** | Targeting breakdown and reach |
+
+### Can I see when a campaign books a demo?
+
+Yes. Analytics now includes **demo booking** details so you can tie campaigns and visitors to booked meetings. Look for columns such as **Demo Booked**, **Demo Booked At**, **Demo Scheduled At**, **Demo AE**, and **Demo Time**. The **Agentic Chat** widget can book meetings directly (one of its email-handoff modes), and those bookings show up here.
+
+For agentic chat campaigns, the **Performance** view also includes an **AI Conversation Summary** sub-tab that breaks conversations down by **Topic**, **Sentiment**, and **Converted**, with a "Show visitors" link back to the underlying sessions.
 
 ### Can I export campaign data?
 

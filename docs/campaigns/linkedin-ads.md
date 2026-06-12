@@ -2,7 +2,7 @@
 id: linkedin-ads
 title: LinkedIn Campaigns
 sidebar_label: LinkedIn Ads
-sidebar_position: 7
+sidebar_position: 11
 ---
 
 # LinkedIn Campaigns
@@ -60,10 +60,10 @@ Include company website domains (e.g., `acme.com`) rather than email domains. Li
 ### Step 3: Create a LinkedIn Campaign
 
 1. Navigate to **Campaigns**
-2. Click **Create Campaign**
-3. Select **LinkedIn** under the Advertising section
+2. Click **+ Campaign**
+3. Under the **Advertising** category, select **LinkedIn**
 
-![Campaign creation showing LinkedIn option](/img/screenshots/linkedin-create-modal.png)
+![Campaign creation showing the LinkedIn option under Advertising](/img/screenshots/linkedin-create-modal.png)
 
 4. Choose **Account** or **Contact** targeting:
    - **Account**: Target employees at specific companies
@@ -71,8 +71,8 @@ Include company website domains (e.g., `acme.com`) rather than email domains. Li
 
 ![Select Account or Contact targeting](/img/screenshots/linkedin-campaign-account-select.png)
 
-5. Select your account/contact collection
-6. Click **Create Campaign**
+5. Select your account or contact collection
+6. Click **Create** to create the campaign
 
 ![Select a collection for your campaign](/img/screenshots/linkedin-campaign-collection-select.png)
 
@@ -88,12 +88,16 @@ Once your campaign is created, configure your targeting:
 
 ### Step 5: Push to LinkedIn
 
-When your campaign is ready:
+When your campaign is ready, push the matched accounts to LinkedIn:
 
-1. Review the accounts/contacts in your campaign
-2. Click **Push to LinkedIn**
-3. Wait for confirmation (usually instant)
-4. Access your audience in LinkedIn Campaign Manager
+1. Review the accounts or contacts in your campaign
+2. Use the **Push to LinkedIn** action
+3. Wait for confirmation
+4. Access the resulting matched audience in LinkedIn Campaign Manager
+
+:::note Matched-audience minimum
+LinkedIn requires a minimum number of matched companies before a matched audience can be targeted. If your audience is below that threshold, add more accounts. Check LinkedIn's current Matched Audiences requirements for the exact minimum, as it can change.
+:::
 
 ## LinkedIn Matched Audiences
 
@@ -101,23 +105,23 @@ When your campaign is ready:
 
 When you push to LinkedIn, Abmatic AI sends:
 
-| Data Type | What LinkedIn Uses | Match Rate |
-|-----------|-------------------|------------|
-| **Company Domains** | Matched to LinkedIn Company Pages | 60-80% |
-| **Contact Emails** | Matched to LinkedIn member profiles | 30-50% |
-| **Company Names** | Secondary matching signal | Improves accuracy |
+| Data Type | What LinkedIn Uses |
+|-----------|-------------------|
+| **Company Domains** | Matched to LinkedIn Company Pages |
+| **Contact Emails** | Matched to LinkedIn member profiles |
+| **Company Names** | Secondary matching signal |
 
 ### Audience Requirements
 
 | Requirement | Details |
 |-------------|---------|
-| **Minimum Companies** | 300 matched companies for targeting |
+| **Minimum Companies** | LinkedIn requires a minimum matched-company count before targeting (check LinkedIn's current requirement) |
 | **Data Quality** | Valid company domains required |
-| **Processing Time** | 24-48 hours for full matching |
-| **Updates** | Automatic based on your sync settings |
+| **Processing Time** | Allow time for LinkedIn to finish matching after a push |
+| **Updates** | Based on your sync settings |
 
-:::info Match Rates Vary
-Match rates depend on your data quality and whether target companies have active LinkedIn Company Pages. Enterprise accounts typically match at higher rates than small businesses.
+:::info Match rates vary
+Match rates depend on your data quality and whether target companies have active LinkedIn Company Pages. Larger, well-established companies tend to match more reliably than small businesses.
 :::
 
 ## Running Effective LinkedIn Ads
@@ -176,7 +180,7 @@ View performance data directly in Abmatic AI:
 | **Impressions** | Times your ad was shown | Reach at target accounts |
 | **Clicks** | Clicks to your content | Interest signal |
 | **Spend** | Budget consumed | Cost efficiency |
-| **Cost Per Click** | Average spend per click | Benchmark against industry ($5-15 typical) |
+| **Cost Per Click** | Average spend per click | Benchmark cost efficiency over time |
 
 ### Multi-Channel Attribution
 
@@ -239,7 +243,7 @@ If fewer companies matched than expected:
 | Using email domains | Switch to company website domains (acme.com, not @acme.com) |
 | Small/new companies | These often lack LinkedIn Company Pages |
 | Invalid domains | Verify domains resolve to company websites |
-| Processing delay | Wait 48 hours for full matching |
+| Processing delay | Allow time for LinkedIn to finish matching |
 
 ### Audience Not Syncing
 
@@ -247,7 +251,7 @@ If fewer companies matched than expected:
 |-------|----------|
 | Integration disconnected | Re-authorize LinkedIn in Integrations |
 | Insufficient permissions | Ensure your LinkedIn account has Campaign Manager admin access |
-| Below minimum size | Add more accounts (need 300+ matched companies) |
+| Below minimum size | Add more accounts to clear LinkedIn's minimum matched-company threshold |
 | Sync error | Check the campaign status for error messages |
 
 ### Low Engagement

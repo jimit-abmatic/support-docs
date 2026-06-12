@@ -2,7 +2,7 @@
 id: agentic-flow
 title: Agentic Flow Campaigns
 sidebar_label: Agentic Flow
-sidebar_position: 7
+sidebar_position: 5
 ---
 
 # Agentic Flow Campaigns
@@ -19,8 +19,8 @@ Let AI agents craft truly 1:1 personalized outreach for every prospect. Agentic 
 | Static follow-ups | AI adjusts tone based on engagement signals |
 | Hours spent writing variations | Agents generate at scale in seconds |
 
-:::tip When to use Agentic Flow vs. Sequence
-Use **Agentic Flow** when you want AI agents to fully own the personalization—ideal for high-value target accounts where every message should be unique. Use **[AI Sequence](/campaigns/email-campaigns)** when you want AI to dynamically personalize your templates while you maintain control over the base messaging framework.
+:::tip Agentic Flow vs. Sequence
+**Agentic Flow** and **Sequence** are two distinct campaign types under the **Agentic** category, and they share the same Sequence editor and Audience tab. Use **Agentic Flow** ("Agents craft 1:1 personalized messages") when you want AI agents to fully own the personalization — ideal for high-value target accounts where every message should be unique. Use **[Sequence](/campaigns/email-campaigns)** (the AI Sequences product) when you want AI to dynamically personalize your templates while you keep control of the base messaging framework.
 :::
 
 ## How Agentic Flow Works
@@ -47,9 +47,9 @@ The AI agent uses your configured context—value propositions, tone guidelines,
 
 1. Navigate to **Campaigns**
 2. Click **+ Campaign**
-3. Under **Advanced**, select **Agentic Flow**
+3. In the **Agentic** column, select **Agentic Flow** ("Agents craft 1:1 personalized messages")
 
-![Create Campaign modal showing all campaign types including Agentic Flow under Advanced](/img/screenshots/campaign-create-wizard.png)
+![Create Campaign dialog with Agentic Flow in the Agentic column](/img/screenshots/campaigns-create-modal.png)
 
 4. Choose a **Contact Collection** to target
 5. Click **Create**
@@ -81,19 +81,22 @@ Rules filter the contacts in your selected collection. Only contacts matching yo
 
 1. Click the **Sequence** tab
 2. Click **+ Step** to add a sequence step
-3. Select the step type:
+
+![Agentic Flow Sequence tab with the Step / Step Type / Step Template / Created At / Updated At columns, a + STEP button, and a green ACTIVATE button](/img/screenshots/af-sequence-tab.png)
+
+The **Create Sequence Step** dialog walks through three steps — **Select Type**, **Create Template**, and **Set Trigger Delay**.
+
+3. In **Select Type**, choose the step type:
    - **Manual Email** — AI drafts, you review before sending
    - **Automatic Email** — AI personalizes and sends automatically
-   - **Call** — AI generates call script with prospect context
-   - **LinkedIn** — AI crafts personalized connection message
+   - **Call** — AI generates a call script with prospect context
+   - **LinkedIn** — AI crafts a personalized connection message
 
-![Agentic Flow Sequence tab showing the step grid with + Step and Activate buttons](/img/screenshots/agentic-flow-sequence-tab.png)
+![Create Sequence Step dialog showing the four step types: Manual Email, Automatic Email, Call, and LinkedIn](/img/screenshots/af-add-step.png)
 
-4. Create your base template—the AI will personalize it for each contact
-5. Set the **trigger delay** (days, hours, minutes after previous step)
+4. In **Create Template**, write your base template — the AI personalizes it for each contact
+5. In **Set Trigger Delay**, set the delay (days, hours, minutes after the previous step)
 6. Repeat for each step in your sequence
-
-![Create Sequence Step dialog showing all four step types: Manual Email, Automatic Email, Call, and LinkedIn](/img/screenshots/agentic-flow-add-step.png)
 
 ### Step 4: Activate and Monitor
 
@@ -116,6 +119,8 @@ Rules filter the contacts in your selected collection. Only contacts matching yo
 The quality of AI-generated messages depends on the context you provide. Configure your AI agent settings to get the best results.
 
 ### Setting Up Agentic Sequence Context
+
+The AI context for Agentic Flow is configured under the **Agentic Sequence** tab in Settings (this tab drives both Agentic Flow and Sequence campaigns, since they share the same sequence engine).
 
 1. Go to **Settings** → **AI Agents**
 2. Select the **Agentic Sequence** tab

@@ -7,300 +7,177 @@ sidebar_position: 5
 
 # Conversion Analytics
 
-Turn your conversion data into actionable insights. Conversion Analytics shows you exactly how personalization impacts your key business metrics—proving ROI with statistical confidence.
+The Conversions dashboard turns your conversion data into a clear comparison: how often personalized visitors convert versus a control group that saw the original experience. This page explains how to read it.
 
-![Conversions Dashboard](/img/screenshots/conversions-overview.png)
-*The Conversions dashboard shows conversion lift across all campaigns, comparing personalized vs control performance for each goal.*
+![The Conversions dashboard, showing conversion lift across campaigns](/img/screenshots/ca-lift.png)
 
-## Why Conversion Analytics Matters
+*The Conversions (last 60 days) tab. Each campaign row shows unique visitors and a conversion column per event, with lift shown as a colored chip.*
 
-| Without Analytics | With Abmatic Analytics |
-|-------------------|------------------------|
-| "We think personalization works" | "Personalization increased demos by 47%" |
-| Gut-feel decisions | Data-driven optimization |
-| Can't prove ROI to leadership | Clear lift metrics and significance |
-| Don't know which campaigns perform | Side-by-side comparison across all campaigns |
-| Unclear what to improve | Specific insights on what drives conversions |
+---
 
-## Understanding the Analytics Dashboard
+## The Conversions Tab
 
-### The Conversions Tab
+The main dashboard compares conversion performance across your campaigns over the last 60 days.
 
-The main dashboard shows conversion performance across all your campaigns:
+| Column | What It Shows |
+|--------|---------------|
+| **Campaigns** | Campaign name. Click the arrow (`>`) to expand a detailed breakdown. |
+| **Unique Visitors** | Unique visitors for the campaign, with a "vs N in control" note showing the control-group size. |
+| **[Event name]** | One column per active conversion event, showing the lift for that event. |
 
-| Column | What It Shows | Why It Matters |
-|--------|---------------|----------------|
-| **Campaign** | Campaign name with expand arrow | Click to see detailed breakdown |
-| **Unique Visitors** | Personalized vs control visitor counts | Shows your sample size for statistical validity |
-| **Goal Columns** | Lift percentage for each conversion goal | Positive = personalization is winning |
+The first row, **Non-personalized**, is the control baseline that every campaign's lift is measured against.
 
-### Reading the Metrics
+### Lift chips
 
-Each campaign row shows:
+Each event cell shows a chip with the conversion lift:
 
-- **Visitor Split**: "379 vs 364 in control" means 379 saw personalization, 364 saw the original
-- **Lift Chips**: Color-coded conversion lift (purple = positive, gray = negative/neutral)
-- **Expandable Details**: Click the arrow to see Conversions, Conversion Rate, and Lift breakdown
+- A **purple** chip means positive lift — personalized visitors convert at a higher rate than control.
+- A **gray** chip means neutral or negative lift.
 
-### Expanding Campaign Details
+Lift is shown with its sign and is capped at 999% so a very small control group can't distort the display.
 
-Click any campaign row to reveal:
+### Expanding a campaign
 
-| Metric | Personalized | Control |
-|--------|--------------|---------|
-| **Conversions** | Total goal completions | Control group completions |
-| **Conversion Rate** | Conversions / Visitors % | Control conversion % |
-| **Conversion Lift** | Improvement vs control | — |
+Click the arrow (`>`) on any campaign row to open a detailed breakdown. For each event, the detail grid shows three rows split into **Personalized** and **Control** columns:
 
-## Key Metrics Explained
+| Detail Row | Personalized | Control |
+|------------|--------------|---------|
+| **Conversions** | Goal completions among personalized visitors | Goal completions in the control group |
+| **Conversion Rate** | Conversions ÷ personalized visitors | Conversions ÷ control visitors |
+| **Conversion Lift** | Improvement over control | — |
 
-### Visitor Metrics
+---
 
-| Metric | Description | Example |
-|--------|-------------|---------|
-| **Personalized Visitors** | Visitors who saw your personalized experience | 379 visitors |
-| **Control Visitors** | Visitors who saw the original (for comparison) | 364 visitors |
-| **Total Visitors** | Combined personalized + control | 743 visitors |
-
-### Conversion Metrics
-
-| Metric | Description | Example |
-|--------|-------------|---------|
-| **Conversions** | Number of goal completions | 19 demo requests |
-| **Conversion Rate (CVR)** | Conversions ÷ Visitors × 100 | 5.0% |
-| **Unique Conversions** | Visitors who converted at least once | 18 unique conversions |
-
-### Lift Metrics
-
-| Metric | What It Measures | How to Interpret |
-|--------|------------------|------------------|
-| **Conversion Lift** | % improvement over control | +47% means personalization performs 47% better |
-| **Absolute Lift** | Percentage point difference | 5.0% vs 3.4% = 1.6 points |
-| **Relative Lift** | Percentage improvement | (5.0 - 3.4) / 3.4 = +47% |
-
-## Calculating Conversion Lift
-
-### The Formula
+## How Lift Is Calculated
 
 ```
 Conversion Lift = (Personalized CVR - Control CVR) / Control CVR × 100
 ```
 
-### Example Calculation
+**Example:**
 
 | Metric | Value |
 |--------|-------|
-| Personalized Visitors | 379 |
-| Personalized Conversions | 19 |
+| Personalized visitors | 379 |
+| Personalized conversions | 19 |
 | Personalized CVR | 5.01% |
-| Control Visitors | 364 |
-| Control Conversions | 12 |
+| Control visitors | 364 |
+| Control conversions | 12 |
 | Control CVR | 3.30% |
-| **Conversion Lift** | **(5.01 - 3.30) / 3.30 × 100 = +52%** |
+| **Conversion Lift** | **(5.01 − 3.30) / 3.30 × 100 = +52%** |
 
-### Interpreting Your Results
+### Interpreting lift
 
-| Lift Value | What It Means | Recommended Action |
-|------------|---------------|-------------------|
-| **+20% or higher** | Strong positive impact | Expand to more pages/audiences |
-| **+5% to +19%** | Moderate improvement | Continue running, look for optimizations |
-| **-5% to +5%** | No significant difference | Test different variations |
-| **Below -5%** | Control outperforming | Investigate and adjust personalization |
+| Lift Value | What It Means | Suggested Action |
+|------------|---------------|------------------|
+| **Clearly positive** | Personalization is winning | Keep running; consider expanding |
+| **Near zero** | Little measurable difference | Test a new variation |
+| **Negative** | Control is outperforming | Review the personalization |
 
-## Statistical Significance
+---
 
-### Why Significance Matters
+## Reading Results With Confidence
 
-Statistical significance tells you if your results are reliable—not just random chance:
+Lift is only meaningful once you have enough data. A campaign with a handful of visitors can swing wildly from day to day, so wait for a reasonable sample before acting.
 
-| Significance Level | What It Means | Should You Act? |
-|-------------------|---------------|-----------------|
-| **95%+ confidence** | Results are real with high certainty | Yes, make decisions |
-| **90-95% confidence** | Results likely real but some uncertainty | Consider acting, continue monitoring |
-| **Below 90%** | Need more data | Keep running the test |
+Things that help you reach a reliable read faster:
 
-### Time to Significance
+| What Helps | Why |
+|------------|-----|
+| **More traffic** | More data points = a steadier signal |
+| **High-intent pages** | Pricing and demo pages give clearer conversion signals |
+| **Bigger changes** | Larger differences are easier to detect than subtle tweaks |
 
-Abmatic estimates when you'll reach statistical significance based on:
+:::tip
+Review weekly rather than daily. Day-to-day noise tempts you into changing a campaign before the data has settled.
+:::
 
-- **Current traffic volume** — More visitors = faster results
-- **Baseline conversion rate** — Higher CVR = faster signal detection
-- **Lift magnitude** — Bigger differences reach significance sooner
+---
 
-**Tip**: Focus on high-traffic pages with measurable conversion events to reach significance quickly.
+## Personalized vs Control
 
-### Reaching Significance Faster
-
-| Strategy | Impact |
-|----------|--------|
-| **Increase traffic** | More data points = faster conclusions |
-| **Focus on high-value pages** | Pricing, demo pages have clearer signals |
-| **Test bigger changes** | Subtle tweaks take longer to measure |
-| **Use larger control groups** | 20-50% control provides more statistical power |
-
-## Personalized vs Control Comparison
-
-### How Control Groups Work
-
-Every personalization campaign automatically splits visitors:
+Every personalization campaign splits its audience into two groups so you always have a baseline:
 
 | Group | Experience | Purpose |
 |-------|------------|---------|
 | **Personalized** | Your customized content | What you're testing |
-| **Control** | Original, un-modified page | Baseline for comparison |
+| **Control** | The original, unmodified page | The baseline for comparison |
 
-### Configuring Control Percentage
+The **Non-personalized** row at the top of the table aggregates the control baseline. All per-campaign lift is measured against the control split for that campaign.
 
-| Control Size | Personalized % | Best For |
-|--------------|----------------|----------|
-| **10% (default)** | 90% | Maximizing personalization reach |
-| **20%** | 80% | Faster statistical significance |
-| **50%** | 50% | True A/B testing (equal split) |
+---
 
-**Pro Tip**: Start with 10% control, increase to 20-50% if you need faster statistical conclusions.
+## Main Event vs Other Events
 
-## Multi-Goal Analytics
+In the **Manage** tab you can mark one event as the **Main Event** — your primary conversion metric. The main event is the one to focus your decisions on; the others give supporting context.
 
-### Main Goal vs Supporting Goals
+| Event Role | Purpose | Example |
+|------------|---------|---------|
+| **Main Event** | Primary success metric | Demo requests |
+| **Other events** | Micro-conversions and secondary signals | Pricing page views, downloads |
 
-| Goal Type | Purpose | Example |
-|-----------|---------|---------|
-| **Main Goal** | Primary success metric, used for significance testing | Demo requests |
-| **Supporting Goals** | Track micro-conversions and secondary actions | Pricing page views, PDF downloads |
+Tracking several events lets you see the whole funnel — which steps move and which stall — while still having one clear headline metric. See [Creating Conversion Goals](/conversions/create-goals) for how to set the Main Event.
 
-### Why Track Multiple Goals
+---
 
-- **See the full funnel**: Track awareness → interest → conversion
-- **Identify drop-offs**: Find where visitors abandon
-- **Understand behavior**: What actions lead to conversions?
+## What's Excluded From the Table
 
-### Example Goal Hierarchy
+Not every campaign type appears in the Conversions table:
 
-| Funnel Stage | Goal | Metric Type |
-|--------------|------|-------------|
-| Awareness | Page views | Supporting |
-| Engagement | Scroll depth, time on page | Supporting |
-| Interest | Pricing page visit | Supporting |
-| Intent | Contact form started | Supporting |
-| **Conversion** | **Demo request submitted** | **Main** |
+- **LinkedIn** and **Salesforce** campaign rows are filtered out of this view.
 
-## Attribution Models
+All other campaigns — website personalization, widgets, sequences, and so on — show up as expandable rows.
 
-Abmatic tracks how campaigns contribute to conversions:
+---
 
-### First Touch Attribution
+## Time Window
 
-- Credits the first campaign a visitor encountered
-- Best for: Understanding which campaigns create awareness
+The Conversions dashboard shows the **last 60 days** of data. When you compare against another tool, line up the same date range — different attribution windows are the most common reason two systems show different totals.
 
-### Last Touch Attribution
-
-- Credits the final campaign before conversion
-- Best for: Understanding which campaigns close deals
-
-### Multi-Touch Attribution
-
-- Credits all campaigns proportionally
-- Best for: Understanding the full customer journey
-
-## Segment Analysis
-
-### Breaking Down Performance
-
-Analyze conversions by different dimensions:
-
-| Segment | What You Learn |
-|---------|----------------|
-| **By Industry** | Which verticals respond best to personalization |
-| **By Company Size** | Enterprise vs SMB conversion differences |
-| **By Campaign** | Which campaigns drive the most conversions |
-| **By Time Period** | Trends and seasonality |
-
-### Using Segment Insights
-
-1. **Find top performers**: Which segments convert best?
-2. **Double down**: Increase personalization for high-performing segments
-3. **Investigate laggards**: Why are some segments underperforming?
-4. **Optimize**: Adjust messaging for underperforming segments
+---
 
 ## Best Practices
 
-### Do This
+| Do | Why |
+|----|-----|
+| Wait for a meaningful sample | Premature decisions lock in false conclusions |
+| Focus on the main event | Secondary events give context, not the headline |
+| Check the control-group size | A tiny control group makes lift unreliable |
+| Review weekly | Catch trends without overreacting to daily noise |
 
-| Practice | Why |
-|----------|-----|
-| **Wait for significance** | Premature decisions lead to false conclusions |
-| **Focus on main goal** | Secondary metrics provide context, not decisions |
-| **Check sample size** | Small samples can show misleading results |
-| **Review weekly** | Catch trends without over-reacting to daily noise |
-| **Document learnings** | Build institutional knowledge of what works |
+| Avoid | Consequence |
+|-------|-------------|
+| Stopping a test early | You may lock in a false positive or negative |
+| Reading lift on tiny samples | The numbers swing and mislead |
+| Ignoring outside factors | Holidays and promotions distort results |
 
-### Avoid This
-
-| Mistake | Consequence |
-|---------|-------------|
-| **Stopping tests early** | May lock in false positive/negative results |
-| **Over-segmenting** | Reduces sample size, delays significance |
-| **Ignoring context** | External factors (seasonality, promotions) affect results |
-| **Testing everything at once** | Can't attribute results to specific changes |
-| **Only looking at winners** | Losers teach you what doesn't work |
-
-### Acting on Your Data
-
-| Result | Recommended Action |
-|--------|-------------------|
-| **Significant positive lift** | Expand personalization to more pages/audiences |
-| **Not yet significant** | Continue running, don't make changes |
-| **Significant negative lift** | Pause campaign, investigate root cause |
-| **No lift after 2+ weeks** | Try different variations or messaging |
-
-## Time Period Analysis
-
-### Viewing Trends
-
-The Conversions dashboard shows data for the last 60 days by default. Track:
-
-- **Daily patterns**: Weekday vs weekend differences
-- **Weekly trends**: Is performance improving?
-- **Monthly comparison**: Month-over-month growth
-
-### Seasonal Considerations
-
-- **Account for external factors**: Holidays, promotions, news events
-- **Compare similar periods**: This month vs same month last year
-- **Watch for anomalies**: Sudden spikes or drops need investigation
+---
 
 ## Troubleshooting
 
-### No Conversions Showing
+### No conversions showing
 
-| Symptom | Likely Cause | Solution |
-|---------|--------------|----------|
-| Zero conversions for all campaigns | Goals not configured | Create goals in Manage tab |
-| Zero for specific campaign | No traffic or goal mismatch | Check audience targeting and goal setup |
-| Conversions suddenly stopped | Script removed or broken | Verify script installation |
+| Symptom | Likely Cause | What to Do |
+|---------|--------------|-----------|
+| Zero conversions everywhere | No events configured | Create events in the **Manage** tab |
+| Zero for one campaign | No traffic or targeting mismatch | Check audience targeting and event setup |
+| Conversions stopped | Script removed or broken | Verify the Abmatic AI script is installed |
 
-### Inconsistent Numbers
+### Numbers look off
 
 | Issue | Cause | Solution |
 |-------|-------|----------|
-| Numbers don't match other tools | Different attribution windows | Compare same date ranges |
-| Duplicate conversions | Multiple goal triggers | Review goal configuration |
-| Missing conversions | Goal not firing | Test goal with browser DevTools |
+| Doesn't match another tool | Different attribution windows | Compare the same date range |
+| Duplicate conversions | An action counted twice | Check that a form isn't tracked by both a Click Event and a Page View |
+| Lift looks unstable | Small sample | Keep running; avoid checking daily |
 
-### Significance Not Reached
+---
 
-| Issue | Why | Solution |
-|-------|-----|----------|
-| Taking too long | Low traffic or small lift | Increase traffic or test bigger changes |
-| Fluctuating results | Not enough data | Keep running, avoid checking daily |
-| Stuck at low confidence | Lift may be truly small | Accept smaller lift or try new approach |
+## Related
 
-## Related Features
-
-| Feature | Relationship to Analytics |
-|---------|--------------------------|
-| [Creating Goals](/conversions/create-goals) | Set up what to track |
-| [Event Tracking](/conversions/event-tracking) | Configure conversion events |
+| Page | Relationship |
+|------|--------------|
+| [Creating Conversion Goals](/conversions/create-goals) | Set up what to track and pick the Main Event |
+| [Event Tracking](/conversions/event-tracking) | The event data model and integrations |
 | [A/B Testing](/campaigns/ab-testing) | Run controlled experiments |
-| [Campaign Performance](/analytics/campaign-performance) | Broader campaign metrics |
+| [Conversions Overview](/conversions/overview) | The dashboard and tabs |

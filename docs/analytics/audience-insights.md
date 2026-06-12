@@ -2,11 +2,16 @@
 id: audience-insights
 title: Audience Insights
 sidebar_label: Audience Insights
+sidebar_position: 5
 ---
 
 # Audience Insights
 
-Turn anonymous website traffic into actionable intelligence. Abmatic's Audience Insights gives you a complete view of which companies are visiting your site, what content resonates with them, and when they're ready to buy—so you can prioritize the right accounts and accelerate your pipeline.
+Turn anonymous website traffic into a clearer picture of your audience: which companies are visiting, what content resonates, and which accounts are showing intent.
+
+:::info Audience Insights is built from Reports
+There isn't a separate "Audience Insights" screen in the app. You get these insights by building custom **Reports** — using Account, Contact, and Unique Visitor report types — and reading them with grouping, filtering, and charts. This page explains how to frame those reports. For the mechanics of building reports, see [Reports](/analytics/reports).
+:::
 
 ## Why Audience Insights Matters
 
@@ -22,7 +27,8 @@ Understanding your audience is the foundation of effective ABM. With Audience In
 
 Navigate to **Analytics > Reports** to access your audience data. Create custom reports to analyze visitor behavior, engagement trends, and account activity.
 
-![Analytics Reports - View and create reports for audience insights](/img/screenshots/analytics-reports.png)
+![The Analytics Reports list, where you build the Account, Contact, and Unique Visitor reports that power audience insights](/img/screenshots/ai-reports.png)
+*Audience insights come from the Reports you build here — there's no separate Audience Insights screen. Use Account, Contact, and Unique Visitor report types, then group and filter to answer your questions.*
 
 ## Account Activity Overview
 
@@ -60,14 +66,18 @@ See which industries show the most interest in your solution. Use this to:
 
 ### By Company Size
 
-Understand whether you're attracting the right-sized companies:
+Understand whether you're attracting the right-sized companies. Group or filter an Account report by company size to see how your traffic breaks down. As a rough way to think about the segments:
 
-| Segment | Employee Count | What It Means |
+| Segment | Employee Count (approx.) | What It Means |
 |---------|---------------|---------------|
 | **Enterprise** | 1,000+ | Large deal potential, longer sales cycles |
-| **Mid-Market** | 200-999 | Balanced opportunity and sales velocity |
-| **SMB** | 50-199 | Faster decisions, volume play |
-| **Small Business** | <50 | High volume, self-serve potential |
+| **Mid-Market** | 200–999 | Balanced opportunity and sales velocity |
+| **SMB** | 50–199 | Faster decisions, volume play |
+| **Small Business** | Under 50 | High volume, self-serve potential |
+
+:::note
+These bands are a way to think about your audience, not fixed filter labels. The actual company-size values available in Account data come from the underlying `size` field — group by it and bucket as makes sense for your business.
+:::
 
 ### By Location
 
@@ -142,25 +152,7 @@ Track key metrics across segments to optimize your strategy:
 
 ## Exporting Data
 
-### Available Exports
-
-Take your audience data wherever you need it:
-
-| Export Type | Best For |
-|------------|----------|
-| **Account activity (CSV)** | CRM enrichment, sales prospecting lists |
-| **Engagement summary (PDF)** | Executive reporting, stakeholder updates |
-| **Raw visit data** | Custom analysis, data warehouse integration |
-
-### Scheduling Reports
-
-Automate your reporting workflow:
-
-1. Navigate to **Analytics > Reports**
-2. Click **Create Report**
-3. Select the audience metrics you need
-4. Set your schedule (weekly for active campaigns, monthly for executive reviews)
-5. Choose delivery: email for stakeholders, Slack for real-time team updates
+To take your audience data elsewhere, open the report and use **Export** to download it as **CSV**. The export includes your visible columns, applied filters, and current sort order — useful for CRM enrichment, prospecting lists, or analysis in another tool. See [Reports](/analytics/reports) for the export steps.
 
 ## Putting Insights Into Action
 
@@ -192,4 +184,4 @@ Turn engagement data into closed deals:
 
 - [Campaign Performance](/analytics/campaign-performance) — Measure how your campaigns drive engagement
 - [Dashboards](/analytics/dashboards) — Build custom views of your key metrics
-- [Reports](/analytics/reports) — Create and schedule detailed reports
+- [Reports](/analytics/reports) — Build and export detailed reports

@@ -10,7 +10,7 @@ sidebar_position: 1
 
 Welcome to Abmatic AI — the account-based marketing platform that helps you identify, engage, and convert your best-fit accounts. Turn anonymous website visitors into pipeline opportunities with AI-powered personalization and intelligent automation.
 
-![Abmatic AI Dashboard](/img/screenshots/home-dashboard.png)
+![Abmatic AI Home Overview with summary cards and recently viewed panels](/img/screenshots/intro-home.png)
 
 ---
 
@@ -23,7 +23,7 @@ Welcome to Abmatic AI — the account-based marketing platform that helps you id
         <h3>New to Abmatic?</h3>
       </div>
       <div className="card__body">
-        <p>Get up and running in 15 minutes with our quick start guide.</p>
+        <p>Get up and running quickly with our step-by-step quick start guide.</p>
       </div>
       <div className="card__footer">
         <a className="button button--primary button--block" href="/getting-started/quick-start">Quick Start Guide</a>
@@ -64,12 +64,14 @@ Welcome to Abmatic AI — the account-based marketing platform that helps you id
 
 | Capability | What It Does | Who Uses It | Learn More |
 |------------|--------------|-------------|------------|
-| **Visitor Identification** | See which companies visit your website, even without form fills | Marketing, Sales | [Learn more](/visitor-tracking/company-identification) |
-| **Contact Reveal** | Identify specific people visiting your site | Marketing, Sales | [Learn more](/visitor-tracking/contact-reveal) |
+| **Visitor Reveal** | See which companies and contacts visit your website, even without form fills | Marketing, Sales | [Learn more](/visitor-tracking/company-identification) |
 | **Website Personalization** | Show different content to different visitors based on company, industry, or behavior | Marketing | [Learn more](/campaigns/website-personalization) |
-| **AI Agents** | Automate prospecting and ABM campaigns with AI-powered agents | Marketing, Sales | [Learn more](/ai-agents/ai-agents-overview) |
+| **Agentic Chat** | An AI chat widget that answers visitor questions, books meetings, and hands off to your team | Marketing, Sales | [Learn more](/campaigns/agentic-chat) |
+| **AI Agents** | Get help from in-app AI assistants (Clara for ABM, Alex for SDR) | Marketing, Sales | [Learn more](/ai-agents/ai-agents-overview) |
+| **Oracle (Autonomous Agent)** | Set goals and let Abmatic AI propose and run actions, with your approval | Marketing, Leadership | [Learn more](/ai-agents/oracle-overview) |
 | **CRM Integration** | Sync data with Salesforce, HubSpot, and other CRMs | Marketing Ops, RevOps | [Learn more](/integrations/overview) |
-| **Advertising Audiences** | Push target accounts to LinkedIn and Google Ads | Marketing | [Learn more](/audiences/linkedin-dmp) |
+| **Advertising** | Reach target accounts on LinkedIn, Google Ads, and OpenAI Ads | Marketing | [Learn more](/campaigns/openai-ads) |
+| **Conversions** | Track demos, trials, and form fills, including Demo Booked details | Marketing, RevOps | [Learn more](/conversions/overview) |
 | **Campaign Analytics** | Measure how campaigns influence pipeline and revenue | Marketing, Leadership | [Learn more](/analytics/overview) |
 
 ---
@@ -78,10 +80,11 @@ Welcome to Abmatic AI — the account-based marketing platform that helps you id
 
 ### I'm brand new to Abmatic
 
-1. [Quick Start Guide](/getting-started/quick-start) - Set up your account in 15 minutes
-2. [Install the Tracking Script](/getting-started/install-script) - Start identifying visitors
-3. [Create Your First Campaign](/getting-started/first-campaign) - Launch personalization
-4. [Use Cases](/getting-started/use-cases) - See what you can achieve
+1. [Quick Start Guide](/getting-started/quick-start) - Set up your account step by step
+2. [Navigating Abmatic AI](/getting-started/navigation) - Learn the sidebar, search, and top bar
+3. [Install the Tracking Script](/getting-started/install-script) - Start identifying visitors
+4. [Create Your First Campaign](/getting-started/first-campaign) - Launch personalization
+5. [Use Cases](/getting-started/use-cases) - See what you can achieve
 
 ### I need to set up a CRM integration
 
@@ -99,16 +102,17 @@ Welcome to Abmatic AI — the account-based marketing platform that helps you id
 
 ### I want to see who's visiting my website
 
-1. [Company Identification](/visitor-tracking/company-identification) - How it works
+1. [Company Identification](/visitor-tracking/company-identification) - How Visitor Reveal works
 2. [Contact Reveal](/visitor-tracking/contact-reveal) - Identify specific people
 3. [Audiences](/audiences/overview) - Build lists from visitors
 
 ### I want to use AI Agents
 
-1. [AI Agents Overview](/ai-agents/ai-agents-overview) - Meet Alex and Clara
+1. [AI Agents Overview](/ai-agents/ai-agents-overview) - Meet Clara and Alex
 2. [Configuration Guide](/ai-agents/ai-agents-configuration) - Set up your context
-3. [AI SDR Agent](/ai-agents/sdr-agent) - Automated prospecting
-4. [AI ABM Agent](/ai-agents/abm-agent) - Campaign automation
+3. [AI SDR Agent](/ai-agents/sdr-agent) - Prospecting help
+4. [AI ABM Agent](/ai-agents/abm-agent) - Campaign help
+5. [Oracle Overview](/ai-agents/oracle-overview) - Goals and approvals for the autonomous agent
 
 ---
 
@@ -160,6 +164,7 @@ You'll handle implementation and custom integrations:
 - [Install Tracking Script](/getting-started/install-script)
 - [Accounts API](/api/api-accounts)
 - [API Reference](/api/api-overview)
+- [API Keys](/api/api-keys)
 - [Script Troubleshooting](/troubleshooting/script-issues)
 
 </details>
@@ -170,17 +175,18 @@ You'll handle implementation and custom integrations:
 
 ```
                     ┌─────────────────────────────────────┐
-                    │         YOUR WEBSITE                │
-                    │    (with Abmatic tracking script)   │
+                    │         YOUR WEBSITE                 │
+                    │    (with Abmatic tracking script)    │
                     └───────────────┬─────────────────────┘
                                     │
                                     ▼
-┌─────────────┐            ┌─────────────────┐            ┌─────────────┐
-│  SALESFORCE │◄──────────►│   ABMATIC AI    │◄──────────►│  LINKEDIN   │
-│   HUBSPOT   │   Sync     │                 │    Push    │  GOOGLE ADS │
-└─────────────┘            │  - Identify     │            └─────────────┘
-                           │  - Personalize  │
+┌─────────────┐            ┌─────────────────┐            ┌──────────────┐
+│  SALESFORCE │◄──────────►│   ABMATIC AI    │◄──────────►│   LINKEDIN   │
+│   HUBSPOT   │   Sync     │                 │    Push    │  GOOGLE ADS  │
+└─────────────┘            │  - Reveal       │            │  OPENAI ADS  │
+                           │  - Personalize  │            └──────────────┘
                            │  - AI Agents    │
+                           │  - Oracle       │
                            │  - Measure      │
                            └─────────────────┘
 ```
@@ -222,9 +228,13 @@ You'll handle implementation and custom integrations:
 
 ## What's New
 
-Check out our latest features and updates in the [What's New](/changelog) section.
+Check out our latest features and updates in the [Changelog](/changelog).
 
 Recent highlights:
-- **AI Agents GA** - Alex (SDR) and Clara (ABM) now generally available
-- **Enhanced Dashboards** - Custom widget creation and sharing
-- **Google Customer Match** - Direct audience sync to Google Ads
+- **Oracle (Autonomous Agent)** - Set goals and approve agent-proposed actions from the Oracle Inbox *(available on accounts where it's enabled)*
+- **Agentic Chat handoffs** - The chat widget can book a meeting, send a thank-you, or show a HubSpot form, plus an AI Conversation Summary view
+- **OpenAI Ads** - Reach buyers inside ChatGPT conversations as a campaign type
+- **Visitor Reveal** - Identified companies and contacts, with Reveal Confidence buckets (Very High to Very Low)
+- **Demo Booked tracking** - Demo Booked details surface on accounts and in Analytics
+- **API Keys** - Generate and manage API keys from Settings
+- **Customizable Home Dashboard** - Build a personal dashboard of report widgets on your Home page

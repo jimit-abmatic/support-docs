@@ -7,10 +7,14 @@ sidebar_position: 3
 
 # API Keys
 
-API keys provide secure, programmatic access to your Abmatic data. Each key is scoped to a single account and grants read access to all account data available via the API.
+API keys provide secure, programmatic access to your Abmatic AI data. Each account has a **single active key** that grants read access to all account data available via the API.
 
 :::note Enterprise Feature
 API access is available on Enterprise plans. Contact support@abmatic.ai to enable API access for your account.
+:::
+
+:::info Managing keys in the app
+This page is the **developer reference** for the API key endpoints. If you just want to create, regenerate, or revoke a key from the dashboard, see the [API Keys settings guide](/settings/api-keys), which walks through the UI step by step.
 :::
 
 ---
@@ -19,11 +23,15 @@ API access is available on Enterprise plans. Contact support@abmatic.ai to enabl
 
 ### Via the Dashboard
 
-1. Log in to [Abmatic](https://app.abmatic.ai)
-2. Navigate to **Settings** > **Account**
-3. Scroll to the **API Keys** section
-4. Click **Generate API Key**
-5. **Copy your key immediately** — it will only be shown once
+1. Log in to [Abmatic AI](https://app.abmatic.ai)
+2. Click **Settings** in the left sidebar
+3. Open the **API Keys** tab in the top navigation (`/settings/api-keys`)
+4. Click **Generate** (if you don't have a key yet)
+5. **Copy your key immediately** — the full value is only shown once
+
+![The API Keys tab in Settings, showing the Active API Key card with its prefix and created date, the Regenerate and Revoke buttons, and the Base URL and rate limit below](/img/screenshots/apikeys-ui.png)
+
+Once a key exists, the page shows an **Active API Key** card with the key **prefix** (e.g. `abm_VlAa...`) and its created date, plus **Regenerate** and **Revoke** buttons. For full UI details, see the [API Keys settings guide](/settings/api-keys).
 
 ### Via the API (for automation)
 
@@ -113,9 +121,11 @@ If your key is compromised or you need to rotate it, revoke it immediately:
 
 ### Via the Dashboard
 
-1. Navigate to **Settings** > **Account** > **API Keys**
-2. Click **Revoke Key**
+1. Go to **Settings** > **API Keys** (`/settings/api-keys`)
+2. Click **Revoke** on the Active API Key card
 3. Confirm the revocation
+
+To replace a key instead of removing it, click **Regenerate** — this invalidates the old key and issues a new one in a single step.
 
 ### Via the API
 
@@ -143,9 +153,9 @@ Revoking a key is immediate and irreversible. All integrations using the revoked
 
 To rotate your key (recommended every 365 days):
 
-1. **Generate a new key** — this automatically replaces the old key
+1. Click **Regenerate** on the API Keys settings page — this automatically replaces the old key
 2. **Update your integrations** with the new key
-3. The old key is invalidated immediately upon generating a new one
+3. The old key is invalidated immediately when the new one is generated
 
 :::tip Rotation Best Practice
 Set a calendar reminder to rotate your API key every 365 days. When rotating:
@@ -225,5 +235,13 @@ const apiKey = process.env.ABMATIC_API_KEY;
 | `DELETE` | `/account/api-key` | JWT | Revoke current key |
 
 :::info
-These management endpoints use your regular Abmatic session token (JWT), not the API key itself. You must be logged into the Abmatic dashboard or have a valid session to manage keys.
+These management endpoints use your regular Abmatic AI session token (JWT), not the API key itself. You must be logged into the Abmatic AI dashboard or have a valid session to manage keys.
 :::
+
+---
+
+## Related
+
+- [API Keys (Settings)](/settings/api-keys) — Create, regenerate, and revoke keys from the dashboard UI
+- [API Overview](/api/api-overview) — Base URL, authentication, rate limits, and error responses
+- [Accounts API](/api/api-accounts) — The `GET /v1/accounts` endpoint reference

@@ -7,13 +7,16 @@ sidebar_position: 3
 
 # CRM Sync Troubleshooting
 
-Keep your sales and marketing data flowing smoothly. This guide helps you quickly diagnose and resolve sync issues with Salesforce, HubSpot, Pipedrive, and other CRM integrations.
+Keep your sales and marketing data flowing smoothly. This guide helps you diagnose and resolve sync issues with Salesforce, HubSpot, Pipedrive, ActiveCampaign, and other CRM integrations.
 
-:::tip Quick Fix: 80% of Sync Issues
-Most CRM sync problems are solved by **reconnecting your CRM**. If you're seeing errors, try [reconnecting first](#reconnecting-your-crm)—it takes 30 seconds and preserves all your settings.
+:::tip Quick Fix for most sync issues
+Most CRM sync problems are solved by **re-authorizing your CRM**. If you're seeing errors, try [reconnecting first](#reconnecting-your-crm) — it's quick and preserves your settings.
 :::
 
-![CRM Integration Status](/img/screenshots/integrations-crm-status.png)
+Your CRMs live under **Settings → Integrations**, in the **Customer Relationship Management (CRM)** section. Each CRM is a card showing its status (**Active** or **Inactive**) with **SETTINGS**, **DISABLE**/**AUTHORIZE** buttons. You can drag the cards to set the order in which CRMs are used.
+
+![Settings Integrations page showing CRM cards for Salesforce, HubSpot, ActiveCampaign, and Pipedrive with Active/Inactive status and SETTINGS buttons](/img/screenshots/ts-crm-status.png)
+*Settings → Integrations: each connected CRM shows an **Active** or **Inactive** status, a **SETTINGS** button, and an enable/disable control. Communications tools (Gmail, Slack, Google Calendar, Zoom) appear in the section below.*
 
 ## Quick Diagnostic
 
@@ -46,9 +49,9 @@ Find your symptom below and jump directly to the solution:
 
 **Solution:**
 
-1. Go to **Integrations** in Abmatic
-2. Find Salesforce and click **Disconnect**
-3. Click **Connect** to re-authorize
+1. Go to **Settings → Integrations** in Abmatic
+2. Find the Salesforce card and click **DISABLE** (this clears the connection)
+3. Click **AUTHORIZE** to re-authorize
 4. Log in with a user who has API access and appropriate permissions
 
 :::tip Best Practice: Use a Dedicated Integration User
@@ -79,7 +82,7 @@ Create a dedicated "Abmatic Integration" user in Salesforce instead of using a p
 3. Ensure **API Enabled** is checked (most common issue)
 4. Verify access to required objects: Accounts, Contacts, Leads, Opportunities
 5. For custom objects, add explicit CRUD permissions
-6. Save changes and [reconnect](#reconnecting-your-crm) in Abmatic
+6. Save changes and [re-authorize](#reconnecting-your-crm) in Abmatic
 
 ### Salesforce API Limits
 
@@ -131,11 +134,11 @@ Create a dedicated "Abmatic Integration" user in Salesforce instead of using a p
 
 **Solution:**
 
-1. Go to **Integrations** in Abmatic
-2. Click **Disconnect** on HubSpot
-3. Click **Connect** and log in with a **Super Admin** user
-4. **Grant all requested permissions** during the OAuth flow—don't skip any
-5. Verify connection shows "Connected" status
+1. Go to **Settings → Integrations** in Abmatic
+2. Click **DISABLE** on the HubSpot card
+3. Click **AUTHORIZE** and log in with a **Super Admin** user
+4. **Grant all requested permissions** during the OAuth flow — don't skip any
+5. Verify the HubSpot card shows **Active** status
 
 :::info Why Super Admin?
 HubSpot's OAuth inherits permissions from the connecting user. A Super Admin ensures all scopes are available. You can later manage access with HubSpot's Connected Apps settings.
@@ -173,17 +176,17 @@ HubSpot's OAuth inherits permissions from the connecting user. A Super Admin ens
 
 | Check | Where to Verify | Common Fix |
 |-------|-----------------|------------|
-| CRM connected? | Integrations page shows "Connected" | Reconnect CRM |
-| Objects selected? | Integrations > Sync Settings | Enable desired objects |
-| First sync complete? | Check "Last Synced" timestamp | Wait for initial sync |
-| Records exist? | Verify data in CRM | Add records to CRM first |
+| CRM connected? | Settings → Integrations card shows **Active** | Re-authorize the CRM |
+| Objects selected? | CRM **SETTINGS** → Sync Settings | Enable the objects you want to sync |
+| First sync complete? | Check the "Last Synced" timestamp | Wait for the initial sync |
+| Records exist? | Verify data in your CRM | Add records to the CRM first |
 
 **How to Diagnose:**
 
-1. Go to **Integrations** > your CRM > **Sync Logs**
-2. Check the "Last Synced" timestamp—if it's old, the sync may be stuck
+1. Go to **Settings → Integrations**, open your CRM's **SETTINGS**, and find **Sync Logs**
+2. Check the "Last Synced" timestamp — if it's old, the sync may be stuck
 3. Look for error messages (red text or warning icons)
-4. Verify sync status shows "Active" not "Paused"
+4. Verify the CRM card shows **Active**, not Inactive
 
 ### Specific Records Are Missing
 
@@ -233,7 +236,7 @@ Duplicates occur when Abmatic can't match incoming data to existing records. Thi
 
 **1. Configure Strong Matching Rules**
 
-In **Integrations** > **Sync Settings** > **Matching Rules**, set primary and secondary match fields:
+Open the CRM's **SETTINGS** under **Settings → Integrations**, then go to **Sync Settings → Matching Rules** and set primary and secondary match fields:
 
 | Object | Primary Match | Secondary Match | Why These Fields |
 |--------|--------------|-----------------|------------------|
@@ -243,11 +246,13 @@ In **Integrations** > **Sync Settings** > **Matching Rules**, set primary and se
 
 **2. Use Smart Sync Behavior**
 
+Each field mapping has a sync behavior:
+
 | Field Behavior | Use When | Example |
 |----------------|----------|---------|
-| **Fill** | For identifiers | Only populate empty email fields |
-| **Overwrite** | For updateable data | Always update job title from CRM |
-| **Ignore** | For system fields | Never overwrite CRM record owner |
+| **Fill** | For identifiers and fields you only want to populate once | Only fill empty email fields; never change an existing value |
+| **Overwrite** | For data that should always reflect the latest CRM value | Always update job title from the CRM |
+| **Don't sync (Ignore)** | For system fields you never want changed | Never overwrite the CRM record owner |
 
 **3. Clean Data Before Initial Sync**
 
@@ -310,13 +315,13 @@ If regular syncs are taking too long:
 
 ### Setting Up Field Mappings
 
-1. Go to **Integrations** > your CRM > **Field Mapping**
+1. Go to **Settings → Integrations**, open your CRM's **SETTINGS**, and select **Field Mapping**
 2. Click **Add Field Mapping**
 3. Select:
    - **Source field** (from your CRM)
-   - **Destination field** (in Abmatic)
-   - **Sync direction** (CRM→Abmatic, Abmatic→CRM, or both)
-   - **Behavior** (Fill, Overwrite, or Ignore)
+   - **Destination field** (in Abmatic AI)
+   - **Sync direction** (CRM → Abmatic AI, Abmatic AI → CRM, or both)
+   - **Behavior** (Fill, Overwrite, or Don't sync / Ignore)
 4. Save and trigger a test sync
 
 :::tip Testing Field Mappings
@@ -331,12 +336,12 @@ When in doubt, reconnecting often resolves issues. Here's how to do it safely:
 
 **Step-by-step:**
 
-1. Go to **Integrations**
-2. Click **Disconnect** on your CRM
-3. **Wait 30 seconds** (this clears cached tokens)
-4. Click **Connect** and complete the OAuth flow
+1. Go to **Settings → Integrations**
+2. Click **DISABLE** on your CRM card
+3. **Wait a moment** (this clears cached tokens)
+4. Click **AUTHORIZE** and complete the OAuth flow
 5. Review sync settings (they're preserved automatically)
-6. Click **Sync Now** to verify everything works
+6. Trigger a sync to verify everything works
 
 :::warning Your Data Is Safe
 Disconnecting does **not** delete any data. All previously synced records remain in both systems. Only the connection token is removed.
@@ -350,8 +355,8 @@ Sync logs are your best diagnostic tool for understanding what's happening:
 
 **How to access:**
 
-1. Go to **Integrations** > click your CRM card
-2. Click **Sync Logs** or **View History**
+1. Go to **Settings → Integrations** and open your CRM's **SETTINGS**
+2. Open **Sync Logs** (also shown as **View History**)
 3. Filter by date range or status (Success, Error, Warning)
 
 **What to look for:**
@@ -381,5 +386,5 @@ If you've tried the solutions above and still have issues:
 - Configuration questions: Within 48 hours
 
 :::tip Before Contacting Support
-Take a screenshot of your **Integrations** page showing the connection status and any error messages—this speeds up troubleshooting significantly.
+Take a screenshot of your **Settings → Integrations** page showing the CRM's status and any error messages — this speeds up troubleshooting significantly.
 :::

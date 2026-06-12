@@ -55,15 +55,19 @@ Your API key provides full access to your ActiveCampaign account. Never share it
 
 ### Step 2: Connect in Abmatic
 
-1. Navigate to **Integrations** in the left sidebar
-2. Find the **ActiveCampaign** card in the CRM section
-3. Click **Authorize**
+1. Click **Settings** in the left sidebar, then open the **Integrations** tab
+2. Find the **ActiveCampaign** card in the **Customer Relationship Management (CRM)** section
+3. Click **Authorize** — because ActiveCampaign uses an API key (not OAuth), this opens a small dialog instead of redirecting you
 4. Enter your **API URL** in the URL field
 5. Enter your **API Key** in the API key field
-6. Click **Integrate** to complete the connection
+6. Click **Integrate** to save the credentials and complete the connection
 
-![ActiveCampaign on the Integrations page](/img/screenshots/integrations-hub.png)
-*Find ActiveCampaign in the CRM integrations section*
+![ActiveCampaign card in the CRM section of the Integrations tab](/img/screenshots/ac-connect.png)
+*ActiveCampaign appears in the Customer Relationship Management (CRM) row. Clicking Authorize opens the API URL + API Key dialog; once saved, the card shows a green "Active" badge.*
+
+:::note Two-step button flow
+ActiveCampaign is the one CRM that connects with an API key rather than a browser sign-in. **Authorize** opens the credentials dialog, and **Integrate** saves them. There is no ActiveCampaign login redirect.
+:::
 
 ### Step 3: Configure Your Sync Settings
 
@@ -73,7 +77,7 @@ Once connected, click **Settings** on the ActiveCampaign card to configure sync 
 
 ### Object Mapping
 
-| ActiveCampaign Object | Abmatic Object | Match Key |
+| ActiveCampaign Object | Abmatic AI Object | Match Key |
 |-----------------------|----------------|-----------|
 | Contacts | Contacts | Email |
 | Accounts (Organizations) | Accounts | Website/Domain |
@@ -101,24 +105,32 @@ Once connected, click **Settings** on the ActiveCampaign card to configure sync 
 
 ## Configuring Sync Settings
 
-### Sync Direction Options
-
-Configure how data flows between systems:
-
-| Direction | What It Does | Best For |
-|-----------|--------------|----------|
-| **Don't sync** | No automatic data transfer | Fields you manage separately |
-| **Fill** | Only sync if destination is empty | Enriching without overwriting |
-| **Overwrite** | Always sync latest value | Keeping data in sync |
-
 ### Available Tabs
+
+The ActiveCampaign Settings dialog has a tab for each object type:
 
 | Tab | What You Configure |
 |-----|-------------------|
 | **Accounts** | Organization sync settings and field mapping |
 | **Contacts** | Contact sync settings and field mapping |
-| **Opportunities** | Deal sync settings (read from ActiveCampaign) |
+| **Opportunities** | Deal data imported from ActiveCampaign (read-only in Abmatic AI) |
 | **Activity Log** | View sync history and troubleshoot issues |
+
+### Field Sync Modes
+
+Each mapped field in the **Set field mapping** table has a per-field **Sync to CRM** mode that controls how data flows into ActiveCampaign:
+
+| Mode | What It Does | Best For |
+|------|--------------|----------|
+| **Don't sync** | The field is not pushed to ActiveCampaign | Fields you manage separately |
+| **Fill** | Only writes when the ActiveCampaign field is empty | Enriching without overwriting |
+| **Overwrite** | Always writes the latest Abmatic AI value | Keeping the field in sync |
+
+A separate **Sync to Abmatic** checkbox controls whether the same field is pulled from ActiveCampaign into Abmatic AI. These per-field modes are the same across every CRM — see [CRM Sync Behavior](/integrations/crm/sync-behavior) for the full model.
+
+:::note Deals are read-only
+ActiveCampaign deals are imported into Abmatic AI for visibility and segmentation on the **Opportunities** tab. Abmatic AI does not create or edit deals in ActiveCampaign.
+:::
 
 ### Sync Operations
 
@@ -127,7 +139,7 @@ For each object type, choose whether to:
 | Operation | Abmatic → ActiveCampaign | ActiveCampaign → Abmatic |
 |-----------|-------------------------|-------------------------|
 | **Create** | Create new records in AC | Create new records in Abmatic |
-| **Update** | Update existing AC records | Update existing Abmatic records |
+| **Update** | Update existing AC records | Update existing Abmatic AI records |
 
 ### Sync Frequency
 
@@ -146,7 +158,7 @@ For each object type, choose whether to:
 
 ### Auto-Push Settings
 
-Enable automatic pushing to send new Abmatic contacts to ActiveCampaign:
+Enable automatic pushing to send new Abmatic AI contacts to ActiveCampaign:
 
 1. In sync settings, find the **Pushing** section
 2. Check **Automatically push changes to ActiveCampaign**
@@ -269,7 +281,7 @@ With auto-push enabled, these records automatically sync:
 **Goal:** Automatically nurture website visitors through ActiveCampaign
 
 **Workflow:**
-1. Abmatic identifies visitors on your website
+1. Abmatic AI identifies visitors on your website
 2. Contact Reveal finds business emails
 3. Auto-push sends contacts to ActiveCampaign
 4. ActiveCampaign triggers a welcome/nurture sequence

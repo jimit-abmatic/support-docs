@@ -7,7 +7,7 @@ sidebar_position: 2
 
 # Install the Abmatic Tracking Script
 
-**Unlock the power of your website traffic in under 5 minutes.** The Abmatic tracking script transforms anonymous visitors into identified accounts, enabling real-time company identification and personalized experiences that convert.
+The Abmatic AI tracking script is a small JavaScript snippet you add to your website. Once it's in place, Abmatic AI can identify the companies visiting your site, track engagement, and deliver personalized experiences. Most teams have it installed in just a few minutes.
 
 ## Why Install the Tracking Script?
 
@@ -24,10 +24,12 @@ sidebar_position: 2
 Getting your unique tracking script takes just seconds:
 
 1. Log in to [app.abmatic.ai](https://app.abmatic.ai)
-2. Navigate to the **Installation** page from the left sidebar
+2. Click the **Installation** icon at the **bottom** of the left icon sidebar
 3. Click on the script code to copy it to your clipboard
 
-![Script Installation Page - Copy your unique tracking code with one click](/img/screenshots/installation-script.png)
+![The Installation page showing the copy-to-copy script tag and Active status](/img/screenshots/install-page.png)
+
+*The Installation page gives you your script, instructions, and a live status indicator.*
 
 Your script will look like this:
 
@@ -147,14 +149,18 @@ Abmatic automatically detects route changes in single-page applications. No addi
 
 ## Verify Installation
 
-After installing the script, return to the Installation page to confirm everything is working. The status indicator shows:
+After installing the script, return to the Installation page (bottom of the left sidebar) to confirm everything is working. At the bottom of the page you'll see a **Status** indicator:
 
 | Status | What It Means |
 |--------|--------------|
-| **Active** ✅ | Script detected, visitor data flowing |
-| **Inactive** ⏳ | Waiting for first visitor detection |
+| **Active** | Abmatic AI has detected the script and visitor data is flowing |
+| **Inactive** | The script hasn't been detected yet — waiting for the first visitor |
 
-![Installation Status - Verify your script is working](/img/screenshots/installation-script.png)
+Next to the status, Abmatic AI also shows when it last saw a visitor (for example, **"Last visitor: in 3 hours"**), so you can confirm data is coming through.
+
+![Installation page Status showing an Active indicator and the last visitor time](/img/screenshots/install-status-verified.png)
+
+*An "Active" status confirms your script is installed and Abmatic AI is receiving visitor data.*
 
 ### Manual Verification
 

@@ -2,6 +2,7 @@
 id: segment
 title: Segment Integration
 sidebar_label: Segment
+sidebar_position: 5
 ---
 
 # Segment Integration
@@ -10,7 +11,7 @@ Connect your existing Segment analytics infrastructure to Abmatic AI and unlock 
 
 ## Why Connect Segment?
 
-If you're already using Segment as your customer data platform, this integration lets you leverage your existing event tracking for Abmatic campaigns.
+If you're already using Segment as your customer data platform, this integration lets you leverage your existing event tracking for Abmatic AI campaigns.
 
 | Without Segment Integration | With Segment Integration |
 |---------------------------|-------------------------|
@@ -25,8 +26,8 @@ If you're already using Segment as your customer data platform, this integration
 | Capability | Business Impact |
 |-----------|-----------------|
 | **Use Existing Events** | Track campaign performance with events you're already collecting |
-| **Unified Analytics** | See Abmatic data alongside all your other Segment destinations |
-| **Google Analytics via Segment** | Route Abmatic data to GA through your Segment pipeline |
+| **Unified Analytics** | See Abmatic AI data alongside all your other Segment destinations |
+| **Google Analytics via Segment** | Route Abmatic AI data to GA through your Segment pipeline |
 | **Zero Code Changes** | No modifications to your existing Segment implementation |
 | **Automatic Attribution** | Conversions automatically attributed to personalization campaigns |
 
@@ -40,9 +41,9 @@ Your Website → Segment → Abmatic AI
 ```
 
 When you connect Segment:
-1. **Abmatic provides an API key** that you add to your Segment workspace
-2. **Segment sends events to Abmatic** as a destination
-3. **Events appear as conversion goals** in your Abmatic dashboard
+1. **Abmatic AI provides an API key** that you add to your Segment workspace
+2. **Segment sends events to Abmatic AI** as a destination
+3. **Events appear as conversion goals** in your Abmatic AI dashboard
 4. **Attribution happens automatically** - conversions are tied to the campaigns that influenced them
 
 ## Getting Started
@@ -52,17 +53,16 @@ When you connect Segment:
 Before you begin:
 - An active [Segment account](https://segment.com/)
 - Admin access to your Segment workspace
-- The Abmatic tracking script installed on your website
+- The Abmatic AI tracking script installed on your website
 
 ### Step 1: Navigate to Integrations
 
-1. In Abmatic, go to **Integrations** in the left sidebar
-2. Scroll to the **Conversion Tracking** section
+1. In Abmatic AI, click **Settings** in the left sidebar, then open the **Integrations** tab
+2. Scroll to the **Conversion tracking** section
 3. Find the **Segment** card
 
-![Settings > Integrations page](/img/screenshots/integrations-hub.png)
-
-*Navigate to Settings > Integrations and scroll down past CRM and Communications to find the Conversion Tracking section with Segment.*
+![Conversion tracking section of the Integrations tab with the Google Analytics 4 and Segment cards](/img/screenshots/seg-card.png)
+*The Conversion tracking section shows the Google Analytics 4 and Segment cards. The section note reads "you can only integrate to one service at a time." Each card has a Settings gear and an Authorize button.*
 
 ### Step 2: Get Your API Key
 
@@ -70,21 +70,25 @@ Before you begin:
 2. Copy the API key displayed in the dialog
 3. Keep this key secure - you'll need it for Segment configuration
 
-### Step 3: Add Abmatic as a Segment Destination
+### Step 3: Add Abmatic AI as a Segment Destination
 
 1. Log in to your [Segment workspace](https://app.segment.com/)
 2. Navigate to **Connections** → **Destinations**
 3. Click **Add Destination**
-4. Search for "Markettailor" (Abmatic's integration name in Segment)
+4. Search for **Markettailor**
 5. Select the source you want to connect
-6. Paste your Abmatic API key when prompted
+6. Paste your Abmatic AI API key when prompted
 7. Enable the destination
 
-For detailed Segment-side instructions, see [Segment's Markettailor destination documentation](https://segment.com/docs/connections/destinations/catalog/markettailor/).
+:::info Why "Markettailor"?
+Abmatic AI was previously named **Markettailor**, and the Segment destination is still cataloged under that former name. When you search the Segment destinations catalog, look for **Markettailor** — it is the same integration. If Segment has since relisted it under "Abmatic," either entry will work.
+:::
+
+For detailed Segment-side instructions, see [Segment's Markettailor destination documentation](https://segment.com/docs/connections/destinations/catalog/markettailor/). If that page has moved, search the [Segment destinations catalog](https://segment.com/catalog/) for Markettailor.
 
 ### Step 4: Activate the Integration
 
-1. Return to Abmatic's Integrations page
+1. Return to the Abmatic AI Integrations page
 2. Click **Settings** on the Segment card
 3. Toggle the switch from **Inactive** to **Active**
 4. Click **Save**
@@ -95,21 +99,22 @@ Only one conversion tracking integration can be active at a time. If you have Go
 
 ## Using Segment Events as Conversion Goals
 
-Once connected, your Segment events will automatically appear in Abmatic's **Manage Conversions** tab.
+Once connected, your Segment events will automatically appear in the Abmatic AI **Conversions > Manage** tab.
 
 ### Viewing Imported Events
 
 1. Navigate to **Conversions** in the left sidebar
 2. Click the **Manage** tab
-3. Events from Segment will appear with a Segment icon
+3. Events received from Segment appear in the events list alongside your other conversion events
 
-![Manage Conversions tab showing conversion events](/img/screenshots/conversions-manage.png)
+![Conversions Manage tab listing conversion events with Event, Event Type, Attached To, Main Event, and Visibility columns](/img/screenshots/seg-events.png)
+*The Conversions > Manage tab. Each row shows the event name, its type (Click Event or Page View), what it's attached to, a Main Event selector, and a Visibility toggle.*
 
 ### Setting Your Main Conversion Goal
 
 1. Find the event you want to use as your primary conversion metric
-2. Click the toggle in the **Main Event** column
-3. This event will be used for calculating campaign lift
+2. Select it in the **Main Event** column
+3. This event is used for calculating campaign lift
 
 ### Understanding Event Data
 
@@ -122,11 +127,11 @@ Once connected, your Segment events will automatically appear in Abmatic's **Man
 
 ## Using Segment with Google Analytics
 
-If you use Google Analytics through Segment, you can send Abmatic data to GA via your Segment pipeline.
+If you use Google Analytics through Segment, you can send Abmatic AI data to GA via your Segment pipeline.
 
 ### Setting Up GA Custom Dimensions
 
-To track Abmatic data in Google Analytics:
+To track Abmatic AI data in Google Analytics:
 
 1. Configure custom dimensions in your GA property for:
    - Campaign ID
@@ -166,7 +171,7 @@ To track Abmatic data in Google Analytics:
 
 ### Event Naming Conventions
 
-For best results in Abmatic, follow these Segment event naming conventions:
+For best results in Abmatic AI, follow these Segment event naming conventions:
 
 | Event Type | Example | Why |
 |-----------|---------|-----|
@@ -192,14 +197,14 @@ For best results in Abmatic, follow these Segment event naming conventions:
 |-------|----------|
 | "Invalid API key" error | Re-copy the key from Abmatic and paste into Segment |
 | Integration won't activate | Deactivate Google Analytics integration first |
-| Events not matching campaigns | Ensure Abmatic script is installed on the same pages |
+| Events not matching campaigns | Ensure the Abmatic AI script is installed on the same pages |
 
 ### Data Discrepancies
 
 | Issue | Cause | Solution |
 |-------|-------|----------|
-| Different numbers in Segment vs Abmatic | Sampling differences | Use Abmatic as source of truth for campaign data |
-| Missing attribution | Events fired before page fully loaded | Ensure Abmatic script loads before Segment calls |
+| Different numbers in Segment vs Abmatic AI | Sampling differences | Use Abmatic AI as source of truth for campaign data |
+| Missing attribution | Events fired before page fully loaded | Ensure the Abmatic AI script loads before Segment calls |
 | Duplicate events | Multiple event calls | Deduplicate in Segment before sending |
 
 ## Integration Status

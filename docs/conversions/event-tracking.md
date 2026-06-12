@@ -7,355 +7,213 @@ sidebar_position: 3
 
 # Event Tracking
 
-Capture every meaningful interaction on your website—from button clicks to page views to custom actions—and connect them directly to the companies and contacts engaging with your content.
-
-## Why Event Tracking Matters
-
-| Without Event Tracking | With Abmatic Event Tracking |
-|----------------------|---------------------------|
-| Guess which content drives conversions | Know exactly what actions leads take |
-| Generic analytics with no account context | Every event tied to identified companies |
-| Manual tracking setup for each element | Automatic + visual point-and-click setup |
-| Delayed insights from batch processing | Near real-time data for immediate action |
-| Siloed data across multiple tools | Unified tracking with CRM and campaign data |
+Abmatic AI captures interactions on your website — page views, scroll depth, time on page, and the conversion events you define — and ties them to the companies and contacts engaging with your content.
 
 ## What Gets Tracked
 
-Abmatic captures comprehensive interaction data automatically and through custom events you define:
+### Automatic tracking (no setup)
 
-### Automatic Tracking (Zero Setup)
+These signals are captured as soon as the Abmatic AI script is installed:
 
-These events are captured the moment you install the Abmatic script:
+| Signal | What's Captured | Why It Matters |
+|--------|-----------------|----------------|
+| **Page Views** | Each page visited, with URL, timestamp, and time on page | See content interest by account |
+| **Session Data** | Entry/exit, visit duration, return visits | Spot engagement patterns |
+| **Scroll Depth** | How far visitors scroll (percentage) | Measure real content consumption |
+| **Time on Page** | Active time on each page | Tell engaged readers from bouncers |
+| **Form Detection** | Forms with email fields are detected automatically | Capture lead submissions |
 
-| Event Type | What's Captured | Why It Matters |
-|-----------|-----------------|----------------|
-| **Page Views** | Every page visited with URL, timestamp, duration | Understand content interests by account |
-| **Session Data** | Entry/exit pages, visit duration, return visits | Identify engagement patterns |
-| **Scroll Depth** | How far visitors scroll (pixels and percentage) | Measure true content consumption |
-| **Time on Page** | Active time spent on each page | Distinguish engaged readers from bouncers |
-| **Form Detection** | Forms with email fields auto-captured | Never miss a lead submission |
+### Conversion events (you define)
 
-### Custom Events (You Define)
+On top of automatic signals, you create conversion events to measure specific actions:
 
-Track specific interactions that matter to your business:
+| Event Type | What It Tracks | Example |
+|------------|----------------|---------|
+| **Click Event** | A click on an element you pick in the visual editor | "Request Demo" button click |
+| **Page View** | A visit to a specific URL | Pricing page view |
 
-| Event Type | Best For | Example |
-|-----------|----------|---------|
-| **Click Events** | CTA buttons, links, navigation | "Request Demo" button clicks |
-| **Page View Events** | Thank-you pages, specific URLs | Pricing page visits |
-| **Form Submissions** | Contact forms, downloads | Whitepaper downloads |
+You can also bring in events from **Segment** and **Google Analytics** (see below).
 
-## How Event Tracking Works
+---
 
-```
-┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
-│  Visitor Action │────▶│  Abmatic Script  │────▶│  Event Captured │
-│  (click, view)  │     │  (automatic)     │     │  with context   │
-└─────────────────┘     └──────────────────┘     └─────────────────┘
-                                                          │
-        ┌────────────────────────────────────────────────┘
-        ▼
-┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
-│ Company/Contact │────▶│ Campaign         │────▶│ Analytics &     │
-│ Associated      │     │ Attribution      │     │ Reports         │
-└─────────────────┘     └──────────────────┘     └─────────────────┘
-```
+## Creating a Click Event
 
-Every event is enriched with:
-- **Company identification** (who's engaging)
-- **Contact data** (if revealed)
-- **Campaign attribution** (which experience drove the action)
-- **Session context** (part of larger journey)
+A Click Event tracks clicks on a specific element such as a CTA, link, or form submit.
 
-## Creating Click Events
+1. Go to **Conversions** → **Manage**.
+2. Click **+ Conversion**.
+3. In the **Add a new conversion event** dialog, choose **Track Click Event** (the **Click Event** button). This opens the visual editor.
+4. Name the event and enter the page URL where the element lives (the URL must be on your account's domain).
+5. In the visual editor, hover to highlight elements, then click the one you want to track.
+6. Choose **Only this element** or **All similar elements**, then save. The event is active immediately.
 
-Track clicks on specific elements like CTAs, navigation items, or interactive components.
+![The Manage tab showing conversion events with Click Event and Page View types](/img/screenshots/et-manage.png)
 
-### Step-by-Step Guide
+*The Manage tab lists every conversion event with its type, what it's attached to, the Main Event radio, and a Visibility toggle.*
 
-1. **Navigate to Conversions**
-   - Go to **Conversions** → **Manage** tab
-   - Click **+ Conversion** button
+### Element selection tips
 
-2. **Select Click Event**
-   - Choose **Track Event** from the options
-   - This opens the visual element selector
+| Option | When to Use |
+|--------|-------------|
+| **Only this element** | Exact match — for a single, unique element |
+| **All similar elements** | Pattern match — for an element repeated across the page |
 
-3. **Name Your Event**
-   - Enter a descriptive name (e.g., "Request Demo - Hero CTA")
-   - Names should indicate location and action
-
-4. **Enter Your Website URL**
-   - Provide the page URL where the element exists
-   - Must match your verified domain
-
-5. **Select the Element**
-   - Visual editor opens showing your page
-   - Hover to highlight elements
-   - Click to select the element you want to track
-
-6. **Save and Activate**
-   - Review your selection
-   - Save the event—it's immediately active
-
-![Conversions Manage tab showing Click Event and Page View event types](/img/screenshots/conversions-manage.png)
-*The Manage tab shows all your conversion events with their type, attached elements, and status.*
-
-### Element Selection Tips
-
-| Selection Option | When to Use |
-|-----------------|-------------|
-| **Only this element** | Exact match—use for unique CTAs |
-| **All similar elements** | Pattern match—use for repeated elements like nav links |
-
-**Best Practice:** Add unique IDs or data attributes to important elements for reliable tracking:
+**Tip:** Give important elements a stable `id` or `data` attribute so tracking stays reliable:
 
 ```html
-<!-- Recommended: Clear, trackable element -->
 <button id="hero-demo-cta" data-action="request-demo">
   Request Demo
 </button>
 ```
 
-## Creating Page View Events
+---
 
-Track visits to specific pages like thank-you pages, pricing pages, or confirmation screens.
+## Creating a Page View Event
 
-### Step-by-Step Guide
+A Page View event tracks visits to a specific page — ideal for thank-you, confirmation, or pricing pages.
 
-1. Go to **Conversions** → **Manage** → **+ Conversion**
-2. Select **Page View** event type
-3. Enter a descriptive name (e.g., "Demo Page View")
-4. Enter the URL to track (e.g., `https://yoursite.com/demo`)
-5. Save—visits to that URL are now tracked as conversions
+1. Go to **Conversions** → **Manage** → **+ Conversion**.
+2. In the dialog, choose **Track Page View Event** (the **Page View** button).
+3. Name the event (e.g. "Demo Page View").
+4. Enter the full URL to track, e.g. `https://yoursite.com/demo`. It must start with `https://` and be on your account's domain.
+5. Save.
 
-### URL Matching
+### URL matching
 
-| URL Type | Tracks |
-|----------|--------|
-| Exact URL | Only that specific page |
-| With parameters | Any URL starting with the base |
+The URL you enter is matched against your account's domain. If you include a query parameter, that parameter is part of the match; use the clean base URL to count all visits regardless of parameters.
 
-## Understanding Event Data
+---
 
-### Page View Event Structure
+## Where Events Live: the Manage Tab
 
-Every page view captures:
+Every event appears in **Conversions → Manage**:
 
-| Field | Description | Use Case |
-|-------|-------------|----------|
-| `pageUrl` | Full URL visited | Content interest analysis |
-| `pageViewId` | Unique view identifier | Deduplication |
-| `visitorId` | Persistent visitor ID | Journey tracking |
-| `visitId` | Session identifier | Session analysis |
-| `timeOnPage` | Milliseconds on page | Engagement depth |
-| `scrollDepthPercentage` | How far they scrolled | Content consumption |
-| `formSubmission` | Form submit count | Lead capture |
+| Column | What It Shows |
+|--------|---------------|
+| **Event** | The event name |
+| **Event Type** | **Click Event** or **Page View** |
+| **Attached To** | Element count (Click Events) or page URL (Page Views) |
+| **Main Event** | Radio button to set the main conversion metric |
+| **Visibility** | Toggle to turn the event on or off |
+| **⋮** | Rename event, Attach to a new element, Delete event |
 
-### Click Event Structure
+:::tip
+If an event shows zero conversions, the first thing to check is its **Visibility** toggle in the Manage tab.
+:::
 
-Every click event captures:
-
-| Field | Description | Use Case |
-|-------|-------------|----------|
-| `eventName` | Your defined name | Event identification |
-| `eventId` | Unique event identifier | Deduplication |
-| `element.selector` | CSS selector of clicked element | Technical debugging |
-| `element.text` | Button/link text content | Verification |
-| `timestamp` | When click occurred | Timeline analysis |
-
-### Behavioral Metrics
-
-Engagement signals captured automatically:
-
-| Metric | What It Measures | Engagement Signal |
-|--------|-----------------|-------------------|
-| `timeOnPage` | Active time (ms) | >60s = high engagement |
-| `scrollDepthPercentage` | Page consumption | >75% = content interest |
-| `totalPageViews` | Pages in session | >3 = exploring |
-| `totalSessionCount` | Return visits | >2 = nurturing |
-
-## Single Page Application (SPA) Support
-
-Abmatic automatically handles SPAs and client-side routing:
-
-- **Detects route changes** without full page reloads
-- **Records each route** as a separate page view
-- **Maintains session continuity** across navigation
-- **Works with** React, Vue, Angular, Next.js, and other frameworks
-
-No additional configuration required.
+---
 
 ## Campaign Attribution
 
-Events are automatically attributed to campaigns:
+When a campaign is running an A/B split, each conversion is recorded against either the **personalized** or the **control** experience. That's what lets Abmatic AI calculate conversion lift — the difference in conversion rate between personalized visitors and the **Non-personalized** control group.
 
-### Personalized vs. Control Tracking
+The Conversions (last 60 days) tab shows this comparison per campaign; expand a campaign row to see conversions, conversion rate, and lift for both groups. See [Conversion Analytics](/conversions/analytics).
 
-When A/B testing, every event records:
+---
 
-| Field | Value | Purpose |
-|-------|-------|---------|
-| `segmentId` | Campaign segment ID | Which campaign |
-| `variationId` | "personalized" or "control" | Which experience |
-| `eventId` | Event identifier | The specific action |
+## Single Page Application (SPA) Support
 
-This enables:
-- **Conversion lift calculation** (personalized vs. control)
-- **Statistical significance** measurement
-- **Campaign ROI** attribution
+Abmatic AI handles client-side routing automatically:
 
-### Multi-Touch Attribution
+- Detects route changes without a full page reload
+- Records each route as its own page view
+- Keeps session continuity across navigation
 
-Events track the full journey:
-1. First touch → visitor sees personalized page
-2. Engagement → clicks CTA, views pricing
-3. Conversion → submits form
-4. Attribution → all touchpoints credited
+Works with React, Vue, Angular, Next.js, and similar frameworks — no extra configuration.
 
-## Integration with Analytics Tools
+---
 
-### Segment Integration
+## Integrations: Segment and Google Analytics
 
-Sync events to Segment for downstream distribution:
+You can feed conversion events into Abmatic AI from your existing analytics tools.
 
-1. Connect Segment in **Integrations**
-2. Events automatically flow to Segment
-3. Forward to any Segment destination (Mixpanel, Amplitude, etc.)
+### Segment
 
-### Google Analytics Integration
+1. Connect **Segment** under **Integrations**.
+2. Events from Segment surface in the **Conversion Management** (Manage) tab.
 
-Sync events to GA4:
+### Google Analytics
 
-1. Connect Google Analytics in **Integrations**
-2. Custom dimensions mapped automatically
-3. Events appear in GA4 reports with company context
+1. Connect **Google Analytics** under **Integrations**.
+2. You map a custom dimension so events come through with company context.
+
+:::note
+When Google Analytics is the active conversion-tracking integration, the native **+ Conversion** dialog is hidden — your conversion events come from Google Analytics instead.
+:::
+
+---
 
 ## Viewing Your Event Data
 
-### In the Conversions Dashboard
+### Conversions (last 60 days) tab
 
-1. Go to **Conversions** → **Conversions (Last 60 Days)** tab
-2. See event counts per campaign
-3. Compare conversion rates across campaigns
-4. Identify top-performing experiences
+1. Go to **Conversions** → **Conversions (last 60 days)**.
+2. See conversion performance per campaign, with one column per active event.
+3. Expand a campaign row for the personalized-vs-control breakdown.
 
-### In the Manage Tab
+### Manage tab
 
-1. Go to **Conversions** → **Manage**
-2. View all configured events
-3. Check event status and attached elements
-4. Enable/disable events as needed
+1. Go to **Conversions** → **Manage**.
+2. Review every configured event, its type, and what it's attached to.
+3. Use the **Visibility** toggle to turn events on or off.
 
-### Real-Time Processing
-
-Events process in near real-time:
-
-| Event Type | Processing Time |
-|-----------|-----------------|
-| Page views | Immediate |
-| Click events | Within seconds |
-| Form submissions | Within seconds |
+---
 
 ## Best Practices
 
-### Event Naming Conventions
+### Naming
 
-**Do This:**
+**Do:**
+
 ```
 "Pricing Page - Request Demo CTA"
 "Homepage Hero - Watch Video"
-"Navigation - Products Dropdown"
 "Footer - Contact Sales Link"
 ```
 
-**Not This:**
+**Avoid:**
+
 ```
 "click1"
 "event"
 "button"
-"test"
 ```
 
-### What to Track
+### What to track
 
 | Track These | Skip These |
 |-------------|------------|
 | Primary CTAs (demos, trials, contact) | Every link click |
 | Key page visits (pricing, features) | Navigation clicks |
-| Form submissions | Scroll events (auto-tracked) |
-| Video plays, downloads | Hover interactions |
-| Add-to-cart, checkout steps | Social share clicks |
+| Form submissions | Scroll events (captured automatically) |
 
-### Event Organization
-
-Organize events by funnel stage:
-
-| Stage | Example Events |
-|-------|---------------|
-| **Awareness** | Blog views, resource downloads |
-| **Interest** | Pricing page, feature page, case studies |
-| **Consideration** | Demo request, trial signup, contact form |
-| **Decision** | Checkout, purchase confirmation |
+---
 
 ## Troubleshooting
 
-### Events Not Tracking
+### Events not tracking
 
 | Issue | Cause | Solution |
 |-------|-------|----------|
-| No events appearing | Script not installed | Verify script in page source |
-| Event shows 0 counts | Event disabled | Check Visibility toggle in Manage |
-| Specific element not tracking | Selector changed | Re-create event with current element |
-| Intermittent tracking | Multiple script instances | Remove duplicate scripts |
+| No events at all | Script not installed | Confirm the Abmatic AI script is in the page source |
+| Event shows 0 | Event turned off | Check the **Visibility** toggle in Manage |
+| Element stopped tracking | The element changed | Re-attach it from the event's **⋮** menu |
+| Intermittent tracking | Duplicate script instances | Remove duplicate script tags |
 
-### Wrong Element Firing
-
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| Multiple events per click | Overlapping selectors | Use more specific selectors |
-| Wrong element tracked | Similar elements matched | Select "Only this element" |
-| Events on wrong page | URL pattern too broad | Use exact URL matching |
-
-### Missing Page Views
+### Wrong element firing
 
 | Issue | Cause | Solution |
 |-------|-------|----------|
-| SPA routes not tracked | Routing not detected | Contact support for SPA config |
-| Some pages missing | Script not on all pages | Add script to all pages or use GTM |
-| Ad blocker interference | Privacy tools blocking | Use first-party domain setup |
+| Multiple events per click | Selector too broad | Use **Only this element** |
+| Wrong page tracked | URL too broad | Use the exact page URL |
 
-### Duplicate Events
+---
 
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| Double counting | Multiple script tags | Remove duplicate installations |
-| Same event twice | Overlapping event definitions | Consolidate event configs |
-| Form resubmissions | No form throttling | Add submit button disable |
+## Related
 
-## Technical Details
-
-### Data Transmission
-
-Events use `navigator.sendBeacon()` for reliable delivery:
-- **Survives page exit** (captures even on navigation away)
-- **Non-blocking** (doesn't slow page performance)
-- **Works with most ad blockers** (first-party domain)
-
-### Processing Pipeline
-
-1. **Client capture** → Event occurs, data collected
-2. **Beacon transmission** → Sent to Abmatic API
-3. **Company association** → Matched to identified account
-4. **Campaign attribution** → Linked to active campaigns
-5. **Analytics aggregation** → Available in reports
-
-## Related Features
-
-| Feature | Relationship |
-|---------|-------------|
-| [Form Tracking](/conversions/form-tracking) | Specialized form event capture |
-| [Creating Goals](/conversions/create-goals) | Set up conversion goals |
-| [Conversion Analytics](/conversions/analytics) | Analyze conversion performance |
-| [Script Installation](/getting-started/install-script) | Install tracking script |
-| [Campaign Performance](/analytics/campaign-performance) | View campaign metrics |
+| Page | What It Covers |
+|------|----------------|
+| [Form Tracking](/conversions/form-tracking) | Tracking form submissions |
+| [Creating Conversion Goals](/conversions/create-goals) | Step-by-step event creation |
+| [Conversion Analytics](/conversions/analytics) | Reading lift and significance |
+| [Conversions Overview](/conversions/overview) | The dashboard and tabs |
