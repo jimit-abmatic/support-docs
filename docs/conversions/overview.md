@@ -9,6 +9,15 @@ sidebar_position: 1
 
 Conversion tracking in Abmatic AI shows you which campaigns actually drive results — demo requests, button clicks, pricing-page visits, and more. You set up the actions you care about as conversion events, and Abmatic AI measures how often personalized visitors complete them compared to a control group.
 
+<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
+  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/07-conversions.mp4"></video>
+</div>
+
+🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/07-conversions/interactive/index.html)**
+
+> 🎓 **[Browse every video tutorial in the Training Center → training.abmatic.ai](https://training.abmatic.ai)**
+
+
 ---
 
 ## What You Can Track

@@ -9,6 +9,13 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Video Tutorials',
+      items: [
+        'video-tutorials/video-tutorials',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Getting Started',
       collapsed: false,
       items: [

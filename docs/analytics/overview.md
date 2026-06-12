@@ -9,6 +9,15 @@ sidebar_position: 1
 
 Abmatic AI's analytics give you clear visibility into your ABM performance. You can see which campaigns drive engagement, which accounts are active, and how personalization compares to your control group — all without exporting data to spreadsheets.
 
+<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
+  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/08-analytics.mp4"></video>
+</div>
+
+🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/08-analytics/interactive/index.html)**
+
+> 🎓 **[Browse every video tutorial in the Training Center → training.abmatic.ai](https://training.abmatic.ai)**
+
+
 Analytics is a paid-plan feature. If you're on a free plan, you'll see a prompt to upgrade before you can open Reports or Dashboards.
 
 ## Why Analytics Matter for ABM

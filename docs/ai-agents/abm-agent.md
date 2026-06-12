@@ -9,6 +9,15 @@ sidebar_position: 4
 
 Clara is the AI ABM (account-based marketing) agent in Abmatic AI. Instead of clicking through filters and setup screens, you tell Clara what you want in plain language and she does the work — building account lists, building contact lists, launching campaigns, and pulling reports.
 
+<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
+  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/04-clara.mp4"></video>
+</div>
+
+🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/04-clara/interactive/index.html)**
+
+> 🎓 **[Browse every video tutorial in the Training Center → training.abmatic.ai](https://training.abmatic.ai)**
+
+
 Clara is one of the two page-level AI agents in the platform. The other is **[Alex, the AI SDR agent](/ai-agents/sdr-agent)**. Both live under the **AI Agent** item at the top of the left icon sidebar.
 
 :::info Clara also appears in the in-app Co-Pilot
