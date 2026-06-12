@@ -15,6 +15,8 @@ Every marketing dollar should be accountable. Abmatic AI's conversion tracking s
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/07-conversions/interactive/index.html)**
 
+> 🎓 **[Browse every video tutorial in the Training Center → training.abmatic.ai](https://training.abmatic.ai)**
+
 
 ---
 

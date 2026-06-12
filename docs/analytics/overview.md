@@ -15,6 +15,8 @@ Stop guessing what's working. Abmatic AI's analytics give you clear visibility i
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/08-analytics/interactive/index.html)**
 
+> 🎓 **[Browse every video tutorial in the Training Center → training.abmatic.ai](https://training.abmatic.ai)**
+
 
 ## Why Analytics Matter for ABM Success
 

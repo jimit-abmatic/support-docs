@@ -15,6 +15,8 @@ Transform anonymous website visitors into engaged prospects with your first pers
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/01-first-campaign/interactive/index.html)**
 
+> 🎓 **[Browse every video tutorial in the Training Center → training.abmatic.ai](https://training.abmatic.ai)**
+
 
 Follow this step-by-step guide to launch a website personalization campaign in Abmatic AI. In just 15 minutes, you'll have a live campaign delivering tailored content to your target accounts—no coding required.
 

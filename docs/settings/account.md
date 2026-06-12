@@ -15,6 +15,8 @@ Your Account Settings page is your central hub for managing your Abmatic AI work
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/11-settings/interactive/index.html)**
 
+> 🎓 **[Browse every video tutorial in the Training Center → training.abmatic.ai](https://training.abmatic.ai)**
+
 
 ## Accessing Account Settings
 

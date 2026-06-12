@@ -17,6 +17,8 @@ Learn Abmatic AI the fast way. Each short lesson below pairs a guided video with
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/01-first-campaign/interactive/index.html)**
 
+> 🎓 **[Browse every video tutorial in the Training Center → training.abmatic.ai](https://training.abmatic.ai)**
+
 <details>
   <summary>Transcript</summary>
 

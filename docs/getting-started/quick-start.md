@@ -15,6 +15,8 @@ Transform your website into a personalized ABM engine in under 20 minutes. By th
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/02-getting-started/interactive/index.html)**
 
+> 🎓 **[Browse every video tutorial in the Training Center → training.abmatic.ai](https://training.abmatic.ai)**
+
 
 **What you'll achieve:**
 - Identify the companies visiting your website in real-time

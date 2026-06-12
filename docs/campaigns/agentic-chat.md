@@ -15,6 +15,8 @@ sidebar_position: 3
 
 🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/03-agentic-chat/interactive/index.html)**
 
+> 🎓 **[Browse every video tutorial in the Training Center → training.abmatic.ai](https://training.abmatic.ai)**
+
 
 ## Why Agentic Chat Matters
 
