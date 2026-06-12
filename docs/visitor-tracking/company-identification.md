@@ -9,6 +9,13 @@ sidebar_position: 2
 
 **Turn anonymous website traffic into actionable account intelligence.** Abmatic AI identifies which companies are visiting your website—even when visitors don't fill out a form—giving you the foundation for effective account-based marketing.
 
+<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
+  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/06-visitor-reveal.mp4"></video>
+</div>
+
+🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/06-visitor-reveal/interactive/index.html)**
+
+
 :::tip Why This Matters
 98% of your website visitors leave without identifying themselves. Company identification reveals who they are, so your sales team can prioritize outreach based on real intent signals rather than guesswork.
 :::

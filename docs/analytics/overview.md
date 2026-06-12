@@ -9,6 +9,13 @@ sidebar_position: 1
 
 Stop guessing what's working. Abmatic AI's analytics give you clear visibility into your ABM performance, showing exactly which campaigns drive engagement, which accounts are ready to buy, and how personalization impacts your bottom line.
 
+<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
+  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/08-analytics.mp4"></video>
+</div>
+
+🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/08-analytics/interactive/index.html)**
+
+
 ## Why Analytics Matter for ABM Success
 
 | Without Analytics | With Abmatic Analytics |

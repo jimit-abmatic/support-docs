@@ -9,6 +9,13 @@ sidebar_position: 4
 
 **Your AI-powered ABM strategist that builds audiences, creates campaigns, and delivers insights—all through natural conversation.**
 
+<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
+  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/04-clara.mp4"></video>
+</div>
+
+🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/04-clara/interactive/index.html)**
+
+
 Clara eliminates the tedious work of account-based marketing. Instead of clicking through multiple screens and building complex filters manually, simply tell Clara what you need and watch her do the work in seconds.
 
 ## Why Teams Love Clara

@@ -9,6 +9,13 @@ sidebar_position: 3
 
 **Turn every website visitor into a conversation.** Agentic Chat embeds an AI-powered assistant directly on your website, engaging visitors 24/7 with personalized, context-aware responses that qualify leads and capture contact information automatically.
 
+<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
+  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/03-agentic-chat.mp4"></video>
+</div>
+
+🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/03-agentic-chat/interactive/index.html)**
+
+
 ## Why Agentic Chat Matters
 
 | Without Agentic Chat | With Agentic Chat |

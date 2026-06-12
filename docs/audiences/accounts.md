@@ -9,6 +9,13 @@ sidebar_position: 2
 
 Build targeted account lists in minutes -- not hours. Abmatic AI helps you identify, organize, and activate your highest-value accounts for ABM campaigns that actually convert.
 
+<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
+  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/05-audiences.mp4"></video>
+</div>
+
+🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/05-audiences/interactive/index.html)**
+
+
 ![Account Collections](/img/screenshots/accounts-collections-final.png)
 
 ## Why Account Lists Drive ABM Success

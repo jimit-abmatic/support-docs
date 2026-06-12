@@ -9,6 +9,13 @@ sidebar_position: 1
 
 Every marketing dollar should be accountable. Abmatic AI's conversion tracking shows you exactly which campaigns drive results—from demo requests to pricing page visits—so you can double down on what works and optimize what doesn't.
 
+<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
+  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/07-conversions.mp4"></video>
+</div>
+
+🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/07-conversions/interactive/index.html)**
+
+
 ---
 
 ## Why Conversion Tracking Matters

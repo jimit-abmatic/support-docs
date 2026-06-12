@@ -9,6 +9,13 @@ sidebar_position: 1
 
 Your Account Settings page is your central hub for managing your Abmatic AI workspace configuration. Here you'll set up your company profile, customize your brand appearance, and control which pages receive personalization—all in one place.
 
+<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
+  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/11-settings.mp4"></video>
+</div>
+
+🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/11-settings/interactive/index.html)**
+
+
 ## Accessing Account Settings
 
 1. Click **Settings** in the left sidebar

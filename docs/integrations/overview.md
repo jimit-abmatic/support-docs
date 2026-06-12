@@ -9,6 +9,13 @@ sidebar_position: 1
 
 Connect your marketing and sales stack to Abmatic AI and transform disconnected tools into a unified ABM powerhouse. When your systems work together, you spend less time on manual data entry and more time closing deals.
 
+<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
+  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/10-integrations.mp4"></video>
+</div>
+
+🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/10-integrations/interactive/index.html)**
+
+
 ---
 
 ## Why Integrations Drive ABM Success

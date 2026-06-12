@@ -9,6 +9,13 @@ sidebar_position: 3
 
 Transform anonymous website visitors into engaged prospects with your first personalization campaign. Companies using personalized experiences see **2-3x higher conversion rates** compared to generic pages.
 
+<div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:'12px',overflow:'hidden',margin:'1.5rem 0'}}>
+  <video controls preload="metadata" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} src="https://cdn.abmatic.ai/training/01-first-campaign.mp4"></video>
+</div>
+
+🖱️ Prefer to click through it yourself? **[Open the interactive walkthrough →](https://cdn.abmatic.ai/training/01-first-campaign/interactive/index.html)**
+
+
 Follow this step-by-step guide to launch a website personalization campaign in Abmatic AI. In just 15 minutes, you'll have a live campaign delivering tailored content to your target accounts—no coding required.
 
 | What You'll Achieve | Business Impact |
