@@ -1,0 +1,2834 @@
+[
+  {
+    "docPath": "docs/ai-agents/oracle-overview.md",
+    "action": "create",
+    "priority": "high",
+    "section": "ai-agents",
+    "appPaths": [
+      "/oracle/goals",
+      "/oracle/inbox"
+    ],
+    "whatChanged": "Oracle autonomous-agent product is entirely new and undocumented; flag-gated (autonomous_agent.*).",
+    "contentTasks": [
+      "Introduce Oracle as the autonomous agent surface",
+      "Explain trust tiers: supervised (approve all) / standard (auto-small, approve-large) / autonomous (just notify)",
+      "Explain feature-flag gating and how to request enablement (Abmatic rep / support@abmatic.ai)",
+      "Link to Oracle Goals and Oracle Approvals child docs",
+      "Clarify Oracle vs Clara/Alex vs the in-app Co-Pilot"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "oracle-goals-page",
+        "appPath": "/oracle/goals",
+        "what": "Oracle Goals page (enabled state if available, else gated empty state)"
+      },
+      {
+        "name": "oracle-approvals-inbox",
+        "appPath": "/oracle/inbox",
+        "what": "Oracle Approvals inbox"
+      },
+      {
+        "name": "oracle-goals-gated-empty",
+        "appPath": "/oracle/goals",
+        "what": "Gated empty state: 'Goals aren't enabled for your account yet'"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/ai-agents/oracle-goals.md",
+    "action": "create",
+    "priority": "high",
+    "section": "ai-agents",
+    "appPaths": [
+      "/oracle/goals"
+    ],
+    "whatChanged": "New /oracle/goals: create goals + weekly checkpoints. Undocumented.",
+    "contentTasks": [
+      "Document New Goal dialog fields: Title, Description, Success metric (e.g. demos_booked), Target value, Target date",
+      "Document goal card: progress bar (current/target %), target date",
+      "Document Checkpoints dialog: weekly Week-of/Progress/agent notes/Actions taken",
+      "Note flag gating autonomous_agent.goals and disabled-state copy"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "oracle-goals-list",
+        "appPath": "/oracle/goals",
+        "what": "Goal cards with progress bars"
+      },
+      {
+        "name": "oracle-new-goal-dialog",
+        "appPath": "/oracle/goals",
+        "what": "New Goal dialog with all fields"
+      },
+      {
+        "name": "oracle-goal-checkpoints",
+        "appPath": "/oracle/goals",
+        "what": "Checkpoints dialog showing weekly agent notes + actions taken"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/ai-agents/oracle-approvals.md",
+    "action": "create",
+    "priority": "high",
+    "section": "ai-agents",
+    "appPaths": [
+      "/oracle/inbox"
+    ],
+    "whatChanged": "New /oracle/inbox approval queue. Undocumented.",
+    "contentTasks": [
+      "Document approval card: action_type, Risk tier chip (low/medium/high), Est. spend $X, proposed time, rationale, JSON payload preview",
+      "Document Approve / Deny with optional Notes (audit log)",
+      "Explain how trust tier governs what queues here vs auto-executes",
+      "Note flag gating autonomous_agent.approval_inbox and disabled/empty-state copy"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "oracle-approval-card",
+        "appPath": "/oracle/inbox",
+        "what": "A pending approval card with risk + est-spend chips"
+      },
+      {
+        "name": "oracle-approve-dialog",
+        "appPath": "/oracle/inbox",
+        "what": "Approve dialog with Notes field"
+      },
+      {
+        "name": "oracle-inbox-empty",
+        "appPath": "/oracle/inbox",
+        "what": "Empty state: 'No pending approvals'"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/ai-agents/co-pilot.md",
+    "action": "create",
+    "priority": "high",
+    "section": "ai-agents",
+    "appPaths": [
+      "/campaigns",
+      "/ai-agents/abm"
+    ],
+    "whatChanged": "In-app conversational co-pilot (AgentFAB / ?ai-agent-help / 'AI Conversation' drawer) with named roster; distinct from page-level Clara/Alex. Undocumented.",
+    "contentTasks": [
+      "Document the co-pilot roster: Abmatic AI, Rachel (Super Agent), Clara (Insights & Analytics Director), Joey (Website Content Strategist), Marcus (Campaign Operations), Sophia (Personalization Strategy Manager), Alex (Audience Accounts Director), Jordan (Audience Contacts Director), James (Bidding Strategy Expert)",
+      "Document thinking/tool-step message rendering + auto-greeting",
+      "Document Voice Mode",
+      "Explain how to open it (AgentFAB floating button, ?ai-agent-help, right-side 'AI Conversation' drawer)",
+      "Disambiguate from the full-page /ai-agents Clara/Alex product"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "copilot-fab",
+        "appPath": "/campaigns",
+        "what": "AgentFAB floating co-pilot button"
+      },
+      {
+        "name": "copilot-drawer",
+        "appPath": "/campaigns",
+        "what": "'AI Conversation' right-side drawer open"
+      },
+      {
+        "name": "copilot-thinking-steps",
+        "appPath": "/campaigns",
+        "what": "Chat showing thinking/tool steps inline"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/getting-started/navigation.md",
+    "action": "create",
+    "priority": "high",
+    "section": "getting-started",
+    "appPaths": [
+      "/",
+      "/campaigns",
+      "/reveal/accounts"
+    ],
+    "whatChanged": "New left ICON sidebar + top bar (Search/Help/Notifications/dark mode) replaced the older nav. Foundational reference.",
+    "contentTasks": [
+      "Document the left icon rail order: AI Agent, Goals*, Home, Accounts, Contacts, Campaigns, Conversions, Visitor Reveal, Analytics, Oracle Inbox* (top) + Installation (bottom)",
+      "Note collapsed 54px / hover-expand 200px, selected pill, logo->Home",
+      "Note flag-gated items (Goals, Oracle Inbox) won't appear for all accounts",
+      "Document top bar: dark/light toggle (default light, localStorage), Search ('What are you looking for?'), Help (24h SLA), Knock Notifications bell, Settings/avatar",
+      "Document global search result types: Accounts, Contacts, Campaigns, Reports, Dashboards, Collections (status-aware deep links)"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "nav-sidebar-collapsed",
+        "appPath": "/",
+        "what": "Collapsed left icon rail"
+      },
+      {
+        "name": "nav-sidebar-expanded",
+        "appPath": "/",
+        "what": "Hover-expanded sidebar with labels"
+      },
+      {
+        "name": "nav-topbar",
+        "appPath": "/",
+        "what": "Top-right toolbar: dark mode, search, help, notifications, avatar"
+      },
+      {
+        "name": "nav-global-search",
+        "appPath": "/",
+        "what": "Global search drawer with mixed results"
+      },
+      {
+        "name": "nav-dark-mode",
+        "appPath": "/",
+        "what": "Home in dark mode"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/campaigns/openai-ads.md",
+    "action": "create",
+    "priority": "high",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns",
+      "/integrations"
+    ],
+    "whatChanged": "NEW OpenAI Ads campaign type (replaced Meta). Undocumented.",
+    "contentTasks": [
+      "Document create flow + OpenAI Ads API-key prerequisite (redirect to /integrations if not connected)",
+      "Document Ads grid + inline OpenAIAdDialog (Ad Name, Title, Description, Link, Image; image lightbox)",
+      "Document AI Strategy one-click builder (describe strategy -> agent builds objective/bids/context + 5 ad copies + 5 brand-aware images, synced PAUSED for review)",
+      "Document Insights metrics: impressions/clicks/spend/CTR/CPC/CPM",
+      "Document live/inactive toggle + Locations limited to US/CA/AU/NZ + Import Campaigns",
+      "Note Creatives tab is labeled 'Ads' for OpenAI"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "openai-ads-create",
+        "appPath": "/campaigns",
+        "what": "Create Campaign modal showing OpenAI Ads tile under Advertising"
+      },
+      {
+        "name": "openai-ads-grid",
+        "appPath": "/campaigns",
+        "what": "Ads grid with inline Ad editor"
+      },
+      {
+        "name": "openai-ads-strategy",
+        "appPath": "/campaigns",
+        "what": "AI Strategy dialog"
+      },
+      {
+        "name": "openai-ads-insights",
+        "appPath": "/campaigns",
+        "what": "OpenAI Ads Insights metrics"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/campaigns/widget.md",
+    "action": "create",
+    "priority": "high",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns",
+      "/campaigns/widget"
+    ],
+    "whatChanged": "Banner & Popup renamed to Widget; NEW sidebar widget type (5th); HubSpot-form picker. Replaces banner-popup.md.",
+    "contentTasks": [
+      "Rename Banner & Popup -> Widget; note slug /campaigns/widget (old banner_popup URLs still resolve)",
+      "Document the 5 widget types: banner / popup / exit-intent modal / sidebar (NEW) / agentic chat",
+      "Document sidebar widget: 4 anchor positions (mid/bottom x left/right), triggers (Always/After-Delay/On-Scroll), inline card image/link/title + CTA editing",
+      "Document HubSpot-form picker in popup/exit-intent",
+      "Document Audience + Pages/Patterns tabs"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "widget-create",
+        "appPath": "/campaigns",
+        "what": "Create Campaign showing Widget under Personalization"
+      },
+      {
+        "name": "widget-editor-types",
+        "appPath": "/campaigns/widget",
+        "what": "Widget editor showing all 5 widget types"
+      },
+      {
+        "name": "widget-sidebar-config",
+        "appPath": "/campaigns/widget",
+        "what": "Sidebar widget anchor/trigger config"
+      },
+      {
+        "name": "widget-hubspot-form-picker",
+        "appPath": "/campaigns/widget",
+        "what": "HubSpot form picker in popup editor"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/calendar.md",
+    "action": "create",
+    "priority": "high",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations",
+      "/settings/calendar"
+    ],
+    "whatChanged": "NEW Google Calendar integration powering Agentic Chat meeting booking + Default AE routing. Undocumented.",
+    "contentTasks": [
+      "Document OAuth connect (Communications section)",
+      "Document Calendar Settings -> Availability (Timezone, Demo Meeting Duration 15/30/45/60/90, Advance Notice days, Max Days Ahead, per-day Working Hours)",
+      "Document Create Event tab (ad-hoc event, Add Google Meet link)",
+      "Document Meeting Types CRUD (used by meeting router)",
+      "Tie to Agentic Chat 'Book a meeting' handoff + Default AE star in Settings>Users"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "calendar-card",
+        "appPath": "/integrations",
+        "what": "Google Calendar card in Communications section"
+      },
+      {
+        "name": "calendar-availability",
+        "appPath": "/settings/calendar",
+        "what": "Calendar Settings Availability tab"
+      },
+      {
+        "name": "calendar-meeting-types",
+        "appPath": "/settings/calendar",
+        "what": "Meeting Types section"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/zoom.md",
+    "action": "create",
+    "priority": "medium",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations"
+    ],
+    "whatChanged": "NEW Zoom integration (meeting links). Undocumented.",
+    "contentTasks": [
+      "Document OAuth connect (Communications section)",
+      "Document Settings dialog: book instant/scheduled Zoom meeting -> join URL + meeting ID + password",
+      "Note cross-prompt with Google Calendar"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "zoom-card",
+        "appPath": "/integrations",
+        "what": "Zoom card in Communications section"
+      },
+      {
+        "name": "zoom-settings",
+        "appPath": "/integrations",
+        "what": "Zoom Settings booking dialog"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/openai-ads.md",
+    "action": "create",
+    "priority": "high",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations"
+    ],
+    "whatChanged": "NEW OpenAI Ads ad-network integration (API-key). Undocumented.",
+    "contentTasks": [
+      "Document API-key connect (not OAuth)",
+      "Document Settings dialog: masked API key + Import Campaigns (async import from OpenAI Ads, OpenAI = source of truth)",
+      "Cross-link to the OpenAI Ads campaign type doc"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "openai-integration-card",
+        "appPath": "/integrations",
+        "what": "OpenAI card in Ad Networks section"
+      },
+      {
+        "name": "openai-integration-settings",
+        "appPath": "/integrations",
+        "what": "OpenAI Settings dialog with masked key + Import Campaigns"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/settings/api-keys.md",
+    "action": "create",
+    "priority": "high",
+    "section": "settings",
+    "appPaths": [
+      "/settings/api-keys"
+    ],
+    "whatChanged": "NEW API Keys settings tab. Undocumented (reconcile with api/api-keys.md).",
+    "contentTasks": [
+      "Document generate/regenerate/revoke single account key; one-time reveal + copy",
+      "Document Base URL https://api.abmatic.ai/v1 and 100 req/min rate limit",
+      "Document rotation recommendation (365 days)",
+      "Cross-link to API Reference"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "settings-api-keys",
+        "appPath": "/settings/api-keys",
+        "what": "API Keys page with active key prefix + generate button"
+      },
+      {
+        "name": "settings-api-key-reveal",
+        "appPath": "/settings/api-keys",
+        "what": "One-time full-key reveal with copy"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/settings/ai-agents.md",
+    "action": "create",
+    "priority": "high",
+    "section": "settings",
+    "appPaths": [
+      "/settings/ai-agents"
+    ],
+    "whatChanged": "NEW AI Agents settings page (Agentic Chat / Agentic Sequence context + Refresh Context). Resolves 'where agent context lives' ambiguity.",
+    "contentTasks": [
+      "Document the two tabs: Agentic Chat context and Agentic Sequence context",
+      "Document Refresh Context (regenerate from scraped website pages) + Save Context",
+      "Clarify relationship to Website Context and to campaign-level Instructions tab (precedence)"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "settings-ai-agents-chat",
+        "appPath": "/settings/ai-agents",
+        "what": "Agentic Chat context tab with Refresh Context"
+      },
+      {
+        "name": "settings-ai-agents-sequence",
+        "appPath": "/settings/ai-agents",
+        "what": "Agentic Sequence context tab"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/settings/usage.md",
+    "action": "create",
+    "priority": "high",
+    "section": "settings",
+    "appPaths": [
+      "/settings/usage"
+    ],
+    "whatChanged": "Usage/credits page with current labels; replaces mislabeled billing.md.",
+    "contentTasks": [
+      "Document credit lines: Apollo Contacts, Abmatic Accounts, Abmatic Contacts, Abmatic IP Reveal, OpenAI Tokens, Campaigns (visitors)",
+      "Document used/total + over-quota red state",
+      "Document Current plan limits + billing period",
+      "Note PDL vendor surfaced as 'Abmatic' (don't say PDL)"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "settings-usage",
+        "appPath": "/settings/usage",
+        "what": "Usage dashboard with per-provider credit lines"
+      },
+      {
+        "name": "settings-usage-overquota",
+        "appPath": "/settings/usage",
+        "what": "Over-quota red indicator (if available)"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/settings/sales-role.md",
+    "action": "create",
+    "priority": "medium",
+    "section": "settings",
+    "appPaths": [
+      "/settings/users",
+      "/sales/sign-in"
+    ],
+    "whatChanged": "NEW Sales user role + Sales Dashboard. Create standalone OR merge into users.md.",
+    "contentTasks": [
+      "Document Sales role (Google-only sign-in at /sales/sign-in)",
+      "Document restricted Sales Dashboard (Google Calendar + Zoom cards only)",
+      "Document Default AE designation",
+      "Note this may be merged into settings/users.md"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "sales-role-invite",
+        "appPath": "/settings/users",
+        "what": "Invite dialog showing Sales role option"
+      },
+      {
+        "name": "sales-dashboard",
+        "appPath": "/sales/sign-in",
+        "what": "Restricted Sales Dashboard"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/intro.md",
+    "action": "update",
+    "priority": "high",
+    "section": "getting-started",
+    "appPaths": [
+      "/"
+    ],
+    "whatChanged": "Capability matrix + What's New stale; missing Oracle/OpenAI Ads/Agentic Chat/Visitor Reveal; dashboard 'sharing' conflict; unsourced metrics.",
+    "contentTasks": [
+      "Refresh capability matrix and What's New (add Oracle, Agentic Chat handoff, OpenAI Ads, Visitor Reveal, Demo Booked, API Keys)",
+      "Verify/fix all asserted internal routes (link-integrity pass)",
+      "Resolve dashboard 'sharing' claim vs personal-account",
+      "Purge unsourced marketing metrics"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "intro-home",
+        "appPath": "/",
+        "what": "Home Overview tab as the landing hero image"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/getting-started/quick-start.md",
+    "action": "update",
+    "priority": "high",
+    "section": "getting-started",
+    "appPaths": [
+      "/",
+      "/reveal/accounts",
+      "/campaigns",
+      "/installation"
+    ],
+    "whatChanged": "Step-5 dashboard description stale (old single-view); nav wrong; script-status label conflict; Collection vs Target Group; caption/image mismatches.",
+    "contentTasks": [
+      "Rewrite Step 5 to two-tab Home (Overview/Dashboard, 5 cards incl. Collections)",
+      "Update nav to the new left icon sidebar (incl. Visitor Reveal)",
+      "Reconcile script-status label (Active/Inactive vs Verified) with live",
+      "Normalize Collections naming + create dialog (Static/Dynamic Collection)",
+      "Fix caption/image mismatches (visual editor, GTM, add-page)",
+      "Reconcile time-to-value claim"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "qs-home-overview",
+        "appPath": "/",
+        "what": "Home Overview tab"
+      },
+      {
+        "name": "qs-installation",
+        "appPath": "/installation",
+        "what": "Installation page with script + status"
+      },
+      {
+        "name": "qs-reveal-accounts",
+        "appPath": "/reveal/accounts",
+        "what": "Visitor Reveal Accounts"
+      },
+      {
+        "name": "qs-create-campaign",
+        "appPath": "/campaigns",
+        "what": "Create Campaign modal"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/getting-started/home-dashboard.md",
+    "action": "update",
+    "priority": "high",
+    "section": "getting-started",
+    "appPaths": [
+      "/",
+      "/home-dashboard"
+    ],
+    "whatChanged": "Mostly current but: Collections vs Target Groups label, 90-day date-range inconsistency, sharing conflict.",
+    "contentTasks": [
+      "Confirm Overview/Dashboard tabs + 5 cards (Accounts/Contacts/Reports/Campaigns/Collections)",
+      "Use 'Collections' consistently (not Target Groups) in cards; note panel heading",
+      "Resolve 90-day date-range prose/table inconsistency",
+      "Resolve dashboards-sharing conflict vs intro/changelog"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "home-overview",
+        "appPath": "/",
+        "what": "Overview tab with 5 stat cards + recently-viewed panels"
+      },
+      {
+        "name": "home-dashboard-tab",
+        "appPath": "/home-dashboard",
+        "what": "Dashboard tab widget grid"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/getting-started/install-script.md",
+    "action": "update",
+    "priority": "high",
+    "section": "getting-started",
+    "appPaths": [
+      "/installation"
+    ],
+    "whatChanged": "Status-label conflict (Active/Inactive vs Verified); JS API + CSP verify; screenshot reuse.",
+    "contentTasks": [
+      "Reconcile installation status label with live UI",
+      "Verify CSP domains + click-to-copy + SPA auto-detection",
+      "Add a real verification-status screenshot",
+      "Verify JS API references"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "install-page",
+        "appPath": "/installation",
+        "what": "Installation page with copy-script + status"
+      },
+      {
+        "name": "install-status-verified",
+        "appPath": "/installation",
+        "what": "Verified/Active status indicator"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/getting-started/first-campaign.md",
+    "action": "update",
+    "priority": "high",
+    "section": "getting-started",
+    "appPaths": [
+      "/campaigns"
+    ],
+    "whatChanged": "Verify Inbound/Outbound split + tab names; pin variables; L90 outbound image mismatch; metrics.",
+    "contentTasks": [
+      "Verify create wizard Inbound vs Outbound + Audience/Pages/Insights tabs",
+      "Pin the {{mt_*}} variable list against the live editor",
+      "Replace generic accounts-list image for the Outbound audience step",
+      "Purge unsourced metrics"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "fc-create-type",
+        "appPath": "/campaigns",
+        "what": "Create Campaign type selector"
+      },
+      {
+        "name": "fc-audience-tab",
+        "appPath": "/campaigns",
+        "what": "Audience rule builder"
+      },
+      {
+        "name": "fc-visual-editor",
+        "appPath": "/campaigns",
+        "what": "Visual page editor with variable insert"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/getting-started/use-cases.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "getting-started",
+    "appPaths": [
+      "/campaigns",
+      "/reveal/accounts"
+    ],
+    "whatChanged": "Campaign-type names drift (Banner&Popup/Agentic Flow/Sequence/OpenAI Ads); AI-agent config path; missing Oracle/Demo-Booked.",
+    "contentTasks": [
+      "Reconcile campaign-type names to live (Widget, Agentic Flow, Sequence, Agentic Chat, OpenAI Ads)",
+      "Fix AI-agent config path",
+      "Add Oracle + meeting-booking + Demo Booked use cases",
+      "Purge metrics"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "uc-campaigns",
+        "appPath": "/campaigns",
+        "what": "Campaigns list with current type cards"
+      },
+      {
+        "name": "uc-reveal",
+        "appPath": "/reveal/accounts",
+        "what": "Visitor Reveal accounts"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/getting-started/playbooks.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "getting-started",
+    "appPaths": [
+      "/campaigns",
+      "/ai-agents/abm",
+      "/conversions"
+    ],
+    "whatChanged": "Nav paths wrong (AI Agents top-level vs Settings; Collections naming); missing meeting-booking play; metrics.",
+    "contentTasks": [
+      "Fix nav paths (AI Agents top-level; Collections not Target Groups)",
+      "Add an Agentic Chat meeting-booking / Demo Booked play",
+      "Verify permissions/role claims (Sales role now exists)",
+      "Purge metrics"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "pb-ai-agents",
+        "appPath": "/ai-agents/abm",
+        "what": "AI Agent (Clara) hub"
+      },
+      {
+        "name": "pb-conversions",
+        "appPath": "/conversions",
+        "what": "Conversions overview"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/getting-started/glossary.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "getting-started",
+    "appPaths": [
+      "/"
+    ],
+    "whatChanged": "Campaign-type taxonomy + variable list outdated; missing Oracle/Trust Tiers/Agentic handoff/OpenAI Ads/Widget/Visitor Reveal/Demo Booked/Co-Pilot.",
+    "contentTasks": [
+      "Add terms: Oracle, Trust Tiers, Agentic Chat handoff modes, OpenAI Ads, Widget, Visitor Reveal, Reveal Confidence/Source, Demo Booked, Co-Pilot roster, Collections",
+      "Fix campaign-type taxonomy + personalization-variable list",
+      "Pin API rate limit; fix Find-it nav hints"
+    ],
+    "screenshotsToCapture": []
+  },
+  {
+    "docPath": "docs/campaigns/overview.md",
+    "action": "update",
+    "priority": "high",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns"
+    ],
+    "whatChanged": "Campaign-type roster wrong (says 12, omits Google Ads/CRM, lists Meta, 'Advanced' category); status values; Co-Pilot card.",
+    "contentTasks": [
+      "Rebuild roster to live create-modal: Personalization (Inbound/Outbound/A-B/Widget), Advertising (Display/LinkedIn/OpenAI Ads/Retargeting), Agentic (Agentic Flow/Sequence/Intent/Agentic Chat)",
+      "Rename category Advanced -> Agentic",
+      "Clarify Google Ads (Customer-Match upload, tile hidden) + CRM Campaigns as auxiliary",
+      "Reconcile status values (Full Personalization/Experiment/Inactive); add Preference + Co-Pilot card"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "campaigns-list",
+        "appPath": "/campaigns",
+        "what": "Campaigns list with summary cards + Co-Pilot card"
+      },
+      {
+        "name": "campaigns-create-modal",
+        "appPath": "/campaigns",
+        "what": "Create Campaign modal with 3 categories"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/campaigns/agentic-chat.md",
+    "action": "update",
+    "priority": "high",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns"
+    ],
+    "whatChanged": "Major Agentic Chat overhaul missing; 8/9 screenshot captions scrambled; 'Advanced' category; CVRL/CTRL conflict.",
+    "contentTasks": [
+      "Document Instructions tab + email-handoff modes (Book a meeting / Send a thank-you / Show a HubSpot form)",
+      "Document AI Conversation Summary Performance sub-tab (Topic/Description/Visitors with Chat/Converted/Sentiment, Refresh insights, Show visitors backlink)",
+      "Document demo-booking columns (Demo Booked/AE/Time)",
+      "Document voice mode + six-voice picker + thinking/tool-step UI + auto-greeting",
+      "Fix the scrambled screenshot<->caption pairings",
+      "Update create path to Agentic category",
+      "Reconcile CVRL/CTRL definition"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "ac-create",
+        "appPath": "/campaigns",
+        "what": "Create Agentic Chat under Agentic category"
+      },
+      {
+        "name": "ac-instructions-handoff",
+        "appPath": "/campaigns",
+        "what": "Instructions tab with email-handoff mode radio"
+      },
+      {
+        "name": "ac-conversation-summary",
+        "appPath": "/campaigns",
+        "what": "AI Conversation Summary table"
+      },
+      {
+        "name": "ac-demo-columns",
+        "appPath": "/campaigns",
+        "what": "Performance table with Demo Booked columns"
+      },
+      {
+        "name": "ac-widget-preview",
+        "appPath": "/campaigns",
+        "what": "Chat widget preview modes"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/campaigns/banner-popup.md",
+    "action": "update",
+    "priority": "high",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns",
+      "/campaigns/widget"
+    ],
+    "whatChanged": "Renamed to Widget; sidebar widget added; HubSpot-form picker. Retire/redirect to widget.md.",
+    "contentTasks": [
+      "Mark as renamed to Widget; add redirect note (old banner_popup slug)",
+      "Defer full content to new campaigns/widget.md (or convert this file into widget.md)",
+      "Document new sidebar widget + HubSpot-form picker if kept here"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "bp-rename-widget",
+        "appPath": "/campaigns",
+        "what": "Widget tile (was Banner & Popup) in Create Campaign"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/campaigns/advertising-campaigns.md",
+    "action": "update",
+    "priority": "high",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns"
+    ],
+    "whatChanged": "Meta is now Coming Soon/disabled; verify Clara bidding label; CVRL/CTRL.",
+    "contentTasks": [
+      "Mark Meta as Coming Soon/disabled (not a live selectable type)",
+      "Verify AI-Predicted (Clara) bidding label still current",
+      "Reconcile CVRL/CTRL definition",
+      "Verify Display/Retargeting create flow + tabs"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "adv-create",
+        "appPath": "/campaigns",
+        "what": "Create Campaign Advertising tiles (Display/LinkedIn/OpenAI Ads/Retargeting; Meta disabled)"
+      },
+      {
+        "name": "adv-audience-tab",
+        "appPath": "/campaigns",
+        "what": "Advertising Audience tab (budget/schedule/bidding)"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/campaigns/agentic-flow.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns"
+    ],
+    "whatChanged": "Agentic Flow vs Sequence vs Agentic Sequence naming; Settings-tab name; sidebar_position collision.",
+    "contentTasks": [
+      "Confirm Agentic Flow is distinct from Sequence (email) and shares the Sequence editor + Audience tab",
+      "Fix Settings tab name (Agentic Sequence context)",
+      "Document step types + Activate + Clear Personalizations",
+      "Fix sidebar_position collision"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "af-sequence-tab",
+        "appPath": "/campaigns",
+        "what": "Agentic Flow Sequence builder"
+      },
+      {
+        "name": "af-add-step",
+        "appPath": "/campaigns",
+        "what": "Create Sequence Step dialog"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/campaigns/email-campaigns.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns"
+    ],
+    "whatChanged": "'AI Sequences' vs 'Sequence' label; bare variable syntax; overlap with Agentic Flow.",
+    "contentTasks": [
+      "Reconcile label: create modal shows 'Sequence' (internal type email)",
+      "Pin bare {{field}} variable syntax (firstName/company/industry...) as distinct from web mt_*",
+      "Clarify vs Agentic Flow (template control vs full AI)",
+      "Verify CRM triggers actually configurable"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "seq-create",
+        "appPath": "/campaigns",
+        "what": "Create Sequence under Agentic"
+      },
+      {
+        "name": "seq-step-editor",
+        "appPath": "/campaigns",
+        "what": "Sequence step editor"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/campaigns/google-ads.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns",
+      "/integrations"
+    ],
+    "whatChanged": "Google Ads is a Customer-Match audience-sync path (tile hidden in Create Campaign); stale Google policy facts; updated popup.",
+    "contentTasks": [
+      "Clarify Google Ads is created via Customer-Match upload (tile hidden in Create Campaign), not a campaign tile",
+      "Update the 3-step popup (Preparing->Creating->Uploading; skipped-records summary)",
+      "Fix stale Google policy facts; verify menu label 'Create Google Ads Customer Match'",
+      "Fix sidebar_position collision"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "ga-customer-match-menu",
+        "appPath": "/campaigns",
+        "what": "Account collection kebab -> Create Google Ads Customer Match"
+      },
+      {
+        "name": "ga-upload-popup",
+        "appPath": "/campaigns",
+        "what": "Customer Match upload 3-step popup"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/campaigns/linkedin-ads.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns",
+      "/integrations"
+    ],
+    "whatChanged": "Verify Push to LinkedIn + 300-company min; button-label inconsistency; sidebar_position.",
+    "contentTasks": [
+      "Verify create flow under Advertising + Account/Contact targeting",
+      "Verify Push to LinkedIn button + 300 matched-company minimum",
+      "Normalize create-button label",
+      "Fix sidebar_position collision"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "li-create",
+        "appPath": "/campaigns",
+        "what": "LinkedIn under Advertising in Create Campaign"
+      },
+      {
+        "name": "li-audience",
+        "appPath": "/campaigns",
+        "what": "LinkedIn audience/budget config"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/campaigns/intent.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns",
+      "/campaigns/first-party",
+      "/campaigns/third-party"
+    ],
+    "whatChanged": "Third-party keyword UI never captured (explicit TODO); verify weights/tiers/thresholds; sidebar_position.",
+    "contentTasks": [
+      "Capture and document the third-party intent keyword config UI (resolve the TODO placeholder)",
+      "Verify first-party default action weights + score tiers + trend thresholds",
+      "Document First Party vs Third Party intent-type picker",
+      "Fix sidebar_position collision"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "intent-create",
+        "appPath": "/campaigns",
+        "what": "Intent under Agentic + intent-type picker"
+      },
+      {
+        "name": "intent-fp-weights",
+        "appPath": "/campaigns/first-party",
+        "what": "First-party scoring weights"
+      },
+      {
+        "name": "intent-tp-keywords",
+        "appPath": "/campaigns/third-party",
+        "what": "Third-party keyword config"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/campaigns/crm-campaigns.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns"
+    ],
+    "whatChanged": "Verify per-campaign Settings>CRM Sync flow; dated 2024 examples; under-screenshotted.",
+    "contentTasks": [
+      "Verify per-campaign CRM Sync panel (Create New / Link Existing / Enable Sync)",
+      "Update naming-convention examples (2024 -> 2026)",
+      "Add screenshots for the CRM sync flow + Members tab",
+      "Verify member-status mapping + attribution claims"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "crm-camp-sync",
+        "appPath": "/campaigns",
+        "what": "Per-campaign CRM Sync settings panel"
+      },
+      {
+        "name": "crm-camp-members",
+        "appPath": "/campaigns",
+        "what": "Campaign Members tab"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/campaigns/dynamic-content.md",
+    "action": "update",
+    "priority": "high",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns"
+    ],
+    "whatChanged": "Three-way personalization-variable syntax conflict (top correctness risk).",
+    "contentTasks": [
+      "Resolve the {{mt_*}} vs {{mt_salesforce_*}}/{{mt_hubspot_*}} vs {{sf_*}}/{{hs_*}} vs bare {{field}} conflict against the live editor; establish one canonical catalog",
+      "Confirm Personalize menu tabs (Account Details / IP Reveal Details / Custom Variables)",
+      "Verify {{daysUntilEvent}} exists or remove",
+      "Verify fallback syntax"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "dc-editor-personalize",
+        "appPath": "/campaigns",
+        "what": "Page editor Personalize button"
+      },
+      {
+        "name": "dc-variables-menu",
+        "appPath": "/campaigns",
+        "what": "Personalization variables menu with tabs"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/campaigns/page-editor.md",
+    "action": "update",
+    "priority": "high",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns"
+    ],
+    "whatChanged": "CRM variable-prefix conflict; many editor controls unscreenshotted.",
+    "contentTasks": [
+      "Fix CRM variable prefix to match dynamic-content canonical form",
+      "Re-capture editor controls (Edit HTML, Change Image, Show Removed Elements, Dimensions, CSS Classes, DOM tree)",
+      "Verify keyboard shortcuts + variable insert"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "pe-pages-list",
+        "appPath": "/campaigns",
+        "what": "Campaign Pages tab"
+      },
+      {
+        "name": "pe-editor-main",
+        "appPath": "/campaigns",
+        "what": "Visual page editor interface"
+      },
+      {
+        "name": "pe-variable-insert",
+        "appPath": "/campaigns",
+        "what": "Variable insert menu in editor"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/campaigns/ab-testing.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns"
+    ],
+    "whatChanged": "Control-weight values conflict (10/20/50 vs 100/90/50/0); verify A/B field labels.",
+    "contentTasks": [
+      "Reconcile control-group weight values vs the Status dropdown (Full Personalization/Ongoing/Experiment/Inactive)",
+      "Verify URL A/B Test field labels (URL A/B, Probability B)",
+      "Verify Insights side-by-side layout"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "ab-status-dropdown",
+        "appPath": "/campaigns",
+        "what": "Status dropdown with personalization weights"
+      },
+      {
+        "name": "ab-insights",
+        "appPath": "/campaigns",
+        "what": "A/B Insights personalized vs control"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/campaigns/website-personalization.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "campaigns",
+    "appPaths": [
+      "/campaigns"
+    ],
+    "whatChanged": "Best-screenshotted; verify tab names + CVRL/CTRL + button casing.",
+    "contentTasks": [
+      "Reconcile CVRL/CTRL definition (single source of truth)",
+      "Verify tab names (Audience/Pages/Insights/Engagement/Performance) + button labels/casing",
+      "Verify status guide"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "wp-create",
+        "appPath": "/campaigns",
+        "what": "Create Campaign modal (Inbound/Outbound/A-B/Widget)"
+      },
+      {
+        "name": "wp-insights",
+        "appPath": "/campaigns",
+        "what": "Insights tab personalized vs control"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/audiences/overview.md",
+    "action": "update",
+    "priority": "high",
+    "section": "audiences",
+    "appPaths": [
+      "/accounts",
+      "/contacts",
+      "/reveal/accounts"
+    ],
+    "whatChanged": "Collections naming; CSV-limit contradiction; fabricated refresh-frequency; summary-card labels.",
+    "contentTasks": [
+      "Normalize Collections naming + create dialog (Static/Dynamic Collection, Upload from CSV, Import from CRM)",
+      "Fix CSV limit to 100 MB / 10,000 records",
+      "Remove fabricated 'Set Refresh Frequency (Real-time/Hourly/Daily)'",
+      "Verify summary cards + collection table columns",
+      "Genericize hardcoded collection count"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "aud-collections",
+        "appPath": "/accounts",
+        "what": "Collections list with summary cards"
+      },
+      {
+        "name": "aud-create-modal",
+        "appPath": "/accounts",
+        "what": "+ Account List create/import modal"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/audiences/accounts.md",
+    "action": "update",
+    "priority": "high",
+    "section": "audiences",
+    "appPaths": [
+      "/accounts",
+      "/contacts",
+      "/reveal/accounts"
+    ],
+    "whatChanged": "Collections naming; CSV row cap (1,000 vs 10,000); SSRM grid; new columns; Recommend by AI.",
+    "contentTasks": [
+      "Fix CSV cap to 10,000 / 100 MB; document AI column mapping",
+      "Document SSRM grid behavior (server-side filter/sort, infinite scroll, live count, select all-except)",
+      "Add Reveal Confidence, Agentic Chat Engagement Score, Demo Booked/Demo Booked At/Demo Scheduled At, Technologies columns",
+      "Document Recommend by AI entry point + flow",
+      "Pin operator labels against live UI",
+      "Remove 5x5 references"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "acc-collections",
+        "appPath": "/accounts",
+        "what": "Account Collections list"
+      },
+      {
+        "name": "acc-all-ssrm",
+        "appPath": "/accounts/all",
+        "what": "All Accounts SSRM grid with new columns"
+      },
+      {
+        "name": "acc-static-builder",
+        "appPath": "/accounts",
+        "what": "Static Collection filter builder"
+      },
+      {
+        "name": "acc-recommend-ai",
+        "appPath": "/accounts",
+        "what": "Recommend by AI chat interface"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/audiences/contacts.md",
+    "action": "update",
+    "priority": "high",
+    "section": "audiences",
+    "appPaths": [
+      "/accounts",
+      "/contacts",
+      "/reveal/accounts"
+    ],
+    "whatChanged": "Collections naming; CSV cap; SSRM; Jigsaw/Data.com stale; Person Reveal vs Contact Reveal.",
+    "contentTasks": [
+      "Fix CSV cap; document SSRM grid + new contact columns (recommended_personal_email, engagement sub-scores, Demo Booked)",
+      "Remove Jigsaw/Data.com Company ID (legacy)",
+      "Reconcile Person Reveal vs Contact Reveal terminology + path (Visitor Reveal > Contacts)",
+      "Verify filter field labels",
+      "Document Push to CRM (Contact vs Lead)"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "con-collections",
+        "appPath": "/contacts",
+        "what": "Contact Collections list"
+      },
+      {
+        "name": "con-all-ssrm",
+        "appPath": "/contacts/all",
+        "what": "All Contacts SSRM grid"
+      },
+      {
+        "name": "con-filter-fields",
+        "appPath": "/contacts",
+        "what": "Contact filter field selector"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/audiences/target-groups.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "audiences",
+    "appPaths": [
+      "/accounts",
+      "/contacts",
+      "/reveal/accounts"
+    ],
+    "whatChanged": "'Target Groups' is doc-only framing; repoint to Collections; isAll/Tags fabricated.",
+    "contentTasks": [
+      "Repoint framing from 'Target Groups' to Collections (live label)",
+      "Remove unverified isAll operator + Tags concept",
+      "Reconcile operator casing with filters.md",
+      "Verify auto-generated group naming patterns"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "tg-collections",
+        "appPath": "/accounts",
+        "what": "Collections (the live 'target groups')"
+      },
+      {
+        "name": "tg-auto-generated",
+        "appPath": "/accounts",
+        "what": "Auto-generated collection (e.g. Visitor Reveal group)"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/audiences/filters.md",
+    "action": "update",
+    "priority": "high",
+    "section": "audiences",
+    "appPaths": [
+      "/accounts",
+      "/contacts",
+      "/reveal/accounts"
+    ],
+    "whatChanged": "Operator-label inconsistency (human-readable vs camelCase); sidebar_position 3 collision; verify selectors.",
+    "contentTasks": [
+      "Establish the real UI operator labels (single source of truth) and align accounts/target-groups",
+      "Verify selector fields (Technologies, AI Conversations, Query String, Preferred Language) exist",
+      "Add a dedicated filter-builder screenshot (stop reusing accounts-static-list)",
+      "Fix sidebar_position 3 collision with contacts.md"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "filt-builder",
+        "appPath": "/accounts",
+        "what": "Filter builder Selector/Operator/Value"
+      },
+      {
+        "name": "filt-groups",
+        "appPath": "/accounts",
+        "what": "AND/OR filter groups"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/audiences/csv-import.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "audiences",
+    "appPaths": [
+      "/accounts",
+      "/contacts",
+      "/reveal/accounts"
+    ],
+    "whatChanged": "CSV row cap contradiction; button label (Create Mapping vs Import); duplicate-handling labels.",
+    "contentTasks": [
+      "Pin CSV limits: 100 MB, 10,000 rows (+columns); document AI column mapping",
+      "Reconcile import button label (Create Mapping vs Import)",
+      "Reconcile duplicate-handling option labels across docs",
+      "Use dedicated CSV upload + column-mapping screenshots"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "csv-upload",
+        "appPath": "/accounts/upload-from-csv",
+        "what": "CSV upload page"
+      },
+      {
+        "name": "csv-column-map",
+        "appPath": "/accounts/upload-from-csv",
+        "what": "AI column mapping step"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/audiences/crm-sync.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "audiences",
+    "appPaths": [
+      "/accounts",
+      "/contacts",
+      "/reveal/accounts"
+    ],
+    "whatChanged": "ActiveCampaign-only-here; button labels (Pull vs Import); Fill/Overwrite modes; real import screenshot.",
+    "contentTasks": [
+      "Reconcile supported-CRM list (Salesforce/HubSpot/Pipedrive/ActiveCampaign)",
+      "Document Fill/Overwrite/Don't sync modes + sync filters",
+      "Normalize import/push button labels (Pull/Import/Push)",
+      "Use a real Import-from-CRM screenshot (not the generic create modal)",
+      "Document demo_booked as a mappable field"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "crm-sync-settings",
+        "appPath": "/integrations",
+        "what": "CRM Settings field-mapping with Fill/Overwrite modes"
+      },
+      {
+        "name": "crm-import",
+        "appPath": "/accounts",
+        "what": "Import from CRM flow"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/audiences/linkedin-dmp.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "audiences",
+    "appPaths": [
+      "/accounts",
+      "/integrations"
+    ],
+    "whatChanged": "Verify push flow/menu labels; no sidebar_position; reflect new Customer-Match-style popup steps.",
+    "contentTasks": [
+      "Verify Create LinkedIn Matched Audience menu path + sync steps + status values",
+      "Verify 300-member minimum + match rates",
+      "Add sidebar_position",
+      "Use a real LinkedIn push screenshot"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "ldmp-push-menu",
+        "appPath": "/accounts",
+        "what": "Collection kebab -> Create LinkedIn Matched Audience"
+      },
+      {
+        "name": "ldmp-status",
+        "appPath": "/accounts",
+        "what": "LinkedIn DMP sync status popup"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/audiences/google-customer-match.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "audiences",
+    "appPaths": [
+      "/contacts",
+      "/integrations"
+    ],
+    "whatChanged": "Stale Google policy ($50k spend, Similar Audiences, Discovery->Demand Gen); menu label; no sidebar_position.",
+    "contentTasks": [
+      "Fix stale Google facts ($50k threshold, Similar/Lookalike Audiences sunset, Discovery->Demand Gen)",
+      "Verify Push to Google Ads menu + status values (incl. Too Small)",
+      "Add sidebar_position",
+      "Use a real Google push screenshot"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "gcm-push-menu",
+        "appPath": "/contacts",
+        "what": "Contact collection kebab -> Push to Google Ads"
+      },
+      {
+        "name": "gcm-status",
+        "appPath": "/contacts",
+        "what": "Customer Match sync status"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/visitor-tracking/overview.md",
+    "action": "update",
+    "priority": "high",
+    "section": "visitor-tracking",
+    "appPaths": [
+      "/reveal/accounts",
+      "/reveal/contacts"
+    ],
+    "whatChanged": "Company Reveal -> Visitor Reveal rename; reveal columns; SSRM; tab-list inconsistency; hardcoded counts.",
+    "contentTasks": [
+      "Rename Company Reveal -> Visitor Reveal (Accounts/Contacts tabs)",
+      "Add reveal columns (Reveal Confidence buckets, Reveal Source Abmatic 1-4, Reveal Last Seen, Visited Pages, Total Sessions)",
+      "Document SSRM grid behavior",
+      "Reconcile account-detail tab list (7 tabs incl. Collections/Opportunities)",
+      "Genericize hardcoded dashboard counts; verify 40M+ figure"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "vr-accounts",
+        "appPath": "/reveal/accounts",
+        "what": "Visitor Reveal Accounts with confidence buckets"
+      },
+      {
+        "name": "vr-contacts",
+        "appPath": "/reveal/contacts",
+        "what": "Visitor Reveal Contacts"
+      },
+      {
+        "name": "vr-account-detail",
+        "appPath": "/reveal/accounts",
+        "what": "Account detail tabs"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/visitor-tracking/company-identification.md",
+    "action": "update",
+    "priority": "high",
+    "section": "visitor-tracking",
+    "appPaths": [
+      "/reveal/accounts"
+    ],
+    "whatChanged": "Reveal rename; reveal columns + Reveal Source masking; SSRM; verify action labels.",
+    "contentTasks": [
+      "Use 'Visitor Reveal' + Accounts tab",
+      "Document columns incl. Reveal Confidence + Reveal Source (Abmatic 1-4, never PDL/Apollo/5x5)",
+      "Document SSRM filter/sort/infinite-scroll/select-all-except",
+      "Verify action labels (Add to List, Push to CRM, Export, Exclude, Report Incorrect)",
+      "Anonymize PII + genericize counts"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "ci-accounts",
+        "appPath": "/reveal/accounts",
+        "what": "Accounts table with reveal columns"
+      },
+      {
+        "name": "ci-confidence-tiles",
+        "appPath": "/reveal/accounts",
+        "what": "Confidence metric tiles as filters"
+      },
+      {
+        "name": "ci-visited-pages",
+        "appPath": "/reveal/accounts",
+        "what": "Visited Pages popup"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/visitor-tracking/contact-reveal.md",
+    "action": "update",
+    "priority": "high",
+    "section": "visitor-tracking",
+    "appPaths": [
+      "/reveal/contacts",
+      "/settings/contact-reveal"
+    ],
+    "whatChanged": "Reveal rename; PII baked into prose+screenshot (Stacy Carrier); verify Settings + credits.",
+    "contentTasks": [
+      "Use Visitor Reveal > Contacts",
+      "ANONYMIZE the real contact (Stacy Carrier + work email) in prose AND re-shoot the screenshot",
+      "Verify accuracy slider (default 50%) + Reveal Filters at /settings/contact-reveal",
+      "Verify credit model + Settings>Usage path",
+      "Fix confidence-tile ordering"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "cr-contacts",
+        "appPath": "/reveal/contacts",
+        "what": "Visitor Reveal Contacts (anonymized)"
+      },
+      {
+        "name": "cr-settings",
+        "appPath": "/settings/contact-reveal",
+        "what": "Contact Reveal accuracy slider + filters"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/visitor-tracking/page-views.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "visitor-tracking",
+    "appPaths": [
+      "/reveal/accounts",
+      "/analytics/reports"
+    ],
+    "whatChanged": "Reveal naming drift; verify engagement metric labels + campaign-builder filters + JS API.",
+    "contentTasks": [
+      "Standardize on Visitor Reveal naming",
+      "Verify exact Engagement-tab metric label strings",
+      "Verify campaign-builder filters (Pages Viewed Contains, Did Not Submit Form, Page Views > N)",
+      "Verify window.abmatic.page() JS API"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "pv-engagement",
+        "appPath": "/reveal/accounts",
+        "what": "Account Engagement tab page-view metrics"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/visitor-tracking/form-tracking.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "visitor-tracking",
+    "appPaths": [
+      "/conversions"
+    ],
+    "whatChanged": "Heavy duplication with conversions/form-tracking.md; verify JS API; Company Reveal label.",
+    "contentTasks": [
+      "Consolidate or sharply differentiate from conversions/form-tracking.md (lead-capture vs conversion-measurement angle)",
+      "Verify window.abmatic.track('form_submitted',...) signature",
+      "Use Visitor Reveal naming",
+      "Verify CRM-sync list incl. Pipedrive"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "ft-conversions",
+        "appPath": "/conversions",
+        "what": "Conversions showing form-submission data"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/conversions/overview.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "conversions",
+    "appPaths": [
+      "/conversions",
+      "/conversions/manage"
+    ],
+    "whatChanged": "Goal-entry label (+ Conversion); wildcard-vs-query-param matching; Main Event/Visibility labels; counts.",
+    "contentTasks": [
+      "Confirm tabs 'Conversions (last 60 days)' + 'Manage'; control row 'Non-personalized'",
+      "Pin goal-creation entry as '+ Conversion'",
+      "Resolve Page View URL-matching (wildcards vs query-param)",
+      "Verify Manage columns (Event/Event Type/Attached To/Main Event/Visibility)",
+      "Genericize hardcoded counts"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "conv-overview",
+        "appPath": "/conversions",
+        "what": "Conversions table per campaign"
+      },
+      {
+        "name": "conv-manage",
+        "appPath": "/conversions/manage",
+        "what": "Manage tab with conversion events"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/conversions/create-goals.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "conversions",
+    "appPaths": [
+      "/conversions/manage",
+      "/conversions/editor"
+    ],
+    "whatChanged": "Stale entry labels (New Goal / Track Event vs + Conversion); verify Goal Sources + URL matching.",
+    "contentTasks": [
+      "Reconcile entry label to '+ Conversion' / 'Add a new conversion event'",
+      "Verify two native types (Track Click Event / Track Page View Event) + visual selector",
+      "Verify Set as Main Goal + Active toggle + delete-preserves-data",
+      "Verify Goal Sources (Abmatic/Segment/GA priority) actually exists"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "cg-new-event",
+        "appPath": "/conversions/manage",
+        "what": "Add a new conversion event dialog"
+      },
+      {
+        "name": "cg-editor",
+        "appPath": "/conversions/editor",
+        "what": "Conversion editor track mode"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/conversions/event-tracking.md",
+    "action": "update",
+    "priority": "low",
+    "section": "conversions",
+    "appPaths": [
+      "/conversions/manage"
+    ],
+    "whatChanged": "Mostly current; label reconciliation (Track Event vs Click Event); verify Segment/GA.",
+    "contentTasks": [
+      "Reconcile 'Track Event' label vs 'Click Event' goal type",
+      "Verify Segment + GA4 integration-sourced events + Visibility toggle",
+      "Spot-check internal field-name tables only if verifying data layer"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "et-manage",
+        "appPath": "/conversions/manage",
+        "what": "Manage tab event types"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/conversions/form-tracking.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "conversions",
+    "appPaths": [
+      "/conversions"
+    ],
+    "whatChanged": "Duplicate of visitor-tracking/form-tracking; verify SOC2/consent vendor claims; AI Sequences link slug.",
+    "contentTasks": [
+      "Consolidate/differentiate vs visitor-tracking/form-tracking.md",
+      "Verify compliance claims (SOC 2 Type II, GDPR, consent vendors) with legal",
+      "Verify window.abmatic.track signature",
+      "Fix 'AI Sequences' -> /campaigns/email-campaigns link/label"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "cft-overview",
+        "appPath": "/conversions",
+        "what": "Conversions form-tracking view"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/conversions/analytics.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "conversions",
+    "appPaths": [
+      "/conversions"
+    ],
+    "whatChanged": "Verify aspirational features exist (configurable control %, Segment Analysis, attribution-model selection).",
+    "contentTasks": [
+      "Verify configurable control % (10/20/50) UI + where it lives",
+      "Verify Segment Analysis breakdown + attribution-model selection actually exist (or reframe as conceptual)",
+      "Verify lift-chip color coding",
+      "Note linkedin/salesforce rows excluded from the table"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "ca-lift",
+        "appPath": "/conversions",
+        "what": "Conversion lift across campaigns with detail expansion"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/ai-agents/overview.md",
+    "action": "update",
+    "priority": "high",
+    "section": "ai-agents",
+    "appPaths": [
+      "/ai-agents/abm",
+      "/ai-agents/sdr",
+      "/oracle/goals"
+    ],
+    "whatChanged": "Add Oracle + Co-Pilot; verify plan tiers; confirm Clara/Alex; fix Agentic-Chat-tab conflation.",
+    "contentTasks": [
+      "Add Oracle (autonomous agent) + Co-Pilot sections/links",
+      "Confirm Clara (AI ABM) + Alex (AI SDR); note landing surfaces only Clara",
+      "Verify plan-tier gating against current packaging",
+      "Fix the 'Agentic Chat tab drives Clara' conflation"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "aia-hub",
+        "appPath": "/ai-agents/abm",
+        "what": "Meet Your AI Partner landing with Clara card"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/ai-agents/configuration.md",
+    "action": "update",
+    "priority": "high",
+    "section": "ai-agents",
+    "appPaths": [
+      "/settings/ai-agents",
+      "/campaigns"
+    ],
+    "whatChanged": "Repoint to agent-context guidance; defer literal Settings>AI Agents UI to new settings page.",
+    "contentTasks": [
+      "Repoint to be the agent-context strategy guide",
+      "Clarify Settings -> AI Agents two tabs (Agentic Chat / Agentic Sequence) vs campaign Instructions precedence",
+      "Cross-link new settings/ai-agents.md"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "cfg-settings-ai",
+        "appPath": "/settings/ai-agents",
+        "what": "Settings AI Agents context tabs"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/ai-agents/agentic-chat-widget.md",
+    "action": "update",
+    "priority": "high",
+    "section": "ai-agents",
+    "appPaths": [
+      "/campaigns",
+      "/settings/ai-agents"
+    ],
+    "whatChanged": "Zero screenshots; verify 6-voice list; CRM-sync 'potential' vs live; tie to campaign handoff.",
+    "contentTasks": [
+      "Add screenshots (widget on site, voice picker)",
+      "Verify the 6-voice picker list against live (OpenAI Realtime voices change)",
+      "Reconcile CRM-sync 'potential' framing vs live handoff (HubSpot form / Slack)",
+      "Tie to Agentic Chat campaign Instructions + handoff modes"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "acw-widget",
+        "appPath": "/campaigns",
+        "what": "Agentic Chat widget rendered preview"
+      },
+      {
+        "name": "acw-voice-picker",
+        "appPath": "/campaigns",
+        "what": "Voice selector in widget"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/ai-agents/sdr-agent.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "ai-agents",
+    "appPaths": [
+      "/ai-agents/sdr"
+    ],
+    "whatChanged": "Verify Alex channels (voice-centric); verify form + analytics tiles.",
+    "contentTasks": [
+      "Verify which channels Alex actually performs (voice + ? ); soften unverified phone/email/LinkedIn claims",
+      "Verify the engage-a-prospect form + 'Get in touch with Alex' label + in-app test call",
+      "Verify the Analytics metric tiles exist",
+      "Purge unsourced metrics"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "alex-sdr",
+        "appPath": "/ai-agents/sdr",
+        "what": "Alex AI SDR page with prospect form"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/ai-agents/abm-agent.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "ai-agents",
+    "appPaths": [
+      "/ai-agents/abm"
+    ],
+    "whatChanged": "Verify quick-start buttons; fix Agentic-Chat-tab conflation; add Co-Pilot cross-link.",
+    "contentTasks": [
+      "Verify Clara quick-start buttons (Accounts/Contacts/Campaigns/Reports/Personalization)",
+      "Fix config-tab conflation (Clara is internal ABM, Agentic Chat tab is the website widget)",
+      "Add Co-Pilot cross-link (Clara also appears as Insights & Analytics Director)",
+      "Verify voice mode + capabilities"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "clara-abm",
+        "appPath": "/ai-agents/abm",
+        "what": "Clara AI ABM page with quick-start buttons"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/overview.md",
+    "action": "update",
+    "priority": "high",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations"
+    ],
+    "whatChanged": "Rebuild section list; IP-provider rebrand (5 Abmatic waterfall); add OpenAI Ads/Calendar/Zoom; Meta/Marketo non-functional; Fill/Overwrite + push filters.",
+    "contentTasks": [
+      "Rebuild to live 7 sections (CRM / Communications / Conversion tracking / Abmatic IP Data Providers / Ad Networks / Accounts & Contacts Data / Marketing & Sales Automation)",
+      "Document IP Data = fixed 5-provider Abmatic waterfall (single on/off); remove Clearbit/Kickfire/ZoomInfo/5x5",
+      "Add OpenAI Ads, Google Calendar, Zoom; mark Meta (Coming Soon) + Marketo (non-functional)",
+      "Document Fill/Overwrite/Don't sync field modes + CRM push filters + drag-orderable CRM priority",
+      "Normalize Sync Frequency vocabulary + nav/button labels"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "int-hub",
+        "appPath": "/integrations",
+        "what": "Full Integrations hub with all sections"
+      },
+      {
+        "name": "int-ip-providers",
+        "appPath": "/integrations",
+        "what": "Abmatic IP Data Providers 5-provider waterfall"
+      },
+      {
+        "name": "int-ad-networks",
+        "appPath": "/integrations",
+        "what": "Ad Networks incl. OpenAI Ads, Meta disabled"
+      },
+      {
+        "name": "int-communications",
+        "appPath": "/integrations",
+        "what": "Communications: Gmail/Slack/Google Calendar/Zoom"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/crm/salesforce.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations"
+    ],
+    "whatChanged": "Fill/Overwrite modes; verify member-status auto-mapping + Task logging; product-specific screenshot.",
+    "contentTasks": [
+      "Document Fill/Overwrite/Don't sync field-mapping modes + sync filters",
+      "Verify Campaign Member Status auto-mapping + Activity-as-Task logging claims",
+      "Expose demo_booked in field mapping",
+      "Swap generic hub image for salesforce-specific asset"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "sf-settings",
+        "appPath": "/integrations",
+        "what": "Salesforce CRM Settings field mapping"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/crm/salesforce-setup.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations"
+    ],
+    "whatChanged": "Edition list reconcile; default sync direction; Fill/Overwrite; verify 'Modify All Data' requirement.",
+    "contentTasks": [
+      "Reconcile edition list vs salesforce.md",
+      "Document Fill/Overwrite modes + Add Mapping + required primary keys",
+      "Verify 'Modify All Data' is actually required",
+      "Swap generic hub image"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "sf-setup-tabs",
+        "appPath": "/integrations",
+        "what": "Salesforce settings object tabs"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/crm/hubspot.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations"
+    ],
+    "whatChanged": "Fill/Overwrite; HubSpot owners + forms; verify property names; product-specific screenshot.",
+    "contentTasks": [
+      "Document Fill/Overwrite modes",
+      "Add HubSpot user import + owners (reconnect-required caveat) + HubSpot forms in popups/Agentic Chat",
+      "Verify hs_is_target_account/hs_target_account round-trip",
+      "Swap generic hub image"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "hs-settings",
+        "appPath": "/integrations",
+        "what": "HubSpot CRM Settings field mapping"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/crm/hubspot-setup.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations"
+    ],
+    "whatChanged": "Verify permission labels; Opportunities read-only reconcile; tier matrix; HubSpot users.",
+    "contentTasks": [
+      "Verify 'App Marketplace Access' permission label",
+      "Reconcile Opportunities read-only vs hubspot.md",
+      "Add HubSpot user import note",
+      "Verify tier matrix"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "hs-setup-tabs",
+        "appPath": "/integrations",
+        "what": "HubSpot settings object tabs"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/crm/pipedrive.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations"
+    ],
+    "whatChanged": "Fill/Overwrite; verify 'Create duplicates' option; product-specific screenshot.",
+    "contentTasks": [
+      "Document Fill/Overwrite modes",
+      "Verify 'Create duplicates' duplicate-handling option exists",
+      "Normalize Yes/No vs emoji table",
+      "Swap generic hub image"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "pd-settings",
+        "appPath": "/integrations",
+        "what": "Pipedrive CRM Settings"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/crm/activecampaign.md",
+    "action": "update",
+    "priority": "low",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations"
+    ],
+    "whatChanged": "Fix Sync-Direction-vs-mode confusion; verify Authorize->Integrate flow + deal support.",
+    "contentTasks": [
+      "Fix 'Sync Direction Options' section that actually lists Fill/Overwrite modes",
+      "Verify Authorize-then-Integrate API-key flow",
+      "Verify deal/opportunity support"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "ac-connect",
+        "appPath": "/integrations",
+        "what": "ActiveCampaign API-key connect dialog"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/crm/outreach.md",
+    "action": "update",
+    "priority": "low",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations"
+    ],
+    "whatChanged": "Section-name mismatch (Automation Tools vs Marketing & Sales Automation); uppercase labels; verify import sources.",
+    "contentTasks": [
+      "Fix section name to 'Marketing & Sales Automation'",
+      "Normalize uppercase AUTHORIZE/SETTINGS labels",
+      "Verify 'Specific Sequences' import + 'push on engagement threshold'"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "or-card",
+        "appPath": "/integrations",
+        "what": "Outreach card in Marketing & Sales Automation"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/crm/sync-behavior.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations"
+    ],
+    "whatChanged": "Verify timestamp conflict-resolution + 30-day backup claims; Fill/Overwrite canonical; sidebar_position.",
+    "contentTasks": [
+      "Document Fill/Overwrite/Don't sync as the canonical field-mode model",
+      "Verify 'most recent timestamp wins' two-way resolution + 30-day backup recovery claims",
+      "Fix sidebar_position 5 collision",
+      "Use sync-settings screenshot"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "sb-field-modes",
+        "appPath": "/integrations",
+        "what": "Field mapping with Fill/Overwrite/Don't sync dropdown"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/slack.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations",
+      "/settings/slack"
+    ],
+    "whatChanged": "Verify full /settings/slack workspace UI; sidebar_position 2 collision.",
+    "contentTasks": [
+      "Verify channels/members + per-channel & per-user tabs (Filters/Notification Settings/Message Customization/Messages/Members)",
+      "Verify message-customization property list + 'Suppress account notifications when contact revealed' + auto-sync users",
+      "Fix sidebar_position 2 collision with gmail.md"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "slack-page",
+        "appPath": "/settings/slack",
+        "what": "Slack workspace settings page"
+      },
+      {
+        "name": "slack-notif-settings",
+        "appPath": "/settings/slack",
+        "what": "Channel Notification Settings tab"
+      },
+      {
+        "name": "slack-msg-custom",
+        "appPath": "/settings/slack",
+        "what": "Message Customization property list"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/segment.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations",
+      "/conversions/manage"
+    ],
+    "whatChanged": "Markettailor old-brand name + catalog URL; no sidebar_position.",
+    "contentTasks": [
+      "Clarify/verify the 'Markettailor' destination name + catalog URL (pre-rebrand); explain the rebrand",
+      "Verify activation flow + one-active-conversion-tracker rule",
+      "Add sidebar_position"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "seg-card",
+        "appPath": "/integrations",
+        "what": "Segment card in Conversion Tracking"
+      },
+      {
+        "name": "seg-events",
+        "appPath": "/conversions/manage",
+        "what": "Segment-sourced events in Manage"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/google-analytics.md",
+    "action": "update",
+    "priority": "low",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations",
+      "/conversions/manage"
+    ],
+    "whatChanged": "Verify GA4 connect + custom-dimension flow; disconnect path; no sidebar_position.",
+    "contentTasks": [
+      "Verify GA4 OAuth + property selection + custom-dimension creation",
+      "Verify imported events appear in Conversions>Manage with GA icon",
+      "Verify Settings>Disable path",
+      "Add sidebar_position"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "ga-card",
+        "appPath": "/integrations",
+        "what": "Google Analytics card"
+      },
+      {
+        "name": "ga-events",
+        "appPath": "/conversions/manage",
+        "what": "GA-sourced events in Manage"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/gmail.md",
+    "action": "update",
+    "priority": "low",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations"
+    ],
+    "whatChanged": "Verify OAuth scopes + sequence send mechanism; sidebar_position 2 collision.",
+    "contentTasks": [
+      "Verify OAuth scopes against the real consent screen",
+      "Verify Gmail is the active sequence email-send mechanism + Tasks tab Send Email",
+      "Fix sidebar_position collision"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "gmail-card",
+        "appPath": "/integrations",
+        "what": "Gmail card in Communications"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/advertising/linkedin-ads.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations",
+      "/accounts"
+    ],
+    "whatChanged": "Verify match rates/min; card label; product-specific screenshot; no sidebar_position.",
+    "contentTasks": [
+      "Verify match rates + 300-member minimum + card label (LinkedIn vs LinkedIn Ads)",
+      "Use a LinkedIn-specific screenshot",
+      "Reconcile audiences nav",
+      "Add sidebar_position"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "li-int-card",
+        "appPath": "/integrations",
+        "what": "LinkedIn card in Ad Networks"
+      },
+      {
+        "name": "li-int-account-select",
+        "appPath": "/integrations",
+        "what": "LinkedIn ad-account selector"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/integrations/advertising/google-ads.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "integrations",
+    "appPaths": [
+      "/integrations",
+      "/contacts"
+    ],
+    "whatChanged": "Stale $50k Customer-Match threshold; audiences nav drift; product-specific screenshot; no sidebar_position.",
+    "contentTasks": [
+      "Fix stale $50k lifetime-spend Customer Match eligibility",
+      "Reconcile audiences nav (Accounts>Collections vs Audiences>Accounts)",
+      "Document multi-account selector + match rates",
+      "Use a Google-Ads-specific screenshot",
+      "Add sidebar_position"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "ga-int-card",
+        "appPath": "/integrations",
+        "what": "Google Ads card with multi-account selector"
+      },
+      {
+        "name": "ga-int-active",
+        "appPath": "/integrations",
+        "what": "Google Ads Active status"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/analytics/overview.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "analytics",
+    "appPaths": [
+      "/analytics/reports",
+      "/analytics/dashboards"
+    ],
+    "whatChanged": "Report-type label (Visitor Session vs LinkedIn Visitor Session); hardcoded '351 reports'; benchmark caveats.",
+    "contentTasks": [
+      "Confirm 7 report types incl. LinkedIn Visitor Session (reconcile label)",
+      "Genericize '351 reports' caption",
+      "Caveat benchmark numbers as guidance",
+      "Verify Reveal>Accounts path -> Visitor Reveal"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "an-reports",
+        "appPath": "/analytics/reports",
+        "what": "Reports list with quick-filter blocks"
+      },
+      {
+        "name": "an-dashboards",
+        "appPath": "/analytics/dashboards",
+        "what": "Dashboards list"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/analytics/dashboards.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "analytics",
+    "appPaths": [
+      "/analytics/dashboards"
+    ],
+    "whatChanged": "Verify 20-widget/non-deletable-home/refresh-clears-cache; sharing conflict; hardcoded timestamp.",
+    "contentTasks": [
+      "Verify 20-widget max, Home Dashboard non-deletable, Refresh clears cache, chartEnabled-only widgets",
+      "Resolve dashboard-sharing conflict",
+      "Genericize hardcoded 'Last updated' timestamp",
+      "Verify grid constants"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "dash-grid",
+        "appPath": "/analytics/dashboards",
+        "what": "Dashboard widget grid"
+      },
+      {
+        "name": "dash-add-report",
+        "appPath": "/analytics/dashboards",
+        "what": "Add Report (Chart/Table) dialog"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/analytics/reports.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "analytics",
+    "appPaths": [
+      "/analytics/reports"
+    ],
+    "whatChanged": "Custom-field count (30 not 10); 'Advance Filtering' spelling; report-type labels; 500-row preview.",
+    "contentTasks": [
+      "Fix custom-field count to 30 (vs accounts API)",
+      "Match 'Enable Advance Filtering' label exactly (or note typo)",
+      "Confirm 7 report types + LinkedIn Visitor Session label",
+      "Document 500-row edit preview + paginated full view",
+      "Genericize '351 reports'"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "rep-list",
+        "appPath": "/analytics/reports",
+        "what": "Reports list"
+      },
+      {
+        "name": "rep-editor",
+        "appPath": "/analytics/reports",
+        "what": "Report builder pivot/chart editor"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/analytics/campaign-performance.md",
+    "action": "update",
+    "priority": "high",
+    "section": "analytics",
+    "appPaths": [
+      "/campaigns"
+    ],
+    "whatChanged": "Add Demo Booked columns + AI Conversation Summary; fix '4 KPIs but 5 listed'; legacy wp-* screenshots; CVRL/CTRL.",
+    "contentTasks": [
+      "Add Demo Booked At / Demo Scheduled At / Demo Time columns + meaning split (booked-at vs scheduled-at)",
+      "Add AI Conversation Summary Performance sub-tab",
+      "Fix 'four KPIs' vs five listed",
+      "Swap legacy wp-* screenshots for campaign-* equivalents",
+      "Reconcile CVRL/CTRL"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "cp-insights",
+        "appPath": "/campaigns",
+        "what": "Campaign Insights tab KPI cards + trend chart"
+      },
+      {
+        "name": "cp-performance",
+        "appPath": "/campaigns",
+        "what": "Performance tab with Demo Booked columns"
+      },
+      {
+        "name": "cp-conversation-summary",
+        "appPath": "/campaigns",
+        "what": "AI Conversation Summary sub-tab"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/analytics/audience-insights.md",
+    "action": "update",
+    "priority": "low",
+    "section": "analytics",
+    "appPaths": [
+      "/analytics/reports"
+    ],
+    "whatChanged": "Reconcile whether a real Audience Insights view exists; PDF/scheduled-Slack claims; no sidebar_position.",
+    "contentTasks": [
+      "Reconcile whether a dedicated Audience Insights view exists (unused audience-insights.png) or it's report-based",
+      "Remove/verify PDF export + scheduled-Slack-report claims",
+      "Reconcile company-size bands",
+      "Add sidebar_position"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "ai-reports",
+        "appPath": "/analytics/reports",
+        "what": "Reports used for audience insights"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/api/overview.md",
+    "action": "ok",
+    "priority": "low",
+    "section": "api",
+    "appPaths": [
+      "/settings/api-keys"
+    ],
+    "whatChanged": "Cleanest doc; only verify rate limit + plan gating + endpoint surface.",
+    "contentTasks": [
+      "Verify single-endpoint surface (no new public endpoints)",
+      "Verify rate limit 100/min + per_page max 100",
+      "Verify plan-gating name"
+    ],
+    "screenshotsToCapture": []
+  },
+  {
+    "docPath": "docs/api/accounts.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "api",
+    "appPaths": [
+      "/settings/api-keys"
+    ],
+    "whatChanged": "Fix 'Clara = chat widget' error; custom-field count (30 vs 10); verify field catalog; clearbit logo host.",
+    "contentTasks": [
+      "Fix 'AI Chat fields ... Clara' -> Agentic Chat widget (Clara is the AI ABM agent)",
+      "Reconcile custom-field count (30)",
+      "Verify field catalog incl. agentic_chat_engagement_score, demo_booked*, third_party_intent_score",
+      "Fix logo.clearbit.com host reference"
+    ],
+    "screenshotsToCapture": []
+  },
+  {
+    "docPath": "docs/api/api-keys.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "api",
+    "appPaths": [
+      "/settings/api-keys"
+    ],
+    "whatChanged": "Reconcile with new settings/api-keys.md; verify single-key model + endpoint paths.",
+    "contentTasks": [
+      "Reconcile with the new settings/api-keys.md (avoid duplication; cross-link)",
+      "Verify single-key-per-account model + /account/api-key endpoint paths",
+      "Verify abm_ prefix"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "apikeys-ui",
+        "appPath": "/settings/api-keys",
+        "what": "API Keys management UI"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/settings/account.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "settings",
+    "appPaths": [
+      "/settings/account"
+    ],
+    "whatChanged": "Verify Branding (Fetch Logo/Primary Color), admin gating, version v6.1, footer actions.",
+    "contentTasks": [
+      "Verify Branding section (Fetch Logo from Website, Primary Color for chat widget)",
+      "Verify admin-vs-non-admin field gating + Exclude URLs",
+      "Confirm version label (v6.1) + Flush Cache / Reset Demo / Sign out"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "set-account",
+        "appPath": "/settings/account",
+        "what": "Account settings with Branding section"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/settings/users.md",
+    "action": "update",
+    "priority": "high",
+    "section": "settings",
+    "appPaths": [
+      "/settings/users"
+    ],
+    "whatChanged": "Add Sales role (3 roles); Calendar/Zoom chips; Default AE; HubSpot user import; default filter.",
+    "contentTasks": [
+      "Add Sales role (3 roles total) + role icons",
+      "Add Google Calendar / Zoom connection columns + Default AE star",
+      "Add HubSpot user import (parity with Salesforce)",
+      "Document default filter hiding inactive/un-invited users until search",
+      "Reconcile agent-name references"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "set-users",
+        "appPath": "/settings/users",
+        "what": "Users grid with roles + Calendar/Zoom + Default AE"
+      },
+      {
+        "name": "set-users-invite",
+        "appPath": "/settings/users",
+        "what": "Invite dialog with Sales role"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/settings/website-context.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "settings",
+    "appPaths": [
+      "/settings/website-context"
+    ],
+    "whatChanged": "Verify two tabs + Build Website Context crawl + per-page dialogs + URL filtering.",
+    "contentTasks": [
+      "Verify Pages Scraped tab (Summary/FAQs/Preview/Rescrape/Delete + Delete All)",
+      "Verify Settings tab (Build Website Context + progress, Add URL, Include/Exclude prefixes)",
+      "Verify rescrape timing claim"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "wc-pages",
+        "appPath": "/settings/website-context",
+        "what": "Pages Scraped grid"
+      },
+      {
+        "name": "wc-summary-dialog",
+        "appPath": "/settings/website-context",
+        "what": "Page Summary dialog"
+      },
+      {
+        "name": "wc-faqs-dialog",
+        "appPath": "/settings/website-context",
+        "what": "FAQs dialog"
+      },
+      {
+        "name": "wc-settings",
+        "appPath": "/settings/website-context",
+        "what": "Settings tab with Build + URL filtering"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/settings/custom-fields.md",
+    "action": "update",
+    "priority": "low",
+    "section": "settings",
+    "appPaths": [
+      "/settings/custom-fields"
+    ],
+    "whatChanged": "Verify 30-field cap + token + CSV header + CRM mapping direction.",
+    "contentTasks": [
+      "Verify 30 custom fields each for Accounts/Contacts",
+      "Verify {{account.field_01}} token + field_01 CSV header",
+      "Verify CRM mapping direction (two-way) + operator set"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "set-custom-fields",
+        "appPath": "/settings/custom-fields",
+        "what": "Custom Fields accordions"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/settings/notifications.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "settings",
+    "appPaths": [
+      "/settings/notifications"
+    ],
+    "whatChanged": "Knock-powered, In-App only (Email/Slack disabled); reconcile category list.",
+    "contentTasks": [
+      "Note powered by Knock; only In-App Feed channel active (Email/Slack columns disabled)",
+      "Reconcile categories: Export, Target Groups, Form Fills, Campaigns, IP Reveal, CRM, Accounts, Credits, Other",
+      "Document bell-icon feed"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "set-notifications",
+        "appPath": "/settings/notifications",
+        "what": "Notification Preferences table"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/settings/billing.md",
+    "action": "update",
+    "priority": "high",
+    "section": "settings",
+    "appPaths": [
+      "/settings/usage"
+    ],
+    "whatChanged": "Mislabeled 'Usage & Billing'; rename to settings/usage; metadata-sparse; credit labels + plan names.",
+    "contentTasks": [
+      "Mark for rename to settings/usage.md (see new page) + redirect",
+      "Fix front matter (add id/title/sidebar_label)",
+      "Reconcile credit labels (Apollo Contacts/Abmatic Accounts-Contacts-IP Reveal/OpenAI Tokens/Campaigns) + plan names",
+      "Confirm no in-app billing UI"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "set-usage",
+        "appPath": "/settings/usage",
+        "what": "Usage dashboard"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/settings/data-export.md",
+    "action": "update",
+    "priority": "low",
+    "section": "settings",
+    "appPaths": [
+      "/settings/export"
+    ],
+    "whatChanged": "Sparse front matter; verify Pushed->Salesforce status + contact export.",
+    "contentTasks": [
+      "Fix front matter (add id/title/sidebar_label)",
+      "Verify export-history columns + statuses (Download/Processing/Pushed)",
+      "Verify contact export flow + 30-min timeout claim"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "set-export",
+        "appPath": "/settings/export",
+        "what": "Export history table"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/settings/script-installation.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "settings",
+    "appPaths": [
+      "/installation"
+    ],
+    "whatChanged": "Verify embed shape + status labels + JS API + perf claims; screenshot naming.",
+    "contentTasks": [
+      "Verify embed clients.abmatic.ai/<id>.js shape + click-to-copy",
+      "Verify status labels (Active/Inactive) + Last visitor",
+      "Verify JS API abmatic('track',...) / abmatic('debug',true) exist",
+      "Verify ~15KB claim; standardize screenshot"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "set-install",
+        "appPath": "/installation",
+        "what": "Installation page with script + status"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/settings/contact-reveal.md",
+    "action": "ok",
+    "priority": "low",
+    "section": "settings",
+    "appPaths": [
+      "/settings/contact-reveal"
+    ],
+    "whatChanged": "Accuracy slider + filters unchanged since pre-March; verify only.",
+    "contentTasks": [
+      "Verify accuracy slider (default 50%) + Reveal Filters builder",
+      "Verify links resolve"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "set-contact-reveal",
+        "appPath": "/settings/contact-reveal",
+        "what": "Contact Reveal accuracy slider + filters"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/troubleshooting/troubleshooting-overview.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "troubleshooting",
+    "appPaths": [
+      "/installation",
+      "/integrations"
+    ],
+    "whatChanged": "Verify JS API names; standardize verified screenshots; identification-rate inconsistency; add new-area troubleshooting.",
+    "contentTasks": [
+      "Verify abmatic.page()/abmatic.track() method names against live client script",
+      "Reconcile identification-rate (~30% vs 60-80%)",
+      "Add Oracle/Agentic-Chat/Calendar entries",
+      "Standardize on verified screenshots"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "ts-install-verify",
+        "appPath": "/installation",
+        "what": "Installation verification status"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/troubleshooting/script-issues.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "troubleshooting",
+    "appPaths": [
+      "/installation",
+      "/reveal/accounts"
+    ],
+    "whatChanged": "Verify window.abmatic.identify signature + embed URL + CSP; identification-rate.",
+    "contentTasks": [
+      "Verify window.abmatic.identify({...}) signature",
+      "Verify clients.abmatic.ai/<id>.js embed + CSP directives",
+      "Reconcile identification-rate numbers",
+      "Use Visitor Reveal naming"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "ts-install",
+        "appPath": "/installation",
+        "what": "Installation page script + status"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/troubleshooting/crm-sync.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "troubleshooting",
+    "appPaths": [
+      "/integrations"
+    ],
+    "whatChanged": "Verify Integrations nav labels (Sync Logs/Matching Rules/Field Mapping); reconcile with faq nav; stale screenshot.",
+    "contentTasks": [
+      "Verify Integrations UI labels (Sync Settings/Matching Rules/Field Mapping/Sync Logs)",
+      "Reconcile with faq/integrations nav phrasing",
+      "Re-capture integrations-crm-status screenshot",
+      "Note Fill/Overwrite/Don't sync (Ignore) modes"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "ts-crm-status",
+        "appPath": "/integrations",
+        "what": "CRM integration status + Sync Now/Reconnect"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/troubleshooting/campaign-issues.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "troubleshooting",
+    "appPaths": [
+      "/campaigns"
+    ],
+    "whatChanged": "Verify status-badge wording + Preference column + anti-flicker guidance; stale screenshot.",
+    "contentTasks": [
+      "Verify status-badge wording (100% Full personalization / 50% Experiment / 0% Inactive)",
+      "Verify Preference column drag-reorder",
+      "Verify anti-flicker is DIY vs native",
+      "Re-capture wp-pages-tab screenshot"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "ts-campaign-status",
+        "appPath": "/campaigns",
+        "what": "Campaign list status + Preference columns"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/troubleshooting/common-errors.md",
+    "action": "update",
+    "priority": "low",
+    "section": "troubleshooting",
+    "appPaths": [],
+    "whatChanged": "Verify error strings; Slack nav inconsistency; plan-name (Standard vs Starter).",
+    "contentTasks": [
+      "Verify error strings match live app",
+      "Reconcile Slack nav (Settings>Slack vs Integrations>Slack)",
+      "Reconcile plan-name (Standard vs Starter)",
+      "Verify page-editor#troubleshooting anchor"
+    ],
+    "screenshotsToCapture": []
+  },
+  {
+    "docPath": "docs/faq/general.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "faq",
+    "appPaths": [
+      "/ai-agents/abm",
+      "/reveal/accounts"
+    ],
+    "whatChanged": "Purge stale metrics + DB size; reconcile retention (24/36mo vs ~90d live); agent names; trial.",
+    "contentTasks": [
+      "Purge stale marketing metrics (2-3x conversion, 10+ hrs/week, 40-60% engagement)",
+      "Reconcile DB size (300M+) + retention (24/36 mo vs ~90-day live analytics)",
+      "Confirm Alex/Clara naming + add Oracle/Co-Pilot",
+      "Verify trial/plan claims"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "faq-ai-hub",
+        "appPath": "/ai-agents/abm",
+        "what": "AI Agents hub"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/faq/campaigns.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "faq",
+    "appPaths": [
+      "/campaigns"
+    ],
+    "whatChanged": "Campaign-type names ('AI Sequences' -> current Agentic naming); {{mt_*}}; control % default; 5-type count.",
+    "contentTasks": [
+      "Reconcile campaign-type names to live (Widget/Agentic Flow/Sequence/Agentic Chat/OpenAI Ads)",
+      "Pin {{mt_*}} variable prefix + names",
+      "Verify control-% default",
+      "Add Oracle/Demo-Booked Q&As"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "faq-campaign-types",
+        "appPath": "/campaigns",
+        "what": "Create Campaign modal type grid"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/faq/integrations.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "faq",
+    "appPaths": [
+      "/integrations"
+    ],
+    "whatChanged": "Reconcile CRM list + 30-field cap + sync-frequency tiers; Slack nav; reused hero screenshot.",
+    "contentTasks": [
+      "Verify native CRM list (Salesforce/HubSpot/Pipedrive/Outreach/ActiveCampaign)",
+      "Verify 30-field cap + sync-frequency tiers",
+      "Reconcile Slack nav",
+      "Add Calendar/Zoom/OpenAI-Ads Q&As; use dedicated screenshots"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "faq-int-hub",
+        "appPath": "/integrations",
+        "what": "Integrations hub"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/faq/billing.md",
+    "action": "update",
+    "priority": "medium",
+    "section": "faq",
+    "appPaths": [
+      "/settings/usage",
+      "/settings/account"
+    ],
+    "whatChanged": "Verify plan names/credit counts (annual-only per v6); credit labels; trial; slug mismatches.",
+    "contentTasks": [
+      "Verify plan names + per-plan credit counts (note annual-only packaging)",
+      "Reconcile credit-line labels with Settings>Usage",
+      "Verify trial + Buy More Credits flow",
+      "Fix Settings>Usage/Export wording vs link slugs"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "faq-usage",
+        "appPath": "/settings/usage",
+        "what": "Usage dashboard credit allocations"
+      }
+    ]
+  },
+  {
+    "docPath": "docs/changelog.md",
+    "action": "update",
+    "priority": "high",
+    "section": "changelog",
+    "appPaths": [
+      "/"
+    ],
+    "whatChanged": "Stops at Jan 2026 (~5 months stale); Coming-Soon items shipped; cross-doc conflicts.",
+    "contentTasks": [
+      "Add Feb-Jun 2026 entries: Oracle, Agentic Chat handoff + AI Conversation Summary, OpenAI Ads, Google Calendar/Zoom + Meeting Types, Demo Booked, Widget rename, API Keys, SSRM grids, Sales role, IP-provider rebrand, dark mode",
+      "Graduate shipped Coming-Soon items (Intent already ships)",
+      "Resolve cross-doc conflicts (dashboard sharing, export formats, Clara naming)",
+      "Remove unsourced metrics"
+    ],
+    "screenshotsToCapture": [
+      {
+        "name": "cl-whatsnew",
+        "appPath": "/",
+        "what": "Home as the What's New anchor"
+      }
+    ]
+  }
+]
