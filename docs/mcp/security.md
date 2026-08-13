@@ -188,11 +188,14 @@ The MCP service runs in Abmatic AI's existing AWS account and inherits the platf
 | Container logs | Application log lines: startup, request handling outcomes, errors. The bearer token is never logged, in full or in part, and is never placed in an error message. | Amazon CloudWatch Logs, `/ecs/abmatic-mcp` |
 | Load balancer access logs | Request metadata: timestamp, source address, request path, status code, latency, user agent. Request bodies and headers are not included, so the bearer does not appear. | Amazon S3, enabled on the load balancer |
 | Platform API logs | Application logs for the API that serves the data | Amazon CloudWatch Logs |
-| Response correlation id | Every API response carries a `request_id` in `meta`, which support can use to correlate a specific call with server side logs | Returned to the caller |
+| **Per-request audit log** | One line for every authenticated API request: account id, key id, endpoint, request id, response status, UTC timestamp. No part of the key is ever written, not even the 8 character prefix the dashboard shows: the key id is a one way hash, stable while a key lives and different after you rotate, so the trail distinguishes one key generation from another without holding key material. Neither are request values: the endpoint is recorded as the route (`/v1/accounts/<identifier>`), not the resolved path or query string, so the audit trail holds no customer data of its own. | Amazon CloudWatch Logs |
+| Response correlation id | Every API response carries a `request_id` in `meta`. It is the same id recorded in the audit line, so a specific call can be traced end to end from a value you already hold | Returned to the caller |
 
 Error monitoring: the service supports Sentry and, when enabled, runs with default PII scrubbing on and never attaches the bearer to an event. The current production deployment runs **without** a Sentry DSN configured, so no error data is sent to a third party monitoring service.
 
-**What is not available today:** a self serve, customer facing access report showing every call made with your key. Infrastructure logs record request metadata as described above, and you can contact [support@abmatic.ai](mailto:support@abmatic.ai) for an access review of a specific window. A per-key audit log surfaced in the dashboard is roadmap work, and we would rather tell you that than imply a control we do not yet ship.
+**What is not available today:** a self serve access report you can pull yourself. The per-request audit log described above is server side, so an access review is a support request rather than a dashboard view: contact [support@abmatic.ai](mailto:support@abmatic.ai) for the history of a specific window or key. Surfacing that history in the dashboard is roadmap work, and we would rather tell you that than imply a control we do not yet ship.
+
+One limit worth stating precisely, because it is the difference between the audit log and a full request record: the audit line identifies **which endpoint** a key called, not which individual record it returned. The resolved path and query string live in the load balancer access logs, which support correlates using the same `request_id`. That split is deliberate. It means the audit trail itself never accumulates your account, contact, or search data.
 
 ---
 
