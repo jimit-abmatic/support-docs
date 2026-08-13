@@ -79,6 +79,7 @@ For endpoints, request/response formats, and authentication details, see the [AP
 
 ## Related
 
+- [MCP Server](/mcp/overview) - Connect Claude, Cursor, or another AI tool to your Abmatic AI data with this key
 - [API Reference](/api/api-keys) — Endpoints, authentication, and examples for the public API
 - [Account Settings](/settings/account) — Manage your company profile and branding
 - [Usage](/settings/usage) — Monitor credit consumption across Abmatic AI services

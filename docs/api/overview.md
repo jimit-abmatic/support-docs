@@ -118,6 +118,12 @@ See the [Accounts API](/api/api-accounts) reference for full details, available 
 
 ---
 
+## Using the API from an AI assistant
+
+If your goal is to let Claude, Cursor, Codex, or another AI tool query this data conversationally rather than writing code against these endpoints, use the [Abmatic AI MCP Server](/mcp/overview). It exposes the same read surface as 28 MCP tools, authenticated with the same API key.
+
+---
+
 ## Getting Help
 
 | Resource | Contact |

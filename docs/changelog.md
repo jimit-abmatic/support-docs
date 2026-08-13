@@ -18,6 +18,25 @@ Use **Ctrl+F** (Windows) or **Cmd+F** (Mac) to search this page for a specific f
 
 ---
 
+## August 2026
+
+### MCP Server for AI Agents
+
+**Released:** August 2026
+
+Your AI agents can now read your Abmatic AI data directly. Connect Claude, Claude Code, Cursor, Codex, or any other MCP client to `https://mcp.abmatic.ai/mcp` with your Abmatic AI API key, and ask questions like "which companies did we de-anonymize this week and are not in a campaign yet?" instead of exporting CSVs.
+
+| Feature | What It Does |
+|---------|--------------|
+| **28 read tools** | Accounts, contacts, campaigns, visitors, reveal, conversions, meetings, opportunities, reports, dashboards, and CRM sync status |
+| **Read only** | Every tool is a `GET`. Nothing can be created, changed, or deleted through the connector. |
+| **Account scoped** | Your API key maps to one Abmatic AI account, and the connector can only read that account's data. |
+| **Two minute setup** | Generate a key at `/settings/api-keys`, paste the server URL and key into your AI tool, and ask it something. |
+
+Start with the [MCP Server Overview](/mcp/overview) and the [Setup guide](/mcp/setup). Security teams reviewing the connector should read [Security and Architecture](/mcp/security) and the [Security Review Pack](/mcp/security-review).
+
+---
+
 ## June 2026
 
 ### Oracle — Autonomous Agents

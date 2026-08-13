@@ -192,6 +192,18 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'MCP Server (AI Agents)',
+      items: [
+        'mcp/overview',
+        'mcp/setup',
+        'mcp/tools',
+        'mcp/security',
+        'mcp/security-review',
+        'mcp/troubleshooting',
+      ],
+    },
+    {
+      type: 'category',
       label: 'API Reference',
       items: [
         'api/api-overview',
