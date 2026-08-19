@@ -20,6 +20,25 @@ Use **Ctrl+F** (Windows) or **Cmd+F** (Mac) to search this page for a specific f
 
 ## August 2026
 
+### Slack: Engagement Alerts and Alerts for Anyone in Your Workspace
+
+**Released:** August 2026
+
+Slack alerts got two upgrades: you can now send them to anyone in your Slack workspace, and Abmatic AI will tell you when an account heats up.
+
+| Feature | What It Does |
+|---------|--------------|
+| **Alerts for anyone in Slack** | Pick any member of your connected workspace to receive DM alerts. They no longer need an Abmatic AI login or a paid seat, so AEs and managers who live in Slack can be alerted directly. |
+| **Search your whole workspace** | Click the search icon above **Active Members** and type at least 4 characters. Search matches full name, display name, and email. |
+| **Engagement Alerts** | Get a Slack alert when an account or contact crosses a temperature band, for example Warm to Hot, so you hear about rising interest without waiting for the next visit. |
+| **You control it** | **Engagement Alerts** is ON by default and can be switched off any time under **Settings > Slack > gear icon > Notification Settings**. |
+
+Engagement alerts follow your existing routing: a channel or person only receives one if the account matches the filters you already set.
+
+See [Slack Integration](/integrations/slack) for setup, and [Can't Find a Person](/integrations/slack#cant-find-a-person) if someone is missing from the member list.
+
+---
+
 ### MCP Server for AI Agents
 
 **Released:** August 2026

@@ -184,15 +184,17 @@ This alerts you to large companies looking at key decision pages.
 
 ## Notification Types
 
-Control what triggers alerts in each channel. On the **Notification Settings** tab you'll find these toggles:
+Control what triggers alerts in each channel. On the **Notification Settings** tab you'll find these toggles.
+
+The two Engagement toggles also depend on the account-wide **Engagement Alerts** setting described under [Global Settings](#global-settings); leave that on for these to fire.
 
 | Toggle | When It Fires | Best Channel For |
 |--------|---------------|------------------|
 | **All Notifications** | Master on/off switch for the channel | — |
 | **Account Visitors** | Target account visits your site | Sales team channels |
 | **Contact Visitors** | Identified contact browses | Account owner DMs |
-| **Account Engagement** | Significant account activity | Leadership summaries |
-| **Contact Engagement** | Individual engagement spikes | SDR follow-up |
+| **Account Engagement** | An account's engagement score crosses a temperature band, for example Warm to Hot | Leadership summaries |
+| **Contact Engagement** | A contact's engagement score crosses a temperature band | SDR follow-up |
 | **Form Filled** | Visitor submits a tracked form | Inbound lead channel |
 | **Summary Info** | Periodic summary and digest notifications | Leadership, marketing |
 
@@ -282,12 +284,19 @@ On the **Message Customization** tab you choose exactly which properties appear 
 
 Individual team members can receive personalized notifications via direct messages.
 
+Anyone in your connected Slack workspace can receive these alerts. They do **not** need an Abmatic AI login or a paid seat, so you can send alerts to an AE, an SDR manager, or anyone else who lives in Slack but never opens Abmatic.
+
 ### Setting Up Personal Alerts
 
 1. Go to **Settings > Slack**
-2. Look at the **Active Members** section in the left sidebar
-3. Click on a team member's name
-4. Configure their personal filters
+2. Look at the **Active Members** section in the left sidebar. This list shows teammates who **already have personal alerts configured**, so it is usually short and is empty when you are starting out
+3. Click the **search icon** next to the heading and type at least **4 characters** to find anyone else in your Slack workspace
+4. Click the person's name
+5. Configure their personal filters
+
+:::tip Not seeing someone?
+The **Active Members** list is not your full workspace directory. Use the search icon and type at least 4 characters. Search covers a person's full name, display name, and email, so `adam`, `knopsnider`, and `aknopsnider@` all find the same teammate.
+:::
 
 ### Use Case: Sales Rep Territory Alerts
 
@@ -339,6 +348,15 @@ Open the **Settings** gear at the top of the Slack page for account-wide options
 | Setting | What It Does | Recommendation |
 |---------|--------------|----------------|
 | **Suppress Account Notifications When Contact Revealed** | When a contact is revealed in the same event, skip the duplicate account-level alert | Turn ON to reduce duplicate alerts |
+| **Engagement Alerts** | Sends an alert when an account or contact heats up, for example moving from Warm to Hot. Applies to both channels and DMs, and respects the filters you have already set | ON by default. Turn OFF if engagement changes are noisier than you want |
+
+### Engagement Alerts
+
+An engagement alert fires when an account or contact crosses a temperature band, such as Warm to Hot, based on its engagement score. It is a separate trigger from a visit or a form fill: the visitor may not be on your site at that moment, the alert is telling you their overall engagement just stepped up.
+
+These alerts follow the same routing as everything else. A channel receives one only if the account matches that channel's filters, and a person receives a DM only if it matches their personal filters, so turning the setting on does not broadcast every score change to everybody.
+
+**Engagement Alerts** is the account-wide master switch, in **Settings > Slack > gear icon > Notification Settings**. The per-channel **Account Engagement** and **Contact Engagement** toggles still control which individual channels take part.
 
 ## Best Practices
 
@@ -390,6 +408,24 @@ Open the **Settings** gear at the top of the Slack page for account-wide options
 | New channels don't appear | Click **Sync Channels** to refresh |
 | Private channel not listed | Invite the Abmatic AI bot to the channel first |
 | Channel disappeared | Check if it was archived in Slack |
+
+### Can't Find a Person
+
+| Issue | Solution |
+|-------|----------|
+| Teammate is not in **Active Members** | That list only shows people who already have personal alerts set up. Click the search icon and type at least 4 characters to find anyone in your workspace |
+| Search returns "No members found" | Type at least **4** characters, fewer will not search. Search matches full name, display name, and email |
+| Person joined Slack recently | Open **Settings > Slack** to refresh the member list automatically, or use **Sync Users** from the Settings gear |
+| Person has no Abmatic login | Not a problem. Anyone in your Slack workspace can receive alerts without an Abmatic account or seat |
+
+### Engagement Alerts Not Firing
+
+| Issue | Solution |
+|-------|----------|
+| No engagement alerts at all | Check **Engagement Alerts** is ON under the Settings gear, Notification Settings |
+| Some channels get them, others don't | Each channel also needs **Account Engagement** or **Contact Engagement** enabled on its own Notification Settings tab |
+| A specific account never triggers one | The account still has to match that channel's or person's filters. An engagement alert is routed the same way as any other notification |
+| Too many engagement alerts | Turn **Engagement Alerts** OFF account-wide, or tighten the filters on the channels receiving them |
 
 ### Notification Delays
 
