@@ -148,6 +148,18 @@ const sidebars: SidebarsConfig = {
         'integrations/slack',
         'integrations/google-analytics',
         'integrations/segment',
+        {
+          type: 'category',
+          label: 'Google BigQuery',
+          items: [
+            'integrations/bigquery/overview',
+            'integrations/bigquery/setup',
+            'integrations/bigquery/service-account',
+            'integrations/bigquery/data-dictionary',
+            'integrations/bigquery/troubleshooting',
+            'integrations/bigquery/security',
+          ],
+        },
       ],
     },
     {

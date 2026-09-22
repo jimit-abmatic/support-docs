@@ -37,9 +37,9 @@ Each card uses the same simple controls:
 
 ---
 
-## The Seven Sections
+## The Eight Sections
 
-The Integrations hub is organized into seven sections, in this order:
+The Integrations hub is organized into eight sections, in this order (Data Warehouse appears only when enabled for your workspace):
 
 1. Customer Relationship Management (CRM)
 2. Communications
@@ -47,7 +47,8 @@ The Integrations hub is organized into seven sections, in this order:
 4. Abmatic IP Data Providers
 5. Ad Networks
 6. Accounts & Contacts Data
-7. Marketing & Sales Automation
+7. Data Warehouse
+8. Marketing & Sales Automation
 
 ### 1. Customer Relationship Management (CRM)
 
@@ -147,7 +148,17 @@ Import and enrich target accounts and contacts. These cards are **draggable** â€
 | **Abmatic** | Built-in data source for fetching target accounts and contacts. Always available. |
 | **Apollo.io** | Contact data enrichment and email discovery |
 
-### 7. Marketing & Sales Automation
+### 7. Data Warehouse
+
+> *"Push your Abmatic AI data into your own warehouse automatically, every day."*
+
+This section appears once Abmatic AI has enabled the warehouse export for your workspace. Ask your Abmatic AI contact if you don't see it.
+
+| Destination | What It Does | Learn More |
+|-------------|--------------|------------|
+| **Google BigQuery** | Pushes hit-level page views, with company, contact and CRM ids, into a table in your own BigQuery project every day | [Overview](/integrations/bigquery/overview) |
+
+### 8. Marketing & Sales Automation
 
 > *"Integrate your automation tools for increased productivity."*
 
