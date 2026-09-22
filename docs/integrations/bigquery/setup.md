@@ -29,16 +29,17 @@ Click **Authorize** on the card. The **Connect Google BigQuery** dialog offers t
 
 ### Option A: Grant the Abmatic AI service account (recommended)
 
-1. Grant this principal **BigQuery Job User** on your project and **BigQuery Data Editor** on the project or on one dataset. The [Service account setup](/integrations/bigquery/service-account) page has the exact Cloud Console clicks and commands.
+The dialog shows two values to copy: the service account email and the dataset label with your workspace ID (`abmatic_workspace: <your workspace ID>`).
 
-   ```
-   abmatic-bigquery-export@abmatic.iam.gserviceaccount.com
-   ```
+1. In Google Cloud, **create a dataset** for the export and **add the label** shown in the dialog to it. Abmatic AI only lists, and only writes to, datasets carrying your workspace label.
+2. **Grant** `abmatic-bigquery-export@abmatic.iam.gserviceaccount.com` **BigQuery Job User** on the project and **BigQuery Data Editor** on that dataset (or on the project).
 
-2. Back in the dialog, click **I have granted access**.
-3. The dialog changes to **Google BigQuery export** and the first line reads **Using Abmatic AI service account abmatic-bigquery-export@abmatic.iam.gserviceaccount.com**.
+   The [Service account setup](/integrations/bigquery/service-account) page has the exact Cloud Console clicks and the `bq`, `gcloud` and SQL commands for both steps.
 
-![The Google BigQuery export settings dialog connected with the Abmatic AI service account, with the Google Cloud project picker still empty](/img/screenshots/bigquery-sa-connected.png)
+3. Back in the dialog, click **I have granted access**.
+4. The dialog changes to **Google BigQuery export** and the first line reads **Using Abmatic AI service account abmatic-bigquery-export@abmatic.iam.gserviceaccount.com**. Only projects and datasets labeled for your workspace are offered.
+
+![The Google BigQuery export settings dialog connected with the Abmatic AI service account, with the labeled dataset selected and no Create a new dataset option](/img/screenshots/bigquery-sa-connected.png)
 
 :::tip Grant first, then click
 Google IAM changes usually apply within a minute or two, but can take a few minutes. If your project is missing from the project list, wait a moment, close the dialog and open it again with **Settings** on the card.
@@ -79,7 +80,7 @@ Or skip all of this by using the [service account](/integrations/bigquery/servic
 
 ### Google Cloud project
 
-Open **Google Cloud project** and choose the project to export into. The list shows every project where the connected identity has a BigQuery role.
+Open **Google Cloud project** and choose the project to export into. With **Sign in with Google**, the list shows every project where that Google user has a BigQuery role. With the **service account**, it shows only projects that contain a dataset labeled for your workspace.
 
 ![The Google Cloud project picker open, listing two example projects by name and id](/img/screenshots/bigquery-project-picker.png)
 
@@ -89,16 +90,16 @@ If the list says "No projects with BigQuery access were found for this Google ac
 
 Once a project is picked, choose where the table goes:
 
-- **Existing dataset** lists the datasets in that project that the connected identity can see, with their location, for example `marketing (US)`.
+- **Existing dataset** lists the datasets in that project that the connected identity can see, with their location, for example `marketing (US)`. With the service account, only datasets labeled for your workspace are listed.
 
 ![Existing dataset selected, with a dataset picked from the list and the Table field below showing abmatic_page_views](/img/screenshots/bigquery-dataset-existing.png)
 
-- **Create a new dataset** lets Abmatic AI create one for you. Enter a **New dataset name** (letters, numbers and underscores only) and a **Location**: `US`, `EU`, `us-central1`, `us-east1`, `us-west1`, `europe-west1`, `europe-west2` or `asia-southeast1`. If a dataset with that name already exists, Abmatic AI uses it as it is.
+- **Create a new dataset** (**Sign in with Google** only) lets Abmatic AI create one for you. Enter a **New dataset name** (letters, numbers and underscores only) and a **Location**: `US`, `EU`, `us-central1`, `us-east1`, `us-west1`, `europe-west1`, `europe-west2` or `asia-southeast1`. If a dataset with that name already exists, Abmatic AI uses it as it is.
 
 ![Create a new dataset selected, with the Location list open showing US, EU and six regions](/img/screenshots/bigquery-dataset-locations.png)
 
-:::note Creating a dataset needs project-level access
-To create a dataset, the connected identity needs **BigQuery Data Editor at the project level**. If you granted it on a single dataset only, create the dataset yourself first and pick it under **Existing dataset**.
+:::note Creating a dataset: Google sign-in only
+**Create a new dataset** is offered only when you connected with **Sign in with Google**, and that user needs **BigQuery Data Editor at the project level**. With the service account, you create and label the dataset yourself ([how](/integrations/bigquery/service-account#step-3-create-the-dataset-and-label-it)) and pick it under **Existing dataset**.
 :::
 
 ### Table
@@ -126,7 +127,7 @@ Each load replaces whole day partitions of this table. Don't point it at a table
 
 ## Step 5: Save and start
 
-Click **Save and start**. Abmatic AI checks that it can reach the project and dataset, creates the dataset (if you chose a new one) and the table, and saves your settings. You will see "Saved. Your data will be pushed to BigQuery daily."
+Click **Save and start**. Abmatic AI checks that it can reach the project and dataset (and, with the service account, that the dataset carries your workspace label), creates the dataset (if you chose a new one) and the table, and saves your settings. You will see "Saved. Your data will be pushed to BigQuery daily."
 
 ![The settings dialog after Save and start, with the new dataset selected and a Sync status section showing Not synced yet and a Sync now button](/img/screenshots/bigquery-saved-not-synced.png)
 
@@ -196,7 +197,7 @@ If Google stops accepting the saved access (the signed-in user's access was revo
 ![The settings dialog with a red alert saying Google rejected the saved BigQuery authorization and a Reconnect button](/img/screenshots/bigquery-reconnect-alert.png)
 
 - **Signed in with Google:** click **Reconnect** in the alert and sign in again with a Google user that has the two roles. Your destination and settings are kept, and missed days are backfilled on the next run.
-- **Service account:** if someone removes the service account's roles, runs fail with a "Google denied access" error in the warning box (the chip turns amber) rather than showing Reconnect. Restore the roles ([how to check](/integrations/bigquery/service-account#step-3-verify-the-grant)). The next automatic retry, within about three hours, or a click on **Sync now**, catches up every missed day. You don't need to reconnect.
+- **Service account:** if someone removes the service account's roles, runs fail with a "Google denied access" error in the warning box (the chip turns amber) rather than showing Reconnect. Restore the roles ([how to check](/integrations/bigquery/service-account#step-5-verify)). The same applies if the dataset's `abmatic_workspace` label was removed or changed: runs fail with "This dataset is not labeled for your workspace" until you restore it. The next automatic retry, within about three hours, or a click on **Sync now**, catches up every missed day. You don't need to reconnect.
 
 ## Disabling the export
 

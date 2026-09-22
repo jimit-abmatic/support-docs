@@ -11,9 +11,10 @@ sidebar_position: 5
 
 1. **Open Settings on the Google BigQuery card** and read the **Sync status** panel: the last run, **Complete through**, the warning box and **Recent runs**. The error text there is usually specific enough to act on. It is listed in the tables below.
 2. **Check the chip on the card.** **Reconnect** means Google no longer accepts the saved sign-in. An amber **Active** means the last run failed.
-3. **Check the roles** of the connected identity on the project and dataset: **BigQuery Job User** on the project and **BigQuery Data Editor** on the project or dataset ([how to verify](/integrations/bigquery/service-account#step-3-verify-the-grant)).
-4. **Check the timing.** A complete UTC day lands within about an hour after your **Daily push time** on the next day. Before that, "missing yesterday" is expected.
-5. **Click Sync now** after fixing anything. It catches up every missed day at once.
+3. **Service account:** check the dataset still has the label `abmatic_workspace` = your workspace ID (shown in the connect dialog).
+4. **Check the roles** of the connected identity on the project and dataset: **BigQuery Job User** on the project and **BigQuery Data Editor** on the project or dataset ([how to verify](/integrations/bigquery/service-account#step-5-verify)).
+5. **Check the timing.** A complete UTC day lands within about an hour after your **Daily push time** on the next day. Before that, "missing yesterday" is expected.
+6. **Click Sync now** after fixing anything. It catches up every missed day at once.
 
 ## Common situations
 
@@ -26,12 +27,13 @@ The export is enabled per workspace. Ask your Abmatic AI contact to enable **Goo
 The project picker shows "No projects with BigQuery access were found for this Google account", or your project is not in the list.
 
 - The connected identity has no BigQuery role on that project yet. Grant **BigQuery Job User** on the project (the project only appears once the identity has a role at the project level).
-- **Service account:** IAM changes can take a few minutes. Close the dialog, wait a minute, then open **Settings** on the card again to reload the list.
+- **Service account:** only projects that contain a dataset labeled `abmatic_workspace` = your workspace ID are listed. The picker then says "No project has a dataset labeled abmatic_workspace: ... that our service account can access yet". Add the label to your export dataset ([how](/integrations/bigquery/service-account#step-3-create-the-dataset-and-label-it)) and grant the service account access to it. Check the value matches the workspace ID in the connect dialog exactly.
+- **Service account:** IAM and label changes can take a few minutes. Close the dialog, wait a minute, then open **Settings** on the card again to reload the list.
 - **Signed in with Google:** you may have signed in with a different Google user than the one that has the roles. **Disable** the card and connect again with the right user.
 
 ### Dataset not listed under Existing dataset
 
-The list shows only datasets the connected identity can see. Grant **BigQuery Data Editor** on that dataset (or on the project). If you granted it seconds ago, pick another project and then your project again to reload the list.
+The list shows only datasets the connected identity can see. Grant **BigQuery Data Editor** on that dataset (or on the project). With the service account, the dataset must also carry the `abmatic_workspace` label with your workspace ID. There is no **Create a new dataset** option in service account mode: create and label the dataset in Google Cloud first. If you granted it seconds ago, pick another project and then your project again to reload the list.
 
 ### Yesterday's data is not there yet
 
@@ -69,6 +71,7 @@ Expected. **Sync now** loads today so far, and the daily push replaces today's p
 | Service account access is not available yet. Please sign in with Google. | Service account connections are temporarily unavailable | Use **Sign in with Google** for now |
 | Could not switch to service account access | The request failed | Try again. The text after it, if any, gives the reason. |
 | Could not list your Google Cloud projects | Listing projects failed | Reload the page and open **Settings** again. Check the roles. |
+| No project has a dataset labeled abmatic_workspace: ... that our service account can access yet | Service account mode: no dataset the service account can see carries your workspace label | Create or pick a dataset, add the label shown in the connect dialog, grant the roles, then reopen **Settings**. See [Service account setup](/integrations/bigquery/service-account#step-3-create-the-dataset-and-label-it). |
 
 ### While saving the destination
 
@@ -81,8 +84,10 @@ Expected. **Sync now** loads today so far, and the daily push replaces today's p
 | Pick a valid dataset location. | Invalid location | Pick one from the list |
 | Start date must be YYYY-MM-DD. | Invalid **Include data from** date | Pick a date with the date picker |
 | Sync hour must be between 0 and 23 (UTC). | Invalid push time | Pick a time from the list |
-| Google denied access. The connected Google user needs the BigQuery Data Editor and BigQuery Job User roles on this project. | Google returned **403**. The identity lacks a role, the **BigQuery API is disabled** on the project, or an organization policy blocks the call. | Grant the roles ([service account](/integrations/bigquery/service-account#step-2-grant-the-roles)). Check the BigQuery API is enabled. With a dataset-level grant, choose **Existing dataset** because creating a dataset needs project-level Data Editor. |
+| Google denied access. The connected Google user needs the BigQuery Data Editor and BigQuery Job User roles on this project. | Google returned **403**. The identity lacks a role, the **BigQuery API is disabled** on the project, or an organization policy blocks the call. | Grant the roles ([service account](/integrations/bigquery/service-account#step-4-grant-the-roles)). Check the BigQuery API is enabled. With a dataset-level grant, choose **Existing dataset** because creating a dataset needs project-level Data Editor. |
 | That BigQuery project or dataset was not found, or the connected user cannot see it. | Google returned **404** | Check the project and dataset still exist and that the identity can see them |
+| This dataset is not labeled for your workspace. Add the label abmatic_workspace = your workspace ID (shown in the connect dialog) to the dataset, then try again. | Service account mode: the dataset has no `abmatic_workspace` label, or its value is not your workspace ID | Add or correct the label ([how](/integrations/bigquery/service-account#step-3-create-the-dataset-and-label-it)). The value must be the workspace ID from the connect dialog, in lowercase. Then **Save** again. |
+| With service account access, create the dataset in your project, label it abmatic_workspace = your workspace ID, grant access, then pick it here. | Service account mode does not create datasets | Create and label the dataset in Google Cloud, then pick it under **Existing dataset** |
 | Saving BigQuery settings failed | The request failed without a specific reason | Try again |
 
 ### During a sync (status panel and Recent runs)
@@ -94,10 +99,11 @@ Expected. **Sync now** loads today so far, and the daily push replaces today's p
 | Google is not connected. Please connect BigQuery again. | No saved sign-in | Connect again |
 | Abmatic AI service account is not configured. Please contact support. | A problem on Abmatic AI's side | Contact your Abmatic AI contact |
 | Pick a BigQuery project and dataset first. | No destination saved | Open **Settings**, pick the destination and click **Save** |
+| This dataset is not labeled for your workspace. Add the label abmatic_workspace = your workspace ID (shown in the connect dialog) to the dataset, then try again. | Service account mode: the label was removed or changed after setup. Abmatic AI checks it before every push. | Restore the label, then click **Sync now**. Missed days are caught up. |
 | Access Denied: ... / Permission ... denied | The identity lost a role after setup | Restore the roles. The next retry, within about three hours, or **Sync now** catches up. |
 | Not found: Dataset ... / Not found: Table ... | The dataset or table was deleted, renamed, or moved | If the table was deleted, it is recreated on the next run with new days only. To reload history into it, change **Include data from** and **Save**. If the dataset was deleted, recreate it or pick another one and **Save**. |
 | Not found: Dataset ... was not found in location ... | **Dataset location mismatch.** The dataset was deleted and recreated in another location. | Open **Settings**, pick the dataset again under **Existing dataset** and click **Save**. Abmatic AI reads its location when you save. |
-| ... has not been used in project ... before or it is disabled | The BigQuery API is disabled on the project | Enable the **BigQuery API** ([how](/integrations/bigquery/service-account#step-1-make-sure-the-bigquery-api-is-enabled)), then **Sync now** |
+| ... has not been used in project ... before or it is disabled | The BigQuery API is disabled on the project | Enable the **BigQuery API** ([how](/integrations/bigquery/service-account#step-2-make-sure-the-bigquery-api-is-enabled)), then **Sync now** |
 | Incompatible table partitioning specification, or a schema mismatch | The table name points at an existing table that Abmatic AI did not create | Use a table only Abmatic AI writes to: change **Table** to a new name, or drop the old table, then **Save** |
 | Quota exceeded ... | A BigQuery quota in your project was hit | Usually temporary. The next run retries. |
 | BigQuery load job ... did not finish in time | BigQuery was slow | Nothing. The next run retries and replaces the day. |

@@ -12,7 +12,7 @@ sidebar_position: 6
 | Question | Answer |
 |---|---|
 | What does Abmatic AI get access to? | **BigQuery only**, and only what you grant. No other Google Cloud service, no Google Drive, Gmail or other Google data. |
-| What does Abmatic AI do with it? | Lists projects and datasets so you can pick a destination, creates the dataset (only if you ask) and the table, and runs **load jobs** into that one table. |
+| What does Abmatic AI do with it? | Lists projects and datasets so you can pick a destination, creates the dataset (only if you ask, with Google sign-in) and the table, and runs **load jobs** into that one table. |
 | Does Abmatic AI read or query my BigQuery data? | **No.** It never runs queries and never reads rows from your tables. It only reads table metadata (the schema) to add new columns. |
 | What data is written? | Your own website's page-view data, which Abmatic AI already collects for your workspace through its tracking script. See the [data dictionary](/integrations/bigquery/data-dictionary). |
 | Where does the data go? | Into the project, dataset and location you choose, in your Google Cloud account. Storage and query costs, retention, access control and deletion are all under your control. |
@@ -24,7 +24,8 @@ sidebar_position: 6
 ### Service account (recommended)
 
 - You grant `abmatic-bigquery-export@abmatic.iam.gserviceaccount.com` **BigQuery Job User** on the project and **BigQuery Data Editor** on the project or on a single dataset. It can do only what those roles allow, where you granted them.
-- With a **dataset-level** grant it can't see or change any other dataset in your project. See [Option B](/integrations/bigquery/service-account#option-b-one-dataset-only-least-privilege).
+- With a **dataset-level** grant it can't see or change any other dataset in your project. See [Step 4](/integrations/bigquery/service-account#step-4-grant-the-roles).
+- **The dataset label proves which dataset is yours.** The service account is operated by Abmatic AI for every customer who chooses this route, so the IAM grant alone doesn't say which Abmatic AI workspace a dataset belongs to. The label does: Abmatic AI uses a dataset for your workspace only when it carries `abmatic_workspace` = **your workspace ID**, which only someone who can edit that dataset in your project can set. Pickers only list datasets with your label, and the label is checked again when you save and before every daily push. If the label is missing or different, nothing is written.
 - The grant is visible in your IAM policy and in your Cloud Audit Logs like any other principal, and you can remove it at any time.
 - You never create or handle a key. The service account's credentials are held by Abmatic AI in its encrypted secret store and are used only by the export.
 
@@ -37,14 +38,14 @@ sidebar_position: 6
 
 ## Who in Abmatic AI can change the export
 
-Any user of your Abmatic AI workspace who can open **Settings > Integrations** can connect, change or disable the export. The destination is saved per workspace, and each workspace's export writes only to the project, dataset and table saved in that workspace's settings.
+Any user of your Abmatic AI workspace who can open **Settings > Integrations** can connect, change or disable the export. The destination is saved per workspace, and each workspace's export writes only to the project, dataset and table saved in that workspace's settings. With the service account, that dataset must also carry the workspace's own label.
 
 ## Revoking access
 
 You can use any of these, alone or together:
 
 1. **Disable in Abmatic AI.** Click **Disable** on the Google BigQuery card. This stops the schedule at once and, for **Sign in with Google**, revokes the refresh token at Google. Your settings are kept so you can reconnect later.
-2. **Remove the IAM grant (service account).** Remove the roles from `abmatic-bigquery-export@abmatic.iam.gserviceaccount.com` in **IAM & Admin > IAM**, and from the dataset's sharing permissions if you granted it there. Commands are in [Removing access later](/integrations/bigquery/service-account#removing-access-later).
+2. **Remove the label or the IAM grant (service account).** Removing the `abmatic_workspace` label from the dataset stops all writes before the next push. To cut access completely, remove the roles from `abmatic-bigquery-export@abmatic.iam.gserviceaccount.com` in **IAM & Admin > IAM**, and from the dataset's sharing permissions if you granted it there. Commands are in [Removing access later](/integrations/bigquery/service-account#removing-access-later).
 3. **Revoke the Google sign-in (Sign in with Google).** The Google user can remove Abmatic AI under **Google Account > Security > Your connections to third-party apps and services**. A Google Workspace admin can block the app for the whole organization in the **Admin console** under **Security > Access and data control > API controls**.
 
 After revoking, Abmatic AI can no longer write to your project. Data already in your table stays there. It is yours to keep or delete.

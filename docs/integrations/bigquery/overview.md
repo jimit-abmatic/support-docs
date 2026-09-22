@@ -39,10 +39,10 @@ You need:
 
 | | Service account (recommended) | Sign in with Google |
 |---|---|---|
-| What you do | Grant `abmatic-bigquery-export@abmatic.iam.gserviceaccount.com` two roles in Google Cloud IAM, then click **I have granted access** | Sign in with a Google user that has the roles, and approve the consent screen |
+| What you do | Create a dataset, add the label `abmatic_workspace` = your workspace ID (shown in the app), grant `abmatic-bigquery-export@abmatic.iam.gserviceaccount.com` two roles, then click **I have granted access** | Sign in with a Google user that has the roles, and approve the consent screen |
 | Survives people leaving or changing roles | **Yes.** Access belongs to your project, not to a person. | No. If that user loses access or is removed, the export stops until someone reconnects. |
 | Consent screen | None | Yes. Google may show an "unverified app" screen while Google's review of the app is pending. |
-| Least privilege | You grant exactly what you want, down to a single dataset | Google's BigQuery sign-in scope covers everything that user can do in BigQuery |
+| Least privilege | You grant exactly what you want, down to a single dataset, and Abmatic AI only writes to a dataset you labeled for your workspace | Google's BigQuery sign-in scope covers everything that user can do in BigQuery |
 | Workspace admin approval | Not needed. Some organizations need an org policy exception for outside service accounts ([details](/integrations/bigquery/service-account#if-your-organization-blocks-outside-service-accounts)). | May be needed if your Google Workspace restricts third-party apps |
 | Guide | [Service account setup](/integrations/bigquery/service-account) | [Setup guide](/integrations/bigquery/setup#option-b-sign-in-with-google) |
 
