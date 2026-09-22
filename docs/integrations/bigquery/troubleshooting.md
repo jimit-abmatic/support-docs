@@ -44,8 +44,9 @@ The list shows only datasets the connected identity can see. Grant **BigQuery Da
 
 ### Row counts look different from other tools
 
-- Only page views on your own website domain are included when **Only pages on your own website domain** is on (the default).
-- Your own company's traffic is excluded when **Exclude internal traffic** is on (the default).
+- **Today is partial.** Today's partition (loaded by **Sync now**) holds only the page views so far. It is replaced with the complete day at the next day's push, so compare complete days only.
+- **Filters apply.** **Exclude internal traffic** and **Only pages on your own website domain** are on by default and remove rows other tools may count.
+- **A completed day can shift slightly when it is pushed again**, for example after a backfill, a retry, or a change to **Include data from**. The day is rebuilt from current data, so updated CRM matches or company identification can change a few rows. The day is still replaced, never duplicated.
 - **Only page views from companies matched to a CRM account** drops every anonymous or unmatched visit.
 - Dates are **UTC**. Other tools often report in your local time zone.
 - Filter changes only apply to days loaded after the change. To reload past days, change **Include data from** ([details](/integrations/bigquery/setup#how-changes-to-settings-apply)).

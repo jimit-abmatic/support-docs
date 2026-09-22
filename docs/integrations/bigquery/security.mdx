@@ -5,6 +5,9 @@ sidebar_label: Security and Privacy
 sidebar_position: 6
 ---
 
+{/* Cloudflare email obfuscation off for this page, so the service account email stays copyable without JavaScript */}
+<div dangerouslySetInnerHTML={{__html: '<!--email_off-->'}} />
+
 # BigQuery Export Security and Privacy
 
 ## Summary
@@ -70,3 +73,5 @@ If the export is still enabled, a dropped table is recreated on the next run wit
 ## Personal data
 
 Rows can contain personal data about identified visitors (`contact_email`, `contact_name`, `contact_title`, `contact_linkedin_url`, plus approximate IP-based location). It is the same data your team already sees in Abmatic AI for your workspace. Once it is in your BigQuery project, your own access controls, retention rules and data processing terms apply to it. To export only company-level data, restrict who can read those columns with BigQuery column-level security, or build a view without them for wider audiences.
+
+<div dangerouslySetInnerHTML={{__html: '<!--/email_off-->'}} />

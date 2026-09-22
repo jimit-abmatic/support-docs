@@ -17,7 +17,7 @@ The export writes one table, `abmatic_page_views` by default, in the project and
 | Partitioning | By day on `event_date` (DATE, UTC). Filter on `event_date` in every query to keep scans and cost small. |
 | Clustering | `company_domain`, then `contact_email` |
 | Time zone | All timestamps and dates are **UTC** |
-| Unique key | `hit_id` |
+| Row key | The pair (`session_id`, `hit_id`). `hit_id` alone can repeat. |
 | Loading | Each load **replaces** whole `event_date` partitions. Rows are never appended twice. |
 | Schema changes | New columns may be added at the **end** of the table. Existing columns are never renamed, retyped or removed. All columns are NULLABLE. |
 
@@ -29,17 +29,17 @@ Because new columns can be appended, name the columns you need instead of relyin
 
 | Column | Type | Meaning |
 |---|---|---|
-| `hit_id` | STRING | Abmatic AI page-view id, unique per row |
+| `hit_id` | STRING | Abmatic AI page-view id. **Not unique on its own:** the tracker can reuse the same id across different sessions of one visitor. Use (`session_id`, `hit_id`) as the row key. |
 | `event_timestamp` | TIMESTAMP | When the page view happened (UTC) |
 | `event_date` | DATE | UTC date of `event_timestamp`. The partition column. |
-| `session_id` | STRING | Abmatic AI session id. Page views in one visit share it. |
+| `session_id` | STRING | Abmatic AI session id. In practice most sessions contain a single page view, so for visit-level analysis use `visitor_id` plus a time gap (see [Visits](#visits-per-visitor)). |
 | `visitor_id` | STRING | Abmatic AI visitor id. Cookie scoped: the same browser keeps the same id across visits. |
 | `page_url` | STRING | Full page URL, including any query string |
 | `referrer_url` | STRING | The referrer of the **session** (the page the visitor came from when the visit started), repeated on every page view of that session. `"direct"` when there was none. |
 | `time_on_page_seconds` | INTEGER | Seconds on the page, when measured. NULL when it was not measured. |
 | `scroll_depth_percent` | INTEGER | Maximum scroll depth reached, 0 to 100, when measured. NULL when not measured. |
 | `company_domain` | STRING | Domain of the identified visiting company. NULL when the company was not identified. |
-| `company_name` | STRING | Name of the visiting company. Your CRM account name when matched, otherwise the identified company name. |
+| `company_name` | STRING | Name of the visiting company as stored on the account record in Abmatic AI (it can be lowercase), otherwise the identified company name. Filled even when there is no CRM id. |
 | `salesforce_account_id` | STRING | Salesforce Account id of the visiting company (see [CRM matching](#company-contact-and-crm-matching)) |
 | `hubspot_company_id` | STRING | HubSpot Company id of the visiting company |
 | `contact_email` | STRING | Email of the identified visitor, lower case. NULL for anonymous visitors. |
@@ -59,7 +59,7 @@ Because new columns can be appended, name the columns you need instead of relyin
 ## How rows are built
 
 - **What is included:** page views on your website recorded by the Abmatic AI tracking script, from real sessions. Simulated sessions are never exported.
-- **Which day a row belongs to:** each page view is placed by **its own** timestamp. A visit that starts at 23:58 UTC and continues after midnight has page views on two dates.
+- **Which day a row belongs to:** each page view is placed by **its own** timestamp, not by when its session started. That includes page views appended to a session that started up to 30 days earlier, and a visit that starts at 23:58 UTC and continues after midnight has page views on two dates.
 - **Filters** from the settings (internal traffic, own domain only, CRM-matched only) are applied before loading. See [Schedule and data](/integrations/bigquery/setup#step-4-schedule-and-data).
 - **Session-level values** (`referrer_url`, company and contact fields, location, `device_type`, `is_new_visitor`) are the same on every page view of a session.
 
@@ -108,7 +108,7 @@ SELECT
   ANY_VALUE(company_name)        AS company_name,
   ANY_VALUE(salesforce_account_id) AS salesforce_account_id,
   COUNT(*)                       AS page_views,
-  COUNT(DISTINCT session_id)     AS sessions,
+  COUNT(DISTINCT visitor_id)     AS visitors,
   COUNT(DISTINCT contact_email)  AS known_visitors
 FROM `your-project-id.your_dataset.abmatic_page_views`
 WHERE event_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
@@ -127,7 +127,7 @@ SELECT
   a.Name    AS account_name,
   a.OwnerId AS owner_id,
   COUNT(*)                   AS page_views_7d,
-  COUNT(DISTINCT pv.session_id) AS sessions_7d,
+  COUNT(DISTINCT pv.visitor_id) AS visitors_7d,
   MAX(pv.event_timestamp)    AS last_visit_at
 FROM `your-project-id.your_dataset.abmatic_page_views` AS pv
 JOIN `your-project-id.crm.salesforce_account` AS a
@@ -143,16 +143,42 @@ Salesforce ids come in a 15-character and an 18-character form. If your replica 
 
 ### Deduplication and "latest state"
 
-You don't need to deduplicate. Each day is loaded by **replacing** its partition, so a day that is loaded again (by **Sync now**, a retry, or a backfill) replaces its earlier rows rather than adding to them. Rows are also never updated in place, so there is no "latest version" to pick.
+You don't need to deduplicate. Our loads never create duplicate rows: each day is loaded by **replacing** its whole `event_date` partition, so a day that is loaded again (by **Sync now**, a retry, or a backfill) replaces its earlier rows rather than adding to them. Rows are never updated in place, so there is no "latest version" to pick.
 
-If a downstream tool copies rows out of this table incrementally, key it on `hit_id` and re-read whole `event_date` partitions rather than filtering on `exported_at`. As a sanity check, this should always return no rows:
+Remember that `hit_id` on its own is not a key: the tracker can reuse one page-view id across different sessions of the same visitor. The unique row key is the pair (`session_id`, `hit_id`).
+
+If a downstream tool copies rows out of this table incrementally, key it on (`session_id`, `hit_id`) and re-read whole `event_date` partitions rather than filtering on `exported_at`. As a sanity check, this query returns no rows:
 
 ```sql
-SELECT hit_id, COUNT(*) AS copies
+SELECT session_id, hit_id, COUNT(*) AS copies
 FROM `your-project-id.your_dataset.abmatic_page_views`
 WHERE event_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
-GROUP BY hit_id
+GROUP BY session_id, hit_id
 HAVING copies > 1;
+```
+
+### Visits per visitor
+
+Because most sessions hold a single page view, group a visitor's page views into visits yourself, for example starting a new visit after 30 minutes without a page view:
+
+```sql
+WITH ordered AS (
+  SELECT
+    visitor_id,
+    event_timestamp,
+    IF(TIMESTAMP_DIFF(event_timestamp,
+         LAG(event_timestamp) OVER (PARTITION BY visitor_id ORDER BY event_timestamp),
+         MINUTE) <= 30, 0, 1) AS new_visit
+  FROM `your-project-id.your_dataset.abmatic_page_views`
+  WHERE event_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)
+)
+SELECT
+  visitor_id,
+  SUM(new_visit) AS visits,
+  COUNT(*)       AS page_views
+FROM ordered
+GROUP BY visitor_id
+ORDER BY visits DESC;
 ```
 
 ### A scheduled query for a daily rollup
@@ -163,7 +189,7 @@ BigQuery **scheduled queries** can build your own models on top of the export. S
 -- Target table, created once:
 -- CREATE TABLE `your-project-id.analytics.account_daily_engagement` (
 --   event_date DATE, salesforce_account_id STRING, company_name STRING,
---   page_views INT64, sessions INT64, known_visitors INT64, pricing_views INT64)
+--   page_views INT64, visitors INT64, known_visitors INT64, pricing_views INT64)
 -- PARTITION BY event_date;
 
 DECLARE d DATE DEFAULT DATE_SUB(@run_date, INTERVAL 1 DAY);
@@ -177,7 +203,7 @@ SELECT
   salesforce_account_id,
   ANY_VALUE(company_name),
   COUNT(*),
-  COUNT(DISTINCT session_id),
+  COUNT(DISTINCT visitor_id),
   COUNT(DISTINCT contact_email),
   COUNTIF(page_url LIKE '%/pricing%')
 FROM `your-project-id.your_dataset.abmatic_page_views`

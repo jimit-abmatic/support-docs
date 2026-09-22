@@ -5,6 +5,9 @@ sidebar_label: Overview
 sidebar_position: 1
 ---
 
+{/* Cloudflare email obfuscation off for this page, so the service account email stays copyable without JavaScript */}
+<div dangerouslySetInnerHTML={{__html: '<!--email_off-->'}} />
+
 # Google BigQuery Export
 
 The Google BigQuery export pushes your website's **hit-level page views** from Abmatic AI into a table in **your own** Google BigQuery project every day, with no one on either side having to run anything. Every row is one page view, enriched with the visiting company, the identified contact (when known), and the matching **Salesforce** and **HubSpot** ids, so you can join Abmatic AI data straight onto your CRM and warehouse models.
@@ -71,3 +74,5 @@ See [Setup](/integrations/bigquery/setup#how-changes-to-settings-apply) for what
 | [Data dictionary and sample SQL](/integrations/bigquery/data-dictionary) | Every column, its type and meaning, identification and CRM matching rules, ready-to-run queries |
 | [Troubleshooting](/integrations/bigquery/troubleshooting) | Every error message and what to do about it, and what to check first |
 | [Security and privacy](/integrations/bigquery/security) | What access Abmatic AI gets, where credentials live, and how to revoke access |
+
+<div dangerouslySetInnerHTML={{__html: '<!--/email_off-->'}} />

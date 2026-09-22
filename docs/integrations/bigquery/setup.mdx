@@ -5,6 +5,9 @@ sidebar_label: Setup Guide
 sidebar_position: 2
 ---
 
+{/* Cloudflare email obfuscation off for this page, so the service account email stays copyable without JavaScript */}
+<div dangerouslySetInnerHTML={{__html: '<!--email_off-->'}} />
+
 # Setting Up the Google BigQuery Export
 
 This guide walks through the whole setup inside Abmatic AI, from the card to the first rows in your table. Allow about ten minutes. If you are using the recommended service account route, do the Google Cloud part first: [Service account setup](/integrations/bigquery/service-account).
@@ -32,7 +35,7 @@ Click **Authorize** on the card. The **Connect Google BigQuery** dialog offers t
 The dialog shows two values to copy: the service account email and the dataset label with your workspace ID (`abmatic_workspace: <your workspace ID>`).
 
 1. In Google Cloud, **create a dataset** for the export and **add the label** shown in the dialog to it. Abmatic AI only lists, and only writes to, datasets carrying your workspace label.
-2. **Grant** `abmatic-bigquery-export@abmatic.iam.gserviceaccount.com` **BigQuery Job User** on the project and **BigQuery Data Editor** on that dataset (or on the project).
+2. **Grant** `abmatic-bigquery-export@abmatic.iam.gserviceaccount.com` **BigQuery Job User** on your project, and **BigQuery Data Editor** on your project. The dialog asks for both roles "on your project"; granting Data Editor on just the labeled dataset instead also works and is the least-privilege choice.
 
    The [Service account setup](/integrations/bigquery/service-account) page has the exact Cloud Console clicks and the `bq`, `gcloud` and SQL commands for both steps.
 
@@ -215,3 +218,5 @@ Disabling:
 If you connected with the service account, also remove its IAM roles to fully revoke access: see [Revoking access](/integrations/bigquery/security#revoking-access).
 
 To turn the export back on later, click **Authorize**, connect again, then open the settings, switch **Push new data every day** back on and click **Save**.
+
+<div dangerouslySetInnerHTML={{__html: '<!--/email_off-->'}} />
