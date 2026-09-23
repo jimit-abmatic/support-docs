@@ -35,7 +35,7 @@ You'll find your script on the **Installation** page. It shows the exact JavaScr
 1. Visit your website
 2. Right-click and select "View Page Source"
 3. Search (Ctrl+F / Cmd+F) for `abmatic`
-4. You should find: `<script async src="https://clients.abmatic.ai/YOUR_ID.js"></script>`
+4. You should find: `<script async nowprocket data-no-minify="1" data-cfasync="false" src="https://clients.abmatic.ai/YOUR_ID.js"></script>`
 
 **Step 2: Check Network requests in DevTools**
 
@@ -52,7 +52,7 @@ You'll find your script on the **Installation** page. It shows the exact JavaScr
 **If using direct HTML:**
 ```html
 <!-- Add this in your <head> section, as high as possible -->
-<script async src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
+<script async nowprocket data-no-minify="1" data-cfasync="false" src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
 ```
 
 **If using Google Tag Manager:**
@@ -62,6 +62,7 @@ You'll find your script on the **Installation** page. It shows the exact JavaScr
 
 **If using WordPress:**
 - Clear all caching plugins (WP Super Cache, W3 Total Cache, LiteSpeed, etc.)
+- If an optimizer minifies, combines or delays JavaScript (WP Rocket, LiteSpeed Cache, Autoptimize), add `clients.abmatic.ai` to its excluded JavaScript files, then clear its cache
 - Verify the script is in your theme's `header.php` or plugin settings
 - Some page builders (Elementor, Divi) have their own header script sections
 

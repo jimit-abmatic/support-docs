@@ -482,7 +482,7 @@ The older name for a **Collection**—a group of accounts and/or contacts bundle
 A JavaScript snippet installed on your website that enables visitor identification and personalization.
 
 ```html
-<script async src="https://clients.abmatic.ai/YOUR_ID.js"></script>
+<script async nowprocket data-no-minify="1" data-cfasync="false" src="https://clients.abmatic.ai/YOUR_ID.js"></script>
 ```
 
 **Installation time:** Under 5 minutes

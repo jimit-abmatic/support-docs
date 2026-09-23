@@ -279,7 +279,7 @@ Place the Abmatic script as high as possible in your `<head>` section:
 ```html
 <head>
   <!-- Place Abmatic script early in head for fastest loading -->
-  <script async src="https://clients.abmatic.ai/YOUR_ID.js"></script>
+  <script async nowprocket data-no-minify="1" data-cfasync="false" src="https://clients.abmatic.ai/YOUR_ID.js"></script>
 
   <!-- Other head elements below -->
 </head>

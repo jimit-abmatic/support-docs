@@ -115,7 +115,7 @@ Click the **Installation** icon at the **bottom** of the left icon sidebar.
 Your script looks like this:
 
 ```html
-<script async src="https://clients.abmatic.ai/YOUR_ID.js"></script>
+<script async nowprocket data-no-minify="1" data-cfasync="false" src="https://clients.abmatic.ai/YOUR_ID.js"></script>
 ```
 
 Click directly on the script code to copy it to your clipboard, then save it somewhere — you'll add it to your site next.
@@ -132,7 +132,7 @@ Add the script to every page's `<head>` section:
 <head>
     <title>Your Site</title>
     <!-- Other head content -->
-    <script async src="https://clients.abmatic.ai/YOUR_ID.js"></script>
+    <script async nowprocket data-no-minify="1" data-cfasync="false" src="https://clients.abmatic.ai/YOUR_ID.js"></script>
 </head>
 <body>
     <!-- Your site content -->
