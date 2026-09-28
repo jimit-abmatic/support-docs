@@ -117,6 +117,8 @@ GROUP BY event_date, company_domain
 ORDER BY event_date DESC, page_views DESC;
 ```
 
+Counts are per day here, so no cross-day handling is needed. Totals that span several days should keep the newest copy of each key: see [Reading across days](#reading-across-days).
+
 ### Join to your Salesforce Account table
 
 This assumes you already replicate Salesforce into BigQuery, for example with a table `crm.salesforce_account` that has `Id`, `Name` and `OwnerId`. Adjust names to your replica.
@@ -129,10 +131,14 @@ SELECT
   COUNT(*)                   AS page_views_7d,
   COUNT(DISTINCT pv.visitor_id) AS visitors_7d,
   MAX(pv.event_timestamp)    AS last_visit_at
-FROM `your-project-id.your_dataset.abmatic_page_views` AS pv
+FROM (
+  SELECT *
+  FROM `your-project-id.your_dataset.abmatic_page_views`
+  WHERE event_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)
+  QUALIFY ROW_NUMBER() OVER (PARTITION BY session_id, hit_id ORDER BY exported_at DESC) = 1
+) AS pv
 JOIN `your-project-id.crm.salesforce_account` AS a
   ON a.Id = pv.salesforce_account_id
-WHERE pv.event_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)
 GROUP BY account_id, account_name, owner_id
 ORDER BY page_views_7d DESC;
 ```
@@ -141,36 +147,44 @@ ORDER BY page_views_7d DESC;
 Salesforce ids come in a 15-character and an 18-character form. If your replica stores the other form, join on the first 15 characters: `ON LEFT(a.Id, 15) = LEFT(pv.salesforce_account_id, 15)`.
 :::
 
-### Deduplication and "latest state"
+### Reading across days
 
-You don't need to deduplicate. Our loads never create duplicate rows: each day is loaded by **replacing** its whole `event_date` partition, so a day that is loaded again (by **Sync now**, a retry, or a backfill) replaces its earlier rows rather than adding to them. Rows are never updated in place, so there is no "latest version" to pick.
+Within one `event_date` partition the pair (`session_id`, `hit_id`) is unique, and our loads never duplicate rows: each day is loaded by **replacing** its whole partition, so re-running a day replaces its earlier rows.
 
-Remember that `hit_id` on its own is not a key: the tracker can reuse one page-view id across different sessions of the same visitor. The unique row key is the pair (`session_id`, `hit_id`).
+Across days the same page view can appear more than once. The tracker sometimes updates an existing page view's timestamp instead of adding a new one, which moves it to a later day, and the copy already written on the earlier day stays there. It is a small effect (on our own tenant, 11 keys in a 12,000-row table), but it inflates totals that span several days.
 
-If a downstream tool copies rows out of this table incrementally, key it on (`session_id`, `hit_id`) and re-read whole `event_date` partitions rather than filtering on `exported_at`. As a sanity check, this query returns no rows:
+So when you read more than one day, keep the newest copy of each key. This is the recommended pattern for models and joins:
 
 ```sql
-SELECT session_id, hit_id, COUNT(*) AS copies
+SELECT *
 FROM `your-project-id.your_dataset.abmatic_page_views`
-WHERE event_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
-GROUP BY session_id, hit_id
-HAVING copies > 1;
+WHERE event_date BETWEEN '2026-09-01' AND '2026-09-30'
+QUALIFY ROW_NUMBER() OVER (PARTITION BY session_id, hit_id ORDER BY exported_at DESC) = 1;
 ```
+
+Per-day counts and single-day queries need no such handling. Note also that `hit_id` on its own is not a key: the tracker can reuse one page-view id across different sessions of the same visitor.
+
+If a downstream tool copies rows out of this table incrementally, key it on (`session_id`, `hit_id`) and re-read whole `event_date` partitions rather than filtering on `exported_at`.
 
 ### Visits per visitor
 
 Because most sessions hold a single page view, group a visitor's page views into visits yourself, for example starting a new visit after 30 minutes without a page view:
 
 ```sql
-WITH ordered AS (
+WITH deduped AS (
+  SELECT *
+  FROM `your-project-id.your_dataset.abmatic_page_views`
+  WHERE event_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)
+  QUALIFY ROW_NUMBER() OVER (PARTITION BY session_id, hit_id ORDER BY exported_at DESC) = 1
+),
+ordered AS (
   SELECT
     visitor_id,
     event_timestamp,
     IF(TIMESTAMP_DIFF(event_timestamp,
          LAG(event_timestamp) OVER (PARTITION BY visitor_id ORDER BY event_timestamp),
          MINUTE) <= 30, 0, 1) AS new_visit
-  FROM `your-project-id.your_dataset.abmatic_page_views`
-  WHERE event_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)
+  FROM deduped
 )
 SELECT
   visitor_id,

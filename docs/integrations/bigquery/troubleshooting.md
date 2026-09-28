@@ -46,6 +46,7 @@ The list shows only datasets the connected identity can see. Grant **BigQuery Da
 
 - **Today is partial.** Today's partition (loaded by **Sync now**) holds only the page views so far. It is replaced with the complete day at the next day's push, so compare complete days only.
 - **Filters apply.** **Exclude internal traffic** and **Only pages on your own website domain** are on by default and remove rows other tools may count.
+- **A multi-day total can exceed the sum of single days.** The tracker sometimes updates an existing page view's timestamp, moving it to a later day, and the copy on the earlier day stays. So the same (`session_id`, `hit_id`) can appear on two or three dates. Keep the newest copy when reading across days ([how](/integrations/bigquery/data-dictionary#reading-across-days)).
 - **A completed day can shift slightly when it is pushed again**, for example after a backfill, a retry, or a change to **Include data from**. The day is rebuilt from current data, so updated CRM matches or company identification can change a few rows. The day is still replaced, never duplicated.
 - **Only page views from companies matched to a CRM account** drops every anonymous or unmatched visit.
 - Dates are **UTC**. Other tools often report in your local time zone.
