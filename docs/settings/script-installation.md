@@ -38,7 +38,7 @@ Most customers see their first identified companies within minutes of installati
 Your snippet is a single line that looks like this (your account's real ID is filled in for you):
 
 ```html
-<script async src="https://clients.abmatic.ai/YOUR_SCRIPT_ID.js"></script>
+<script async nowprocket data-no-minify="1" data-cfasync="false" src="https://clients.abmatic.ai/YOUR_SCRIPT_ID.js"></script>
 ```
 
 That's it — one line of code that unlocks personalization and visitor identification.
@@ -59,7 +59,7 @@ Add the script to your website's `<head>` section for fastest loading:
 <head>
   <title>Your Website</title>
   <!-- Add Abmatic AI script as high as possible in head -->
-  <script async src="https://clients.abmatic.ai/YOUR_SCRIPT_ID.js"></script>
+  <script async nowprocket data-no-minify="1" data-cfasync="false" src="https://clients.abmatic.ai/YOUR_SCRIPT_ID.js"></script>
 </head>
 <body>
   ...

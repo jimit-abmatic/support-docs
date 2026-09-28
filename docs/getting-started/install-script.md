@@ -34,7 +34,7 @@ Getting your unique tracking script takes just seconds:
 Your script will look like this:
 
 ```html
-<script async src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
+<script async nowprocket data-no-minify="1" data-cfasync="false" src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
 ```
 
 Where `YOUR_UNIQUE_ID` is your account's unique identifier (e.g., `d8r773ra7437`).
@@ -57,7 +57,7 @@ The fastest way to get started. Add the script directly to your website's HTML i
 <head>
   <title>Your Website</title>
   <!-- Abmatic AI Tracking Script -->
-  <script async src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
+  <script async nowprocket data-no-minify="1" data-cfasync="false" src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
 </head>
 <body>
   <!-- Your website content -->
@@ -77,7 +77,7 @@ Perfect for teams that manage scripts centrally through GTM:
 4. Click **Tag Configuration** → **Custom HTML**
 5. Paste your Abmatic script:
    ```html
-   <script async src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
+   <script async nowprocket data-no-minify="1" data-cfasync="false" src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
    ```
 6. Under **Triggering**, select **All Pages**
 7. Name your tag (e.g., "Abmatic AI Tracking")
@@ -103,6 +103,10 @@ WordPress powers millions of B2B websites. Here's how to add Abmatic:
 2. Find the header scripts option
 3. Paste your Abmatic script
 4. Save and clear any caches
+
+:::tip Using WP Rocket, LiteSpeed Cache, Autoptimize or Cloudflare Rocket Loader?
+Keep the `nowprocket`, `data-no-minify` and `data-cfasync` attributes in the snippet. They tell these tools to leave the Abmatic script alone. If your optimizer strips them, add `clients.abmatic.ai` to its excluded JavaScript files for minify, combine and delay JavaScript, then clear the optimizer's cache.
+:::
 
 ### Method 4: React / Next.js / Single Page Apps
 
@@ -131,7 +135,7 @@ export default function RootLayout({ children }) {
 **React (Create React App)**
 ```html
 <!-- public/index.html -->
-<script async src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
+<script async nowprocket data-no-minify="1" data-cfasync="false" src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
 ```
 
 **Using React Helmet**
@@ -139,7 +143,7 @@ export default function RootLayout({ children }) {
 import { Helmet } from 'react-helmet';
 
 <Helmet>
-  <script async src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
+  <script async nowprocket data-no-minify="1" data-cfasync="false" src="https://clients.abmatic.ai/YOUR_UNIQUE_ID.js"></script>
 </Helmet>
 ```
 
