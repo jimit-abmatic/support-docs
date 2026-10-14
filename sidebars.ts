@@ -220,6 +220,8 @@ const sidebars: SidebarsConfig = {
       items: [
         'api/api-overview',
         'api/api-accounts',
+        'api/api-contacts',
+        'api/api-visitors',
         'api/api-keys',
       ],
     },
